@@ -1,0 +1,68 @@
+[
+  {
+    "id": "01-carriere-paie",
+    "branche": "Carrière & paie",
+    "prompt": "Un de mes agents, adjoint administratif principal de 2e classe à temps partiel 80 %, peut-il avancer de grade cette année ? Et reste-t-il affilié à la CNRACL ?",
+    "attendus": [
+      "Avancement de grade = inscription au tableau annuel + conditions statutaires + ratios promus-promouvables votés par l'assemblée + orienté par les LDG (donc pas automatique)",
+      "La CAP n'est plus compétente sur l'avancement depuis la réforme de 2019",
+      "Un agent à temps partiel 80 % sur un poste à temps complet reste affilié à la CNRACL (ne pas confondre temps partiel et temps non complet < 28 h)",
+      "Aucune valeur chiffrée donnée de mémoire"
+    ]
+  },
+  {
+    "id": "02-qvt-sante",
+    "branche": "QVT & santé",
+    "prompt": "Un de mes agents titulaires s'est blessé en intervention sur son lieu de travail. Comment je gère son congé, et qui décide si c'est imputable au service ?",
+    "attendus": [
+      "Qualification en accident de service relevant du CITIS (et non d'une maladie ordinaire)",
+      "L'imputabilité au service relève d'une décision de l'autorité territoriale, le conseil médical pouvant être saisi selon les cas",
+      "Distinction du régime selon que l'agent est titulaire ou contractuel",
+      "La décision sur l'imputabilité est un acte pouvant faire grief : motivation et voies de recours"
+    ]
+  },
+  {
+    "id": "03-recrutement-formation",
+    "branche": "Recrutement & formation",
+    "prompt": "Je veux recruter un contractuel sur un poste permanent vacant de catégorie B. Est-ce possible et sous quelles conditions ?",
+    "attendus": [
+      "Recrutement possible uniquement sur un fondement juridique précis défini par le CGFP (cas de recours élargis par la loi de 2019), à vérifier selon la situation",
+      "Déclaration de création/vacance d'emploi préalable et publicité",
+      "Forme et durée du contrat (CDD, conditions de CDIsation), priorité de principe aux fonctionnaires",
+      "Le fondement exact est signalé comme à vérifier plutôt qu'affirmé de mémoire"
+    ]
+  },
+  {
+    "id": "04-cst-dialogue-social",
+    "branche": "CST & dialogue social",
+    "prompt": "Je dois adopter mes lignes directrices de gestion. Quelle instance dois-je consulter et selon quelle procédure ?",
+    "attendus": [
+      "Les LDG sont établies par l'autorité territoriale après avis préalable du CST",
+      "La CAP n'est pas l'instance compétente pour les LDG",
+      "Les LDG sont portées à la connaissance des agents",
+      "Lien avec le pilotage RH (RSU, stratégie pluriannuelle)"
+    ]
+  },
+  {
+    "id": "05-si-rh-masse-salariale",
+    "branche": "SI RH & masse salariale",
+    "prompt": "Comment estimer l'évolution de ma masse salariale pour l'an prochain ? Quels facteurs dois-je intégrer ?",
+    "attendus": [
+      "Distinction mesures générales (valeur du point), catégorielles, et individuelles (GVT positif)",
+      "Prise en compte de l'effet de noria et de l'effet report",
+      "Méthode de calcul : annoncer les hypothèses, demander les données manquantes, séparer connu et estimé",
+      "Valeur du point et taux de cotisation traités comme données volatiles à vérifier, jamais de mémoire"
+    ]
+  },
+  {
+    "id": "06-communication-interne",
+    "branche": "Communication interne",
+    "prompt": "Je vais diffuser mes nouvelles lignes directrices de gestion à l'ensemble des agents. Quelles précautions dois-je prendre ?",
+    "attendus": [
+      "Les LDG doivent être portées à la connaissance des agents (obligation d'information)",
+      "Cohérence avec le dialogue social : information/avis des instances avant la diffusion générale",
+      "Respect du RGPD pour toute donnée relative aux agents",
+      "Distinction entre communication (note d'information) et acte juridique"
+    ]
+  }
+]
