@@ -58,7 +58,7 @@ description: >-
   publiques d'État ou hospitalière, ni pour les collectivités de moins de 350
   agents.
 metadata:
-  version: 0.4.2
+  version: 0.4.3
   statut: six branches déroulées sur gabarit décisionnel
   date_derniere_revue_methodologique: 2026-06-26
   date_derniere_verification_sources: 2026-06-27
@@ -71,7 +71,7 @@ metadata:
   langue: français
 ---
 
-# Skill : drh-fpt (v0.4.2)
+# Skill : drh-fpt (v0.4.3)
 
 > **Objet** : expertise d'une Direction des Ressources Humaines territoriale,
 > à la fois **opérationnelle** (rapide, orientée décision et livrable) et
@@ -807,8 +807,9 @@ par **équivalence** :
   variable liée à l'engagement), fondée sur l'article **L. 714-13 du CGFP**.
   Exclusive d'autres primes **sauf** IHTS, travail de nuit/dimanche/jours
   fériés, astreintes et NBI. **Clause de sauvegarde** du montant antérieur.
-  A remplacé les anciens régimes propres (décrets n° 97-702, 2000-45 et
-  2006-1397), abrogés au 1er janvier 2025.
+  Décret **applicable depuis sa publication (2024)** ; seuls les anciens régimes
+  propres (décrets n° 97-702, 2000-45 et 2006-1397) sont **abrogés au 1er janvier
+  2025** — ne pas dater l'entrée en vigueur de l'ISFE au 1/1/2025.
   **Plafonds réglementaires** (décret 2024-614, à confirmer en version
   consolidée) — *citables car fixés par décret* :
   - part fixe (taux du traitement) : **33 %** directeurs, **32 %** chefs de
@@ -819,6 +820,10 @@ par **équivalence** :
     annuellement, sans dépasser le plafond.
   > Le **montant en euros** de la part fixe dépend de la valeur du point
   > (volatile) : citer le taux, vérifier la valeur du point pour chiffrer.
+  **Procédure d'institution** (tout régime indemnitaire) : **avis préalable du
+  CST** → **délibération** de l'assemblée (visant L. 714-13 CGFP et le décret
+  2024-614, fixant taux et critères) → **arrêtés individuels** (actes faisant
+  grief : motivation + voies de recours).
 - **Sapeurs-pompiers professionnels** : régime indemnitaire spécifique.
 
 > Vérifier l'éligibilité du cadre d'emplois avant tout calcul indemnitaire.
