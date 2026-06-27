@@ -1,0 +1,15 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Build / packaging (régénérable depuis les sources)
+*.skill
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+*~
+
+# Résultats de tests générés
+tests/resultats/
