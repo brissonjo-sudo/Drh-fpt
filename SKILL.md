@@ -15,7 +15,7 @@ description: >-
   publiques d'État ou hospitalière, ni pour les collectivités de moins de 350
   agents.
 metadata:
-  version: 0.4.3
+  version: 0.4.4
   statut: six branches déroulées sur gabarit décisionnel
   date_derniere_revue_methodologique: 2026-06-26
   date_derniere_verification_sources: 2026-06-27
@@ -28,7 +28,7 @@ metadata:
   langue: français
 ---
 
-# Skill : drh-fpt (v0.4.3)
+# Skill : drh-fpt (v0.4.4)
 
 > **Objet** : expertise d'une Direction des Ressources Humaines territoriale,
 > à la fois **opérationnelle** (rapide, orientée décision et livrable) et
