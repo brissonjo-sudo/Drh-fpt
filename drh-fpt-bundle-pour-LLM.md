@@ -58,7 +58,7 @@ description: >-
   publiques d'État ou hospitalière, ni pour les collectivités de moins de 350
   agents.
 metadata:
-  version: 0.4.4
+  version: 0.4.5
   statut: six branches déroulées sur gabarit décisionnel
   date_derniere_revue_methodologique: 2026-06-26
   date_derniere_verification_sources: 2026-06-27
@@ -71,7 +71,7 @@ metadata:
   langue: français
 ---
 
-# Skill : drh-fpt (v0.4.4)
+# Skill : drh-fpt (v0.4.5)
 
 > **Objet** : expertise d'une Direction des Ressources Humaines territoriale,
 > à la fois **opérationnelle** (rapide, orientée décision et livrable) et
@@ -846,6 +846,37 @@ par **équivalence** :
   l'autorité), licenciement (insuffisance professionnelle, inaptitude),
   abandon de poste, **rupture conventionnelle** (vérifier le régime en vigueur
   et l'indemnité spécifique).
+
+### 5.10 Abandon de poste (radiation des cadres)
+- **Nature** : ce n'est **pas une sanction disciplinaire** → **ni conseil de
+  discipline, ni communication du dossier**, ni garanties disciplinaires. C'est un
+  **licenciement** emportant radiation des cadres (perte de la qualité de
+  fonctionnaire).
+- **Fondement textuel** : **art. L. 553-1, 1° du CGFP** (« Le fonctionnaire peut
+  être licencié […] 1° Pour abandon de poste »), issu de l'ordonnance n° 2021-1574
+  du 24 novembre 2021 — *citable, ce n'est pas une invention*. Seul le **régime de
+  la mise en demeure** est d'origine **jurisprudentielle**.
+- **Caractérisation** : **absence injustifiée** (aucun justificatif) **+
+  non-réponse à la mise en demeure**. L'**épuisement des droits à congé de maladie
+  n'est ni nécessaire ni suffisant** — ne pas en faire une condition. (Il ne
+  devient pertinent que si un certificat est produit tardivement après épuisement
+  — cf. CE *Bouillargues*, à vérifier.) Les congés maladie statutaires restent par
+  ailleurs plafonnés (CMO 12 mois, CLM 3 ans, CLD 5 ans).
+- **Mise en demeure préalable obligatoire** (condition de légalité) : **écrite**,
+  **notifiée** (LRAR ou remise contre décharge), fixant un **délai approprié** de
+  reprise, et **informant l'agent du risque de radiation des cadres sans procédure
+  disciplinaire préalable**.
+- **Jurisprudence-pivot** : **CE Section, 11 décembre 1998, Casagranda,
+  n° 147511** (régularité de la mise en demeure) — numéro réel, à confirmer sur
+  Légifrance / conseil-etat.fr avant de le viser. Ne jamais citer une référence
+  post-cutoff ou secondaire comme vérifiée.
+- **Ne pas appliquer la présomption de démission** du privé (art. L. 1237-1-1 du
+  code du travail, loi du 21 décembre 2022) : elle ne vise **pas** la FPT.
+- **Arrêté de radiation** : **motivé** (CRPA), **notifié**, **non rétroactif**
+  (effet à la notification, non à la date d'absence), avec **voies et délais de
+  recours**. **Non soumis à l'obligation de transmission** au contrôle de légalité
+  (hors liste de l'art. L. 2131-2 du CGCT, contrairement à la révocation) — à
+  confirmer.
 
 ## 6. Calculs
 

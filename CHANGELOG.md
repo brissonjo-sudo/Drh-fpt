@@ -2,6 +2,32 @@
 
 Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
+## [0.4.5] — 2026-06-27 — Branche carrière-paie : abandon de poste
+
+### Ajouté
+- `carriere-paie.md` §5.10 **Abandon de poste (radiation des cadres)** — section
+  dédiée, jusqu'ici absente du skill :
+  - **Fondement textuel** : art. **L. 553-1, 1° du CGFP** (ord. n° 2021-1574) —
+    citable ; seul le régime de la mise en demeure est **jurisprudentiel**.
+  - **Mise en demeure** préalable obligatoire (écrite, notifiée, délai approprié,
+    information du risque de radiation sans procédure disciplinaire).
+  - **Jurisprudence-pivot** : **CE Sect., 11 déc. 1998, Casagranda, n° 147511**
+    (numéro réel, à confirmer avant de viser).
+  - **Distracteur** : l'épuisement des CMO n'est pas une condition de l'abandon de
+    poste (congés statutaires plafonnés : CMO 12 mois, CLM 3 ans, CLD 5 ans).
+  - Ne **pas** appliquer la présomption de démission du privé (L. 1237-1-1 c.
+    trav.) à un fonctionnaire.
+  - Arrêté **motivé**, **non rétroactif**, **non soumis à l'obligation de
+    transmission** au contrôle de légalité (hors L. 2131-2 CGCT) — à confirmer.
+
+### Contexte
+- Lacune révélée par le cas de co-activation (v0.4.4) : un répondant frais traitait
+  l'abandon de poste comme « entièrement jurisprudentiel », omettait L. 553-1 1° et
+  transmettait l'arrêté au contrôle de légalité. Points vérifiés sur Légifrance/CGCT.
+
+### Modifié
+- Bundle `drh-fpt-bundle-pour-LLM.md` resynchronisé.
+
 ## [0.4.4] — 2026-06-27 — Tests : cas de co-activation (barème rectifié)
 
 ### Ajouté
