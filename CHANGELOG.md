@@ -2,6 +2,24 @@
 
 Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
+## [0.4.4] — 2026-06-27 — Tests : cas de co-activation (barème rectifié)
+
+### Ajouté
+- `tests/cas-co-activation.md` : cas transverse `drh-fpt` × `recherche-juridique`
+  (abandon de poste / radiation des cadres), avec barème de correction.
+
+### Corrigé (barème de test, suite à un test réel)
+- Fondement de l'abandon de poste : **L. 553-1, 1° du CGFP** est un fondement
+  **textuel** (ordonnance 2021-1574) — le citer n'est pas une invention. Seul le
+  régime de la mise en demeure est jurisprudentiel.
+- L'**épuisement des droits à congé de maladie n'est pas un critère** de l'abandon
+  de poste (absence injustifiée + non-réponse à mise en demeure). Les congés
+  maladie statutaires restent par ailleurs plafonnés (CMO 12 mois, CLM 3 ans,
+  CLD 5 ans).
+
+### Note
+- Modification limitée au dossier `tests/` : le comportement du skill est inchangé.
+
 ## [0.4.3] — 2026-06-27 — Procédure régime indemnitaire (re-test)
 
 ### Corrigé
