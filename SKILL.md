@@ -15,10 +15,10 @@ description: >-
   publiques d'État ou hospitalière, ni pour les collectivités de moins de 350
   agents.
 metadata:
-  version: 0.4.1
+  version: 0.4.2
   statut: six branches déroulées sur gabarit décisionnel
   date_derniere_revue_methodologique: 2026-06-26
-  date_derniere_verification_sources: 2026-06-26
+  date_derniere_verification_sources: 2026-06-27
   perimetre: collectivités territoriales de plus de 350 agents
   dependances:
     - recherche-juridique (recommandé, pour l'approfondissement juridique)
@@ -28,7 +28,7 @@ metadata:
   langue: français
 ---
 
-# Skill : drh-fpt (v0.4.1)
+# Skill : drh-fpt (v0.4.2)
 
 > **Objet** : expertise d'une Direction des Ressources Humaines territoriale,
 > à la fois **opérationnelle** (rapide, orientée décision et livrable) et
@@ -97,7 +97,10 @@ modules, gabarits juridiques), il **renvoie** à `recherche-juridique`.
 
 1. **Primarité** — aucune affirmation juridique de mémoire. S'appuyer sur la
    source officielle (Légifrance, CGFP, décret, jurisprudence) à la version
-   applicable, ou signaler explicitement « à vérifier ».
+   applicable, ou signaler explicitement « à vérifier ». Toute **référence
+   numérotée ou datée** (décret, loi, article) ou **date d'entrée en vigueur**
+   citée sans avoir été vérifiée en séance — *a fortiori* pour une **réforme
+   récente** — est assortie de la réserve « à confirmer en version consolidée ».
 2. **Date de référence** — identifier la date à laquelle le droit s'applique
    (faits, jour, date d'effet de l'acte) ; le statut évolue vite.
 3. **Hiérarchie et conflit de normes** — voir

@@ -58,10 +58,10 @@ description: >-
   publiques d'État ou hospitalière, ni pour les collectivités de moins de 350
   agents.
 metadata:
-  version: 0.4.0
+  version: 0.4.2
   statut: six branches déroulées sur gabarit décisionnel
   date_derniere_revue_methodologique: 2026-06-26
-  date_derniere_verification_sources: 2026-06-26
+  date_derniere_verification_sources: 2026-06-27
   perimetre: collectivités territoriales de plus de 350 agents
   dependances:
     - recherche-juridique (recommandé, pour l'approfondissement juridique)
@@ -71,7 +71,7 @@ metadata:
   langue: français
 ---
 
-# Skill : drh-fpt (v0.4.0)
+# Skill : drh-fpt (v0.4.2)
 
 > **Objet** : expertise d'une Direction des Ressources Humaines territoriale,
 > à la fois **opérationnelle** (rapide, orientée décision et livrable) et
@@ -140,7 +140,10 @@ modules, gabarits juridiques), il **renvoie** à `recherche-juridique`.
 
 1. **Primarité** — aucune affirmation juridique de mémoire. S'appuyer sur la
    source officielle (Légifrance, CGFP, décret, jurisprudence) à la version
-   applicable, ou signaler explicitement « à vérifier ».
+   applicable, ou signaler explicitement « à vérifier ». Toute **référence
+   numérotée ou datée** (décret, loi, article) ou **date d'entrée en vigueur**
+   citée sans avoir été vérifiée en séance — *a fortiori* pour une **réforme
+   récente** — est assortie de la réserve « à confirmer en version consolidée ».
 2. **Date de référence** — identifier la date à laquelle le droit s'applique
    (faits, jour, date d'effet de l'acte) ; le statut évolue vite.
 3. **Hiérarchie et conflit de normes** — voir
@@ -804,7 +807,8 @@ par **équivalence** :
   variable liée à l'engagement), fondée sur l'article **L. 714-13 du CGFP**.
   Exclusive d'autres primes **sauf** IHTS, travail de nuit/dimanche/jours
   fériés, astreintes et NBI. **Clause de sauvegarde** du montant antérieur.
-  A remplacé les anciens régimes (ISMF, ISF…), abrogés au 1er janvier 2025.
+  A remplacé les anciens régimes propres (décrets n° 97-702, 2000-45 et
+  2006-1397), abrogés au 1er janvier 2025.
   **Plafonds réglementaires** (décret 2024-614, à confirmer en version
   consolidée) — *citables car fixés par décret* :
   - part fixe (taux du traitement) : **33 %** directeurs, **32 %** chefs de
@@ -981,7 +985,10 @@ santé), égalité femmes-hommes.
   et conditions : **à vérifier** (régime distinct titulaires / contractuels).
 - **CITIS** (congé pour invalidité temporaire imputable au service) :
   accident de service, de trajet, maladie professionnelle. Présomption
-  d'imputabilité dans certains cas.
+  d'imputabilité dans certains cas. Base FPT : **CGFP, art. L. 822-18 et s.**
+  et **décret n° 2019-301 du 10 avril 2019** (CITIS dans la FPT) — *ne pas
+  viser le décret n° 2019-122 du 21 février 2019, propre à la fonction publique
+  d'État*.
 - **Temps partiel thérapeutique** : reprise progressive, sur avis médical.
 
 ### 5.4 Handicap
@@ -1233,7 +1240,10 @@ collective.
 - **CST** (comité social territorial) : depuis le renouvellement de **décembre
   2022**, **fusion** du comité technique et du CHSCT (décret n° 2021-571).
   Compétences : organisation et fonctionnement des services, LDG, RSU, lignes
-  directrices, questions SSCT.
+  directrices, questions SSCT. **CST propre obligatoire dès 50 agents** (en
+  deçà, CST commun placé auprès du CDG) — ne pas confondre ce seuil avec les
+  **200 agents** de la formation spécialisée SSCT ni avec les **350 agents**
+  (affiliation au CDG / périmètre de ce skill).
 - **Formation spécialisée** en santé, sécurité et conditions de travail : au
   sein du CST, **obligatoire à partir de 200 agents**.
 - **CAP** (par catégorie A, B, C) : décisions individuelles défavorables et
