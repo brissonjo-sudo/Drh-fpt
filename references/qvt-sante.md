@@ -52,7 +52,10 @@ santé), égalité femmes-hommes.
   et conditions : **à vérifier** (régime distinct titulaires / contractuels).
 - **CITIS** (congé pour invalidité temporaire imputable au service) :
   accident de service, de trajet, maladie professionnelle. Présomption
-  d'imputabilité dans certains cas.
+  d'imputabilité dans certains cas. Base FPT : **CGFP, art. L. 822-18 et s.**
+  et **décret n° 2019-301 du 10 avril 2019** (CITIS dans la FPT) — *ne pas
+  viser le décret n° 2019-122 du 21 février 2019, propre à la fonction publique
+  d'État*.
 - **Temps partiel thérapeutique** : reprise progressive, sur avis médical.
 
 ### 5.4 Handicap

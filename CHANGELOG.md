@@ -2,6 +2,35 @@
 
 Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
+## [0.4.2] — 2026-06-27 — Corrections issues de l'évaluation 10 cas
+
+### Corrigé
+- **CITIS (qvt-sante.md)** — ajout du visa FPT exact : **CGFP art. L. 822-18 et s.**
+  et **décret n° 2019-301 du 10 avril 2019**, avec mise en garde explicite contre
+  le décret n° 2019-122 (propre à la fonction publique d'État). Corrige le seul
+  risque d'erreur factuelle recopiable dans un acte (cas Q6).
+- **Régime indemnitaire police municipale (carriere-paie.md)** — les anciens
+  régimes remplacés par l'ISFE sont désormais nommés précisément (décrets
+  n° 97-702, 2000-45 et 2006-1397), en lieu et place de la mention imprécise
+  « ISMF, ISF… » (cas Q1, cohérent avec `SYNTHESE-CRITIQUES-v0.2.0.md`).
+- **Seuils des instances (cst-dialogue-social.md)** — clarification : **CST propre
+  dès 50 agents**, à ne pas confondre avec les **200 agents** (formation
+  spécialisée SSCT) ni les **350 agents** (affiliation CDG / périmètre du skill)
+  (cas Q2/Q8).
+
+### Modifié
+- **Réflexe « Primarité » (SKILL.md §3)** — consigne renforcée : toute référence
+  numérotée/datée ou date d'entrée en vigueur citée sans vérification en séance,
+  *a fortiori* pour une réforme récente, est assortie de « à confirmer en version
+  consolidée » (cas Q9).
+- **Bundle** `drh-fpt-bundle-pour-LLM.md` régénéré en cohérence (et resynchronisé
+  à la version courante).
+
+### Évaluation
+- Protocole 10 cas (`tests/prompt-claude-code.md`), double sous-agent
+  répondant/juge : **10/10 réussites, moyenne 4,9/5, 0 invention** avant
+  corrections. Les corrections ci-dessus traitent les réserves résiduelles.
+
 ## [0.4.1] — 2026-06-26 — Dispositif de tests
 
 ### Ajouté

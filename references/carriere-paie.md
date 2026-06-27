@@ -135,7 +135,8 @@ par **équivalence** :
   variable liée à l'engagement), fondée sur l'article **L. 714-13 du CGFP**.
   Exclusive d'autres primes **sauf** IHTS, travail de nuit/dimanche/jours
   fériés, astreintes et NBI. **Clause de sauvegarde** du montant antérieur.
-  A remplacé les anciens régimes (ISMF, ISF…), abrogés au 1er janvier 2025.
+  A remplacé les anciens régimes propres (décrets n° 97-702, 2000-45 et
+  2006-1397), abrogés au 1er janvier 2025.
   **Plafonds réglementaires** (décret 2024-614, à confirmer en version
   consolidée) — *citables car fixés par décret* :
   - part fixe (taux du traitement) : **33 %** directeurs, **32 %** chefs de

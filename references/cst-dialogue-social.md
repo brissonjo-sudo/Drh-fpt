@@ -33,7 +33,10 @@ collective.
 - **CST** (comité social territorial) : depuis le renouvellement de **décembre
   2022**, **fusion** du comité technique et du CHSCT (décret n° 2021-571).
   Compétences : organisation et fonctionnement des services, LDG, RSU, lignes
-  directrices, questions SSCT.
+  directrices, questions SSCT. **CST propre obligatoire dès 50 agents** (en
+  deçà, CST commun placé auprès du CDG) — ne pas confondre ce seuil avec les
+  **200 agents** de la formation spécialisée SSCT ni avec les **350 agents**
+  (affiliation au CDG / périmètre de ce skill).
 - **Formation spécialisée** en santé, sécurité et conditions de travail : au
   sein du CST, **obligatoire à partir de 200 agents**.
 - **CAP** (par catégorie A, B, C) : décisions individuelles défavorables et
