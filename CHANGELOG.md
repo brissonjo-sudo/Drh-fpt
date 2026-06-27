@@ -2,6 +2,26 @@
 
 Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
+## [0.4.3] — 2026-06-27 — Procédure régime indemnitaire (re-test)
+
+### Corrigé
+- **Régime indemnitaire / ISFE (carriere-paie.md)** — ajout explicite de la
+  **procédure d'institution** : *avis préalable du CST → délibération → arrêtés
+  individuels*. Un re-test a montré qu'un répondant frais pouvait omettre l'avis
+  du CST faute de l'avoir sous les yeux dans la branche carrière-paie (il n'était
+  rappelé que dans la branche CST).
+- **Date du décret 2024-614 (carriere-paie.md)** — précision : décret applicable
+  **depuis sa publication (2024)** ; seuls les anciens régimes sont abrogés au
+  1er janvier 2025 — ne pas dater l'entrée en vigueur de l'ISFE au 1/1/2025.
+
+### Re-test
+- Re-test des 5 cas impactés par la v0.4.2 : **Q6 4,5→5,0**, **Q9 4,5→5,0**,
+  **Q8 et Q2 maintenus à 5,0**. Les corrections v0.4.2 sont validées. Q1 a fait
+  apparaître la lacune ci-dessus (procédure CST), traitée par cette version.
+
+### Modifié
+- Bundle `drh-fpt-bundle-pour-LLM.md` resynchronisé.
+
 ## [0.4.2] — 2026-06-27 — Corrections issues de l'évaluation 10 cas
 
 ### Corrigé
