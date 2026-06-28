@@ -102,3 +102,55 @@ Une entrée par cas, au format ci-dessous.
   pour exécution par l'utilisateur (sous-agents vierges via appels API isolés).
 - Action : dossier tests/ (6 cas + run_tests.py + juge LLM optionnel).
 - Statut : intégré (v0.4.1)
+
+### 2026-06-27 — Évaluation 10 cas (double sous-agent) + v0.4.2
+- Type : erreur (mineure) + amélioration
+- Branche : qvt-sante, carrière-paie, cst-dialogue-social, SKILL
+- Contexte : protocole 10 cas exécuté par sous-agents frais (répondant Sonnet +
+  juge Opus indépendant). Résultat 10/10, 4,9/5, 0 invention.
+- Constat : 4 réserves — visa CITIS rattaché au décret FPE 2019-122 au lieu du
+  2019-301 (FPT) ; mention imprécise « ISMF » des régimes PM antérieurs ; seuils
+  d'instances (CST propre 50 vs 350) ; balisage incomplet des références datées.
+- Action : visa CITIS FPT (décret 2019-301) ; régimes PM (décrets 97-702/2000-45/
+  2006-1397) ; clarification seuils 50/200/350 ; réflexe Primarité renforcé.
+- Statut : intégré (v0.4.2)
+
+### 2026-06-27 — Re-test des cas corrigés + v0.4.3
+- Type : erreur (variance) + amélioration
+- Branche : carrière-paie
+- Contexte : re-test des 5 cas impactés. Q6 et Q9 passent de 4,5 à 5,0 ; Q8/Q2
+  maintenus. Q1 (régime indemnitaire PM) a chuté par variance.
+- Constat : la procédure d'institution (avis CST → délibération → arrêtés) n'était
+  rappelée que dans la branche CST → un répondant frais sur deux l'omettait ; date
+  d'application du décret 2024-614 confondue avec l'abrogation au 1/1/2025.
+- Action : procédure d'institution explicitée dans carriere-paie ; date du décret
+  précisée. Re-test sur 3 répondants : avis CST cité 3/3.
+- Statut : intégré (v0.4.3)
+
+### 2026-06-27 — Cas de co-activation + abandon de poste (v0.4.4 / v0.4.5)
+- Type : lacune + cas nouveau
+- Branche : carrière-paie + tests
+- Contexte : ajout d'un cas transverse drh-fpt × recherche-juridique (abandon de
+  poste / radiation). Un test réel a révélé que le skill n'avait aucune section
+  abandon de poste.
+- Constat : répondant frais traitait l'abandon comme « entièrement jurisprudentiel »
+  (omission du fondement textuel L. 553-1, 1° CGFP), surfaçait un nom d'arrêt
+  erroné (« Béziers » à la place de Casagranda) et transmettait l'arrêté au
+  contrôle de légalité (à tort). Points vérifiés sur Légifrance/CGCT.
+- Action : tests/cas-co-activation.md (v0.4.4) ; section §5.10 « Abandon de poste »
+  (v0.4.5) — fondement L. 553-1, 1° CGFP, mise en demeure jurisprudentielle
+  (CE Sect. 11 déc. 1998, Casagranda, n° 147511), distracteur CMO, non-application
+  de la présomption de démission du privé, arrêté non rétroactif / non transmissible.
+- Statut : intégré (v0.4.5)
+
+### 2026-06-27 — Validation de la co-activation réelle (2 skills chargés)
+- Type : validation
+- Branche : carrière-paie + co-activation recherche-juridique
+- Contexte : énoncé abandon de poste rejoué avec les DEUX skills (drh-fpt +
+  recherche-juridique) chargés simultanément ; juge indépendant.
+- Constat : RÉUSSITE 5/5 sur les 9 critères du barème, dont la co-activation
+  visible. drh-fpt cadre et produit les actes ; recherche-juridique sécurise
+  (ratio decidendi, réserves de source, table de vérification en source primaire,
+  auto-critique adversariale). 0 référence présentée comme vérifiée à tort.
+- Action : aucune correction nécessaire — comportement validé.
+- Statut : validé (v0.4.5)
