@@ -25,6 +25,19 @@ le format et les mentions obligatoires).
   préalable requis le cas échéant (CST pour les LDG, par exemple).
 - **Courrier d'agent** : objet clair, réponse motivée, voie de recours si refus.
 
+## Gabarits disponibles
+
+| Niveau | Fichier | Usage |
+|--------|---------|-------|
+| Décision | `decision-modele.md` | Arrêté / décision individuelle (acte faisant grief) |
+| Organisation | `procedure-modele.md` | Fiche de procédure / mode opératoire |
+| Pilotage | `note-modele.md` | Note d'aide à la décision |
+| Pilotage | `deliberation-modele.md` | Délibération (avis préalable d'instance) |
+| Communication | `courrier-modele.md` | Courrier d'agent / note de service |
+
+Ces modèles sont **génériques** : les dupliquer sous un nom d'objet précis
+(ex. `decision-mise-en-disponibilite.md`) et les compléter au cas d'espèce.
+
 ## Conventions
 
 - Champs à compléter entre crochets `[ ]`.

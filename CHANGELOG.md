@@ -2,6 +2,25 @@
 
 Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
+## [0.4.6] — 2026-06-27 — Gabarits de livrables (assets/)
+
+### Ajouté
+- Premiers **gabarits concrets** dans `assets/` (un par niveau de livrable) :
+  - `decision-modele.md` — arrêté / décision individuelle (acte faisant grief :
+    motivation + voies de recours + check transmission contrôle de légalité) ;
+  - `procedure-modele.md` — fiche de procédure / mode opératoire (étapes,
+    acteurs, délais, points de contrôle) ;
+  - `note-modele.md` — note d'aide à la décision (options, risques, reco) ;
+  - `deliberation-modele.md` — délibération (visa, exposé des motifs, dispositif,
+    **avis préalable d'instance** rappelé) ;
+  - `courrier-modele.md` — courrier d'agent / note de service.
+- `assets/README.md` : index des gabarits disponibles.
+
+### Note
+- Modèles génériques (champs `[ ]`, réserves « à vérifier », aucune donnée
+  nominative). Clôt l'item « premiers gabarits dans assets/ » de la feuille de
+  route (v0.3.0 / v0.4.0). Comportement du noyau du skill inchangé.
+
 ## [0.4.5] — 2026-06-27 — Branche carrière-paie : abandon de poste
 
 ### Ajouté
