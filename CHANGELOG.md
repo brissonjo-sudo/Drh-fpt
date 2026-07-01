@@ -2,6 +2,30 @@
 
 Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
+## [0.4.8] — 2026-07-01 — Outillage : build du bundle, cohérence, harnais durci
+
+### Ajouté
+- `scripts/build_bundle.py` — le bundle `drh-fpt-bundle-pour-LLM.md` est désormais
+  **généré depuis les sources** (préambule template + SKILL.md + socle + paramètres
+  + fiche profil + six branches), version injectée depuis le YAML de SKILL.md.
+  Modes : `--check` (fraîcheur, exit 1 si périmé) et `--package` (archive
+  `dist/drh-fpt-vX.Y.Z.skill` + copie datée du bundle). Fin des recopies manuelles
+  (cause des deux régressions de version passées).
+- `scripts/check_coherence.py` — garde-fou exécutable en CI/pre-commit :
+  version unique (YAML = titre = en-têtes bundle), fraîcheur du bundle, entrée
+  CHANGELOG de la version courante, existence des renvois `references/`/`assets/`,
+  complétude de l'arbre Structure du README.
+- `scripts/bundle-preambule.md` — template du préambule du bundle (`{{VERSION}}`).
+
+### Modifié
+- `tests/run_tests.py` durci : retry exponentiel (429/5xx/timeout), erreur par cas
+  sans interrompre la campagne, `cache_control` sur le system (coût ÷ par cache),
+  `max_tokens` relevés + détection de troncature, juge doté du **verdict
+  RÉUSSITE/ÉCHEC** et des règles transverses (référence inventée → ÉCHEC ; plafond
+  réglementaire daté + « à confirmer » acceptable ; champ `echec_si`), bilan
+  enrichi (version du skill, modèles, date, hash du bundle, cas non évalués).
+- `.gitignore` : `dist/`. README : arbre Structure complété (scripts/, rapport).
+
 ## [0.4.7] — 2026-07-01 — Quick wins issus de l'audit complet
 
 ### Corrigé (juridique)

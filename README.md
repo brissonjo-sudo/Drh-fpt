@@ -63,6 +63,10 @@ drh-fpt/
 ├── CHANGELOG.md                          Historique des versions
 ├── SYNTHESE-CRITIQUES-v0.2.0.md          Trace de décision (challenge externe)
 ├── drh-fpt-bundle-pour-LLM.md            Bundle mono-fichier (portage autres LLM)
+├── scripts/
+│   ├── build_bundle.py                   Régénère le bundle depuis les sources (+ --check, --package)
+│   ├── bundle-preambule.md               Gabarit du préambule du bundle (placeholder {{VERSION}})
+│   └── check_coherence.py                Vérifie version/bundle/CHANGELOG/renvois/arbre README
 ├── references/
 │   ├── _gabarit-branche.md               Gabarit décisionnel des branches
 │   ├── socle-sources-verification.md     Sources FPT, conflits de normes, valeurs chiffrées
@@ -88,6 +92,7 @@ drh-fpt/
     ├── prompt-claude-code.md             Protocole sous-agents Claude Code (10 cas)
     ├── cas-co-activation.md              Cas transverse drh-fpt × recherche-juridique
     └── rapports/                         Rapports de campagnes validés (datés)
+        └── RAPPORT-2026-06-27.md         Campagne 10 cas (v0.4.2)
 ```
 
 ## Apprentissage et amélioration

@@ -4,6 +4,7 @@ Thumbs.db
 
 # Build / packaging (régénérable depuis les sources)
 *.skill
+dist/
 
 # Éditeurs
 .vscode/
@@ -13,3 +14,7 @@ Thumbs.db
 
 # Résultats de tests générés
 tests/resultats/
+
+# Python
+__pycache__/
+*.pyc
