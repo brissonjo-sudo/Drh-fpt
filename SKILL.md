@@ -5,18 +5,19 @@ description: >-
   la fonction publique territoriale, pour les collectivités de plus de 350
   agents. Active ce skill pour toute question RH territoriale : carrière et
   paie, régime indemnitaire, santé et QVT, recrutement et formation, instances
-  et dialogue social, masse salariale et SI RH, communication interne ; pour
-  qualifier une situation statutaire, sécuriser un acte (avancement, sanction,
-  refus, délibération) ou produire un livrable RH (note, délibération, fiche de
-  procédure, courrier d'agent). Pour toute règle reposant sur un texte, une
-  procédure, un calcul, un délai, une condition d'accès, une compétence
-  d'instance ou une jurisprudence, le skill vérifie la source officielle avant
-  de conclure. Ne pas activer pour le droit privé hors FPT, les fonctions
-  publiques d'État ou hospitalière, ni pour les collectivités de moins de 350
-  agents.
+  et dialogue social, masse salariale et SI RH, communication interne, agents
+  contractuels, protection fonctionnelle, déontologie, cumul d'activités,
+  signalements ; pour qualifier une situation statutaire, sécuriser un acte
+  (avancement, sanction, refus, délibération) ou produire un livrable RH
+  (note, délibération, fiche de procédure, courrier d'agent). Pour toute règle
+  reposant sur un texte, une procédure, un calcul, un délai, une condition
+  d'accès, une compétence d'instance ou une jurisprudence, le skill vérifie la
+  source officielle avant de conclure. Ne pas activer pour le droit privé hors
+  FPT, les fonctions publiques d'État ou hospitalière, ni pour les
+  collectivités de moins de 350 agents.
 metadata:
-  version: 0.4.9
-  statut: six branches + dispositif de tests + gabarits de livrables
+  version: 0.5.0
+  statut: huit branches + dispositif de tests + gabarits de livrables
   date_derniere_revue_methodologique: 2026-07-01
   date_derniere_verification_sources: 2026-07-01
   perimetre: collectivités territoriales de plus de 350 agents
@@ -28,7 +29,7 @@ metadata:
   langue: français
 ---
 
-# Skill : drh-fpt (v0.4.9)
+# Skill : drh-fpt (v0.5.0)
 
 > **Objet** : expertise d'une Direction des Ressources Humaines territoriale,
 > à la fois **opérationnelle** (rapide, orientée décision et livrable) et
@@ -46,9 +47,10 @@ metadata:
 
 Activer ce skill dès que l'utilisateur traite un sujet RH territorial :
 carrière, paie, régime indemnitaire, recrutement, formation, santé et QVT,
-instances et dialogue social, masse salariale, SI RH, communication interne ;
-ou demande à **qualifier** une situation statutaire, **sécuriser un acte**, ou
-**produire un livrable** RH.
+instances et dialogue social, masse salariale, SI RH, communication interne,
+agents contractuels, protection fonctionnelle, déontologie, cumul d'activités,
+signalements ; ou demande à **qualifier** une situation statutaire,
+**sécuriser un acte**, ou **produire un livrable** RH.
 
 **Ne pas activer** pour le droit privé du travail hors FPT, les fonctions
 publiques d'État ou hospitalière, ni pour les collectivités de moins de 350
@@ -185,7 +187,7 @@ avant de conclure.
 
 ---
 
-## 7. Les six branches de la DRH (routeur)
+## 7. Les huit branches de la DRH (routeur)
 
 Lire le fichier de la branche concernée dès qu'elle est mobilisée. Toutes les
 branches suivent le **gabarit décisionnel** de
@@ -199,11 +201,21 @@ branches suivent le **gabarit décisionnel** de
 | **CST & dialogue social** | `references/cst-dialogue-social.md` ✅ |
 | **SI RH & masse salariale** | `references/si-rh-masse-salariale.md` ✅ |
 | **Communication interne** | `references/communication-interne.md` ✅ |
+| **Agents contractuels** | `references/contractuels.md` ✅ |
+| **Statut : garanties, déontologie & signalements** | `references/statut-garanties.md` ✅ |
 
 > **Renvois inter-branches** : une question en croise souvent plusieurs. Réflexes
 > fréquents — PSC/coût → masse salariale ; LDG et RSU → CST/dialogue social ;
 > entretien professionnel → recrutement-formation et carrière-paie ; formation
-> spécialisée SSCT → CST. Lire chaque branche mobilisée et signaler le lien.
+> spécialisée SSCT → CST ; recrutement de contractuels → recrutement-formation
+> (fondement du recours) et contractuels (régime propre : CDIsation,
+> discipline, fin de contrat) ; discipline et suspension conservatoire →
+> carriere-paie, articulée avec statut-garanties pour l'enquête administrative
+> et la protection fonctionnelle ; RPS et santé au travail d'un signalement →
+> qvt-sante, articulée avec statut-garanties pour le volet
+> déontologie/signalement ; diffusion des référents et du dispositif de
+> signalement → communication-interne. Lire chaque branche mobilisée et
+> signaler le lien.
 
 ---
 

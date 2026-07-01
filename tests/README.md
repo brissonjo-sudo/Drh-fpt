@@ -16,9 +16,9 @@ grille d'attendus et repère les affirmations fausses ou inventées.
 
 **Tous** les cas de test (harnais API et protocole sous-agents Claude Code)
 vivent désormais dans **`cas-de-test.json`**, pour éviter toute divergence
-entre deux jeux de cas. Ce fichier contient actuellement **17 cas** :
+entre deux jeux de cas. Ce fichier contient actuellement **22 cas** :
 
-- **12 cas `"standard"`** — questions RH représentatives des six branches,
+- **17 cas `"standard"`** — questions RH représentatives des huit branches,
   avec leurs `attendus` (critères de réussite) ;
 - **5 cas `"echec_attendu"`** — cas **adversariaux** : le skill promet de
   s'abstenir/rediriger dans certaines situations (hors périmètre, données
@@ -63,7 +63,7 @@ jouable aussi en variante dégradée avec `drh-fpt` seul.
 
 ```bash
 export ANTHROPIC_API_KEY=sk-...
-python tests/run_tests.py            # répond aux 17 cas (contexte vierge)
+python tests/run_tests.py            # répond aux 22 cas (contexte vierge)
 python tests/run_tests.py --judge    # répond + évalue (note sur 5 par cas)
 ```
 

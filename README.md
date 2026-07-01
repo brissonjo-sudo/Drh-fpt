@@ -40,9 +40,9 @@ pour calibrer ses réponses et cibler ses recherches. Profil réutilisable
 (fiche à recoller, mémoire Claude, ou fichier local). Voir
 `assets/fiche-profil-collectivite.md`.
 
-## Couverture (six branches de la DRH)
+## Couverture (huit branches de la DRH)
 
-Les six branches sont disponibles, toutes construites sur le même gabarit
+Les huit branches sont disponibles, toutes construites sur le même gabarit
 décisionnel :
 
 1. **Carrière & paie**
@@ -51,6 +51,8 @@ décisionnel :
 4. **CST & dialogue social**
 5. **SI RH & masse salariale**
 6. **Communication interne**
+7. **Agents contractuels**
+8. **Statut : garanties, déontologie & signalements**
 
 ## Structure
 
@@ -76,7 +78,9 @@ drh-fpt/
 │   ├── recrutement-formation.md          Branche recrutement & formation
 │   ├── cst-dialogue-social.md            Branche CST & dialogue social
 │   ├── si-rh-masse-salariale.md          Branche SI RH & masse salariale
-│   └── communication-interne.md          Branche communication interne
+│   ├── communication-interne.md          Branche communication interne
+│   ├── contractuels.md                   Branche agents contractuels
+│   └── statut-garanties.md               Branche statut : garanties, déontologie & signalements
 ├── assets/
 │   ├── README.md                         Logique et index des gabarits
 │   ├── fiche-profil-collectivite.md      Profil de collectivité (cadrage d'ouverture)
@@ -87,7 +91,7 @@ drh-fpt/
 │   └── courrier-modele.md                Gabarit courrier d'agent / note de service
 └── tests/
     ├── README.md                         Dispositif de tests (deux protocoles)
-    ├── cas-de-test.json                  Source unique des cas (12 standard + 5 adversariaux)
+    ├── cas-de-test.json                  Source unique des cas (17 standard + 5 adversariaux)
     ├── run_tests.py                      Harnais API (répondant + juge)
     ├── prompt-claude-code.md             Protocole sous-agents Claude Code (lit cas-de-test.json)
     ├── cas-co-activation.md              Cas transverse drh-fpt × recherche-juridique
