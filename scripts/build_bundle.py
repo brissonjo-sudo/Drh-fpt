@@ -35,7 +35,7 @@ SEP = "=" * 80
 
 # Ordre exact des sections du bundle, tel qu'observé dans
 # drh-fpt-bundle-pour-LLM.md : SKILL.md, socle, paramètres, fiche profil,
-# puis les six branches (routeur §7 de SKILL.md).
+# puis les huit branches (routeur §7 de SKILL.md).
 SECTIONS = [
     ("RÈGLES DE CONDUITE (SKILL)", SKILL_MD),
     ("SOCLE — SOURCES & VÉRIFICATION", ROOT / "references/socle-sources-verification.md"),
@@ -47,6 +47,8 @@ SECTIONS = [
     ("BRANCHE — CST & dialogue social", ROOT / "references/cst-dialogue-social.md"),
     ("BRANCHE — SI RH & masse salariale", ROOT / "references/si-rh-masse-salariale.md"),
     ("BRANCHE — Communication interne", ROOT / "references/communication-interne.md"),
+    ("BRANCHE — Agents contractuels", ROOT / "references/contractuels.md"),
+    ("BRANCHE — Statut : garanties, déontologie & signalements", ROOT / "references/statut-garanties.md"),
 ]
 
 # Exclu du bundle (documenté dans le préambule) : gabarits de livrables

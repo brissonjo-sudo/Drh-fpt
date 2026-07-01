@@ -2,6 +2,106 @@
 
 Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
+## [0.5.0] — 2026-07-01 — Couverture : contractuels, garanties & déontologie, temps de travail, emplois fonctionnels
+
+### Ajouté
+- **Deux nouvelles branches**, routées au §7 de `SKILL.md` :
+  - `references/contractuels.md` — **Agents contractuels** : texte pivot
+    (décret n° 88-145 du 15 février 1988), recrutement et mentions
+    obligatoires, CDIsation (règle des 6 ans) et portabilité du CDI,
+    rémunération et réévaluation triennale, fin de contrat (non-renouvellement,
+    indemnité de fin de contrat, démission), licenciement (entretien
+    préalable, CCP, obligation de reclassement — CE, avis du 25 septembre
+    2013, n° 365139, à confirmer), discipline propre (échelle distincte du
+    titulaire), congés et entretien professionnel, vigilance requalification
+    et frontière droit public/droit privé.
+  - `references/statut-garanties.md` — **Statut : garanties, déontologie &
+    signalements** : protection fonctionnelle (CGFP art. L. 134-1 et s.,
+    octroi de plein droit sauf faute personnelle détachable, jamais
+    subordonné à une condamnation pénale préalable), déontologie et cumul
+    d'activités (principe d'exclusivité, dérogations, référents déontologue
+    et laïcité, contrôle HATVP pour les emplois exposés), signalements et
+    harcèlement (dispositif obligatoire, lanceurs d'alerte, enquête
+    administrative, art. 40 CPP), données RH et RGPD (dossier individuel,
+    durées de conservation CNIL, violation de données).
+- **Extensions ciblées**, rédigées par Sonnet puis **vérifiées
+  adversarialement par Opus** sur sources officielles avant intégration
+  (corrections appliquées listées ci-dessous) :
+  - `references/carriere-paie.md` : nouvelles sous-sections **5.11 Emplois
+    fonctionnels** (dont fin de détachement dans l'intérêt du service —
+    protection des 6 mois, entretien préalable, information de l'assemblée
+    et du CNFPT/CDG, effet différé, options de sortie), **5.12 Grève et
+    retenues** (retenue proportionnelle à la durée réelle de l'absence en
+    FPT, ≠ trentième indivisible de l'État), **5.13 Fin de fonctions :
+    chômage et suites** (auto-assurance obligatoire pour titulaires/
+    stagiaires, adhésion révocable réservée aux contractuels, exclusion de
+    l'ARE pour abandon de poste) ; §5.9 enrichi d'un volet **Temps de
+    travail** complet (durée annuelle, sujétions, cycles, garanties
+    minimales, astreintes, CET — plafond 60 jours, seuil de monétisation
+    15 jours —, congés annuels) et d'une **retraite progressive** intégrée à
+    la liste des motifs de fin de fonctions ; §5.6 enrichi sur la NBI
+    (conditions, retrait, non-cumul, supplément de pension) ; §5.8 enrichi
+    des dérogations au seuil CNRACL/IRCANTEC de 28h (enseignement
+    artistique).
+  - `references/qvt-sante.md` : nouvelle sous-section **5.8 Inaptitude,
+    reclassement, PPR** (chaîne complète congés → conseil médical →
+    reclassement/PPR → disponibilité d'office → retraite pour invalidité ou
+    licenciement ; PPR avec report du point de départ ≤ 2 mois et
+    prolongation ≤ 3 mois, décret n° 2019-172 modifié ; fonds de prévention
+    de l'usure professionnelle — FIPU réservé au privé/hospitalier, FNP
+    CNRACL en préfiguration pour la FPT) ; §5.7 égalité professionnelle
+    enrichi (quatre axes, pénalité 1 % réductible à 0,5 % sous condition,
+    nominations équilibrées, index égalité loi du 19 juillet 2023).
+  - `references/recrutement-formation.md` : §5.2 enrichi des **vacataires**
+    (trois critères cumulatifs, risque de requalification) et de
+    l'**apprentissage** (financement CNFPT, NBI du maître d'apprentissage,
+    titularisation des apprentis en situation de handicap — expérimentation
+    échue au 6 août 2025, pérennisation à vérifier).
+- **5 nouveaux cas de test `standard`** (`tests/cas-de-test.json`, ids 18 à
+  22) : protection fonctionnelle d'un agent agressé, licenciement d'un
+  contractuel en CDI, retenue de traitement pour grève en FPT, décharge de
+  fonctions d'un DGS 3 mois après l'élection, inaptitude après épuisement des
+  CMO. Total : **22 cas** (17 standard + 5 adversariaux).
+
+### Corrigé (vérification adversariale, avant intégration)
+- Protection des 6 mois des emplois fonctionnels : délai courant du **plus
+  tardif** de la nomination de l'agent dans l'emploi ou de la désignation de
+  l'autorité territoriale (pas de la seule désignation de l'autorité).
+- Information préalable de fin de détachement : assemblée délibérante **et**
+  CNFPT ou centre de gestion (art. L. 544-1, 2° CGFP), pas la seule assemblée.
+- Effet différé de la décharge : citable fermement au premier jour du
+  troisième mois suivant l'information de l'assemblée délibérante (art.
+  L. 544-1, dernier alinéa, CGFP, à confirmer en version consolidée).
+- Abandon de poste et ARE : le décret n° 2020-741 du 16 juin 2020 (art. 2)
+  exclut expressément les agents radiés ou licenciés pour abandon de poste du
+  droit à l'ARE (au lieu d'un « à vérifier au cas par cas » trop prudent).
+- Auto-assurance chômage : adhésion révocable au régime d'assurance chômage
+  réservée aux **contractuels** ; auto-assurance **obligatoire** (sans
+  adhésion possible) pour les titulaires et stagiaires.
+- CET : plafond global de **60 jours** et seuil de monétisation à **15 jours**
+  épargnés (décret n° 2004-878 du 26 août 2004, à confirmer en version
+  consolidée ; dérogation conjoncturelle 2024 à vérifier).
+- PPR : durée de principe 1 an avec report possible du point de départ
+  (≤ 2 mois, accord des parties, à compter de l'avis du conseil médical) et
+  prolongation possible (≤ 3 mois).
+- Fonds usure professionnelle : reformulé — le FIPU vise le privé et
+  l'hospitalier/médico-social, aucun fonds FPT dédié distinct n'est créé à ce
+  jour ; la prévention de l'usure en FPT est portée par le FNP de la CNRACL
+  (préfiguration en cours).
+- Titularisation des apprentis en situation de handicap : réserve durcie —
+  l'expérimentation est arrivée à échéance le 6 août 2025, pérennisation en
+  discussion ; vérification impérative avant d'orienter un apprenti vers
+  cette voie.
+- Pénalité plan d'action égalité : mention ajoutée du taux **ramené à 0,5 %**
+  si l'employeur justifie d'un engagement effectif d'élaboration avant la fin
+  de la mise en demeure (à vérifier).
+
+### Processus
+- Rédaction initiale par Sonnet, puis **vérification adversariale par Opus**
+  sur sources officielles (Légifrance) avant toute intégration : les
+  corrections ci-dessus proviennent de cette relecture, pas de la rédaction
+  initiale.
+
 ## [0.4.9] — 2026-07-01 — Tests : source unique et cas adversariaux
 
 ### Modifié

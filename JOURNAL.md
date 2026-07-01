@@ -154,3 +154,35 @@ Une entrée par cas, au format ci-dessous.
   auto-critique adversariale). 0 référence présentée comme vérifiée à tort.
 - Action : aucune correction nécessaire — comportement validé.
 - Statut : validé (v0.4.5)
+
+### 2026-07-01 — Audit complet et extension de couverture (v0.4.7 → v0.5.0)
+- Type : lacune + cas nouveau
+- Branche : carrière-paie, qvt-sante, recrutement-formation + deux branches
+  nouvelles (agents contractuels ; statut : garanties, déontologie &
+  signalements)
+- Contexte : audit complet du skill sur trois axes (juridique, outillage,
+  couverture). Constat d'audit : les agents contractuels (20-25 % des
+  effectifs d'une grande collectivité) et plusieurs flux hebdomadaires d'une
+  DRH (protection fonctionnelle, déontologie/cumul, signalements/harcèlement,
+  RGPD RH) n'avaient aucune branche dédiée ; par ailleurs carriere-paie,
+  qvt-sante et recrutement-formation présentaient des lacunes ponctuelles
+  (emplois fonctionnels et décharge de fonctions, temps de travail détaillé,
+  grève et retenue sur traitement, chômage des agents publics, inaptitude/
+  reclassement/PPR, égalité professionnelle, vacataires, apprentissage).
+- Action proposée : quick wins juridiques déjà traités en v0.4.7 ; outillage
+  (build du bundle, vérification de cohérence, harnais de tests durci) traité
+  en v0.4.8-v0.4.9 ; puis rédaction de deux nouvelles branches complètes
+  (`contractuels.md`, `statut-garanties.md`) et d'extensions ciblées des trois
+  branches existantes, rédigées par Sonnet puis **vérifiées adversarialement
+  par Opus** sur sources officielles avant intégration (corrections
+  appliquées : protection des 6 mois des emplois fonctionnels courant du plus
+  tardif nomination agent/désignation autorité, information CNFPT/CDG en sus
+  de l'assemblée, effet différé de la décharge, exclusion ARE de l'abandon de
+  poste, auto-assurance obligatoire pour titulaires/stagiaires, plafond CET
+  60 jours, PPR avec report/prolongation, fonds usure professionnelle FPT
+  inexistant à ce jour, échéance de l'expérimentation titularisation handicap
+  au 6 août 2025, pénalité plan d'action égalité réductible à 0,5 %). 5 cas de
+  test nouveaux ajoutés (protection fonctionnelle, licenciement d'un
+  contractuel, grève/retenue FPT, décharge de fonctions d'un DGS, inaptitude/
+  PPR).
+- Statut : intégré (v0.5.0)

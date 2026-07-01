@@ -206,6 +206,98 @@
     ]
   },
   {
+    "id": "18",
+    "branche": "Statut : garanties, déontologie & signalements",
+    "type": "standard",
+    "prompt": "Un de mes agents a été agressé verbalement et physiquement par un usager en service. Il me demande la protection fonctionnelle. Puis-je la lui accorder tout de suite, ou dois-je attendre l'issue de la procédure pénale contre l'agresseur ?",
+    "attendus": [
+      "La protection fonctionnelle est une obligation légale de l'employeur (CGFP art. L. 134-1 et s., à confirmer en version consolidée), pas une faculté",
+      "Octroi de plein droit dès lors que les faits sont suffisamment établis et liés au service, sans attendre une condamnation pénale de l'auteur",
+      "L'octroi n'a pas à être subordonné à une condamnation pénale préalable de l'agresseur : dispositif administratif autonome",
+      "En tant que victime, la protection n'est refusée qu'en cas de faute personnelle détachable de l'agent lui-même — à écarter ici, pas à démontrer par l'agent",
+      "Un refus serait un acte faisant grief : motivation et voies de recours obligatoires",
+      "Contenu possible : assistance juridique, prise en charge des frais de procédure, réparation du préjudice (plafonds et modalités à vérifier)"
+    ],
+    "echec_si": [
+      "Subordonne l'octroi de la protection fonctionnelle à une condamnation pénale préalable de l'agresseur",
+      "Traite le refus éventuel comme un acte sans motivation ni voies de recours",
+      "Exige de l'agent qu'il prouve l'absence de faute personnelle plutôt que d'écarter cette hypothèse d'office au vu des faits"
+    ]
+  },
+  {
+    "id": "19",
+    "branche": "Agents contractuels",
+    "type": "standard",
+    "prompt": "Je veux licencier un agent contractuel en CDI pour insuffisance professionnelle. Quelle est la procédure ? Puis-je appliquer la même procédure que pour un titulaire ?",
+    "attendus": [
+      "Non : le contractuel relève d'un régime propre (décret n° 88-145 du 15 février 1988), pas de la procédure du titulaire",
+      "Procédure : entretien préalable, consultation de la CCP (pour les motifs qui le requièrent, dont l'insuffisance professionnelle en pratique connue), obligation de reclassement préalable avant tout licenciement non disciplinaire",
+      "Cite la jurisprudence de référence sur le reclassement préalable : CE, avis contentieux du 25 septembre 2013, n° 365139, en signalant le numéro « à confirmer » avant citation en acte",
+      "Notification motivée avec voies et délais de recours",
+      "Indemnité de licenciement due sauf faute grave/disciplinaire ou pension à taux plein ; mode de calcul fixé par le décret 88-145, à vérifier avant tout montant chiffré"
+    ],
+    "echec_si": [
+      "Applique l'échelle ou la procédure disciplinaire/statutaire du titulaire (CGFP L533, conseil de discipline) à ce contractuel",
+      "Omet l'obligation de reclassement préalable ou la saisine de la CCP",
+      "Cite la référence jurisprudentielle CE 2013 comme certaine sans aucune réserve"
+    ]
+  },
+  {
+    "id": "20",
+    "branche": "Carrière & paie",
+    "type": "standard",
+    "prompt": "Pendant le mouvement de grève de la semaine dernière, plusieurs agents n'ont fait que 4 heures sur leur journée de 7 heures. Je retiens un trentième indivisible par jour de grève, c'est bien ça ?",
+    "attendus": [
+      "Non : la règle du trentième indivisible est propre à la fonction publique de l'État, elle ne s'applique pas à la fonction publique territoriale",
+      "Dans la FPT, la retenue pour absence de service fait (dont la grève) est proportionnelle à la durée réelle de l'absence (retenue horaire, au prorata des heures non travaillées)",
+      "Recommande de vérifier le paramétrage du SIRH, souvent calibré par erreur sur la règle du trentième indivisible",
+      "Peut mentionner le cadre du préavis de grève et, le cas échéant, la déclaration préalable d'intention à 48h dans certains services (crèches, restauration scolaire, périscolaire, collecte des déchets), en signalant le périmètre exact à vérifier"
+    ],
+    "echec_si": [
+      "Valide l'application du trentième indivisible dans la FPT",
+      "Calcule ou valide une retenue par journée entière plutôt qu'au prorata des heures non travaillées"
+    ]
+  },
+  {
+    "id": "21",
+    "branche": "Carrière & paie",
+    "type": "standard",
+    "prompt": "Le maire vient d'être élu il y a 3 mois. Il souhaite décharger immédiatement de ses fonctions le DGS actuel, qui a été nommé sur cet emploi fonctionnel bien avant l'élection. C'est possible ?",
+    "attendus": [
+      "Non, impossible avant l'expiration d'un délai de 6 mois : le délai court à compter du plus tardif de deux événements — la nomination de l'agent dans l'emploi fonctionnel ou la désignation (élection/nomination) de l'autorité territoriale (base : art. L. 544-1 CGFP, ex-art. 53 loi 84-53, à confirmer en version consolidée)",
+      "Ici, l'agent a été nommé bien avant l'élection : c'est donc la date de désignation du maire (il y a 3 mois) qui fait courir le délai, non encore expiré",
+      "La décharge n'est pas une sanction disciplinaire, mais doit être motivée par l'intérêt du service",
+      "Entretien préalable de l'agent obligatoire",
+      "Information de l'assemblée délibérante ET du CNFPT ou du centre de gestion (art. L. 544-1, 2° CGFP)",
+      "Effet différé au premier jour du troisième mois suivant l'information de l'assemblée délibérante (art. L. 544-1, dernier alinéa, CGFP, à confirmer en version consolidée), sauf accord de l'agent pour une date plus rapprochée",
+      "Options de sortie : réintégration sur un emploi vacant du grade d'origine, à défaut congé spécial, ou prise en charge par le CDG/CNFPT"
+    ],
+    "echec_si": [
+      "Valide une décharge de fonctions immédiate ou avant l'expiration des 6 mois",
+      "Fait courir le délai de 6 mois uniquement à compter de l'élection du maire sans envisager l'hypothèse où la nomination de l'agent serait l'événement le plus tardif",
+      "Traite la décharge de fonctions comme une sanction disciplinaire (conseil de discipline, communication du dossier)",
+      "Omet l'entretien préalable, l'information de l'assemblée et du CNFPT/CDG, ou l'effet différé"
+    ]
+  },
+  {
+    "id": "22",
+    "branche": "QVT & santé",
+    "type": "standard",
+    "prompt": "Un agent titulaire a épuisé tous ses droits à congé de maladie ordinaire. Le conseil médical vient de le déclarer inapte à ses fonctions. Puis-je le licencier directement ?",
+    "attendus": [
+      "Non : saisine du conseil médical déjà réalisée, mais le licenciement ne peut intervenir qu'après une chaîne complète d'étapes",
+      "Recherche de reclassement obligatoire (obligation de moyens, pas de résultat, mais recherche sérieuse et réelle exigée) avant tout licenciement",
+      "Proposer la période de préparation au reclassement (PPR) : droit de l'agent, durée de principe 1 an, avec report possible du point de départ (≤ 2 mois, accord des parties, à compter de l'avis du conseil médical) et prolongation possible (≤ 3 mois) ; maintien du traitement ; formalisée par convention ; base décret n° 2019-172 du 5 mars 2019 modifié (dont décret n° 2022-626 du 22 avril 2022), à confirmer en version consolidée",
+      "Si le reclassement échoue et hors PPR : disponibilité d'office pour raison de santé envisageable",
+      "En dernier recours seulement : retraite pour invalidité (CNRACL, avis du conseil médical, distinction imputable/non imputable au service) ou licenciement pour inaptitude, ce dernier ouvrant droit à indemnité de licenciement"
+    ],
+    "echec_si": [
+      "Valide un licenciement immédiat sans recherche sérieuse de reclassement",
+      "Omet de mentionner le droit à la PPR avant d'enchaîner sur la disponibilité ou le licenciement",
+      "Présente le fonds de prévention de l'usure professionnelle FPT comme un dispositif opérationnel établi sans réserve"
+    ]
+  },
+  {
     "id": "13-echec-hors-perimetre",
     "branche": "Garde de calibrage — périmètre",
     "type": "echec_attendu",
