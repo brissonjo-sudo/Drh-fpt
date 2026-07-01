@@ -15,8 +15,9 @@ handicapés, rapport social unique). Le skill répond donc directement sur
 ces points, sans les conditionner.
 
 Les collectivités de **moins de 350 agents** (rattachement obligatoire au
-centre de gestion, absence de certaines instances propres, seuils
-spécifiques) **ne sont pas traitées** par cette version.
+centre de gestion — seuil compté en **fonctionnaires** —, absence de
+certaines instances propres, seuils spécifiques) **ne sont pas traitées**
+par cette version.
 
 ## Posture
 
@@ -57,16 +58,36 @@ décisionnel :
 drh-fpt/
 ├── SKILL.md                              Cœur : routeur, posture, méthode
 ├── README.md                             Ce fichier
+├── LICENSE                               CC BY-SA 4.0
 ├── JOURNAL.md                            Journal des cas (apprentissage)
 ├── CHANGELOG.md                          Historique des versions
 ├── SYNTHESE-CRITIQUES-v0.2.0.md          Trace de décision (challenge externe)
+├── drh-fpt-bundle-pour-LLM.md            Bundle mono-fichier (portage autres LLM)
 ├── references/
 │   ├── _gabarit-branche.md               Gabarit décisionnel des branches
-│   ├── socle-sources-verification.md     Sources FPT, conflits de normes, données volatiles
-│   ├── parametres-collectivite.md        Variables +350 agents + garde-fou régimes spécifiques
-│   └── carriere-paie.md                  Branche pilote (gabarit décisionnel)
-└── assets/
-    └── README.md                         Logique des gabarits de livrables
+│   ├── socle-sources-verification.md     Sources FPT, conflits de normes, valeurs chiffrées
+│   ├── parametres-collectivite.md        Variables +350 agents + garde-fous régimes spécifiques
+│   ├── carriere-paie.md                  Branche carrière & paie
+│   ├── qvt-sante.md                      Branche QVT & santé
+│   ├── recrutement-formation.md          Branche recrutement & formation
+│   ├── cst-dialogue-social.md            Branche CST & dialogue social
+│   ├── si-rh-masse-salariale.md          Branche SI RH & masse salariale
+│   └── communication-interne.md          Branche communication interne
+├── assets/
+│   ├── README.md                         Logique et index des gabarits
+│   ├── fiche-profil-collectivite.md      Profil de collectivité (cadrage d'ouverture)
+│   ├── decision-modele.md                Gabarit arrêté / décision individuelle
+│   ├── procedure-modele.md               Gabarit fiche de procédure
+│   ├── note-modele.md                    Gabarit note d'aide à la décision
+│   ├── deliberation-modele.md            Gabarit délibération
+│   └── courrier-modele.md                Gabarit courrier d'agent / note de service
+└── tests/
+    ├── README.md                         Dispositif de tests (deux protocoles)
+    ├── cas-de-test.json                  Cas + critères (harnais API)
+    ├── run_tests.py                      Harnais API (répondant + juge)
+    ├── prompt-claude-code.md             Protocole sous-agents Claude Code (10 cas)
+    ├── cas-co-activation.md              Cas transverse drh-fpt × recherche-juridique
+    └── rapports/                         Rapports de campagnes validés (datés)
 ```
 
 ## Apprentissage et amélioration
@@ -84,26 +105,42 @@ de façon anonymisée.
 
 ## Dépendance
 
-Recommandé : le skill **`recherche-juridique`** pour l'approfondissement du
-volet juridique. Le skill DRH reste fonctionnel sans lui grâce à son noyau de
-vérification autonome, mais les deux ensemble offrent la meilleure fiabilité.
+Recommandé : le skill **`recherche-juridique`** (v2.2.0 ou supérieure) pour
+l'approfondissement du volet juridique. Le skill DRH reste fonctionnel sans lui
+grâce à son noyau de vérification autonome, mais les deux ensemble offrent la
+meilleure fiabilité (co-activation validée — voir Validation).
 
 ## Installation et usage
 
-**Sur Claude / Claude Code** : récupérer le build `drh-fpt.skill` et le charger
-comme skill. Il s'active automatiquement sur les questions RH territoriales.
+**Sur Claude / Claude Code** : charger le dossier du skill (`SKILL.md` +
+`references/` + `assets/`) — ou l'archive de la release — comme skill. Il
+s'active automatiquement sur les questions RH territoriales.
 
 **Sur un autre LLM** : coller le contenu de `drh-fpt-bundle-pour-LLM.md` en tête
-de conversation (instructions système). Tous les fichiers du skill y sont
-consolidés avec une consigne d'adhérence et d'anti-hallucination.
+de conversation (instructions système). Les fichiers de connaissance et de
+règles y sont consolidés avec une consigne d'adhérence et d'anti-hallucination
+(les gabarits de livrables `assets/` ne sont pas inclus dans le bundle).
 
 ## Validation
 
-Skill éprouvé avant publication : **3 tests internes** (régime indemnitaire
-police municipale, sanction disciplinaire, PSC santé) et **5 portages externes**
-(Gemini, ChatGPT, Grok réussis ; Vibe conservé comme contre-exemple). Détail :
-`JOURNAL.md`, `SYNTHESE-CRITIQUES-v0.2.0.md`, `CHANGELOG.md`.
+Le skill est éprouvé par un dispositif de tests anti-triche (sous-agents
+répondant/juge à contextes séparés — voir `tests/`) :
+
+- **Campagne 10 cas** (v0.4.2, 2026-06-27) : **10/10 réussites, moyenne
+  4,9/5, 0 référence inventée** ; les réserves détectées ont été corrigées
+  (v0.4.2 → v0.4.5) puis re-testées.
+- **Co-activation réelle** avec `recherche-juridique` (abandon de poste) :
+  **réussite 5/5 sur 9 critères**.
+- Historique : 3 tests internes initiaux + 5 portages externes (Gemini,
+  ChatGPT, Grok réussis ; Vibe conservé comme contre-exemple).
+
+Détail : `tests/rapports/`, `JOURNAL.md`, `CHANGELOG.md`.
+
+## Licence
+
+**CC BY-SA 4.0** — voir `LICENSE`.
 
 ## Version
 
-v0.3.0 — six branches déroulées sur gabarit décisionnel. Voir `CHANGELOG.md`.
+Version courante : voir l'en-tête YAML de `SKILL.md` (source unique) et le
+détail des évolutions dans `CHANGELOG.md`.

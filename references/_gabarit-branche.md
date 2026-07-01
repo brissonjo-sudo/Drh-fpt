@@ -32,8 +32,11 @@
 ## Règles d'écriture
 
 - Imperatif, phrases courtes, une idée par point.
-- Aucune **valeur datée** figée (indices, montants, plafonds) : seulement les
-  **règles** et la consigne de vérifier la valeur en vigueur.
+- Valeurs chiffrées : appliquer le **régime du socle §6** — les **valeurs
+  d'indexation** (point, cotisations, GIPA, planchers PSC) ne sont jamais
+  figées ni données de mémoire ; les **plafonds et barèmes réglementaires**
+  (fixés par un décret identifié) sont citables s'ils sont **datés** et assortis
+  de « à confirmer en version consolidée ».
 - Citer les **références structurelles stables** (codes, numéros de décrets
   fondateurs) en rappelant la vérification de version.
 - Pas d'instruction de méta-conception dans le corps métier : elle reste ici.

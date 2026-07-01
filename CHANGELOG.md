@@ -2,6 +2,45 @@
 
 Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
+## [0.4.7] — 2026-07-01 — Quick wins issus de l'audit complet
+
+### Corrigé (juridique)
+- **Seuil d'affiliation CDG** (parametres-collectivite §2) : l'unité de compte
+  légale est le **fonctionnaire** (titulaires et stagiaires à temps complet),
+  pas l'« agent » — piège explicité (400 agents / 300 fonctionnaires = affiliée).
+- **Prescription disciplinaire** (carriere-paie §5.5) : citée fermement —
+  **3 ans, art. L532-2 CGFP** (référence stable), interruption en cas de
+  poursuites pénales — au lieu du « à vérifier » excessif.
+- **Suspension conservatoire** (carriere-paie §5.5, nouveau) : art. L531-1 CGFP,
+  mesure conservatoire ≠ sanction, maintien du traitement, délai de 4 mois.
+- **Rupture conventionnelle** (carriere-paie §5.9 + socle §3) : drapeau explicite
+  — expérimentation fonctionnaires expirée au 31/12/2025, pérennisation à
+  vérifier avant toute réponse.
+
+### Corrigé (cohérence)
+- **Doctrine des valeurs chiffrées unifiée** : le méta-gabarit et les en-têtes
+  des six branches contredisaient la distinction volatil/réglementaire (v0.3.2)
+  — alignés sur le régime du socle §6.
+- **Dédoublonnage ISFE** : les chiffres ne vivent plus que dans carriere-paie
+  §5.7 (source interne unique) ; le socle §6.2 y renvoie.
+- **Renvoi cassé** SKILL §4 : « §3 du socle » → « §6.1 du socle ».
+- **Versions figées par branche supprimées** (le CHANGELOG fait foi).
+- **Bundle** : périmètre de consolidation documenté en tête (inclus / exclus).
+
+### Ajouté
+- **LICENSE** : CC BY-SA 4.0 (alignée sur le dépôt recherche-juridique).
+- `tests/rapports/RAPPORT-2026-06-27.md` : rapport de campagne versionné
+  (le dossier `resultats/` reste réservé aux sorties brutes, non versionnées).
+
+### Documentation
+- **README refondu** : arbre de structure complet, section Validation à jour
+  (campagne 10 cas, co-activation), version déléguée à SKILL.md (source unique),
+  licence, installation clarifiée.
+- **Métadonnées YAML** : dépendance recherche-juridique versionnée (>= 2.2.0),
+  modèles testés précisés, statut et dates actualisés.
+- tests/README.md : les **deux protocoles** documentés ; JOURNAL : statuts clos
+  et vocabulaire élargi.
+
 ## [0.4.6] — 2026-06-27 — Gabarits de livrables (assets/)
 
 ### Ajouté

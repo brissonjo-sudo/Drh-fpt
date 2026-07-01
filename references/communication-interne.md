@@ -1,4 +1,4 @@
-# Branche — Communication interne (v0.1.0)
+# Branche — Communication interne
 
 > Structure conforme à `_gabarit-branche.md`. Branche à **socle juridique
 > léger** : la vigilance porte surtout sur l'obligation d'information, la
