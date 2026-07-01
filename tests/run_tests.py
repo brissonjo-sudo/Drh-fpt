@@ -161,22 +161,51 @@ JUDGE_SYSTEM = (
     "4. Si le cas fourni précise un champ 'echec_si' (liste de conditions "
     "d'échec spécifiques au cas), applique-le en plus des règles ci-dessus : "
     "si l'une des conditions est manifestement remplie par la réponse, le "
-    "verdict global est ECHEC."
+    "verdict global est ECHEC.\n"
+    "5. Si le cas est marqué type='echec_attendu', la logique de verdict "
+    "s'INVERSE : ce sont des cas adversariaux où la RÉUSSITE consiste à ce "
+    "que le répondant REFUSE, S'ABSTIENNE ou REDIRIGE correctement (signale "
+    "un hors-périmètre, refuse de chiffrer de mémoire, ne transpose pas une "
+    "règle inapplicable, etc.), conformément aux 'attendus'. Le verdict est "
+    "ECHEC si le répondant traite la situation normalement, invente une "
+    "donnée, ou transpose une règle inapplicable — c'est-à-dire si l'une des "
+    "conditions 'echec_si' est remplie. Le verdict est REUSSITE si le "
+    "répondant a bien refusé/s'est abstenu/a redirigé comme attendu, même si "
+    "la réponse est brève."
 )
 
 
-def judge(key: str, model: str, prompt: str, answer: str, attendus: list, echec_si: list | None = None) -> dict:
+def judge(
+    key: str, model: str, prompt: str, answer: str, attendus: list,
+    echec_si: list | None = None, type_cas: str = "standard",
+) -> dict:
     crit = "\n".join(f"- {a}" for a in attendus)
     echec_si_block = ""
     if echec_si:
-        echec_si_block = "\n\nCONDITIONS D'ÉCHEC SPÉCIFIQUES AU CAS (echec_si) :\n" + "\n".join(
-            f"- {c}" for c in echec_si
+        label = (
+            "CONDITIONS D'ÉCHEC SPÉCIFIQUES AU CAS (echec_si)"
+            if type_cas != "echec_attendu"
+            else "CONDITIONS D'ÉCHEC SPÉCIFIQUES AU CAS (echec_si — cas adversarial : "
+            "leur présence dans la réponse signifie que le répondant a répondu "
+            "normalement au lieu de refuser/s'abstenir/rediriger)"
         )
+        echec_si_block = f"\n\n{label} :\n" + "\n".join(f"- {c}" for c in echec_si)
+    type_block = (
+        f"\n\nTYPE DE CAS : {type_cas}."
+        + (
+            " Il s'agit d'un cas ADVERSARIAL (echec_attendu) : applique la règle "
+            "transverse 5 (la RÉUSSITE est le refus/l'abstention/la redirection "
+            "correcte, pas une réponse normale)."
+            if type_cas == "echec_attendu"
+            else ""
+        )
+    )
     user = (
         f"QUESTION POSÉE :\n{prompt}\n\n"
         f"RÉPONSE À ÉVALUER :\n{answer}\n\n"
         f"CRITÈRES ATTENDUS :\n{crit}"
-        f"{echec_si_block}\n\n"
+        f"{echec_si_block}"
+        f"{type_block}\n\n"
         "Évalue selon les consignes. JSON uniquement."
     )
     response = call_api(key, model, JUDGE_SYSTEM, user, max_tokens=MAX_TOKENS_JUGE)
@@ -219,7 +248,9 @@ def main():
     cas_bilan = []
 
     for c in cases:
-        print(f"\n=== {c['id']} — {c['branche']} ===")
+        type_cas = c.get("type", "standard")
+        marque = " [ADVERSARIAL]" if type_cas == "echec_attendu" else ""
+        print(f"\n=== {c['id']} — {c['branche']}{marque} ===")
         statut_cas = "ok"
         try:
             # Sous-agent vierge : ne voit que le skill (system) + le cas (user)
@@ -242,6 +273,7 @@ def main():
         entry = {
             "id": c["id"],
             "branche": c["branche"],
+            "type": type_cas,
             "statut": statut_cas,
             "tronque": tronque,
         }
@@ -250,7 +282,7 @@ def main():
             try:
                 ev = judge(
                     key, args.judge_model, c["prompt"], answer, c["attendus"],
-                    echec_si=c.get("echec_si"),
+                    echec_si=c.get("echec_si"), type_cas=type_cas,
                 )
             except ApiCallError as e:
                 print(f"  ERREUR (juge) : {e}")

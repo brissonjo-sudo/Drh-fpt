@@ -87,12 +87,12 @@ drh-fpt/
 │   └── courrier-modele.md                Gabarit courrier d'agent / note de service
 └── tests/
     ├── README.md                         Dispositif de tests (deux protocoles)
-    ├── cas-de-test.json                  Cas + critères (harnais API)
+    ├── cas-de-test.json                  Source unique des cas (12 standard + 5 adversariaux)
     ├── run_tests.py                      Harnais API (répondant + juge)
-    ├── prompt-claude-code.md             Protocole sous-agents Claude Code (10 cas)
+    ├── prompt-claude-code.md             Protocole sous-agents Claude Code (lit cas-de-test.json)
     ├── cas-co-activation.md              Cas transverse drh-fpt × recherche-juridique
     └── rapports/                         Rapports de campagnes validés (datés)
-        └── RAPPORT-2026-06-27.md         Campagne 10 cas (v0.4.2)
+        └── RAPPORT-2026-06-27.md         Campagne 10 cas (v0.4.2, archivée)
 ```
 
 ## Apprentissage et amélioration

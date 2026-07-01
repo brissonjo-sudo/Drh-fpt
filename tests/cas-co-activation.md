@@ -4,6 +4,18 @@
 > sont installés (test Claude Code). Le sous-agent répondant reçoit les skills +
 > l'énoncé, **jamais** ce barème.
 
+Dépôt du skill compagnon `recherche-juridique` (alias `droit-francais-skill`) :
+<https://github.com/brissonjo-sudo/droit-francais-skill>
+
+> **Variante dégradée (drh-fpt seul).** Ce cas reste jouable si seul `drh-fpt`
+> est installé, grâce à son **noyau de vérification autonome** (SKILL.md §3 :
+> primarité, date de référence, hiérarchie des normes, abstention motivée),
+> qui couvre déjà l'essentiel du barème (qualification, fondement CGFP,
+> mise en demeure, écartement de la présomption de démission, acte). Dans
+> cette variante, **n'évalue pas le critère 9** (« co-activation visible ») —
+> il présuppose la présence des deux skills et n'a pas de sens sans
+> `recherche-juridique`. Les critères 1 à 8 restent applicables tels quels.
+
 ## Énoncé
 
 > Je suis DRH d'une commune de plus de 350 agents. Un adjoint technique

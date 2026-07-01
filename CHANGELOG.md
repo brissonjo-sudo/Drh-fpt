@@ -2,6 +2,43 @@
 
 Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
+## [0.4.9] — 2026-07-01 — Tests : source unique et cas adversariaux
+
+### Modifié
+- `tests/cas-de-test.json` devient la **source unique** des cas de test : fusion
+  des 6 cas existants et des 10 questions autrefois dupliquées dans
+  `prompt-claude-code.md` (dédupliquées en gardant la version la plus exigeante),
+  soit **12 cas `standard`**. Champs harmonisés : `id`, `branche`, `type`
+  (`standard` / `echec_attendu`), `prompt`, `attendus`, `echec_si`.
+- Assertions de non-régression ajoutées aux cas concernés : décret CITIS FPT
+  **2019-301** (≠ 2019-122 FPE) ; seuil du **CST propre = 50 agents** (≠ 200 SSCT
+  ≠ 350 CDG) ; régimes indemnitaires PM antérieurs = décrets **97-702, 2000-45,
+  2006-1397** + avis préalable du CST avant délibération ; décret **2024-614**
+  (ISFE) applicable dès 2024, seule l'abrogation des anciens régimes est au
+  1/1/2025 ; abandon de poste (fondement L. 553-1, 1° CGFP, CE Casagranda
+  n° 147511 à confirmer, pas de présomption de démission du privé, arrêté non
+  rétroactif) — nouveau cas dédié.
+- `tests/run_tests.py` : le juge sait désormais évaluer un cas `type:
+  "echec_attendu"` (logique de verdict inversée : réussite = refus/abstention/
+  redirection correcte) ; bilan enrichi du champ `type` par cas.
+- `tests/prompt-claude-code.md` refondu : ne duplique plus les cas (renvoie à
+  `cas-de-test.json` comme source unique des cas et barèmes), remplace le
+  `git clone` codé en dur par la réutilisation du dépôt courant, documente le
+  jugement des cas `echec_attendu`.
+- `tests/cas-co-activation.md` : ajout de l'URL du dépôt du skill compagnon
+  `recherche-juridique` et d'une note « variante dégradée » (jouable avec
+  `drh-fpt` seul, sans évaluer le critère 9 de co-activation).
+- `tests/README.md` : compteurs et description mis à jour (source unique JSON,
+  12 cas standard + 5 adversariaux, deux protocoles alignés sur la même source).
+
+### Ajouté
+- **5 cas adversariaux** (`type: "echec_attendu"`) testant l'abstention promise
+  par le skill, jamais vérifiée jusqu'ici : hors périmètre effectif (< 350
+  agents), mauvaise fonction publique (FPH/FPE), valeur volatile demandée de
+  mémoire (point d'indice), sujet non couvert par la base (indemnité de feu
+  SPP), piège du droit privé (présomption de démission appliquée à tort à un
+  fonctionnaire).
+
 ## [0.4.8] — 2026-07-01 — Outillage : build du bundle, cohérence, harnais durci
 
 ### Ajouté
