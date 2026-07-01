@@ -14,3 +14,7 @@ dist/
 
 # Résultats de tests générés
 tests/resultats/
+
+# Python
+__pycache__/
+*.pyc
