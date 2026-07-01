@@ -1,68 +1,287 @@
 [
   {
-    "id": "01-carriere-paie",
+    "id": "01",
     "branche": "Carrière & paie",
+    "type": "standard",
     "prompt": "Un de mes agents, adjoint administratif principal de 2e classe à temps partiel 80 %, peut-il avancer de grade cette année ? Et reste-t-il affilié à la CNRACL ?",
     "attendus": [
       "Avancement de grade = inscription au tableau annuel + conditions statutaires + ratios promus-promouvables votés par l'assemblée + orienté par les LDG (donc pas automatique)",
       "La CAP n'est plus compétente sur l'avancement depuis la réforme de 2019",
-      "Un agent à temps partiel 80 % sur un poste à temps complet reste affilié à la CNRACL (ne pas confondre temps partiel et temps non complet < 28 h)",
+      "Un agent à temps partiel 80 % sur un poste à temps complet reste affilié à la CNRACL (oui, reste à la CNRACL)",
+      "Distingue explicitement le temps partiel (choix de l'agent, reste CNRACL) du temps non complet < 28 h (bascule IRCANTEC)",
       "Aucune valeur chiffrée donnée de mémoire"
+    ],
+    "echec_si": [
+      "Bascule l'agent à l'IRCANTEC du seul fait du temps partiel 80 %",
+      "Présente l'avancement de grade comme automatique"
     ]
   },
   {
-    "id": "02-qvt-sante",
+    "id": "02",
     "branche": "QVT & santé",
+    "type": "standard",
     "prompt": "Un de mes agents titulaires s'est blessé en intervention sur son lieu de travail. Comment je gère son congé, et qui décide si c'est imputable au service ?",
     "attendus": [
       "Qualification en accident de service relevant du CITIS (et non d'une maladie ordinaire)",
+      "Base légale FPT : CGFP art. L. 822-18 et s., et décret n° 2019-301 du 10 avril 2019 (CITIS FPT)",
+      "Signale explicitement qu'il ne faut PAS viser le décret n° 2019-122 du 21 février 2019, propre à la fonction publique d'État",
       "L'imputabilité au service relève d'une décision de l'autorité territoriale, le conseil médical pouvant être saisi selon les cas",
       "Distinction du régime selon que l'agent est titulaire ou contractuel",
       "La décision sur l'imputabilité est un acte pouvant faire grief : motivation et voies de recours"
+    ],
+    "echec_si": [
+      "Traite la blessure en congé de maladie ordinaire sans évoquer le CITIS",
+      "Cite le décret n° 2019-122 comme base FPT (confusion avec la FPE)",
+      "Ignore la question de l'imputabilité au service"
     ]
   },
   {
-    "id": "03-recrutement-formation",
+    "id": "03",
     "branche": "Recrutement & formation",
+    "type": "standard",
     "prompt": "Je veux recruter un contractuel sur un poste permanent vacant de catégorie B. Est-ce possible et sous quelles conditions ?",
     "attendus": [
       "Recrutement possible uniquement sur un fondement juridique précis défini par le CGFP (cas de recours élargis par la loi de 2019), à vérifier selon la situation",
       "Déclaration de création/vacance d'emploi préalable et publicité",
       "Forme et durée du contrat (CDD, conditions de CDIsation), priorité de principe aux fonctionnaires",
       "Le fondement exact est signalé comme à vérifier plutôt qu'affirmé de mémoire"
+    ],
+    "echec_si": [
+      "Répond « oui, librement » sans exiger de fondement juridique ni de procédure",
+      "Omet la déclaration de vacance et la publicité"
     ]
   },
   {
-    "id": "04-cst-dialogue-social",
+    "id": "04",
     "branche": "CST & dialogue social",
+    "type": "standard",
     "prompt": "Je dois adopter mes lignes directrices de gestion. Quelle instance dois-je consulter et selon quelle procédure ?",
     "attendus": [
       "Les LDG sont établies par l'autorité territoriale après avis préalable du CST",
       "La CAP n'est pas l'instance compétente pour les LDG",
       "Les LDG sont portées à la connaissance des agents",
       "Lien avec le pilotage RH (RSU, stratégie pluriannuelle)"
+    ],
+    "echec_si": [
+      "Désigne la CAP comme instance compétente pour les LDG",
+      "Omet l'avis préalable du CST"
     ]
   },
   {
-    "id": "05-si-rh-masse-salariale",
+    "id": "05",
     "branche": "SI RH & masse salariale",
+    "type": "standard",
     "prompt": "Comment estimer l'évolution de ma masse salariale pour l'an prochain ? Quels facteurs dois-je intégrer ?",
     "attendus": [
       "Distinction mesures générales (valeur du point), catégorielles, et individuelles (GVT positif)",
       "Prise en compte de l'effet de noria et de l'effet report",
       "Méthode de calcul : annoncer les hypothèses, demander les données manquantes, séparer connu et estimé",
       "Valeur du point et taux de cotisation traités comme données volatiles à vérifier, jamais de mémoire"
+    ],
+    "echec_si": [
+      "Avance un chiffre ferme de mémoire pour la valeur du point ou les cotisations",
+      "Oublie l'effet de noria ou l'effet report"
     ]
   },
   {
-    "id": "06-communication-interne",
+    "id": "06",
     "branche": "Communication interne",
+    "type": "standard",
     "prompt": "Je vais diffuser mes nouvelles lignes directrices de gestion à l'ensemble des agents. Quelles précautions dois-je prendre ?",
     "attendus": [
       "Les LDG doivent être portées à la connaissance des agents (obligation d'information)",
       "Cohérence avec le dialogue social : information/avis des instances avant la diffusion générale",
       "Respect du RGPD pour toute donnée relative aux agents",
       "Distinction entre communication (note d'information) et acte juridique"
+    ],
+    "echec_si": [
+      "Ignore l'exigence d'avis préalable du CST avant toute diffusion générale"
+    ]
+  },
+  {
+    "id": "07",
+    "branche": "Carrière & paie",
+    "type": "standard",
+    "prompt": "Commune de plus de 350 agents. Je veux instaurer le régime indemnitaire de mes agents de police municipale. Que puis-je verser et comment procéder ?",
+    "attendus": [
+      "Cite l'ISFE (Indemnité Spéciale de Fonction et d'Engagement), décret n° 2024-614 du 26 juin 2024, fondée sur l'article L. 714-13 du CGFP",
+      "Exclut explicitement le RIFSEEP pour la police municipale (filière à régime propre, hors RIFSEEP)",
+      "Décrit les deux parts : part fixe + part variable liée à l'engagement",
+      "Mentionne la clause de sauvegarde du montant antérieur",
+      "Procédure : avis préalable du CST → délibération de l'assemblée → arrêtés individuels",
+      "Régimes indemnitaires antérieurs propres à la police municipale correctement nommés : décrets n° 97-702, 2000-45 et 2006-1397 (ne pas dire « ISMF » ni inventer un autre sigle)",
+      "Décret 2024-614 applicable dès sa publication en 2024 ; seule l'abrogation des anciens régimes (décrets 97-702, 2000-45, 2006-1397) est datée au 1er janvier 2025 — ne pas dater l'entrée en vigueur de l'ISFE au 1/1/2025"
+    ],
+    "echec_si": [
+      "Applique le RIFSEEP à la police municipale",
+      "Invente un texte ou un sigle (ex. « ISMF ») pour les régimes indemnitaires antérieurs",
+      "Date l'entrée en vigueur de l'ISFE au 1er janvier 2025 au lieu de 2024",
+      "Omet l'avis préalable du CST avant la délibération"
+    ]
+  },
+  {
+    "id": "08",
+    "branche": "Carrière & paie",
+    "type": "standard",
+    "prompt": "Quels sont les plafonds de l'ISFE pour un directeur de police municipale ?",
+    "attendus": [
+      "Traite ces plafonds comme réglementaires (décret 2024-614) — peut les citer (part fixe 33 %, part variable 9 500 €) en datant le décret et en signalant « à confirmer en version consolidée »",
+      "Précise que le montant en euros de la part fixe dépend de la valeur du point (donnée volatile), donc à vérifier pour chiffrer",
+      "À défaut de citer les chiffres, renvoie au décret sans inventer de montant"
+    ],
+    "echec_si": [
+      "Invente des chiffres non conformes au décret",
+      "Donne des chiffres sans aucune réserve de source"
+    ]
+  },
+  {
+    "id": "09",
+    "branche": "Carrière & paie",
+    "type": "standard",
+    "prompt": "Quelle procédure pour exclure temporairement un agent 5 jours ?",
+    "attendus": [
+      "Situe l'exclusion temporaire de 5 jours au 2e groupe des sanctions",
+      "Conseil de discipline obligatoire pour ce groupe",
+      "Droits de la défense : communication de l'intégralité du dossier, assistance d'un conseil, délai suffisant de préparation",
+      "Acte faisant grief : motivation et voies de recours",
+      "Peut mentionner la prescription de l'action disciplinaire (3 ans à compter de la connaissance effective des faits, CGFP art. L532-2)"
+    ],
+    "echec_si": [
+      "Place la sanction au 1er groupe",
+      "Affirme qu'aucun conseil de discipline n'est requis"
+    ]
+  },
+  {
+    "id": "10",
+    "branche": "QVT & santé",
+    "type": "standard",
+    "prompt": "Pour mon budget 2026 : quelle est mon obligation de participation à la complémentaire santé, depuis quand, et l'adhésion des agents est-elle obligatoire ? Et la prévoyance ?",
+    "attendus": [
+      "Participation santé (mutuelle) obligatoire depuis le 1er janvier 2026",
+      "Adhésion des agents à la complémentaire santé facultative",
+      "Prévoyance obligatoire depuis le 1er janvier 2025",
+      "Généralisation des contrats collectifs de prévoyance à adhésion obligatoire à l'échéance du 1er janvier 2029 (loi du 22 décembre 2025)",
+      "Montants planchers et taux de participation traités comme données volatiles à vérifier"
+    ],
+    "echec_si": [
+      "Affirme que la participation santé n'est pas encore obligatoire",
+      "Invente un calendrier ou un montant de participation"
+    ]
+  },
+  {
+    "id": "11",
+    "branche": "Carrière & paie",
+    "type": "standard",
+    "prompt": "Je suis DRH à la Ville de Paris. Mes attachés relèvent-ils exactement du même statut que dans une commune ordinaire ?",
+    "attendus": [
+      "Signale le statut particulier de la Ville de Paris et les corps propres des administrations parisiennes",
+      "Déclenche une vigilance renforcée (garde de calibrage, statut particulier détecté)",
+      "Invite à vérifier les textes propres plutôt qu'appliquer le droit commun FPT sans réserve"
+    ],
+    "echec_si": [
+      "Applique le droit FPT commun sans la moindre réserve sur le statut particulier parisien"
+    ]
+  },
+  {
+    "id": "12",
+    "branche": "Carrière & paie",
+    "type": "standard",
+    "prompt": "Un de mes agents titulaires, adjoint technique, ne s'est plus présenté à son poste depuis trois semaines : aucune nouvelle, aucun arrêt de travail, aucun justificatif. Le Maire veut le radier des cadres pour abandon de poste. Quelle est la procédure, et sur quel fondement ?",
+    "attendus": [
+      "Qualifie l'abandon de poste comme un licenciement emportant radiation des cadres, PAS une sanction disciplinaire (ni conseil de discipline, ni communication du dossier)",
+      "Fondement textuel exact : article L. 553-1, 1° du CGFP (issu de l'ordonnance n° 2021-1574 du 24 novembre 2021), cité comme fondement textuel et non comme invention",
+      "Caractérisation : absence injustifiée (aucun justificatif) + non-réponse à la mise en demeure",
+      "Mise en demeure préalable obligatoire : écrite, notifiée (LRAR ou remise contre décharge), délai approprié de reprise, information du risque de radiation sans procédure disciplinaire préalable",
+      "Mentionne la jurisprudence-pivot CE Section, 11 décembre 1998, Casagranda, n° 147511, en la signalant comme « à confirmer sur Légifrance / conseil-etat.fr » avant de la viser dans un acte",
+      "Écarte explicitement la présomption de démission du secteur privé (loi du 21 décembre 2022, art. L. 1237-1-1 du code du travail) comme inapplicable à la FPT",
+      "Arrêté de radiation motivé, notifié, non rétroactif (effet à la notification et non à la date d'absence), avec voies et délais de recours"
+    ],
+    "echec_si": [
+      "Traite l'abandon de poste comme une procédure disciplinaire (conseil de discipline, communication du dossier)",
+      "Applique la présomption de démission du privé à un fonctionnaire",
+      "Invente un article ou un numéro d'arrêt, ou cite une référence comme vérifiée sans réserve",
+      "Fait de l'épuisement des congés de maladie ordinaire une condition de l'abandon de poste",
+      "Omet la mise en demeure ou son contenu obligatoire",
+      "Rend l'arrêté rétroactif (effet à la date d'absence) ou non motivé"
+    ]
+  },
+  {
+    "id": "13-echec-hors-perimetre",
+    "branche": "Garde de calibrage — périmètre",
+    "type": "echec_attendu",
+    "prompt": "Je suis maire d'une petite commune d'environ 40 agents. Je dois consulter mon CST : quelle est la procédure ?",
+    "attendus": [
+      "Signale explicitement que le skill est calibré pour les collectivités de plus de 350 agents et que la situation décrite (~40 agents) sort de ce périmètre",
+      "Indique qu'en deçà de 50 agents, il n'y a pas de CST propre : la collectivité relève d'un CST commun placé auprès du centre de gestion (CDG)",
+      "N'applique pas les réflexes prévus pour les seuils franchis à 350 agents (ex. affiliation facultative au CDG, filières à régime spécifique) sans les reconditionner à cette petite taille",
+      "Invite à consulter un dispositif ou une expertise adaptée aux petites collectivités plutôt que de répondre comme si le skill couvrait nativement ce cas"
+    ],
+    "echec_si": [
+      "Répond normalement comme si la collectivité était dans le périmètre de plus de 350 agents",
+      "Omet de mentionner le CST commun au CDG pour une collectivité de cette taille",
+      "N'émet aucune réserve sur le hors-périmètre"
+    ]
+  },
+  {
+    "id": "14-echec-mauvaise-fp",
+    "branche": "Garde de calibrage — périmètre",
+    "type": "echec_attendu",
+    "prompt": "Je suis DRH d'un centre hospitalier universitaire (CHU) de 900 agents. Un agent titulaire est en arrêt maladie depuis 8 mois : quel est son régime de congé de longue maladie ?",
+    "attendus": [
+      "Signale explicitement que la question porte sur la fonction publique hospitalière (FPH), hors périmètre du skill drh-fpt (dédié à la FPT)",
+      "Ne transpose pas les règles ou textes de la fonction publique territoriale à la situation hospitalière",
+      "Oriente vers une expertise ou une base documentaire propre à la FPH"
+    ],
+    "echec_si": [
+      "Répond en appliquant directement les règles ou textes de la FPT à un agent hospitalier sans réserve",
+      "Ne mentionne pas que le CHU relève d'une autre fonction publique que celle couverte par le skill"
+    ]
+  },
+  {
+    "id": "15-echec-valeur-volatile",
+    "branche": "Garde de calibrage — données volatiles",
+    "type": "echec_attendu",
+    "prompt": "Quelle est la valeur exacte du point d'indice aujourd'hui ? Donne-moi le chiffre, j'en ai besoin pour un arrêté.",
+    "attendus": [
+      "Refuse de chiffrer la valeur du point d'indice de mémoire",
+      "Renvoie explicitement à la source officielle à vérifier (Légifrance, décret en vigueur) avant tout usage dans un acte",
+      "Propose une méthode : où et comment vérifier la valeur actuelle, éventuellement demande la date de l'arrêté pour cibler la version applicable"
+    ],
+    "echec_si": [
+      "Donne un chiffre précis de la valeur du point d'indice sans réserve de vérification",
+      "Affirme une valeur « à jour » sans renvoyer à une source vérifiable"
+    ]
+  },
+  {
+    "id": "16-echec-hors-base",
+    "branche": "Garde de calibrage — sujet non couvert",
+    "type": "echec_attendu",
+    "prompt": "Quel est le montant exact de l'indemnité de feu de mes sapeurs-pompiers professionnels, et sur quel texte s'appuie-t-elle ?",
+    "attendus": [
+      "Signale que le régime indemnitaire détaillé des sapeurs-pompiers professionnels (montants de l'indemnité de feu) n'est pas couvert par la base documentaire du skill",
+      "Abstention motivée : indique que le point est à vérifier auprès d'une source dédiée (texte réglementaire propre aux SPP, service RH SDIS) plutôt que d'avancer un chiffre",
+      "Zéro invention de montant ou de référence de décret"
+    ],
+    "echec_si": [
+      "Invente un montant précis pour l'indemnité de feu",
+      "Invente ou approxime un numéro de décret non vérifié pour ce régime",
+      "Répond avec assurance comme si le sujet était couvert par la base du skill"
+    ]
+  },
+  {
+    "id": "17-echec-droit-prive",
+    "branche": "Garde de calibrage — piège droit privé",
+    "type": "echec_attendu",
+    "prompt": "Mon agent titulaire est absent sans justificatif depuis plusieurs semaines. Je peux utiliser la présomption de démission de la loi de 2022 ?",
+    "attendus": [
+      "Répond non : la présomption de démission (loi du 21 décembre 2022, art. L. 1237-1-1 du code du travail) est un dispositif de droit privé, inapplicable aux fonctionnaires de la FPT",
+      "Redirige vers le dispositif propre à la FPT : l'abandon de poste (art. L. 553-1, 1° du CGFP) et son formalisme (mise en demeure préalable, absence injustifiée + non-réponse à la mise en demeure)",
+      "Ne présente pas la présomption de démission comme une option même partiellement applicable"
+    ],
+    "echec_si": [
+      "Confirme que la présomption de démission du privé est applicable à l'agent titulaire",
+      "Transpose le dispositif du code du travail sans réserve à la FPT",
+      "Omet de renvoyer vers la procédure d'abandon de poste propre à la FPT"
     ]
   }
 ]
