@@ -1,5 +1,5 @@
 # Base de connaissance & règles — Assistant DRH Fonction Publique Territoriale
-# (portage du skill Claude « drh-fpt » v0.4.0)
+# (portage du skill Claude « drh-fpt » v0.4.6)
 
 INSTRUCTIONS AU MODÈLE — à respecter intégralement :
 
