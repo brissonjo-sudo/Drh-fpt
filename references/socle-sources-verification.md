@@ -81,6 +81,9 @@ usage en acte :
   commission de réforme).
 - **CAP / LDG** — compétences des CAP recentrées, montée des lignes
   directrices de gestion.
+- **Rupture conventionnelle** — pour les fonctionnaires, dispositif
+  **expérimental jusqu'au 31 décembre 2025** : vérifier s'il a été pérennisé,
+  prorogé ou éteint avant toute réponse.
 
 ---
 
@@ -119,6 +122,8 @@ Quand deux sources divergent, ne pas trancher au hasard. Appliquer dans l'ordre 
 derrière une réponse lisse : indiquer les deux sources et la règle de
 résolution appliquée.
 
+---
+
 ## 6. Valeurs chiffrées — distinguer le volatil du réglementaire
 
 Deux régimes distincts, à ne pas confondre.
@@ -141,11 +146,12 @@ Ils **peuvent être cités**, à trois conditions :
 2. rattacher si possible le plafond à son **article** ;
 3. signaler « **à confirmer en version consolidée** » à la date utile.
 
-Exemples : plafonds **ISFE** (part fixe 33 / 32 / 30 % ; part variable
-9 500 / 7 000 / 5 000 €), plafonds **RIFSEEP** par groupe de fonctions,
-contingent mensuel d'**IHTS** (25 h).
+Exemples : plafonds **ISFE** (décret n° 2024-614 — valeurs portées par la
+branche carrière-paie §5.7, **source interne unique** pour éviter toute
+divergence), plafonds **RIFSEEP** par groupe de fonctions, contingent mensuel
+d'**IHTS**.
 
-> **Cas mixte** : un **taux** plafond (ex. 33 % pour la part fixe ISFE) est
+> **Cas mixte** : un **taux** plafond (ex. la part fixe ISFE) est
 > stable, mais le **montant en euros** qui en résulte dépend de la **valeur du
 > point** (volatile). Citer le taux ; signaler que le montant exige la valeur
 > du point en vigueur.

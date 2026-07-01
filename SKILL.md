@@ -15,20 +15,20 @@ description: >-
   publiques d'État ou hospitalière, ni pour les collectivités de moins de 350
   agents.
 metadata:
-  version: 0.4.6
-  statut: six branches déroulées sur gabarit décisionnel
-  date_derniere_revue_methodologique: 2026-06-26
-  date_derniere_verification_sources: 2026-06-27
+  version: 0.4.7
+  statut: six branches + dispositif de tests + gabarits de livrables
+  date_derniere_revue_methodologique: 2026-07-01
+  date_derniere_verification_sources: 2026-07-01
   perimetre: collectivités territoriales de plus de 350 agents
   dependances:
-    - recherche-juridique (recommandé, pour l'approfondissement juridique)
+    - recherche-juridique >= 2.2.0 (recommandé, pour l'approfondissement juridique)
   compatibilite:
-    - Claude Opus
-    - Claude Sonnet
+    - Claude Opus (testé avec claude-opus-4-8)
+    - Claude Sonnet (testé avec claude-sonnet-4-6)
   langue: français
 ---
 
-# Skill : drh-fpt (v0.4.6)
+# Skill : drh-fpt (v0.4.7)
 
 > **Objet** : expertise d'une Direction des Ressources Humaines territoriale,
 > à la fois **opérationnelle** (rapide, orientée décision et livrable) et
@@ -120,8 +120,8 @@ Graduation simple, pour calibrer l'assertivité :
 
 - **Stable** — CGFP/décret non modifié récemment → réponse assertive, vérif
   ponctuelle.
-- **À vérifier** — texte modifié récemment **ou** valeur volatile (voir §3 du
-  socle) → vérification obligatoire avant usage en acte.
+- **À vérifier** — texte modifié récemment **ou** valeur volatile (voir §6.1
+  du socle) → vérification obligatoire avant usage en acte.
 - **Jurisprudentiel / débattu** — position non figée → recherche approfondie,
   signaler le débat.
 - **Abstention** — sources contradictoires ou inaccessibles → ne pas conclure.

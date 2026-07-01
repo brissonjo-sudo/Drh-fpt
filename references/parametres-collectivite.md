@@ -27,8 +27,11 @@ instances et obligations, sans poser de question préalable.
 
 ## 2. Variable n°1 — affiliation au centre de gestion
 
-Au-dessus de 350 agents, l'affiliation au CDG est **facultative**. La
-collectivité peut être affiliée volontairement ou non affiliée. Ce
+L'affiliation obligatoire au CDG vise les collectivités employant **moins de
+350 fonctionnaires** (titulaires et stagiaires à temps complet) : l'unité de
+compte légale est le **fonctionnaire**, pas l'« agent ». Au-dessus de ce seuil,
+l'affiliation est **facultative** (volontaire ou non). Piège : une collectivité
+de 400 agents dont 300 fonctionnaires reste **obligatoirement affiliée**. Ce
 paramètre change plusieurs réponses.
 
 | Sujet | Collectivité **affiliée** | Collectivité **non affiliée** |

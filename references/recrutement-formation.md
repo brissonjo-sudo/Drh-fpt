@@ -1,6 +1,8 @@
-# Branche — Recrutement & formation (v0.1.0)
+# Branche — Recrutement & formation
 
-> Structure conforme à `_gabarit-branche.md`. Aucune valeur datée figée.
+> Structure conforme à `_gabarit-branche.md`. Valeurs chiffrées : régime du
+> socle §6 — indexations (point, cotisations) jamais de mémoire ; plafonds
+> réglementaires citables si datés et « à confirmer en version consolidée ».
 
 ## 1. Périmètre
 

@@ -1,8 +1,8 @@
-# Branche — Carrière & paie (v0.2.0)
+# Branche — Carrière & paie
 
-> Structure conforme à `_gabarit-branche.md`. Les valeurs datées (indices,
-> montants, plafonds) ne sont jamais données de mémoire : seules les **règles**
-> figurent ici, avec la consigne de vérifier la valeur en vigueur.
+> Structure conforme à `_gabarit-branche.md`. Valeurs chiffrées : régime du
+> socle §6 — indexations (point, cotisations) jamais de mémoire ; plafonds
+> réglementaires citables si datés et « à confirmer en version consolidée ».
 
 ## 1. Périmètre
 
@@ -99,8 +99,16 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
   information de l'agent, **communication de l'intégralité du dossier**, droit à
   l'**assistance** d'un conseil de son choix, **délai suffisant** pour préparer
   sa défense. Leur méconnaissance entache la sanction d'illégalité.
-- **Prescription** de l'action disciplinaire : délai courant à compter de la
-  connaissance des faits — **à vérifier** (ordre de 3 ans).
+- **Prescription** de l'action disciplinaire : **3 ans** à compter du jour où
+  l'administration a eu **connaissance effective** des faits (**art. L532-2
+  CGFP**, référence stable) ; délai **interrompu** en cas de poursuites pénales,
+  jusqu'à la décision définitive.
+- **Suspension** (art. L531-1 CGFP) : mesure **conservatoire**, **pas une
+  sanction** — en cas de faute grave (manquement professionnel ou infraction
+  pénale), écartement immédiat de l'agent avec **maintien du traitement** ;
+  situation à régler dans un délai de **4 mois** (sauf poursuites pénales),
+  modalités et sort du traitement au-delà **à vérifier**. Piège : ne pas la
+  confondre avec l'exclusion temporaire (qui, elle, est disciplinaire).
 - Toute sanction est un **acte faisant grief** → vérification + motivation +
   voies de recours (§7, §10).
 
@@ -172,8 +180,12 @@ par **équivalence** :
 - **Fin de fonctions** : retraite (CNRACL/IRCANTEC ; âge et conditions selon la
   réforme des retraites en vigueur, à vérifier), démission (acceptée par
   l'autorité), licenciement (insuffisance professionnelle, inaptitude),
-  abandon de poste, **rupture conventionnelle** (vérifier le régime en vigueur
-  et l'indemnité spécifique).
+  abandon de poste (voir §5.10), **rupture conventionnelle** — ⚠️ pour les
+  **fonctionnaires**, dispositif **expérimental jusqu'au 31 décembre 2025** :
+  vérifier impérativement s'il a été pérennisé, prorogé ou éteint avant toute
+  réponse ; pérenne pour les **contractuels en CDI**. Indemnité (ISRC),
+  procédure (entretiens, convention) et interdiction de retour rémunéré dans
+  les 6 ans : **à vérifier**.
 
 ### 5.10 Abandon de poste (radiation des cadres)
 - **Nature** : ce n'est **pas une sanction disciplinaire** → **ni conseil de

@@ -17,7 +17,7 @@ Une entrée par cas, au format ci-dessous.
 - Contexte (anonymisé) : ...
 - Constat : ce qui a manqué ou mal fonctionné.
 - Action proposée : ce qu'il faudrait ajouter/corriger, et dans quel fichier.
-- Statut : intégré (v0.2.0) | intégré (vX.Y.Z)
+- Statut : à traiter | intégré (vX.Y.Z) | intégré (bundle) | validé (vX.Y.Z)
 ```
 
 ## Entrées
@@ -30,7 +30,7 @@ Une entrée par cas, au format ci-dessous.
 - Action proposée : dérouler qvt-sante, recrutement-formation,
   cst-dialogue-social, si-rh-masse-salariale, communication-interne sur
   le gabarit de carriere-paie.md.
-- Statut : à traiter
+- Statut : intégré (v0.3.0)
 
 ### 2026-06-26 — Challenge externe (3 IA) et refonte v0.2.0
 - Type : erreur + cas nouveau
@@ -52,7 +52,7 @@ Une entrée par cas, au format ci-dessous.
 - Constat : couverture complète des six branches de la DRH atteinte.
 - Action proposée : amorcer les gabarits de livrables (assets/) et construire un
   jeu de tests de validation par branche.
-- Statut : à traiter
+- Statut : intégré (v0.4.1 pour les tests, v0.4.6 pour les gabarits)
 
 ### 2026-06-26 — Tests grandeur nature (3 cas) + v0.3.1
 - Type : erreur (mineure) + cas nouveau

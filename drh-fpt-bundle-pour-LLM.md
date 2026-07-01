@@ -1,5 +1,8 @@
 # Base de connaissance & règles — Assistant DRH Fonction Publique Territoriale
-# (portage du skill Claude « drh-fpt » v0.4.6)
+# (portage du skill Claude « drh-fpt » v0.4.7)
+# Contenu consolidé : SKILL.md, socle, paramètres collectivité, fiche profil,
+# six branches. Non inclus (voir le dépôt) : gabarits de livrables assets/,
+# méta-gabarit de conception, dossier tests/.
 
 INSTRUCTIONS AU MODÈLE — à respecter intégralement :
 
@@ -58,20 +61,20 @@ description: >-
   publiques d'État ou hospitalière, ni pour les collectivités de moins de 350
   agents.
 metadata:
-  version: 0.4.6
-  statut: six branches déroulées sur gabarit décisionnel
-  date_derniere_revue_methodologique: 2026-06-26
-  date_derniere_verification_sources: 2026-06-27
+  version: 0.4.7
+  statut: six branches + dispositif de tests + gabarits de livrables
+  date_derniere_revue_methodologique: 2026-07-01
+  date_derniere_verification_sources: 2026-07-01
   perimetre: collectivités territoriales de plus de 350 agents
   dependances:
-    - recherche-juridique (recommandé, pour l'approfondissement juridique)
+    - recherche-juridique >= 2.2.0 (recommandé, pour l'approfondissement juridique)
   compatibilite:
-    - Claude Opus
-    - Claude Sonnet
+    - Claude Opus (testé avec claude-opus-4-8)
+    - Claude Sonnet (testé avec claude-sonnet-4-6)
   langue: français
 ---
 
-# Skill : drh-fpt (v0.4.6)
+# Skill : drh-fpt (v0.4.7)
 
 > **Objet** : expertise d'une Direction des Ressources Humaines territoriale,
 > à la fois **opérationnelle** (rapide, orientée décision et livrable) et
@@ -163,8 +166,8 @@ Graduation simple, pour calibrer l'assertivité :
 
 - **Stable** — CGFP/décret non modifié récemment → réponse assertive, vérif
   ponctuelle.
-- **À vérifier** — texte modifié récemment **ou** valeur volatile (voir §3 du
-  socle) → vérification obligatoire avant usage en acte.
+- **À vérifier** — texte modifié récemment **ou** valeur volatile (voir §6.1
+  du socle) → vérification obligatoire avant usage en acte.
 - **Jurisprudentiel / débattu** — position non figée → recherche approfondie,
   signaler le débat.
 - **Abstention** — sources contradictoires ou inaccessibles → ne pas conclure.
@@ -417,6 +420,9 @@ usage en acte :
   commission de réforme).
 - **CAP / LDG** — compétences des CAP recentrées, montée des lignes
   directrices de gestion.
+- **Rupture conventionnelle** — pour les fonctionnaires, dispositif
+  **expérimental jusqu'au 31 décembre 2025** : vérifier s'il a été pérennisé,
+  prorogé ou éteint avant toute réponse.
 
 ---
 
@@ -455,6 +461,8 @@ Quand deux sources divergent, ne pas trancher au hasard. Appliquer dans l'ordre 
 derrière une réponse lisse : indiquer les deux sources et la règle de
 résolution appliquée.
 
+---
+
 ## 6. Valeurs chiffrées — distinguer le volatil du réglementaire
 
 Deux régimes distincts, à ne pas confondre.
@@ -477,11 +485,12 @@ Ils **peuvent être cités**, à trois conditions :
 2. rattacher si possible le plafond à son **article** ;
 3. signaler « **à confirmer en version consolidée** » à la date utile.
 
-Exemples : plafonds **ISFE** (part fixe 33 / 32 / 30 % ; part variable
-9 500 / 7 000 / 5 000 €), plafonds **RIFSEEP** par groupe de fonctions,
-contingent mensuel d'**IHTS** (25 h).
+Exemples : plafonds **ISFE** (décret n° 2024-614 — valeurs portées par la
+branche carrière-paie §5.7, **source interne unique** pour éviter toute
+divergence), plafonds **RIFSEEP** par groupe de fonctions, contingent mensuel
+d'**IHTS**.
 
-> **Cas mixte** : un **taux** plafond (ex. 33 % pour la part fixe ISFE) est
+> **Cas mixte** : un **taux** plafond (ex. la part fixe ISFE) est
 > stable, mais le **montant en euros** qui en résulte dépend de la **valeur du
 > point** (volatile). Citer le taux ; signaler que le montant exige la valeur
 > du point en vigueur.
@@ -519,8 +528,11 @@ instances et obligations, sans poser de question préalable.
 
 ## 2. Variable n°1 — affiliation au centre de gestion
 
-Au-dessus de 350 agents, l'affiliation au CDG est **facultative**. La
-collectivité peut être affiliée volontairement ou non affiliée. Ce
+L'affiliation obligatoire au CDG vise les collectivités employant **moins de
+350 fonctionnaires** (titulaires et stagiaires à temps complet) : l'unité de
+compte légale est le **fonctionnaire**, pas l'« agent ». Au-dessus de ce seuil,
+l'affiliation est **facultative** (volontaire ou non). Piège : une collectivité
+de 400 agents dont 300 fonctionnaires reste **obligatoirement affiliée**. Ce
 paramètre change plusieurs réponses.
 
 | Sujet | Collectivité **affiliée** | Collectivité **non affiliée** |
@@ -670,11 +682,11 @@ textes propres avant de conclure.
 ### SOURCE : BRANCHE — Carrière & paie
 ================================================================================
 
-# Branche — Carrière & paie (v0.2.0)
+# Branche — Carrière & paie
 
-> Structure conforme à `_gabarit-branche.md`. Les valeurs datées (indices,
-> montants, plafonds) ne sont jamais données de mémoire : seules les **règles**
-> figurent ici, avec la consigne de vérifier la valeur en vigueur.
+> Structure conforme à `_gabarit-branche.md`. Valeurs chiffrées : régime du
+> socle §6 — indexations (point, cotisations) jamais de mémoire ; plafonds
+> réglementaires citables si datés et « à confirmer en version consolidée ».
 
 ## 1. Périmètre
 
@@ -771,8 +783,16 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
   information de l'agent, **communication de l'intégralité du dossier**, droit à
   l'**assistance** d'un conseil de son choix, **délai suffisant** pour préparer
   sa défense. Leur méconnaissance entache la sanction d'illégalité.
-- **Prescription** de l'action disciplinaire : délai courant à compter de la
-  connaissance des faits — **à vérifier** (ordre de 3 ans).
+- **Prescription** de l'action disciplinaire : **3 ans** à compter du jour où
+  l'administration a eu **connaissance effective** des faits (**art. L532-2
+  CGFP**, référence stable) ; délai **interrompu** en cas de poursuites pénales,
+  jusqu'à la décision définitive.
+- **Suspension** (art. L531-1 CGFP) : mesure **conservatoire**, **pas une
+  sanction** — en cas de faute grave (manquement professionnel ou infraction
+  pénale), écartement immédiat de l'agent avec **maintien du traitement** ;
+  situation à régler dans un délai de **4 mois** (sauf poursuites pénales),
+  modalités et sort du traitement au-delà **à vérifier**. Piège : ne pas la
+  confondre avec l'exclusion temporaire (qui, elle, est disciplinaire).
 - Toute sanction est un **acte faisant grief** → vérification + motivation +
   voies de recours (§7, §10).
 
@@ -844,8 +864,12 @@ par **équivalence** :
 - **Fin de fonctions** : retraite (CNRACL/IRCANTEC ; âge et conditions selon la
   réforme des retraites en vigueur, à vérifier), démission (acceptée par
   l'autorité), licenciement (insuffisance professionnelle, inaptitude),
-  abandon de poste, **rupture conventionnelle** (vérifier le régime en vigueur
-  et l'indemnité spécifique).
+  abandon de poste (voir §5.10), **rupture conventionnelle** — ⚠️ pour les
+  **fonctionnaires**, dispositif **expérimental jusqu'au 31 décembre 2025** :
+  vérifier impérativement s'il a été pérennisé, prorogé ou éteint avant toute
+  réponse ; pérenne pour les **contractuels en CDI**. Indemnité (ISRC),
+  procédure (entretiens, convention) et interdiction de retour rémunéré dans
+  les 6 ans : **à vérifier**.
 
 ### 5.10 Abandon de poste (radiation des cadres)
 - **Nature** : ce n'est **pas une sanction disciplinaire** → **ni conseil de
@@ -967,10 +991,11 @@ Gabarits → `assets/`.
 ### SOURCE : BRANCHE — QVT & santé
 ================================================================================
 
-# Branche — QVT & santé au travail (v0.1.0)
+# Branche — QVT & santé au travail
 
-> Structure conforme à `_gabarit-branche.md`. Aucune valeur datée figée :
-> seules les règles, avec consigne de vérifier la valeur en vigueur.
+> Structure conforme à `_gabarit-branche.md`. Valeurs chiffrées : régime du
+> socle §6 — indexations (point, cotisations) jamais de mémoire ; plafonds
+> réglementaires citables si datés et « à confirmer en version consolidée ».
 
 ## 1. Périmètre
 
@@ -1114,9 +1139,11 @@ plafonds des prestations d'action sociale.
 ### SOURCE : BRANCHE — Recrutement & formation
 ================================================================================
 
-# Branche — Recrutement & formation (v0.1.0)
+# Branche — Recrutement & formation
 
-> Structure conforme à `_gabarit-branche.md`. Aucune valeur datée figée.
+> Structure conforme à `_gabarit-branche.md`. Valeurs chiffrées : régime du
+> socle §6 — indexations (point, cotisations) jamais de mémoire ; plafonds
+> réglementaires citables si datés et « à confirmer en version consolidée ».
 
 ## 1. Périmètre
 
@@ -1241,9 +1268,11 @@ obligatoires.
 ### SOURCE : BRANCHE — CST & dialogue social
 ================================================================================
 
-# Branche — CST & dialogue social (v0.1.0)
+# Branche — CST & dialogue social
 
-> Structure conforme à `_gabarit-branche.md`. Aucune valeur datée figée.
+> Structure conforme à `_gabarit-branche.md`. Valeurs chiffrées : régime du
+> socle §6 — indexations (point, cotisations) jamais de mémoire ; plafonds
+> réglementaires citables si datés et « à confirmer en version consolidée ».
 
 ## 1. Périmètre
 
@@ -1361,9 +1390,11 @@ calendrier des élections professionnelles ; périmètre des accords négociable
 ### SOURCE : BRANCHE — SI RH & masse salariale
 ================================================================================
 
-# Branche — SI RH & masse salariale (v0.1.0)
+# Branche — SI RH & masse salariale
 
-> Structure conforme à `_gabarit-branche.md`. Aucune valeur datée figée.
+> Structure conforme à `_gabarit-branche.md`. Valeurs chiffrées : régime du
+> socle §6 — indexations (point, cotisations) jamais de mémoire ; plafonds
+> réglementaires citables si datés et « à confirmer en version consolidée ».
 
 ## 1. Périmètre
 
@@ -1486,7 +1517,7 @@ DSN de l'année.
 ### SOURCE : BRANCHE — Communication interne
 ================================================================================
 
-# Branche — Communication interne (v0.1.0)
+# Branche — Communication interne
 
 > Structure conforme à `_gabarit-branche.md`. Branche à **socle juridique
 > léger** : la vigilance porte surtout sur l'obligation d'information, la
