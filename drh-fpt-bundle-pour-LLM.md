@@ -1,5 +1,5 @@
 # Base de connaissance & règles — Assistant DRH Fonction Publique Territoriale
-# (portage du skill Claude « drh-fpt » v0.4.7)
+# (portage du skill Claude « drh-fpt » v0.4.8)
 # Contenu consolidé : SKILL.md, socle, paramètres collectivité, fiche profil,
 # six branches. Non inclus (voir le dépôt) : gabarits de livrables assets/,
 # méta-gabarit de conception, dossier tests/.
@@ -61,7 +61,7 @@ description: >-
   publiques d'État ou hospitalière, ni pour les collectivités de moins de 350
   agents.
 metadata:
-  version: 0.4.7
+  version: 0.4.8
   statut: six branches + dispositif de tests + gabarits de livrables
   date_derniere_revue_methodologique: 2026-07-01
   date_derniere_verification_sources: 2026-07-01
@@ -74,7 +74,7 @@ metadata:
   langue: français
 ---
 
-# Skill : drh-fpt (v0.4.7)
+# Skill : drh-fpt (v0.4.8)
 
 > **Objet** : expertise d'une Direction des Ressources Humaines territoriale,
 > à la fois **opérationnelle** (rapide, orientée décision et livrable) et

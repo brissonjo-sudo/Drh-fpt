@@ -4,6 +4,7 @@ Thumbs.db
 
 # Build / packaging (régénérable depuis les sources)
 *.skill
+dist/
 
 # Éditeurs
 .vscode/
