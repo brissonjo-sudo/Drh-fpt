@@ -146,6 +146,17 @@ vérifier).
 
 ### 5.7 Rémunération — régime indemnitaire (point de vigilance majeur)
 
+> **Contrôle préalable obligatoire — avant de nommer le régime.** Croiser
+> explicitement la **filière et le cadre d'emplois du grade réellement concerné
+> par le calcul** avec le régime applicable : **RIFSEEP** pour les filières
+> administrative, technique et assimilées ; **ISFE** exclusivement pour la
+> **police municipale et les gardes champêtres**. **Ne jamais déduire le régime
+> du seul profil de l'interlocuteur** : un directeur de police municipale peut
+> interroger sur la rémunération d'un agent **administratif** de son service
+> (→ RIFSEEP), et un service RH « police » peut gérer des agents relevant de
+> plusieurs régimes. Identifier d'abord le **grade calculé**, puis le régime —
+> dans cet ordre, jamais l'inverse.
+
 **Cas général : RIFSEEP** = IFSE (liée au groupe de fonctions) + CIA (engagement
 et manière de servir). Attention à la **source FPT** : le RIFSEEP n'est pas
 institué dans la FPT par le décret État n° 2014-513 directement. Il s'applique
@@ -499,9 +510,15 @@ employeur) :
 - **demander** les données manquantes (indice, quotité, situation familiale) ;
 - distinguer **données connues** et **estimées** ;
 - signaler les **valeurs volatiles** (§9) à confirmer et les **paramètres
-  locaux** (délibération indemnitaire, régime du temps de travail).
+  locaux** (délibération indemnitaire, régime du temps de travail) ;
+- pour tout **calcul de régime indemnitaire** : d'abord **croiser filière et
+  cadre d'emplois du grade concerné avec le régime** (RIFSEEP vs ISFE police
+  municipale/gardes champêtres — cf. §5.7) **avant de nommer le régime**, sans le
+  déduire du profil de l'interlocuteur.
 
-Ne jamais produire un montant ferme sur une valeur de mémoire.
+Ne jamais produire un montant ferme sur une valeur de mémoire. **La vérification
+de la source précède la réponse chiffrée — elle n'est jamais différée à une
+relance de l'utilisateur** (SKILL.md §2.2).
 
 ## 7. Déclencheurs de vérification
 
@@ -556,6 +573,12 @@ Appliquer le noyau de vérification (matrice §2.2 du SKILL.md) dès que :
   L. 544-1 CGFP), exclusion ARE de l'abandon de poste (décret 2020-741).
   Rappel : un taux plafond est stable, le montant en euros qui en découle
   dépend du point (volatile).
+- **Registre de vérification interne (maintenance)** :
+  `references/cache-plafonds-regime-indemnitaire.md` consigne les plafonds
+  réglementaires déjà vérifiés (ISFE) et les gaps à combler (RIFSEEP attachés).
+  C'est un **aide-mémoire de maintenance, jamais une source** : toujours
+  reconfirmer la valeur en vigueur avant usage en acte, et **ne pas le citer**
+  comme référence dans un livrable formel.
 
 ## 10. Livrables (classés par niveau)
 

@@ -2,6 +2,31 @@
 
 Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
+## [0.5.1] — 2026-07-14 — Correctif terrain : distinction RIFSEEP/ISFE + vérification immédiate
+
+> Issu d'un **cas réel** documenté en conversation (voir `JOURNAL.md`,
+> 2026-07-14). La demande initiale visait la v0.4.6 (dernière release) et
+> numérotait ce correctif « v0.4.7 » ; renuméroté **v0.5.1** car appliqué sur la
+> branche courante (v0.5.0) où v0.4.7 est déjà consommée.
+
+### Corrigé
+- **SKILL.md §2.2** — précision sur le **moment** de la vérification : elle
+  intervient **avant la première réponse chiffrée ou juridiquement engageante**,
+  **jamais différée** à une relance de l'utilisateur.
+- **carriere-paie.md §5.7 et §6** — **contrôle préalable obligatoire** avant tout
+  calcul de régime indemnitaire : croiser la **filière / le cadre d'emplois du
+  grade réellement concerné** avec le régime (RIFSEEP filières administrative/
+  technique/etc. vs **ISFE** police municipale et gardes champêtres
+  exclusivement) **avant de nommer le régime** ; ne jamais le déduire du seul
+  profil de l'interlocuteur.
+
+### Ajouté
+- **`references/cache-plafonds-regime-indemnitaire.md`** — registre de
+  vérification interne : ISFE (décret 2024-614) recopiés depuis la source unique
+  §5.7 avec consigne de synchronisation ; tableau RIFSEEP attachés (arrêté du
+  3 juin 2015 modifié, corps de référence État — à confirmer) **à compléter**.
+  Aide-mémoire de maintenance, **jamais une source primaire**, exclu du bundle.
+
 ## [0.5.0] — 2026-07-01 — Couverture : contractuels, garanties & déontologie, temps de travail, emplois fonctionnels
 
 ### Ajouté

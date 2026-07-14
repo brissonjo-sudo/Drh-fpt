@@ -186,3 +186,26 @@ Une entrée par cas, au format ci-dessous.
   contractuel, grève/retenue FPT, décharge de fonctions d'un DGS, inaptitude/
   PPR).
 - Statut : intégré (v0.5.0)
+
+### 2026-07-14 — Cas — Confusion ISFE/RIFSEEP + vérification tardive
+- Type : erreur (cas réel documenté en conversation)
+- Branche : carrière-paie + SKILL
+- Contexte (anonymisé) : demande de calcul de régime indemnitaire émanant d'un
+  contexte « police municipale ». Deux défauts observés dans la réponse
+  initiale : (1) le régime a été **déduit du profil** de l'interlocuteur
+  (policier municipal → ISFE) alors que le grade réellement concerné par le
+  calcul pouvait relever d'un autre régime (RIFSEEP filière administrative/
+  technique) ; (2) la **vérification de la source a été différée** — annoncée
+  « à confirmer ensuite » plutôt que faite avant la réponse chiffrée, et n'a eu
+  lieu qu'à la relance de l'utilisateur.
+- Constat : la matrice §2.2 disait *quand* vérifier mais pas *à quel moment*
+  (avant la réponse, pas après) ; la branche carrière-paie ne forçait pas le
+  croisement filière/cadre d'emplois ↔ régime **avant** de nommer le régime.
+- Action proposée : (a) SKILL §2.2 — vérification avant toute réponse chiffrée,
+  jamais différée à une relance ; (b) carrière-paie §5.7 + §6 — contrôle
+  préalable obligatoire filière/grade ↔ régime, sans déduire du profil ;
+  (c) registre de vérification interne des plafonds (ISFE consignés, RIFSEEP
+  attachés à compléter) — aide-mémoire de maintenance, jamais une source.
+- Note : le texte exact de l'entrée n'ayant pas été fourni avec la demande, il a
+  été reconstitué d'après le cas décrit — à ajuster si le compte rendu diffère.
+- Statut : intégré (v0.5.1)

@@ -16,10 +16,10 @@ description: >-
   FPT, les fonctions publiques d'État ou hospitalière, ni pour les
   collectivités de moins de 350 agents.
 metadata:
-  version: 0.5.0
+  version: 0.5.1
   statut: huit branches + dispositif de tests + gabarits de livrables
-  date_derniere_revue_methodologique: 2026-07-01
-  date_derniere_verification_sources: 2026-07-01
+  date_derniere_revue_methodologique: 2026-07-14
+  date_derniere_verification_sources: 2026-07-14
   perimetre: collectivités territoriales de plus de 350 agents
   dependances:
     - recherche-juridique >= 2.2.0 (recommandé, pour l'approfondissement juridique)
@@ -29,7 +29,7 @@ metadata:
   langue: français
 ---
 
-# Skill : drh-fpt (v0.5.0)
+# Skill : drh-fpt (v0.5.1)
 
 > **Objet** : expertise d'une Direction des Ressources Humaines territoriale,
 > à la fois **opérationnelle** (rapide, orientée décision et livrable) et
@@ -82,6 +82,13 @@ La frontière n'est pas laissée à l'appréciation. Elle est explicite :
 
 Dès qu'une ligne « Oui » est concernée, appliquer le **noyau de vérification**
 (§3) avant de conclure.
+
+**Moment de la vérification** : la vérification intervient **avant la première
+réponse chiffrée ou juridiquement engageante**, **jamais différée à une relance
+de l'utilisateur**. Ne pas livrer un montant, un régime indemnitaire ou une
+procédure « sous réserve de vérifier ensuite » puis n'en contrôler la source que
+si l'utilisateur y revient : on vérifie — ou l'on s'abstient / borne
+explicitement — **avant** d'énoncer.
 
 ### 2.3 Forçage manuel
 L'utilisateur peut imposer la rigueur complète sur toute la réponse via les

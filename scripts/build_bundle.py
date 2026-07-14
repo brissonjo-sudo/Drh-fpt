@@ -52,7 +52,8 @@ SECTIONS = [
 ]
 
 # Exclu du bundle (documenté dans le préambule) : gabarits de livrables
-# assets/*-modele.md, méta-gabarit references/_gabarit-branche.md, tests/.
+# assets/*-modele.md, méta-gabarit references/_gabarit-branche.md, tests/,
+# registre de maintenance references/cache-plafonds-regime-indemnitaire.md.
 
 
 def read_version() -> str:
