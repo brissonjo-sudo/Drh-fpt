@@ -80,7 +80,8 @@ drh-fpt/
 │   ├── si-rh-masse-salariale.md          Branche SI RH & masse salariale
 │   ├── communication-interne.md          Branche communication interne
 │   ├── contractuels.md                   Branche agents contractuels
-│   └── statut-garanties.md               Branche statut : garanties, déontologie & signalements
+│   ├── statut-garanties.md               Branche statut : garanties, déontologie & signalements
+│   └── cache-plafonds-regime-indemnitaire.md  Registre de vérification des plafonds (maintenance, hors bundle)
 ├── assets/
 │   ├── README.md                         Logique et index des gabarits
 │   ├── fiche-profil-collectivite.md      Profil de collectivité (cadrage d'ouverture)
