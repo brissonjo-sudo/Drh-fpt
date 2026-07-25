@@ -142,16 +142,23 @@ JUDGE_SYSTEM = (
     "territoriale. On te donne une question, une réponse à évaluer, et une liste "
     "de critères attendus. Pour chaque critère, indique s'il est SATISFAIT, "
     "PARTIEL ou ABSENT, avec une justification d'une phrase. Repère aussi toute "
-    "AFFIRMATION FAUSSE ou inventée (référence, montant, jurisprudence). "
+    "AFFIRMATION FAUSSE ou inventée (référence, montant, jurisprudence), y "
+    "compris dans un développement non nécessaire à la réponse. "
     "Termine par un score global sur 5 et un verdict global REUSSITE ou ECHEC. "
+    "Évalue séparément l'architecture d'exécution et la fiabilité juridique. "
     "Réponds UNIQUEMENT en JSON : "
     '{"criteres":[{"critere":"...","statut":"SATISFAIT|PARTIEL|ABSENT","note":"..."}],'
-    '"erreurs":["..."],"score_sur_5":N,"verdict":"REUSSITE|ECHEC","synthese":"..."}\n\n'
+    '"erreurs":["..."],"score_architecture_sur_5":N,'
+    '"verdict_architecture":"REUSSITE|ECHEC|NON_APPLICABLE",'
+    '"score_fiabilite_juridique_sur_5":N,'
+    '"verdict_fiabilite_juridique":"REUSSITE|ECHEC",'
+    '"score_sur_5":N,"verdict":"REUSSITE|ECHEC","synthese":"..."}\n\n'
     "RÈGLES TRANSVERSES (s'appliquent quels que soient les critères ci-dessus) :\n"
-    "1. Toute référence, montant ou jurisprudence qui semble INVENTÉ(E) (non "
-    "vérifiable, incohérent avec le droit de la FPT, ou présenté avec une "
-    "précision suspecte sans réserve) → verdict ECHEC, quel que soit le score "
-    "par ailleurs.\n"
+    "1. Toute référence, montant ou jurisprudence dont l'invention ou la "
+    "fausseté est CONFIRMÉE par contrôle sur une source officielle → verdict "
+    "ECHEC, quel que soit le score par ailleurs. Une précision suspecte non "
+    "vérifiable doit être signalée comme non tranchée, pas qualifiée "
+    "d'invention.\n"
     "2. Toute valeur d'INDEXATION VOLATILE (point d'indice, taux de cotisation, "
     "plancher PSC...) donnée DE MÉMOIRE, sans réserve de vérification → le "
     "critère « données volatiles » (ou équivalent) est en ÉCHEC.\n"
@@ -171,7 +178,22 @@ JUDGE_SYSTEM = (
     "donnée, ou transpose une règle inapplicable — c'est-à-dire si l'une des "
     "conditions 'echec_si' est remplie. Le verdict est REUSSITE si le "
     "répondant a bien refusé/s'est abstenu/a redirigé comme attendu, même si "
-    "la réponse est brève."
+    "la réponse est brève.\n"
+    "6. Une affirmation juridique fausse fait échouer la FIABILITÉ JURIDIQUE "
+    "et le verdict GLOBAL, même si elle est surnuméraire, si tous les critères "
+    "attendus sont satisfaits ou si l'architecture est réussie.\n"
+    "7. Pour un cas type='architectural', noter séparément l'architecture et "
+    "la fiabilité juridique. Une architecture réussie ne compense jamais une "
+    "erreur juridique.\n"
+    "8. Ne déduis jamais qu'une référence est inventée au seul motif qu'elle "
+    "est récente ou postérieure à une date de cutoff. Vérifie-la sur une "
+    "source officielle ; si cette vérification est impossible, décris le "
+    "doute sans accuser de fabrication.\n"
+    "9. Si la réponse affirme qu'une règle est « vérifiée » ou « confirmée » "
+    "sans donner de lien ou d'identifiant officiel exploitable, considère la "
+    "vérification comme non traçable. Une donnée exacte destinée à la paie, "
+    "à un calcul ou à un acte fondée sur cette seule affirmation fait échouer "
+    "la fiabilité juridique."
 )
 
 
@@ -302,6 +324,14 @@ def main():
                 non_evalues += 1
             entry["score_sur_5"] = s
             entry["verdict"] = verdict
+            entry["score_architecture_sur_5"] = ev.get("score_architecture_sur_5")
+            entry["verdict_architecture"] = ev.get("verdict_architecture")
+            entry["score_fiabilite_juridique_sur_5"] = ev.get(
+                "score_fiabilite_juridique_sur_5"
+            )
+            entry["verdict_fiabilite_juridique"] = ev.get(
+                "verdict_fiabilite_juridique"
+            )
             entry["tronque"] = entry["tronque"] or ev.get("tronque", False)
             print(f"Score : {s}/5 — verdict {verdict} — {ev.get('synthese', '')[:100]}")
 

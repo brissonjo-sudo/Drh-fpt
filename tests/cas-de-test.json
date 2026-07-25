@@ -26,12 +26,14 @@
       "Base légale FPT : CGFP art. L. 822-18 et s., et décret n° 2019-301 du 10 avril 2019 (CITIS FPT)",
       "Signale explicitement qu'il ne faut PAS viser le décret n° 2019-122 du 21 février 2019, propre à la fonction publique d'État",
       "L'imputabilité au service relève d'une décision de l'autorité territoriale, le conseil médical pouvant être saisi selon les cas",
+      "Lorsque le conseil médical est saisi sur l'imputabilité, il siège en formation plénière, jamais en formation restreinte",
       "Distinction du régime selon que l'agent est titulaire ou contractuel",
       "La décision sur l'imputabilité est un acte pouvant faire grief : motivation et voies de recours"
     ],
     "echec_si": [
       "Traite la blessure en congé de maladie ordinaire sans évoquer le CITIS",
       "Cite le décret n° 2019-122 comme base FPT (confusion avec la FPE)",
+      "Renvoie l'imputabilité au conseil médical en formation restreinte",
       "Ignore la question de l'imputabilité au service"
     ]
   },
@@ -80,6 +82,8 @@
     ],
     "echec_si": [
       "Avance un chiffre ferme de mémoire pour la valeur du point ou les cotisations",
+      "Donne une valeur exacte du point après avoir indiqué que la source officielle n'a pas été consultée ou sans trace officielle exploitable",
+      "Invente, transforme ou attribue à tort la nature, le numéro ou la date du texte fixant une valeur",
       "Oublie l'effet de noria ou l'effet report"
     ]
   },
@@ -144,11 +148,13 @@
       "Conseil de discipline obligatoire pour ce groupe",
       "Droits de la défense : communication de l'intégralité du dossier, assistance d'un conseil, délai suffisant de préparation",
       "Acte faisant grief : motivation et voies de recours",
+      "Écarte le conseil de discipline de recours, supprimé pour les procédures nouvelles depuis la réforme de 2019 et ses textes d'application de 2020",
       "Peut mentionner la prescription de l'action disciplinaire (3 ans à compter de la connaissance effective des faits, CGFP art. L532-2)"
     ],
     "echec_si": [
       "Place la sanction au 1er groupe",
-      "Affirme qu'aucun conseil de discipline n'est requis"
+      "Affirme qu'aucun conseil de discipline n'est requis",
+      "Présente le conseil de discipline de recours comme une voie de recours encore ouverte pour une procédure nouvelle"
     ]
   },
   {
@@ -192,7 +198,7 @@
       "Fondement textuel exact : article L. 553-1, 1° du CGFP (issu de l'ordonnance n° 2021-1574 du 24 novembre 2021), cité comme fondement textuel et non comme invention",
       "Caractérisation : absence injustifiée (aucun justificatif) + non-réponse à la mise en demeure",
       "Mise en demeure préalable obligatoire : écrite, notifiée (LRAR ou remise contre décharge), délai approprié de reprise, information du risque de radiation sans procédure disciplinaire préalable",
-      "Mentionne la jurisprudence-pivot CE Section, 11 décembre 1998, Casagranda, n° 147511, en la signalant comme « à confirmer sur Légifrance / conseil-etat.fr » avant de la viser dans un acte",
+      "Mentionne la jurisprudence-pivot CE Section, 11 décembre 1998, Casagranda, n° 147511 et/ou n° 147512, en la signalant comme « à confirmer sur Légifrance / conseil-etat.fr » avant de la viser dans un acte",
       "Écarte explicitement la présomption de démission du secteur privé (loi du 21 décembre 2022, art. L. 1237-1-1 du code du travail) comme inapplicable à la FPT",
       "Arrêté de radiation motivé, notifié, non rétroactif (effet à la notification et non à la date d'absence), avec voies et délais de recours"
     ],
@@ -231,15 +237,17 @@
     "prompt": "Je veux licencier un agent contractuel en CDI pour insuffisance professionnelle. Quelle est la procédure ? Puis-je appliquer la même procédure que pour un titulaire ?",
     "attendus": [
       "Non : le contractuel relève d'un régime propre (décret n° 88-145 du 15 février 1988), pas de la procédure du titulaire",
-      "Procédure : entretien préalable, consultation de la CCP (pour les motifs qui le requièrent, dont l'insuffisance professionnelle en pratique connue), obligation de reclassement préalable avant tout licenciement non disciplinaire",
-      "Cite la jurisprudence de référence sur le reclassement préalable : CE, avis contentieux du 25 septembre 2013, n° 365139, en signalant le numéro « à confirmer » avant citation en acte",
+      "Procédure : caractérisation factuelle de l'insuffisance professionnelle, accès au dossier, entretien préalable et consultation de la CCP pour un licenciement postérieur à la période d'essai, sous les exceptions réglementaires à vérifier",
+      "N'affirme pas une obligation générale de reclassement pour insuffisance professionnelle sur le fondement de l'article 39-5 du décret 88-145 ou de l'avis CE du 25 septembre 2013 n° 365139 : ces références ont une autre portée",
       "Notification motivée avec voies et délais de recours",
-      "Indemnité de licenciement due sauf faute grave/disciplinaire ou pension à taux plein ; mode de calcul fixé par le décret 88-145, à vérifier avant tout montant chiffré"
+      "Indemnité de licenciement du contractuel due selon les conditions du décret 88-145, avec réduction propre à l'insuffisance professionnelle ; calcul à vérifier avant tout montant chiffré",
+      "Si la réponse compare avec le titulaire, elle indique que celui-ci peut bénéficier de l'indemnité prévue par le décret n° 85-186 du 7 février 1985, sous ses conditions"
     ],
     "echec_si": [
       "Applique l'échelle ou la procédure disciplinaire/statutaire du titulaire (CGFP L533, conseil de discipline) à ce contractuel",
-      "Omet l'obligation de reclassement préalable ou la saisine de la CCP",
-      "Cite la référence jurisprudentielle CE 2013 comme certaine sans aucune réserve"
+      "Omet la saisine de la CCP requise pour le licenciement postérieur à la période d'essai",
+      "Affirme que l'article 39-5 du décret 88-145 ou l'avis CE n° 365139 impose un reclassement préalable pour insuffisance professionnelle",
+      "Affirme que le fonctionnaire titulaire licencié pour insuffisance professionnelle n'a droit à aucune indemnité"
     ]
   },
   {
@@ -427,7 +435,8 @@
     "echec_si": [
       "Livre uniquement l'analyse sans produire le projet d'arrêté",
       "Annonce qu'un arrêté pourra être rédigé ultérieurement",
-      "Invente les données individuelles, les visas, la date d'effet ou l'éligibilité manquants"
+      "Invente les données individuelles, les visas, la date d'effet ou l'éligibilité manquants",
+      "Écrit que l'arrêté n'appelle aucun recours ou présente de façon certaine des modalités de publicité ou de contrôle de légalité non vérifiées"
     ]
   },
   {
@@ -463,7 +472,57 @@
     "echec_si": [
       "La réponse est juridiquement correcte mais ne contient aucune recommandation",
       "La réponse ne contient aucun plan d'action opérationnel",
-      "La réponse conclut malgré une situation insuffisamment qualifiée sans identifier les variables bloquantes"
+      "La réponse conclut malgré une situation insuffisamment qualifiée sans identifier les variables bloquantes",
+      "Ajoute le déplacement d'office à l'échelle des sanctions applicable en FPT",
+      "Affirme que les sanctions disciplinaires de toute nature sont obligatoirement transmissibles sur le fondement de l'article L. 2131-2 du CGCT"
+    ]
+  },
+  {
+    "id": "28-nonregression-citis-formation",
+    "branche": "QVT & santé",
+    "type": "standard",
+    "prompt": "Pour instruire un accident de service contesté d'un fonctionnaire territorial, dois-je saisir le conseil médical en formation restreinte ou en formation plénière, et qui prend la décision finale d'imputabilité ?",
+    "attendus": [
+      "Répond que l'examen de l'imputabilité par le conseil médical relève de la formation plénière",
+      "Écarte explicitement la formation restreinte pour cette compétence",
+      "Distingue l'avis du conseil médical de la décision finale, qui appartient à l'autorité territoriale",
+      "Vérifie le décret n° 87-602 modifié par le décret n° 2022-350 ou une source officielle équivalente avant de conclure"
+    ],
+    "echec_si": [
+      "Désigne la formation restreinte pour examiner l'imputabilité au service",
+      "Attribue au conseil médical le pouvoir de décision final à la place de l'autorité territoriale"
+    ]
+  },
+  {
+    "id": "29-nonregression-discipline-recours",
+    "branche": "Carrière & paie",
+    "type": "standard",
+    "prompt": "Après une exclusion temporaire de fonctions de 5 jours prononcée en 2026, l'agent territorial peut-il saisir un conseil de discipline de recours ? Quelles voies dois-je indiquer dans la notification ?",
+    "attendus": [
+      "Répond que le conseil de discipline de recours a été supprimé pour les procédures nouvelles",
+      "Ne réserve le régime ancien qu'aux éventuelles procédures transitoires déjà en cours lors de la réforme",
+      "Oriente vers les voies administratives utiles et le recours contentieux devant le tribunal administratif, à vérifier pour la notification",
+      "Vérifie la version consolidée du décret n° 89-677 et les textes de suppression avant de conclure"
+    ],
+    "echec_si": [
+      "Présente le conseil de discipline de recours comme une voie ouverte pour la sanction prononcée en 2026",
+      "Fournit un délai ou une modalité de recours non vérifiés comme certains"
+    ]
+  },
+  {
+    "id": "30-nonregression-controle-legalite-sanction",
+    "branche": "Carrière & paie",
+    "type": "standard",
+    "prompt": "Une exclusion temporaire de fonctions de 5 jours prononcée contre un fonctionnaire communal doit-elle obligatoirement être transmise au contrôle de légalité au titre de l'article L. 2131-2 du CGCT ?",
+    "attendus": [
+      "N'affirme pas que toutes les sanctions disciplinaires sont obligatoirement transmissibles",
+      "Indique que la version en vigueur de l'article L. 2131-2 du CGCT ne comporte plus la catégorie générale des sanctions disciplinaires présente dans d'anciennes versions",
+      "Distingue l'obligation légale de transmission de la convention ou pratique locale de télétransmission et du pouvoir de demande du préfet",
+      "Vérifie la version applicable de l'article L. 2131-2 avant de conclure"
+    ],
+    "echec_si": [
+      "Affirme que les sanctions disciplinaires de toute nature figurent dans la liste actuelle de l'article L. 2131-2 du CGCT",
+      "Reprend une ancienne version de l'article sans contrôler sa date d'application"
     ]
   }
 ]

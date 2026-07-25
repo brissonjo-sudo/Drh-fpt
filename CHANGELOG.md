@@ -2,6 +2,40 @@
 
 Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
+## [Non publié] — v0.6.0 — Fiabilisation après campagne manuelle
+
+### Corrigé
+- **QVT / CITIS** : l'avis sur l'imputabilité relève de la formation
+  **plénière** du conseil médical ; la décision finale appartient à l'autorité
+  territoriale.
+- **Discipline FPT** : suppression de toute voie vers le conseil de discipline
+  de recours pour une procédure nouvelle ; rappel que le déplacement d'office
+  du deuxième groupe est propre à la FPE ; contrôle de légalité aligné sur la
+  version en vigueur de l'article L2131-2 du CGCT.
+- **Contractuels** : portée de l'article 39-5 du décret 88-145 et de l'avis CE
+  n° 365139 limitée à leurs motifs réels ; aucune obligation générale de
+  reclassement affirmée pour l'insuffisance professionnelle ; indemnité du
+  titulaire prévue par le décret 85-186 rétablie dans la comparaison.
+- **Cas Casagranda** : le banc accepte les numéros 147511 et/ou 147512 tout en
+  maintenant l'obligation de réserve avant citation dans un acte.
+
+### Renforcé
+- `references/contrat-execution.md` et `SKILL.md` : abstention terminale hors
+  base ou faute de source ; aucune valeur exacte après une réserve ; mention
+  « vérifié » traçable ; contrôle identique des développements surnuméraires ;
+  garde spécifique sur les recours, la publicité et le contrôle de légalité
+  des projets d'acte.
+- Juge LLM : une erreur juridique surnuméraire fait échouer le verdict global ;
+  architecture et fiabilité juridique sont notées séparément ; aucune
+  accusation d'invention fondée sur la seule récence d'une référence.
+
+### Tests
+- Cas 02, 09, 12, 19 et 27 corrigés ou durcis.
+- Trois cas standard de non-régression ajoutés : formation plénière CITIS,
+  suppression du conseil de discipline de recours, version actuelle de
+  l'article L2131-2 du CGCT. Total : **30 cas**.
+- Nouvelle campagne LLM non encore exécutée.
+
 ## [0.5.1] — 2026-07-14 — Correctif terrain : distinction RIFSEEP/ISFE + vérification immédiate
 
 > Issu d'un **cas réel** documenté en conversation (voir `JOURNAL.md`,

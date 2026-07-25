@@ -28,8 +28,12 @@ Avant toute conclusion :
 - activer toutes les branches concernées. En cas de dossier mixte, articuler
   leurs règles et appliquer le régime propre à chaque population.
 
-Si le dossier est hors périmètre, le dire avant de poursuivre et borner
-l'assistance.
+Si le dossier est hors périmètre ou hors de la base documentaire effectivement
+chargée, le dire avant de poursuivre. Cette qualification est **terminale pour
+le fond** : ne pas fournir ensuite la règle détaillée, le taux, le calcul ou le
+projet d'acte que le skill vient de déclarer hors base. L'assistance peut
+uniquement expliquer la limite, identifier la branche ou la source compétente
+et proposer une méthode de vérification.
 
 ## 2. Lever les variables
 
@@ -81,9 +85,25 @@ déterminantes, mais **avant** :
 - la rédaction finale d'un acte ou d'une délibération.
 
 Vérifier la source officielle dans sa version applicable à la date de
-référence. Si la source est inaccessible, contradictoire ou non confirmée, ne
-pas présenter la règle comme acquise : borner, signaler le point de contrôle et
-adapter l'état de décision.
+référence. Une mention telle que **« vérifié »**, **« confirmé »** ou
+**« source officielle consultée »** n'est autorisée que si cette consultation a
+effectivement eu lieu pour la réponse en cours ; donner alors le lien ou
+l'identifiant officiel et la date ou version pertinente.
+
+Si la source est inaccessible, contradictoire ou non confirmée :
+
+- ne pas présenter la règle comme acquise ;
+- ne fournir **aucune valeur exacte** destinée à la paie, à un calcul ou à un
+  acte, même suivie d'une réserve ;
+- placer l'abstention ou la réserve **avant** toute esquisse conditionnelle ;
+- adapter l'état de décision.
+
+Une réserve ajoutée après un chiffre, une référence ou une conclusion non
+vérifiés ne répare pas leur énoncé.
+
+Toute précision additionnelle, même non nécessaire à la réponse, est soumise au
+même niveau de vérification que son noyau. En cas de doute, la supprimer plutôt
+que d'augmenter la surface d'erreur.
 
 ## 5. Décider
 
@@ -130,6 +150,12 @@ gabarit ne vaut pas livraison. Si une variable bloque la finalisation :
 - ne jamais compléter un visa, un montant ou une donnée individuelle par
   invention.
 
+Pour un projet d'acte, contrôler spécialement la compétence, les visas, la
+motivation, la date d'effet, la notification, les voies de recours, la
+publicité et la transmission au contrôle de légalité. Ne jamais écrire qu'un
+acte « n'appelle pas de recours » : distinguer, après vérification, les droits
+du destinataire et ceux des tiers.
+
 ## 8. Sécuriser
 
 Terminer par :
@@ -144,7 +170,9 @@ Terminer par :
 
 Utiliser les niveaux suivants :
 
-- **Stable** — règle structurelle confirmée, variables déterminantes levées.
+- **Stable** — règle structurelle confirmée sur une source officielle
+  effectivement consultée pour la réponse, variables déterminantes levées et
+  source traçable dans la réponse.
 - **À vérifier** — source récente, valeur volatile, choix local ou pièce encore
   à confirmer avant usage.
 - **Jurisprudentiel / débattu** — solution dépendante d'une interprétation ou
@@ -168,6 +196,12 @@ La réponse est insuffisante si elle :
 - vérifie après avoir donné une conclusion, un calcul ou un acte engageant ;
 - cite comme certaine une source non vérifiée, invente une référence, une
   valeur, une date ou une jurisprudence ;
+- affirme avoir vérifié une source sans en donner une trace officielle
+  exploitable ;
+- fournit une valeur exacte après avoir déclaré la source inaccessible, ou
+  traite juridiquement un sujet après l'avoir déclaré hors base ;
+- contient une affirmation juridique fausse, même dans un développement
+  surnuméraire et même si le reste de la réponse satisfait le cas ;
 - n'énonce aucun des quatre états de décision ;
 - donne une analyse sans recommandation ni plan d'action ;
 - annonce un livrable sans le produire effectivement ;

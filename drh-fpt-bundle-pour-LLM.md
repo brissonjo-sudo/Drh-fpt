@@ -161,8 +161,10 @@ modules, gabarits juridiques), il **renvoie** à `recherche-juridique`.
 3. **Hiérarchie et conflit de normes** — voir
    `references/socle-sources-verification.md`.
 4. **Abstention motivée** — en cas de source inaccessible, valeur non
-   confirmée ou contradiction, ne pas trancher : livrer une esquisse
-   conditionnelle bornée et signaler le point à vérifier.
+   confirmée ou contradiction, ne pas trancher : ne fournir aucune valeur
+   exacte destinée à un calcul, à la paie ou à un acte ; livrer seulement une
+   esquisse conditionnelle bornée et signaler le point à vérifier. Une réserve
+   placée après un chiffre non vérifié ne répare pas son énoncé.
 
 Détail des sources FPT et règle de conflit →
 **`references/socle-sources-verification.md`**.
@@ -173,8 +175,8 @@ Détail des sources FPT et règle de conflit →
 
 Graduation simple, pour calibrer l'assertivité :
 
-- **Stable** — CGFP/décret non modifié récemment → réponse assertive, vérif
-  ponctuelle.
+- **Stable** — source officielle effectivement consultée pour la réponse,
+  version applicable confirmée et lien ou identifiant officiel donné.
 - **À vérifier** — texte modifié récemment **ou** valeur volatile (voir §6.1
   du socle) → vérification obligatoire avant usage en acte.
 - **Jurisprudentiel / débattu** — position non figée → recherche approfondie,
@@ -210,7 +212,8 @@ répondre en **conditionnel borné**. Grille et garde-fous →
 
 ### 6.1 Cadrage d'ouverture (profil de la collectivité) — opt-in
 
-À la **première question RH d'une conversation**, proposer (sans l'imposer) :
+À la **première question RH non urgente d'une conversation**, proposer (sans
+l'imposer) :
 « Pour calibrer mes réponses, souhaitez-vous établir le profil de votre
 collectivité ? C'est rapide, et j'éviterai de redemander les mêmes éléments. »
 
@@ -232,7 +235,9 @@ Puis **restituer une fiche profil** (gabarit
 - **Fichier local** (Claude Code / dépôt) : écrire `profil-collectivite.md`.
 
 **Filet de sécurité** : si l'utilisateur décline ou ignore la proposition, ne pas
-insister — appliquer la garde de calibrage à la volée.
+insister — appliquer la garde de calibrage à la volée. Ne jamais relancer sur
+le profil en clôture d'une réponse urgente, sensible ou déjà suffisamment
+qualifiée.
 
 **Statut particulier détecté** → **vigilance renforcée** : signaler que le droit
 commun peut ne pas s'appliquer et **cibler la recherche** sur les textes propres
@@ -312,11 +317,15 @@ La checklist du §10 élève la qualité à chaque exécution.
 
 1. **Paramètre collectivité** levé (ou conditionnel borné) si la question en dépend ?
 2. Toute affirmation relevant d'une ligne « Oui » de la **matrice (§2.2)** a-t-elle été **vérifiée** (ou signalée « à vérifier ») ?
+   Toute précision surnuméraire a-t-elle subi le même contrôle que le noyau de
+   la réponse ?
 3. **Valeur d'indexation** (point d'indice, cotisations) confirmée à la date utile, jamais de mémoire ? **Plafond réglementaire** cité avec sa source datée et la réserve « à confirmer en version consolidée » ? (cf. socle §6)
 4. **Éligibilité** vérifiée (RIFSEEP/ISFE, promotion interne…) ?
 5. **Obligation vs faculté**, **national vs choix local**, **titulaire vs contractuel** distingués ?
 6. **Niveau de confiance** indiqué quand utile ?
 7. Si **acte faisant grief** : compétence, **motivation**, **voies de recours** traitées ?
+   Pour tout projet d'acte : publicité et contrôle de légalité vérifiés, sans
+   formule absolue du type « n'appelle pas de recours » ?
 8. **Conflit de normes** détecté et résolu (hiérarchie + spécialité) ?
 9. Option bloquée → une **alternative légale** a-t-elle été cherchée (§5) ?
 10. **Livrable** demandé effectivement produit ?
@@ -386,8 +395,12 @@ Avant toute conclusion :
 - activer toutes les branches concernées. En cas de dossier mixte, articuler
   leurs règles et appliquer le régime propre à chaque population.
 
-Si le dossier est hors périmètre, le dire avant de poursuivre et borner
-l'assistance.
+Si le dossier est hors périmètre ou hors de la base documentaire effectivement
+chargée, le dire avant de poursuivre. Cette qualification est **terminale pour
+le fond** : ne pas fournir ensuite la règle détaillée, le taux, le calcul ou le
+projet d'acte que le skill vient de déclarer hors base. L'assistance peut
+uniquement expliquer la limite, identifier la branche ou la source compétente
+et proposer une méthode de vérification.
 
 ## 2. Lever les variables
 
@@ -439,9 +452,25 @@ déterminantes, mais **avant** :
 - la rédaction finale d'un acte ou d'une délibération.
 
 Vérifier la source officielle dans sa version applicable à la date de
-référence. Si la source est inaccessible, contradictoire ou non confirmée, ne
-pas présenter la règle comme acquise : borner, signaler le point de contrôle et
-adapter l'état de décision.
+référence. Une mention telle que **« vérifié »**, **« confirmé »** ou
+**« source officielle consultée »** n'est autorisée que si cette consultation a
+effectivement eu lieu pour la réponse en cours ; donner alors le lien ou
+l'identifiant officiel et la date ou version pertinente.
+
+Si la source est inaccessible, contradictoire ou non confirmée :
+
+- ne pas présenter la règle comme acquise ;
+- ne fournir **aucune valeur exacte** destinée à la paie, à un calcul ou à un
+  acte, même suivie d'une réserve ;
+- placer l'abstention ou la réserve **avant** toute esquisse conditionnelle ;
+- adapter l'état de décision.
+
+Une réserve ajoutée après un chiffre, une référence ou une conclusion non
+vérifiés ne répare pas leur énoncé.
+
+Toute précision additionnelle, même non nécessaire à la réponse, est soumise au
+même niveau de vérification que son noyau. En cas de doute, la supprimer plutôt
+que d'augmenter la surface d'erreur.
 
 ## 5. Décider
 
@@ -488,6 +517,12 @@ gabarit ne vaut pas livraison. Si une variable bloque la finalisation :
 - ne jamais compléter un visa, un montant ou une donnée individuelle par
   invention.
 
+Pour un projet d'acte, contrôler spécialement la compétence, les visas, la
+motivation, la date d'effet, la notification, les voies de recours, la
+publicité et la transmission au contrôle de légalité. Ne jamais écrire qu'un
+acte « n'appelle pas de recours » : distinguer, après vérification, les droits
+du destinataire et ceux des tiers.
+
 ## 8. Sécuriser
 
 Terminer par :
@@ -502,7 +537,9 @@ Terminer par :
 
 Utiliser les niveaux suivants :
 
-- **Stable** — règle structurelle confirmée, variables déterminantes levées.
+- **Stable** — règle structurelle confirmée sur une source officielle
+  effectivement consultée pour la réponse, variables déterminantes levées et
+  source traçable dans la réponse.
 - **À vérifier** — source récente, valeur volatile, choix local ou pièce encore
   à confirmer avant usage.
 - **Jurisprudentiel / débattu** — solution dépendante d'une interprétation ou
@@ -526,6 +563,12 @@ La réponse est insuffisante si elle :
 - vérifie après avoir donné une conclusion, un calcul ou un acte engageant ;
 - cite comme certaine une source non vérifiée, invente une référence, une
   valeur, une date ou une jurisprudence ;
+- affirme avoir vérifié une source sans en donner une trace officielle
+  exploitable ;
+- fournit une valeur exacte après avoir déclaré la source inaccessible, ou
+  traite juridiquement un sujet après l'avoir déclaré hors base ;
+- contient une affirmation juridique fausse, même dans un développement
+  surnuméraire et même si le reste de la réponse satisfait le cas ;
 - n'énonce aucun des quatre états de décision ;
 - donne une analyse sans recommandation ni plan d'action ;
 - annonce un livrable sans le produire effectivement ;
@@ -979,6 +1022,9 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
 | **3e** | Rétrogradation ; exclusion 16 jours – 2 ans | **Oui** |
 | **4e** | Mise à la retraite d'office ; révocation | **Oui** |
 
+- Le **déplacement d'office** mentionné au 2e groupe par l'article L533-1 est
+  expressément réservé à la **fonction publique de l'État** : ne pas l'ajouter
+  à l'échelle applicable aux fonctionnaires territoriaux.
 - Pouvoir disciplinaire : **autorité territoriale** (art. L532-1 CGFP), pas
   l'assemblée. Pas de liste légale des fautes (art. L530-1).
 - **Droits de la défense** (toute sanction au-delà de l'avertissement) :
@@ -997,6 +1043,17 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
   confondre avec l'exclusion temporaire (qui, elle, est disciplinaire).
 - Toute sanction est un **acte faisant grief** → vérification + motivation +
   voies de recours (§7, §10).
+- Le **conseil de discipline de recours** a été supprimé par la réforme de
+  2019 et ses textes d'application en 2020, hors procédures transitoires déjà
+  engagées à cette date. Pour une sanction nouvelle, ne jamais le présenter
+  comme une voie de recours : vérifier et mentionner les recours administratifs
+  utiles et le recours contentieux devant le tribunal administratif.
+- **Contrôle de légalité** : la version en vigueur de l'article L2131-2 du
+  CGCT ne comporte plus de catégorie générale couvrant « les sanctions
+  disciplinaires de toute nature ». Ne pas annoncer une transmission
+  obligatoire sur ce seul fondement ; vérifier la version applicable, la
+  nature exacte de l'acte et, séparément, les modalités locales de
+  télétransmission.
 
 ### 5.6 Rémunération — traitement
 **Indice brut → indice majoré → × valeur du point d'indice.** La valeur du
@@ -1342,6 +1399,13 @@ et interdiction de retour rémunéré dans les 6 ans : **à vérifier**.
 
 ### 5.13 Fin de fonctions : chômage et suites
 
+- **Licenciement d'un fonctionnaire territorial pour insuffisance
+  professionnelle** : ne jamais affirmer qu'il est dépourvu d'indemnité. Le
+  décret n° 85-186 du 7 février 1985 prévoit une **indemnité de licenciement**
+  pour le fonctionnaire qui ne remplit pas les conditions d'une retraite avec
+  jouissance immédiate, sauf faute lourde. Vérifier les conditions et le calcul
+  sur la version applicable avant tout chiffrage. Cette règle est distincte de
+  l'indemnité du contractuel régie par le décret 88-145.
 - **Principe de l'auto-assurance** : les employeurs publics, dont les
   collectivités territoriales, ne cotisent pas en principe à l'assurance
   chômage pour leurs agents et sont **auto-assureurs** : la collectivité
@@ -1425,22 +1489,26 @@ Appliquer le noyau de vérification (matrice §2.2 du SKILL.md) dès que :
    **saisines par l'agent** (révision CREP, refus divers).
 5. Placer l'**exclusion ≤ 3 jours** au mauvais groupe : elle est au **1er
    groupe**, **sans** conseil de discipline.
-6. Appliquer le **RIFSEEP** à la **police municipale** (régime propre = ISFE).
-7. Citer le **décret État 2014-513** comme source FPT directe (viser 91-875 +
+6. Ajouter le **déplacement d'office** à l'échelle FPT ou proposer un
+   **conseil de discipline de recours** supprimé.
+7. Déclarer toutes les sanctions transmissibles au contrôle de légalité sans
+   vérifier la version en vigueur de l'article L2131-2 du CGCT.
+8. Appliquer le **RIFSEEP** à la **police municipale** (régime propre = ISFE).
+9. Citer le **décret État 2014-513** comme source FPT directe (viser 91-875 +
    délibération).
-8. Basculer à tort un agent à **temps partiel** vers l'IRCANTEC (il reste
+10. Basculer à tort un agent à **temps partiel** vers l'IRCANTEC (il reste
    CNRACL).
-9. Confondre **détachement** et **mise à disposition**.
-10. Appliquer la règle du **trentième indivisible** (propre à l'**État**) à
-    une retenue pour grève dans la **FPT** — la retenue FPT est
-    **proportionnelle à la durée réelle** de l'absence de service fait.
-11. **Décharger un emploi fonctionnel dans les 6 mois** suivant le plus
-    tardif de la nomination de l'agent dans l'emploi ou de la désignation de
-    l'autorité territoriale (protection d'ordre public, cause d'illégalité
-    quasi automatique).
-12. **Oublier le coût chômage** (auto-assurance) d'un non-renouvellement de
-    contrat ou d'un licenciement — le décider sans avoir chiffré l'impact
-    budgétaire de l'ARE à la charge de la collectivité.
+11. Confondre **détachement** et **mise à disposition**.
+12. Appliquer la règle du **trentième indivisible** (propre à l'**État**) à
+     une retenue pour grève dans la **FPT** — la retenue FPT est
+     **proportionnelle à la durée réelle** de l'absence de service fait.
+13. **Décharger un emploi fonctionnel dans les 6 mois** suivant le plus
+     tardif de la nomination de l'agent dans l'emploi ou de la désignation de
+     l'autorité territoriale (protection d'ordre public, cause d'illégalité
+     quasi automatique).
+14. **Oublier le coût chômage** (auto-assurance) d'un non-renouvellement de
+     contrat ou d'un licenciement — le décider sans avoir chiffré l'impact
+     budgétaire de l'ARE à la charge de la collectivité.
 
 ## 9. Valeurs chiffrées (cf. socle §6)
 
@@ -1563,8 +1631,11 @@ invalidité ; égalité professionnelle (plan d'action, nominations
   de travail.
 - **Conseil médical** : depuis le 1er février 2022, **fusion** du comité
   médical et de la commission de réforme (décret n° 2022-350). Formations
-  restreinte et plénière ; intervient sur les congés de longue durée/maladie,
-  l'imputabilité au service, l'inaptitude.
+  restreinte et plénière. En matière d'**imputabilité au service**, lorsqu'un
+  avis du conseil médical est requis, il siège en **formation plénière**
+  (ancienne compétence de la commission de réforme), jamais en formation
+  restreinte. L'autorité territoriale reste compétente pour décider de
+  l'imputabilité ; la saisine du conseil n'est pas systématique.
 
 ### 5.3 Congés liés à la santé
 - **CMO** (maladie ordinaire), **CLM** (longue maladie), **CLD** (longue durée) ;
@@ -1721,7 +1792,8 @@ manquantes, valeurs volatiles à vérifier).
 
 - Durées et conditions de **congés** (titulaire vs contractuel).
 - **Imputabilité au service** (CITIS) : qualification → vérification + avis du
-  conseil médical le cas échéant.
+  conseil médical en **formation plénière** le cas échéant ; décision de
+  l'autorité territoriale.
 - **Montants** PSC, indemnité télétravail, taux d'obligation d'emploi.
 - Décision d'**inaptitude** ou de **reclassement** → acte faisant grief.
 - **Recherche de reclassement** : caractère sérieux et réel de la
@@ -1739,12 +1811,14 @@ manquantes, valeurs volatiles à vérifier).
    obligatoire ; seul le contenu est local).
 4. Donner des **montants PSC** de mémoire (ils évoluent).
 5. Confondre **conseil médical** et ancien comité médical / commission de réforme.
-6. Licencier pour inaptitude sans **recherche sérieuse de reclassement**.
-7. Oublier de proposer la **PPR** avant disponibilité d'office ou
+6. Saisir la **formation restreinte** pour l'imputabilité au service : la
+   compétence appartient à la **formation plénière**.
+7. Licencier pour inaptitude sans **recherche sérieuse de reclassement**.
+8. Oublier de proposer la **PPR** avant disponibilité d'office ou
    licenciement.
-8. Confondre **inaptitude aux fonctions** et **inaptitude à toutes
+9. Confondre **inaptitude aux fonctions** et **inaptitude à toutes
    fonctions**.
-9. Présenter le plan d'action égalité comme **facultatif** (obligation
+10. Présenter le plan d'action égalité comme **facultatif** (obligation
    assortie de pénalité au-dessus du seuil).
 
 ## 9. Données volatiles à vérifier
@@ -2491,16 +2565,26 @@ d'acceptation (à la différence du titulaire).
 → §5.7), inaptitude (avis du conseil médical, cf. `qvt-sante.md`),
 suppression d'emploi, refus d'une modification substantielle du contrat.
 **Procédure** (hors motif disciplinaire) : (1) **entretien préalable** ;
-(2) **consultation de la CCP**, obligatoire pour certains motifs (**liste
-exacte à vérifier**, a minima insuffisance professionnelle et inaptitude en
-pratique connue) ; (3) **obligation de reclassement préalable** — principe
-général du droit pour tout licenciement non disciplinaire, l'employeur
-devant rechercher un poste compatible avant de licencier (jurisprudence de
-référence : **CE, avis contentieux, 25 septembre 2013, n° 365139** — numéro
-à confirmer sur conseil-etat.fr avant citation en acte ; portée d'origine :
-éviction au profit d'un titulaire, étendue ensuite par la jurisprudence aux
-autres licenciements non disciplinaires) ; (4) **notification
-motivée** + voies et délais de recours. **Indemnité de licenciement** : due
+(2) **consultation de la CCP** pour le licenciement intervenant après la
+période d'essai, sous les exceptions prévues par le CGFP réglementaire
+(article R272-19, version applicable à vérifier) ; (3) examen du
+**reclassement uniquement lorsque le motif et le texte l'imposent** ;
+(4) **notification motivée** + voies et délais de recours.
+
+Le reclassement préalable n'est **pas** une obligation générale pour tout
+licenciement non disciplinaire :
+
+- l'article 39-5 du décret 88-145 le rattache aux motifs qu'il énumère par
+  renvoi à l'article 39-3 et ne vise pas l'insuffisance professionnelle de
+  l'article 39-2 ;
+- l'avis **CE, 25 septembre 2013, n° 365139** concerne l'éviction d'un agent
+  contractuel en CDI afin d'affecter un fonctionnaire sur son emploi ; ne pas
+  l'étendre à l'insuffisance professionnelle sans fondement distinct vérifié ;
+- en cas d'insuffisance professionnelle, vérifier la version consolidée et la
+  jurisprudence applicable avant d'affirmer qu'une recherche de reclassement
+  est obligatoire.
+
+**Indemnité de licenciement** : due
 sauf faute grave/disciplinaire ou pension à taux plein ; mode de calcul
 (base, plafond, ancienneté) fixé par le décret 88-145 — **à vérifier avant
 tout montant chiffré**. **Droits au chômage** : en principe auto-assurance de
@@ -2591,8 +2675,10 @@ Ne jamais produire un montant ou un délai précis sur une valeur de mémoire.
 2. Confondre **non-renouvellement** (pas de motivation de principe) et
    **licenciement** (procédure et motivation renforcées).
 3. Croire la **CDIsation** équivalente à une **titularisation**.
-4. Oublier l'**obligation de reclassement préalable** avant un licenciement
-   pour inaptitude ou suppression d'emploi, ou omettre la **CCP** requise.
+4. Oublier le **reclassement préalable** quand le motif et le texte l'imposent
+   (notamment certains motifs de l'article 39-3 ou l'inaptitude), l'étendre à
+   tort à l'insuffisance professionnelle sur le fondement de l'article 39-5
+   ou de l'avis CE n° 365139, ou omettre la **CCP** requise.
 5. Appliquer au contractuel le régime des **congés du titulaire** (CLM/CLD)
    au lieu du congé de grave maladie propre.
 6. Traiter un **apprenti** ou un agent en **contrat aidé** comme relevant du
@@ -2614,9 +2700,10 @@ quotités de traitement des congés propres au contractuel ; motifs exacts de
 saisine de la CCP ; conditions de computation des 6 ans (interruptions,
 seuil de neutralisation) ; conditions de la portabilité du CDI ; valeur du
 point d'indice si la rémunération est positionnée sur une grille (cf.
-`carriere-paie.md` §5.6). **Référence jurisprudentielle** (CE, avis du
-25 septembre 2013, n° 365139, reclassement) : numéro à confirmer avant
-citation dans un acte.
+`carriere-paie.md` §5.6). **Référence jurisprudentielle** : l'avis CE du
+25 septembre 2013, n° 365139, ne doit être cité que pour sa portée réelle
+(éviction d'un contractuel en CDI afin d'affecter un fonctionnaire), après
+confirmation sur la source officielle.
 
 ## 10. Livrables (classés par niveau)
 
@@ -2637,8 +2724,8 @@ Gabarits → `assets/`.
 ## 11. Niveau de confiance (repères de la branche)
 
 - **Stable** : existence du décret 88-145 comme texte d'application ;
-  distinction non-renouvellement / licenciement ; obligation de reclassement
-  préalable ; échelle disciplinaire propre au contractuel ; obligation de
+  distinction non-renouvellement / licenciement ; échelle disciplinaire
+  propre au contractuel ; obligation de
   réévaluation triennale dans son principe ; absence d'avancement
   automatique.
 - **À vérifier systématiquement** : version consolidée du décret 88-145
@@ -2659,8 +2746,9 @@ Gabarits → `assets/`.
    CDIsation ?
 3. Non-renouvellement et licenciement bien distingués (motivation,
    procédure, délai de prévenance propres à chacun) ?
-4. Si licenciement : entretien préalable, CCP (si requise), reclassement,
-   indemnité, motivation et voies de recours tous traités ?
+4. Si licenciement : entretien préalable, CCP (si requise), reclassement
+   seulement si le motif l'impose, indemnité, motivation et voies de recours
+   tous traités ?
 5. Discipline traitée avec l'échelle **propre** du décret 88-145 ?
 6. Contractuel de droit public confirmé (pas apprenti, contrat aidé,
    personnel de droit privé d'un OPH) ?

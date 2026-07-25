@@ -115,8 +115,10 @@ modules, gabarits juridiques), il **renvoie** à `recherche-juridique`.
 3. **Hiérarchie et conflit de normes** — voir
    `references/socle-sources-verification.md`.
 4. **Abstention motivée** — en cas de source inaccessible, valeur non
-   confirmée ou contradiction, ne pas trancher : livrer une esquisse
-   conditionnelle bornée et signaler le point à vérifier.
+   confirmée ou contradiction, ne pas trancher : ne fournir aucune valeur
+   exacte destinée à un calcul, à la paie ou à un acte ; livrer seulement une
+   esquisse conditionnelle bornée et signaler le point à vérifier. Une réserve
+   placée après un chiffre non vérifié ne répare pas son énoncé.
 
 Détail des sources FPT et règle de conflit →
 **`references/socle-sources-verification.md`**.
@@ -127,8 +129,8 @@ Détail des sources FPT et règle de conflit →
 
 Graduation simple, pour calibrer l'assertivité :
 
-- **Stable** — CGFP/décret non modifié récemment → réponse assertive, vérif
-  ponctuelle.
+- **Stable** — source officielle effectivement consultée pour la réponse,
+  version applicable confirmée et lien ou identifiant officiel donné.
 - **À vérifier** — texte modifié récemment **ou** valeur volatile (voir §6.1
   du socle) → vérification obligatoire avant usage en acte.
 - **Jurisprudentiel / débattu** — position non figée → recherche approfondie,
@@ -164,7 +166,8 @@ répondre en **conditionnel borné**. Grille et garde-fous →
 
 ### 6.1 Cadrage d'ouverture (profil de la collectivité) — opt-in
 
-À la **première question RH d'une conversation**, proposer (sans l'imposer) :
+À la **première question RH non urgente d'une conversation**, proposer (sans
+l'imposer) :
 « Pour calibrer mes réponses, souhaitez-vous établir le profil de votre
 collectivité ? C'est rapide, et j'éviterai de redemander les mêmes éléments. »
 
@@ -186,7 +189,9 @@ Puis **restituer une fiche profil** (gabarit
 - **Fichier local** (Claude Code / dépôt) : écrire `profil-collectivite.md`.
 
 **Filet de sécurité** : si l'utilisateur décline ou ignore la proposition, ne pas
-insister — appliquer la garde de calibrage à la volée.
+insister — appliquer la garde de calibrage à la volée. Ne jamais relancer sur
+le profil en clôture d'une réponse urgente, sensible ou déjà suffisamment
+qualifiée.
 
 **Statut particulier détecté** → **vigilance renforcée** : signaler que le droit
 commun peut ne pas s'appliquer et **cibler la recherche** sur les textes propres
@@ -266,11 +271,15 @@ La checklist du §10 élève la qualité à chaque exécution.
 
 1. **Paramètre collectivité** levé (ou conditionnel borné) si la question en dépend ?
 2. Toute affirmation relevant d'une ligne « Oui » de la **matrice (§2.2)** a-t-elle été **vérifiée** (ou signalée « à vérifier ») ?
+   Toute précision surnuméraire a-t-elle subi le même contrôle que le noyau de
+   la réponse ?
 3. **Valeur d'indexation** (point d'indice, cotisations) confirmée à la date utile, jamais de mémoire ? **Plafond réglementaire** cité avec sa source datée et la réserve « à confirmer en version consolidée » ? (cf. socle §6)
 4. **Éligibilité** vérifiée (RIFSEEP/ISFE, promotion interne…) ?
 5. **Obligation vs faculté**, **national vs choix local**, **titulaire vs contractuel** distingués ?
 6. **Niveau de confiance** indiqué quand utile ?
 7. Si **acte faisant grief** : compétence, **motivation**, **voies de recours** traitées ?
+   Pour tout projet d'acte : publicité et contrôle de légalité vérifiés, sans
+   formule absolue du type « n'appelle pas de recours » ?
 8. **Conflit de normes** détecté et résolu (hiérarchie + spécialité) ?
 9. Option bloquée → une **alternative légale** a-t-elle été cherchée (§5) ?
 10. **Livrable** demandé effectivement produit ?

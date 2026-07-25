@@ -130,16 +130,26 @@ d'acceptation (à la différence du titulaire).
 → §5.7), inaptitude (avis du conseil médical, cf. `qvt-sante.md`),
 suppression d'emploi, refus d'une modification substantielle du contrat.
 **Procédure** (hors motif disciplinaire) : (1) **entretien préalable** ;
-(2) **consultation de la CCP**, obligatoire pour certains motifs (**liste
-exacte à vérifier**, a minima insuffisance professionnelle et inaptitude en
-pratique connue) ; (3) **obligation de reclassement préalable** — principe
-général du droit pour tout licenciement non disciplinaire, l'employeur
-devant rechercher un poste compatible avant de licencier (jurisprudence de
-référence : **CE, avis contentieux, 25 septembre 2013, n° 365139** — numéro
-à confirmer sur conseil-etat.fr avant citation en acte ; portée d'origine :
-éviction au profit d'un titulaire, étendue ensuite par la jurisprudence aux
-autres licenciements non disciplinaires) ; (4) **notification
-motivée** + voies et délais de recours. **Indemnité de licenciement** : due
+(2) **consultation de la CCP** pour le licenciement intervenant après la
+période d'essai, sous les exceptions prévues par le CGFP réglementaire
+(article R272-19, version applicable à vérifier) ; (3) examen du
+**reclassement uniquement lorsque le motif et le texte l'imposent** ;
+(4) **notification motivée** + voies et délais de recours.
+
+Le reclassement préalable n'est **pas** une obligation générale pour tout
+licenciement non disciplinaire :
+
+- l'article 39-5 du décret 88-145 le rattache aux motifs qu'il énumère par
+  renvoi à l'article 39-3 et ne vise pas l'insuffisance professionnelle de
+  l'article 39-2 ;
+- l'avis **CE, 25 septembre 2013, n° 365139** concerne l'éviction d'un agent
+  contractuel en CDI afin d'affecter un fonctionnaire sur son emploi ; ne pas
+  l'étendre à l'insuffisance professionnelle sans fondement distinct vérifié ;
+- en cas d'insuffisance professionnelle, vérifier la version consolidée et la
+  jurisprudence applicable avant d'affirmer qu'une recherche de reclassement
+  est obligatoire.
+
+**Indemnité de licenciement** : due
 sauf faute grave/disciplinaire ou pension à taux plein ; mode de calcul
 (base, plafond, ancienneté) fixé par le décret 88-145 — **à vérifier avant
 tout montant chiffré**. **Droits au chômage** : en principe auto-assurance de
@@ -230,8 +240,10 @@ Ne jamais produire un montant ou un délai précis sur une valeur de mémoire.
 2. Confondre **non-renouvellement** (pas de motivation de principe) et
    **licenciement** (procédure et motivation renforcées).
 3. Croire la **CDIsation** équivalente à une **titularisation**.
-4. Oublier l'**obligation de reclassement préalable** avant un licenciement
-   pour inaptitude ou suppression d'emploi, ou omettre la **CCP** requise.
+4. Oublier le **reclassement préalable** quand le motif et le texte l'imposent
+   (notamment certains motifs de l'article 39-3 ou l'inaptitude), l'étendre à
+   tort à l'insuffisance professionnelle sur le fondement de l'article 39-5
+   ou de l'avis CE n° 365139, ou omettre la **CCP** requise.
 5. Appliquer au contractuel le régime des **congés du titulaire** (CLM/CLD)
    au lieu du congé de grave maladie propre.
 6. Traiter un **apprenti** ou un agent en **contrat aidé** comme relevant du
@@ -253,9 +265,10 @@ quotités de traitement des congés propres au contractuel ; motifs exacts de
 saisine de la CCP ; conditions de computation des 6 ans (interruptions,
 seuil de neutralisation) ; conditions de la portabilité du CDI ; valeur du
 point d'indice si la rémunération est positionnée sur une grille (cf.
-`carriere-paie.md` §5.6). **Référence jurisprudentielle** (CE, avis du
-25 septembre 2013, n° 365139, reclassement) : numéro à confirmer avant
-citation dans un acte.
+`carriere-paie.md` §5.6). **Référence jurisprudentielle** : l'avis CE du
+25 septembre 2013, n° 365139, ne doit être cité que pour sa portée réelle
+(éviction d'un contractuel en CDI afin d'affecter un fonctionnaire), après
+confirmation sur la source officielle.
 
 ## 10. Livrables (classés par niveau)
 
@@ -276,8 +289,8 @@ Gabarits → `assets/`.
 ## 11. Niveau de confiance (repères de la branche)
 
 - **Stable** : existence du décret 88-145 comme texte d'application ;
-  distinction non-renouvellement / licenciement ; obligation de reclassement
-  préalable ; échelle disciplinaire propre au contractuel ; obligation de
+  distinction non-renouvellement / licenciement ; échelle disciplinaire
+  propre au contractuel ; obligation de
   réévaluation triennale dans son principe ; absence d'avancement
   automatique.
 - **À vérifier systématiquement** : version consolidée du décret 88-145
@@ -298,8 +311,9 @@ Gabarits → `assets/`.
    CDIsation ?
 3. Non-renouvellement et licenciement bien distingués (motivation,
    procédure, délai de prévenance propres à chacun) ?
-4. Si licenciement : entretien préalable, CCP (si requise), reclassement,
-   indemnité, motivation et voies de recours tous traités ?
+4. Si licenciement : entretien préalable, CCP (si requise), reclassement
+   seulement si le motif l'impose, indemnité, motivation et voies de recours
+   tous traités ?
 5. Discipline traitée avec l'échelle **propre** du décret 88-145 ?
 6. Contractuel de droit public confirmé (pas apprenti, contrat aidé,
    personnel de droit privé d'un OPH) ?

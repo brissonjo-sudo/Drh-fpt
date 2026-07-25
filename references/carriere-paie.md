@@ -96,6 +96,9 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
 | **3e** | Rétrogradation ; exclusion 16 jours – 2 ans | **Oui** |
 | **4e** | Mise à la retraite d'office ; révocation | **Oui** |
 
+- Le **déplacement d'office** mentionné au 2e groupe par l'article L533-1 est
+  expressément réservé à la **fonction publique de l'État** : ne pas l'ajouter
+  à l'échelle applicable aux fonctionnaires territoriaux.
 - Pouvoir disciplinaire : **autorité territoriale** (art. L532-1 CGFP), pas
   l'assemblée. Pas de liste légale des fautes (art. L530-1).
 - **Droits de la défense** (toute sanction au-delà de l'avertissement) :
@@ -114,6 +117,17 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
   confondre avec l'exclusion temporaire (qui, elle, est disciplinaire).
 - Toute sanction est un **acte faisant grief** → vérification + motivation +
   voies de recours (§7, §10).
+- Le **conseil de discipline de recours** a été supprimé par la réforme de
+  2019 et ses textes d'application en 2020, hors procédures transitoires déjà
+  engagées à cette date. Pour une sanction nouvelle, ne jamais le présenter
+  comme une voie de recours : vérifier et mentionner les recours administratifs
+  utiles et le recours contentieux devant le tribunal administratif.
+- **Contrôle de légalité** : la version en vigueur de l'article L2131-2 du
+  CGCT ne comporte plus de catégorie générale couvrant « les sanctions
+  disciplinaires de toute nature ». Ne pas annoncer une transmission
+  obligatoire sur ce seul fondement ; vérifier la version applicable, la
+  nature exacte de l'acte et, séparément, les modalités locales de
+  télétransmission.
 
 ### 5.6 Rémunération — traitement
 **Indice brut → indice majoré → × valeur du point d'indice.** La valeur du
@@ -459,6 +473,13 @@ et interdiction de retour rémunéré dans les 6 ans : **à vérifier**.
 
 ### 5.13 Fin de fonctions : chômage et suites
 
+- **Licenciement d'un fonctionnaire territorial pour insuffisance
+  professionnelle** : ne jamais affirmer qu'il est dépourvu d'indemnité. Le
+  décret n° 85-186 du 7 février 1985 prévoit une **indemnité de licenciement**
+  pour le fonctionnaire qui ne remplit pas les conditions d'une retraite avec
+  jouissance immédiate, sauf faute lourde. Vérifier les conditions et le calcul
+  sur la version applicable avant tout chiffrage. Cette règle est distincte de
+  l'indemnité du contractuel régie par le décret 88-145.
 - **Principe de l'auto-assurance** : les employeurs publics, dont les
   collectivités territoriales, ne cotisent pas en principe à l'assurance
   chômage pour leurs agents et sont **auto-assureurs** : la collectivité
@@ -542,22 +563,26 @@ Appliquer le noyau de vérification (matrice §2.2 du SKILL.md) dès que :
    **saisines par l'agent** (révision CREP, refus divers).
 5. Placer l'**exclusion ≤ 3 jours** au mauvais groupe : elle est au **1er
    groupe**, **sans** conseil de discipline.
-6. Appliquer le **RIFSEEP** à la **police municipale** (régime propre = ISFE).
-7. Citer le **décret État 2014-513** comme source FPT directe (viser 91-875 +
+6. Ajouter le **déplacement d'office** à l'échelle FPT ou proposer un
+   **conseil de discipline de recours** supprimé.
+7. Déclarer toutes les sanctions transmissibles au contrôle de légalité sans
+   vérifier la version en vigueur de l'article L2131-2 du CGCT.
+8. Appliquer le **RIFSEEP** à la **police municipale** (régime propre = ISFE).
+9. Citer le **décret État 2014-513** comme source FPT directe (viser 91-875 +
    délibération).
-8. Basculer à tort un agent à **temps partiel** vers l'IRCANTEC (il reste
+10. Basculer à tort un agent à **temps partiel** vers l'IRCANTEC (il reste
    CNRACL).
-9. Confondre **détachement** et **mise à disposition**.
-10. Appliquer la règle du **trentième indivisible** (propre à l'**État**) à
-    une retenue pour grève dans la **FPT** — la retenue FPT est
-    **proportionnelle à la durée réelle** de l'absence de service fait.
-11. **Décharger un emploi fonctionnel dans les 6 mois** suivant le plus
-    tardif de la nomination de l'agent dans l'emploi ou de la désignation de
-    l'autorité territoriale (protection d'ordre public, cause d'illégalité
-    quasi automatique).
-12. **Oublier le coût chômage** (auto-assurance) d'un non-renouvellement de
-    contrat ou d'un licenciement — le décider sans avoir chiffré l'impact
-    budgétaire de l'ARE à la charge de la collectivité.
+11. Confondre **détachement** et **mise à disposition**.
+12. Appliquer la règle du **trentième indivisible** (propre à l'**État**) à
+     une retenue pour grève dans la **FPT** — la retenue FPT est
+     **proportionnelle à la durée réelle** de l'absence de service fait.
+13. **Décharger un emploi fonctionnel dans les 6 mois** suivant le plus
+     tardif de la nomination de l'agent dans l'emploi ou de la désignation de
+     l'autorité territoriale (protection d'ordre public, cause d'illégalité
+     quasi automatique).
+14. **Oublier le coût chômage** (auto-assurance) d'un non-renouvellement de
+     contrat ou d'un licenciement — le décider sans avoir chiffré l'impact
+     budgétaire de l'ARE à la charge de la collectivité.
 
 ## 9. Valeurs chiffrées (cf. socle §6)
 

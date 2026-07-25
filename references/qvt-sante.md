@@ -47,8 +47,11 @@ invalidité ; égalité professionnelle (plan d'action, nominations
   de travail.
 - **Conseil médical** : depuis le 1er février 2022, **fusion** du comité
   médical et de la commission de réforme (décret n° 2022-350). Formations
-  restreinte et plénière ; intervient sur les congés de longue durée/maladie,
-  l'imputabilité au service, l'inaptitude.
+  restreinte et plénière. En matière d'**imputabilité au service**, lorsqu'un
+  avis du conseil médical est requis, il siège en **formation plénière**
+  (ancienne compétence de la commission de réforme), jamais en formation
+  restreinte. L'autorité territoriale reste compétente pour décider de
+  l'imputabilité ; la saisine du conseil n'est pas systématique.
 
 ### 5.3 Congés liés à la santé
 - **CMO** (maladie ordinaire), **CLM** (longue maladie), **CLD** (longue durée) ;
@@ -205,7 +208,8 @@ manquantes, valeurs volatiles à vérifier).
 
 - Durées et conditions de **congés** (titulaire vs contractuel).
 - **Imputabilité au service** (CITIS) : qualification → vérification + avis du
-  conseil médical le cas échéant.
+  conseil médical en **formation plénière** le cas échéant ; décision de
+  l'autorité territoriale.
 - **Montants** PSC, indemnité télétravail, taux d'obligation d'emploi.
 - Décision d'**inaptitude** ou de **reclassement** → acte faisant grief.
 - **Recherche de reclassement** : caractère sérieux et réel de la
@@ -223,12 +227,14 @@ manquantes, valeurs volatiles à vérifier).
    obligatoire ; seul le contenu est local).
 4. Donner des **montants PSC** de mémoire (ils évoluent).
 5. Confondre **conseil médical** et ancien comité médical / commission de réforme.
-6. Licencier pour inaptitude sans **recherche sérieuse de reclassement**.
-7. Oublier de proposer la **PPR** avant disponibilité d'office ou
+6. Saisir la **formation restreinte** pour l'imputabilité au service : la
+   compétence appartient à la **formation plénière**.
+7. Licencier pour inaptitude sans **recherche sérieuse de reclassement**.
+8. Oublier de proposer la **PPR** avant disponibilité d'office ou
    licenciement.
-8. Confondre **inaptitude aux fonctions** et **inaptitude à toutes
+9. Confondre **inaptitude aux fonctions** et **inaptitude à toutes
    fonctions**.
-9. Présenter le plan d'action égalité comme **facultatif** (obligation
+10. Présenter le plan d'action égalité comme **facultatif** (obligation
    assortie de pénalité au-dessus du seuil).
 
 ## 9. Données volatiles à vérifier

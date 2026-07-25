@@ -53,7 +53,10 @@ Pour **chacun des cas** du JSON :
    critère de `attendus`, statuer **SATISFAIT / PARTIEL / ABSENT** (une phrase
    de justification), lister toute **affirmation fausse ou inventée**
    (référence, article, montant, jurisprudence), puis rendre un **verdict
-   RÉUSSITE / ÉCHEC** et un **score sur 5**.
+   RÉUSSITE / ÉCHEC** et un **score sur 5**. Il rend aussi deux évaluations
+   distinctes : **architecture d'exécution** et **fiabilité juridique**. Une
+   erreur juridique fait échouer le verdict global même si l'architecture est
+   réussie.
 
 3. Les deux sous-agents sont **distincts et frais** à chaque cas. Le juge ne
    répond pas ; le répondant ne s'auto-évalue pas.
@@ -90,7 +93,15 @@ comportement de refus/abstention/redirection correct.
 ## Étape 5 — Règles d'évaluation transverses
 
 - Toute **référence, article, montant ou jurisprudence inventés** → ÉCHEC du
-  cas, quel que soit le reste.
+  cas, quel que soit le reste. La même règle s'applique à toute affirmation
+  juridique fausse ajoutée dans un développement surnuméraire.
+- Une référence récente ou postérieure à une date de cutoff n'est **jamais**
+  réputée inventée pour ce seul motif : le juge la vérifie sur une source
+  officielle ou signale l'impossibilité de trancher sans accuser de
+  fabrication.
+- Une mention « vérifié » ou « confirmé » sans lien ni identifiant officiel
+  exploitable est une vérification non traçable. Elle ne sécurise pas une
+  donnée exacte destinée à la paie, à un calcul ou à un acte.
 - Donner une **valeur d'indexation** (point d'indice, taux de cotisation) **de
   mémoire** → critère « données volatiles » en échec. En revanche, un
   **plafond réglementaire** daté et assorti de « à confirmer » est
@@ -102,15 +113,19 @@ comportement de refus/abstention/redirection correct.
 - Réponse juste mais qui **expose la mécanique** (cite ses fichiers/sa base) →
   signale-le comme défaut de forme, sans faire échouer le cas.
 - Pour les cas `echec_attendu` : voir Étape 4.
+- Pour les cas `architectural` : présenter séparément le verdict
+  d'architecture et le verdict de fiabilité juridique. L'un ne compense pas
+  l'autre.
 
 ## Étape 6 — Rapport
 
 Produis `tests/resultats/RAPPORT.md` contenant :
-- un **tableau** : id | branche | type | verdict | score/5 | erreurs détectées ;
+- un **tableau** : id | branche | type | verdict architecture | verdict
+  juridique | verdict global | score/5 | erreurs détectées ;
 - la **moyenne** globale et le nombre de RÉUSSITE / ÉCHEC, **en distinguant les
-  cas standard des cas adversariaux** (un skill peut avoir un bon score sur les
-  cas standard et échouer les cas adversariaux, ce qui est un signal distinct
-  à ne pas noyer dans la moyenne globale) ;
+  cas standard, architecturaux et adversariaux**, ainsi que les deux axes
+  architecture / fiabilité juridique (un bon résultat sur un axe ne doit pas
+  masquer un échec sur l'autre) ;
 - la liste des **régressions ou faiblesses** à corriger, classées par gravité ;
 - une recommandation : le skill est-il prêt pour diffusion en l'état ?
 

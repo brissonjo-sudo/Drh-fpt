@@ -16,9 +16,9 @@ grille d'attendus et repère les affirmations fausses ou inventées.
 
 **Tous** les cas de test (harnais API et protocole sous-agents Claude Code)
 vivent désormais dans **`cas-de-test.json`**, pour éviter toute divergence
-entre deux jeux de cas. Ce fichier contient actuellement **27 cas** :
+entre deux jeux de cas. Ce fichier contient actuellement **30 cas** :
 
-- **17 cas `"standard"`** — questions RH représentatives des huit branches,
+- **20 cas `"standard"`** — questions RH représentatives des huit branches,
   avec leurs `attendus` (critères de réussite) ;
 - **5 cas `"echec_attendu"`** — cas **adversariaux** : le skill promet de
   s'abstenir/rediriger dans certaines situations (hors périmètre, données
@@ -49,6 +49,18 @@ et néanmoins échouer si elle :
 - ne formule ni état de décision ni recommandation ;
 - ne fournit pas de plan d'action opérationnel ;
 - annonce un livrable sans le produire réellement.
+
+Réciproquement, une architecture réussie ne compense pas une affirmation
+juridique fausse. Le juge rend deux appréciations distinctes :
+
+- **architecture d'exécution** ;
+- **fiabilité juridique**.
+
+Une erreur juridique, y compris dans un développement surnuméraire, fait
+échouer la fiabilité juridique et le verdict global. Une référence récente ou
+postérieure à une date de cutoff ne peut pas être déclarée inventée pour ce seul
+motif : elle doit être vérifiée sur une source officielle ou rester classée
+comme non tranchée.
 
 Le référentiel de ces exigences est
 `references/contrat-execution.md`. L'ajout des cas au JSON ne constitue pas une
@@ -91,7 +103,7 @@ jouable aussi en variante dégradée avec `drh-fpt` seul.
 
 ```bash
 export ANTHROPIC_API_KEY=sk-...
-python tests/run_tests.py            # répond aux 27 cas (contexte vierge)
+python tests/run_tests.py            # répond aux 30 cas (contexte vierge)
 python tests/run_tests.py --judge    # répond + évalue (note sur 5 par cas)
 ```
 
