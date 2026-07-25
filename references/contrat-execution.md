@@ -76,6 +76,17 @@ Déclencher la vérification prévue par la matrice du `SKILL.md` pour toute
 procédure, tout calcul, délai, condition d'accès, compétence d'instance, contenu
 d'acte, jurisprudence ou réforme récente.
 
+En fonctionnement nominal, cette étape active obligatoirement
+`recherche-juridique >= 2.2.0`. La réponse DRH conserve la responsabilité de
+qualifier le dossier, d'interpréter la source dans le bon régime et de contrôler
+la cohérence de la conclusion : une citation traçable ne prouve pas, à elle
+seule, que le texte a été correctement appliqué.
+
+Si le compagnon est absent ou indisponible, déclarer le **mode dégradé** avant
+de poursuivre. Dans ce mode, la vérification requise est réputée non aboutie :
+appliquer l'abstention prévue ci-dessous et ne jamais présenter le filet de
+sécurité interne comme l'équivalent d'une co-activation réussie.
+
 La vérification intervient après la qualification et la levée des variables
 déterminantes, mais **avant** :
 

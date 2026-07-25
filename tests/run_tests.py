@@ -2,25 +2,27 @@
 """
 Harness de test du skill drh-fpt — sous-agents à contexte vierge.
 
-Principe : chaque cas est traité par un appel API indépendant dont le SEUL
-contexte est le bundle du skill (system) + le cas (user). Le modèle ne connaît
-ni l'historique de conception, ni les réponses attendues : c'est un évaluateur
-neutre. Un second appel (juge), tout aussi vierge, note la réponse contre la
-grille d'attendus.
+Principe : chaque cas est traité par un appel API indépendant. En mode
+intégration, le contexte contient le bundle DRH et le skill compagnon
+recherche-juridique ; en mode dégradé, il contient le bundle DRH et
+l'indisponibilité explicite du compagnon. Le modèle ne connaît ni l'historique
+de conception, ni les réponses attendues. Un second appel (juge), tout aussi
+vierge, note la réponse contre la grille d'attendus.
 
 Usage :
     export ANTHROPIC_API_KEY=sk-...
-    python run_tests.py                 # répond aux cas
-    python run_tests.py --judge         # répond + évalue (LLM-as-judge)
-    python run_tests.py --model claude-opus-4-8 --judge
+    python run_tests.py --legal-skill ../recherche-juridique
+    python run_tests.py --judge --legal-skill ../recherche-juridique
+    python run_tests.py --mode degraded --judge
 
-Sorties : tests/resultats/<id>.md (réponse) et <id>-eval.json (évaluation),
-tests/resultats/_bilan.json (bilan global).
+Sorties : tests/resultats/<campagne-id>/ avec réponses, évaluations, provenance
+et bilan global.
 """
 import hashlib
 import json
 import os
 import re
+import subprocess
 import sys
 import time
 import urllib.error
@@ -28,6 +30,7 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 import argparse
+import uuid
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
@@ -68,8 +71,92 @@ def read_skill_version() -> str:
     return m.group(1) if m else "inconnue"
 
 
+def read_version_from_text(text: str) -> str:
+    """Lit une version YAML depuis un contenu de skill."""
+    m = re.search(r"^\s*version:\s*(\S+)\s*$", text, re.MULTILINE)
+    return m.group(1) if m else "inconnue"
+
+
 def bundle_sha256_prefix(bundle_text: str, length: int = 12) -> str:
     return hashlib.sha256(bundle_text.encode("utf-8")).hexdigest()[:length]
+
+
+def git_provenance(path: Path) -> dict:
+    """Retourne le commit et l'état de travail du dépôt contenant path."""
+    base = path if path.is_dir() else path.parent
+
+    def run_git(*args: str) -> str | None:
+        try:
+            result = subprocess.run(
+                ["git", "-C", str(base), *args],
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                check=False,
+            )
+        except OSError:
+            return None
+        return result.stdout.strip() if result.returncode == 0 else None
+
+    root = run_git("rev-parse", "--show-toplevel")
+    if not root:
+        return {"racine_git": None, "commit": None, "dirty": None}
+    status = run_git("status", "--porcelain")
+    return {
+        "racine_git": root,
+        "commit": run_git("rev-parse", "HEAD"),
+        "dirty": bool(status) if status is not None else None,
+    }
+
+
+def load_legal_skill(raw_path: str) -> tuple[str, Path, list[str]]:
+    """Charge le compagnon depuis un bundle Markdown ou un dépôt de skill."""
+    path = Path(raw_path).expanduser().resolve()
+    if not path.exists():
+        sys.exit(f"Skill compagnon introuvable : {path}")
+
+    if path.is_file():
+        return path.read_text(encoding="utf-8"), path, [str(path)]
+
+    skill_md = path / "SKILL.md"
+    if not skill_md.exists():
+        sys.exit(
+            f"{path} ne contient pas SKILL.md. Passe le dépôt du skill "
+            "recherche-juridique ou son bundle Markdown."
+        )
+
+    files = [skill_md]
+    references = path / "references"
+    if references.exists():
+        files.extend(sorted(references.rglob("*.md")))
+
+    chunks = []
+    for file in files:
+        rel = file.relative_to(path).as_posix()
+        chunks.append(f"\n\n<!-- SOURCE COMPAGNON : {rel} -->\n\n")
+        chunks.append(file.read_text(encoding="utf-8"))
+    return "".join(chunks), path, [str(file) for file in files]
+
+
+def build_system_context(drh_bundle: str, legal_bundle: str | None, mode: str) -> str:
+    if mode == "degraded":
+        return (
+            drh_bundle
+            + "\n\n<!-- MODE D'EXÉCUTION -->\n"
+            + "Le skill recherche-juridique est indisponible. Tu fonctionnes "
+            "explicitement en mode dégradé et appliques les règles d'abstention."
+        )
+    assert legal_bundle is not None
+    return (
+        "<!-- SKILL MÉTIER : DRH FPT -->\n"
+        + drh_bundle
+        + "\n\n<!-- SKILL COMPAGNON OBLIGATOIRE : RECHERCHE JURIDIQUE -->\n"
+        + legal_bundle
+        + "\n\n<!-- MODE D'EXÉCUTION -->\n"
+        + "Les deux skills sont co-activés. DRH FPT qualifie, décide et livre ; "
+        "recherche-juridique vérifie les sources officielles avant toute "
+        "conclusion juridiquement engageante."
+    )
 
 
 def call_api(key: str, model: str, system: str, user: str, max_tokens: int) -> dict:
@@ -254,16 +341,95 @@ def main():
         help=f"modèle juge (défaut {DEFAULT_JUDGE_MODEL})",
     )
     ap.add_argument("--judge", action="store_true", help="activer l'évaluation")
+    ap.add_argument(
+        "--mode", choices=("integration", "degraded"), default="integration",
+        help="integration = compagnon obligatoire ; degraded = DRH seul",
+    )
+    ap.add_argument(
+        "--legal-skill",
+        help=(
+            "chemin du dépôt ou du bundle recherche-juridique ; obligatoire "
+            "en mode integration"
+        ),
+    )
     args = ap.parse_args()
+
+    bundle_path = find_bundle()
+    drh_bundle = bundle_path.read_text(encoding="utf-8")
+
+    legal_bundle = None
+    legal_path = None
+    legal_sources: list[str] = []
+    if args.mode == "integration":
+        if not args.legal_skill:
+            sys.exit(
+                "--legal-skill est obligatoire en mode integration. "
+                "Utilise --mode degraded pour tester explicitement le filet "
+                "de sécurité sans compagnon."
+            )
+        legal_bundle, legal_path, legal_sources = load_legal_skill(args.legal_skill)
 
     key = os.environ.get("ANTHROPIC_API_KEY")
     if not key:
         sys.exit("Définis ANTHROPIC_API_KEY dans ton environnement.")
 
-    bundle_path = find_bundle()
-    system = bundle_path.read_text(encoding="utf-8")
-    cases = json.loads((HERE / "cas-de-test.json").read_text(encoding="utf-8"))
-    RESULTS.mkdir(exist_ok=True)
+    system = build_system_context(drh_bundle, legal_bundle, args.mode)
+    all_cases = json.loads((HERE / "cas-de-test.json").read_text(encoding="utf-8"))
+    cases = [
+        case for case in all_cases
+        if args.mode in case.get("modes", ["integration", "degraded"])
+    ]
+    started_at = datetime.now(timezone.utc)
+    campaign_id = f"{started_at.strftime('%Y%m%dT%H%M%SZ')}-{uuid.uuid4().hex[:8]}"
+    campaign_results = RESULTS / campaign_id
+    campaign_results.mkdir(parents=True, exist_ok=False)
+    provenance = {
+        "campagne_id": campaign_id,
+        "date_debut_utc": started_at.isoformat(),
+        "mode": args.mode,
+        "modele_repondant": args.model,
+        "modele_juge": args.judge_model if args.judge else None,
+        "juge_active": args.judge,
+        "drh_fpt": {
+            "version": read_skill_version(),
+            "bundle": str(bundle_path),
+            "sha256_bundle": bundle_sha256_prefix(drh_bundle),
+            **git_provenance(ROOT),
+        },
+        "recherche_juridique": (
+            {
+                "version": read_version_from_text(legal_bundle or ""),
+                "chemin": str(legal_path),
+                "sources_chargees": legal_sources,
+                "sha256_contexte": bundle_sha256_prefix(legal_bundle or ""),
+                **git_provenance(legal_path or ROOT),
+            }
+            if args.mode == "integration"
+            else {
+                "version": None,
+                "chemin": None,
+                "sources_chargees": [],
+                "sha256_contexte": None,
+                "racine_git": None,
+                "commit": None,
+                "dirty": None,
+            }
+        ),
+        "nombre_cas_actifs": len(cases),
+        "cas_de_test": {
+            "chemin": str(HERE / "cas-de-test.json"),
+            "sha256": hashlib.sha256(
+                (HERE / "cas-de-test.json").read_bytes()
+            ).hexdigest(),
+        },
+    }
+    (campaign_results / "_provenance.json").write_text(
+        json.dumps(provenance, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    print(
+        f"Campagne {campaign_id} — mode {args.mode} — "
+        f"{len(cases)} cas actifs"
+    )
 
     scores = []
     non_evalues = 0
@@ -286,8 +452,17 @@ def main():
         if tronque:
             print("  ATTENTION : réponse tronquée (max_tokens atteint).")
 
-        (RESULTS / f"{c['id']}.md").write_text(
-            f"# {c['branche']}\n\n## Question\n{c['prompt']}\n\n## Réponse (contexte vierge)\n{answer}\n",
+        (campaign_results / f"{c['id']}.md").write_text(
+            f"# {c['branche']}\n\n"
+            f"## Provenance\n\n"
+            f"- Campagne : `{campaign_id}`\n"
+            f"- Mode : `{args.mode}`\n"
+            f"- DRH FPT : `{provenance['drh_fpt']['commit'] or 'hors Git'}`\n"
+            f"- Recherche juridique : "
+            f"`{provenance['recherche_juridique']['commit'] or 'indisponible'}`\n"
+            f"- Modèle : `{args.model}`\n\n"
+            f"## Question\n{c['prompt']}\n\n"
+            f"## Réponse (contexte vierge)\n{answer}\n",
             encoding="utf-8",
         )
         print(f"Réponse enregistrée ({len(answer)} caractères).{' [TRONQUÉE]' if tronque else ''}")
@@ -313,7 +488,7 @@ def main():
                 cas_bilan.append(entry)
                 continue
 
-            (RESULTS / f"{c['id']}-eval.json").write_text(
+            (campaign_results / f"{c['id']}-eval.json").write_text(
                 json.dumps(ev, ensure_ascii=False, indent=2), encoding="utf-8"
             )
             s = ev.get("score_sur_5")
@@ -337,28 +512,25 @@ def main():
 
         cas_bilan.append(entry)
 
+    moy = sum(scores) / len(scores) if scores else None
     if args.judge:
-        moy = sum(scores) / len(scores) if scores else None
         if moy is not None:
             print(f"\n=== BILAN : {moy:.1f}/5 sur {len(scores)} cas évalués ({non_evalues} non évalués) ===")
         else:
             print(f"\n=== BILAN : aucun score exploitable ({non_evalues} non évalués) ===")
 
-        bundle_text = system
-        bilan = {
-            "cas": cas_bilan,
-            "scores": scores,
-            "moyenne_sur_5": moy,
-            "non_evalues": non_evalues,
-            "version_skill": read_skill_version(),
-            "modele": args.model,
-            "modele_juge": args.judge_model,
-            "date": datetime.now(timezone.utc).isoformat(),
-            "sha256_bundle": bundle_sha256_prefix(bundle_text),
-        }
-        (RESULTS / "_bilan.json").write_text(
-            json.dumps(bilan, ensure_ascii=False, indent=2), encoding="utf-8"
-        )
+    bilan = {
+        "provenance": provenance,
+        "cas": cas_bilan,
+        "scores": scores,
+        "moyenne_sur_5": moy,
+        "non_evalues": non_evalues,
+        "date_fin_utc": datetime.now(timezone.utc).isoformat(),
+        "sha256_contexte_systeme": bundle_sha256_prefix(system),
+    }
+    (campaign_results / "_bilan.json").write_text(
+        json.dumps(bilan, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
 
 
 if __name__ == "__main__":

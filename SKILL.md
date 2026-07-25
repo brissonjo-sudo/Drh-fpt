@@ -22,7 +22,7 @@ metadata:
   date_derniere_verification_sources: 2026-07-14
   perimetre: collectivités territoriales de plus de 350 agents
   dependances:
-    - recherche-juridique >= 2.2.0 (recommandé, pour l'approfondissement juridique)
+    - recherche-juridique >= 2.2.0 (obligatoire pour le fonctionnement nominal)
   compatibilite:
     - Claude Opus (testé avec claude-opus-4-8)
     - Claude Sonnet (testé avec claude-sonnet-4-6)
@@ -80,8 +80,8 @@ La frontière n'est pas laissée à l'appréciation. Elle est explicite :
 | **Jurisprudence** | **Oui** |
 | **Réforme récente** | **Oui** |
 
-Dès qu'une ligne « Oui » est concernée, appliquer le **noyau de vérification**
-(§3) avant de conclure.
+Dès qu'une ligne « Oui » est concernée, appliquer la **vérification avec le
+skill compagnon** (§3) avant de conclure.
 
 **Moment de la vérification** : la vérification intervient **avant la première
 réponse chiffrée ou juridiquement engageante**, **jamais différée à une relance
@@ -96,13 +96,24 @@ balises de son skill `recherche-juridique` (`[complet]`, `[sourcé]`).
 
 ---
 
-## 3. Noyau de vérification (autonome) + appui `recherche-juridique`
+## 3. Vérification avec `recherche-juridique` obligatoire
 
-Le skill embarque un **noyau minimal** de vérification, pour rester fiable même
-si `recherche-juridique` n'est pas chargé. Pour l'approfondissement (triangulation,
-modules, gabarits juridiques), il **renvoie** à `recherche-juridique`.
+Le fonctionnement nominal exige la co-activation de
+**`recherche-juridique >= 2.2.0`**. Dès que la matrice du §2.2 impose une
+vérification, mobiliser ce skill compagnon avant de conclure. Lui transmettre
+la question qualifiée, la date de référence, la règle ou la valeur à vérifier
+et le type de livrable envisagé ; réintégrer ensuite dans la réponse DRH la
+source primaire, sa version applicable et le résultat utile.
 
-**Les quatre réflexes du noyau** :
+Si `recherche-juridique` est absent ou indisponible, annoncer explicitement le
+**mode dégradé**. Le noyau ci-dessous reste un filet de sécurité, pas un
+substitut au compagnon : aucune valeur exacte destinée à la paie, aucun calcul,
+aucune procédure détaillée et aucun projet d'acte juridiquement engageant ne
+doivent être livrés sans la vérification requise. Fournir uniquement le cadrage,
+les variables à réunir, la méthode de contrôle et une abstention motivée sur le
+fond non vérifié.
+
+**Les quatre réflexes du filet de sécurité** :
 
 1. **Primarité** — aucune affirmation juridique de mémoire. S'appuyer sur la
    source officielle (Légifrance, CGFP, décret, jurisprudence) à la version

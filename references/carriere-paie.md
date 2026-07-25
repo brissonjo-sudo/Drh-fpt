@@ -366,8 +366,11 @@ et interdiction de retour rémunéré dans les 6 ans : **à vérifier**.
 - **Arrêté de radiation** : **motivé** (CRPA), **notifié**, **non rétroactif**
   (effet à la notification, non à la date d'absence), avec **voies et délais de
   recours**. **Non soumis à l'obligation de transmission** au contrôle de légalité
-  (hors liste de l'art. L. 2131-2 du CGCT, contrairement à la révocation) — à
-  confirmer.
+  (hors liste actuelle de l'art. L. 2131-2 du CGCT). Ne pas réintroduire depuis
+  une ancienne version de cet article une exception visant la révocation, la
+  mise à la retraite d'office ou les sanctions disciplinaires en général.
+  Vérifier la version applicable à la date de l'acte et distinguer cette
+  obligation légale d'une transmission volontaire ou d'une pratique locale.
 
 ### 5.11 Emplois fonctionnels
 

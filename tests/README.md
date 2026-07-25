@@ -16,9 +16,10 @@ grille d'attendus et repère les affirmations fausses ou inventées.
 
 **Tous** les cas de test (harnais API et protocole sous-agents Claude Code)
 vivent désormais dans **`cas-de-test.json`**, pour éviter toute divergence
-entre deux jeux de cas. Ce fichier contient actuellement **30 cas** :
+entre deux jeux de cas. Ce fichier contient actuellement **32 cas**, dont
+**30 sont actifs dans chaque mode de campagne** :
 
-- **20 cas `"standard"`** — questions RH représentatives des huit branches,
+- **22 cas `"standard"`** — questions RH représentatives des huit branches,
   avec leurs `attendus` (critères de réussite) ;
 - **5 cas `"echec_attendu"`** — cas **adversariaux** : le skill promet de
   s'abstenir/rediriger dans certaines situations (hors périmètre, données
@@ -32,7 +33,15 @@ entre deux jeux de cas. Ce fichier contient actuellement **30 cas** :
 
 Champs par cas : `id`, `branche`, `type` (`standard`, `echec_attendu` ou
 `architectural`), `prompt`, `attendus` (liste), `echec_si` (liste,
-éventuellement vide — conditions disqualifiantes spécifiques au cas).
+éventuellement vide — conditions disqualifiantes spécifiques au cas) et,
+pour les variantes conditionnelles, `modes` (`integration` ou `degraded`).
+
+Les cas 15 et 16 existent dans deux variantes :
+
+- **intégration** : le compagnon est disponible, la réussite consiste à
+  vérifier puis répondre avec une source officielle traçable ;
+- **mode dégradé** : le compagnon est indisponible, la réussite consiste à
+  annoncer ce mode et à s'abstenir de fournir la donnée exacte non vérifiée.
 
 ## Critères architecturaux
 
@@ -70,10 +79,11 @@ et son rapport permettent de conclure sur le comportement du modèle.
 ## Deux protocoles, une seule source de cas
 
 1. **Harnais API** (`run_tests.py` + `cas-de-test.json`) — automatisé,
-   reproductible : injecte le bundle en `system` et rejoue tous les cas du
-   JSON (standard, architecturaux et adversariaux) ; le juge applique
-   `echec_si` et, pour les cas adversariaux, inverse la logique de verdict
-   (réussite = refus correct).
+   reproductible : en mode nominal, injecte le bundle DRH et le dépôt ou bundle
+   du compagnon dans `system`; en mode dégradé, injecte le bundle DRH avec
+   l'indisponibilité explicite du compagnon. Il rejoue les 30 cas actifs du
+   mode choisi ; le juge applique `echec_si` et, pour les cas adversariaux,
+   inverse la logique de verdict (réussite = refus correct).
 2. **Protocole sous-agents Claude Code** (`prompt-claude-code.md`) — orchestré
    par Claude Code sur le dépôt courant (pas de clonage) : un sous-agent
    **répondant** au contexte frais par cas, puis un sous-agent **juge**
@@ -92,6 +102,8 @@ jouable aussi en variante dégradée avec `drh-fpt` seul.
   attendus et `echec_si` (harnais API + protocole sous-agents).
 - `run_tests.py` — harnais (réponse + évaluation optionnelle), lit `type` et
   `echec_si` pour juger correctement les cas adversariaux.
+- `test_harness.py` — contrôles locaux sans API : JSON, séparation des modes,
+  chargement du compagnon et composition du contexte.
 - `prompt-claude-code.md` — protocole sous-agents (renvoie à `cas-de-test.json`
   pour les cas et barèmes, ne les duplique plus).
 - `cas-co-activation.md` — cas transverse deux skills + barème + variante
@@ -103,18 +115,34 @@ jouable aussi en variante dégradée avec `drh-fpt` seul.
 
 ```bash
 export ANTHROPIC_API_KEY=sk-...
-python tests/run_tests.py            # répond aux 30 cas (contexte vierge)
-python tests/run_tests.py --judge    # répond + évalue (note sur 5 par cas)
+python tests/run_tests.py --legal-skill /chemin/recherche-juridique
+python tests/run_tests.py --judge --legal-skill /chemin/recherche-juridique
+python tests/run_tests.py --mode degraded --judge
 ```
 
 Options : `--model` (répondant, défaut `claude-sonnet-4-6`), `--judge-model`
-(juge, défaut `claude-opus-4-8`).
+(juge, défaut `claude-opus-4-8`), `--mode` (`integration` par défaut ou
+`degraded`) et `--legal-skill` (dépôt ou bundle Markdown du compagnon,
+obligatoire en intégration).
+
+Chaque campagne enregistre automatiquement :
+
+- un identifiant de campagne et les dates UTC ;
+- le mode et les modèles ;
+- la version, le SHA Git et l'état propre/sale de chaque skill ;
+- le SHA-256 de chaque contexte chargé et la liste des sources du compagnon ;
+- ces éléments dans `_provenance.json`, `_bilan.json` et l'en-tête de chaque
+  réponse brute.
 
 ## Lecture des résultats
 
-- `resultats/<id>.md` — la réponse du sous-agent vierge.
-- `resultats/<id>-eval.json` — l'évaluation (statut par critère, erreurs, score).
-- `resultats/_bilan.json` — moyenne globale (inclut le `type` par cas).
+- `resultats/<campagne-id>/<id>.md` — la réponse du sous-agent vierge.
+- `resultats/<campagne-id>/<id>-eval.json` — l'évaluation (statut par critère,
+  erreurs, score).
+- `resultats/<campagne-id>/_provenance.json` — empreinte reproductible des deux
+  skills, du JSON des cas et de la campagne.
+- `resultats/<campagne-id>/_bilan.json` — moyenne globale (inclut le `type` par
+  cas).
 
 ## Étendre
 

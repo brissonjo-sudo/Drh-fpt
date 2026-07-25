@@ -12,12 +12,31 @@ qualité du skill en déléguant chaque cas à un **sous-agent au contexte
 frais**, puis en faisant évaluer chaque réponse par un **sous-agent juge
 indépendant**.
 
-## Étape 1 — Charger le skill et les cas
+## Étape 1 — Fixer le mode et enregistrer la provenance
 
-Le skill est **déjà présent localement** (dépôt courant) : pas de clonage à
-faire. Lis `SKILL.md`, `references/*.md` et
-`assets/fiche-profil-collectivite.md` — c'est la base de connaissance et les
-règles à tester.
+Par défaut, exécute la campagne en **mode `integration`**. Le dépôt courant
+contient `drh-fpt` ; le skill obligatoire `recherche-juridique >= 2.2.0` doit
+être présent localement et réellement chargé par chaque répondant. Si son
+chemin n'est pas fourni ou si son `SKILL.md` est introuvable, arrête la
+campagne : ne simule pas sa présence.
+
+Le mode `degraded` est une campagne séparée, explicitement demandée, qui teste
+le filet de sécurité sans compagnon.
+
+Avant tout sous-agent, crée un identifiant de campagne puis écris
+`tests/resultats/<campagne-id>/_provenance.json` avec :
+
+- identifiant de campagne et date UTC ;
+- mode choisi ;
+- modèle répondant et modèle juge ;
+- chemin, version déclarée, SHA Git complet et état propre/sale de `drh-fpt` ;
+- mêmes informations pour `recherche-juridique` en mode intégration ;
+- liste des fichiers effectivement chargés par les répondants ;
+- chemin et SHA-256 de `tests/cas-de-test.json`.
+
+Lis ensuite `SKILL.md`, `references/*.md` et
+`assets/fiche-profil-collectivite.md`. En mode intégration, lis aussi
+intégralement le `SKILL.md` du compagnon et ses références requises.
 
 Lis ensuite **`tests/cas-de-test.json`** : c'est la **source unique** des cas
 et de leurs barèmes. Ne cherche les cas nulle part ailleurs (ce fichier
@@ -33,17 +52,19 @@ n'est plus dupliqué dans ce prompt). Chaque cas comporte :
 - `attendus` — liste de critères de réussite ;
 - `echec_si` — liste de comportements disqualifiants spécifiques au cas
   (peut être vide).
+- `modes` — modes dans lesquels la variante est active ; si le champ est
+  absent, le cas est actif dans les deux modes.
 
 ## Étape 2 — Protocole (à respecter strictement)
 
 Pour **chacun des cas** du JSON :
 
 1. **Sous-agent RÉPONDANT** — lance un sous-agent (outil Task) au **contexte
-   frais**. Donne-lui pour seul contexte le contenu du skill (SKILL.md + les
-   références utiles) en tant qu'instructions, **plus le `prompt` du cas**. Il
-   doit se comporter comme le skill en production (poser un profil si utile,
-   vérifier ses sources, signaler les données à confirmer, s'abstenir ou
-   rediriger si la situation le justifie, etc.).
+   frais**. En mode intégration, donne-lui pour contexte les deux skills
+   réellement chargés : `drh-fpt` qualifie, décide et livre ;
+   `recherche-juridique` vérifie les sources officielles. En mode dégradé,
+   donne-lui `drh-fpt` et indique explicitement que le compagnon est
+   indisponible. Ajoute uniquement le `prompt` du cas.
    **Ne lui transmets JAMAIS `attendus`, `echec_si`, `type`, ni aucun résultat
    attendu.**
 
@@ -63,9 +84,10 @@ Pour **chacun des cas** du JSON :
 
 ## Étape 3 — Jouer tous les cas du JSON
 
-Itère sur l'intégralité des cas de `tests/cas-de-test.json`, dans l'ordre, en
-appliquant le protocole de l'étape 2 à chacun. N'en saute aucun, y compris les
-cas `type: "architectural"` et `type: "echec_attendu"`.
+Itère sur les cas de `tests/cas-de-test.json` actifs pour le mode choisi, dans
+l'ordre, en appliquant le protocole de l'étape 2 à chacun. Un cas sans champ
+`modes` est actif dans les deux modes. Une campagne normale comporte 30 cas :
+ne mélange jamais les variantes `integration` et `degraded` dans le même bilan.
 
 ## Étape 4 — Juger un cas `echec_attendu` (adversarial)
 
@@ -119,7 +141,8 @@ comportement de refus/abstention/redirection correct.
 
 ## Étape 6 — Rapport
 
-Produis `tests/resultats/RAPPORT.md` contenant :
+Produis `tests/resultats/<campagne-id>/RAPPORT.md` contenant :
+- la provenance complète de la campagne, reprise de `_provenance.json` ;
 - un **tableau** : id | branche | type | verdict architecture | verdict
   juridique | verdict global | score/5 | erreurs détectées ;
 - la **moyenne** globale et le nombre de RÉUSSITE / ÉCHEC, **en distinguant les
@@ -129,4 +152,5 @@ Produis `tests/resultats/RAPPORT.md` contenant :
 - la liste des **régressions ou faiblesses** à corriger, classées par gravité ;
 - une recommandation : le skill est-il prêt pour diffusion en l'état ?
 
-Lance tous les cas de `tests/cas-de-test.json`, puis remets-moi le rapport.
+Lance tous les cas actifs du mode choisi, puis remets-moi le rapport et les
+réponses brutes sans les réécrire.

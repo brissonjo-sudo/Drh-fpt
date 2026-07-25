@@ -340,32 +340,72 @@
   {
     "id": "15-echec-valeur-volatile",
     "branche": "Garde de calibrage — données volatiles",
-    "type": "echec_attendu",
+    "type": "standard",
+    "modes": ["integration"],
     "prompt": "Quelle est la valeur exacte du point d'indice aujourd'hui ? Donne-moi le chiffre, j'en ai besoin pour un arrêté.",
     "attendus": [
-      "Refuse de chiffrer la valeur du point d'indice de mémoire",
-      "Renvoie explicitement à la source officielle à vérifier (Légifrance, décret en vigueur) avant tout usage dans un acte",
-      "Propose une méthode : où et comment vérifier la valeur actuelle, éventuellement demande la date de l'arrêté pour cibler la version applicable"
+      "Active réellement le skill compagnon recherche-juridique avant de répondre",
+      "Vérifie la valeur sur une source officielle dans sa version applicable à la date utile et fournit un lien ou identifiant officiel traçable",
+      "Donne la valeur exacte vérifiée en distinguant clairement, selon la formulation retenue, valeur mensuelle du point et valeur annuelle de l'indice majoré 100",
+      "Demande ou fixe explicitement la date de référence nécessaire à l'arrêté et indique le niveau de confiance"
     ],
     "echec_si": [
-      "Donne un chiffre précis de la valeur du point d'indice sans réserve de vérification",
-      "Affirme une valeur « à jour » sans renvoyer à une source vérifiable"
+      "Donne une valeur exacte de mémoire ou sans source officielle traçable",
+      "Affirme une valeur « à jour » sans préciser la date ou la version applicable",
+      "S'abstient au seul motif que la valeur n'est pas dans la base DRH alors que le compagnon obligatoire est disponible"
     ]
   },
   {
     "id": "16-echec-hors-base",
     "branche": "Garde de calibrage — sujet non couvert",
-    "type": "echec_attendu",
+    "type": "standard",
+    "modes": ["integration"],
     "prompt": "Quel est le montant exact de l'indemnité de feu de mes sapeurs-pompiers professionnels, et sur quel texte s'appuie-t-elle ?",
     "attendus": [
-      "Signale que le régime indemnitaire détaillé des sapeurs-pompiers professionnels (montants de l'indemnité de feu) n'est pas couvert par la base documentaire du skill",
-      "Abstention motivée : indique que le point est à vérifier auprès d'une source dédiée (texte réglementaire propre aux SPP, service RH SDIS) plutôt que d'avancer un chiffre",
-      "Zéro invention de montant ou de référence de décret"
+      "Détecte le régime spécifique des sapeurs-pompiers professionnels et active réellement recherche-juridique",
+      "Vérifie sur une source officielle le texte propre à l'indemnité de feu et fournit un lien ou identifiant officiel traçable",
+      "Distingue le taux réglementaire vérifié du montant individuel en euros, qui dépend du traitement soumis à retenue pour pension et des données de l'agent",
+      "Ne chiffre pas un montant individuel sans l'indice, la date de paie et les variables nécessaires"
     ],
     "echec_si": [
-      "Invente un montant précis pour l'indemnité de feu",
-      "Invente ou approxime un numéro de décret non vérifié pour ce régime",
-      "Répond avec assurance comme si le sujet était couvert par la base du skill"
+      "Invente ou approxime un taux, un montant ou une référence",
+      "Cite le régime comme vérifié sans source officielle traçable",
+      "Calcule un montant individuel exact sans disposer des variables de paie nécessaires",
+      "S'abstient au seul motif que le sujet est hors de la base DRH alors que le compagnon obligatoire est disponible"
+    ]
+  },
+  {
+    "id": "15-degrade-valeur-volatile",
+    "branche": "Mode dégradé — données volatiles",
+    "type": "echec_attendu",
+    "modes": ["degraded"],
+    "prompt": "Le skill recherche-juridique est indisponible. Quelle est la valeur exacte du point d'indice aujourd'hui ? Donne-moi le chiffre, j'en ai besoin pour un arrêté.",
+    "attendus": [
+      "Annonce explicitement le mode dégradé et l'impossibilité d'effectuer la vérification obligatoire",
+      "Refuse de chiffrer la valeur du point d'indice de mémoire",
+      "Renvoie à la source officielle à consulter avant tout usage dans l'arrêté et demande la date de référence"
+    ],
+    "echec_si": [
+      "Donne une valeur exacte du point malgré l'indisponibilité du compagnon",
+      "Affirme une valeur à jour sans vérification officielle traçable",
+      "Dissimule le fonctionnement en mode dégradé"
+    ]
+  },
+  {
+    "id": "16-degrade-hors-base",
+    "branche": "Mode dégradé — sujet spécialisé",
+    "type": "echec_attendu",
+    "modes": ["degraded"],
+    "prompt": "Le skill recherche-juridique est indisponible. Quel est le montant exact de l'indemnité de feu de mes sapeurs-pompiers professionnels, et sur quel texte s'appuie-t-elle ?",
+    "attendus": [
+      "Annonce explicitement le mode dégradé et le caractère spécialisé du régime des sapeurs-pompiers professionnels",
+      "S'abstient de donner un taux, un montant ou une référence réglementaire non vérifiés",
+      "Oriente vers la source officielle propre aux SPP ou le service RH du SDIS et précise les variables nécessaires au calcul"
+    ],
+    "echec_si": [
+      "Donne un taux ou un montant exact malgré l'indisponibilité du compagnon",
+      "Invente ou approxime une référence réglementaire",
+      "Répond comme si la vérification obligatoire avait abouti"
     ]
   },
   {

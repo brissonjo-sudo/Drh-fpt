@@ -18,6 +18,10 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
   titulaire prévue par le décret 85-186 rétablie dans la comparaison.
 - **Cas Casagranda** : le banc accepte les numéros 147511 et/ou 147512 tout en
   maintenant l'obligation de réserve avant citation dans un acte.
+- **Contrôle de légalité** : suppression de la mention résiduelle présentant
+  la révocation comme obligatoirement transmissible ; interdiction de
+  réintroduire les anciennes catégories de sanctions depuis une version
+  historique de l'article L2131-2 du CGCT.
 
 ### Renforcé
 - `references/contrat-execution.md` et `SKILL.md` : abstention terminale hors
@@ -28,12 +32,21 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 - Juge LLM : une erreur juridique surnuméraire fait échouer le verdict global ;
   architecture et fiabilité juridique sont notées séparément ; aucune
   accusation d'invention fondée sur la seule récence d'une référence.
+- `recherche-juridique >= 2.2.0` devient une dépendance obligatoire du
+  fonctionnement nominal. Son indisponibilité déclenche un mode dégradé
+  explicite et l'abstention sur toute donnée ou procédure exigeant une
+  vérification.
+- Harnais : provenance reproductible des campagnes (mode, modèles, versions,
+  SHA Git, état des dépôts, empreintes des contextes et fichiers chargés).
 
 ### Tests
 - Cas 02, 09, 12, 19 et 27 corrigés ou durcis.
 - Trois cas standard de non-régression ajoutés : formation plénière CITIS,
   suppression du conseil de discipline de recours, version actuelle de
-  l'article L2131-2 du CGCT. Total : **30 cas**.
+  l'article L2131-2 du CGCT.
+- Cas 15 et 16 dédoublés par mode : vérification et réponse en co-activation ;
+  abstention uniquement en mode dégradé. Le JSON contient **32 variantes**,
+  dont **30 actives par campagne**.
 - Nouvelle campagne LLM non encore exécutée.
 
 ## [0.5.1] — 2026-07-14 — Correctif terrain : distinction RIFSEEP/ISFE + vérification immédiate

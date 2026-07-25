@@ -22,6 +22,22 @@ Une entrée par cas, au format ci-dessous.
 
 ## Entrées
 
+### 2026-07-26 — Co-activation obligatoire et campagnes reproductibles
+- Type : erreur + amélioration
+- Branche : socle + carrière-paie + tests
+- Contexte (anonymisé) : comparaison de trois campagnes exécutées sur le même
+  commit, puis reprise ciblée avec le skill compagnon
+  `recherche-juridique` v2.2.0.
+- Constat : le compagnon améliore la traçabilité des sources mais ne garantit
+  pas leur bonne application ; le harnais API testait jusqu'ici DRH FPT seul,
+  alors que le fonctionnement nominal repose sur les deux skills. Les cas
+  d'abstention 15 et 16 mélangeaient fonctionnement nominal et mode dégradé.
+  Une ancienne lecture de L2131-2 subsistait aussi à propos de la révocation.
+- Action proposée : dépendance rendue obligatoire ; mode dégradé explicite ;
+  correction L2131-2 ; variantes intégration/dégradé des cas 15 et 16 ;
+  enregistrement automatique des versions, SHA et contextes de campagne.
+- Statut : intégré (candidat v0.6.0), campagne LLM à exécuter.
+
 ### 2026-06-26 — Création du MVP
 - Type : cas nouveau
 - Branche : carrière-paie
