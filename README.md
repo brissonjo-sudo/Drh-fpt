@@ -71,6 +71,7 @@ drh-fpt/
 │   └── check_coherence.py                Vérifie version/bundle/CHANGELOG/renvois/arbre README
 ├── references/
 │   ├── _gabarit-branche.md               Gabarit décisionnel des branches
+│   ├── contrat-execution.md               Contrat d'exécution transversal testable
 │   ├── socle-sources-verification.md     Sources FPT, conflits de normes, valeurs chiffrées
 │   ├── parametres-collectivite.md        Variables +350 agents + garde-fous régimes spécifiques
 │   ├── carriere-paie.md                  Branche carrière & paie
@@ -92,7 +93,7 @@ drh-fpt/
 │   └── courrier-modele.md                Gabarit courrier d'agent / note de service
 └── tests/
     ├── README.md                         Dispositif de tests (deux protocoles)
-    ├── cas-de-test.json                  Source unique des cas (17 standard + 5 adversariaux)
+    ├── cas-de-test.json                  Source unique (17 standard + 5 adversariaux + 5 architecturaux)
     ├── run_tests.py                      Harnais API (répondant + juge)
     ├── prompt-claude-code.md             Protocole sous-agents Claude Code (lit cas-de-test.json)
     ├── cas-co-activation.md              Cas transverse drh-fpt × recherche-juridique

@@ -209,3 +209,23 @@ Une entrée par cas, au format ci-dessous.
 - Note : le texte exact de l'entrée n'ayant pas été fourni avec la demande, il a
   été reconstitué d'après le cas décrit — à ajuster si le compte rendu diffère.
 - Statut : intégré (v0.5.1)
+
+### 2026-07-25 — Contrat d'exécution testable pour la v0.6.0
+- Type : lacune + amélioration architecturale
+- Branche : transversal, pilote carrière-paie
+- Contexte (anonymisé) : lancement test-first de la branche de travail
+  `agent/audit-carriere-paie-v0.6.0`, sans modification des règles juridiques
+  existantes.
+- Constat : le pilote carrière-paie est riche et comporte de nombreux
+  garde-fous, mais reste trop déclaratif. Les obligations de qualification,
+  levée des variables, décision, recommandation, action et livraison sont
+  dispersées ; aucun contrat d'exécution transversal ne permet de les tester
+  comme une chaîne complète.
+- Action proposée : ajout de `references/contrat-execution.md`, imposant la
+  chaîne `qualifier → lever les variables → borner → vérifier → décider → agir
+  → livrer → sécuriser`, et de cinq cas architecturaux dans la source unique
+  `tests/cas-de-test.json`. Documentation des critères et de l'absence de preuve
+  tant qu'une campagne LLM n'a pas été exécutée dans `tests/README.md`.
+- Statut : intégré sur la branche de travail ; JSON, cohérence, fraîcheur du
+  bundle et compilation Python validés localement sans API ; tests LLM
+  répondant + juge non exécutés faute de clé dans l'environnement.

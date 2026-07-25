@@ -25,9 +25,10 @@ n'est plus dupliqué dans ce prompt). Chaque cas comporte :
 
 - `id` — identifiant du cas ;
 - `branche` — branche métier concernée ;
-- `type` — `"standard"` (question RH normale) ou `"echec_attendu"` (cas
-  adversarial : la réussite consiste à refuser/s'abstenir/rediriger, voir
-  Étape 4) ;
+- `type` — `"standard"` (question RH normale), `"architectural"` (chaîne
+  d'exécution transversale, jugée comme une réussite ordinaire) ou
+  `"echec_attendu"` (cas adversarial : la réussite consiste à
+  refuser/s'abstenir/rediriger, voir Étape 4) ;
 - `prompt` — la question à poser au sous-agent répondant ;
 - `attendus` — liste de critères de réussite ;
 - `echec_si` — liste de comportements disqualifiants spécifiques au cas
@@ -61,7 +62,7 @@ Pour **chacun des cas** du JSON :
 
 Itère sur l'intégralité des cas de `tests/cas-de-test.json`, dans l'ordre, en
 appliquant le protocole de l'étape 2 à chacun. N'en saute aucun, y compris les
-cas `type: "echec_attendu"`.
+cas `type: "architectural"` et `type: "echec_attendu"`.
 
 ## Étape 4 — Juger un cas `echec_attendu` (adversarial)
 

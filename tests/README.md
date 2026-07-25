@@ -16,25 +16,52 @@ grille d'attendus et repère les affirmations fausses ou inventées.
 
 **Tous** les cas de test (harnais API et protocole sous-agents Claude Code)
 vivent désormais dans **`cas-de-test.json`**, pour éviter toute divergence
-entre deux jeux de cas. Ce fichier contient actuellement **22 cas** :
+entre deux jeux de cas. Ce fichier contient actuellement **27 cas** :
 
 - **17 cas `"standard"`** — questions RH représentatives des huit branches,
   avec leurs `attendus` (critères de réussite) ;
 - **5 cas `"echec_attendu"`** — cas **adversariaux** : le skill promet de
   s'abstenir/rediriger dans certaines situations (hors périmètre, données
   volatiles, sujet non couvert, transposition indue) ; ici la **réussite**
-  consiste à refuser de répondre normalement.
+  consiste à refuser de répondre normalement ;
+- **5 cas `"architectural"`** — cas transversaux qui évaluent la chaîne
+  d'exécution indépendamment de la seule exactitude juridique : qualification,
+  variables bloquantes, règle nationale versus choix local, activation de
+  plusieurs branches, décision, recommandation, plan d'action et production
+  effective du livrable demandé.
 
-Champs par cas : `id`, `branche`, `type` (`standard` ou `echec_attendu`),
-`prompt`, `attendus` (liste), `echec_si` (liste, éventuellement vide — conditions
-disqualifiantes spécifiques au cas).
+Champs par cas : `id`, `branche`, `type` (`standard`, `echec_attendu` ou
+`architectural`), `prompt`, `attendus` (liste), `echec_si` (liste,
+éventuellement vide — conditions disqualifiantes spécifiques au cas).
+
+## Critères architecturaux
+
+Les cas architecturaux sont jugés comme des cas de réussite ordinaires, avec
+des critères transversaux renforcés. Une réponse peut être juridiquement juste
+et néanmoins échouer si elle :
+
+- conclut avant d'avoir qualifié le dossier et identifié les variables
+  bloquantes ;
+- confond une règle nationale impérative avec une délibération ou un choix
+  local ;
+- ignore une branche nécessaire ou applique le régime du titulaire à un
+  contractuel ;
+- ne formule ni état de décision ni recommandation ;
+- ne fournit pas de plan d'action opérationnel ;
+- annonce un livrable sans le produire réellement.
+
+Le référentiel de ces exigences est
+`references/contrat-execution.md`. L'ajout des cas au JSON ne constitue pas une
+preuve de réussite : seuls une campagne répondant + juge effectivement exécutée
+et son rapport permettent de conclure sur le comportement du modèle.
 
 ## Deux protocoles, une seule source de cas
 
 1. **Harnais API** (`run_tests.py` + `cas-de-test.json`) — automatisé,
    reproductible : injecte le bundle en `system` et rejoue tous les cas du
-   JSON (standard et adversariaux) ; le juge applique `echec_si` et, pour les
-   cas adversariaux, inverse la logique de verdict (réussite = refus correct).
+   JSON (standard, architecturaux et adversariaux) ; le juge applique
+   `echec_si` et, pour les cas adversariaux, inverse la logique de verdict
+   (réussite = refus correct).
 2. **Protocole sous-agents Claude Code** (`prompt-claude-code.md`) — orchestré
    par Claude Code sur le dépôt courant (pas de clonage) : un sous-agent
    **répondant** au contexte frais par cas, puis un sous-agent **juge**
@@ -48,7 +75,8 @@ jouable aussi en variante dégradée avec `drh-fpt` seul.
 
 ## Contenu
 
-- `cas-de-test.json` — **source unique** des cas (standard + adversariaux),
+- `cas-de-test.json` — **source unique** des cas (standard + architecturaux +
+  adversariaux),
   attendus et `echec_si` (harnais API + protocole sous-agents).
 - `run_tests.py` — harnais (réponse + évaluation optionnelle), lit `type` et
   `echec_si` pour juger correctement les cas adversariaux.
@@ -63,7 +91,7 @@ jouable aussi en variante dégradée avec `drh-fpt` seul.
 
 ```bash
 export ANTHROPIC_API_KEY=sk-...
-python tests/run_tests.py            # répond aux 22 cas (contexte vierge)
+python tests/run_tests.py            # répond aux 27 cas (contexte vierge)
 python tests/run_tests.py --judge    # répond + évalue (note sur 5 par cas)
 ```
 

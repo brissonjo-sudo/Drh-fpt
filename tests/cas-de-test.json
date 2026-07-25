@@ -375,5 +375,95 @@
       "Transpose le dispositif du code du travail sans réserve à la FPT",
       "Omet de renvoyer vers la procédure d'abandon de poste propre à la FPT"
     ]
+  },
+  {
+    "id": "23-architecture-variables-bloquantes",
+    "branche": "Carrière & paie",
+    "type": "architectural",
+    "prompt": "Je prépare le tableau d'avancement de grade. Un agent pourrait-il être nommé au grade supérieur cette année ? Je n'ai pour l'instant que son nom et son cadre d'emplois.",
+    "attendus": [
+      "Qualifie la demande comme un dossier d'avancement de grade et non comme un avancement automatique",
+      "Distingue les données connues des variables manquantes",
+      "Identifie avant toute conclusion les variables bloquantes : grade et échelon actuels, ancienneté et services requis, examen professionnel le cas échéant, conditions du statut particulier à la date de référence, ratio promus-promouvables, tableau annuel et LDG applicables",
+      "Classe la décision « non tranchable » tant que les variables déterminantes ne sont pas levées",
+      "Indique les pièces ou vérifications à réunir pour pouvoir décider, sans inventer l'éligibilité de l'agent"
+    ],
+    "echec_si": [
+      "Conclut que l'agent est éligible ou inéligible avec les seules informations fournies",
+      "Transforme une variable bloquante en hypothèse silencieuse",
+      "Présente l'avancement de grade comme automatique"
+    ]
+  },
+  {
+    "id": "24-architecture-national-local",
+    "branche": "Carrière & paie",
+    "type": "architectural",
+    "prompt": "Notre service travaille selon un cycle annualisé défini il y a plusieurs années. Quelles règles de temps de travail devons-nous appliquer aujourd'hui, et pouvons-nous conserver notre organisation actuelle ?",
+    "attendus": [
+      "Distingue explicitement le socle national du temps de travail des choix d'organisation locaux",
+      "Présente les garanties et bornes nationales comme impératives, sous réserve de vérification dans leur version applicable",
+      "Identifie la délibération locale, l'avis du CST, le cycle, les sujétions particulières et la date de référence comme éléments à vérifier",
+      "N'invente pas le contenu de la délibération locale et ne la traite pas comme une règle nationale",
+      "Formule un état de décision conditionnel ou non tranchable et un plan de contrôle de la délibération avant décision"
+    ],
+    "echec_si": [
+      "Affirme que l'organisation locale est régulière sans examiner la délibération applicable",
+      "Présente un choix local de cycle ou d'annualisation comme une règle nationale uniforme",
+      "Admet qu'une délibération locale puisse écarter une garantie minimale nationale impérative"
+    ]
+  },
+  {
+    "id": "25-architecture-analyse-livrable",
+    "branche": "Carrière & paie",
+    "type": "architectural",
+    "prompt": "Analyse la possibilité de nommer un agent après avancement de grade puis rédige, dans la même réponse, un projet d'arrêté correspondant. Les informations qui manquent peuvent rester sous forme de champs à compléter.",
+    "attendus": [
+      "Fournit d'abord une analyse structurée : qualification, variables, vérifications, état de décision, risques et recommandation",
+      "Produit ensuite réellement un projet d'arrêté distinct et exploitable, au lieu de seulement proposer de le rédiger",
+      "Matérialise les informations manquantes par des champs à compléter et relie les réserves aux vérifications nécessaires",
+      "Le projet comporte au minimum l'autorité compétente, les visas à confirmer, les considérants, le dispositif, la date d'effet, la notification et les voies de recours à compléter ou vérifier",
+      "Indique un niveau de confiance et les contrôles à effectuer avant signature"
+    ],
+    "echec_si": [
+      "Livre uniquement l'analyse sans produire le projet d'arrêté",
+      "Annonce qu'un arrêté pourra être rédigé ultérieurement",
+      "Invente les données individuelles, les visas, la date d'effet ou l'éligibilité manquants"
+    ]
+  },
+  {
+    "id": "26-architecture-multibranche-contractuel",
+    "branche": "Carrière & paie + Agents contractuels",
+    "type": "architectural",
+    "prompt": "Un agent contractuel en CDI, rémunéré par référence à un indice, demande la reprise de toute son ancienneté et un avancement de grade comme un fonctionnaire titulaire. Analyse sa situation et indique la marche à suivre.",
+    "attendus": [
+      "Active et articule explicitement les branches Carrière & paie et Agents contractuels",
+      "Qualifie l'agent comme contractuel en CDI et n'applique pas le régime statutaire d'avancement de grade du titulaire",
+      "Distingue la référence indiciaire utilisée pour la rémunération d'un classement statutaire dans un grade",
+      "Recherche le fondement contractuel, les clauses du contrat, la délibération ou le cadre local de rémunération et les règles propres de réévaluation des contractuels",
+      "Formule un état de décision, une recommandation et un plan d'action adaptés au régime contractuel"
+    ],
+    "echec_si": [
+      "Applique à l'agent contractuel les conditions ou la procédure d'avancement de grade d'un fonctionnaire titulaire",
+      "Déduit de la seule référence à un indice que l'agent est classé dans un grade",
+      "Ignore la branche Agents contractuels"
+    ]
+  },
+  {
+    "id": "27-architecture-decision-action",
+    "branche": "Carrière & paie",
+    "type": "architectural",
+    "prompt": "Un agent titulaire est soupçonné de faits pouvant justifier une exclusion temporaire de 5 jours. Explique-moi juridiquement si je peux engager cette procédure, puis recommande-moi une décision et donne-moi les actions concrètes à lancer, dans l'ordre, avec les contrôles à prévoir.",
+    "attendus": [
+      "Ne se limite pas à exposer les règles juridiques",
+      "Formule l'un des quatre états de décision : possible, possible sous conditions, impossible en l'état ou non tranchable",
+      "Donne une recommandation explicite cohérente avec les informations disponibles",
+      "Fournit un plan d'action ordonné précisant actions, acteurs, prérequis, contrôles et preuves attendues, sans inventer de délai",
+      "Signale les variables bloquantes éventuelles, les risques résiduels et le niveau de confiance"
+    ],
+    "echec_si": [
+      "La réponse est juridiquement correcte mais ne contient aucune recommandation",
+      "La réponse ne contient aucun plan d'action opérationnel",
+      "La réponse conclut malgré une situation insuffisamment qualifiée sans identifier les variables bloquantes"
+    ]
   }
 ]

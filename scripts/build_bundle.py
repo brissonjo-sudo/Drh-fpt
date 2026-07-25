@@ -34,10 +34,11 @@ DIST = ROOT / "dist"
 SEP = "=" * 80
 
 # Ordre exact des sections du bundle, tel qu'observé dans
-# drh-fpt-bundle-pour-LLM.md : SKILL.md, socle, paramètres, fiche profil,
-# puis les huit branches (routeur §7 de SKILL.md).
+# drh-fpt-bundle-pour-LLM.md : SKILL.md, contrat d'exécution, socle,
+# paramètres, fiche profil, puis les huit branches (routeur §7 de SKILL.md).
 SECTIONS = [
     ("RÈGLES DE CONDUITE (SKILL)", SKILL_MD),
+    ("CONTRAT D'EXÉCUTION TRANSVERSAL", ROOT / "references/contrat-execution.md"),
     ("SOCLE — SOURCES & VÉRIFICATION", ROOT / "references/socle-sources-verification.md"),
     ("PARAMÈTRES & STATUTS PARTICULIERS", ROOT / "references/parametres-collectivite.md"),
     ("FICHE PROFIL (cadrage d'ouverture)", ROOT / "assets/fiche-profil-collectivite.md"),
