@@ -22,6 +22,10 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
   la révocation comme obligatoirement transmissible ; interdiction de
   réintroduire les anciennes catégories de sanctions depuis une version
   historique de l'article L2131-2 du CGCT.
+- **`assets/decision-modele.md`** : la check-list avant signature portait
+  encore l'ancienne lecture (« ex. la révocation y figure »), en contradiction
+  avec `references/carriere-paie.md`. Alignée sur la version en vigueur de
+  l'article, avec renvoi séparé aux modalités locales de télétransmission.
 
 ### Renforcé
 - `references/contrat-execution.md` et `SKILL.md` : abstention terminale hors
@@ -38,6 +42,16 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
   vérification.
 - Harnais : provenance reproductible des campagnes (mode, modèles, versions,
   SHA Git, état des dépôts, empreintes des contextes et fichiers chargés).
+- `scripts/check_coherence.py` — sixième contrôle : **noyau modifié ⇒ version
+  incrémentée**. `SKILL.md`, `references/` et `assets/` sont comparés au tag de
+  la version déclarée ; toute divergence non couverte par une entrée
+  `## [Non publié]` du CHANGELOG devient bloquante, de même qu'une entrée non
+  publiée visant une version antérieure ou égale. Les cinq contrôles existants
+  garantissaient que la version était la même partout, pas qu'elle avait bougé
+  quand le contenu bougeait : un skill au comportement modifié pouvait se
+  déclarer sous un numéro déjà publié, rendant les campagnes de test
+  indatables. Contrôle dégradé en avertissement hors dépôt Git ou en l'absence
+  du tag (clone superficiel).
 
 ### Tests
 - Cas 02, 09, 12, 19 et 27 corrigés ou durcis.
