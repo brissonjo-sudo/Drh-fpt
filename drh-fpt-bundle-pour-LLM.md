@@ -1733,9 +1733,10 @@ n° 2022-581, loi n° 2025-1251 du 22 décembre 2025) :
 
 - **Plan d'action relatif à l'égalité professionnelle** : obligatoire pour
   les collectivités et EPCI de **plus de 20 000 habitants** (décret
-  n° 2020-528 du 4 mai 2020, applicable depuis le 1er octobre 2021 —
-  seuil stable, à confirmer en version consolidée avant tout acte). Quatre
-  axes réglementaires :
+  n° 2020-528 du 4 mai 2020, en vigueur dès sa publication ; le mécanisme
+  de pénalité financière n'est devenu opérationnel qu'à l'issue du délai
+  de mise en demeure, au 1er octobre 2021 — seuil stable, à confirmer en
+  version consolidée avant tout acte). Quatre axes réglementaires :
   1. évaluation, prévention et, le cas échéant, résorption des écarts de
      rémunération ;
   2. garantie de l'égal accès aux corps, cadres d'emplois et grades ;
@@ -1757,7 +1758,8 @@ n° 2022-581, loi n° 2025-1251 du 22 décembre 2025) :
   jusqu'au 1er janvier 2027 puis tous les 3 ans jusqu'à 40 % ; suppression
   de la dispense de pénalité à compter du 1er janvier 2027 ; contribution
   forfaitaire par unité manquante (90 000 € au-delà de 80 000 habitants,
-  50 000 € entre 40 000 et 80 000 habitants) — **taux et montants à
+  50 000 € entre 40 000 et 80 000 habitants) — **taux, montants, jalons de
+  trajectoire et périmètre exact (FPT distinctement de la FPE/FPH) à
   recouper sur CGFP art. L.132-5 avant citation dans un acte**, la
   prochaine échéance (1er janvier 2027) restant à venir.
 - **Index de l'égalité professionnelle dans la fonction publique** :

@@ -4,6 +4,16 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
 ## [Non publié] — v0.6.0 — Fiabilisation après campagne manuelle
 
+### Corrigé (revue de merge de l'audit de fraîcheur, 2026-09-04)
+- **Égalité professionnelle** (`qvt-sante.md` §5.7) : précision sur le
+  décret n° 2020-528 — en vigueur dès sa publication (4/05/2020), c'est le
+  mécanisme de pénalité financière qui n'est devenu opérationnel qu'au
+  1/10/2021 (délai de mise en demeure), pas le décret lui-même. Réserve
+  élargie sur les nominations équilibrées : jalons de trajectoire et
+  périmètre exact (FPT distinctement de la FPE/FPH) ajoutés à la liste des
+  points à recouper avant citation dans un acte, une revue indépendante
+  n'ayant pas pu trianguler ce sous-détail avec un texte primaire univoque.
+
 ### Corrigé (audit de fraîcheur juridique, 2026-09-04)
 - **Rupture conventionnelle** (`socle-sources-verification.md`,
   `carriere-paie.md` §5.9) : n'est plus présentée comme expérimentale à
