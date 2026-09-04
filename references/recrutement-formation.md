@@ -88,8 +88,13 @@ apprentissage (financement, maître d'apprentissage, titularisation handicap).
     dérogatoire d'accès à la fonction publique territoriale pour les
     apprentis reconnus travailleurs handicapés à l'issue de leur contrat.
     ⚠️ **L'expérimentation (art. 91 loi n° 2019-828, décret n° 2020-530)
-    est arrivée à échéance le 6 août 2025** ; sa pérennisation est en
-    discussion. **Vérifier impérativement la vigueur du dispositif avant
+    est arrivée à échéance le 6 août 2025** et le dispositif reste, à ce
+    jour, **sans base légale**. Sa pérennisation (délai porté à 2 ans après
+    la fin du contrat) est portée par l'**art. 3 du PJL n° 438 (2025-2026)**,
+    déposé au Sénat le 25 février 2026 en procédure accélérée, avis
+    favorable du Conseil commun de la fonction publique du 13 janvier
+    2026 — **non promulgué à ce stade**. **Vérifier impérativement l'état
+    du dossier législatif (senat.fr) et la vigueur du dispositif avant
     d'orienter un apprenti vers cette voie** — ne pas la présenter comme
     ouverte sans confirmation sur Légifrance.
   - **Pas de dispense de concours** : l'apprentissage ne vaut pas titre

@@ -49,9 +49,16 @@ vérifier la règle propre.
 ### 5.1 Texte pivot
 
 **Décret n° 88-145 du 15 février 1988**, relatif aux agents contractuels de
-la FPT (référence structurelle stable, **version consolidée à vérifier** :
-texte profondément modifié depuis 1988, notamment après la loi de
-transformation de la fonction publique de 2019). Il détaille forme du
+la FPT — **n'est plus le texte unique** : sa recodification progressive dans
+la partie réglementaire du CGFP est en cours depuis 2024, par vagues. Le
+volet **recrutement** (contrat écrit, mentions obligatoires, période
+d'essai) est passé au **Livre III réglementaire du CGFP** (décret
+n° 2025-695 du 24 juillet 2025, en vigueur depuis le 1er octobre 2025) —
+voir §5.2. **Rémunération, réévaluation, fin de contrat, licenciement et
+discipline** (§5.3 à 5.7) demeurent, à ce jour, dans le décret 88-145
+stricto sensu, mais un **Livre V** du CGFP réglementaire est annoncé et
+pourrait les déplacer à son tour — **vérifier à chaque usage** si la
+disposition concernée a été recodifiée. Il détaille forme du
 contrat, période d'essai, rémunération et réévaluation, discipline, fin de
 contrat, indemnité de licenciement — s'y reporter systématiquement, comme au
 décret statutaire d'un cadre d'emplois pour un titulaire.
@@ -62,9 +69,12 @@ la loi n° 2019-828. Détail des cas de recours → `recrutement-formation.md`
 
 ### 5.2 Recrutement — spécificités contractuelles
 
-**Contrat écrit obligatoire** (décret 88-145) : un arrêté seul ou un
-engagement verbal est irrégulier. **Mentions obligatoires** (**liste précise
-à vérifier en version consolidée**) : a minima article de fondement du
+**Contrat écrit obligatoire** (**CGFP, Livre III réglementaire**, art. R33x
+— ex-décret 88-145, recodifié depuis le 1er octobre 2025, décret
+n° 2025-695) : un arrêté seul ou un engagement verbal est irrégulier.
+**Mentions obligatoires** (**liste précise et numérotation exacte des
+articles à vérifier en version consolidée**) : a minima article de
+fondement du
 recours, définition du poste, catégorie hiérarchique, durée, rémunération,
 lieu — l'absence de l'article de fondement est un vice fréquent en
 contentieux. **Période d'essai** possible, durée modulée selon la durée du
@@ -288,13 +298,17 @@ Gabarits → `assets/`.
 
 ## 11. Niveau de confiance (repères de la branche)
 
-- **Stable** : existence du décret 88-145 comme texte d'application ;
+- **Stable** : existence d'un texte d'application propre au contractuel
+  (décret 88-145 pour rémunération/fin de contrat/licenciement/discipline,
+  Livre III réglementaire du CGFP depuis le 1/10/2025 pour le recrutement) ;
   distinction non-renouvellement / licenciement ; échelle disciplinaire
   propre au contractuel ; obligation de
   réévaluation triennale dans son principe ; absence d'avancement
   automatique.
-- **À vérifier systématiquement** : version consolidée du décret 88-145
-  (mentions du contrat, période d'essai, délai de prévenance, indemnité de
+- **À vérifier systématiquement** : à quel texte (décret 88-145 ou CGFP
+  recodifié) renvoie chaque règle à la date de la réponse ; version
+  consolidée du texte identifié (mentions du contrat, période d'essai,
+  délai de prévenance, indemnité de
   fin de contrat, calcul de l'indemnité de licenciement, échelle des
   sanctions) ; conditions précises de la règle des 6 ans et de la
   portabilité du CDI ; motifs exacts de saisine de la CCP ; numéro de l'avis

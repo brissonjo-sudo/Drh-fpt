@@ -4,6 +4,48 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
 ## [Non publié] — v0.6.0 — Fiabilisation après campagne manuelle
 
+### Corrigé (audit de fraîcheur juridique, 2026-09-04)
+- **Rupture conventionnelle** (`socle-sources-verification.md`,
+  `carriere-paie.md` §5.9) : n'est plus présentée comme expérimentale à
+  échéance incertaine (31/12/2025) — **pérennisée** par l'art. 173 de la loi
+  n° 2026-103 du 19 février 2026, CGFP art. L.552-1 à L.552-5, décrets
+  d'application du 6 août 2026 (n° 2026-745, n° 2026-746).
+- **CET** (`carriere-paie.md` §5.9) : la dérogation JO 2024 (70 jours),
+  présentée comme « à vérifier », est en réalité caduque depuis le
+  1/01/2025 ; ajout du décret n° 2025-1135 du 26/11/2025 (faculté locale de
+  plafond annuel d'indemnisation), absent jusqu'ici.
+- **Élections professionnelles territoriales** (`cst-dialogue-social.md`
+  §5.2) : la date « fin 2026 (à confirmer) » est remplacée par la date
+  officielle du **10 décembre 2026** (arrêté du 2/07/2025, décret
+  n° 2025-1430 du 30/12/2025) ; nuance apportée sur l'entrée en vigueur des
+  attributions du CST (1/01/2023, distincte de sa composition élue en
+  12/2022).
+- **Recodification du CGFP** (`socle-sources-verification.md`,
+  `statut-garanties.md`, `contractuels.md`) : les décrets n° 2020-69
+  (activités accessoires) et n° 2020-256 (dispositif de signalement) sont
+  abrogés et recodifiés (CGFP art. R123-7 s. et R135-1 s., depuis le
+  1/02/2025) ; le décret n° 88-145 n'est plus le texte pivot unique des
+  contractuels, son volet recrutement étant passé au Livre III
+  réglementaire du CGFP (depuis le 1/10/2025) ; ajout d'un repère général
+  sur la recodification par vagues (Livres I à IV, Livre V annoncé) et sur
+  l'entrée en vigueur du décret n° 2026-705 du 29/07/2026 (conseil médical).
+- **Dossier individuel de l'agent public** (`statut-garanties.md`) : le
+  référentiel CNIL RH généraliste l'exclut explicitement ; renvoi ajouté
+  vers l'arrêté du 21 décembre 2012.
+- **Égalité professionnelle** (`qvt-sante.md` §5.7) : les seuils et taux du
+  plan d'action (> 20 000 hab., décret n° 2020-528, 1 %/0,5 %), des
+  nominations équilibrées (loi n° 2023-623, 40→50 %, palier 2027) et de
+  l'index égalité (décrets n° 2024-801/802, > 40 000 hab. + ≥ 50 agents)
+  sortent du régime générique « à vérifier » pour être cités avec leur
+  texte source.
+- **Titularisation des apprentis handicapés** (`recrutement-formation.md`) :
+  ajout du véhicule législatif de pérennisation (PJL n° 438, 2025-2026,
+  déposé au Sénat le 25/02/2026, non promulgué) — le constat d'absence de
+  base légale depuis le 6/08/2025 reste inchangé.
+- **PSC santé** (`communication-interne.md`) : ajout de l'entrée en vigueur
+  au 1/01/2026 de la participation employeur obligatoire, comme exemple
+  concret d'obligation d'information désormais actuelle.
+
 ### Corrigé
 - **QVT / CITIS** : l'avis sur l'imputabilité relève de la formation
   **plénière** du conseil médical ; la décision finale appartient à l'autorité

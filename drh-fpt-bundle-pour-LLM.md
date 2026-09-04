@@ -621,7 +621,14 @@ La réponse est insuffisante si elle :
    attachés, rédacteurs, adjoints administratifs, techniciens…). Définissent
    grades, échelons, modalités de recrutement et d'avancement.
 3. **Décrets transversaux** — RIFSEEP, NBI, SFT, temps de travail,
-   instances, santé, PSC, etc.
+   instances, santé, PSC, etc. **Recodification en cours** : une partie
+   réglementaire du CGFP absorbe progressivement ces décrets par vagues
+   (Livres I-II en vigueur depuis le 1er février 2025, Livre III —
+   recrutement — depuis le 1er octobre 2025, Livre IV — formation,
+   télétravail, réorganisation — depuis le 1er août 2026 ; Livre V annoncé).
+   Un décret cité comme « transversal » peut donc avoir été abrogé et
+   recodifié en articles R./D. du CGFP : vérifier avant de citer un numéro
+   de décret isolé.
 4. **Code général des collectivités territoriales (CGCT)** — pour les
    compétences de l'organe délibérant et de l'autorité territoriale.
 5. **Jurisprudence administrative** — Conseil d'État, cours
@@ -681,12 +688,22 @@ usage en acte :
 - **Contractuels** — cas de recours élargis depuis la loi de
   transformation de la fonction publique (2019).
 - **Instances médicales** — conseil médical (fusion comité médical /
-  commission de réforme).
+  commission de réforme, décret n° 2022-350). Un décret n° 2026-705 du
+  29 juillet 2026 (transposition au secteur public des règles d'arrêt de
+  travail du privé) modifie, depuis le 1er septembre 2026, les modalités
+  de saisine du conseil médical en formation restreinte pour le
+  renouvellement des congés de maladie après épuisement des droits à
+  rémunération : à intégrer dans la branche QVT/santé avant toute réponse
+  sur ce point.
 - **CAP / LDG** — compétences des CAP recentrées, montée des lignes
   directrices de gestion.
-- **Rupture conventionnelle** — pour les fonctionnaires, dispositif
-  **expérimental jusqu'au 31 décembre 2025** : vérifier s'il a été pérennisé,
-  prorogé ou éteint avant toute réponse.
+- **Rupture conventionnelle** — pour les fonctionnaires, l'expérimentation
+  ouverte jusqu'au 31 décembre 2025 est **pérennisée** par l'art. 173 de la
+  loi n° 2026-103 du 19 février 2026 (loi de finances pour 2026), codifiée
+  au CGFP **art. L.552-1 à L.552-5** (L.552-5 pour les agents contractuels
+  en CDI), en vigueur depuis le 21 février 2026. Décrets d'application du
+  6 août 2026 (n° 2026-745, procédure ; n° 2026-746, indemnité spécifique)
+  à confirmer en version consolidée avant tout acte.
 
 ---
 
@@ -1235,8 +1252,14 @@ par **équivalence** :
     l'année — seuil **à vérifier**.
   - **Alimentation** : **plafond global de 60 jours** ; **droit d'option/
     monétisation au-delà de 15 jours épargnés** (décret n° 2004-878 du 26 août
-    2004, à confirmer en version consolidée ; une **dérogation conjoncturelle**
-    a relevé ce plafond en 2024 — **à vérifier** avant toute réponse ferme).
+    2004, à confirmer en version consolidée). La dérogation ponctuelle ayant
+    porté ce plafond à 70 jours au titre de l'année 2024 (arrêté du 9 janvier
+    2024, liée aux JO de Paris) est **caduque depuis le 1er janvier 2025** —
+    ne plus la présenter comme une incertitude actuelle. Depuis, le décret
+    n° 2025-1135 du 26 novembre 2025 ouvre aux employeurs territoriaux, après
+    avis du CST, la faculté de fixer un **plafond annuel du nombre de jours
+    indemnisables**, distinct du plafond global de 60 jours — **à vérifier**
+    si la collectivité en a fait usage.
   - **Utilisation** : prise de **congés** (règle de principe) ; **monétisation**
     possible **au-delà du seuil de 15 jours épargnés**, selon les conditions
     fixées par **délibération** locale ; les **montants forfaitaires** de
@@ -1280,11 +1303,16 @@ récent aux paramètres susceptibles d'ajustement réglementaire ; vérifier
 également les **modalités propres à la CNRACL**, pouvant différer de celles
 du régime général) ; démission (acceptée par l'autorité) ; licenciement
 (insuffisance professionnelle, inaptitude) ; abandon de poste (voir §5.10) ;
-**rupture conventionnelle** — ⚠️ pour les **fonctionnaires**, dispositif
-**expérimental jusqu'au 31 décembre 2025** : vérifier impérativement s'il a
-été pérennisé, prorogé ou éteint avant toute réponse ; pérenne pour les
-**contractuels en CDI**. Indemnité (ISRC), procédure (entretiens, convention)
-et interdiction de retour rémunéré dans les 6 ans : **à vérifier**.
+**rupture conventionnelle** — l'expérimentation ouverte jusqu'au
+31 décembre 2025 pour les **fonctionnaires** est **pérennisée** par l'art. 173
+de la loi n° 2026-103 du 19 février 2026 (loi de finances pour 2026),
+codifiée au CGFP **art. L.552-1 à L.552-5** (dont L.552-5 pour les
+**contractuels en CDI**, déjà pérenne), en vigueur depuis le 21 février 2026.
+Indemnité (ISRC), procédure (entretiens, convention) et interdiction de
+retour rémunéré dans les 6 ans : régime confirmé dans son principe par les
+décrets d'application du 6 août 2026 (n° 2026-745, procédure ;
+n° 2026-746, indemnité) — **modalités chiffrées à confirmer en version
+consolidée** avant tout acte.
 
 ### 5.10 Abandon de poste (radiation des cadres)
 - **Nature** : ce n'est **pas une sanction disciplinaire** → **ni conseil de
@@ -1461,8 +1489,8 @@ et interdiction de retour rémunéré dans les 6 ans : **à vérifier**.
     succès, le fondement de l'exclusion tombe avec elle) ;
   - **rupture conventionnelle** : ouvre droit à l'ARE dans les conditions
     prévues par le dispositif propre à la rupture conventionnelle (cf. §5.9
-    fin de fonctions — rappel : dispositif expérimental pour les
-    fonctionnaires, échéance à vérifier) ;
+    fin de fonctions — dispositif désormais **pérenne** pour les
+    fonctionnaires, CGFP art. L.552-1 à L.552-5) ;
   - **démission** : en principe exclusive de droits, sauf cas de
     **démissions légitimes limitativement listés** (liste réglementaire fixée
     au niveau national, ex. démission pour suivre un conjoint muté — **liste
@@ -1704,9 +1732,10 @@ n° 2022-581, loi n° 2025-1251 du 22 décembre 2025) :
 ### 5.7 Égalité professionnelle
 
 - **Plan d'action relatif à l'égalité professionnelle** : obligatoire pour
-  les employeurs territoriaux au-dessus d'un seuil d'effectif (ordre de
-  grandeur **> 20 000 habitants / seuil d'effectif à vérifier** — ne pas
-  citer de mémoire). Quatre axes réglementaires :
+  les collectivités et EPCI de **plus de 20 000 habitants** (décret
+  n° 2020-528 du 4 mai 2020, applicable depuis le 1er octobre 2021 —
+  seuil stable, à confirmer en version consolidée avant tout acte). Quatre
+  axes réglementaires :
   1. évaluation, prévention et, le cas échéant, résorption des écarts de
      rémunération ;
   2. garantie de l'égal accès aux corps, cadres d'emplois et grades ;
@@ -1715,20 +1744,29 @@ n° 2022-581, loi n° 2025-1251 du 22 décembre 2025) :
   4. prévention et lutte contre les violences sexuelles, sexistes et le
      harcèlement.
   Durée maximale **3 ans**, renouvelable. Absence de plan : **pénalité
-  financière** possible (ordre de grandeur **1 % de la rémunération
-  brute globale** annoncé — **taux à confirmer**, ne pas citer de mémoire en
-  acte). Ce taux peut être **ramené à 0,5 %** si l'employeur justifie d'un
-  **engagement effectif d'élaboration** du plan avant la fin de la mise en
-  demeure — **à vérifier** avant toute réponse chiffrée.
+  financière** plafonnée à **1 % de la rémunération brute annuelle
+  globale** (décret n° 2020-528), ramenée à **0,5 %** si l'employeur
+  justifie d'un **engagement effectif d'élaboration** du plan avant la
+  fin de la mise en demeure — taux stables depuis 2020, à confirmer en
+  version consolidée avant toute réponse chiffrée dans un acte.
 - **Nominations équilibrées aux emplois de direction** : proportion
-  minimale par sexe des primo-nominations dans certains emplois de
-  direction, avec pénalité en cas de non-respect. Dispositif **renforcé
-  par la loi du 19 juillet 2023** (taux applicables, trajectoire de
-  montée en charge et pénalités : **à vérifier**, ne jamais citer un
-  pourcentage de mémoire).
+  minimale par sexe des primo-nominations, avec pénalité en cas de
+  non-respect. **Renforcé par la loi n° 2023-623 du 19 juillet 2023** :
+  taux cible porté de 40 % à **50 %** ; pour les employeurs sous les 37 %
+  (moyenne 2020-2022), trajectoire de +3 points dès le 20 juillet 2023
+  jusqu'au 1er janvier 2027 puis tous les 3 ans jusqu'à 40 % ; suppression
+  de la dispense de pénalité à compter du 1er janvier 2027 ; contribution
+  forfaitaire par unité manquante (90 000 € au-delà de 80 000 habitants,
+  50 000 € entre 40 000 et 80 000 habitants) — **taux et montants à
+  recouper sur CGFP art. L.132-5 avant citation dans un acte**, la
+  prochaine échéance (1er janvier 2027) restant à venir.
 - **Index de l'égalité professionnelle dans la fonction publique** :
-  introduit par cette même loi du 19 juillet 2023 ; périmètre des
-  employeurs concernés et indicateurs composant l'index **à vérifier**.
+  introduit par cette même loi, décrets d'application **n° 2024-801 et
+  n° 2024-802 du 13 juillet 2024** (en vigueur depuis le 15 juillet 2024) :
+  concerne régions, départements, communes et EPCI de **plus de 40 000
+  habitants gérant au moins 50 agents permanents**, ainsi que le CNFPT.
+  Note sur 100 points, seuil cible 75 points, publication annuelle
+  (objectifs de progression exigés si score < 75).
 - **Rapport de situation comparée / indicateurs** : intégrés au **RSU**
   (rapport social unique, voir branche SI RH) ; alimentent le suivi du
   plan d'action.
@@ -1986,8 +2024,13 @@ apprentissage (financement, maître d'apprentissage, titularisation handicap).
     dérogatoire d'accès à la fonction publique territoriale pour les
     apprentis reconnus travailleurs handicapés à l'issue de leur contrat.
     ⚠️ **L'expérimentation (art. 91 loi n° 2019-828, décret n° 2020-530)
-    est arrivée à échéance le 6 août 2025** ; sa pérennisation est en
-    discussion. **Vérifier impérativement la vigueur du dispositif avant
+    est arrivée à échéance le 6 août 2025** et le dispositif reste, à ce
+    jour, **sans base légale**. Sa pérennisation (délai porté à 2 ans après
+    la fin du contrat) est portée par l'**art. 3 du PJL n° 438 (2025-2026)**,
+    déposé au Sénat le 25 février 2026 en procédure accélérée, avis
+    favorable du Conseil commun de la fonction publique du 13 janvier
+    2026 — **non promulgué à ce stade**. **Vérifier impérativement l'état
+    du dossier législatif (senat.fr) et la vigueur du dispositif avant
     d'orienter un apprenti vers cette voie** — ne pas la présenter comme
     ouverte sans confirmation sur Légifrance.
   - **Pas de dispense de concours** : l'apprentissage ne vaut pas titre
@@ -2137,9 +2180,11 @@ collective.
 ## 5. Règles métier
 
 ### 5.1 Instances
-- **CST** (comité social territorial) : depuis le renouvellement de **décembre
-  2022**, **fusion** du comité technique et du CHSCT (décret n° 2021-571).
-  Compétences : organisation et fonctionnement des services, LDG, RSU, lignes
+- **CST** (comité social territorial) : composition et élection issues du
+  renouvellement de **décembre 2022** ; **fusion** du comité technique et du
+  CHSCT (décret n° 2021-571), dont les attributions et le fonctionnement
+  pleins ne sont entrés en vigueur que le **1er janvier 2023**. Compétences :
+  organisation et fonctionnement des services, LDG, RSU, lignes
   directrices, questions SSCT. **CST propre obligatoire dès 50 agents** (en
   deçà, CST commun placé auprès du CDG) — ne pas confondre ce seuil avec les
   **200 agents** de la formation spécialisée SSCT ni avec les **350 agents**
@@ -2153,8 +2198,12 @@ collective.
 
 ### 5.2 Élections et représentativité
 - **Élections professionnelles** : tous les **4 ans**. Dernier renouvellement
-  **décembre 2022** ; prochain attendu **fin 2026** (à confirmer). Déterminent
-  la composition des instances et la représentativité syndicale.
+  **décembre 2022** ; prochain scrutin fixé au **10 décembre 2026** (arrêté
+  ministériel du 2 juillet 2025), calendrier opérationnel et règles
+  procédurales harmonisées précisés par le décret n° 2025-1430 du
+  30 décembre 2025 (délais de procédure portés de 3-5 à 8 jours notamment —
+  détail à confirmer en version consolidée). Déterminent la composition des
+  instances et la représentativité syndicale.
 
 ### 5.3 Droit syndical
 - **ASA** (autorisations spéciales d'absence), **décharges d'activité de
@@ -2392,7 +2441,10 @@ de changement.
 - Certaines productions RH doivent être **portées à la connaissance des agents**
   (ex. **LDG**, **RSU**, dispositifs **PSC**). La communication interne est le
   vecteur de cette obligation : vérifier ce qui doit être diffusé et selon
-  quelles modalités.
+  quelles modalités. Exemple d'actualité immédiate : la **participation
+  employeur PSC santé** est obligatoire depuis le **1er janvier 2026**
+  (ordonnance n° 2021-175, décret n° 2022-581) — sujet de communication
+  interne à traiter sans délai s'il ne l'a pas déjà été.
 
 ### 5.3 Marque employeur et supports
 - **Marque employeur** : attractivité, fidélisation, valorisation des métiers
@@ -2509,9 +2561,16 @@ vérifier la règle propre.
 ### 5.1 Texte pivot
 
 **Décret n° 88-145 du 15 février 1988**, relatif aux agents contractuels de
-la FPT (référence structurelle stable, **version consolidée à vérifier** :
-texte profondément modifié depuis 1988, notamment après la loi de
-transformation de la fonction publique de 2019). Il détaille forme du
+la FPT — **n'est plus le texte unique** : sa recodification progressive dans
+la partie réglementaire du CGFP est en cours depuis 2024, par vagues. Le
+volet **recrutement** (contrat écrit, mentions obligatoires, période
+d'essai) est passé au **Livre III réglementaire du CGFP** (décret
+n° 2025-695 du 24 juillet 2025, en vigueur depuis le 1er octobre 2025) —
+voir §5.2. **Rémunération, réévaluation, fin de contrat, licenciement et
+discipline** (§5.3 à 5.7) demeurent, à ce jour, dans le décret 88-145
+stricto sensu, mais un **Livre V** du CGFP réglementaire est annoncé et
+pourrait les déplacer à son tour — **vérifier à chaque usage** si la
+disposition concernée a été recodifiée. Il détaille forme du
 contrat, période d'essai, rémunération et réévaluation, discipline, fin de
 contrat, indemnité de licenciement — s'y reporter systématiquement, comme au
 décret statutaire d'un cadre d'emplois pour un titulaire.
@@ -2522,9 +2581,12 @@ la loi n° 2019-828. Détail des cas de recours → `recrutement-formation.md`
 
 ### 5.2 Recrutement — spécificités contractuelles
 
-**Contrat écrit obligatoire** (décret 88-145) : un arrêté seul ou un
-engagement verbal est irrégulier. **Mentions obligatoires** (**liste précise
-à vérifier en version consolidée**) : a minima article de fondement du
+**Contrat écrit obligatoire** (**CGFP, Livre III réglementaire**, art. R33x
+— ex-décret 88-145, recodifié depuis le 1er octobre 2025, décret
+n° 2025-695) : un arrêté seul ou un engagement verbal est irrégulier.
+**Mentions obligatoires** (**liste précise et numérotation exacte des
+articles à vérifier en version consolidée**) : a minima article de
+fondement du
 recours, définition du poste, catégorie hiérarchique, durée, rémunération,
 lieu — l'absence de l'article de fondement est un vice fréquent en
 contentieux. **Période d'essai** possible, durée modulée selon la durée du
@@ -2748,13 +2810,17 @@ Gabarits → `assets/`.
 
 ## 11. Niveau de confiance (repères de la branche)
 
-- **Stable** : existence du décret 88-145 comme texte d'application ;
+- **Stable** : existence d'un texte d'application propre au contractuel
+  (décret 88-145 pour rémunération/fin de contrat/licenciement/discipline,
+  Livre III réglementaire du CGFP depuis le 1/10/2025 pour le recrutement) ;
   distinction non-renouvellement / licenciement ; échelle disciplinaire
   propre au contractuel ; obligation de
   réévaluation triennale dans son principe ; absence d'avancement
   automatique.
-- **À vérifier systématiquement** : version consolidée du décret 88-145
-  (mentions du contrat, période d'essai, délai de prévenance, indemnité de
+- **À vérifier systématiquement** : à quel texte (décret 88-145 ou CGFP
+  recodifié) renvoie chaque règle à la date de la réponse ; version
+  consolidée du texte identifié (mentions du contrat, période d'essai,
+  délai de prévenance, indemnité de
   fin de contrat, calcul de l'indemnité de licenciement, échelle des
   sanctions) ; conditions précises de la règle des 6 ans et de la
   portabilité du CDI ; motifs exacts de saisine de la CCP ; numéro de l'avis
@@ -2871,8 +2937,10 @@ confirmer)
 - **Dérogations** : **activité accessoire sur autorisation préalable**, liste
   réglementaire fermée (enseignement, activité agricole non commerciale,
   travaux chez particuliers, secteur associatif, vendanges, missions
-  d'intérêt public — décret n° 2020-69, **à confirmer**, liste à vérifier
-  avant instruction) ; **temps partiel pour création/reprise d'entreprise**
+  d'intérêt public — **CGFP art. R123-7 à R123-13** [ex-décret n° 2020-69,
+  abrogé et recodifié depuis le 1er février 2025, décret n° 2024-1038],
+  liste à vérifier avant instruction) ; **temps partiel pour création/reprise
+  d'entreprise**
   (régime propre, durée limitée, conditions à vérifier) ; **poursuite d'une
   activité privée** dans une société pour un agent nouvellement recruté.
 - **Contrôles de déconflit** : **départ vers le privé** et **cumul création
@@ -2895,8 +2963,10 @@ confirmer)
 
 ### 5.3 Signalements et harcèlement
 
-- **Dispositif de signalement obligatoire** (CGFP art. L135-6 — à confirmer ;
-  décret n° 2020-256 — **à confirmer**) pour violences, discriminations,
+- **Dispositif de signalement obligatoire** (CGFP art. L135-6 A à L135-6,
+  issus de la loi n° 2019-828 art. 80 ; modalités aux **art. R135-1 à
+  R135-10 du CGFP** [ex-décret n° 2020-256, abrogé et recodifié depuis le
+  1er février 2025, décret n° 2024-1038]) pour violences, discriminations,
   harcèlement moral/sexuel, agissements sexistes : **recueil**
   (confidentialité), **orientation** (accompagnement médical/social),
   **traitement traçable**, **protection du signalant** contre les
@@ -2992,17 +3062,24 @@ Appliquer le noyau de vérification (matrice §2.2 du SKILL.md) dès que :
 9. Confondre **enquête administrative** et **procédure disciplinaire**.
 10. Mentions **politiques/syndicales/religieuses** au dossier — interdiction
     absolue. Donner une **durée de conservation** de mémoire au lieu du
-    référentiel CNIL.
+    texte applicable — et appliquer par erreur le référentiel CNIL RH
+    généraliste au **dossier individuel** de l'agent public, qu'il exclut
+    explicitement (régi par l'arrêté du 21 décembre 2012).
 11. Confondre l'accès **ordinaire** au dossier et le droit de **communication
     intégrale** propre à la discipline (carriere-paie §5.5).
 
 ## 9. Données volatiles à vérifier
 
 Pas de valeur d'indexation propre à la branche. **À confirmer en version
-consolidée** : décret n° 2020-69 (activités accessoires), décret n° 2020-256
-(dispositif de signalement), loi n° 2022-401 (lanceurs d'alerte), loi
+consolidée** : CGFP art. R123-7 à R123-13 (activités accessoires, ex-décret
+n° 2020-69), CGFP art. R135-1 à R135-10 (dispositif de signalement,
+ex-décret n° 2020-256), loi n° 2022-401 (lanceurs d'alerte), loi
 n° 2021-1109 (CRPR, référent laïcité), périmètre des emplois soumis à HATVP,
-seuils d'effectifs du dispositif d'alerte, référentiel CNIL de conservation
+seuils d'effectifs du dispositif d'alerte. Le **dossier individuel de
+l'agent public** relève de l'**arrêté du 21 décembre 2012**, et non du
+référentiel CNIL généraliste « gestion des ressources humaines » (qui
+l'exclut explicitement) — ne pas appliquer par erreur les durées de
+conservation de ce dernier au dossier individuel.
 des données RH, délais de notification CNIL en cas de violation de données.
 
 ## 10. Livrables (classés par niveau)

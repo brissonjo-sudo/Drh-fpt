@@ -287,8 +287,14 @@ par **équivalence** :
     l'année — seuil **à vérifier**.
   - **Alimentation** : **plafond global de 60 jours** ; **droit d'option/
     monétisation au-delà de 15 jours épargnés** (décret n° 2004-878 du 26 août
-    2004, à confirmer en version consolidée ; une **dérogation conjoncturelle**
-    a relevé ce plafond en 2024 — **à vérifier** avant toute réponse ferme).
+    2004, à confirmer en version consolidée). La dérogation ponctuelle ayant
+    porté ce plafond à 70 jours au titre de l'année 2024 (arrêté du 9 janvier
+    2024, liée aux JO de Paris) est **caduque depuis le 1er janvier 2025** —
+    ne plus la présenter comme une incertitude actuelle. Depuis, le décret
+    n° 2025-1135 du 26 novembre 2025 ouvre aux employeurs territoriaux, après
+    avis du CST, la faculté de fixer un **plafond annuel du nombre de jours
+    indemnisables**, distinct du plafond global de 60 jours — **à vérifier**
+    si la collectivité en a fait usage.
   - **Utilisation** : prise de **congés** (règle de principe) ; **monétisation**
     possible **au-delà du seuil de 15 jours épargnés**, selon les conditions
     fixées par **délibération** locale ; les **montants forfaitaires** de
@@ -332,11 +338,16 @@ récent aux paramètres susceptibles d'ajustement réglementaire ; vérifier
 également les **modalités propres à la CNRACL**, pouvant différer de celles
 du régime général) ; démission (acceptée par l'autorité) ; licenciement
 (insuffisance professionnelle, inaptitude) ; abandon de poste (voir §5.10) ;
-**rupture conventionnelle** — ⚠️ pour les **fonctionnaires**, dispositif
-**expérimental jusqu'au 31 décembre 2025** : vérifier impérativement s'il a
-été pérennisé, prorogé ou éteint avant toute réponse ; pérenne pour les
-**contractuels en CDI**. Indemnité (ISRC), procédure (entretiens, convention)
-et interdiction de retour rémunéré dans les 6 ans : **à vérifier**.
+**rupture conventionnelle** — l'expérimentation ouverte jusqu'au
+31 décembre 2025 pour les **fonctionnaires** est **pérennisée** par l'art. 173
+de la loi n° 2026-103 du 19 février 2026 (loi de finances pour 2026),
+codifiée au CGFP **art. L.552-1 à L.552-5** (dont L.552-5 pour les
+**contractuels en CDI**, déjà pérenne), en vigueur depuis le 21 février 2026.
+Indemnité (ISRC), procédure (entretiens, convention) et interdiction de
+retour rémunéré dans les 6 ans : régime confirmé dans son principe par les
+décrets d'application du 6 août 2026 (n° 2026-745, procédure ;
+n° 2026-746, indemnité) — **modalités chiffrées à confirmer en version
+consolidée** avant tout acte.
 
 ### 5.10 Abandon de poste (radiation des cadres)
 - **Nature** : ce n'est **pas une sanction disciplinaire** → **ni conseil de
@@ -513,8 +524,8 @@ et interdiction de retour rémunéré dans les 6 ans : **à vérifier**.
     succès, le fondement de l'exclusion tombe avec elle) ;
   - **rupture conventionnelle** : ouvre droit à l'ARE dans les conditions
     prévues par le dispositif propre à la rupture conventionnelle (cf. §5.9
-    fin de fonctions — rappel : dispositif expérimental pour les
-    fonctionnaires, échéance à vérifier) ;
+    fin de fonctions — dispositif désormais **pérenne** pour les
+    fonctionnaires, CGFP art. L.552-1 à L.552-5) ;
   - **démission** : en principe exclusive de droits, sauf cas de
     **démissions légitimes limitativement listés** (liste réglementaire fixée
     au niveau national, ex. démission pour suivre un conjoint muté — **liste
