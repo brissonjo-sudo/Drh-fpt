@@ -1,0 +1,29 @@
+{
+  "forbid_patterns": [
+    {
+      "pattern": "(?i)\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}\\b",
+      "message": "Adresse de courriel",
+      "blocking": false
+    },
+    {
+      "pattern": "(?<!\\d)(?:\\+33|0)[1-9](?:[ .-]?\\d{2}){4}(?!\\d)",
+      "message": "Numero de telephone francais",
+      "blocking": false
+    },
+    {
+      "pattern": "(?i)\\bFR\\d{2}(?:[ -]?[0-9A-Z]){23}\\b",
+      "message": "IBAN francais",
+      "blocking": false
+    },
+    {
+      "pattern": "(?i)(?<!\\d)[12][ -]?\\d{2}[ -]?(?:0[1-9]|1[0-2])[ -]?(?:2[AB]|\\d{2})[ -]?\\d{3}[ -]?\\d{3}[ -]?\\d{2}(?!\\d)",
+      "message": "NIR (numero de securite sociale)",
+      "blocking": false
+    },
+    {
+      "pattern": "(?i)\\bmatricule\\s*(?:n[°o]\\s*)?[:#-]?\\s*(?=[A-Z0-9-]*\\d)[A-Z0-9-]{4,}\\b",
+      "message": "Matricule d'agent",
+      "blocking": false
+    }
+  ]
+}
