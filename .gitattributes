@@ -1,0 +1,39 @@
+# Normalisation des fins de ligne.
+#
+# LF dans le dépôt ET dans la copie de travail, y compris sous Windows où
+# `core.autocrlf=true` est actif. Sans cette règle, git finit par afficher des
+# centaines de fichiers « modifiés » qui ne diffèrent que par leurs CR : le
+# bruit masque les vraies modifications et rend `git status` inutilisable.
+# Constaté sur Korpus-PM (303 faux positifs).
+
+* text=auto eol=lf
+
+# Scripts propres à Windows : CRLF obligatoire, sinon l'interpréteur échoue.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Binaires : aucune normalisation. Un CR converti dans un PNG le corrompt.
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.ico    binary
+*.webp   binary
+*.pdf    binary
+*.zip    binary
+*.7z     binary
+*.gz     binary
+*.docx   binary
+*.xlsx   binary
+*.pptx   binary
+*.odt    binary
+*.woff   binary
+*.woff2  binary
+*.ttf    binary
+*.otf    binary
+*.sqlite binary
+*.db     binary
+*.wav    binary
+*.mp3    binary
+*.mp4    binary
