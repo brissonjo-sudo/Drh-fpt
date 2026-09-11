@@ -2,7 +2,15 @@
 
 Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
-## [Non publié] — v0.6.0 — Fiabilisation après campagne manuelle
+## [0.6.0] — 2026-09-11 — Fiabilisation après audit juridique
+
+### Prépublication
+- Version du skill et date de vérification des sources alignées sur le candidat
+  réellement évalué (`v0.6.0`, audit du 4 septembre 2026).
+- Sortie de brouillon conditionnée aux deux campagnes répondant + juge
+  (`integration` et `degraded`) et à la publication de leurs rapports datés.
+- Le harnais refuse désormais de valider une campagne incomplète, tronquée,
+  non parsable, exécutée depuis un dépôt sale ou comportant un verdict d'échec.
 
 ### Corrigé (revue de merge de l'audit de fraîcheur, 2026-09-04)
 - **Égalité professionnelle** (`qvt-sante.md` §5.7) : précision sur le

@@ -48,6 +48,11 @@ RETRYABLE_HTTP_STATUS = {429, 500, 502, 503, 529}
 
 MAX_TOKENS_REPONDANT = 4000
 MAX_TOKENS_JUGE = 2500
+EXPECTED_CASES_PER_MODE = 30
+
+VALID_CRITERION_STATUSES = {"SATISFAIT", "PARTIEL", "ABSENT"}
+VALID_GLOBAL_VERDICTS = {"REUSSITE", "ECHEC"}
+VALID_ARCHITECTURE_VERDICTS = {"REUSSITE", "ECHEC", "NON_APPLICABLE"}
 
 
 class ApiCallError(RuntimeError):
@@ -110,7 +115,7 @@ def git_provenance(path: Path) -> dict:
 
 
 def load_legal_skill(raw_path: str) -> tuple[str, Path, list[str]]:
-    """Charge le compagnon depuis un bundle Markdown ou un dépôt de skill."""
+    """Charge le compagnon depuis un bundle, un dossier de skill ou son dépôt."""
     path = Path(raw_path).expanduser().resolve()
     if not path.exists():
         sys.exit(f"Skill compagnon introuvable : {path}")
@@ -118,24 +123,33 @@ def load_legal_skill(raw_path: str) -> tuple[str, Path, list[str]]:
     if path.is_file():
         return path.read_text(encoding="utf-8"), path, [str(path)]
 
-    skill_md = path / "SKILL.md"
-    if not skill_md.exists():
+    candidates = (
+        path,
+        path / "skill",
+        path / "skills" / "recherche-juridique",
+    )
+    skill_root = next(
+        (candidate for candidate in candidates if (candidate / "SKILL.md").is_file()),
+        None,
+    )
+    if skill_root is None:
         sys.exit(
-            f"{path} ne contient pas SKILL.md. Passe le dépôt du skill "
-            "recherche-juridique ou son bundle Markdown."
+            f"Aucun SKILL.md de recherche-juridique trouvé sous {path}. "
+            "Passe le dépôt, son dossier skill/ ou son bundle Markdown."
         )
 
+    skill_md = skill_root / "SKILL.md"
     files = [skill_md]
-    references = path / "references"
+    references = skill_root / "references"
     if references.exists():
         files.extend(sorted(references.rglob("*.md")))
 
     chunks = []
     for file in files:
-        rel = file.relative_to(path).as_posix()
+        rel = file.relative_to(skill_root).as_posix()
         chunks.append(f"\n\n<!-- SOURCE COMPAGNON : {rel} -->\n\n")
         chunks.append(file.read_text(encoding="utf-8"))
-    return "".join(chunks), path, [str(file) for file in files]
+    return "".join(chunks), skill_root, [str(file) for file in files]
 
 
 def build_system_context(drh_bundle: str, legal_bundle: str | None, mode: str) -> str:
@@ -287,6 +301,7 @@ JUDGE_SYSTEM = (
 def judge(
     key: str, model: str, prompt: str, answer: str, attendus: list,
     echec_si: list | None = None, type_cas: str = "standard",
+    reference_context: str = "",
 ) -> dict:
     crit = "\n".join(f"- {a}" for a in attendus)
     echec_si_block = ""
@@ -317,7 +332,17 @@ def judge(
         f"{type_block}\n\n"
         "Évalue selon les consignes. JSON uniquement."
     )
-    response = call_api(key, model, JUDGE_SYSTEM, user, max_tokens=MAX_TOKENS_JUGE)
+    judge_system = JUDGE_SYSTEM
+    if reference_context:
+        judge_system += (
+            "\n\nCORPUS DE RÉFÉRENCE FOURNI POUR CETTE CAMPAGNE :\n"
+            "Ce corpus permet de contrôler la conformité aux deux skills, mais "
+            "ne remplace pas une consultation en direct des sources officielles. "
+            "Toute référence absente du corpus et non vérifiable dans ce contexte "
+            "doit être signalée comme non tranchée.\n\n"
+            + reference_context
+        )
+    response = call_api(key, model, judge_system, user, max_tokens=MAX_TOKENS_JUGE)
     raw, tronque = extract_text_and_truncation(response)
     raw = raw.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
     try:
@@ -333,6 +358,116 @@ def judge(
     return result
 
 
+def validate_judge_result(result: dict, case: dict) -> list[str]:
+    """Valide le schéma et les critères bloquants d'un verdict du juge."""
+    problems: list[str] = []
+    if result.get("tronque"):
+        problems.append("évaluation du juge tronquée")
+
+    criteria = result.get("criteres")
+    if not isinstance(criteria, list) or len(criteria) != len(case["attendus"]):
+        problems.append(
+            "nombre de critères évalués différent du nombre de critères attendus"
+        )
+    else:
+        for index, criterion in enumerate(criteria, start=1):
+            if not isinstance(criterion, dict):
+                problems.append(f"critère {index} mal formé")
+                continue
+            if criterion.get("statut") not in VALID_CRITERION_STATUSES:
+                problems.append(f"statut invalide pour le critère {index}")
+            elif criterion.get("statut") != "SATISFAIT":
+                problems.append(f"critère {index} non entièrement satisfait")
+            if not isinstance(criterion.get("critere"), str):
+                problems.append(f"libellé absent pour le critère {index}")
+            if not isinstance(criterion.get("note"), str):
+                problems.append(f"justification absente pour le critère {index}")
+
+    errors = result.get("erreurs")
+    if not isinstance(errors, list):
+        problems.append("champ erreurs absent ou mal formé")
+    elif errors:
+        problems.append("le juge a détecté au moins une erreur")
+
+    verdict = result.get("verdict")
+    legal_verdict = result.get("verdict_fiabilite_juridique")
+    architecture_verdict = result.get("verdict_architecture")
+    if verdict not in VALID_GLOBAL_VERDICTS:
+        problems.append("verdict global absent ou invalide")
+    elif verdict != "REUSSITE":
+        problems.append("verdict global en échec")
+    if legal_verdict not in VALID_GLOBAL_VERDICTS:
+        problems.append("verdict juridique absent ou invalide")
+    elif legal_verdict != "REUSSITE":
+        problems.append("fiabilité juridique en échec")
+    if architecture_verdict not in VALID_ARCHITECTURE_VERDICTS:
+        problems.append("verdict d'architecture absent ou invalide")
+    elif architecture_verdict == "ECHEC":
+        problems.append("architecture en échec")
+    elif case.get("type", "standard") == "architectural" and architecture_verdict != "REUSSITE":
+        problems.append("cas architectural sans réussite d'architecture")
+
+    for field in (
+        "score_sur_5",
+        "score_architecture_sur_5",
+        "score_fiabilite_juridique_sur_5",
+    ):
+        value = result.get(field)
+        if not isinstance(value, (int, float)) or isinstance(value, bool) or not 0 <= value <= 5:
+            problems.append(f"{field} absent ou hors de l'intervalle 0–5")
+
+    if not isinstance(result.get("synthese"), str):
+        problems.append("synthèse absente ou mal formée")
+    return problems
+
+
+def validate_strict_campaign(
+    provenance: dict, cases: list[dict], case_results: list[dict]
+) -> list[str]:
+    """Retourne les motifs qui empêchent une campagne stricte de réussir."""
+    problems: list[str] = []
+    if len(cases) != EXPECTED_CASES_PER_MODE:
+        problems.append(
+            f"{len(cases)} cas actifs au lieu de {EXPECTED_CASES_PER_MODE}"
+        )
+    if len(case_results) != len(cases):
+        problems.append(
+            f"{len(case_results)} résultats produits pour {len(cases)} cas actifs"
+        )
+
+    drh = provenance["drh_fpt"]
+    if not drh.get("commit"):
+        problems.append("SHA Git drh-fpt absent")
+    if drh.get("dirty") is not False:
+        problems.append("dépôt drh-fpt non propre ou état indéterminé")
+
+    legal = provenance["recherche_juridique"]
+    if provenance["mode"] == "integration":
+        if not legal.get("commit"):
+            problems.append("SHA Git recherche-juridique absent")
+        if legal.get("dirty") is not False:
+            problems.append("dépôt recherche-juridique non propre ou état indéterminé")
+
+    expected_ids = {case["id"] for case in cases}
+    result_ids = {entry.get("id") for entry in case_results}
+    missing = sorted(expected_ids - result_ids)
+    duplicates = len(result_ids) != len(case_results)
+    if missing:
+        problems.append("cas sans résultat : " + ", ".join(missing))
+    if duplicates:
+        problems.append("identifiants de cas dupliqués dans le bilan")
+
+    for entry in case_results:
+        case_id = entry.get("id", "inconnu")
+        if entry.get("statut") != "ok":
+            problems.append(f"{case_id} : erreur d'exécution")
+        if entry.get("tronque"):
+            problems.append(f"{case_id} : réponse ou jugement tronqué")
+        for issue in entry.get("validation", ["évaluation absente"]):
+            problems.append(f"{case_id} : {issue}")
+    return problems
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", default=DEFAULT_MODEL, help=f"modèle répondant (défaut {DEFAULT_MODEL})")
@@ -341,6 +476,13 @@ def main():
         help=f"modèle juge (défaut {DEFAULT_JUDGE_MODEL})",
     )
     ap.add_argument("--judge", action="store_true", help="activer l'évaluation")
+    ap.add_argument(
+        "--strict", action="store_true",
+        help=(
+            "faire échouer la commande si la campagne n'est pas complète, "
+            "traçable et sans verdict d'échec ; exige --judge"
+        ),
+    )
     ap.add_argument(
         "--mode", choices=("integration", "degraded"), default="integration",
         help="integration = compagnon obligatoire ; degraded = DRH seul",
@@ -353,6 +495,8 @@ def main():
         ),
     )
     args = ap.parse_args()
+    if args.strict and not args.judge:
+        ap.error("--strict exige --judge")
 
     bundle_path = find_bundle()
     drh_bundle = bundle_path.read_text(encoding="utf-8")
@@ -480,6 +624,7 @@ def main():
                 ev = judge(
                     key, args.judge_model, c["prompt"], answer, c["attendus"],
                     echec_si=c.get("echec_si"), type_cas=type_cas,
+                    reference_context=system,
                 )
             except ApiCallError as e:
                 print(f"  ERREUR (juge) : {e}")
@@ -508,6 +653,7 @@ def main():
                 "verdict_fiabilite_juridique"
             )
             entry["tronque"] = entry["tronque"] or ev.get("tronque", False)
+            entry["validation"] = validate_judge_result(ev, c)
             print(f"Score : {s}/5 — verdict {verdict} — {ev.get('synthese', '')[:100]}")
 
         cas_bilan.append(entry)
@@ -519,6 +665,19 @@ def main():
         else:
             print(f"\n=== BILAN : aucun score exploitable ({non_evalues} non évalués) ===")
 
+    strict_problems = (
+        validate_strict_campaign(provenance, cases, cas_bilan)
+        if args.strict
+        else []
+    )
+    if args.strict:
+        if strict_problems:
+            print("\n=== GATE STRICT : ÉCHEC ===")
+            for problem in strict_problems:
+                print(f"  - {problem}")
+        else:
+            print("\n=== GATE STRICT : RÉUSSITE ===")
+
     bilan = {
         "provenance": provenance,
         "cas": cas_bilan,
@@ -527,11 +686,17 @@ def main():
         "non_evalues": non_evalues,
         "date_fin_utc": datetime.now(timezone.utc).isoformat(),
         "sha256_contexte_systeme": bundle_sha256_prefix(system),
+        "gate_strict": {
+            "active": args.strict,
+            "reussite": args.strict and not strict_problems,
+            "motifs_echec": strict_problems,
+        },
     }
     (campaign_results / "_bilan.json").write_text(
         json.dumps(bilan, ensure_ascii=False, indent=2), encoding="utf-8"
     )
+    return 1 if strict_problems else 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

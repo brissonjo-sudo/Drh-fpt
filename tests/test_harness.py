@@ -69,6 +69,77 @@ class HarnessTests(unittest.TestCase):
             self.assertIn("Source primaire", text)
             self.assertEqual(len(sources), 2)
 
+    def test_legal_skill_repository_layout_is_resolved(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repository = Path(tmp)
+            skill = repository / "skill"
+            (skill / "references").mkdir(parents=True)
+            (skill / "SKILL.md").write_text(
+                "---\nversion: 3.3.0\n---\n# Recherche juridique\n",
+                encoding="utf-8",
+            )
+            (skill / "references" / "source.md").write_text(
+                "# Source primaire\n", encoding="utf-8"
+            )
+
+            text, loaded_path, sources = RUN_TESTS.load_legal_skill(str(repository))
+
+            self.assertEqual(loaded_path, skill.resolve())
+            self.assertIn("Recherche juridique", text)
+            self.assertEqual(len(sources), 2)
+
+    def test_judge_result_validation_accepts_a_complete_success(self) -> None:
+        case = {
+            "type": "architectural",
+            "attendus": ["Routage correct"],
+        }
+        result = {
+            "criteres": [
+                {
+                    "critere": "Routage correct",
+                    "statut": "SATISFAIT",
+                    "note": "Le routage attendu est observé.",
+                }
+            ],
+            "erreurs": [],
+            "score_architecture_sur_5": 5,
+            "verdict_architecture": "REUSSITE",
+            "score_fiabilite_juridique_sur_5": 5,
+            "verdict_fiabilite_juridique": "REUSSITE",
+            "score_sur_5": 5,
+            "verdict": "REUSSITE",
+            "synthese": "Conforme.",
+            "tronque": False,
+        }
+
+        self.assertEqual(RUN_TESTS.validate_judge_result(result, case), [])
+
+    def test_judge_result_validation_rejects_partial_or_malformed_output(self) -> None:
+        case = {"type": "standard", "attendus": ["Source vérifiée"]}
+        result = {
+            "criteres": [
+                {
+                    "critere": "Source vérifiée",
+                    "statut": "PARTIEL",
+                    "note": "La source n'est pas traçable.",
+                }
+            ],
+            "erreurs": ["Référence non vérifiée"],
+            "score_architecture_sur_5": 4,
+            "verdict_architecture": "NON_APPLICABLE",
+            "score_fiabilite_juridique_sur_5": 2,
+            "verdict_fiabilite_juridique": "ECHEC",
+            "score_sur_5": 2,
+            "verdict": "ECHEC",
+            "synthese": "Insuffisant.",
+            "tronque": False,
+        }
+
+        problems = RUN_TESTS.validate_judge_result(result, case)
+        self.assertTrue(any("non entièrement satisfait" in item for item in problems))
+        self.assertTrue(any("fiabilité juridique" in item for item in problems))
+        self.assertTrue(any("détecté" in item for item in problems))
+
     def test_system_context_identifies_execution_mode(self) -> None:
         integrated = RUN_TESTS.build_system_context("DRH", "LEGAL", "integration")
         degraded = RUN_TESTS.build_system_context("DRH", None, "degraded")

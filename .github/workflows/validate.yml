@@ -1,0 +1,42 @@
+name: Validate
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  deterministic:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Unit tests
+        run: python3 -m unittest discover -s tests -p 'test_*.py'
+
+      - name: Python syntax
+        run: python3 -m py_compile scripts/*.py tests/*.py
+
+      - name: Test-case JSON
+        run: python3 -m json.tool tests/cas-de-test.json >/dev/null
+
+      - name: Bundle freshness
+        run: python3 scripts/build_bundle.py --check
+
+      - name: Repository coherence
+        run: python3 scripts/check_coherence.py
+
+      - name: Whitespace errors
+        run: git diff --check HEAD^ HEAD

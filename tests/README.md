@@ -116,14 +116,27 @@ jouable aussi en variante dégradée avec `drh-fpt` seul.
 ```bash
 export ANTHROPIC_API_KEY=sk-...
 python tests/run_tests.py --legal-skill /chemin/recherche-juridique
-python tests/run_tests.py --judge --legal-skill /chemin/recherche-juridique
-python tests/run_tests.py --mode degraded --judge
+python tests/run_tests.py --judge --strict --legal-skill /chemin/recherche-juridique
+python tests/run_tests.py --mode degraded --judge --strict
 ```
+
+Le chemin du compagnon peut viser son dépôt, son dossier `skill/` ou un bundle
+Markdown. Le chargeur résout notamment la structure actuelle
+`droit-francais-skill/skill/SKILL.md`.
 
 Options : `--model` (répondant, défaut `claude-sonnet-4-6`), `--judge-model`
 (juge, défaut `claude-opus-4-8`), `--mode` (`integration` par défaut ou
 `degraded`) et `--legal-skill` (dépôt ou bundle Markdown du compagnon,
-obligatoire en intégration).
+obligatoire en intégration). `--strict` exige `--judge` et renvoie un code
+non nul si la campagne est incomplète, tronquée, non parsable, exécutée depuis
+un dépôt sale, si un critère n'est pas entièrement satisfait ou si l'un des
+verdicts attendus est en échec.
+
+Le juge API reçoit le même corpus de skills que le répondant afin de contrôler
+les règles applicables. Il ne dispose toutefois d'aucun accès direct à
+Légifrance : cette campagne est un **préflight reproductible**, pas une preuve
+autonome de fraîcheur juridique. Toute référence non contrôlable dans le corpus
+doit rester signalée comme non tranchée.
 
 Chaque campagne enregistre automatiquement :
 
@@ -142,7 +155,33 @@ Chaque campagne enregistre automatiquement :
 - `resultats/<campagne-id>/_provenance.json` — empreinte reproductible des deux
   skills, du JSON des cas et de la campagne.
 - `resultats/<campagne-id>/_bilan.json` — moyenne globale (inclut le `type` par
-  cas).
+  cas) et résultat détaillé du gate strict.
+
+## Gate de sortie de brouillon
+
+La validation finale d'une version exige **deux campagnes distinctes** avec le
+protocole outillé `prompt-claude-code.md` :
+
+1. `integration` — 30 cas, avec `recherche-juridique` réellement chargé ;
+2. `degraded` — 30 cas, sans compagnon, pour vérifier l'abstention.
+
+Chaque campagne doit porter sur le même SHA propre du candidat et satisfaire
+simultanément les conditions suivantes :
+
+- 30 réponses et 30 jugements exploitables ;
+- aucune erreur API/outillage, troncature ou sortie non parsable ;
+- tous les critères `SATISFAIT` ;
+- 30 verdicts globaux `REUSSITE` ;
+- 30 verdicts de fiabilité juridique `REUSSITE` ;
+- architecture `REUSSITE` pour chaque cas architectural et aucun verdict
+  d'architecture `ECHEC` ;
+- aucune erreur juridique, référence inventée ou référence suspecte non
+  résolue après contrôle en source officielle.
+
+Un échec impose une correction puis le rejeu complet du mode concerné sur le
+nouveau SHA. Seuls les rapports qui satisfont ces critères sont copiés dans
+`tests/rapports/` et versionnés. La sortie de brouillon intervient après la
+publication des deux rapports et la réussite des contrôles déterministes.
 
 ## Étendre
 

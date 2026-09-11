@@ -18,7 +18,9 @@ Par défaut, exécute la campagne en **mode `integration`**. Le dépôt courant
 contient `drh-fpt` ; le skill obligatoire `recherche-juridique >= 2.2.0` doit
 être présent localement et réellement chargé par chaque répondant. Si son
 chemin n'est pas fourni ou si son `SKILL.md` est introuvable, arrête la
-campagne : ne simule pas sa présence.
+campagne : ne simule pas sa présence. Accepte soit un dossier portant
+directement `SKILL.md`, soit la structure actuelle du dépôt compagnon
+`droit-francais-skill/skill/SKILL.md`.
 
 Le mode `degraded` est une campagne séparée, explicitement demandée, qui teste
 le filet de sécurité sans compagnon.
@@ -33,6 +35,11 @@ Avant tout sous-agent, crée un identifiant de campagne puis écris
 - mêmes informations pour `recherche-juridique` en mode intégration ;
 - liste des fichiers effectivement chargés par les répondants ;
 - chemin et SHA-256 de `tests/cas-de-test.json`.
+
+Le dépôt `drh-fpt` doit être propre. En mode intégration, le dépôt compagnon
+doit l'être aussi. Si un état est sale, un SHA est absent ou le candidat ne se
+déclare pas `v0.6.0`, arrête la campagne : sa provenance ne permettrait pas une
+validation de release.
 
 Lis ensuite `SKILL.md`, `references/*.md` et
 `assets/fiche-profil-collectivite.md`. En mode intégration, lis aussi
@@ -77,7 +84,12 @@ Pour **chacun des cas** du JSON :
    RÉUSSITE / ÉCHEC** et un **score sur 5**. Il rend aussi deux évaluations
    distinctes : **architecture d'exécution** et **fiabilité juridique**. Une
    erreur juridique fait échouer le verdict global même si l'architecture est
-   réussie.
+   réussie. Donne également au juge le corpus des deux skills effectivement
+   chargés. Il doit utiliser les outils de recherche disponibles pour vérifier
+   en source primaire toute référence officielle produite par le répondant ;
+   il consigne le lien ou l'identifiant récupéré dans son évaluation. Une
+   référence impossible à contrôler reste « non tranchée » et empêche la
+   validation de release.
 
 3. Les deux sous-agents sont **distincts et frais** à chaque cas. Le juge ne
    répond pas ; le répondant ne s'auto-évalue pas.
@@ -150,7 +162,29 @@ Produis `tests/resultats/<campagne-id>/RAPPORT.md` contenant :
   architecture / fiabilité juridique (un bon résultat sur un axe ne doit pas
   masquer un échec sur l'autre) ;
 - la liste des **régressions ou faiblesses** à corriger, classées par gravité ;
+- un inventaire des références officielles produites par les répondants avec,
+  pour chacune, le lien ou l'identifiant primaire récupéré par le juge et le
+  résultat du contrôle ;
 - une recommandation : le skill est-il prêt pour diffusion en l'état ?
 
-Lance tous les cas actifs du mode choisi, puis remets-moi le rapport et les
-réponses brutes sans les réécrire.
+## Étape 7 — Gate de release et promotion du rapport
+
+La campagne ne passe que si les conditions sont toutes réunies :
+
+- exactement 30 réponses et 30 jugements exploitables ;
+- aucune erreur d'outil/API, troncature ou sortie non parsable ;
+- tous les critères sont `SATISFAIT` ;
+- 30 verdicts globaux `REUSSITE` et 30 verdicts juridiques `REUSSITE` ;
+- architecture `REUSSITE` pour chaque cas architectural et aucun verdict
+  d'architecture `ECHEC` ;
+- aucune erreur juridique, référence inventée ou référence suspecte non
+  résolue après contrôle en source primaire.
+
+Si une condition échoue, conserve les résultats bruts mais ne copie pas le
+rapport dans `tests/rapports/`. Liste les correctifs nécessaires ; après toute
+correction, le mode concerné doit être rejoué intégralement sur le nouveau SHA.
+
+Si toutes les conditions passent, copie le rapport sans réécriture vers
+`tests/rapports/RAPPORT-v0.6.0-<date>-<mode>.md`. Lance tous les cas actifs du
+mode choisi, puis remets-moi le rapport et les réponses brutes sans les
+réécrire.
