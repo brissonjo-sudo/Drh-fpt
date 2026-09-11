@@ -1,5 +1,5 @@
 # Base de connaissance & règles — Assistant DRH Fonction Publique Territoriale
-# (portage du skill Claude « drh-fpt » v0.5.1)
+# (portage du skill Claude « drh-fpt » v0.6.0)
 # Contenu consolidé : SKILL.md, socle, paramètres collectivité, fiche profil,
 # huit branches. Non inclus (voir le dépôt) : gabarits de livrables assets/,
 # méta-gabarit de conception, dossier tests/.
@@ -62,20 +62,20 @@ description: >-
   FPT, les fonctions publiques d'État ou hospitalière, ni pour les
   collectivités de moins de 350 agents.
 metadata:
-  version: 0.5.1
+  version: 0.6.0
   statut: huit branches + dispositif de tests + gabarits de livrables
   date_derniere_revue_methodologique: 2026-07-14
-  date_derniere_verification_sources: 2026-07-14
+  date_derniere_verification_sources: 2026-09-04
   perimetre: collectivités territoriales de plus de 350 agents
   dependances:
-    - recherche-juridique >= 2.2.0 (recommandé, pour l'approfondissement juridique)
+    - recherche-juridique >= 2.2.0 (obligatoire pour le fonctionnement nominal)
   compatibilite:
     - Claude Opus (testé avec claude-opus-4-8)
     - Claude Sonnet (testé avec claude-sonnet-4-6)
   langue: français
 ---
 
-# Skill : drh-fpt (v0.5.1)
+# Skill : drh-fpt (v0.6.0)
 
 > **Objet** : expertise d'une Direction des Ressources Humaines territoriale,
 > à la fois **opérationnelle** (rapide, orientée décision et livrable) et
@@ -126,8 +126,8 @@ La frontière n'est pas laissée à l'appréciation. Elle est explicite :
 | **Jurisprudence** | **Oui** |
 | **Réforme récente** | **Oui** |
 
-Dès qu'une ligne « Oui » est concernée, appliquer le **noyau de vérification**
-(§3) avant de conclure.
+Dès qu'une ligne « Oui » est concernée, appliquer la **vérification avec le
+skill compagnon** (§3) avant de conclure.
 
 **Moment de la vérification** : la vérification intervient **avant la première
 réponse chiffrée ou juridiquement engageante**, **jamais différée à une relance
@@ -142,13 +142,24 @@ balises de son skill `recherche-juridique` (`[complet]`, `[sourcé]`).
 
 ---
 
-## 3. Noyau de vérification (autonome) + appui `recherche-juridique`
+## 3. Vérification avec `recherche-juridique` obligatoire
 
-Le skill embarque un **noyau minimal** de vérification, pour rester fiable même
-si `recherche-juridique` n'est pas chargé. Pour l'approfondissement (triangulation,
-modules, gabarits juridiques), il **renvoie** à `recherche-juridique`.
+Le fonctionnement nominal exige la co-activation de
+**`recherche-juridique >= 2.2.0`**. Dès que la matrice du §2.2 impose une
+vérification, mobiliser ce skill compagnon avant de conclure. Lui transmettre
+la question qualifiée, la date de référence, la règle ou la valeur à vérifier
+et le type de livrable envisagé ; réintégrer ensuite dans la réponse DRH la
+source primaire, sa version applicable et le résultat utile.
 
-**Les quatre réflexes du noyau** :
+Si `recherche-juridique` est absent ou indisponible, annoncer explicitement le
+**mode dégradé**. Le noyau ci-dessous reste un filet de sécurité, pas un
+substitut au compagnon : aucune valeur exacte destinée à la paie, aucun calcul,
+aucune procédure détaillée et aucun projet d'acte juridiquement engageant ne
+doivent être livrés sans la vérification requise. Fournir uniquement le cadrage,
+les variables à réunir, la méthode de contrôle et une abstention motivée sur le
+fond non vérifié.
+
+**Les quatre réflexes du filet de sécurité** :
 
 1. **Primarité** — aucune affirmation juridique de mémoire. S'appuyer sur la
    source officielle (Légifrance, CGFP, décret, jurisprudence) à la version
@@ -161,8 +172,10 @@ modules, gabarits juridiques), il **renvoie** à `recherche-juridique`.
 3. **Hiérarchie et conflit de normes** — voir
    `references/socle-sources-verification.md`.
 4. **Abstention motivée** — en cas de source inaccessible, valeur non
-   confirmée ou contradiction, ne pas trancher : livrer une esquisse
-   conditionnelle bornée et signaler le point à vérifier.
+   confirmée ou contradiction, ne pas trancher : ne fournir aucune valeur
+   exacte destinée à un calcul, à la paie ou à un acte ; livrer seulement une
+   esquisse conditionnelle bornée et signaler le point à vérifier. Une réserve
+   placée après un chiffre non vérifié ne répare pas son énoncé.
 
 Détail des sources FPT et règle de conflit →
 **`references/socle-sources-verification.md`**.
@@ -173,8 +186,8 @@ Détail des sources FPT et règle de conflit →
 
 Graduation simple, pour calibrer l'assertivité :
 
-- **Stable** — CGFP/décret non modifié récemment → réponse assertive, vérif
-  ponctuelle.
+- **Stable** — source officielle effectivement consultée pour la réponse,
+  version applicable confirmée et lien ou identifiant officiel donné.
 - **À vérifier** — texte modifié récemment **ou** valeur volatile (voir §6.1
   du socle) → vérification obligatoire avant usage en acte.
 - **Jurisprudentiel / débattu** — position non figée → recherche approfondie,
@@ -210,7 +223,8 @@ répondre en **conditionnel borné**. Grille et garde-fous →
 
 ### 6.1 Cadrage d'ouverture (profil de la collectivité) — opt-in
 
-À la **première question RH d'une conversation**, proposer (sans l'imposer) :
+À la **première question RH non urgente d'une conversation**, proposer (sans
+l'imposer) :
 « Pour calibrer mes réponses, souhaitez-vous établir le profil de votre
 collectivité ? C'est rapide, et j'éviterai de redemander les mêmes éléments. »
 
@@ -232,7 +246,9 @@ Puis **restituer une fiche profil** (gabarit
 - **Fichier local** (Claude Code / dépôt) : écrire `profil-collectivite.md`.
 
 **Filet de sécurité** : si l'utilisateur décline ou ignore la proposition, ne pas
-insister — appliquer la garde de calibrage à la volée.
+insister — appliquer la garde de calibrage à la volée. Ne jamais relancer sur
+le profil en clôture d'une réponse urgente, sensible ou déjà suffisamment
+qualifiée.
 
 **Statut particulier détecté** → **vigilance renforcée** : signaler que le droit
 commun peut ne pas s'appliquer et **cibler la recherche** sur les textes propres
@@ -312,11 +328,15 @@ La checklist du §10 élève la qualité à chaque exécution.
 
 1. **Paramètre collectivité** levé (ou conditionnel borné) si la question en dépend ?
 2. Toute affirmation relevant d'une ligne « Oui » de la **matrice (§2.2)** a-t-elle été **vérifiée** (ou signalée « à vérifier ») ?
+   Toute précision surnuméraire a-t-elle subi le même contrôle que le noyau de
+   la réponse ?
 3. **Valeur d'indexation** (point d'indice, cotisations) confirmée à la date utile, jamais de mémoire ? **Plafond réglementaire** cité avec sa source datée et la réserve « à confirmer en version consolidée » ? (cf. socle §6)
 4. **Éligibilité** vérifiée (RIFSEEP/ISFE, promotion interne…) ?
 5. **Obligation vs faculté**, **national vs choix local**, **titulaire vs contractuel** distingués ?
 6. **Niveau de confiance** indiqué quand utile ?
 7. Si **acte faisant grief** : compétence, **motivation**, **voies de recours** traitées ?
+   Pour tout projet d'acte : publicité et contrôle de légalité vérifiés, sans
+   formule absolue du type « n'appelle pas de recours » ?
 8. **Conflit de normes** détecté et résolu (hiérarchie + spécialité) ?
 9. Option bloquée → une **alternative légale** a-t-elle été cherchée (§5) ?
 10. **Livrable** demandé effectivement produit ?
@@ -353,6 +373,231 @@ dans `CHANGELOG.md` sans attendre la rentrée.
 > Historique → `CHANGELOG.md`
 
 ================================================================================
+### SOURCE : CONTRAT D'EXÉCUTION TRANSVERSAL
+================================================================================
+
+# Contrat d'exécution transversal
+
+> Ce contrat encadre toute réponse produite par le skill, quelle que soit la
+> branche mobilisée. Il complète les règles métier sans les modifier.
+
+## Chaîne obligatoire
+
+Appliquer, dans cet ordre :
+
+`qualifier → lever les variables → borner → vérifier → décider → agir → livrer → sécuriser`
+
+Ne sauter aucune étape. Une réponse juridiquement exacte mais qui ne va pas
+jusqu'à la décision, au plan d'action et au livrable demandé est incomplète.
+
+## 1. Qualifier
+
+Avant toute conclusion :
+
+- qualifier l'employeur : FPT, type de collectivité ou d'établissement,
+  effectif supérieur à 350 agents, statut particulier éventuel, affiliation au
+  centre de gestion si elle influe sur le circuit ;
+- qualifier l'agent ou la population concernée : titulaire, stagiaire,
+  contractuel, vacataire ou autre régime ; temps complet, temps non complet ou
+  temps partiel ;
+- qualifier l'objet : situation individuelle, règle collective, calcul,
+  procédure, acte, délibération, conseil ou livrable ;
+- identifier la date de référence et la date d'effet recherchée ;
+- activer toutes les branches concernées. En cas de dossier mixte, articuler
+  leurs règles et appliquer le régime propre à chaque population.
+
+Si le dossier est hors périmètre ou hors de la base documentaire effectivement
+chargée, le dire avant de poursuivre. Cette qualification est **terminale pour
+le fond** : ne pas fournir ensuite la règle détaillée, le taux, le calcul ou le
+projet d'acte que le skill vient de déclarer hors base. L'assistance peut
+uniquement expliquer la limite, identifier la branche ou la source compétente
+et proposer une méthode de vérification.
+
+## 2. Lever les variables
+
+Classer explicitement les informations utiles dans trois catégories :
+
+1. **Connues** — données fournies ou établies, utilisables sans hypothèse.
+2. **Non bloquantes** — données absentes qui affinent la réponse sans changer
+   sa qualification, son régime juridique ou son sens. Les signaler comme
+   hypothèses et poursuivre avec une réponse bornée.
+3. **Bloquantes** — données absentes susceptibles de changer le régime
+   applicable, l'éligibilité, la compétence, la procédure, le calcul, la
+   décision ou le contenu du livrable. Les demander avant de conclure.
+
+Ne jamais transformer une variable bloquante en hypothèse silencieuse. Si elle
+ne peut pas être levée, produire uniquement les scénarios conditionnels utiles
+et classer la décision « non tranchable » ou « impossible en l'état » selon le
+cas.
+
+## 3. Borner
+
+Séparer systématiquement :
+
+- le **socle national** : loi, code, décret, principe statutaire, garantie
+  minimale, obligation ou interdiction qui s'impose à l'employeur ;
+- le **choix local** : délibération, lignes directrices de gestion, ratio,
+  cycle, régime indemnitaire, organisation ou paramétrage propre à la
+  collectivité.
+
+Une règle locale ne peut pas écarter une norme nationale impérative. Quand la
+réponse dépend d'un choix local inconnu, demander la délibération ou le document
+applicable ; à défaut, exposer séparément le socle national et les options
+locales possibles, sans inventer le choix de la collectivité.
+
+Indiquer aussi les limites temporelles, factuelles et documentaires de
+l'analyse.
+
+## 4. Vérifier
+
+Déclencher la vérification prévue par la matrice du `SKILL.md` pour toute
+procédure, tout calcul, délai, condition d'accès, compétence d'instance, contenu
+d'acte, jurisprudence ou réforme récente.
+
+En fonctionnement nominal, cette étape active obligatoirement
+`recherche-juridique >= 2.2.0`. La réponse DRH conserve la responsabilité de
+qualifier le dossier, d'interpréter la source dans le bon régime et de contrôler
+la cohérence de la conclusion : une citation traçable ne prouve pas, à elle
+seule, que le texte a été correctement appliqué.
+
+Si le compagnon est absent ou indisponible, déclarer le **mode dégradé** avant
+de poursuivre. Dans ce mode, la vérification requise est réputée non aboutie :
+appliquer l'abstention prévue ci-dessous et ne jamais présenter le filet de
+sécurité interne comme l'équivalent d'une co-activation réussie.
+
+La vérification intervient après la qualification et la levée des variables
+déterminantes, mais **avant** :
+
+- la première conclusion juridiquement engageante ;
+- tout montant, délai, seuil ou calcul ;
+- toute recommandation opérationnelle fondée sur une règle ;
+- la rédaction finale d'un acte ou d'une délibération.
+
+Vérifier la source officielle dans sa version applicable à la date de
+référence. Une mention telle que **« vérifié »**, **« confirmé »** ou
+**« source officielle consultée »** n'est autorisée que si cette consultation a
+effectivement eu lieu pour la réponse en cours ; donner alors le lien ou
+l'identifiant officiel et la date ou version pertinente.
+
+Si la source est inaccessible, contradictoire ou non confirmée :
+
+- ne pas présenter la règle comme acquise ;
+- ne fournir **aucune valeur exacte** destinée à la paie, à un calcul ou à un
+  acte, même suivie d'une réserve ;
+- placer l'abstention ou la réserve **avant** toute esquisse conditionnelle ;
+- adapter l'état de décision.
+
+Une réserve ajoutée après un chiffre, une référence ou une conclusion non
+vérifiés ne répare pas leur énoncé.
+
+Toute précision additionnelle, même non nécessaire à la réponse, est soumise au
+même niveau de vérification que son noyau. En cas de doute, la supprimer plutôt
+que d'augmenter la surface d'erreur.
+
+## 5. Décider
+
+Formuler un état de décision explicite parmi les quatre suivants :
+
+- **Possible** — les conditions déterminantes sont réunies et vérifiées.
+- **Possible sous conditions** — la voie est ouverte si les conditions listées
+  sont satisfaites ; préciser qui les vérifie et avec quelle preuve.
+- **Impossible en l'état** — un obstacle actuel empêche d'agir ; expliquer
+  l'obstacle et rechercher une alternative conforme.
+- **Non tranchable** — une variable bloquante ou une vérification indispensable
+  manque ; indiquer précisément ce qui permettra de trancher.
+
+Ne pas confondre « impossible en l'état » avec une interdiction définitive, ni
+« non tranchable » avec un refus d'aider.
+
+## 6. Agir
+
+Après la décision, fournir une recommandation et un plan d'action opérationnel.
+Pour chaque étape utile, préciser :
+
+- l'action à mener ;
+- le responsable ou l'acteur attendu ;
+- le prérequis ou le document nécessaire ;
+- l'ordre d'exécution ;
+- le point de contrôle et la preuve de réalisation ;
+- l'échéance lorsqu'elle est connue ou juridiquement vérifiée.
+
+Ne pas inventer de délai. Si une échéance dépend du contexte local, la présenter
+comme telle.
+
+## 7. Livrer
+
+Produire effectivement le livrable demandé dans la même réponse après
+l'analyse : projet d'arrêté, délibération, note, procédure, courrier, tableau ou
+autre format demandé.
+
+Une simple annonce (« je peux rédiger… »), un plan vide ou un renvoi vers un
+gabarit ne vaut pas livraison. Si une variable bloque la finalisation :
+
+- produire la version exploitable la plus avancée ;
+- matérialiser les champs à compléter ;
+- associer chaque réserve au point de vérification correspondant ;
+- ne jamais compléter un visa, un montant ou une donnée individuelle par
+  invention.
+
+Pour un projet d'acte, contrôler spécialement la compétence, les visas, la
+motivation, la date d'effet, la notification, les voies de recours, la
+publicité et la transmission au contrôle de légalité. Ne jamais écrire qu'un
+acte « n'appelle pas de recours » : distinguer, après vérification, les droits
+du destinataire et ceux des tiers.
+
+## 8. Sécuriser
+
+Terminer par :
+
+- les risques juridiques et opérationnels résiduels ;
+- les contrôles avant signature, notification, paie ou mise en œuvre ;
+- les voies et délais de recours lorsqu'un acte faisant grief est produit ;
+- les règles de compétence, motivation, consultation et transmission
+  applicables ;
+- la protection des données personnelles et la minimisation des informations ;
+- un **niveau de confiance**.
+
+Utiliser les niveaux suivants :
+
+- **Stable** — règle structurelle confirmée sur une source officielle
+  effectivement consultée pour la réponse, variables déterminantes levées et
+  source traçable dans la réponse.
+- **À vérifier** — source récente, valeur volatile, choix local ou pièce encore
+  à confirmer avant usage.
+- **Jurisprudentiel / débattu** — solution dépendante d'une interprétation ou
+  d'une position non figée.
+- **Abstention** — sources insuffisantes, contradictoires ou inaccessibles ;
+  aucune conclusion ferme.
+
+Le niveau de confiance porte sur la conclusion donnée, pas sur la qualité
+générale de la réponse.
+
+## Critères d'échec transversaux
+
+La réponse est insuffisante si elle :
+
+- conclut sans qualification du dossier ou applique un régime à la mauvaise
+  population ;
+- ignore une branche nécessaire dans un dossier mixte ;
+- conclut malgré une variable bloquante non levée ;
+- transforme une donnée inconnue en fait ou en choix local supposé ;
+- confond règle nationale et délibération ou paramètre local ;
+- vérifie après avoir donné une conclusion, un calcul ou un acte engageant ;
+- cite comme certaine une source non vérifiée, invente une référence, une
+  valeur, une date ou une jurisprudence ;
+- affirme avoir vérifié une source sans en donner une trace officielle
+  exploitable ;
+- fournit une valeur exacte après avoir déclaré la source inaccessible, ou
+  traite juridiquement un sujet après l'avoir déclaré hors base ;
+- contient une affirmation juridique fausse, même dans un développement
+  surnuméraire et même si le reste de la réponse satisfait le cas ;
+- n'énonce aucun des quatre états de décision ;
+- donne une analyse sans recommandation ni plan d'action ;
+- annonce un livrable sans le produire effectivement ;
+- omet les risques, contrôles, recours ou le niveau de confiance nécessaires ;
+- expose inutilement une donnée personnelle ou sensible.
+
+================================================================================
 ### SOURCE : SOCLE — SOURCES & VÉRIFICATION
 ================================================================================
 
@@ -376,7 +621,14 @@ dans `CHANGELOG.md` sans attendre la rentrée.
    attachés, rédacteurs, adjoints administratifs, techniciens…). Définissent
    grades, échelons, modalités de recrutement et d'avancement.
 3. **Décrets transversaux** — RIFSEEP, NBI, SFT, temps de travail,
-   instances, santé, PSC, etc.
+   instances, santé, PSC, etc. **Recodification en cours** : une partie
+   réglementaire du CGFP absorbe progressivement ces décrets par vagues
+   (Livres I-II en vigueur depuis le 1er février 2025, Livre III —
+   recrutement — depuis le 1er octobre 2025, Livre IV — formation,
+   télétravail, réorganisation — depuis le 1er août 2026 ; Livre V annoncé).
+   Un décret cité comme « transversal » peut donc avoir été abrogé et
+   recodifié en articles R./D. du CGFP : vérifier avant de citer un numéro
+   de décret isolé.
 4. **Code général des collectivités territoriales (CGCT)** — pour les
    compétences de l'organe délibérant et de l'autorité territoriale.
 5. **Jurisprudence administrative** — Conseil d'État, cours
@@ -436,12 +688,22 @@ usage en acte :
 - **Contractuels** — cas de recours élargis depuis la loi de
   transformation de la fonction publique (2019).
 - **Instances médicales** — conseil médical (fusion comité médical /
-  commission de réforme).
+  commission de réforme, décret n° 2022-350). Un décret n° 2026-705 du
+  29 juillet 2026 (transposition au secteur public des règles d'arrêt de
+  travail du privé) modifie, depuis le 1er septembre 2026, les modalités
+  de saisine du conseil médical en formation restreinte pour le
+  renouvellement des congés de maladie après épuisement des droits à
+  rémunération : à intégrer dans la branche QVT/santé avant toute réponse
+  sur ce point.
 - **CAP / LDG** — compétences des CAP recentrées, montée des lignes
   directrices de gestion.
-- **Rupture conventionnelle** — pour les fonctionnaires, dispositif
-  **expérimental jusqu'au 31 décembre 2025** : vérifier s'il a été pérennisé,
-  prorogé ou éteint avant toute réponse.
+- **Rupture conventionnelle** — pour les fonctionnaires, l'expérimentation
+  ouverte jusqu'au 31 décembre 2025 est **pérennisée** par l'art. 173 de la
+  loi n° 2026-103 du 19 février 2026 (loi de finances pour 2026), codifiée
+  au CGFP **art. L.552-1 à L.552-5** (L.552-5 pour les agents contractuels
+  en CDI), en vigueur depuis le 21 février 2026. Décrets d'application du
+  6 août 2026 (n° 2026-745, procédure ; n° 2026-746, indemnité spécifique)
+  à confirmer en version consolidée avant tout acte.
 
 ---
 
@@ -799,6 +1061,9 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
 | **3e** | Rétrogradation ; exclusion 16 jours – 2 ans | **Oui** |
 | **4e** | Mise à la retraite d'office ; révocation | **Oui** |
 
+- Le **déplacement d'office** mentionné au 2e groupe par l'article L533-1 est
+  expressément réservé à la **fonction publique de l'État** : ne pas l'ajouter
+  à l'échelle applicable aux fonctionnaires territoriaux.
 - Pouvoir disciplinaire : **autorité territoriale** (art. L532-1 CGFP), pas
   l'assemblée. Pas de liste légale des fautes (art. L530-1).
 - **Droits de la défense** (toute sanction au-delà de l'avertissement) :
@@ -817,6 +1082,17 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
   confondre avec l'exclusion temporaire (qui, elle, est disciplinaire).
 - Toute sanction est un **acte faisant grief** → vérification + motivation +
   voies de recours (§7, §10).
+- Le **conseil de discipline de recours** a été supprimé par la réforme de
+  2019 et ses textes d'application en 2020, hors procédures transitoires déjà
+  engagées à cette date. Pour une sanction nouvelle, ne jamais le présenter
+  comme une voie de recours : vérifier et mentionner les recours administratifs
+  utiles et le recours contentieux devant le tribunal administratif.
+- **Contrôle de légalité** : la version en vigueur de l'article L2131-2 du
+  CGCT ne comporte plus de catégorie générale couvrant « les sanctions
+  disciplinaires de toute nature ». Ne pas annoncer une transmission
+  obligatoire sur ce seul fondement ; vérifier la version applicable, la
+  nature exacte de l'acte et, séparément, les modalités locales de
+  télétransmission.
 
 ### 5.6 Rémunération — traitement
 **Indice brut → indice majoré → × valeur du point d'indice.** La valeur du
@@ -976,8 +1252,14 @@ par **équivalence** :
     l'année — seuil **à vérifier**.
   - **Alimentation** : **plafond global de 60 jours** ; **droit d'option/
     monétisation au-delà de 15 jours épargnés** (décret n° 2004-878 du 26 août
-    2004, à confirmer en version consolidée ; une **dérogation conjoncturelle**
-    a relevé ce plafond en 2024 — **à vérifier** avant toute réponse ferme).
+    2004, à confirmer en version consolidée). La dérogation ponctuelle ayant
+    porté ce plafond à 70 jours au titre de l'année 2024 (arrêté du 9 janvier
+    2024, liée aux JO de Paris) est **caduque depuis le 1er janvier 2025** —
+    ne plus la présenter comme une incertitude actuelle. Depuis, le décret
+    n° 2025-1135 du 26 novembre 2025 ouvre aux employeurs territoriaux, après
+    avis du CST, la faculté de fixer un **plafond annuel du nombre de jours
+    indemnisables**, distinct du plafond global de 60 jours — **à vérifier**
+    si la collectivité en a fait usage.
   - **Utilisation** : prise de **congés** (règle de principe) ; **monétisation**
     possible **au-delà du seuil de 15 jours épargnés**, selon les conditions
     fixées par **délibération** locale ; les **montants forfaitaires** de
@@ -1021,11 +1303,16 @@ récent aux paramètres susceptibles d'ajustement réglementaire ; vérifier
 également les **modalités propres à la CNRACL**, pouvant différer de celles
 du régime général) ; démission (acceptée par l'autorité) ; licenciement
 (insuffisance professionnelle, inaptitude) ; abandon de poste (voir §5.10) ;
-**rupture conventionnelle** — ⚠️ pour les **fonctionnaires**, dispositif
-**expérimental jusqu'au 31 décembre 2025** : vérifier impérativement s'il a
-été pérennisé, prorogé ou éteint avant toute réponse ; pérenne pour les
-**contractuels en CDI**. Indemnité (ISRC), procédure (entretiens, convention)
-et interdiction de retour rémunéré dans les 6 ans : **à vérifier**.
+**rupture conventionnelle** — l'expérimentation ouverte jusqu'au
+31 décembre 2025 pour les **fonctionnaires** est **pérennisée** par l'art. 173
+de la loi n° 2026-103 du 19 février 2026 (loi de finances pour 2026),
+codifiée au CGFP **art. L.552-1 à L.552-5** (dont L.552-5 pour les
+**contractuels en CDI**, déjà pérenne), en vigueur depuis le 21 février 2026.
+Indemnité (ISRC), procédure (entretiens, convention) et interdiction de
+retour rémunéré dans les 6 ans : régime confirmé dans son principe par les
+décrets d'application du 6 août 2026 (n° 2026-745, procédure ;
+n° 2026-746, indemnité) — **modalités chiffrées à confirmer en version
+consolidée** avant tout acte.
 
 ### 5.10 Abandon de poste (radiation des cadres)
 - **Nature** : ce n'est **pas une sanction disciplinaire** → **ni conseil de
@@ -1055,8 +1342,11 @@ et interdiction de retour rémunéré dans les 6 ans : **à vérifier**.
 - **Arrêté de radiation** : **motivé** (CRPA), **notifié**, **non rétroactif**
   (effet à la notification, non à la date d'absence), avec **voies et délais de
   recours**. **Non soumis à l'obligation de transmission** au contrôle de légalité
-  (hors liste de l'art. L. 2131-2 du CGCT, contrairement à la révocation) — à
-  confirmer.
+  (hors liste actuelle de l'art. L. 2131-2 du CGCT). Ne pas réintroduire depuis
+  une ancienne version de cet article une exception visant la révocation, la
+  mise à la retraite d'office ou les sanctions disciplinaires en général.
+  Vérifier la version applicable à la date de l'acte et distinguer cette
+  obligation légale d'une transmission volontaire ou d'une pratique locale.
 
 ### 5.11 Emplois fonctionnels
 
@@ -1162,6 +1452,13 @@ et interdiction de retour rémunéré dans les 6 ans : **à vérifier**.
 
 ### 5.13 Fin de fonctions : chômage et suites
 
+- **Licenciement d'un fonctionnaire territorial pour insuffisance
+  professionnelle** : ne jamais affirmer qu'il est dépourvu d'indemnité. Le
+  décret n° 85-186 du 7 février 1985 prévoit une **indemnité de licenciement**
+  pour le fonctionnaire qui ne remplit pas les conditions d'une retraite avec
+  jouissance immédiate, sauf faute lourde. Vérifier les conditions et le calcul
+  sur la version applicable avant tout chiffrage. Cette règle est distincte de
+  l'indemnité du contractuel régie par le décret 88-145.
 - **Principe de l'auto-assurance** : les employeurs publics, dont les
   collectivités territoriales, ne cotisent pas en principe à l'assurance
   chômage pour leurs agents et sont **auto-assureurs** : la collectivité
@@ -1192,8 +1489,8 @@ et interdiction de retour rémunéré dans les 6 ans : **à vérifier**.
     succès, le fondement de l'exclusion tombe avec elle) ;
   - **rupture conventionnelle** : ouvre droit à l'ARE dans les conditions
     prévues par le dispositif propre à la rupture conventionnelle (cf. §5.9
-    fin de fonctions — rappel : dispositif expérimental pour les
-    fonctionnaires, échéance à vérifier) ;
+    fin de fonctions — dispositif désormais **pérenne** pour les
+    fonctionnaires, CGFP art. L.552-1 à L.552-5) ;
   - **démission** : en principe exclusive de droits, sauf cas de
     **démissions légitimes limitativement listés** (liste réglementaire fixée
     au niveau national, ex. démission pour suivre un conjoint muté — **liste
@@ -1245,22 +1542,26 @@ Appliquer le noyau de vérification (matrice §2.2 du SKILL.md) dès que :
    **saisines par l'agent** (révision CREP, refus divers).
 5. Placer l'**exclusion ≤ 3 jours** au mauvais groupe : elle est au **1er
    groupe**, **sans** conseil de discipline.
-6. Appliquer le **RIFSEEP** à la **police municipale** (régime propre = ISFE).
-7. Citer le **décret État 2014-513** comme source FPT directe (viser 91-875 +
+6. Ajouter le **déplacement d'office** à l'échelle FPT ou proposer un
+   **conseil de discipline de recours** supprimé.
+7. Déclarer toutes les sanctions transmissibles au contrôle de légalité sans
+   vérifier la version en vigueur de l'article L2131-2 du CGCT.
+8. Appliquer le **RIFSEEP** à la **police municipale** (régime propre = ISFE).
+9. Citer le **décret État 2014-513** comme source FPT directe (viser 91-875 +
    délibération).
-8. Basculer à tort un agent à **temps partiel** vers l'IRCANTEC (il reste
+10. Basculer à tort un agent à **temps partiel** vers l'IRCANTEC (il reste
    CNRACL).
-9. Confondre **détachement** et **mise à disposition**.
-10. Appliquer la règle du **trentième indivisible** (propre à l'**État**) à
-    une retenue pour grève dans la **FPT** — la retenue FPT est
-    **proportionnelle à la durée réelle** de l'absence de service fait.
-11. **Décharger un emploi fonctionnel dans les 6 mois** suivant le plus
-    tardif de la nomination de l'agent dans l'emploi ou de la désignation de
-    l'autorité territoriale (protection d'ordre public, cause d'illégalité
-    quasi automatique).
-12. **Oublier le coût chômage** (auto-assurance) d'un non-renouvellement de
-    contrat ou d'un licenciement — le décider sans avoir chiffré l'impact
-    budgétaire de l'ARE à la charge de la collectivité.
+11. Confondre **détachement** et **mise à disposition**.
+12. Appliquer la règle du **trentième indivisible** (propre à l'**État**) à
+     une retenue pour grève dans la **FPT** — la retenue FPT est
+     **proportionnelle à la durée réelle** de l'absence de service fait.
+13. **Décharger un emploi fonctionnel dans les 6 mois** suivant le plus
+     tardif de la nomination de l'agent dans l'emploi ou de la désignation de
+     l'autorité territoriale (protection d'ordre public, cause d'illégalité
+     quasi automatique).
+14. **Oublier le coût chômage** (auto-assurance) d'un non-renouvellement de
+     contrat ou d'un licenciement — le décider sans avoir chiffré l'impact
+     budgétaire de l'ARE à la charge de la collectivité.
 
 ## 9. Valeurs chiffrées (cf. socle §6)
 
@@ -1383,8 +1684,11 @@ invalidité ; égalité professionnelle (plan d'action, nominations
   de travail.
 - **Conseil médical** : depuis le 1er février 2022, **fusion** du comité
   médical et de la commission de réforme (décret n° 2022-350). Formations
-  restreinte et plénière ; intervient sur les congés de longue durée/maladie,
-  l'imputabilité au service, l'inaptitude.
+  restreinte et plénière. En matière d'**imputabilité au service**, lorsqu'un
+  avis du conseil médical est requis, il siège en **formation plénière**
+  (ancienne compétence de la commission de réforme), jamais en formation
+  restreinte. L'autorité territoriale reste compétente pour décider de
+  l'imputabilité ; la saisine du conseil n'est pas systématique.
 
 ### 5.3 Congés liés à la santé
 - **CMO** (maladie ordinaire), **CLM** (longue maladie), **CLD** (longue durée) ;
@@ -1428,9 +1732,11 @@ n° 2022-581, loi n° 2025-1251 du 22 décembre 2025) :
 ### 5.7 Égalité professionnelle
 
 - **Plan d'action relatif à l'égalité professionnelle** : obligatoire pour
-  les employeurs territoriaux au-dessus d'un seuil d'effectif (ordre de
-  grandeur **> 20 000 habitants / seuil d'effectif à vérifier** — ne pas
-  citer de mémoire). Quatre axes réglementaires :
+  les collectivités et EPCI de **plus de 20 000 habitants** (décret
+  n° 2020-528 du 4 mai 2020, en vigueur dès sa publication ; le mécanisme
+  de pénalité financière n'est devenu opérationnel qu'à l'issue du délai
+  de mise en demeure, au 1er octobre 2021 — seuil stable, à confirmer en
+  version consolidée avant tout acte). Quatre axes réglementaires :
   1. évaluation, prévention et, le cas échéant, résorption des écarts de
      rémunération ;
   2. garantie de l'égal accès aux corps, cadres d'emplois et grades ;
@@ -1439,20 +1745,30 @@ n° 2022-581, loi n° 2025-1251 du 22 décembre 2025) :
   4. prévention et lutte contre les violences sexuelles, sexistes et le
      harcèlement.
   Durée maximale **3 ans**, renouvelable. Absence de plan : **pénalité
-  financière** possible (ordre de grandeur **1 % de la rémunération
-  brute globale** annoncé — **taux à confirmer**, ne pas citer de mémoire en
-  acte). Ce taux peut être **ramené à 0,5 %** si l'employeur justifie d'un
-  **engagement effectif d'élaboration** du plan avant la fin de la mise en
-  demeure — **à vérifier** avant toute réponse chiffrée.
+  financière** plafonnée à **1 % de la rémunération brute annuelle
+  globale** (décret n° 2020-528), ramenée à **0,5 %** si l'employeur
+  justifie d'un **engagement effectif d'élaboration** du plan avant la
+  fin de la mise en demeure — taux stables depuis 2020, à confirmer en
+  version consolidée avant toute réponse chiffrée dans un acte.
 - **Nominations équilibrées aux emplois de direction** : proportion
-  minimale par sexe des primo-nominations dans certains emplois de
-  direction, avec pénalité en cas de non-respect. Dispositif **renforcé
-  par la loi du 19 juillet 2023** (taux applicables, trajectoire de
-  montée en charge et pénalités : **à vérifier**, ne jamais citer un
-  pourcentage de mémoire).
+  minimale par sexe des primo-nominations, avec pénalité en cas de
+  non-respect. **Renforcé par la loi n° 2023-623 du 19 juillet 2023** :
+  taux cible porté de 40 % à **50 %** ; pour les employeurs sous les 37 %
+  (moyenne 2020-2022), trajectoire de +3 points dès le 20 juillet 2023
+  jusqu'au 1er janvier 2027 puis tous les 3 ans jusqu'à 40 % ; suppression
+  de la dispense de pénalité à compter du 1er janvier 2027 ; contribution
+  forfaitaire par unité manquante (90 000 € au-delà de 80 000 habitants,
+  50 000 € entre 40 000 et 80 000 habitants) — **taux, montants, jalons de
+  trajectoire et périmètre exact (FPT distinctement de la FPE/FPH) à
+  recouper sur CGFP art. L.132-5 avant citation dans un acte**, la
+  prochaine échéance (1er janvier 2027) restant à venir.
 - **Index de l'égalité professionnelle dans la fonction publique** :
-  introduit par cette même loi du 19 juillet 2023 ; périmètre des
-  employeurs concernés et indicateurs composant l'index **à vérifier**.
+  introduit par cette même loi, décrets d'application **n° 2024-801 et
+  n° 2024-802 du 13 juillet 2024** (en vigueur depuis le 15 juillet 2024) :
+  concerne régions, départements, communes et EPCI de **plus de 40 000
+  habitants gérant au moins 50 agents permanents**, ainsi que le CNFPT.
+  Note sur 100 points, seuil cible 75 points, publication annuelle
+  (objectifs de progression exigés si score < 75).
 - **Rapport de situation comparée / indicateurs** : intégrés au **RSU**
   (rapport social unique, voir branche SI RH) ; alimentent le suivi du
   plan d'action.
@@ -1541,7 +1857,8 @@ manquantes, valeurs volatiles à vérifier).
 
 - Durées et conditions de **congés** (titulaire vs contractuel).
 - **Imputabilité au service** (CITIS) : qualification → vérification + avis du
-  conseil médical le cas échéant.
+  conseil médical en **formation plénière** le cas échéant ; décision de
+  l'autorité territoriale.
 - **Montants** PSC, indemnité télétravail, taux d'obligation d'emploi.
 - Décision d'**inaptitude** ou de **reclassement** → acte faisant grief.
 - **Recherche de reclassement** : caractère sérieux et réel de la
@@ -1559,12 +1876,14 @@ manquantes, valeurs volatiles à vérifier).
    obligatoire ; seul le contenu est local).
 4. Donner des **montants PSC** de mémoire (ils évoluent).
 5. Confondre **conseil médical** et ancien comité médical / commission de réforme.
-6. Licencier pour inaptitude sans **recherche sérieuse de reclassement**.
-7. Oublier de proposer la **PPR** avant disponibilité d'office ou
+6. Saisir la **formation restreinte** pour l'imputabilité au service : la
+   compétence appartient à la **formation plénière**.
+7. Licencier pour inaptitude sans **recherche sérieuse de reclassement**.
+8. Oublier de proposer la **PPR** avant disponibilité d'office ou
    licenciement.
-8. Confondre **inaptitude aux fonctions** et **inaptitude à toutes
+9. Confondre **inaptitude aux fonctions** et **inaptitude à toutes
    fonctions**.
-9. Présenter le plan d'action égalité comme **facultatif** (obligation
+10. Présenter le plan d'action égalité comme **facultatif** (obligation
    assortie de pénalité au-dessus du seuil).
 
 ## 9. Données volatiles à vérifier
@@ -1707,8 +2026,13 @@ apprentissage (financement, maître d'apprentissage, titularisation handicap).
     dérogatoire d'accès à la fonction publique territoriale pour les
     apprentis reconnus travailleurs handicapés à l'issue de leur contrat.
     ⚠️ **L'expérimentation (art. 91 loi n° 2019-828, décret n° 2020-530)
-    est arrivée à échéance le 6 août 2025** ; sa pérennisation est en
-    discussion. **Vérifier impérativement la vigueur du dispositif avant
+    est arrivée à échéance le 6 août 2025** et le dispositif reste, à ce
+    jour, **sans base légale**. Sa pérennisation (délai porté à 2 ans après
+    la fin du contrat) est portée par l'**art. 3 du PJL n° 438 (2025-2026)**,
+    déposé au Sénat le 25 février 2026 en procédure accélérée, avis
+    favorable du Conseil commun de la fonction publique du 13 janvier
+    2026 — **non promulgué à ce stade**. **Vérifier impérativement l'état
+    du dossier législatif (senat.fr) et la vigueur du dispositif avant
     d'orienter un apprenti vers cette voie** — ne pas la présenter comme
     ouverte sans confirmation sur Légifrance.
   - **Pas de dispense de concours** : l'apprentissage ne vaut pas titre
@@ -1858,9 +2182,11 @@ collective.
 ## 5. Règles métier
 
 ### 5.1 Instances
-- **CST** (comité social territorial) : depuis le renouvellement de **décembre
-  2022**, **fusion** du comité technique et du CHSCT (décret n° 2021-571).
-  Compétences : organisation et fonctionnement des services, LDG, RSU, lignes
+- **CST** (comité social territorial) : composition et élection issues du
+  renouvellement de **décembre 2022** ; **fusion** du comité technique et du
+  CHSCT (décret n° 2021-571), dont les attributions et le fonctionnement
+  pleins ne sont entrés en vigueur que le **1er janvier 2023**. Compétences :
+  organisation et fonctionnement des services, LDG, RSU, lignes
   directrices, questions SSCT. **CST propre obligatoire dès 50 agents** (en
   deçà, CST commun placé auprès du CDG) — ne pas confondre ce seuil avec les
   **200 agents** de la formation spécialisée SSCT ni avec les **350 agents**
@@ -1874,8 +2200,12 @@ collective.
 
 ### 5.2 Élections et représentativité
 - **Élections professionnelles** : tous les **4 ans**. Dernier renouvellement
-  **décembre 2022** ; prochain attendu **fin 2026** (à confirmer). Déterminent
-  la composition des instances et la représentativité syndicale.
+  **décembre 2022** ; prochain scrutin fixé au **10 décembre 2026** (arrêté
+  ministériel du 2 juillet 2025), calendrier opérationnel et règles
+  procédurales harmonisées précisés par le décret n° 2025-1430 du
+  30 décembre 2025 (délais de procédure portés de 3-5 à 8 jours notamment —
+  détail à confirmer en version consolidée). Déterminent la composition des
+  instances et la représentativité syndicale.
 
 ### 5.3 Droit syndical
 - **ASA** (autorisations spéciales d'absence), **décharges d'activité de
@@ -2113,7 +2443,10 @@ de changement.
 - Certaines productions RH doivent être **portées à la connaissance des agents**
   (ex. **LDG**, **RSU**, dispositifs **PSC**). La communication interne est le
   vecteur de cette obligation : vérifier ce qui doit être diffusé et selon
-  quelles modalités.
+  quelles modalités. Exemple d'actualité immédiate : la **participation
+  employeur PSC santé** est obligatoire depuis le **1er janvier 2026**
+  (ordonnance n° 2021-175, décret n° 2022-581) — sujet de communication
+  interne à traiter sans délai s'il ne l'a pas déjà été.
 
 ### 5.3 Marque employeur et supports
 - **Marque employeur** : attractivité, fidélisation, valorisation des métiers
@@ -2230,9 +2563,16 @@ vérifier la règle propre.
 ### 5.1 Texte pivot
 
 **Décret n° 88-145 du 15 février 1988**, relatif aux agents contractuels de
-la FPT (référence structurelle stable, **version consolidée à vérifier** :
-texte profondément modifié depuis 1988, notamment après la loi de
-transformation de la fonction publique de 2019). Il détaille forme du
+la FPT — **n'est plus le texte unique** : sa recodification progressive dans
+la partie réglementaire du CGFP est en cours depuis 2024, par vagues. Le
+volet **recrutement** (contrat écrit, mentions obligatoires, période
+d'essai) est passé au **Livre III réglementaire du CGFP** (décret
+n° 2025-695 du 24 juillet 2025, en vigueur depuis le 1er octobre 2025) —
+voir §5.2. **Rémunération, réévaluation, fin de contrat, licenciement et
+discipline** (§5.3 à 5.7) demeurent, à ce jour, dans le décret 88-145
+stricto sensu, mais un **Livre V** du CGFP réglementaire est annoncé et
+pourrait les déplacer à son tour — **vérifier à chaque usage** si la
+disposition concernée a été recodifiée. Il détaille forme du
 contrat, période d'essai, rémunération et réévaluation, discipline, fin de
 contrat, indemnité de licenciement — s'y reporter systématiquement, comme au
 décret statutaire d'un cadre d'emplois pour un titulaire.
@@ -2243,9 +2583,12 @@ la loi n° 2019-828. Détail des cas de recours → `recrutement-formation.md`
 
 ### 5.2 Recrutement — spécificités contractuelles
 
-**Contrat écrit obligatoire** (décret 88-145) : un arrêté seul ou un
-engagement verbal est irrégulier. **Mentions obligatoires** (**liste précise
-à vérifier en version consolidée**) : a minima article de fondement du
+**Contrat écrit obligatoire** (**CGFP, Livre III réglementaire**, art. R33x
+— ex-décret 88-145, recodifié depuis le 1er octobre 2025, décret
+n° 2025-695) : un arrêté seul ou un engagement verbal est irrégulier.
+**Mentions obligatoires** (**liste précise et numérotation exacte des
+articles à vérifier en version consolidée**) : a minima article de
+fondement du
 recours, définition du poste, catégorie hiérarchique, durée, rémunération,
 lieu — l'absence de l'article de fondement est un vice fréquent en
 contentieux. **Période d'essai** possible, durée modulée selon la durée du
@@ -2311,16 +2654,26 @@ d'acceptation (à la différence du titulaire).
 → §5.7), inaptitude (avis du conseil médical, cf. `qvt-sante.md`),
 suppression d'emploi, refus d'une modification substantielle du contrat.
 **Procédure** (hors motif disciplinaire) : (1) **entretien préalable** ;
-(2) **consultation de la CCP**, obligatoire pour certains motifs (**liste
-exacte à vérifier**, a minima insuffisance professionnelle et inaptitude en
-pratique connue) ; (3) **obligation de reclassement préalable** — principe
-général du droit pour tout licenciement non disciplinaire, l'employeur
-devant rechercher un poste compatible avant de licencier (jurisprudence de
-référence : **CE, avis contentieux, 25 septembre 2013, n° 365139** — numéro
-à confirmer sur conseil-etat.fr avant citation en acte ; portée d'origine :
-éviction au profit d'un titulaire, étendue ensuite par la jurisprudence aux
-autres licenciements non disciplinaires) ; (4) **notification
-motivée** + voies et délais de recours. **Indemnité de licenciement** : due
+(2) **consultation de la CCP** pour le licenciement intervenant après la
+période d'essai, sous les exceptions prévues par le CGFP réglementaire
+(article R272-19, version applicable à vérifier) ; (3) examen du
+**reclassement uniquement lorsque le motif et le texte l'imposent** ;
+(4) **notification motivée** + voies et délais de recours.
+
+Le reclassement préalable n'est **pas** une obligation générale pour tout
+licenciement non disciplinaire :
+
+- l'article 39-5 du décret 88-145 le rattache aux motifs qu'il énumère par
+  renvoi à l'article 39-3 et ne vise pas l'insuffisance professionnelle de
+  l'article 39-2 ;
+- l'avis **CE, 25 septembre 2013, n° 365139** concerne l'éviction d'un agent
+  contractuel en CDI afin d'affecter un fonctionnaire sur son emploi ; ne pas
+  l'étendre à l'insuffisance professionnelle sans fondement distinct vérifié ;
+- en cas d'insuffisance professionnelle, vérifier la version consolidée et la
+  jurisprudence applicable avant d'affirmer qu'une recherche de reclassement
+  est obligatoire.
+
+**Indemnité de licenciement** : due
 sauf faute grave/disciplinaire ou pension à taux plein ; mode de calcul
 (base, plafond, ancienneté) fixé par le décret 88-145 — **à vérifier avant
 tout montant chiffré**. **Droits au chômage** : en principe auto-assurance de
@@ -2411,8 +2764,10 @@ Ne jamais produire un montant ou un délai précis sur une valeur de mémoire.
 2. Confondre **non-renouvellement** (pas de motivation de principe) et
    **licenciement** (procédure et motivation renforcées).
 3. Croire la **CDIsation** équivalente à une **titularisation**.
-4. Oublier l'**obligation de reclassement préalable** avant un licenciement
-   pour inaptitude ou suppression d'emploi, ou omettre la **CCP** requise.
+4. Oublier le **reclassement préalable** quand le motif et le texte l'imposent
+   (notamment certains motifs de l'article 39-3 ou l'inaptitude), l'étendre à
+   tort à l'insuffisance professionnelle sur le fondement de l'article 39-5
+   ou de l'avis CE n° 365139, ou omettre la **CCP** requise.
 5. Appliquer au contractuel le régime des **congés du titulaire** (CLM/CLD)
    au lieu du congé de grave maladie propre.
 6. Traiter un **apprenti** ou un agent en **contrat aidé** comme relevant du
@@ -2434,9 +2789,10 @@ quotités de traitement des congés propres au contractuel ; motifs exacts de
 saisine de la CCP ; conditions de computation des 6 ans (interruptions,
 seuil de neutralisation) ; conditions de la portabilité du CDI ; valeur du
 point d'indice si la rémunération est positionnée sur une grille (cf.
-`carriere-paie.md` §5.6). **Référence jurisprudentielle** (CE, avis du
-25 septembre 2013, n° 365139, reclassement) : numéro à confirmer avant
-citation dans un acte.
+`carriere-paie.md` §5.6). **Référence jurisprudentielle** : l'avis CE du
+25 septembre 2013, n° 365139, ne doit être cité que pour sa portée réelle
+(éviction d'un contractuel en CDI afin d'affecter un fonctionnaire), après
+confirmation sur la source officielle.
 
 ## 10. Livrables (classés par niveau)
 
@@ -2456,13 +2812,17 @@ Gabarits → `assets/`.
 
 ## 11. Niveau de confiance (repères de la branche)
 
-- **Stable** : existence du décret 88-145 comme texte d'application ;
-  distinction non-renouvellement / licenciement ; obligation de reclassement
-  préalable ; échelle disciplinaire propre au contractuel ; obligation de
+- **Stable** : existence d'un texte d'application propre au contractuel
+  (décret 88-145 pour rémunération/fin de contrat/licenciement/discipline,
+  Livre III réglementaire du CGFP depuis le 1/10/2025 pour le recrutement) ;
+  distinction non-renouvellement / licenciement ; échelle disciplinaire
+  propre au contractuel ; obligation de
   réévaluation triennale dans son principe ; absence d'avancement
   automatique.
-- **À vérifier systématiquement** : version consolidée du décret 88-145
-  (mentions du contrat, période d'essai, délai de prévenance, indemnité de
+- **À vérifier systématiquement** : à quel texte (décret 88-145 ou CGFP
+  recodifié) renvoie chaque règle à la date de la réponse ; version
+  consolidée du texte identifié (mentions du contrat, période d'essai,
+  délai de prévenance, indemnité de
   fin de contrat, calcul de l'indemnité de licenciement, échelle des
   sanctions) ; conditions précises de la règle des 6 ans et de la
   portabilité du CDI ; motifs exacts de saisine de la CCP ; numéro de l'avis
@@ -2479,8 +2839,9 @@ Gabarits → `assets/`.
    CDIsation ?
 3. Non-renouvellement et licenciement bien distingués (motivation,
    procédure, délai de prévenance propres à chacun) ?
-4. Si licenciement : entretien préalable, CCP (si requise), reclassement,
-   indemnité, motivation et voies de recours tous traités ?
+4. Si licenciement : entretien préalable, CCP (si requise), reclassement
+   seulement si le motif l'impose, indemnité, motivation et voies de recours
+   tous traités ?
 5. Discipline traitée avec l'échelle **propre** du décret 88-145 ?
 6. Contractuel de droit public confirmé (pas apprenti, contrat aidé,
    personnel de droit privé d'un OPH) ?
@@ -2578,8 +2939,10 @@ confirmer)
 - **Dérogations** : **activité accessoire sur autorisation préalable**, liste
   réglementaire fermée (enseignement, activité agricole non commerciale,
   travaux chez particuliers, secteur associatif, vendanges, missions
-  d'intérêt public — décret n° 2020-69, **à confirmer**, liste à vérifier
-  avant instruction) ; **temps partiel pour création/reprise d'entreprise**
+  d'intérêt public — **CGFP art. R123-7 à R123-13** [ex-décret n° 2020-69,
+  abrogé et recodifié depuis le 1er février 2025, décret n° 2024-1038],
+  liste à vérifier avant instruction) ; **temps partiel pour création/reprise
+  d'entreprise**
   (régime propre, durée limitée, conditions à vérifier) ; **poursuite d'une
   activité privée** dans une société pour un agent nouvellement recruté.
 - **Contrôles de déconflit** : **départ vers le privé** et **cumul création
@@ -2602,8 +2965,10 @@ confirmer)
 
 ### 5.3 Signalements et harcèlement
 
-- **Dispositif de signalement obligatoire** (CGFP art. L135-6 — à confirmer ;
-  décret n° 2020-256 — **à confirmer**) pour violences, discriminations,
+- **Dispositif de signalement obligatoire** (CGFP art. L135-6 A à L135-6,
+  issus de la loi n° 2019-828 art. 80 ; modalités aux **art. R135-1 à
+  R135-10 du CGFP** [ex-décret n° 2020-256, abrogé et recodifié depuis le
+  1er février 2025, décret n° 2024-1038]) pour violences, discriminations,
   harcèlement moral/sexuel, agissements sexistes : **recueil**
   (confidentialité), **orientation** (accompagnement médical/social),
   **traitement traçable**, **protection du signalant** contre les
@@ -2699,17 +3064,24 @@ Appliquer le noyau de vérification (matrice §2.2 du SKILL.md) dès que :
 9. Confondre **enquête administrative** et **procédure disciplinaire**.
 10. Mentions **politiques/syndicales/religieuses** au dossier — interdiction
     absolue. Donner une **durée de conservation** de mémoire au lieu du
-    référentiel CNIL.
+    texte applicable — et appliquer par erreur le référentiel CNIL RH
+    généraliste au **dossier individuel** de l'agent public, qu'il exclut
+    explicitement (régi par l'arrêté du 21 décembre 2012).
 11. Confondre l'accès **ordinaire** au dossier et le droit de **communication
     intégrale** propre à la discipline (carriere-paie §5.5).
 
 ## 9. Données volatiles à vérifier
 
 Pas de valeur d'indexation propre à la branche. **À confirmer en version
-consolidée** : décret n° 2020-69 (activités accessoires), décret n° 2020-256
-(dispositif de signalement), loi n° 2022-401 (lanceurs d'alerte), loi
+consolidée** : CGFP art. R123-7 à R123-13 (activités accessoires, ex-décret
+n° 2020-69), CGFP art. R135-1 à R135-10 (dispositif de signalement,
+ex-décret n° 2020-256), loi n° 2022-401 (lanceurs d'alerte), loi
 n° 2021-1109 (CRPR, référent laïcité), périmètre des emplois soumis à HATVP,
-seuils d'effectifs du dispositif d'alerte, référentiel CNIL de conservation
+seuils d'effectifs du dispositif d'alerte. Le **dossier individuel de
+l'agent public** relève de l'**arrêté du 21 décembre 2012**, et non du
+référentiel CNIL généraliste « gestion des ressources humaines » (qui
+l'exclut explicitement) — ne pas appliquer par erreur les durées de
+conservation de ce dernier au dossier individuel.
 des données RH, délais de notification CNIL en cas de violation de données.
 
 ## 10. Livrables (classés par niveau)

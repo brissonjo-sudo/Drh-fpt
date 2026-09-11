@@ -2,6 +2,127 @@
 
 Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
+## [0.6.0] — 2026-09-11 — Fiabilisation après audit juridique
+
+### Prépublication
+- Version du skill et date de vérification des sources alignées sur le candidat
+  réellement évalué (`v0.6.0`, audit du 4 septembre 2026).
+- Sortie de brouillon conditionnée aux deux campagnes répondant + juge
+  (`integration` et `degraded`) et à la publication de leurs rapports datés.
+- Le harnais refuse désormais de valider une campagne incomplète, tronquée,
+  non parsable, exécutée depuis un dépôt sale ou comportant un verdict d'échec.
+
+### Corrigé (revue de merge de l'audit de fraîcheur, 2026-09-04)
+- **Égalité professionnelle** (`qvt-sante.md` §5.7) : précision sur le
+  décret n° 2020-528 — en vigueur dès sa publication (4/05/2020), c'est le
+  mécanisme de pénalité financière qui n'est devenu opérationnel qu'au
+  1/10/2021 (délai de mise en demeure), pas le décret lui-même. Réserve
+  élargie sur les nominations équilibrées : jalons de trajectoire et
+  périmètre exact (FPT distinctement de la FPE/FPH) ajoutés à la liste des
+  points à recouper avant citation dans un acte, une revue indépendante
+  n'ayant pas pu trianguler ce sous-détail avec un texte primaire univoque.
+
+### Corrigé (audit de fraîcheur juridique, 2026-09-04)
+- **Rupture conventionnelle** (`socle-sources-verification.md`,
+  `carriere-paie.md` §5.9) : n'est plus présentée comme expérimentale à
+  échéance incertaine (31/12/2025) — **pérennisée** par l'art. 173 de la loi
+  n° 2026-103 du 19 février 2026, CGFP art. L.552-1 à L.552-5, décrets
+  d'application du 6 août 2026 (n° 2026-745, n° 2026-746).
+- **CET** (`carriere-paie.md` §5.9) : la dérogation JO 2024 (70 jours),
+  présentée comme « à vérifier », est en réalité caduque depuis le
+  1/01/2025 ; ajout du décret n° 2025-1135 du 26/11/2025 (faculté locale de
+  plafond annuel d'indemnisation), absent jusqu'ici.
+- **Élections professionnelles territoriales** (`cst-dialogue-social.md`
+  §5.2) : la date « fin 2026 (à confirmer) » est remplacée par la date
+  officielle du **10 décembre 2026** (arrêté du 2/07/2025, décret
+  n° 2025-1430 du 30/12/2025) ; nuance apportée sur l'entrée en vigueur des
+  attributions du CST (1/01/2023, distincte de sa composition élue en
+  12/2022).
+- **Recodification du CGFP** (`socle-sources-verification.md`,
+  `statut-garanties.md`, `contractuels.md`) : les décrets n° 2020-69
+  (activités accessoires) et n° 2020-256 (dispositif de signalement) sont
+  abrogés et recodifiés (CGFP art. R123-7 s. et R135-1 s., depuis le
+  1/02/2025) ; le décret n° 88-145 n'est plus le texte pivot unique des
+  contractuels, son volet recrutement étant passé au Livre III
+  réglementaire du CGFP (depuis le 1/10/2025) ; ajout d'un repère général
+  sur la recodification par vagues (Livres I à IV, Livre V annoncé) et sur
+  l'entrée en vigueur du décret n° 2026-705 du 29/07/2026 (conseil médical).
+- **Dossier individuel de l'agent public** (`statut-garanties.md`) : le
+  référentiel CNIL RH généraliste l'exclut explicitement ; renvoi ajouté
+  vers l'arrêté du 21 décembre 2012.
+- **Égalité professionnelle** (`qvt-sante.md` §5.7) : les seuils et taux du
+  plan d'action (> 20 000 hab., décret n° 2020-528, 1 %/0,5 %), des
+  nominations équilibrées (loi n° 2023-623, 40→50 %, palier 2027) et de
+  l'index égalité (décrets n° 2024-801/802, > 40 000 hab. + ≥ 50 agents)
+  sortent du régime générique « à vérifier » pour être cités avec leur
+  texte source.
+- **Titularisation des apprentis handicapés** (`recrutement-formation.md`) :
+  ajout du véhicule législatif de pérennisation (PJL n° 438, 2025-2026,
+  déposé au Sénat le 25/02/2026, non promulgué) — le constat d'absence de
+  base légale depuis le 6/08/2025 reste inchangé.
+- **PSC santé** (`communication-interne.md`) : ajout de l'entrée en vigueur
+  au 1/01/2026 de la participation employeur obligatoire, comme exemple
+  concret d'obligation d'information désormais actuelle.
+
+### Corrigé
+- **QVT / CITIS** : l'avis sur l'imputabilité relève de la formation
+  **plénière** du conseil médical ; la décision finale appartient à l'autorité
+  territoriale.
+- **Discipline FPT** : suppression de toute voie vers le conseil de discipline
+  de recours pour une procédure nouvelle ; rappel que le déplacement d'office
+  du deuxième groupe est propre à la FPE ; contrôle de légalité aligné sur la
+  version en vigueur de l'article L2131-2 du CGCT.
+- **Contractuels** : portée de l'article 39-5 du décret 88-145 et de l'avis CE
+  n° 365139 limitée à leurs motifs réels ; aucune obligation générale de
+  reclassement affirmée pour l'insuffisance professionnelle ; indemnité du
+  titulaire prévue par le décret 85-186 rétablie dans la comparaison.
+- **Cas Casagranda** : le banc accepte les numéros 147511 et/ou 147512 tout en
+  maintenant l'obligation de réserve avant citation dans un acte.
+- **Contrôle de légalité** : suppression de la mention résiduelle présentant
+  la révocation comme obligatoirement transmissible ; interdiction de
+  réintroduire les anciennes catégories de sanctions depuis une version
+  historique de l'article L2131-2 du CGCT.
+- **`assets/decision-modele.md`** : la check-list avant signature portait
+  encore l'ancienne lecture (« ex. la révocation y figure »), en contradiction
+  avec `references/carriere-paie.md`. Alignée sur la version en vigueur de
+  l'article, avec renvoi séparé aux modalités locales de télétransmission.
+
+### Renforcé
+- `references/contrat-execution.md` et `SKILL.md` : abstention terminale hors
+  base ou faute de source ; aucune valeur exacte après une réserve ; mention
+  « vérifié » traçable ; contrôle identique des développements surnuméraires ;
+  garde spécifique sur les recours, la publicité et le contrôle de légalité
+  des projets d'acte.
+- Juge LLM : une erreur juridique surnuméraire fait échouer le verdict global ;
+  architecture et fiabilité juridique sont notées séparément ; aucune
+  accusation d'invention fondée sur la seule récence d'une référence.
+- `recherche-juridique >= 2.2.0` devient une dépendance obligatoire du
+  fonctionnement nominal. Son indisponibilité déclenche un mode dégradé
+  explicite et l'abstention sur toute donnée ou procédure exigeant une
+  vérification.
+- Harnais : provenance reproductible des campagnes (mode, modèles, versions,
+  SHA Git, état des dépôts, empreintes des contextes et fichiers chargés).
+- `scripts/check_coherence.py` — sixième contrôle : **noyau modifié ⇒ version
+  incrémentée**. `SKILL.md`, `references/` et `assets/` sont comparés au tag de
+  la version déclarée ; toute divergence non couverte par une entrée
+  `## [Non publié]` du CHANGELOG devient bloquante, de même qu'une entrée non
+  publiée visant une version antérieure ou égale. Les cinq contrôles existants
+  garantissaient que la version était la même partout, pas qu'elle avait bougé
+  quand le contenu bougeait : un skill au comportement modifié pouvait se
+  déclarer sous un numéro déjà publié, rendant les campagnes de test
+  indatables. Contrôle dégradé en avertissement hors dépôt Git ou en l'absence
+  du tag (clone superficiel).
+
+### Tests
+- Cas 02, 09, 12, 19 et 27 corrigés ou durcis.
+- Trois cas standard de non-régression ajoutés : formation plénière CITIS,
+  suppression du conseil de discipline de recours, version actuelle de
+  l'article L2131-2 du CGCT.
+- Cas 15 et 16 dédoublés par mode : vérification et réponse en co-activation ;
+  abstention uniquement en mode dégradé. Le JSON contient **32 variantes**,
+  dont **30 actives par campagne**.
+- Nouvelle campagne LLM non encore exécutée.
+
 ## [0.5.1] — 2026-07-14 — Correctif terrain : distinction RIFSEEP/ISFE + vérification immédiate
 
 > Issu d'un **cas réel** documenté en conversation (voir `JOURNAL.md`,

@@ -22,6 +22,22 @@ Une entrée par cas, au format ci-dessous.
 
 ## Entrées
 
+### 2026-07-26 — Co-activation obligatoire et campagnes reproductibles
+- Type : erreur + amélioration
+- Branche : socle + carrière-paie + tests
+- Contexte (anonymisé) : comparaison de trois campagnes exécutées sur le même
+  commit, puis reprise ciblée avec le skill compagnon
+  `recherche-juridique` v2.2.0.
+- Constat : le compagnon améliore la traçabilité des sources mais ne garantit
+  pas leur bonne application ; le harnais API testait jusqu'ici DRH FPT seul,
+  alors que le fonctionnement nominal repose sur les deux skills. Les cas
+  d'abstention 15 et 16 mélangeaient fonctionnement nominal et mode dégradé.
+  Une ancienne lecture de L2131-2 subsistait aussi à propos de la révocation.
+- Action proposée : dépendance rendue obligatoire ; mode dégradé explicite ;
+  correction L2131-2 ; variantes intégration/dégradé des cas 15 et 16 ;
+  enregistrement automatique des versions, SHA et contextes de campagne.
+- Statut : intégré (candidat v0.6.0), campagne LLM à exécuter.
+
 ### 2026-06-26 — Création du MVP
 - Type : cas nouveau
 - Branche : carrière-paie
@@ -209,3 +225,47 @@ Une entrée par cas, au format ci-dessous.
 - Note : le texte exact de l'entrée n'ayant pas été fourni avec la demande, il a
   été reconstitué d'après le cas décrit — à ajuster si le compte rendu diffère.
 - Statut : intégré (v0.5.1)
+
+### 2026-07-25 — Contrat d'exécution testable pour la v0.6.0
+- Type : lacune + amélioration architecturale
+- Branche : transversal, pilote carrière-paie
+- Contexte (anonymisé) : lancement test-first de la branche de travail
+  `agent/audit-carriere-paie-v0.6.0`, sans modification des règles juridiques
+  existantes.
+- Constat : le pilote carrière-paie est riche et comporte de nombreux
+  garde-fous, mais reste trop déclaratif. Les obligations de qualification,
+  levée des variables, décision, recommandation, action et livraison sont
+  dispersées ; aucun contrat d'exécution transversal ne permet de les tester
+  comme une chaîne complète.
+- Action proposée : ajout de `references/contrat-execution.md`, imposant la
+  chaîne `qualifier → lever les variables → borner → vérifier → décider → agir
+  → livrer → sécuriser`, et de cinq cas architecturaux dans la source unique
+  `tests/cas-de-test.json`. Documentation des critères et de l'absence de preuve
+  tant qu'une campagne LLM n'a pas été exécutée dans `tests/README.md`.
+- Statut : intégré sur la branche de travail ; JSON, cohérence, fraîcheur du
+  bundle et compilation Python validés localement sans API ; tests LLM
+  répondant + juge non exécutés faute de clé dans l'environnement.
+
+### 2026-07-25 — Évaluation croisée de la campagne manuelle v0.6.0
+- Type : erreurs + amélioration du banc de tests
+- Branche : transversal, qvt-sante, carrière-paie, agents contractuels
+- Contexte (anonymisé) : 27 réponses manuelles évaluées indépendamment, puis
+  consolidation contradictoire des verdicts sur sources officielles.
+- Constat : le contrat d'exécution améliore nettement la qualification, la
+  décision et le plan d'action, mais les gardes d'abstention échouent sur les
+  données volatiles et les sujets hors base. Des développements surnuméraires
+  contiennent des erreurs recopiables : formation restreinte au lieu de
+  plénière pour l'imputabilité, conseil de discipline de recours supprimé,
+  déplacement d'office transposé à la FPT, ancienne portée de l'article
+  L2131-2 du CGCT. Le cas 19 et sa règle source étendaient à tort l'article
+  39-5 du décret 88-145 et l'avis CE n° 365139 à l'insuffisance
+  professionnelle ; la comparaison niait aussi l'indemnité du titulaire prévue
+  par le décret 85-186.
+- Action : correction des trois branches ; abstention rendue terminale ;
+  traçabilité obligatoire de la mention « vérifié » ; même niveau de contrôle
+  pour les précisions surnuméraires ; correction des cas 02, 09, 12, 19 et 27 ;
+  ajout de trois non-régressions (CITIS, recours disciplinaire, contrôle de
+  légalité) ; juge séparant architecture et fiabilité juridique.
+- Statut : corrections intégrées sur la branche de travail ; JSON, compilation
+  Python, cohérence et fraîcheur du bundle validés localement sans API ;
+  nouvelle campagne LLM à rejouer manuellement.
