@@ -38,7 +38,7 @@ Avant tout sous-agent, crée un identifiant de campagne puis écris
 
 Le dépôt `drh-fpt` doit être propre. En mode intégration, le dépôt compagnon
 doit l'être aussi. Si un état est sale, un SHA est absent ou le candidat ne se
-déclare pas `v0.6.0`, arrête la campagne : sa provenance ne permettrait pas une
+déclare pas `v0.7.0`, arrête la campagne : sa provenance ne permettrait pas une
 validation de release.
 
 Lis ensuite `SKILL.md`, `references/*.md` et
@@ -56,7 +56,8 @@ n'est plus dupliqué dans ce prompt). Chaque cas comporte :
   `"echec_attendu"` (cas adversarial : la réussite consiste à
   refuser/s'abstenir/rediriger, voir Étape 4) ;
 - `prompt` — la question à poser au sous-agent répondant ;
-- `attendus` — liste de critères de réussite ;
+- `attendus` — liste d'objets `{id, texte}` ; l'identifiant est stable et le
+  juge doit le restituer exactement ;
 - `echec_si` — liste de comportements disqualifiants spécifiques au cas
   (peut être vide).
 - `modes` — modes dans lesquels la variante est active ; si le champ est
@@ -78,7 +79,8 @@ Pour **chacun des cas** du JSON :
 2. **Sous-agent JUGE** — lance un **autre** sous-agent au contexte frais.
    Donne-lui le `prompt`, la réponse produite par le répondant, la liste
    `attendus`, la liste `echec_si`, et le `type` du cas. Il doit, pour chaque
-   critère de `attendus`, statuer **SATISFAIT / PARTIEL / ABSENT** (une phrase
+   critère de `attendus`, recopier exactement `id` et `texte`, puis statuer
+   **SATISFAIT / PARTIEL / ABSENT** (une phrase
    de justification), lister toute **affirmation fausse ou inventée**
    (référence, article, montant, jurisprudence), puis rendre un **verdict
    RÉUSSITE / ÉCHEC** et un **score sur 5**. Il rend aussi deux évaluations
@@ -185,6 +187,6 @@ rapport dans `tests/rapports/`. Liste les correctifs nécessaires ; après toute
 correction, le mode concerné doit être rejoué intégralement sur le nouveau SHA.
 
 Si toutes les conditions passent, copie le rapport sans réécriture vers
-`tests/rapports/RAPPORT-v0.6.0-<date>-<mode>.md`. Lance tous les cas actifs du
+`tests/rapports/RAPPORT-v0.7.0-<date>-<mode>.md`. Lance tous les cas actifs du
 mode choisi, puis remets-moi le rapport et les réponses brutes sans les
 réécrire.

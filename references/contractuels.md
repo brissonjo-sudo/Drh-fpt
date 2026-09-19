@@ -113,7 +113,7 @@ titularisation, elle ne confère jamais la qualité de fonctionnaire.
   droit ; toute évolution procède d'une décision expresse (réévaluation
   triennale, revalorisation volontaire, changement de fonctions).
 - Régime indemnitaire : RIFSEEP possible par équivalence si la délibération
-  vise explicitement les contractuels (cf. `carriere-paie.md` §5.7).
+  vise explicitement les contractuels (cf. `references/carriere-paie/remuneration-paie.md` §5.7).
 
 ### 5.5 Fin de contrat (hors licenciement)
 
@@ -168,7 +168,7 @@ l'employeur (sauf convention France Travail) — vérifier le régime local.
 ### 5.7 Discipline des contractuels — échelle propre (décret 88-145)
 
 **Distincte de celle du titulaire** (CGFP L533-1) — ne jamais appliquer
-l'échelle des 4 groupes de `carriere-paie.md` §5.5 à un contractuel.
+l'échelle des 4 groupes de `references/carriere-paie/statut-discipline.md` §5.5 à un contractuel.
 
 | Sanction | CCP disciplinaire |
 |---|---|
@@ -185,7 +185,7 @@ suffisant) : leur méconnaissance entache la sanction d'illégalité. **CCP en
 formation disciplinaire** = équivalent fonctionnel du conseil de discipline,
 mais **ce n'est pas la CAP** (composition selon CDG ou en propre).
 **Prescription** : par analogie 3 ans à compter de la connaissance effective
-des faits (cf. `carriere-paie.md` §5.5), mais **fondement textuel propre aux
+des faits (cf. `references/carriere-paie/statut-discipline.md` §5.5), mais **fondement textuel propre aux
 contractuels à vérifier séparément**.
 
 ### 5.8 Congés, protection sociale et entretien professionnel
@@ -194,7 +194,7 @@ Renvoi → `qvt-sante.md` pour le cadre général (prévention, CITIS, conseil
 médical, PSC). Spécificités : **congé de grave maladie** (contractuel)
 **≠ CLM** (titulaire) — conditions, durée et quotité de traitement
 distinctes, paliers d'ancienneté **à vérifier**, ne jamais transposer.
-Affiliation retraite : IRCANTEC (cf. `carriere-paie.md` §5.8).
+Affiliation retraite : IRCANTEC (cf. `references/carriere-paie/remuneration-paie.md` §5.8).
 
 **Entretien professionnel** obligatoire pour les CDI et les **CDD > 1 an**
 (seuil à confirmer) : utile en cas de contentieux sur insuffisance
@@ -275,7 +275,7 @@ quotités de traitement des congés propres au contractuel ; motifs exacts de
 saisine de la CCP ; conditions de computation des 6 ans (interruptions,
 seuil de neutralisation) ; conditions de la portabilité du CDI ; valeur du
 point d'indice si la rémunération est positionnée sur une grille (cf.
-`carriere-paie.md` §5.6). **Référence jurisprudentielle** : l'avis CE du
+`references/carriere-paie/remuneration-paie.md` §5.6). **Référence jurisprudentielle** : l'avis CE du
 25 septembre 2013, n° 365139, ne doit être cité que pour sa portée réelle
 (éviction d'un contractuel en CDI afin d'affecter un fonctionnaire), après
 confirmation sur la source officielle.

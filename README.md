@@ -1,6 +1,6 @@
 # drh-fpt — Skill DRH Fonction Publique Territoriale
 
-Skill Claude d'expertise en gestion des ressources humaines de la
+Skill d'expertise en gestion des ressources humaines de la
 **fonction publique territoriale**, à la fois opérationnel et
 juridiquement sourcé.
 
@@ -27,10 +27,9 @@ Hybride :
   livrable.
 - **Vérifié sur déclencheur** — une **matrice métier/juridique** explicite
   indique quand vérifier la source (procédure, calcul, délai, condition
-  d'accès, compétence d'instance, jurisprudence). Le skill embarque un **noyau
-  de vérification autonome** (primarité, date de référence, conflit de normes,
-  abstention) et **s'appuie sur le skill `recherche-juridique`** pour
-  l'approfondissement.
+  d'accès, compétence d'instance, jurisprudence). Le skill embarque un filet de
+  sécurité (primarité, date de référence, conflit de normes, abstention) et
+  exige le skill `recherche-juridique` pour le fonctionnement nominal.
 
 ## Cadrage d'ouverture
 
@@ -74,13 +73,20 @@ drh-fpt/
 ├── scripts/
 │   ├── build_bundle.py                   Régénère le bundle depuis les sources (+ --check, --package)
 │   ├── bundle-preambule.md               Gabarit du préambule du bundle (placeholder {{VERSION}})
+│   ├── context_loader.py                 Charge le noyau, les branches et gabarits nécessaires
+│   ├── measure_contexts.py               Compare la taille des contextes complet et ciblé
 │   └── check_coherence.py                Vérifie version/bundle/CHANGELOG/renvois/arbre README
 ├── references/
 │   ├── _gabarit-branche.md               Gabarit décisionnel des branches
 │   ├── contrat-execution.md               Contrat d'exécution transversal testable
 │   ├── socle-sources-verification.md     Sources FPT, conflits de normes, valeurs chiffrées
 │   ├── parametres-collectivite.md        Variables +350 agents + garde-fous régimes spécifiques
-│   ├── carriere-paie.md                  Branche carrière & paie
+│   ├── restitution-proportionnee.md      Profondeur juridique et longueur de réponse
+│   ├── carriere-paie.md                  Routeur et contrôles communs carrière-paie
+│   ├── carriere-paie/
+│   │   ├── statut-discipline.md          Statut, carrière, instances et discipline
+│   │   ├── remuneration-paie.md          Traitement, indemnités, cotisations et retraite
+│   │   └── temps-fin-fonctions.md        Temps, abandon, grève et fins de fonctions
 │   ├── qvt-sante.md                      Branche QVT & santé
 │   ├── recrutement-formation.md          Branche recrutement & formation
 │   ├── cst-dialogue-social.md            Branche CST & dialogue social
@@ -100,11 +106,17 @@ drh-fpt/
 └── tests/
     ├── README.md                         Dispositif de tests (deux protocoles)
     ├── cas-de-test.json                  Source unique (32 variantes, 30 actives par mode)
-    ├── run_tests.py                      Harnais API (répondant + juge)
+    ├── run_tests.py                      Point d'entrée du harnais
+    ├── campaign.py                       Reprise, jugement, preuves et métriques
+    ├── providers.py                      Adaptateurs Anthropic et OpenAI
+    ├── evidence.schema.json              Schéma des traces de consultation
     ├── test_harness.py                   Tests déterministes du harnais
+    ├── test_context_loader.py            Tests du chargement ciblé
+    ├── test_providers.py                 Tests des adaptateurs sans réseau
     ├── prompt-claude-code.md             Protocole sous-agents Claude Code (lit cas-de-test.json)
     ├── cas-co-activation.md              Cas transverse drh-fpt × recherche-juridique
     └── rapports/                         Rapports de campagnes validés (datés)
+        ├── CONTEXTE-v0.7.0.md            Mesure complet/sélectif du candidat v0.7.0
         └── RAPPORT-2026-06-27.md         Campagne 10 cas (v0.4.2, archivée)
 ```
 
@@ -136,9 +148,10 @@ n'est livrée sans vérification (voir Validation).
 s'active automatiquement sur les questions RH territoriales.
 
 **Sur un autre LLM** : coller le contenu de `drh-fpt-bundle-pour-LLM.md` en tête
-de conversation (instructions système). Les fichiers de connaissance et de
-règles y sont consolidés avec une consigne d'adhérence et d'anti-hallucination
-(les gabarits de livrables `assets/` ne sont pas inclus dans le bundle).
+de conversation (instructions système). Les règles, branches, modules et
+gabarits de livrables y sont consolidés. Un environnement qui sait charger des
+fichiers à la demande peut utiliser `scripts/context_loader.py` pour réduire le
+contexte sans retirer le noyau de sécurité.
 
 ## Validation
 
@@ -152,9 +165,9 @@ répondant/juge à contextes séparés — voir `tests/`) :
   **réussite 5/5 sur 9 critères**.
 - Historique : 3 tests internes initiaux + 5 portages externes (Gemini,
   ChatGPT, Grok réussis ; Vibe conservé comme contre-exemple).
-- **Candidat v0.6.0** : sortie de brouillon suspendue aux deux campagnes de
-  30 cas (`integration` et `degraded`) selon le gate décrit dans
-  `tests/README.md`.
+- **Candidat v0.7.0** : harnais multifournisseur, critères identifiés, reprise,
+  traces de consultation et chargement sélectif. Sa publication reste soumise
+  aux deux campagnes complètes décrites dans `tests/README.md`.
 
 Détail : `tests/rapports/`, `JOURNAL.md`, `CHANGELOG.md`.
 

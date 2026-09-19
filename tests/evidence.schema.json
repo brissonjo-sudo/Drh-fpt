@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Traces de consultation DRH-FPT",
+  "type": "object",
+  "required": ["consultations"],
+  "additionalProperties": false,
+  "properties": {
+    "consultations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "case_id",
+          "source_url",
+          "consulted_at",
+          "version_or_date",
+          "supporting_excerpt",
+          "conclusion_supported"
+        ],
+        "properties": {
+          "case_id": {"type": "string", "minLength": 1},
+          "source_url": {"type": "string", "format": "uri", "minLength": 1},
+          "source_id": {"type": "string"},
+          "consulted_at": {"type": "string", "format": "date-time"},
+          "version_or_date": {"type": "string", "minLength": 1},
+          "supporting_excerpt": {"type": "string", "minLength": 1},
+          "conclusion_supported": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

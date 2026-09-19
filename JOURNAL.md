@@ -269,3 +269,16 @@ Une entrée par cas, au format ci-dessous.
 - Statut : corrections intégrées sur la branche de travail ; JSON, compilation
   Python, cohérence et fraîcheur du bundle validés localement sans API ;
   nouvelle campagne LLM à rejouer manuellement.
+### 2026-09-19 — Critères du juge et contexte progressif
+- Type : erreur + amélioration
+- Branche : socle + carrière-paie + tests
+- Contexte (anonymisé) : audit du protocole de validation et de la taille du
+  contexte, sans dossier individuel.
+- Constat : le validateur acceptait des critères dupliqués et sans rapport
+  avec les attendus si leur nombre et les verdicts étaient corrects. Les
+  campagnes ne pouvaient pas être reprises ou rejugées proprement, et le bundle
+  complet était chargé pour tous les cas.
+- Action proposée : identifiants stables des critères, validation bijective,
+  évaluations immuables, métriques multifournisseurs, trois niveaux de preuve
+  et chargement sélectif des branches et gabarits.
+- Statut : intégré (candidat v0.7.0), campagnes LLM à exécuter.

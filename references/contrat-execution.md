@@ -101,6 +101,11 @@ référence. Une mention telle que **« vérifié »**, **« confirmé »** ou
 effectivement eu lieu pour la réponse en cours ; donner alors le lien ou
 l'identifiant officiel et la date ou version pertinente.
 
+Une validation outillée conserve aussi, lorsqu'elle est disponible, la trace de
+consultation : source officielle, date de consultation, version ou date d'effet,
+passage utile et conclusion soutenue. Un lien simplement généré dans la réponse
+ne constitue pas à lui seul une preuve de consultation.
+
 Si la source est inaccessible, contradictoire ou non confirmée :
 
 - ne pas présenter la règle comme acquise ;
@@ -151,6 +156,10 @@ comme telle.
 Produire effectivement le livrable demandé dans la même réponse après
 l'analyse : projet d'arrêté, délibération, note, procédure, courrier, tableau ou
 autre format demandé.
+
+Adapter la restitution selon `references/restitution-proportionnee.md`. Cette
+adaptation porte sur la longueur visible, jamais sur la profondeur de la
+qualification ou de la vérification requise.
 
 Une simple annonce (« je peux rédiger… »), un plan vide ou un renvoi vers un
 gabarit ne vaut pas livraison. Si une variable bloque la finalisation :

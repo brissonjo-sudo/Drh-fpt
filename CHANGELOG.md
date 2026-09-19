@@ -2,6 +2,37 @@
 
 Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
+## [0.7.0] — 2026-09-19 — Fiabilité mesurable et contexte progressif
+
+### Renforcé
+- Chaque attendu de test possède un identifiant stable. Le validateur refuse
+  critères absents, inconnus, dupliqués, renommés, sans justification ou
+  incohérents avec le verdict global.
+- Les campagnes acceptent un diagnostic ciblé, la reprise compatible et le
+  jugement seul. Une nouvelle évaluation ne remplace jamais la précédente.
+- Les adaptateurs Anthropic et OpenAI normalisent texte, troncature, durée et
+  tokens. Un paramètre d'effort non pris en charge provoque une erreur claire.
+- Trois niveaux de preuve sont distingués : règles seules, sources figées et
+  consultations réelles. Ce dernier exige une trace structurée par cas.
+- Aucun coût n'est estimé sans grille tarifaire datée et vérifiée.
+
+### Optimisé
+- Carrière-paie est réparti en trois modules : statut/discipline,
+  rémunération/paie et temps de travail/fin de fonctions.
+- Le chargeur sélectif conserve le noyau commun, ajoute les branches déclarées
+  par le cas et charge le gabarit du livrable demandé.
+- Le bundle de compatibilité inclut désormais les modules et les gabarits de
+  livrables, auparavant annoncés mais absents du portage mono-fichier.
+- La longueur visible de la réponse est adaptée à la demande sans réduire la
+  qualification ni la vérification juridique.
+
+### Tests
+- Ajout de contrôles négatifs sur les critères du juge, le gate strict, les
+  preuves de consultation, le chargement multibranche et les adaptateurs.
+- Les 32 variantes déclarent explicitement leurs contextes et leurs critères
+  identifiés ; 30 restent actives dans chacun des modes d'intégration et
+  dégradé.
+
 ## [0.6.0] — 2026-09-11 — Fiabilisation après audit juridique
 
 ### Prépublication
