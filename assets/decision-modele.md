@@ -63,8 +63,12 @@ Fait à [lieu], le [date].
 - [ ] **Compétence** de l'autorité signataire vérifiée (délégations le cas échéant).
 - [ ] **Procédure préalable** respectée (contradictoire, avis d'instance, mise en
       demeure…) selon la nature de l'acte.
-- [ ] **Transmission au contrôle de légalité** : obligatoire ? (vérifier la liste
-      de l'art. L. 2131-2 CGCT — ex. la révocation y figure, pas la radiation pour
-      abandon de poste — à confirmer).
+- [ ] **Transmission au contrôle de légalité** : obligatoire ? Vérifier la
+      **version en vigueur** de l'art. L. 2131-2 CGCT **à la date de l'acte** :
+      elle ne comporte plus de catégorie générale couvrant les sanctions
+      disciplinaires. Ne pas réintroduire depuis une version historique une
+      obligation visant la révocation, la mise à la retraite d'office ou les
+      sanctions en général ; la radiation pour abandon de poste n'y figure pas.
+      Traiter séparément les modalités locales de télétransmission.
 - [ ] **Visas** confirmés en version consolidée (Légifrance) à la date de l'acte.
 - [ ] **Notification** par voie traçable (LRAR / décharge).

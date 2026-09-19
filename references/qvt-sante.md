@@ -47,8 +47,11 @@ invalidité ; égalité professionnelle (plan d'action, nominations
   de travail.
 - **Conseil médical** : depuis le 1er février 2022, **fusion** du comité
   médical et de la commission de réforme (décret n° 2022-350). Formations
-  restreinte et plénière ; intervient sur les congés de longue durée/maladie,
-  l'imputabilité au service, l'inaptitude.
+  restreinte et plénière. En matière d'**imputabilité au service**, lorsqu'un
+  avis du conseil médical est requis, il siège en **formation plénière**
+  (ancienne compétence de la commission de réforme), jamais en formation
+  restreinte. L'autorité territoriale reste compétente pour décider de
+  l'imputabilité ; la saisine du conseil n'est pas systématique.
 
 ### 5.3 Congés liés à la santé
 - **CMO** (maladie ordinaire), **CLM** (longue maladie), **CLD** (longue durée) ;
@@ -92,9 +95,11 @@ n° 2022-581, loi n° 2025-1251 du 22 décembre 2025) :
 ### 5.7 Égalité professionnelle
 
 - **Plan d'action relatif à l'égalité professionnelle** : obligatoire pour
-  les employeurs territoriaux au-dessus d'un seuil d'effectif (ordre de
-  grandeur **> 20 000 habitants / seuil d'effectif à vérifier** — ne pas
-  citer de mémoire). Quatre axes réglementaires :
+  les collectivités et EPCI de **plus de 20 000 habitants** (décret
+  n° 2020-528 du 4 mai 2020, en vigueur dès sa publication ; le mécanisme
+  de pénalité financière n'est devenu opérationnel qu'à l'issue du délai
+  de mise en demeure, au 1er octobre 2021 — seuil stable, à confirmer en
+  version consolidée avant tout acte). Quatre axes réglementaires :
   1. évaluation, prévention et, le cas échéant, résorption des écarts de
      rémunération ;
   2. garantie de l'égal accès aux corps, cadres d'emplois et grades ;
@@ -103,20 +108,30 @@ n° 2022-581, loi n° 2025-1251 du 22 décembre 2025) :
   4. prévention et lutte contre les violences sexuelles, sexistes et le
      harcèlement.
   Durée maximale **3 ans**, renouvelable. Absence de plan : **pénalité
-  financière** possible (ordre de grandeur **1 % de la rémunération
-  brute globale** annoncé — **taux à confirmer**, ne pas citer de mémoire en
-  acte). Ce taux peut être **ramené à 0,5 %** si l'employeur justifie d'un
-  **engagement effectif d'élaboration** du plan avant la fin de la mise en
-  demeure — **à vérifier** avant toute réponse chiffrée.
+  financière** plafonnée à **1 % de la rémunération brute annuelle
+  globale** (décret n° 2020-528), ramenée à **0,5 %** si l'employeur
+  justifie d'un **engagement effectif d'élaboration** du plan avant la
+  fin de la mise en demeure — taux stables depuis 2020, à confirmer en
+  version consolidée avant toute réponse chiffrée dans un acte.
 - **Nominations équilibrées aux emplois de direction** : proportion
-  minimale par sexe des primo-nominations dans certains emplois de
-  direction, avec pénalité en cas de non-respect. Dispositif **renforcé
-  par la loi du 19 juillet 2023** (taux applicables, trajectoire de
-  montée en charge et pénalités : **à vérifier**, ne jamais citer un
-  pourcentage de mémoire).
+  minimale par sexe des primo-nominations, avec pénalité en cas de
+  non-respect. **Renforcé par la loi n° 2023-623 du 19 juillet 2023** :
+  taux cible porté de 40 % à **50 %** ; pour les employeurs sous les 37 %
+  (moyenne 2020-2022), trajectoire de +3 points dès le 20 juillet 2023
+  jusqu'au 1er janvier 2027 puis tous les 3 ans jusqu'à 40 % ; suppression
+  de la dispense de pénalité à compter du 1er janvier 2027 ; contribution
+  forfaitaire par unité manquante (90 000 € au-delà de 80 000 habitants,
+  50 000 € entre 40 000 et 80 000 habitants) — **taux, montants, jalons de
+  trajectoire et périmètre exact (FPT distinctement de la FPE/FPH) à
+  recouper sur CGFP art. L.132-5 avant citation dans un acte**, la
+  prochaine échéance (1er janvier 2027) restant à venir.
 - **Index de l'égalité professionnelle dans la fonction publique** :
-  introduit par cette même loi du 19 juillet 2023 ; périmètre des
-  employeurs concernés et indicateurs composant l'index **à vérifier**.
+  introduit par cette même loi, décrets d'application **n° 2024-801 et
+  n° 2024-802 du 13 juillet 2024** (en vigueur depuis le 15 juillet 2024) :
+  concerne régions, départements, communes et EPCI de **plus de 40 000
+  habitants gérant au moins 50 agents permanents**, ainsi que le CNFPT.
+  Note sur 100 points, seuil cible 75 points, publication annuelle
+  (objectifs de progression exigés si score < 75).
 - **Rapport de situation comparée / indicateurs** : intégrés au **RSU**
   (rapport social unique, voir branche SI RH) ; alimentent le suivi du
   plan d'action.
@@ -205,7 +220,8 @@ manquantes, valeurs volatiles à vérifier).
 
 - Durées et conditions de **congés** (titulaire vs contractuel).
 - **Imputabilité au service** (CITIS) : qualification → vérification + avis du
-  conseil médical le cas échéant.
+  conseil médical en **formation plénière** le cas échéant ; décision de
+  l'autorité territoriale.
 - **Montants** PSC, indemnité télétravail, taux d'obligation d'emploi.
 - Décision d'**inaptitude** ou de **reclassement** → acte faisant grief.
 - **Recherche de reclassement** : caractère sérieux et réel de la
@@ -223,12 +239,14 @@ manquantes, valeurs volatiles à vérifier).
    obligatoire ; seul le contenu est local).
 4. Donner des **montants PSC** de mémoire (ils évoluent).
 5. Confondre **conseil médical** et ancien comité médical / commission de réforme.
-6. Licencier pour inaptitude sans **recherche sérieuse de reclassement**.
-7. Oublier de proposer la **PPR** avant disponibilité d'office ou
+6. Saisir la **formation restreinte** pour l'imputabilité au service : la
+   compétence appartient à la **formation plénière**.
+7. Licencier pour inaptitude sans **recherche sérieuse de reclassement**.
+8. Oublier de proposer la **PPR** avant disponibilité d'office ou
    licenciement.
-8. Confondre **inaptitude aux fonctions** et **inaptitude à toutes
+9. Confondre **inaptitude aux fonctions** et **inaptitude à toutes
    fonctions**.
-9. Présenter le plan d'action égalité comme **facultatif** (obligation
+10. Présenter le plan d'action égalité comme **facultatif** (obligation
    assortie de pénalité au-dessus du seuil).
 
 ## 9. Données volatiles à vérifier

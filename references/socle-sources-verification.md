@@ -18,7 +18,14 @@
    attachés, rédacteurs, adjoints administratifs, techniciens…). Définissent
    grades, échelons, modalités de recrutement et d'avancement.
 3. **Décrets transversaux** — RIFSEEP, NBI, SFT, temps de travail,
-   instances, santé, PSC, etc.
+   instances, santé, PSC, etc. **Recodification en cours** : une partie
+   réglementaire du CGFP absorbe progressivement ces décrets par vagues
+   (Livres I-II en vigueur depuis le 1er février 2025, Livre III —
+   recrutement — depuis le 1er octobre 2025, Livre IV — formation,
+   télétravail, réorganisation — depuis le 1er août 2026 ; Livre V annoncé).
+   Un décret cité comme « transversal » peut donc avoir été abrogé et
+   recodifié en articles R./D. du CGFP : vérifier avant de citer un numéro
+   de décret isolé.
 4. **Code général des collectivités territoriales (CGCT)** — pour les
    compétences de l'organe délibérant et de l'autorité territoriale.
 5. **Jurisprudence administrative** — Conseil d'État, cours
@@ -78,12 +85,22 @@ usage en acte :
 - **Contractuels** — cas de recours élargis depuis la loi de
   transformation de la fonction publique (2019).
 - **Instances médicales** — conseil médical (fusion comité médical /
-  commission de réforme).
+  commission de réforme, décret n° 2022-350). Un décret n° 2026-705 du
+  29 juillet 2026 (transposition au secteur public des règles d'arrêt de
+  travail du privé) modifie, depuis le 1er septembre 2026, les modalités
+  de saisine du conseil médical en formation restreinte pour le
+  renouvellement des congés de maladie après épuisement des droits à
+  rémunération : à intégrer dans la branche QVT/santé avant toute réponse
+  sur ce point.
 - **CAP / LDG** — compétences des CAP recentrées, montée des lignes
   directrices de gestion.
-- **Rupture conventionnelle** — pour les fonctionnaires, dispositif
-  **expérimental jusqu'au 31 décembre 2025** : vérifier s'il a été pérennisé,
-  prorogé ou éteint avant toute réponse.
+- **Rupture conventionnelle** — pour les fonctionnaires, l'expérimentation
+  ouverte jusqu'au 31 décembre 2025 est **pérennisée** par l'art. 173 de la
+  loi n° 2026-103 du 19 février 2026 (loi de finances pour 2026), codifiée
+  au CGFP **art. L.552-1 à L.552-5** (L.552-5 pour les agents contractuels
+  en CDI), en vigueur depuis le 21 février 2026. Décrets d'application du
+  6 août 2026 (n° 2026-745, procédure ; n° 2026-746, indemnité spécifique)
+  à confirmer en version consolidée avant tout acte.
 
 ---
 

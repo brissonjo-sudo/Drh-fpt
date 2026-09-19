@@ -58,6 +58,12 @@ décisionnel :
 
 ```
 drh-fpt/
+├── .github/
+│   ├── auto-review.json                   Contrôles déterministes de confidentialité
+│   ├── auto-review.md                     Consignes de relecture automatique
+│   └── workflows/
+│       ├── auto-review.yml                Déclenchement de la relecture des PR
+│       └── validate.yml                   CI des contrôles déterministes
 ├── SKILL.md                              Cœur : routeur, posture, méthode
 ├── README.md                             Ce fichier
 ├── LICENSE                               CC BY-SA 4.0
@@ -71,6 +77,7 @@ drh-fpt/
 │   └── check_coherence.py                Vérifie version/bundle/CHANGELOG/renvois/arbre README
 ├── references/
 │   ├── _gabarit-branche.md               Gabarit décisionnel des branches
+│   ├── contrat-execution.md               Contrat d'exécution transversal testable
 │   ├── socle-sources-verification.md     Sources FPT, conflits de normes, valeurs chiffrées
 │   ├── parametres-collectivite.md        Variables +350 agents + garde-fous régimes spécifiques
 │   ├── carriere-paie.md                  Branche carrière & paie
@@ -92,8 +99,9 @@ drh-fpt/
 │   └── courrier-modele.md                Gabarit courrier d'agent / note de service
 └── tests/
     ├── README.md                         Dispositif de tests (deux protocoles)
-    ├── cas-de-test.json                  Source unique des cas (17 standard + 5 adversariaux)
+    ├── cas-de-test.json                  Source unique (32 variantes, 30 actives par mode)
     ├── run_tests.py                      Harnais API (répondant + juge)
+    ├── test_harness.py                   Tests déterministes du harnais
     ├── prompt-claude-code.md             Protocole sous-agents Claude Code (lit cas-de-test.json)
     ├── cas-co-activation.md              Cas transverse drh-fpt × recherche-juridique
     └── rapports/                         Rapports de campagnes validés (datés)
@@ -115,10 +123,11 @@ de façon anonymisée.
 
 ## Dépendance
 
-Recommandé : le skill **`recherche-juridique`** (v2.2.0 ou supérieure) pour
-l'approfondissement du volet juridique. Le skill DRH reste fonctionnel sans lui
-grâce à son noyau de vérification autonome, mais les deux ensemble offrent la
-meilleure fiabilité (co-activation validée — voir Validation).
+Le skill **`recherche-juridique`** (v2.2.0 ou supérieure) est obligatoire pour
+le fonctionnement nominal. Sans lui, `drh-fpt` bascule explicitement en mode
+dégradé : cadrage et méthode de contrôle restent disponibles, mais aucune
+valeur exacte, procédure détaillée ou conclusion juridiquement engageante
+n'est livrée sans vérification (voir Validation).
 
 ## Installation et usage
 
@@ -143,6 +152,9 @@ répondant/juge à contextes séparés — voir `tests/`) :
   **réussite 5/5 sur 9 critères**.
 - Historique : 3 tests internes initiaux + 5 portages externes (Gemini,
   ChatGPT, Grok réussis ; Vibe conservé comme contre-exemple).
+- **Candidat v0.6.0** : sortie de brouillon suspendue aux deux campagnes de
+  30 cas (`integration` et `degraded`) selon le gate décrit dans
+  `tests/README.md`.
 
 Détail : `tests/rapports/`, `JOURNAL.md`, `CHANGELOG.md`.
 

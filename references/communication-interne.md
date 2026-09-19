@@ -38,7 +38,10 @@ de changement.
 - Certaines productions RH doivent être **portées à la connaissance des agents**
   (ex. **LDG**, **RSU**, dispositifs **PSC**). La communication interne est le
   vecteur de cette obligation : vérifier ce qui doit être diffusé et selon
-  quelles modalités.
+  quelles modalités. Exemple d'actualité immédiate : la **participation
+  employeur PSC santé** est obligatoire depuis le **1er janvier 2026**
+  (ordonnance n° 2021-175, décret n° 2022-581) — sujet de communication
+  interne à traiter sans délai s'il ne l'a pas déjà été.
 
 ### 5.3 Marque employeur et supports
 - **Marque employeur** : attractivité, fidélisation, valorisation des métiers

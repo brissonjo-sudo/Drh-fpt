@@ -32,9 +32,11 @@ collective.
 ## 5. Règles métier
 
 ### 5.1 Instances
-- **CST** (comité social territorial) : depuis le renouvellement de **décembre
-  2022**, **fusion** du comité technique et du CHSCT (décret n° 2021-571).
-  Compétences : organisation et fonctionnement des services, LDG, RSU, lignes
+- **CST** (comité social territorial) : composition et élection issues du
+  renouvellement de **décembre 2022** ; **fusion** du comité technique et du
+  CHSCT (décret n° 2021-571), dont les attributions et le fonctionnement
+  pleins ne sont entrés en vigueur que le **1er janvier 2023**. Compétences :
+  organisation et fonctionnement des services, LDG, RSU, lignes
   directrices, questions SSCT. **CST propre obligatoire dès 50 agents** (en
   deçà, CST commun placé auprès du CDG) — ne pas confondre ce seuil avec les
   **200 agents** de la formation spécialisée SSCT ni avec les **350 agents**
@@ -48,8 +50,12 @@ collective.
 
 ### 5.2 Élections et représentativité
 - **Élections professionnelles** : tous les **4 ans**. Dernier renouvellement
-  **décembre 2022** ; prochain attendu **fin 2026** (à confirmer). Déterminent
-  la composition des instances et la représentativité syndicale.
+  **décembre 2022** ; prochain scrutin fixé au **10 décembre 2026** (arrêté
+  ministériel du 2 juillet 2025), calendrier opérationnel et règles
+  procédurales harmonisées précisés par le décret n° 2025-1430 du
+  30 décembre 2025 (délais de procédure portés de 3-5 à 8 jours notamment —
+  détail à confirmer en version consolidée). Déterminent la composition des
+  instances et la représentativité syndicale.
 
 ### 5.3 Droit syndical
 - **ASA** (autorisations spéciales d'absence), **décharges d'activité de

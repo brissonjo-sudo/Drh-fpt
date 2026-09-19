@@ -85,8 +85,10 @@ confirmer)
 - **Dérogations** : **activité accessoire sur autorisation préalable**, liste
   réglementaire fermée (enseignement, activité agricole non commerciale,
   travaux chez particuliers, secteur associatif, vendanges, missions
-  d'intérêt public — décret n° 2020-69, **à confirmer**, liste à vérifier
-  avant instruction) ; **temps partiel pour création/reprise d'entreprise**
+  d'intérêt public — **CGFP art. R123-7 à R123-13** [ex-décret n° 2020-69,
+  abrogé et recodifié depuis le 1er février 2025, décret n° 2024-1038],
+  liste à vérifier avant instruction) ; **temps partiel pour création/reprise
+  d'entreprise**
   (régime propre, durée limitée, conditions à vérifier) ; **poursuite d'une
   activité privée** dans une société pour un agent nouvellement recruté.
 - **Contrôles de déconflit** : **départ vers le privé** et **cumul création
@@ -109,8 +111,10 @@ confirmer)
 
 ### 5.3 Signalements et harcèlement
 
-- **Dispositif de signalement obligatoire** (CGFP art. L135-6 — à confirmer ;
-  décret n° 2020-256 — **à confirmer**) pour violences, discriminations,
+- **Dispositif de signalement obligatoire** (CGFP art. L135-6 A à L135-6,
+  issus de la loi n° 2019-828 art. 80 ; modalités aux **art. R135-1 à
+  R135-10 du CGFP** [ex-décret n° 2020-256, abrogé et recodifié depuis le
+  1er février 2025, décret n° 2024-1038]) pour violences, discriminations,
   harcèlement moral/sexuel, agissements sexistes : **recueil**
   (confidentialité), **orientation** (accompagnement médical/social),
   **traitement traçable**, **protection du signalant** contre les
@@ -206,17 +210,24 @@ Appliquer le noyau de vérification (matrice §2.2 du SKILL.md) dès que :
 9. Confondre **enquête administrative** et **procédure disciplinaire**.
 10. Mentions **politiques/syndicales/religieuses** au dossier — interdiction
     absolue. Donner une **durée de conservation** de mémoire au lieu du
-    référentiel CNIL.
+    texte applicable — et appliquer par erreur le référentiel CNIL RH
+    généraliste au **dossier individuel** de l'agent public, qu'il exclut
+    explicitement (régi par l'arrêté du 21 décembre 2012).
 11. Confondre l'accès **ordinaire** au dossier et le droit de **communication
     intégrale** propre à la discipline (carriere-paie §5.5).
 
 ## 9. Données volatiles à vérifier
 
 Pas de valeur d'indexation propre à la branche. **À confirmer en version
-consolidée** : décret n° 2020-69 (activités accessoires), décret n° 2020-256
-(dispositif de signalement), loi n° 2022-401 (lanceurs d'alerte), loi
+consolidée** : CGFP art. R123-7 à R123-13 (activités accessoires, ex-décret
+n° 2020-69), CGFP art. R135-1 à R135-10 (dispositif de signalement,
+ex-décret n° 2020-256), loi n° 2022-401 (lanceurs d'alerte), loi
 n° 2021-1109 (CRPR, référent laïcité), périmètre des emplois soumis à HATVP,
-seuils d'effectifs du dispositif d'alerte, référentiel CNIL de conservation
+seuils d'effectifs du dispositif d'alerte. Le **dossier individuel de
+l'agent public** relève de l'**arrêté du 21 décembre 2012**, et non du
+référentiel CNIL généraliste « gestion des ressources humaines » (qui
+l'exclut explicitement) — ne pas appliquer par erreur les durées de
+conservation de ce dernier au dossier individuel.
 des données RH, délais de notification CNIL en cas de violation de données.
 
 ## 10. Livrables (classés par niveau)
