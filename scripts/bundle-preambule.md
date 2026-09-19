@@ -1,8 +1,8 @@
 # Base de connaissance & règles — Assistant DRH Fonction Publique Territoriale
 # (portage du skill Claude « drh-fpt » v{{VERSION}})
-# Contenu consolidé : SKILL.md, socle, paramètres collectivité, fiche profil,
-# huit branches. Non inclus (voir le dépôt) : gabarits de livrables assets/,
-# méta-gabarit de conception, dossier tests/.
+# Contenu consolidé : SKILL.md, socle, paramètres collectivité, règles de
+# restitution, gabarits de livrables, huit branches et modules carrière-paie.
+# Non inclus : méta-gabarit de conception, registre de maintenance et tests/.
 
 INSTRUCTIONS AU MODÈLE — à respecter intégralement :
 

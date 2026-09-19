@@ -1,8 +1,8 @@
 # Base de connaissance & règles — Assistant DRH Fonction Publique Territoriale
-# (portage du skill Claude « drh-fpt » v0.6.0)
-# Contenu consolidé : SKILL.md, socle, paramètres collectivité, fiche profil,
-# huit branches. Non inclus (voir le dépôt) : gabarits de livrables assets/,
-# méta-gabarit de conception, dossier tests/.
+# (portage du skill Claude « drh-fpt » v0.7.0)
+# Contenu consolidé : SKILL.md, socle, paramètres collectivité, règles de
+# restitution, gabarits de livrables, huit branches et modules carrière-paie.
+# Non inclus : méta-gabarit de conception, registre de maintenance et tests/.
 
 INSTRUCTIONS AU MODÈLE — à respecter intégralement :
 
@@ -62,9 +62,9 @@ description: >-
   FPT, les fonctions publiques d'État ou hospitalière, ni pour les
   collectivités de moins de 350 agents.
 metadata:
-  version: 0.6.0
-  statut: huit branches + dispositif de tests + gabarits de livrables
-  date_derniere_revue_methodologique: 2026-07-14
+  version: 0.7.0
+  statut: huit branches modulaires + preuves de vérification + harnais multifournisseur
+  date_derniere_revue_methodologique: 2026-09-19
   date_derniere_verification_sources: 2026-09-04
   perimetre: collectivités territoriales de plus de 350 agents
   dependances:
@@ -72,10 +72,11 @@ metadata:
   compatibilite:
     - Claude Opus (testé avec claude-opus-4-8)
     - Claude Sonnet (testé avec claude-sonnet-4-6)
+    - OpenAI Responses API (harnais compatible ; modèle à préciser en campagne)
   langue: français
 ---
 
-# Skill : drh-fpt (v0.6.0)
+# Skill : drh-fpt (v0.7.0)
 
 > **Objet** : expertise d'une Direction des Ressources Humaines territoriale,
 > à la fois **opérationnelle** (rapide, orientée décision et livrable) et
@@ -273,6 +274,19 @@ branches suivent le **gabarit décisionnel** de
 | **Agents contractuels** | `references/contractuels.md` ✅ |
 | **Statut : garanties, déontologie & signalements** | `references/statut-garanties.md` ✅ |
 
+Pour **Carrière & paie**, lire d'abord le routeur commun puis uniquement les
+modules nécessaires :
+
+- statut, carrière, instances et discipline →
+  `references/carriere-paie/statut-discipline.md` ;
+- traitement, régime indemnitaire, cotisations et retraite →
+  `references/carriere-paie/remuneration-paie.md` ;
+- temps de travail, abandon de poste, emplois fonctionnels, grève et fin de
+  fonctions → `references/carriere-paie/temps-fin-fonctions.md`.
+
+Lire plusieurs modules lorsque la question les croise. En environnement ne
+permettant pas un chargement ciblé fiable, utiliser le bundle complet.
+
 > **Renvois inter-branches** : une question en croise souvent plusieurs. Réflexes
 > fréquents — PSC/coût → masse salariale ; LDG et RSU → CST/dialogue social ;
 > entretien professionnel → recrutement-formation et carrière-paie ; formation
@@ -300,6 +314,11 @@ Produits à la demande, **classés par niveau** (le niveau guide le format) :
 
 Gabarits et éléments obligatoires par type → `assets/`. Quand un livrable
 revient, **proposer d'en créer le gabarit**.
+
+Adapter la longueur visible à la demande sans réduire les vérifications : lire
+`references/restitution-proportionnee.md`. Une question précise appelle une
+réponse ciblée ; un arbitrage appelle options, recommandation et risques ; un
+acte ou dossier complexe appelle l'analyse utile et le livrable complet.
 
 ---
 
@@ -479,6 +498,11 @@ référence. Une mention telle que **« vérifié »**, **« confirmé »** ou
 effectivement eu lieu pour la réponse en cours ; donner alors le lien ou
 l'identifiant officiel et la date ou version pertinente.
 
+Une validation outillée conserve aussi, lorsqu'elle est disponible, la trace de
+consultation : source officielle, date de consultation, version ou date d'effet,
+passage utile et conclusion soutenue. Un lien simplement généré dans la réponse
+ne constitue pas à lui seul une preuve de consultation.
+
 Si la source est inaccessible, contradictoire ou non confirmée :
 
 - ne pas présenter la règle comme acquise ;
@@ -529,6 +553,10 @@ comme telle.
 Produire effectivement le livrable demandé dans la même réponse après
 l'analyse : projet d'arrêté, délibération, note, procédure, courrier, tableau ou
 autre format demandé.
+
+Adapter la restitution selon `references/restitution-proportionnee.md`. Cette
+adaptation porte sur la longueur visible, jamais sur la profondeur de la
+qualification ou de la vérification requise.
 
 Une simple annonce (« je peux rédiger… »), un plan vide ou un renvoi vers un
 gabarit ne vaut pas livraison. Si une variable bloque la finalisation :
@@ -920,6 +948,47 @@ par défaut ; signaler la spécificité et orienter la recherche vers les textes
 dédiés.
 
 ================================================================================
+### SOURCE : RESTITUTION PROPORTIONNÉE
+================================================================================
+
+# Restitution proportionnée à la demande
+
+La profondeur de la vérification dépend du risque juridique. La longueur visible
+dépend de la demande de l'utilisateur. Les contrôles internes restent appliqués
+sans exposer mécaniquement chaque étape.
+
+## Réponse ciblée
+
+Pour une question précise, donner d'abord la réponse exploitable. Ajouter la
+condition qui peut la faire varier, la source utile lorsqu'une vérification est
+requise et la réserve qui change réellement la décision. Éviter le plan d'action
+complet si aucune action complexe n'est demandée.
+
+## Arbitrage
+
+Quand plusieurs voies sont possibles, présenter les options comparables, la
+recommandation, les conditions, les risques et les premières actions. Distinguer
+le socle national du choix local.
+
+## Acte ou dossier complexe
+
+Produire l'analyse nécessaire puis le livrable demandé. Inclure les contrôles de
+compétence, procédure, motivation, date d'effet, notification, publicité,
+transmission et recours qui s'appliquent réellement au document.
+
+## Variables manquantes
+
+Demander uniquement une information absente qui peut modifier le régime, la
+décision, le calcul ou le contenu du livrable. Utiliser les données déjà établies
+dans la conversation. Une information utile mais non bloquante devient une
+hypothèse explicite ou un champ à compléter.
+
+## Développements supplémentaires
+
+Supprimer les précisions juridiques sans effet sur la réponse. Toute précision
+conservée supporte le même niveau de vérification que la conclusion principale.
+
+================================================================================
 ### SOURCE : FICHE PROFIL (cadrage d'ouverture)
 ================================================================================
 
@@ -958,6 +1027,316 @@ Tant que le profil est présent, le skill ne redemande pas les variables connues
 et **oriente ses recherches** (filières, statut particulier) en conséquence. En
 cas de **statut particulier**, il déclenche une vigilance renforcée et cible les
 textes propres avant de conclure.
+
+================================================================================
+### SOURCE : GABARIT — décision
+================================================================================
+
+# Gabarit — Décision / arrêté individuel (acte faisant grief)
+
+> Niveau **Décision**. À utiliser pour tout acte individuel défavorable (refus,
+> sanction, radiation, fin de fonctions…). **Acte faisant grief** → motivation et
+> voies de recours **obligatoires**. Champs à compléter entre `[ ]`. Aucune donnée
+> nominative dans le gabarit.
+>
+> ⚠️ **Avant signature** : vérifier en version consolidée (Légifrance) les visas
+> cités, la compétence de l'autorité, et l'obligation — ou non — de transmission
+> au contrôle de légalité (art. L. 2131-2 CGCT).
+
+---
+
+```
+[COLLECTIVITÉ — en-tête]
+
+ARRÊTÉ N° [numéro] / [année]
+portant [objet précis : refus de …, sanction de …, radiation pour …]
+
+L'AUTORITÉ TERRITORIALE [Le Maire / Le Président de …],
+
+VU le Code général de la fonction publique, notamment son article [L. … / à
+   confirmer en version consolidée] ;
+VU le Code général des collectivités territoriales, notamment son article
+   [L. … relatif à la compétence de l'autorité — à confirmer] ;
+VU le Code des relations entre le public et l'administration, notamment son
+   article L. 211-2 (motivation des décisions individuelles défavorables) ;
+VU [le décret statutaire du cadre d'emplois concerné — n° … du … à confirmer] ;
+VU [les actes de la situation : nomination, demande de l'agent, mise en demeure,
+   avis d'instance le cas échéant…] ;
+
+CONSIDÉRANT [exposé des faits, daté et précis] ;
+CONSIDÉRANT [le motif de droit : pourquoi la décision est prise / l'option est
+   bloquée — rattaché au texte visé] ;
+[CONSIDÉRANT la procédure suivie : information, contradictoire, délai, avis…] ;
+
+ARRÊTE :
+
+Article 1er — [dispositif : ce qui est décidé], à compter de [date d'effet —
+   en principe la NOTIFICATION ; un acte défavorable n'est pas rétroactif].
+Article 2 — [conséquences administratives / financières le cas échéant].
+Article 3 — Le présent arrêté peut faire l'objet, dans un délai de DEUX MOIS à
+   compter de sa notification :
+   - d'un recours gracieux auprès de [l'autorité] ;
+   - d'un recours hiérarchique [si applicable] ;
+   - d'un recours contentieux devant le tribunal administratif de [ville].
+   Le recours administratif préalable proroge le délai de recours contentieux.
+Article 4 — [Le DGS / la DGS] est chargé(e) de l'exécution du présent arrêté,
+   qui sera notifié à l'intéressé(e) [et, le cas échéant, transmis au contrôle
+   de légalité / adressé en ampliation à …].
+
+Fait à [lieu], le [date].
+[Signature de l'autorité territoriale]
+```
+
+---
+
+## Check-list avant signature
+
+- [ ] **Motivation** en fait **et** en droit présente (CRPA, art. L. 211-2).
+- [ ] **Voies et délais de recours** mentionnés (gracieux / hiérarchique / TA, 2 mois).
+- [ ] **Date d'effet = notification** (pas de rétroactivité d'un acte défavorable).
+- [ ] **Compétence** de l'autorité signataire vérifiée (délégations le cas échéant).
+- [ ] **Procédure préalable** respectée (contradictoire, avis d'instance, mise en
+      demeure…) selon la nature de l'acte.
+- [ ] **Transmission au contrôle de légalité** : obligatoire ? Vérifier la
+      **version en vigueur** de l'art. L. 2131-2 CGCT **à la date de l'acte** :
+      elle ne comporte plus de catégorie générale couvrant les sanctions
+      disciplinaires. Ne pas réintroduire depuis une version historique une
+      obligation visant la révocation, la mise à la retraite d'office ou les
+      sanctions en général ; la radiation pour abandon de poste n'y figure pas.
+      Traiter séparément les modalités locales de télétransmission.
+- [ ] **Visas** confirmés en version consolidée (Légifrance) à la date de l'acte.
+- [ ] **Notification** par voie traçable (LRAR / décharge).
+
+================================================================================
+### SOURCE : GABARIT — délibération
+================================================================================
+
+# Gabarit — Délibération
+
+> Niveau **Pilotage**. Acte de l'**assemblée délibérante**. Structure : visa,
+> exposé des motifs, dispositif. **Mentionner l'avis préalable requis** le cas
+> échéant (ex. **avis du CST** pour le régime indemnitaire, les LDG, le temps de
+> travail). Champs `[ ]`.
+>
+> ⚠️ **Avant le vote** : confirmer les visas en version consolidée et vérifier que
+> l'**avis préalable de l'instance** compétente a bien été recueilli.
+
+---
+
+```
+[COLLECTIVITÉ — en-tête]
+
+DÉLIBÉRATION N° [numéro] — séance du [date]
+Objet : [objet : institution du régime indemnitaire … / adoption des LDG /
+        création d'emploi / …]
+
+LE [CONSEIL MUNICIPAL / CONSEIL COMMUNAUTAIRE / …],
+
+VU le Code général des collectivités territoriales ;
+VU le Code général de la fonction publique, notamment son article [L. … — à
+   confirmer en version consolidée] ;
+VU [le décret support : régime indemnitaire, statut particulier… — n° … du …] ;
+VU l'avis du [comité social territorial / instance compétente] en date du
+   [date] [— avis préalable obligatoire le cas échéant] ;
+
+EXPOSÉ DES MOTIFS
+[Pourquoi cette délibération : besoin, cadre, objectifs ; options et choix
+retenu ; impact budgétaire / sur la masse salariale.]
+
+Après en avoir délibéré, DÉCIDE :
+
+Article 1er — [dispositif : ce qui est institué / adopté ; pour un régime
+   indemnitaire : bénéficiaires, taux/plafonds retenus dans la limite
+   réglementaire, critères, modalités de versement].
+Article 2 — [date d'effet ; crédits inscrits au budget, chapitre 012].
+Article 3 — [autorise l'autorité territoriale à prendre les actes individuels
+   d'application (arrêtés)].
+
+[Adopté à … / Pour : … Contre : … Abstentions : …]
+Fait à [lieu], le [date]. [Signature]
+```
+
+---
+
+## Check-list avant le vote
+
+- [ ] **Avis préalable** de l'instance recueilli et visé (CST pour régime
+      indemnitaire / LDG / temps de travail — **pas la CAP** pour les LDG).
+- [ ] **Visas** confirmés en version consolidée (Légifrance).
+- [ ] **Plafonds réglementaires** respectés (citables, datés, « à confirmer ») ;
+      **valeurs volatiles** (point d'indice) non figées dans la délibération.
+- [ ] **Crédits** prévus au budget.
+- [ ] **Actes individuels** d'application prévus (arrêtés → `decision-modele.md`).
+- [ ] **Transmission** au contrôle de légalité (délibération : en principe
+      transmissible — à confirmer).
+
+================================================================================
+### SOURCE : GABARIT — courrier
+================================================================================
+
+# Gabarit — Courrier d'agent / note de service
+
+> Niveau **Communication**. Réponse à une demande d'agent, information, note de
+> service. **Objet clair**, réponse **motivée** ; si la réponse est un **refus**,
+> elle devient un acte faisant grief → **motivation + voies de recours**. Champs `[ ]`.
+
+---
+
+## A. Courrier de réponse à un agent
+
+```
+[COLLECTIVITÉ — en-tête]
+                                        [Lieu], le [date]
+
+                                        À [Civilité] [Fonction de l'agent]
+                                        [adresse / voie de transmission]
+
+Objet : [demande de … / réponse à votre courrier du …]
+[Réf. : … ] — [Lettre recommandée avec AR si refus]
+
+[Civilité],
+
+Par courrier du [date], vous avez sollicité [objet de la demande].
+
+[Réponse :]
+- En cas d'accord : [décision favorable + modalités / date d'effet].
+- En cas de refus : [motivation en fait et en droit, rattachée au texte ;
+  proposer, si possible, une voie alternative conforme].
+
+[Si refus — mention obligatoire des recours :]
+La présente décision peut faire l'objet, dans un délai de DEUX MOIS à compter de
+sa notification, d'un recours gracieux auprès de [l'autorité], [d'un recours
+hiérarchique,] et/ou d'un recours contentieux devant le tribunal administratif
+de [ville].
+
+[Formule de politesse]
+                                        [L'autorité territoriale / par délégation]
+                                        [Signature]
+```
+
+> ⚠️ Un **refus** est un acte faisant grief : motivation + voies de recours
+> obligatoires (formaliser plutôt par un arrêté → `decision-modele.md` si la
+> nature de la décision l'exige). Vérifier les fondements en version consolidée.
+
+---
+
+## B. Note de service (information collective)
+
+```
+NOTE DE SERVICE N° [numéro] — [date]
+Objet : [sujet]
+Destinataires : [services / ensemble des agents]
+
+[Corps : information, consigne, rappel de règle, modalités pratiques, date
+d'application. Renvoyer aux textes / délibérations applicables.]
+
+[Émetteur — fonction]
+```
+
+### Check-list
+- [ ] Objet clair et destinataires identifiés.
+- [ ] Réponse **motivée** ; si refus → voies et délais de recours.
+- [ ] Information collective : pas de **donnée personnelle d'agent** exposée.
+- [ ] Renvoi aux actes/textes applicables (vérifiés).
+
+================================================================================
+### SOURCE : GABARIT — note
+================================================================================
+
+# Gabarit — Note d'aide à la décision
+
+> Niveau **Pilotage**. Éclaire une décision du DGS / de l'exécutif : pose le
+> problème, les options conformes, les risques et une recommandation. Distingue
+> nettement ce qui est **certain**, **à vérifier** et **hypothétique**. Champs `[ ]`.
+
+---
+
+**NOTE À [DGS / Maire / élu délégué]**
+**Objet** : [question posée en une ligne]
+**Date** : [date] — **Rédacteur** : [direction / service]
+**Niveau de confiance global** : [stable / à vérifier / débattu]
+
+### 1. Contexte et question
+[Situation, ce qui déclenche la note, la décision attendue.]
+
+### 2. Cadre applicable
+- [Texte(s) : CGFP art. … ; décret … — à confirmer en version consolidée.]
+- [Données volatiles éventuelles : à vérifier à la date utile, jamais de mémoire.]
+- [Variable déterminante : affiliation CDG / statut particulier / filière.]
+
+### 3. Options
+| Option | Conditions | Avantages | Risques / limites | Conforme ? |
+|--------|-----------|-----------|-------------------|-----------|
+| A — [ ] | [ ] | [ ] | [ ] | [oui / sous conditions] |
+| B — [ ] | [ ] | [ ] | [ ] | [ ] |
+
+> Posture conseil : si une option est bloquée, dire **pourquoi** (source) et
+> proposer une **voie légale** atteignant l'objectif.
+
+### 4. Recommandation
+[Option recommandée + justification courte. Conditions de mise en œuvre.]
+
+### 5. Suites et livrables
+- [Acte à produire : `decision-modele.md` / `deliberation-modele.md`.]
+- [Instances à saisir, calendrier, impact budgétaire / masse salariale.]
+
+### 6. Points à sécuriser avant décision
+- [ ] [Références confirmées en source primaire.]
+- [ ] [Valeurs volatiles vérifiées à la date utile.]
+- [ ] [Avis d'instance requis identifié.]
+
+================================================================================
+### SOURCE : GABARIT — procédure
+================================================================================
+
+# Gabarit — Procédure / fiche / mode opératoire
+
+> Niveau **Organisation**. Décrit *comment faire* une opération RH récurrente
+> (campagne d'avancement, saisine d'une instance, mise en place d'un dispositif…).
+> Orienté étapes, acteurs, délais et points de contrôle. Champs entre `[ ]`.
+
+---
+
+## [Objet de la procédure]
+
+**Finalité** : [ce que la procédure permet d'obtenir].
+**Champ** : [agents / filières / situations concernés].
+**Périmètre du skill** : collectivité > 350 agents (adapter en deçà).
+
+### Variables à lever en amont
+- [Statut de l'agent : titulaire / contractuel].
+- [Affiliation au CDG : impacte le circuit d'instance / le secrétariat].
+- [Statut particulier de la collectivité : vigilance renforcée].
+- [Autres paramètres déterminants…].
+
+### Fondements et points de vérification
+- Textes de référence : [CGFP art. … ; décret … — à confirmer en version
+  consolidée].
+- Données volatiles éventuelles : [point d'indice, taux, barème — à vérifier,
+  jamais de mémoire].
+
+### Étapes
+
+| # | Étape | Acteur | Délai / échéance | Point de contrôle |
+|---|-------|--------|------------------|-------------------|
+| 1 | [action] | [DRH / autorité / instance] | [délai] | [pièce à produire / avis requis] |
+| 2 | [avis préalable d'instance le cas échéant : CST / CAP / conseil médical] | [instance] | [délai de convocation] | [avis obligatoire ? préalable ?] |
+| 3 | [décision / acte] | [autorité territoriale] | [date d'effet] | [acte faisant grief ? → motivation + recours] |
+| 4 | [notification / publicité / transmission] | [DRH] | [délai] | [LRAR / information des agents / contrôle de légalité] |
+
+### Pièges fréquents
+- [Confusions classiques à éviter sur cette procédure].
+- [Instance compétente : ne pas confondre CST / CAP / CCP].
+
+### Livrables associés
+- [Décision : `decision-modele.md`] · [Délibération : `deliberation-modele.md`]
+  · [Courrier : `courrier-modele.md`].
+
+### Check-list de clôture
+- [ ] Variables déterminantes levées.
+- [ ] Avis préalable de l'instance compétente obtenu (si requis).
+- [ ] Acte produit et motivé si défavorable.
+- [ ] Notification / publicité / transmission effectuées.
 
 ================================================================================
 ### SOURCE : BRANCHE — Carrière & paie
@@ -1002,7 +1381,152 @@ sont pas levées.
   temps non complet / temps partiel.
 - **Date de référence** (faits, jour, date d'effet de l'acte).
 
-## 5. Règles métier
+## 5. Règles métier — modules à charger selon le dossier
+
+- Statut, carrière, instances et discipline : `references/carriere-paie/statut-discipline.md`.
+- Traitement, régime indemnitaire, cotisations et retraite : `references/carriere-paie/remuneration-paie.md`.
+- Temps de travail, abandon de poste, emplois fonctionnels, grève et fin de fonctions : `references/carriere-paie/temps-fin-fonctions.md`.
+
+Lire plusieurs modules si le dossier les croise. Le fichier présent conserve les calculs, déclencheurs de vérification, pièges, livrables et contrôles communs.
+
+## 6. Calculs
+
+Pour tout calcul (traitement, ancienneté, reclassement, NBI, SFT, coût
+employeur) :
+- annoncer les **hypothèses** retenues ;
+- **demander** les données manquantes (indice, quotité, situation familiale) ;
+- distinguer **données connues** et **estimées** ;
+- signaler les **valeurs volatiles** (§9) à confirmer et les **paramètres
+  locaux** (délibération indemnitaire, régime du temps de travail) ;
+- pour tout **calcul de régime indemnitaire** : d'abord **croiser filière et
+  cadre d'emplois du grade concerné avec le régime** (RIFSEEP vs ISFE police
+  municipale/gardes champêtres — cf. §5.7) **avant de nommer le régime**, sans le
+  déduire du profil de l'interlocuteur.
+
+Ne jamais produire un montant ferme sur une valeur de mémoire. **La vérification
+de la source précède la réponse chiffrée — elle n'est jamais différée à une
+relance de l'utilisateur** (SKILL.md §2.2).
+
+## 7. Déclencheurs de vérification
+
+Appliquer le noyau de vérification (matrice §2.2 du SKILL.md) dès que :
+- un **calcul d'indice, de traitement ou indemnitaire** est demandé ;
+- un **acte défavorable** est en jeu (refus d'avancement, de disponibilité,
+  sanction) → base statutaire + **motivation** + **voies de recours** +
+  vérifier l'obligation de **transmission au contrôle de légalité** ;
+- une **délibération** est rédigée (RIFSEEP/ISFE, ratios) → vérifier le décret
+  support, la parité et la délibération locale ;
+- une **réforme récente** conditionne la réponse (ISFE, retraites, positions).
+
+## 8. Pièges & confusions fréquentes
+
+1. Citer une **valeur d'indexation de mémoire** (point, cotisation) → erreur de version. (Un plafond réglementaire daté reste, lui, citable sous réserve.)
+2. Confondre **avancement d'échelon** (ancienneté) et **avancement de grade**
+   (tableau + ratios).
+3. Confondre **avancement de grade** (même cadre d'emplois) et **promotion
+   interne** (changement de cadre d'emplois).
+4. Croire la **CAP compétente** sur l'avancement (faux), **ou** oublier ses
+   **saisines par l'agent** (révision CREP, refus divers).
+5. Placer l'**exclusion ≤ 3 jours** au mauvais groupe : elle est au **1er
+   groupe**, **sans** conseil de discipline.
+6. Ajouter le **déplacement d'office** à l'échelle FPT ou proposer un
+   **conseil de discipline de recours** supprimé.
+7. Déclarer toutes les sanctions transmissibles au contrôle de légalité sans
+   vérifier la version en vigueur de l'article L2131-2 du CGCT.
+8. Appliquer le **RIFSEEP** à la **police municipale** (régime propre = ISFE).
+9. Citer le **décret État 2014-513** comme source FPT directe (viser 91-875 +
+   délibération).
+10. Basculer à tort un agent à **temps partiel** vers l'IRCANTEC (il reste
+   CNRACL).
+11. Confondre **détachement** et **mise à disposition**.
+12. Appliquer la règle du **trentième indivisible** (propre à l'**État**) à
+     une retenue pour grève dans la **FPT** — la retenue FPT est
+     **proportionnelle à la durée réelle** de l'absence de service fait.
+13. **Décharger un emploi fonctionnel dans les 6 mois** suivant le plus
+     tardif de la nomination de l'agent dans l'emploi ou de la désignation de
+     l'autorité territoriale (protection d'ordre public, cause d'illégalité
+     quasi automatique).
+14. **Oublier le coût chômage** (auto-assurance) d'un non-renouvellement de
+     contrat ou d'un licenciement — le décider sans avoir chiffré l'impact
+     budgétaire de l'ARE à la charge de la collectivité.
+
+## 9. Valeurs chiffrées (cf. socle §6)
+
+- **Volatiles, jamais de mémoire** : valeur du point d'indice, minimum de
+  traitement, grilles indiciaires, montant GIPA, taux de cotisation, barèmes
+  d'astreinte/permanence, montants forfaitaires d'indemnisation du CET.
+- **Réglementaires, citables si datées + « à confirmer en version consolidée »** :
+  plafonds ISFE (33/32/30 % ; 9 500/7 000/5 000 €), plafonds RIFSEEP par groupe
+  de fonctions, contingent IHTS (25 h), garanties minimales de temps de travail
+  (décret 2000-815 : 10 h/jour, 48 h/semaine), plafond CET (60 jours) et seuil
+  de monétisation (15 jours épargnés, décret 2004-878), durée de la protection
+  des 6 mois des emplois fonctionnels et effet différé de la décharge (art.
+  L. 544-1 CGFP), exclusion ARE de l'abandon de poste (décret 2020-741).
+  Rappel : un taux plafond est stable, le montant en euros qui en découle
+  dépend du point (volatile).
+- **Registre de vérification interne (maintenance)** :
+  `references/cache-plafonds-regime-indemnitaire.md` consigne les plafonds
+  réglementaires déjà vérifiés (ISFE) et les gaps à combler (RIFSEEP attachés).
+  C'est un **aide-mémoire de maintenance, jamais une source** : toujours
+  reconfirmer la valeur en vigueur avant usage en acte, et **ne pas le citer**
+  comme référence dans un livrable formel.
+
+## 10. Livrables (classés par niveau)
+
+1. **Décision** — arrêté individuel (avancement d'échelon/grade, mise en
+   disponibilité, temps partiel, sanction). Acte faisant grief si défavorable :
+   **motivation + voies de recours** + vérifier la transmission au contrôle de
+   légalité.
+2. **Organisation** — fiche de procédure (tableau d'avancement, campagne de
+   promotion interne, procédure disciplinaire).
+3. **Pilotage** — note au DGS/Maire sur une situation de carrière ;
+   délibération RIFSEEP/ISFE ou ratios promus-promouvables.
+4. **Communication** — courrier de réponse à une demande d'agent (disponibilité,
+   temps partiel, mobilité).
+
+Gabarits → `assets/`.
+
+## 11. Niveau de confiance (repères de la branche)
+
+- **Stable** : architecture des catégories/grades, mécanique
+  échelon/grade/promotion, échelle des sanctions (CGFP L533) ; retenue de
+  traitement FPT proportionnelle à la durée réelle de l'absence (≠ trentième
+  indivisible État) ; nature non disciplinaire de la décharge de fonctions ;
+  auto-assurance chômage obligatoire pour titulaires/stagiaires.
+- **À vérifier** : toute valeur chiffrée ; plafonds RIFSEEP/ISFE ; règles de
+  retraite (dont retraite progressive) ; rupture conventionnelle ; liste
+  exacte des positions ; durée exacte de la protection des 6 mois et de
+  l'effet différé des emplois fonctionnels ; périmètre du service minimum
+  (art. 56 loi 2019-828) ; conditions du droit à l'ARE en cas d'abandon de
+  poste au regard de la caractérisation retenue.
+- **Débattu** : application du principe de parité selon les primes — éviter
+  toute synthèse péremptoire, vérifier au cas par cas.
+
+## 12. Checklist de branche
+
+1. Statut (titulaire/contractuel) et quotité (temps complet / non complet /
+   partiel) identifiés ?
+2. Cadre d'emplois et **décret statutaire** repérés ?
+3. Régime indemnitaire correct selon la filière (RIFSEEP vs **ISFE** PM vs SPP) ?
+4. Affiliation CDG levée avant de décrire un circuit de promotion interne / CAP ?
+5. Valeurs chiffrées vérifiées, jamais de mémoire ?
+6. Si acte défavorable : motivation, voies de recours, transmission contrôle de
+   légalité ?
+7. Emploi fonctionnel : protection des 6 mois (nomination agent OU désignation
+   autorité, le plus tardif), entretien préalable, information assemblée +
+   CNFPT/CDG, effet différé tous vérifiés avant toute décharge ?
+8. Fin de fonctions : impact budgétaire du chômage (auto-assurance) évalué et
+   signalé au décideur ?
+
+================================================================================
+### SOURCE : MODULE — Carrière, statut et discipline
+================================================================================
+
+# Carrière & paie — statut et discipline
+
+> Lire avec `references/carriere-paie.md` pour le cadrage et la checklist de branche.
+
+## Règles métier
 
 ### 5.1 Architecture statutaire
 - Catégories A, B, C ; filières (administrative, technique, police municipale,
@@ -1093,6 +1617,16 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
   obligatoire sur ce seul fondement ; vérifier la version applicable, la
   nature exacte de l'acte et, séparément, les modalités locales de
   télétransmission.
+
+================================================================================
+### SOURCE : MODULE — Rémunération et paie
+================================================================================
+
+# Carrière & paie — rémunération et paie
+
+> Lire avec `references/carriere-paie.md` pour le cadrage et la checklist de branche.
+
+## Règles métier
 
 ### 5.6 Rémunération — traitement
 **Indice brut → indice majoré → × valeur du point d'indice.** La valeur du
@@ -1190,6 +1724,16 @@ par **équivalence** :
   **< 28 heures**.
 - **RAFP** : retraite additionnelle, assise notamment sur le régime
   indemnitaire, dans une limite réglementaire.
+
+================================================================================
+### SOURCE : MODULE — Temps de travail et fin de fonctions
+================================================================================
+
+# Carrière & paie — temps de travail et fin de fonctions
+
+> Lire avec `references/carriere-paie.md` pour le cadrage et la checklist de branche.
+
+## Règles métier
 
 ### 5.9 Temps de travail et fin de fonctions
 
@@ -1501,135 +2045,6 @@ consolidée** avant tout acte.
   gestionnaire RH doit **évaluer le risque et le coût chômage** en
   auto-assurance et le signaler au décideur — c'est un paramètre budgétaire,
   pas seulement statutaire.
-
-## 6. Calculs
-
-Pour tout calcul (traitement, ancienneté, reclassement, NBI, SFT, coût
-employeur) :
-- annoncer les **hypothèses** retenues ;
-- **demander** les données manquantes (indice, quotité, situation familiale) ;
-- distinguer **données connues** et **estimées** ;
-- signaler les **valeurs volatiles** (§9) à confirmer et les **paramètres
-  locaux** (délibération indemnitaire, régime du temps de travail) ;
-- pour tout **calcul de régime indemnitaire** : d'abord **croiser filière et
-  cadre d'emplois du grade concerné avec le régime** (RIFSEEP vs ISFE police
-  municipale/gardes champêtres — cf. §5.7) **avant de nommer le régime**, sans le
-  déduire du profil de l'interlocuteur.
-
-Ne jamais produire un montant ferme sur une valeur de mémoire. **La vérification
-de la source précède la réponse chiffrée — elle n'est jamais différée à une
-relance de l'utilisateur** (SKILL.md §2.2).
-
-## 7. Déclencheurs de vérification
-
-Appliquer le noyau de vérification (matrice §2.2 du SKILL.md) dès que :
-- un **calcul d'indice, de traitement ou indemnitaire** est demandé ;
-- un **acte défavorable** est en jeu (refus d'avancement, de disponibilité,
-  sanction) → base statutaire + **motivation** + **voies de recours** +
-  vérifier l'obligation de **transmission au contrôle de légalité** ;
-- une **délibération** est rédigée (RIFSEEP/ISFE, ratios) → vérifier le décret
-  support, la parité et la délibération locale ;
-- une **réforme récente** conditionne la réponse (ISFE, retraites, positions).
-
-## 8. Pièges & confusions fréquentes
-
-1. Citer une **valeur d'indexation de mémoire** (point, cotisation) → erreur de version. (Un plafond réglementaire daté reste, lui, citable sous réserve.)
-2. Confondre **avancement d'échelon** (ancienneté) et **avancement de grade**
-   (tableau + ratios).
-3. Confondre **avancement de grade** (même cadre d'emplois) et **promotion
-   interne** (changement de cadre d'emplois).
-4. Croire la **CAP compétente** sur l'avancement (faux), **ou** oublier ses
-   **saisines par l'agent** (révision CREP, refus divers).
-5. Placer l'**exclusion ≤ 3 jours** au mauvais groupe : elle est au **1er
-   groupe**, **sans** conseil de discipline.
-6. Ajouter le **déplacement d'office** à l'échelle FPT ou proposer un
-   **conseil de discipline de recours** supprimé.
-7. Déclarer toutes les sanctions transmissibles au contrôle de légalité sans
-   vérifier la version en vigueur de l'article L2131-2 du CGCT.
-8. Appliquer le **RIFSEEP** à la **police municipale** (régime propre = ISFE).
-9. Citer le **décret État 2014-513** comme source FPT directe (viser 91-875 +
-   délibération).
-10. Basculer à tort un agent à **temps partiel** vers l'IRCANTEC (il reste
-   CNRACL).
-11. Confondre **détachement** et **mise à disposition**.
-12. Appliquer la règle du **trentième indivisible** (propre à l'**État**) à
-     une retenue pour grève dans la **FPT** — la retenue FPT est
-     **proportionnelle à la durée réelle** de l'absence de service fait.
-13. **Décharger un emploi fonctionnel dans les 6 mois** suivant le plus
-     tardif de la nomination de l'agent dans l'emploi ou de la désignation de
-     l'autorité territoriale (protection d'ordre public, cause d'illégalité
-     quasi automatique).
-14. **Oublier le coût chômage** (auto-assurance) d'un non-renouvellement de
-     contrat ou d'un licenciement — le décider sans avoir chiffré l'impact
-     budgétaire de l'ARE à la charge de la collectivité.
-
-## 9. Valeurs chiffrées (cf. socle §6)
-
-- **Volatiles, jamais de mémoire** : valeur du point d'indice, minimum de
-  traitement, grilles indiciaires, montant GIPA, taux de cotisation, barèmes
-  d'astreinte/permanence, montants forfaitaires d'indemnisation du CET.
-- **Réglementaires, citables si datées + « à confirmer en version consolidée »** :
-  plafonds ISFE (33/32/30 % ; 9 500/7 000/5 000 €), plafonds RIFSEEP par groupe
-  de fonctions, contingent IHTS (25 h), garanties minimales de temps de travail
-  (décret 2000-815 : 10 h/jour, 48 h/semaine), plafond CET (60 jours) et seuil
-  de monétisation (15 jours épargnés, décret 2004-878), durée de la protection
-  des 6 mois des emplois fonctionnels et effet différé de la décharge (art.
-  L. 544-1 CGFP), exclusion ARE de l'abandon de poste (décret 2020-741).
-  Rappel : un taux plafond est stable, le montant en euros qui en découle
-  dépend du point (volatile).
-- **Registre de vérification interne (maintenance)** :
-  `references/cache-plafonds-regime-indemnitaire.md` consigne les plafonds
-  réglementaires déjà vérifiés (ISFE) et les gaps à combler (RIFSEEP attachés).
-  C'est un **aide-mémoire de maintenance, jamais une source** : toujours
-  reconfirmer la valeur en vigueur avant usage en acte, et **ne pas le citer**
-  comme référence dans un livrable formel.
-
-## 10. Livrables (classés par niveau)
-
-1. **Décision** — arrêté individuel (avancement d'échelon/grade, mise en
-   disponibilité, temps partiel, sanction). Acte faisant grief si défavorable :
-   **motivation + voies de recours** + vérifier la transmission au contrôle de
-   légalité.
-2. **Organisation** — fiche de procédure (tableau d'avancement, campagne de
-   promotion interne, procédure disciplinaire).
-3. **Pilotage** — note au DGS/Maire sur une situation de carrière ;
-   délibération RIFSEEP/ISFE ou ratios promus-promouvables.
-4. **Communication** — courrier de réponse à une demande d'agent (disponibilité,
-   temps partiel, mobilité).
-
-Gabarits → `assets/`.
-
-## 11. Niveau de confiance (repères de la branche)
-
-- **Stable** : architecture des catégories/grades, mécanique
-  échelon/grade/promotion, échelle des sanctions (CGFP L533) ; retenue de
-  traitement FPT proportionnelle à la durée réelle de l'absence (≠ trentième
-  indivisible État) ; nature non disciplinaire de la décharge de fonctions ;
-  auto-assurance chômage obligatoire pour titulaires/stagiaires.
-- **À vérifier** : toute valeur chiffrée ; plafonds RIFSEEP/ISFE ; règles de
-  retraite (dont retraite progressive) ; rupture conventionnelle ; liste
-  exacte des positions ; durée exacte de la protection des 6 mois et de
-  l'effet différé des emplois fonctionnels ; périmètre du service minimum
-  (art. 56 loi 2019-828) ; conditions du droit à l'ARE en cas d'abandon de
-  poste au regard de la caractérisation retenue.
-- **Débattu** : application du principe de parité selon les primes — éviter
-  toute synthèse péremptoire, vérifier au cas par cas.
-
-## 12. Checklist de branche
-
-1. Statut (titulaire/contractuel) et quotité (temps complet / non complet /
-   partiel) identifiés ?
-2. Cadre d'emplois et **décret statutaire** repérés ?
-3. Régime indemnitaire correct selon la filière (RIFSEEP vs **ISFE** PM vs SPP) ?
-4. Affiliation CDG levée avant de décrire un circuit de promotion interne / CAP ?
-5. Valeurs chiffrées vérifiées, jamais de mémoire ?
-6. Si acte défavorable : motivation, voies de recours, transmission contrôle de
-   légalité ?
-7. Emploi fonctionnel : protection des 6 mois (nomination agent OU désignation
-   autorité, le plus tardif), entretien préalable, information assemblée +
-   CNFPT/CDG, effet différé tous vérifiés avant toute décharge ?
-8. Fin de fonctions : impact budgétaire du chômage (auto-assurance) évalué et
-   signalé au décideur ?
 
 ================================================================================
 ### SOURCE : BRANCHE — QVT & santé
@@ -2627,7 +3042,7 @@ titularisation, elle ne confère jamais la qualité de fonctionnaire.
   droit ; toute évolution procède d'une décision expresse (réévaluation
   triennale, revalorisation volontaire, changement de fonctions).
 - Régime indemnitaire : RIFSEEP possible par équivalence si la délibération
-  vise explicitement les contractuels (cf. `carriere-paie.md` §5.7).
+  vise explicitement les contractuels (cf. `references/carriere-paie/remuneration-paie.md` §5.7).
 
 ### 5.5 Fin de contrat (hors licenciement)
 
@@ -2682,7 +3097,7 @@ l'employeur (sauf convention France Travail) — vérifier le régime local.
 ### 5.7 Discipline des contractuels — échelle propre (décret 88-145)
 
 **Distincte de celle du titulaire** (CGFP L533-1) — ne jamais appliquer
-l'échelle des 4 groupes de `carriere-paie.md` §5.5 à un contractuel.
+l'échelle des 4 groupes de `references/carriere-paie/statut-discipline.md` §5.5 à un contractuel.
 
 | Sanction | CCP disciplinaire |
 |---|---|
@@ -2699,7 +3114,7 @@ suffisant) : leur méconnaissance entache la sanction d'illégalité. **CCP en
 formation disciplinaire** = équivalent fonctionnel du conseil de discipline,
 mais **ce n'est pas la CAP** (composition selon CDG ou en propre).
 **Prescription** : par analogie 3 ans à compter de la connaissance effective
-des faits (cf. `carriere-paie.md` §5.5), mais **fondement textuel propre aux
+des faits (cf. `references/carriere-paie/statut-discipline.md` §5.5), mais **fondement textuel propre aux
 contractuels à vérifier séparément**.
 
 ### 5.8 Congés, protection sociale et entretien professionnel
@@ -2708,7 +3123,7 @@ Renvoi → `qvt-sante.md` pour le cadre général (prévention, CITIS, conseil
 médical, PSC). Spécificités : **congé de grave maladie** (contractuel)
 **≠ CLM** (titulaire) — conditions, durée et quotité de traitement
 distinctes, paliers d'ancienneté **à vérifier**, ne jamais transposer.
-Affiliation retraite : IRCANTEC (cf. `carriere-paie.md` §5.8).
+Affiliation retraite : IRCANTEC (cf. `references/carriere-paie/remuneration-paie.md` §5.8).
 
 **Entretien professionnel** obligatoire pour les CDI et les **CDD > 1 an**
 (seuil à confirmer) : utile en cas de contentieux sur insuffisance
@@ -2789,7 +3204,7 @@ quotités de traitement des congés propres au contractuel ; motifs exacts de
 saisine de la CCP ; conditions de computation des 6 ans (interruptions,
 seuil de neutralisation) ; conditions de la portabilité du CDI ; valeur du
 point d'indice si la rémunération est positionnée sur une grille (cf.
-`carriere-paie.md` §5.6). **Référence jurisprudentielle** : l'avis CE du
+`references/carriere-paie/remuneration-paie.md` §5.6). **Référence jurisprudentielle** : l'avis CE du
 25 septembre 2013, n° 365139, ne doit être cité que pour sa portée réelle
 (éviction d'un contractuel en CDI afin d'affecter un fonctionnaire), après
 confirmation sur la source officielle.

@@ -141,7 +141,7 @@ def check_changelog() -> None:
 # --- 4. Renvois (references/xxx.md, assets/xxx.md) ----------------------
 
 def check_references() -> None:
-    pattern = re.compile(r"`((?:references|assets)/[A-Za-z0-9_.\-]+\.md)`")
+    pattern = re.compile(r"`((?:references|assets)/[A-Za-z0-9_./\-]+\.md)`")
     missing = []
     checked = 0
     for src in (SKILL_MD, README_MD):

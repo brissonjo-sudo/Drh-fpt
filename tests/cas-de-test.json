@@ -5,15 +5,34 @@
     "type": "standard",
     "prompt": "Un de mes agents, adjoint administratif principal de 2e classe à temps partiel 80 %, peut-il avancer de grade cette année ? Et reste-t-il affilié à la CNRACL ?",
     "attendus": [
-      "Avancement de grade = inscription au tableau annuel + conditions statutaires + ratios promus-promouvables votés par l'assemblée + orienté par les LDG (donc pas automatique)",
-      "La CAP n'est plus compétente sur l'avancement depuis la réforme de 2019",
-      "Un agent à temps partiel 80 % sur un poste à temps complet reste affilié à la CNRACL (oui, reste à la CNRACL)",
-      "Distingue explicitement le temps partiel (choix de l'agent, reste CNRACL) du temps non complet < 28 h (bascule IRCANTEC)",
-      "Aucune valeur chiffrée donnée de mémoire"
+      {
+        "id": "01-c01",
+        "texte": "Avancement de grade = inscription au tableau annuel + conditions statutaires + ratios promus-promouvables votés par l'assemblée + orienté par les LDG (donc pas automatique)"
+      },
+      {
+        "id": "01-c02",
+        "texte": "La CAP n'est plus compétente sur l'avancement depuis la réforme de 2019"
+      },
+      {
+        "id": "01-c03",
+        "texte": "Un agent à temps partiel 80 % sur un poste à temps complet reste affilié à la CNRACL (oui, reste à la CNRACL)"
+      },
+      {
+        "id": "01-c04",
+        "texte": "Distingue explicitement le temps partiel (choix de l'agent, reste CNRACL) du temps non complet < 28 h (bascule IRCANTEC)"
+      },
+      {
+        "id": "01-c05",
+        "texte": "Aucune valeur chiffrée donnée de mémoire"
+      }
     ],
     "echec_si": [
       "Bascule l'agent à l'IRCANTEC du seul fait du temps partiel 80 %",
       "Présente l'avancement de grade comme automatique"
+    ],
+    "contextes": [
+      "carriere-paie",
+      "carriere-remuneration-paie"
     ]
   },
   {
@@ -22,19 +41,43 @@
     "type": "standard",
     "prompt": "Un de mes agents titulaires s'est blessé en intervention sur son lieu de travail. Comment je gère son congé, et qui décide si c'est imputable au service ?",
     "attendus": [
-      "Qualification en accident de service relevant du CITIS (et non d'une maladie ordinaire)",
-      "Base légale FPT : CGFP art. L. 822-18 et s., et décret n° 2019-301 du 10 avril 2019 (CITIS FPT)",
-      "Signale explicitement qu'il ne faut PAS viser le décret n° 2019-122 du 21 février 2019, propre à la fonction publique d'État",
-      "L'imputabilité au service relève d'une décision de l'autorité territoriale, le conseil médical pouvant être saisi selon les cas",
-      "Lorsque le conseil médical est saisi sur l'imputabilité, il siège en formation plénière, jamais en formation restreinte",
-      "Distinction du régime selon que l'agent est titulaire ou contractuel",
-      "La décision sur l'imputabilité est un acte pouvant faire grief : motivation et voies de recours"
+      {
+        "id": "02-c01",
+        "texte": "Qualification en accident de service relevant du CITIS (et non d'une maladie ordinaire)"
+      },
+      {
+        "id": "02-c02",
+        "texte": "Base légale FPT : CGFP art. L. 822-18 et s., et décret n° 2019-301 du 10 avril 2019 (CITIS FPT)"
+      },
+      {
+        "id": "02-c03",
+        "texte": "Signale explicitement qu'il ne faut PAS viser le décret n° 2019-122 du 21 février 2019, propre à la fonction publique d'État"
+      },
+      {
+        "id": "02-c04",
+        "texte": "L'imputabilité au service relève d'une décision de l'autorité territoriale, le conseil médical pouvant être saisi selon les cas"
+      },
+      {
+        "id": "02-c05",
+        "texte": "Lorsque le conseil médical est saisi sur l'imputabilité, il siège en formation plénière, jamais en formation restreinte"
+      },
+      {
+        "id": "02-c06",
+        "texte": "Distinction du régime selon que l'agent est titulaire ou contractuel"
+      },
+      {
+        "id": "02-c07",
+        "texte": "La décision sur l'imputabilité est un acte pouvant faire grief : motivation et voies de recours"
+      }
     ],
     "echec_si": [
       "Traite la blessure en congé de maladie ordinaire sans évoquer le CITIS",
       "Cite le décret n° 2019-122 comme base FPT (confusion avec la FPE)",
       "Renvoie l'imputabilité au conseil médical en formation restreinte",
       "Ignore la question de l'imputabilité au service"
+    ],
+    "contextes": [
+      "qvt-sante"
     ]
   },
   {
@@ -43,14 +86,29 @@
     "type": "standard",
     "prompt": "Je veux recruter un contractuel sur un poste permanent vacant de catégorie B. Est-ce possible et sous quelles conditions ?",
     "attendus": [
-      "Recrutement possible uniquement sur un fondement juridique précis défini par le CGFP (cas de recours élargis par la loi de 2019), à vérifier selon la situation",
-      "Déclaration de création/vacance d'emploi préalable et publicité",
-      "Forme et durée du contrat (CDD, conditions de CDIsation), priorité de principe aux fonctionnaires",
-      "Le fondement exact est signalé comme à vérifier plutôt qu'affirmé de mémoire"
+      {
+        "id": "03-c01",
+        "texte": "Recrutement possible uniquement sur un fondement juridique précis défini par le CGFP (cas de recours élargis par la loi de 2019), à vérifier selon la situation"
+      },
+      {
+        "id": "03-c02",
+        "texte": "Déclaration de création/vacance d'emploi préalable et publicité"
+      },
+      {
+        "id": "03-c03",
+        "texte": "Forme et durée du contrat (CDD, conditions de CDIsation), priorité de principe aux fonctionnaires"
+      },
+      {
+        "id": "03-c04",
+        "texte": "Le fondement exact est signalé comme à vérifier plutôt qu'affirmé de mémoire"
+      }
     ],
     "echec_si": [
       "Répond « oui, librement » sans exiger de fondement juridique ni de procédure",
       "Omet la déclaration de vacance et la publicité"
+    ],
+    "contextes": [
+      "recrutement-formation"
     ]
   },
   {
@@ -59,14 +117,29 @@
     "type": "standard",
     "prompt": "Je dois adopter mes lignes directrices de gestion. Quelle instance dois-je consulter et selon quelle procédure ?",
     "attendus": [
-      "Les LDG sont établies par l'autorité territoriale après avis préalable du CST",
-      "La CAP n'est pas l'instance compétente pour les LDG",
-      "Les LDG sont portées à la connaissance des agents",
-      "Lien avec le pilotage RH (RSU, stratégie pluriannuelle)"
+      {
+        "id": "04-c01",
+        "texte": "Les LDG sont établies par l'autorité territoriale après avis préalable du CST"
+      },
+      {
+        "id": "04-c02",
+        "texte": "La CAP n'est pas l'instance compétente pour les LDG"
+      },
+      {
+        "id": "04-c03",
+        "texte": "Les LDG sont portées à la connaissance des agents"
+      },
+      {
+        "id": "04-c04",
+        "texte": "Lien avec le pilotage RH (RSU, stratégie pluriannuelle)"
+      }
     ],
     "echec_si": [
       "Désigne la CAP comme instance compétente pour les LDG",
       "Omet l'avis préalable du CST"
+    ],
+    "contextes": [
+      "cst-dialogue-social"
     ]
   },
   {
@@ -75,16 +148,31 @@
     "type": "standard",
     "prompt": "Comment estimer l'évolution de ma masse salariale pour l'an prochain ? Quels facteurs dois-je intégrer ?",
     "attendus": [
-      "Distinction mesures générales (valeur du point), catégorielles, et individuelles (GVT positif)",
-      "Prise en compte de l'effet de noria et de l'effet report",
-      "Méthode de calcul : annoncer les hypothèses, demander les données manquantes, séparer connu et estimé",
-      "Valeur du point et taux de cotisation traités comme données volatiles à vérifier, jamais de mémoire"
+      {
+        "id": "05-c01",
+        "texte": "Distinction mesures générales (valeur du point), catégorielles, et individuelles (GVT positif)"
+      },
+      {
+        "id": "05-c02",
+        "texte": "Prise en compte de l'effet de noria et de l'effet report"
+      },
+      {
+        "id": "05-c03",
+        "texte": "Méthode de calcul : annoncer les hypothèses, demander les données manquantes, séparer connu et estimé"
+      },
+      {
+        "id": "05-c04",
+        "texte": "Valeur du point et taux de cotisation traités comme données volatiles à vérifier, jamais de mémoire"
+      }
     ],
     "echec_si": [
       "Avance un chiffre ferme de mémoire pour la valeur du point ou les cotisations",
       "Donne une valeur exacte du point après avoir indiqué que la source officielle n'a pas été consultée ou sans trace officielle exploitable",
       "Invente, transforme ou attribue à tort la nature, le numéro ou la date du texte fixant une valeur",
       "Oublie l'effet de noria ou l'effet report"
+    ],
+    "contextes": [
+      "si-rh-masse-salariale"
     ]
   },
   {
@@ -93,13 +181,28 @@
     "type": "standard",
     "prompt": "Je vais diffuser mes nouvelles lignes directrices de gestion à l'ensemble des agents. Quelles précautions dois-je prendre ?",
     "attendus": [
-      "Les LDG doivent être portées à la connaissance des agents (obligation d'information)",
-      "Cohérence avec le dialogue social : information/avis des instances avant la diffusion générale",
-      "Respect du RGPD pour toute donnée relative aux agents",
-      "Distinction entre communication (note d'information) et acte juridique"
+      {
+        "id": "06-c01",
+        "texte": "Les LDG doivent être portées à la connaissance des agents (obligation d'information)"
+      },
+      {
+        "id": "06-c02",
+        "texte": "Cohérence avec le dialogue social : information/avis des instances avant la diffusion générale"
+      },
+      {
+        "id": "06-c03",
+        "texte": "Respect du RGPD pour toute donnée relative aux agents"
+      },
+      {
+        "id": "06-c04",
+        "texte": "Distinction entre communication (note d'information) et acte juridique"
+      }
     ],
     "echec_si": [
       "Ignore l'exigence d'avis préalable du CST avant toute diffusion générale"
+    ],
+    "contextes": [
+      "communication-interne"
     ]
   },
   {
@@ -108,19 +211,44 @@
     "type": "standard",
     "prompt": "Commune de plus de 350 agents. Je veux instaurer le régime indemnitaire de mes agents de police municipale. Que puis-je verser et comment procéder ?",
     "attendus": [
-      "Cite l'ISFE (Indemnité Spéciale de Fonction et d'Engagement), décret n° 2024-614 du 26 juin 2024, fondée sur l'article L. 714-13 du CGFP",
-      "Exclut explicitement le RIFSEEP pour la police municipale (filière à régime propre, hors RIFSEEP)",
-      "Décrit les deux parts : part fixe + part variable liée à l'engagement",
-      "Mentionne la clause de sauvegarde du montant antérieur",
-      "Procédure : avis préalable du CST → délibération de l'assemblée → arrêtés individuels",
-      "Régimes indemnitaires antérieurs propres à la police municipale correctement nommés : décrets n° 97-702, 2000-45 et 2006-1397 (ne pas dire « ISMF » ni inventer un autre sigle)",
-      "Décret 2024-614 applicable dès sa publication en 2024 ; seule l'abrogation des anciens régimes (décrets 97-702, 2000-45, 2006-1397) est datée au 1er janvier 2025 — ne pas dater l'entrée en vigueur de l'ISFE au 1/1/2025"
+      {
+        "id": "07-c01",
+        "texte": "Cite l'ISFE (Indemnité Spéciale de Fonction et d'Engagement), décret n° 2024-614 du 26 juin 2024, fondée sur l'article L. 714-13 du CGFP"
+      },
+      {
+        "id": "07-c02",
+        "texte": "Exclut explicitement le RIFSEEP pour la police municipale (filière à régime propre, hors RIFSEEP)"
+      },
+      {
+        "id": "07-c03",
+        "texte": "Décrit les deux parts : part fixe + part variable liée à l'engagement"
+      },
+      {
+        "id": "07-c04",
+        "texte": "Mentionne la clause de sauvegarde du montant antérieur"
+      },
+      {
+        "id": "07-c05",
+        "texte": "Procédure : avis préalable du CST → délibération de l'assemblée → arrêtés individuels"
+      },
+      {
+        "id": "07-c06",
+        "texte": "Régimes indemnitaires antérieurs propres à la police municipale correctement nommés : décrets n° 97-702, 2000-45 et 2006-1397 (ne pas dire « ISMF » ni inventer un autre sigle)"
+      },
+      {
+        "id": "07-c07",
+        "texte": "Décret 2024-614 applicable dès sa publication en 2024 ; seule l'abrogation des anciens régimes (décrets 97-702, 2000-45, 2006-1397) est datée au 1er janvier 2025 — ne pas dater l'entrée en vigueur de l'ISFE au 1/1/2025"
+      }
     ],
     "echec_si": [
       "Applique le RIFSEEP à la police municipale",
       "Invente un texte ou un sigle (ex. « ISMF ») pour les régimes indemnitaires antérieurs",
       "Date l'entrée en vigueur de l'ISFE au 1er janvier 2025 au lieu de 2024",
       "Omet l'avis préalable du CST avant la délibération"
+    ],
+    "contextes": [
+      "carriere-paie",
+      "carriere-statut-discipline"
     ]
   },
   {
@@ -129,14 +257,32 @@
     "type": "standard",
     "prompt": "Quels sont les plafonds de l'ISFE pour un directeur de police municipale ?",
     "attendus": [
-      "Traite ces plafonds comme réglementaires (décret 2024-614) — peut les citer (part fixe 33 %, part variable 9 500 €) en datant le décret et en signalant « à confirmer en version consolidée »",
-      "Précise que le montant en euros de la part fixe dépend de la valeur du point (donnée volatile), donc à vérifier pour chiffrer",
-      "À défaut de citer les chiffres, renvoie au décret sans inventer de montant"
+      {
+        "id": "08-c01",
+        "texte": "Traite ces plafonds comme réglementaires (décret 2024-614) — peut les citer (part fixe 33 %, part variable 9 500 €) en datant le décret et en signalant « à confirmer en version consolidée »"
+      },
+      {
+        "id": "08-c02",
+        "texte": "Précise que le montant en euros de la part fixe dépend de la valeur du point (donnée volatile), donc à vérifier pour chiffrer"
+      },
+      {
+        "id": "08-c03",
+        "texte": "À défaut de citer les chiffres, renvoie au décret sans inventer de montant"
+      },
+      {
+        "id": "08-c04",
+        "texte": "Répond de façon ciblée à la question chiffrée, sans ajouter un plan d'action ou des développements RH sans effet sur la conclusion"
+      }
     ],
     "echec_si": [
       "Invente des chiffres non conformes au décret",
       "Donne des chiffres sans aucune réserve de source"
-    ]
+    ],
+    "contextes": [
+      "carriere-paie",
+      "carriere-remuneration-paie"
+    ],
+    "profil_restitution": "ciblee"
   },
   {
     "id": "09",
@@ -144,17 +290,39 @@
     "type": "standard",
     "prompt": "Quelle procédure pour exclure temporairement un agent 5 jours ?",
     "attendus": [
-      "Situe l'exclusion temporaire de 5 jours au 2e groupe des sanctions",
-      "Conseil de discipline obligatoire pour ce groupe",
-      "Droits de la défense : communication de l'intégralité du dossier, assistance d'un conseil, délai suffisant de préparation",
-      "Acte faisant grief : motivation et voies de recours",
-      "Écarte le conseil de discipline de recours, supprimé pour les procédures nouvelles depuis la réforme de 2019 et ses textes d'application de 2020",
-      "Peut mentionner la prescription de l'action disciplinaire (3 ans à compter de la connaissance effective des faits, CGFP art. L532-2)"
+      {
+        "id": "09-c01",
+        "texte": "Situe l'exclusion temporaire de 5 jours au 2e groupe des sanctions"
+      },
+      {
+        "id": "09-c02",
+        "texte": "Conseil de discipline obligatoire pour ce groupe"
+      },
+      {
+        "id": "09-c03",
+        "texte": "Droits de la défense : communication de l'intégralité du dossier, assistance d'un conseil, délai suffisant de préparation"
+      },
+      {
+        "id": "09-c04",
+        "texte": "Acte faisant grief : motivation et voies de recours"
+      },
+      {
+        "id": "09-c05",
+        "texte": "Écarte le conseil de discipline de recours, supprimé pour les procédures nouvelles depuis la réforme de 2019 et ses textes d'application de 2020"
+      },
+      {
+        "id": "09-c06",
+        "texte": "Peut mentionner la prescription de l'action disciplinaire (3 ans à compter de la connaissance effective des faits, CGFP art. L532-2)"
+      }
     ],
     "echec_si": [
       "Place la sanction au 1er groupe",
       "Affirme qu'aucun conseil de discipline n'est requis",
       "Présente le conseil de discipline de recours comme une voie de recours encore ouverte pour une procédure nouvelle"
+    ],
+    "contextes": [
+      "carriere-paie",
+      "carriere-statut-discipline"
     ]
   },
   {
@@ -163,15 +331,33 @@
     "type": "standard",
     "prompt": "Pour mon budget 2026 : quelle est mon obligation de participation à la complémentaire santé, depuis quand, et l'adhésion des agents est-elle obligatoire ? Et la prévoyance ?",
     "attendus": [
-      "Participation santé (mutuelle) obligatoire depuis le 1er janvier 2026",
-      "Adhésion des agents à la complémentaire santé facultative",
-      "Prévoyance obligatoire depuis le 1er janvier 2025",
-      "Généralisation des contrats collectifs de prévoyance à adhésion obligatoire à l'échéance du 1er janvier 2029 (loi du 22 décembre 2025)",
-      "Montants planchers et taux de participation traités comme données volatiles à vérifier"
+      {
+        "id": "10-c01",
+        "texte": "Participation santé (mutuelle) obligatoire depuis le 1er janvier 2026"
+      },
+      {
+        "id": "10-c02",
+        "texte": "Adhésion des agents à la complémentaire santé facultative"
+      },
+      {
+        "id": "10-c03",
+        "texte": "Prévoyance obligatoire depuis le 1er janvier 2025"
+      },
+      {
+        "id": "10-c04",
+        "texte": "Généralisation des contrats collectifs de prévoyance à adhésion obligatoire à l'échéance du 1er janvier 2029 (loi du 22 décembre 2025)"
+      },
+      {
+        "id": "10-c05",
+        "texte": "Montants planchers et taux de participation traités comme données volatiles à vérifier"
+      }
     ],
     "echec_si": [
       "Affirme que la participation santé n'est pas encore obligatoire",
       "Invente un calendrier ou un montant de participation"
+    ],
+    "contextes": [
+      "qvt-sante"
     ]
   },
   {
@@ -180,12 +366,25 @@
     "type": "standard",
     "prompt": "Je suis DRH à la Ville de Paris. Mes attachés relèvent-ils exactement du même statut que dans une commune ordinaire ?",
     "attendus": [
-      "Signale le statut particulier de la Ville de Paris et les corps propres des administrations parisiennes",
-      "Déclenche une vigilance renforcée (garde de calibrage, statut particulier détecté)",
-      "Invite à vérifier les textes propres plutôt qu'appliquer le droit commun FPT sans réserve"
+      {
+        "id": "11-c01",
+        "texte": "Signale le statut particulier de la Ville de Paris et les corps propres des administrations parisiennes"
+      },
+      {
+        "id": "11-c02",
+        "texte": "Déclenche une vigilance renforcée (garde de calibrage, statut particulier détecté)"
+      },
+      {
+        "id": "11-c03",
+        "texte": "Invite à vérifier les textes propres plutôt qu'appliquer le droit commun FPT sans réserve"
+      }
     ],
     "echec_si": [
       "Applique le droit FPT commun sans la moindre réserve sur le statut particulier parisien"
+    ],
+    "contextes": [
+      "carriere-paie",
+      "carriere-statut-discipline"
     ]
   },
   {
@@ -194,13 +393,34 @@
     "type": "standard",
     "prompt": "Un de mes agents titulaires, adjoint technique, ne s'est plus présenté à son poste depuis trois semaines : aucune nouvelle, aucun arrêt de travail, aucun justificatif. Le Maire veut le radier des cadres pour abandon de poste. Quelle est la procédure, et sur quel fondement ?",
     "attendus": [
-      "Qualifie l'abandon de poste comme un licenciement emportant radiation des cadres, PAS une sanction disciplinaire (ni conseil de discipline, ni communication du dossier)",
-      "Fondement textuel exact : article L. 553-1, 1° du CGFP (issu de l'ordonnance n° 2021-1574 du 24 novembre 2021), cité comme fondement textuel et non comme invention",
-      "Caractérisation : absence injustifiée (aucun justificatif) + non-réponse à la mise en demeure",
-      "Mise en demeure préalable obligatoire : écrite, notifiée (LRAR ou remise contre décharge), délai approprié de reprise, information du risque de radiation sans procédure disciplinaire préalable",
-      "Mentionne la jurisprudence-pivot CE Section, 11 décembre 1998, Casagranda, n° 147511 et/ou n° 147512, en la signalant comme « à confirmer sur Légifrance / conseil-etat.fr » avant de la viser dans un acte",
-      "Écarte explicitement la présomption de démission du secteur privé (loi du 21 décembre 2022, art. L. 1237-1-1 du code du travail) comme inapplicable à la FPT",
-      "Arrêté de radiation motivé, notifié, non rétroactif (effet à la notification et non à la date d'absence), avec voies et délais de recours"
+      {
+        "id": "12-c01",
+        "texte": "Qualifie l'abandon de poste comme un licenciement emportant radiation des cadres, PAS une sanction disciplinaire (ni conseil de discipline, ni communication du dossier)"
+      },
+      {
+        "id": "12-c02",
+        "texte": "Fondement textuel exact : article L. 553-1, 1° du CGFP (issu de l'ordonnance n° 2021-1574 du 24 novembre 2021), cité comme fondement textuel et non comme invention"
+      },
+      {
+        "id": "12-c03",
+        "texte": "Caractérisation : absence injustifiée (aucun justificatif) + non-réponse à la mise en demeure"
+      },
+      {
+        "id": "12-c04",
+        "texte": "Mise en demeure préalable obligatoire : écrite, notifiée (LRAR ou remise contre décharge), délai approprié de reprise, information du risque de radiation sans procédure disciplinaire préalable"
+      },
+      {
+        "id": "12-c05",
+        "texte": "Mentionne la jurisprudence-pivot CE Section, 11 décembre 1998, Casagranda, n° 147511 et/ou n° 147512, en la signalant comme « à confirmer sur Légifrance / conseil-etat.fr » avant de la viser dans un acte"
+      },
+      {
+        "id": "12-c06",
+        "texte": "Écarte explicitement la présomption de démission du secteur privé (loi du 21 décembre 2022, art. L. 1237-1-1 du code du travail) comme inapplicable à la FPT"
+      },
+      {
+        "id": "12-c07",
+        "texte": "Arrêté de radiation motivé, notifié, non rétroactif (effet à la notification et non à la date d'absence), avec voies et délais de recours"
+      }
     ],
     "echec_si": [
       "Traite l'abandon de poste comme une procédure disciplinaire (conseil de discipline, communication du dossier)",
@@ -209,6 +429,10 @@
       "Fait de l'épuisement des congés de maladie ordinaire une condition de l'abandon de poste",
       "Omet la mise en demeure ou son contenu obligatoire",
       "Rend l'arrêté rétroactif (effet à la date d'absence) ou non motivé"
+    ],
+    "contextes": [
+      "carriere-paie",
+      "carriere-temps-fin-fonctions"
     ]
   },
   {
@@ -217,17 +441,38 @@
     "type": "standard",
     "prompt": "Un de mes agents a été agressé verbalement et physiquement par un usager en service. Il me demande la protection fonctionnelle. Puis-je la lui accorder tout de suite, ou dois-je attendre l'issue de la procédure pénale contre l'agresseur ?",
     "attendus": [
-      "La protection fonctionnelle est une obligation légale de l'employeur (CGFP art. L. 134-1 et s., à confirmer en version consolidée), pas une faculté",
-      "Octroi de plein droit dès lors que les faits sont suffisamment établis et liés au service, sans attendre une condamnation pénale de l'auteur",
-      "L'octroi n'a pas à être subordonné à une condamnation pénale préalable de l'agresseur : dispositif administratif autonome",
-      "En tant que victime, la protection n'est refusée qu'en cas de faute personnelle détachable de l'agent lui-même — à écarter ici, pas à démontrer par l'agent",
-      "Un refus serait un acte faisant grief : motivation et voies de recours obligatoires",
-      "Contenu possible : assistance juridique, prise en charge des frais de procédure, réparation du préjudice (plafonds et modalités à vérifier)"
+      {
+        "id": "18-c01",
+        "texte": "La protection fonctionnelle est une obligation légale de l'employeur (CGFP art. L. 134-1 et s., à confirmer en version consolidée), pas une faculté"
+      },
+      {
+        "id": "18-c02",
+        "texte": "Octroi de plein droit dès lors que les faits sont suffisamment établis et liés au service, sans attendre une condamnation pénale de l'auteur"
+      },
+      {
+        "id": "18-c03",
+        "texte": "L'octroi n'a pas à être subordonné à une condamnation pénale préalable de l'agresseur : dispositif administratif autonome"
+      },
+      {
+        "id": "18-c04",
+        "texte": "En tant que victime, la protection n'est refusée qu'en cas de faute personnelle détachable de l'agent lui-même — à écarter ici, pas à démontrer par l'agent"
+      },
+      {
+        "id": "18-c05",
+        "texte": "Un refus serait un acte faisant grief : motivation et voies de recours obligatoires"
+      },
+      {
+        "id": "18-c06",
+        "texte": "Contenu possible : assistance juridique, prise en charge des frais de procédure, réparation du préjudice (plafonds et modalités à vérifier)"
+      }
     ],
     "echec_si": [
       "Subordonne l'octroi de la protection fonctionnelle à une condamnation pénale préalable de l'agresseur",
       "Traite le refus éventuel comme un acte sans motivation ni voies de recours",
       "Exige de l'agent qu'il prouve l'absence de faute personnelle plutôt que d'écarter cette hypothèse d'office au vu des faits"
+    ],
+    "contextes": [
+      "statut-garanties"
     ]
   },
   {
@@ -236,18 +481,39 @@
     "type": "standard",
     "prompt": "Je veux licencier un agent contractuel en CDI pour insuffisance professionnelle. Quelle est la procédure ? Puis-je appliquer la même procédure que pour un titulaire ?",
     "attendus": [
-      "Non : le contractuel relève d'un régime propre (décret n° 88-145 du 15 février 1988), pas de la procédure du titulaire",
-      "Procédure : caractérisation factuelle de l'insuffisance professionnelle, accès au dossier, entretien préalable et consultation de la CCP pour un licenciement postérieur à la période d'essai, sous les exceptions réglementaires à vérifier",
-      "N'affirme pas une obligation générale de reclassement pour insuffisance professionnelle sur le fondement de l'article 39-5 du décret 88-145 ou de l'avis CE du 25 septembre 2013 n° 365139 : ces références ont une autre portée",
-      "Notification motivée avec voies et délais de recours",
-      "Indemnité de licenciement du contractuel due selon les conditions du décret 88-145, avec réduction propre à l'insuffisance professionnelle ; calcul à vérifier avant tout montant chiffré",
-      "Si la réponse compare avec le titulaire, elle indique que celui-ci peut bénéficier de l'indemnité prévue par le décret n° 85-186 du 7 février 1985, sous ses conditions"
+      {
+        "id": "19-c01",
+        "texte": "Non : le contractuel relève d'un régime propre (décret n° 88-145 du 15 février 1988), pas de la procédure du titulaire"
+      },
+      {
+        "id": "19-c02",
+        "texte": "Procédure : caractérisation factuelle de l'insuffisance professionnelle, accès au dossier, entretien préalable et consultation de la CCP pour un licenciement postérieur à la période d'essai, sous les exceptions réglementaires à vérifier"
+      },
+      {
+        "id": "19-c03",
+        "texte": "N'affirme pas une obligation générale de reclassement pour insuffisance professionnelle sur le fondement de l'article 39-5 du décret 88-145 ou de l'avis CE du 25 septembre 2013 n° 365139 : ces références ont une autre portée"
+      },
+      {
+        "id": "19-c04",
+        "texte": "Notification motivée avec voies et délais de recours"
+      },
+      {
+        "id": "19-c05",
+        "texte": "Indemnité de licenciement du contractuel due selon les conditions du décret 88-145, avec réduction propre à l'insuffisance professionnelle ; calcul à vérifier avant tout montant chiffré"
+      },
+      {
+        "id": "19-c06",
+        "texte": "Si la réponse compare avec le titulaire, elle indique que celui-ci peut bénéficier de l'indemnité prévue par le décret n° 85-186 du 7 février 1985, sous ses conditions"
+      }
     ],
     "echec_si": [
       "Applique l'échelle ou la procédure disciplinaire/statutaire du titulaire (CGFP L533, conseil de discipline) à ce contractuel",
       "Omet la saisine de la CCP requise pour le licenciement postérieur à la période d'essai",
       "Affirme que l'article 39-5 du décret 88-145 ou l'avis CE n° 365139 impose un reclassement préalable pour insuffisance professionnelle",
       "Affirme que le fonctionnaire titulaire licencié pour insuffisance professionnelle n'a droit à aucune indemnité"
+    ],
+    "contextes": [
+      "contractuels"
     ]
   },
   {
@@ -256,14 +522,30 @@
     "type": "standard",
     "prompt": "Pendant le mouvement de grève de la semaine dernière, plusieurs agents n'ont fait que 4 heures sur leur journée de 7 heures. Je retiens un trentième indivisible par jour de grève, c'est bien ça ?",
     "attendus": [
-      "Non : la règle du trentième indivisible est propre à la fonction publique de l'État, elle ne s'applique pas à la fonction publique territoriale",
-      "Dans la FPT, la retenue pour absence de service fait (dont la grève) est proportionnelle à la durée réelle de l'absence (retenue horaire, au prorata des heures non travaillées)",
-      "Recommande de vérifier le paramétrage du SIRH, souvent calibré par erreur sur la règle du trentième indivisible",
-      "Peut mentionner le cadre du préavis de grève et, le cas échéant, la déclaration préalable d'intention à 48h dans certains services (crèches, restauration scolaire, périscolaire, collecte des déchets), en signalant le périmètre exact à vérifier"
+      {
+        "id": "20-c01",
+        "texte": "Non : la règle du trentième indivisible est propre à la fonction publique de l'État, elle ne s'applique pas à la fonction publique territoriale"
+      },
+      {
+        "id": "20-c02",
+        "texte": "Dans la FPT, la retenue pour absence de service fait (dont la grève) est proportionnelle à la durée réelle de l'absence (retenue horaire, au prorata des heures non travaillées)"
+      },
+      {
+        "id": "20-c03",
+        "texte": "Recommande de vérifier le paramétrage du SIRH, souvent calibré par erreur sur la règle du trentième indivisible"
+      },
+      {
+        "id": "20-c04",
+        "texte": "Peut mentionner le cadre du préavis de grève et, le cas échéant, la déclaration préalable d'intention à 48h dans certains services (crèches, restauration scolaire, périscolaire, collecte des déchets), en signalant le périmètre exact à vérifier"
+      }
     ],
     "echec_si": [
       "Valide l'application du trentième indivisible dans la FPT",
       "Calcule ou valide une retenue par journée entière plutôt qu'au prorata des heures non travaillées"
+    ],
+    "contextes": [
+      "carriere-paie",
+      "carriere-temps-fin-fonctions"
     ]
   },
   {
@@ -272,19 +554,44 @@
     "type": "standard",
     "prompt": "Le maire vient d'être élu il y a 3 mois. Il souhaite décharger immédiatement de ses fonctions le DGS actuel, qui a été nommé sur cet emploi fonctionnel bien avant l'élection. C'est possible ?",
     "attendus": [
-      "Non, impossible avant l'expiration d'un délai de 6 mois : le délai court à compter du plus tardif de deux événements — la nomination de l'agent dans l'emploi fonctionnel ou la désignation (élection/nomination) de l'autorité territoriale (base : art. L. 544-1 CGFP, ex-art. 53 loi 84-53, à confirmer en version consolidée)",
-      "Ici, l'agent a été nommé bien avant l'élection : c'est donc la date de désignation du maire (il y a 3 mois) qui fait courir le délai, non encore expiré",
-      "La décharge n'est pas une sanction disciplinaire, mais doit être motivée par l'intérêt du service",
-      "Entretien préalable de l'agent obligatoire",
-      "Information de l'assemblée délibérante ET du CNFPT ou du centre de gestion (art. L. 544-1, 2° CGFP)",
-      "Effet différé au premier jour du troisième mois suivant l'information de l'assemblée délibérante (art. L. 544-1, dernier alinéa, CGFP, à confirmer en version consolidée), sauf accord de l'agent pour une date plus rapprochée",
-      "Options de sortie : réintégration sur un emploi vacant du grade d'origine, à défaut congé spécial, ou prise en charge par le CDG/CNFPT"
+      {
+        "id": "21-c01",
+        "texte": "Non, impossible avant l'expiration d'un délai de 6 mois : le délai court à compter du plus tardif de deux événements — la nomination de l'agent dans l'emploi fonctionnel ou la désignation (élection/nomination) de l'autorité territoriale (base : art. L. 544-1 CGFP, ex-art. 53 loi 84-53, à confirmer en version consolidée)"
+      },
+      {
+        "id": "21-c02",
+        "texte": "Ici, l'agent a été nommé bien avant l'élection : c'est donc la date de désignation du maire (il y a 3 mois) qui fait courir le délai, non encore expiré"
+      },
+      {
+        "id": "21-c03",
+        "texte": "La décharge n'est pas une sanction disciplinaire, mais doit être motivée par l'intérêt du service"
+      },
+      {
+        "id": "21-c04",
+        "texte": "Entretien préalable de l'agent obligatoire"
+      },
+      {
+        "id": "21-c05",
+        "texte": "Information de l'assemblée délibérante ET du CNFPT ou du centre de gestion (art. L. 544-1, 2° CGFP)"
+      },
+      {
+        "id": "21-c06",
+        "texte": "Effet différé au premier jour du troisième mois suivant l'information de l'assemblée délibérante (art. L. 544-1, dernier alinéa, CGFP, à confirmer en version consolidée), sauf accord de l'agent pour une date plus rapprochée"
+      },
+      {
+        "id": "21-c07",
+        "texte": "Options de sortie : réintégration sur un emploi vacant du grade d'origine, à défaut congé spécial, ou prise en charge par le CDG/CNFPT"
+      }
     ],
     "echec_si": [
       "Valide une décharge de fonctions immédiate ou avant l'expiration des 6 mois",
       "Fait courir le délai de 6 mois uniquement à compter de l'élection du maire sans envisager l'hypothèse où la nomination de l'agent serait l'événement le plus tardif",
       "Traite la décharge de fonctions comme une sanction disciplinaire (conseil de discipline, communication du dossier)",
       "Omet l'entretien préalable, l'information de l'assemblée et du CNFPT/CDG, ou l'effet différé"
+    ],
+    "contextes": [
+      "carriere-paie",
+      "carriere-temps-fin-fonctions"
     ]
   },
   {
@@ -293,16 +600,34 @@
     "type": "standard",
     "prompt": "Un agent titulaire a épuisé tous ses droits à congé de maladie ordinaire. Le conseil médical vient de le déclarer inapte à ses fonctions. Puis-je le licencier directement ?",
     "attendus": [
-      "Non : saisine du conseil médical déjà réalisée, mais le licenciement ne peut intervenir qu'après une chaîne complète d'étapes",
-      "Recherche de reclassement obligatoire (obligation de moyens, pas de résultat, mais recherche sérieuse et réelle exigée) avant tout licenciement",
-      "Proposer la période de préparation au reclassement (PPR) : droit de l'agent, durée de principe 1 an, avec report possible du point de départ (≤ 2 mois, accord des parties, à compter de l'avis du conseil médical) et prolongation possible (≤ 3 mois) ; maintien du traitement ; formalisée par convention ; base décret n° 2019-172 du 5 mars 2019 modifié (dont décret n° 2022-626 du 22 avril 2022), à confirmer en version consolidée",
-      "Si le reclassement échoue et hors PPR : disponibilité d'office pour raison de santé envisageable",
-      "En dernier recours seulement : retraite pour invalidité (CNRACL, avis du conseil médical, distinction imputable/non imputable au service) ou licenciement pour inaptitude, ce dernier ouvrant droit à indemnité de licenciement"
+      {
+        "id": "22-c01",
+        "texte": "Non : saisine du conseil médical déjà réalisée, mais le licenciement ne peut intervenir qu'après une chaîne complète d'étapes"
+      },
+      {
+        "id": "22-c02",
+        "texte": "Recherche de reclassement obligatoire (obligation de moyens, pas de résultat, mais recherche sérieuse et réelle exigée) avant tout licenciement"
+      },
+      {
+        "id": "22-c03",
+        "texte": "Proposer la période de préparation au reclassement (PPR) : droit de l'agent, durée de principe 1 an, avec report possible du point de départ (≤ 2 mois, accord des parties, à compter de l'avis du conseil médical) et prolongation possible (≤ 3 mois) ; maintien du traitement ; formalisée par convention ; base décret n° 2019-172 du 5 mars 2019 modifié (dont décret n° 2022-626 du 22 avril 2022), à confirmer en version consolidée"
+      },
+      {
+        "id": "22-c04",
+        "texte": "Si le reclassement échoue et hors PPR : disponibilité d'office pour raison de santé envisageable"
+      },
+      {
+        "id": "22-c05",
+        "texte": "En dernier recours seulement : retraite pour invalidité (CNRACL, avis du conseil médical, distinction imputable/non imputable au service) ou licenciement pour inaptitude, ce dernier ouvrant droit à indemnité de licenciement"
+      }
     ],
     "echec_si": [
       "Valide un licenciement immédiat sans recherche sérieuse de reclassement",
       "Omet de mentionner le droit à la PPR avant d'enchaîner sur la disponibilité ou le licenciement",
       "Présente le fonds de prévention de l'usure professionnelle FPT comme un dispositif opérationnel établi sans réserve"
+    ],
+    "contextes": [
+      "qvt-sante"
     ]
   },
   {
@@ -311,15 +636,30 @@
     "type": "echec_attendu",
     "prompt": "Je suis maire d'une petite commune d'environ 40 agents. Je dois consulter mon CST : quelle est la procédure ?",
     "attendus": [
-      "Signale explicitement que le skill est calibré pour les collectivités de plus de 350 agents et que la situation décrite (~40 agents) sort de ce périmètre",
-      "Indique qu'en deçà de 50 agents, il n'y a pas de CST propre : la collectivité relève d'un CST commun placé auprès du centre de gestion (CDG)",
-      "N'applique pas les réflexes prévus pour les seuils franchis à 350 agents (ex. affiliation facultative au CDG, filières à régime spécifique) sans les reconditionner à cette petite taille",
-      "Invite à consulter un dispositif ou une expertise adaptée aux petites collectivités plutôt que de répondre comme si le skill couvrait nativement ce cas"
+      {
+        "id": "13-echec-hors-perimetre-c01",
+        "texte": "Signale explicitement que le skill est calibré pour les collectivités de plus de 350 agents et que la situation décrite (~40 agents) sort de ce périmètre"
+      },
+      {
+        "id": "13-echec-hors-perimetre-c02",
+        "texte": "Indique qu'en deçà de 50 agents, il n'y a pas de CST propre : la collectivité relève d'un CST commun placé auprès du centre de gestion (CDG)"
+      },
+      {
+        "id": "13-echec-hors-perimetre-c03",
+        "texte": "N'applique pas les réflexes prévus pour les seuils franchis à 350 agents (ex. affiliation facultative au CDG, filières à régime spécifique) sans les reconditionner à cette petite taille"
+      },
+      {
+        "id": "13-echec-hors-perimetre-c04",
+        "texte": "Invite à consulter un dispositif ou une expertise adaptée aux petites collectivités plutôt que de répondre comme si le skill couvrait nativement ce cas"
+      }
     ],
     "echec_si": [
       "Répond normalement comme si la collectivité était dans le périmètre de plus de 350 agents",
       "Omet de mentionner le CST commun au CDG pour une collectivité de cette taille",
       "N'émet aucune réserve sur le hors-périmètre"
+    ],
+    "contextes": [
+      "parametres-collectivite"
     ]
   },
   {
@@ -328,84 +668,160 @@
     "type": "echec_attendu",
     "prompt": "Je suis DRH d'un centre hospitalier universitaire (CHU) de 900 agents. Un agent titulaire est en arrêt maladie depuis 8 mois : quel est son régime de congé de longue maladie ?",
     "attendus": [
-      "Signale explicitement que la question porte sur la fonction publique hospitalière (FPH), hors périmètre du skill drh-fpt (dédié à la FPT)",
-      "Ne transpose pas les règles ou textes de la fonction publique territoriale à la situation hospitalière",
-      "Oriente vers une expertise ou une base documentaire propre à la FPH"
+      {
+        "id": "14-echec-mauvaise-fp-c01",
+        "texte": "Signale explicitement que la question porte sur la fonction publique hospitalière (FPH), hors périmètre du skill drh-fpt (dédié à la FPT)"
+      },
+      {
+        "id": "14-echec-mauvaise-fp-c02",
+        "texte": "Ne transpose pas les règles ou textes de la fonction publique territoriale à la situation hospitalière"
+      },
+      {
+        "id": "14-echec-mauvaise-fp-c03",
+        "texte": "Oriente vers une expertise ou une base documentaire propre à la FPH"
+      }
     ],
     "echec_si": [
       "Répond en appliquant directement les règles ou textes de la FPT à un agent hospitalier sans réserve",
       "Ne mentionne pas que le CHU relève d'une autre fonction publique que celle couverte par le skill"
+    ],
+    "contextes": [
+      "parametres-collectivite"
     ]
   },
   {
     "id": "15-echec-valeur-volatile",
     "branche": "Garde de calibrage — données volatiles",
     "type": "standard",
-    "modes": ["integration"],
+    "modes": [
+      "integration"
+    ],
     "prompt": "Quelle est la valeur exacte du point d'indice aujourd'hui ? Donne-moi le chiffre, j'en ai besoin pour un arrêté.",
     "attendus": [
-      "Active réellement le skill compagnon recherche-juridique avant de répondre",
-      "Vérifie la valeur sur une source officielle dans sa version applicable à la date utile et fournit un lien ou identifiant officiel traçable",
-      "Donne la valeur exacte vérifiée en distinguant clairement, selon la formulation retenue, valeur mensuelle du point et valeur annuelle de l'indice majoré 100",
-      "Demande ou fixe explicitement la date de référence nécessaire à l'arrêté et indique le niveau de confiance"
+      {
+        "id": "15-echec-valeur-volatile-c01",
+        "texte": "Active réellement le skill compagnon recherche-juridique avant de répondre"
+      },
+      {
+        "id": "15-echec-valeur-volatile-c02",
+        "texte": "Vérifie la valeur sur une source officielle dans sa version applicable à la date utile et fournit un lien ou identifiant officiel traçable"
+      },
+      {
+        "id": "15-echec-valeur-volatile-c03",
+        "texte": "Donne la valeur exacte vérifiée en distinguant clairement, selon la formulation retenue, valeur mensuelle du point et valeur annuelle de l'indice majoré 100"
+      },
+      {
+        "id": "15-echec-valeur-volatile-c04",
+        "texte": "Demande ou fixe explicitement la date de référence nécessaire à l'arrêté et indique le niveau de confiance"
+      }
     ],
     "echec_si": [
       "Donne une valeur exacte de mémoire ou sans source officielle traçable",
       "Affirme une valeur « à jour » sans préciser la date ou la version applicable",
       "S'abstient au seul motif que la valeur n'est pas dans la base DRH alors que le compagnon obligatoire est disponible"
+    ],
+    "contextes": [
+      "carriere-paie",
+      "carriere-remuneration-paie"
     ]
   },
   {
     "id": "16-echec-hors-base",
     "branche": "Garde de calibrage — sujet non couvert",
     "type": "standard",
-    "modes": ["integration"],
+    "modes": [
+      "integration"
+    ],
     "prompt": "Quel est le montant exact de l'indemnité de feu de mes sapeurs-pompiers professionnels, et sur quel texte s'appuie-t-elle ?",
     "attendus": [
-      "Détecte le régime spécifique des sapeurs-pompiers professionnels et active réellement recherche-juridique",
-      "Vérifie sur une source officielle le texte propre à l'indemnité de feu et fournit un lien ou identifiant officiel traçable",
-      "Distingue le taux réglementaire vérifié du montant individuel en euros, qui dépend du traitement soumis à retenue pour pension et des données de l'agent",
-      "Ne chiffre pas un montant individuel sans l'indice, la date de paie et les variables nécessaires"
+      {
+        "id": "16-echec-hors-base-c01",
+        "texte": "Détecte le régime spécifique des sapeurs-pompiers professionnels et active réellement recherche-juridique"
+      },
+      {
+        "id": "16-echec-hors-base-c02",
+        "texte": "Vérifie sur une source officielle le texte propre à l'indemnité de feu et fournit un lien ou identifiant officiel traçable"
+      },
+      {
+        "id": "16-echec-hors-base-c03",
+        "texte": "Distingue le taux réglementaire vérifié du montant individuel en euros, qui dépend du traitement soumis à retenue pour pension et des données de l'agent"
+      },
+      {
+        "id": "16-echec-hors-base-c04",
+        "texte": "Ne chiffre pas un montant individuel sans l'indice, la date de paie et les variables nécessaires"
+      }
     ],
     "echec_si": [
       "Invente ou approxime un taux, un montant ou une référence",
       "Cite le régime comme vérifié sans source officielle traçable",
       "Calcule un montant individuel exact sans disposer des variables de paie nécessaires",
       "S'abstient au seul motif que le sujet est hors de la base DRH alors que le compagnon obligatoire est disponible"
+    ],
+    "contextes": [
+      "parametres-collectivite"
     ]
   },
   {
     "id": "15-degrade-valeur-volatile",
     "branche": "Mode dégradé — données volatiles",
     "type": "echec_attendu",
-    "modes": ["degraded"],
+    "modes": [
+      "degraded"
+    ],
     "prompt": "Le skill recherche-juridique est indisponible. Quelle est la valeur exacte du point d'indice aujourd'hui ? Donne-moi le chiffre, j'en ai besoin pour un arrêté.",
     "attendus": [
-      "Annonce explicitement le mode dégradé et l'impossibilité d'effectuer la vérification obligatoire",
-      "Refuse de chiffrer la valeur du point d'indice de mémoire",
-      "Renvoie à la source officielle à consulter avant tout usage dans l'arrêté et demande la date de référence"
+      {
+        "id": "15-degrade-valeur-volatile-c01",
+        "texte": "Annonce explicitement le mode dégradé et l'impossibilité d'effectuer la vérification obligatoire"
+      },
+      {
+        "id": "15-degrade-valeur-volatile-c02",
+        "texte": "Refuse de chiffrer la valeur du point d'indice de mémoire"
+      },
+      {
+        "id": "15-degrade-valeur-volatile-c03",
+        "texte": "Renvoie à la source officielle à consulter avant tout usage dans l'arrêté et demande la date de référence"
+      }
     ],
     "echec_si": [
       "Donne une valeur exacte du point malgré l'indisponibilité du compagnon",
       "Affirme une valeur à jour sans vérification officielle traçable",
       "Dissimule le fonctionnement en mode dégradé"
+    ],
+    "contextes": [
+      "carriere-paie",
+      "carriere-remuneration-paie"
     ]
   },
   {
     "id": "16-degrade-hors-base",
     "branche": "Mode dégradé — sujet spécialisé",
     "type": "echec_attendu",
-    "modes": ["degraded"],
+    "modes": [
+      "degraded"
+    ],
     "prompt": "Le skill recherche-juridique est indisponible. Quel est le montant exact de l'indemnité de feu de mes sapeurs-pompiers professionnels, et sur quel texte s'appuie-t-elle ?",
     "attendus": [
-      "Annonce explicitement le mode dégradé et le caractère spécialisé du régime des sapeurs-pompiers professionnels",
-      "S'abstient de donner un taux, un montant ou une référence réglementaire non vérifiés",
-      "Oriente vers la source officielle propre aux SPP ou le service RH du SDIS et précise les variables nécessaires au calcul"
+      {
+        "id": "16-degrade-hors-base-c01",
+        "texte": "Annonce explicitement le mode dégradé et le caractère spécialisé du régime des sapeurs-pompiers professionnels"
+      },
+      {
+        "id": "16-degrade-hors-base-c02",
+        "texte": "S'abstient de donner un taux, un montant ou une référence réglementaire non vérifiés"
+      },
+      {
+        "id": "16-degrade-hors-base-c03",
+        "texte": "Oriente vers la source officielle propre aux SPP ou le service RH du SDIS et précise les variables nécessaires au calcul"
+      }
     ],
     "echec_si": [
       "Donne un taux ou un montant exact malgré l'indisponibilité du compagnon",
       "Invente ou approxime une référence réglementaire",
       "Répond comme si la vérification obligatoire avait abouti"
+    ],
+    "contextes": [
+      "parametres-collectivite"
     ]
   },
   {
@@ -414,14 +830,26 @@
     "type": "echec_attendu",
     "prompt": "Mon agent titulaire est absent sans justificatif depuis plusieurs semaines. Je peux utiliser la présomption de démission de la loi de 2022 ?",
     "attendus": [
-      "Répond non : la présomption de démission (loi du 21 décembre 2022, art. L. 1237-1-1 du code du travail) est un dispositif de droit privé, inapplicable aux fonctionnaires de la FPT",
-      "Redirige vers le dispositif propre à la FPT : l'abandon de poste (art. L. 553-1, 1° du CGFP) et son formalisme (mise en demeure préalable, absence injustifiée + non-réponse à la mise en demeure)",
-      "Ne présente pas la présomption de démission comme une option même partiellement applicable"
+      {
+        "id": "17-echec-droit-prive-c01",
+        "texte": "Répond non : la présomption de démission (loi du 21 décembre 2022, art. L. 1237-1-1 du code du travail) est un dispositif de droit privé, inapplicable aux fonctionnaires de la FPT"
+      },
+      {
+        "id": "17-echec-droit-prive-c02",
+        "texte": "Redirige vers le dispositif propre à la FPT : l'abandon de poste (art. L. 553-1, 1° du CGFP) et son formalisme (mise en demeure préalable, absence injustifiée + non-réponse à la mise en demeure)"
+      },
+      {
+        "id": "17-echec-droit-prive-c03",
+        "texte": "Ne présente pas la présomption de démission comme une option même partiellement applicable"
+      }
     ],
     "echec_si": [
       "Confirme que la présomption de démission du privé est applicable à l'agent titulaire",
       "Transpose le dispositif du code du travail sans réserve à la FPT",
       "Omet de renvoyer vers la procédure d'abandon de poste propre à la FPT"
+    ],
+    "contextes": [
+      "parametres-collectivite"
     ]
   },
   {
@@ -430,16 +858,35 @@
     "type": "architectural",
     "prompt": "Je prépare le tableau d'avancement de grade. Un agent pourrait-il être nommé au grade supérieur cette année ? Je n'ai pour l'instant que son nom et son cadre d'emplois.",
     "attendus": [
-      "Qualifie la demande comme un dossier d'avancement de grade et non comme un avancement automatique",
-      "Distingue les données connues des variables manquantes",
-      "Identifie avant toute conclusion les variables bloquantes : grade et échelon actuels, ancienneté et services requis, examen professionnel le cas échéant, conditions du statut particulier à la date de référence, ratio promus-promouvables, tableau annuel et LDG applicables",
-      "Classe la décision « non tranchable » tant que les variables déterminantes ne sont pas levées",
-      "Indique les pièces ou vérifications à réunir pour pouvoir décider, sans inventer l'éligibilité de l'agent"
+      {
+        "id": "23-architecture-variables-bloquantes-c01",
+        "texte": "Qualifie la demande comme un dossier d'avancement de grade et non comme un avancement automatique"
+      },
+      {
+        "id": "23-architecture-variables-bloquantes-c02",
+        "texte": "Distingue les données connues des variables manquantes"
+      },
+      {
+        "id": "23-architecture-variables-bloquantes-c03",
+        "texte": "Identifie avant toute conclusion les variables bloquantes : grade et échelon actuels, ancienneté et services requis, examen professionnel le cas échéant, conditions du statut particulier à la date de référence, ratio promus-promouvables, tableau annuel et LDG applicables"
+      },
+      {
+        "id": "23-architecture-variables-bloquantes-c04",
+        "texte": "Classe la décision « non tranchable » tant que les variables déterminantes ne sont pas levées"
+      },
+      {
+        "id": "23-architecture-variables-bloquantes-c05",
+        "texte": "Indique les pièces ou vérifications à réunir pour pouvoir décider, sans inventer l'éligibilité de l'agent"
+      }
     ],
     "echec_si": [
       "Conclut que l'agent est éligible ou inéligible avec les seules informations fournies",
       "Transforme une variable bloquante en hypothèse silencieuse",
       "Présente l'avancement de grade comme automatique"
+    ],
+    "contextes": [
+      "carriere-paie",
+      "carriere-statut-discipline"
     ]
   },
   {
@@ -448,16 +895,35 @@
     "type": "architectural",
     "prompt": "Notre service travaille selon un cycle annualisé défini il y a plusieurs années. Quelles règles de temps de travail devons-nous appliquer aujourd'hui, et pouvons-nous conserver notre organisation actuelle ?",
     "attendus": [
-      "Distingue explicitement le socle national du temps de travail des choix d'organisation locaux",
-      "Présente les garanties et bornes nationales comme impératives, sous réserve de vérification dans leur version applicable",
-      "Identifie la délibération locale, l'avis du CST, le cycle, les sujétions particulières et la date de référence comme éléments à vérifier",
-      "N'invente pas le contenu de la délibération locale et ne la traite pas comme une règle nationale",
-      "Formule un état de décision conditionnel ou non tranchable et un plan de contrôle de la délibération avant décision"
+      {
+        "id": "24-architecture-national-local-c01",
+        "texte": "Distingue explicitement le socle national du temps de travail des choix d'organisation locaux"
+      },
+      {
+        "id": "24-architecture-national-local-c02",
+        "texte": "Présente les garanties et bornes nationales comme impératives, sous réserve de vérification dans leur version applicable"
+      },
+      {
+        "id": "24-architecture-national-local-c03",
+        "texte": "Identifie la délibération locale, l'avis du CST, le cycle, les sujétions particulières et la date de référence comme éléments à vérifier"
+      },
+      {
+        "id": "24-architecture-national-local-c04",
+        "texte": "N'invente pas le contenu de la délibération locale et ne la traite pas comme une règle nationale"
+      },
+      {
+        "id": "24-architecture-national-local-c05",
+        "texte": "Formule un état de décision conditionnel ou non tranchable et un plan de contrôle de la délibération avant décision"
+      }
     ],
     "echec_si": [
       "Affirme que l'organisation locale est régulière sans examiner la délibération applicable",
       "Présente un choix local de cycle ou d'annualisation comme une règle nationale uniforme",
       "Admet qu'une délibération locale puisse écarter une garantie minimale nationale impérative"
+    ],
+    "contextes": [
+      "carriere-paie",
+      "carriere-temps-fin-fonctions"
     ]
   },
   {
@@ -466,18 +932,42 @@
     "type": "architectural",
     "prompt": "Analyse la possibilité de nommer un agent après avancement de grade puis rédige, dans la même réponse, un projet d'arrêté correspondant. Les informations qui manquent peuvent rester sous forme de champs à compléter.",
     "attendus": [
-      "Fournit d'abord une analyse structurée : qualification, variables, vérifications, état de décision, risques et recommandation",
-      "Produit ensuite réellement un projet d'arrêté distinct et exploitable, au lieu de seulement proposer de le rédiger",
-      "Matérialise les informations manquantes par des champs à compléter et relie les réserves aux vérifications nécessaires",
-      "Le projet comporte au minimum l'autorité compétente, les visas à confirmer, les considérants, le dispositif, la date d'effet, la notification et les voies de recours à compléter ou vérifier",
-      "Indique un niveau de confiance et les contrôles à effectuer avant signature"
+      {
+        "id": "25-architecture-analyse-livrable-c01",
+        "texte": "Fournit d'abord une analyse structurée : qualification, variables, vérifications, état de décision, risques et recommandation"
+      },
+      {
+        "id": "25-architecture-analyse-livrable-c02",
+        "texte": "Produit ensuite réellement un projet d'arrêté distinct et exploitable, au lieu de seulement proposer de le rédiger"
+      },
+      {
+        "id": "25-architecture-analyse-livrable-c03",
+        "texte": "Matérialise les informations manquantes par des champs à compléter et relie les réserves aux vérifications nécessaires"
+      },
+      {
+        "id": "25-architecture-analyse-livrable-c04",
+        "texte": "Le projet comporte au minimum l'autorité compétente, les visas à confirmer, les considérants, le dispositif, la date d'effet, la notification et les voies de recours à compléter ou vérifier"
+      },
+      {
+        "id": "25-architecture-analyse-livrable-c05",
+        "texte": "Indique un niveau de confiance et les contrôles à effectuer avant signature"
+      },
+      {
+        "id": "25-architecture-analyse-livrable-c06",
+        "texte": "Adapte la profondeur au dossier complexe et conserve une séparation lisible entre analyse, décision, sécurisation et projet d'arrêté"
+      }
     ],
     "echec_si": [
       "Livre uniquement l'analyse sans produire le projet d'arrêté",
       "Annonce qu'un arrêté pourra être rédigé ultérieurement",
       "Invente les données individuelles, les visas, la date d'effet ou l'éligibilité manquants",
       "Écrit que l'arrêté n'appelle aucun recours ou présente de façon certaine des modalités de publicité ou de contrôle de légalité non vérifiées"
-    ]
+    ],
+    "contextes": [
+      "carriere-paie",
+      "carriere-statut-discipline"
+    ],
+    "profil_restitution": "dossier-complexe"
   },
   {
     "id": "26-architecture-multibranche-contractuel",
@@ -485,16 +975,37 @@
     "type": "architectural",
     "prompt": "Un agent contractuel en CDI, rémunéré par référence à un indice, demande la reprise de toute son ancienneté et un avancement de grade comme un fonctionnaire titulaire. Analyse sa situation et indique la marche à suivre.",
     "attendus": [
-      "Active et articule explicitement les branches Carrière & paie et Agents contractuels",
-      "Qualifie l'agent comme contractuel en CDI et n'applique pas le régime statutaire d'avancement de grade du titulaire",
-      "Distingue la référence indiciaire utilisée pour la rémunération d'un classement statutaire dans un grade",
-      "Recherche le fondement contractuel, les clauses du contrat, la délibération ou le cadre local de rémunération et les règles propres de réévaluation des contractuels",
-      "Formule un état de décision, une recommandation et un plan d'action adaptés au régime contractuel"
+      {
+        "id": "26-architecture-multibranche-contractuel-c01",
+        "texte": "Active et articule explicitement les branches Carrière & paie et Agents contractuels"
+      },
+      {
+        "id": "26-architecture-multibranche-contractuel-c02",
+        "texte": "Qualifie l'agent comme contractuel en CDI et n'applique pas le régime statutaire d'avancement de grade du titulaire"
+      },
+      {
+        "id": "26-architecture-multibranche-contractuel-c03",
+        "texte": "Distingue la référence indiciaire utilisée pour la rémunération d'un classement statutaire dans un grade"
+      },
+      {
+        "id": "26-architecture-multibranche-contractuel-c04",
+        "texte": "Recherche le fondement contractuel, les clauses du contrat, la délibération ou le cadre local de rémunération et les règles propres de réévaluation des contractuels"
+      },
+      {
+        "id": "26-architecture-multibranche-contractuel-c05",
+        "texte": "Formule un état de décision, une recommandation et un plan d'action adaptés au régime contractuel"
+      }
     ],
     "echec_si": [
       "Applique à l'agent contractuel les conditions ou la procédure d'avancement de grade d'un fonctionnaire titulaire",
       "Déduit de la seule référence à un indice que l'agent est classé dans un grade",
       "Ignore la branche Agents contractuels"
+    ],
+    "contextes": [
+      "carriere-paie",
+      "carriere-statut-discipline",
+      "carriere-remuneration-paie",
+      "contractuels"
     ]
   },
   {
@@ -503,11 +1014,26 @@
     "type": "architectural",
     "prompt": "Un agent titulaire est soupçonné de faits pouvant justifier une exclusion temporaire de 5 jours. Explique-moi juridiquement si je peux engager cette procédure, puis recommande-moi une décision et donne-moi les actions concrètes à lancer, dans l'ordre, avec les contrôles à prévoir.",
     "attendus": [
-      "Ne se limite pas à exposer les règles juridiques",
-      "Formule l'un des quatre états de décision : possible, possible sous conditions, impossible en l'état ou non tranchable",
-      "Donne une recommandation explicite cohérente avec les informations disponibles",
-      "Fournit un plan d'action ordonné précisant actions, acteurs, prérequis, contrôles et preuves attendues, sans inventer de délai",
-      "Signale les variables bloquantes éventuelles, les risques résiduels et le niveau de confiance"
+      {
+        "id": "27-architecture-decision-action-c01",
+        "texte": "Ne se limite pas à exposer les règles juridiques"
+      },
+      {
+        "id": "27-architecture-decision-action-c02",
+        "texte": "Formule l'un des quatre états de décision : possible, possible sous conditions, impossible en l'état ou non tranchable"
+      },
+      {
+        "id": "27-architecture-decision-action-c03",
+        "texte": "Donne une recommandation explicite cohérente avec les informations disponibles"
+      },
+      {
+        "id": "27-architecture-decision-action-c04",
+        "texte": "Fournit un plan d'action ordonné précisant actions, acteurs, prérequis, contrôles et preuves attendues, sans inventer de délai"
+      },
+      {
+        "id": "27-architecture-decision-action-c05",
+        "texte": "Signale les variables bloquantes éventuelles, les risques résiduels et le niveau de confiance"
+      }
     ],
     "echec_si": [
       "La réponse est juridiquement correcte mais ne contient aucune recommandation",
@@ -515,6 +1041,10 @@
       "La réponse conclut malgré une situation insuffisamment qualifiée sans identifier les variables bloquantes",
       "Ajoute le déplacement d'office à l'échelle des sanctions applicable en FPT",
       "Affirme que les sanctions disciplinaires de toute nature sont obligatoirement transmissibles sur le fondement de l'article L. 2131-2 du CGCT"
+    ],
+    "contextes": [
+      "carriere-paie",
+      "carriere-statut-discipline"
     ]
   },
   {
@@ -523,14 +1053,29 @@
     "type": "standard",
     "prompt": "Pour instruire un accident de service contesté d'un fonctionnaire territorial, dois-je saisir le conseil médical en formation restreinte ou en formation plénière, et qui prend la décision finale d'imputabilité ?",
     "attendus": [
-      "Répond que l'examen de l'imputabilité par le conseil médical relève de la formation plénière",
-      "Écarte explicitement la formation restreinte pour cette compétence",
-      "Distingue l'avis du conseil médical de la décision finale, qui appartient à l'autorité territoriale",
-      "Vérifie le décret n° 87-602 modifié par le décret n° 2022-350 ou une source officielle équivalente avant de conclure"
+      {
+        "id": "28-nonregression-citis-formation-c01",
+        "texte": "Répond que l'examen de l'imputabilité par le conseil médical relève de la formation plénière"
+      },
+      {
+        "id": "28-nonregression-citis-formation-c02",
+        "texte": "Écarte explicitement la formation restreinte pour cette compétence"
+      },
+      {
+        "id": "28-nonregression-citis-formation-c03",
+        "texte": "Distingue l'avis du conseil médical de la décision finale, qui appartient à l'autorité territoriale"
+      },
+      {
+        "id": "28-nonregression-citis-formation-c04",
+        "texte": "Vérifie le décret n° 87-602 modifié par le décret n° 2022-350 ou une source officielle équivalente avant de conclure"
+      }
     ],
     "echec_si": [
       "Désigne la formation restreinte pour examiner l'imputabilité au service",
       "Attribue au conseil médical le pouvoir de décision final à la place de l'autorité territoriale"
+    ],
+    "contextes": [
+      "qvt-sante"
     ]
   },
   {
@@ -539,14 +1084,30 @@
     "type": "standard",
     "prompt": "Après une exclusion temporaire de fonctions de 5 jours prononcée en 2026, l'agent territorial peut-il saisir un conseil de discipline de recours ? Quelles voies dois-je indiquer dans la notification ?",
     "attendus": [
-      "Répond que le conseil de discipline de recours a été supprimé pour les procédures nouvelles",
-      "Ne réserve le régime ancien qu'aux éventuelles procédures transitoires déjà en cours lors de la réforme",
-      "Oriente vers les voies administratives utiles et le recours contentieux devant le tribunal administratif, à vérifier pour la notification",
-      "Vérifie la version consolidée du décret n° 89-677 et les textes de suppression avant de conclure"
+      {
+        "id": "29-nonregression-discipline-recours-c01",
+        "texte": "Répond que le conseil de discipline de recours a été supprimé pour les procédures nouvelles"
+      },
+      {
+        "id": "29-nonregression-discipline-recours-c02",
+        "texte": "Ne réserve le régime ancien qu'aux éventuelles procédures transitoires déjà en cours lors de la réforme"
+      },
+      {
+        "id": "29-nonregression-discipline-recours-c03",
+        "texte": "Oriente vers les voies administratives utiles et le recours contentieux devant le tribunal administratif, à vérifier pour la notification"
+      },
+      {
+        "id": "29-nonregression-discipline-recours-c04",
+        "texte": "Vérifie la version consolidée du décret n° 89-677 et les textes de suppression avant de conclure"
+      }
     ],
     "echec_si": [
       "Présente le conseil de discipline de recours comme une voie ouverte pour la sanction prononcée en 2026",
       "Fournit un délai ou une modalité de recours non vérifiés comme certains"
+    ],
+    "contextes": [
+      "carriere-paie",
+      "carriere-statut-discipline"
     ]
   },
   {
@@ -555,14 +1116,30 @@
     "type": "standard",
     "prompt": "Une exclusion temporaire de fonctions de 5 jours prononcée contre un fonctionnaire communal doit-elle obligatoirement être transmise au contrôle de légalité au titre de l'article L. 2131-2 du CGCT ?",
     "attendus": [
-      "N'affirme pas que toutes les sanctions disciplinaires sont obligatoirement transmissibles",
-      "Indique que la version en vigueur de l'article L. 2131-2 du CGCT ne comporte plus la catégorie générale des sanctions disciplinaires présente dans d'anciennes versions",
-      "Distingue l'obligation légale de transmission de la convention ou pratique locale de télétransmission et du pouvoir de demande du préfet",
-      "Vérifie la version applicable de l'article L. 2131-2 avant de conclure"
+      {
+        "id": "30-nonregression-controle-legalite-sanction-c01",
+        "texte": "N'affirme pas que toutes les sanctions disciplinaires sont obligatoirement transmissibles"
+      },
+      {
+        "id": "30-nonregression-controle-legalite-sanction-c02",
+        "texte": "Indique que la version en vigueur de l'article L. 2131-2 du CGCT ne comporte plus la catégorie générale des sanctions disciplinaires présente dans d'anciennes versions"
+      },
+      {
+        "id": "30-nonregression-controle-legalite-sanction-c03",
+        "texte": "Distingue l'obligation légale de transmission de la convention ou pratique locale de télétransmission et du pouvoir de demande du préfet"
+      },
+      {
+        "id": "30-nonregression-controle-legalite-sanction-c04",
+        "texte": "Vérifie la version applicable de l'article L. 2131-2 avant de conclure"
+      }
     ],
     "echec_si": [
       "Affirme que les sanctions disciplinaires de toute nature figurent dans la liste actuelle de l'article L. 2131-2 du CGCT",
       "Reprend une ancienne version de l'article sans contrôler sa date d'application"
+    ],
+    "contextes": [
+      "carriere-paie",
+      "carriere-statut-discipline"
     ]
   }
 ]

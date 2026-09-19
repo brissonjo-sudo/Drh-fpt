@@ -8,7 +8,6 @@ import tempfile
 import unittest
 from pathlib import Path
 
-
 HERE = Path(__file__).resolve().parent
 SPEC = importlib.util.spec_from_file_location("run_tests", HERE / "run_tests.py")
 assert SPEC and SPEC.loader
@@ -16,26 +15,49 @@ RUN_TESTS = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(RUN_TESTS)
 
 
-class HarnessTests(unittest.TestCase):
-    def setUp(self) -> None:
-        self.cases = json.loads(
-            (HERE / "cas-de-test.json").read_text(encoding="utf-8")
-        )
+def expected(criterion_id="case-c01", text="Routage correct"):
+    return {"id": criterion_id, "texte": text}
 
-    def test_case_ids_are_unique(self) -> None:
+
+def successful_result(criteria):
+    return {
+        "criteres": [
+            {"id": item["id"], "critere": item["texte"], "statut": "SATISFAIT", "note": "Preuve précise."}
+            for item in criteria
+        ],
+        "erreurs": [],
+        "score_architecture_sur_5": 5,
+        "verdict_architecture": "REUSSITE",
+        "score_fiabilite_juridique_sur_5": 5,
+        "verdict_fiabilite_juridique": "REUSSITE",
+        "score_sur_5": 5,
+        "verdict": "REUSSITE",
+        "synthese": "Conforme.",
+        "tronque": False,
+    }
+
+
+class HarnessTests(unittest.TestCase):
+    def setUp(self):
+        self.cases = json.loads((HERE / "cas-de-test.json").read_text(encoding="utf-8"))
+
+    def test_case_and_criterion_ids_are_unique(self):
         ids = [case["id"] for case in self.cases]
         self.assertEqual(len(ids), len(set(ids)))
+        for case in self.cases:
+            criteria = RUN_TESTS.normalized_expectations(case)
+            criterion_ids = [item["id"] for item in criteria]
+            self.assertEqual(len(criterion_ids), len(set(criterion_ids)))
 
-    def test_each_campaign_activates_30_cases(self) -> None:
+    def test_each_campaign_activates_30_cases(self):
         for mode in ("integration", "degraded"):
-            with self.subTest(mode=mode):
-                active = [
-                    case for case in self.cases
-                    if mode in case.get("modes", ["integration", "degraded"])
-                ]
-                self.assertEqual(len(active), 30)
+            self.assertEqual(len(RUN_TESTS.active_cases(self.cases, mode, [])), 30)
 
-    def test_conditional_cases_are_separated_by_mode(self) -> None:
+    def test_case_filter_is_diagnostic_and_exact(self):
+        cases = RUN_TESTS.active_cases(self.cases, "integration", ["01", "02"])
+        self.assertEqual([case["id"] for case in cases], ["01", "02"])
+
+    def test_conditional_cases_are_separated_by_mode(self):
         modes_by_id = {
             case["id"]: case.get("modes") for case in self.cases
             if case["id"].startswith(("15-", "16-"))
@@ -50,103 +72,107 @@ class HarnessTests(unittest.TestCase):
             },
         )
 
-    def test_legal_skill_directory_is_loaded_with_references(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp:
-            root = Path(tmp)
-            (root / "references").mkdir()
-            (root / "SKILL.md").write_text(
-                "---\nversion: 2.2.0\n---\n# Recherche juridique\n",
-                encoding="utf-8",
-            )
-            (root / "references" / "source.md").write_text(
-                "# Source primaire\n", encoding="utf-8"
-            )
+    def test_response_profiles_cover_targeted_and_complex_requests(self):
+        profiles = {case.get("profil_restitution") for case in self.cases}
+        self.assertIn("ciblee", profiles)
+        self.assertIn("dossier-complexe", profiles)
 
-            text, loaded_path, sources = RUN_TESTS.load_legal_skill(str(root))
-
-            self.assertEqual(loaded_path, root.resolve())
-            self.assertIn("Recherche juridique", text)
-            self.assertIn("Source primaire", text)
-            self.assertEqual(len(sources), 2)
-
-    def test_legal_skill_repository_layout_is_resolved(self) -> None:
+    def test_legal_skill_repository_layout_is_loaded(self):
         with tempfile.TemporaryDirectory() as tmp:
             repository = Path(tmp)
             skill = repository / "skill"
             (skill / "references").mkdir(parents=True)
-            (skill / "SKILL.md").write_text(
-                "---\nversion: 3.3.0\n---\n# Recherche juridique\n",
-                encoding="utf-8",
-            )
-            (skill / "references" / "source.md").write_text(
-                "# Source primaire\n", encoding="utf-8"
-            )
-
+            (skill / "SKILL.md").write_text("---\nversion: 3.3.0\n---\n# Recherche juridique\n")
+            (skill / "references" / "source.md").write_text("# Source primaire\n")
             text, loaded_path, sources = RUN_TESTS.load_legal_skill(str(repository))
-
             self.assertEqual(loaded_path, skill.resolve())
-            self.assertIn("Recherche juridique", text)
+            self.assertIn("Source primaire", text)
             self.assertEqual(len(sources), 2)
 
-    def test_judge_result_validation_accepts_a_complete_success(self) -> None:
-        case = {
-            "type": "architectural",
-            "attendus": ["Routage correct"],
-        }
-        result = {
-            "criteres": [
-                {
-                    "critere": "Routage correct",
-                    "statut": "SATISFAIT",
-                    "note": "Le routage attendu est observé.",
-                }
-            ],
-            "erreurs": [],
-            "score_architecture_sur_5": 5,
-            "verdict_architecture": "REUSSITE",
-            "score_fiabilite_juridique_sur_5": 5,
-            "verdict_fiabilite_juridique": "REUSSITE",
-            "score_sur_5": 5,
-            "verdict": "REUSSITE",
-            "synthese": "Conforme.",
-            "tronque": False,
-        }
+    def test_judge_accepts_exact_complete_criteria(self):
+        criteria = [expected()]
+        case = {"id": "case", "type": "architectural", "attendus": criteria}
+        self.assertEqual(RUN_TESTS.validate_judge_result(successful_result(criteria), case), [])
 
-        self.assertEqual(RUN_TESTS.validate_judge_result(result, case), [])
-
-    def test_judge_result_validation_rejects_partial_or_malformed_output(self) -> None:
-        case = {"type": "standard", "attendus": ["Source vérifiée"]}
-        result = {
-            "criteres": [
-                {
-                    "critere": "Source vérifiée",
-                    "statut": "PARTIEL",
-                    "note": "La source n'est pas traçable.",
-                }
-            ],
-            "erreurs": ["Référence non vérifiée"],
-            "score_architecture_sur_5": 4,
-            "verdict_architecture": "NON_APPLICABLE",
-            "score_fiabilite_juridique_sur_5": 2,
-            "verdict_fiabilite_juridique": "ECHEC",
-            "score_sur_5": 2,
-            "verdict": "ECHEC",
-            "synthese": "Insuffisant.",
-            "tronque": False,
-        }
-
+    def test_judge_rejects_duplicate_unrelated_criteria(self):
+        criteria = [expected("case-c01", "Vérifier la source"), expected("case-c02", "Distinguer le régime local")]
+        case = {"id": "case", "type": "standard", "attendus": criteria}
+        result = successful_result(criteria)
+        result["criteres"] = [
+            {"id": "case-c01", "critere": "Texte sans rapport", "statut": "SATISFAIT", "note": "x"},
+            {"id": "case-c01", "critere": "Texte sans rapport", "statut": "SATISFAIT", "note": "x"},
+        ]
         problems = RUN_TESTS.validate_judge_result(result, case)
-        self.assertTrue(any("non entièrement satisfait" in item for item in problems))
-        self.assertTrue(any("fiabilité juridique" in item for item in problems))
-        self.assertTrue(any("détecté" in item for item in problems))
+        self.assertTrue(any("dupliqués" in item for item in problems))
+        self.assertTrue(any("absents" in item for item in problems))
+        self.assertTrue(any("libellé" in item for item in problems))
 
-    def test_system_context_identifies_execution_mode(self) -> None:
-        integrated = RUN_TESTS.build_system_context("DRH", "LEGAL", "integration")
+    def test_judge_rejects_empty_note_and_inconsistent_verdict(self):
+        criteria = [expected()]
+        case = {"id": "case", "type": "standard", "attendus": criteria}
+        result = successful_result(criteria)
+        result["criteres"][0]["note"] = " "
+        result["erreurs"] = ["Erreur critique"]
+        problems = RUN_TESTS.validate_judge_result(result, case)
+        self.assertTrue(any("justification vide" in item for item in problems))
+        self.assertTrue(any("incohérent" in item for item in problems))
+
+    def test_system_context_identifies_modes_and_snapshot(self):
+        integrated = RUN_TESTS.build_system_context("DRH", "LEGAL", "integration", "SOURCES", "snapshot")
         degraded = RUN_TESTS.build_system_context("DRH", None, "degraded")
         self.assertIn("LEGAL", integrated)
-        self.assertIn("co-activés", integrated)
+        self.assertIn("SOURCES", integrated)
         self.assertIn("mode dégradé", degraded)
         self.assertNotIn("LEGAL", degraded)
+
+    def test_live_evidence_requires_complete_trace_for_required_cases(self):
+        cases = [{"id": "a", "type": "standard"}, {"id": "b", "type": "echec_attendu"}]
+        problems = RUN_TESTS.validate_evidence([], cases, "integration", "live")
+        self.assertEqual(problems, ["cas sans preuve de consultation : a"])
+        trace = [{
+            "case_id": "a", "source_url": "https://legifrance.gouv.fr/x",
+            "consulted_at": "2026-09-19T10:00:00Z", "version_or_date": "2026-09-19",
+            "supporting_excerpt": "passage", "conclusion_supported": "conclusion",
+        }]
+        self.assertEqual(RUN_TESTS.validate_evidence(trace, cases, "integration", "live"), [])
+
+    def test_resume_signature_tracks_cases_and_evidence_but_not_judge(self):
+        base = {
+            "mode": "integration", "provider_repondant": "anthropic",
+            "modele_repondant": "m", "effort_repondant": None,
+            "context_mode": "selective", "evidence_mode": "live",
+            "sha256_cas": "cases", "sha256_compagnon": "legal",
+            "sha256_source_pack": None, "case_ids": ["01"],
+            "evidence_sha256": "evidence", "modele_juge": "judge-a",
+        }
+        other_judge = {**base, "modele_juge": "judge-b"}
+        self.assertEqual(
+            RUN_TESTS.campaign_signature(base),
+            RUN_TESTS.campaign_signature(other_judge),
+        )
+        changed_cases = {**base, "case_ids": ["02"]}
+        self.assertNotEqual(
+            RUN_TESTS.campaign_signature(base),
+            RUN_TESTS.campaign_signature(changed_cases),
+        )
+
+    def test_strict_gate_rejects_subset_duplicate_missing_and_truncation(self):
+        provenance = {
+            "mode": "degraded",
+            "drh_fpt": {"commit": "abc", "dirty": False},
+            "recherche_juridique": {},
+        }
+        cases = [{"id": "a"}, {"id": "b"}]
+        results = [
+            {"id": "a", "statut": "ok", "tronque": True, "validation": []},
+            {"id": "a", "statut": "ok", "tronque": False, "validation": []},
+        ]
+        problems = RUN_TESTS.validate_strict_campaign(provenance, cases, results, subset=True)
+        joined = "\n".join(problems)
+        self.assertIn("sélection", joined)
+        self.assertIn("dupliqués", joined)
+        self.assertIn("cas sans résultat", joined)
+        self.assertIn("tronqué", joined)
 
 
 if __name__ == "__main__":

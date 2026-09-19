@@ -1,194 +1,138 @@
 # Tests — drh-fpt
 
-Dispositif de test du skill par **sous-agents à contexte vierge**.
+Le harnais exécute chaque cas dans un contexte indépendant, puis peut faire
+juger la réponse par un second modèle. `cas-de-test.json` reste la source unique
+des 32 variantes, dont 30 actives par mode.
 
-## Principe
+## Schéma des cas
 
-Chaque cas est traité par un **appel API indépendant** dont le seul contexte est
-le bundle du skill (en `system`) + le cas (en `user`). Le modèle ne connaît ni
-l'historique de conception, ni les réponses attendues : il répond « à froid ».
-C'est l'équivalent d'un sous-agent neutre, reproductible.
+Chaque cas contient `id`, `branche`, `type`, `prompt`, `echec_si`, `contextes`
+et `attendus`. Chaque attendu possède un `id` stable et un `texte`. Le juge doit
+restituer exactement tous ces identifiants et libellés. Le gate refuse un
+critère absent, inconnu, dupliqué, renommé ou sans justification.
 
-Un second appel (le **juge**), tout aussi vierge, note chaque réponse contre la
-grille d'attendus et repère les affirmations fausses ou inventées.
+`contextes` désigne les branches ou modules à charger en mode sélectif. Une
+sélection via `--case` sert au diagnostic et ne peut valider une version.
 
-## `cas-de-test.json` — source unique des cas
+## Fournisseurs et métriques
 
-**Tous** les cas de test (harnais API et protocole sous-agents Claude Code)
-vivent désormais dans **`cas-de-test.json`**, pour éviter toute divergence
-entre deux jeux de cas. Ce fichier contient actuellement **32 cas**, dont
-**30 sont actifs dans chaque mode de campagne** :
+Le harnais prend en charge :
 
-- **22 cas `"standard"`** — questions RH représentatives des huit branches,
-  avec leurs `attendus` (critères de réussite) ;
-- **5 cas `"echec_attendu"`** — cas **adversariaux** : le skill promet de
-  s'abstenir/rediriger dans certaines situations (hors périmètre, données
-  volatiles, sujet non couvert, transposition indue) ; ici la **réussite**
-  consiste à refuser de répondre normalement ;
-- **5 cas `"architectural"`** — cas transversaux qui évaluent la chaîne
-  d'exécution indépendamment de la seule exactitude juridique : qualification,
-  variables bloquantes, règle nationale versus choix local, activation de
-  plusieurs branches, décision, recommandation, plan d'action et production
-  effective du livrable demandé.
+- Anthropic Messages API avec `ANTHROPIC_API_KEY` ;
+- OpenAI Responses API avec `OPENAI_API_KEY`.
 
-Champs par cas : `id`, `branche`, `type` (`standard`, `echec_attendu` ou
-`architectural`), `prompt`, `attendus` (liste), `echec_si` (liste,
-éventuellement vide — conditions disqualifiantes spécifiques au cas) et,
-pour les variantes conditionnelles, `modes` (`integration` ou `degraded`).
+`--provider` et `--judge-provider` peuvent différer. Les paramètres d'effort
+sont transmis uniquement par l'adaptateur qui les prend en charge ; un paramètre
+incompatible provoque une erreur explicite. Chaque appel conserve durée,
+tokens, identifiant de réponse et état de troncature. Aucun coût n'est calculé
+sans grille tarifaire datée et vérifiée.
 
-Les cas 15 et 16 existent dans deux variantes :
+## Contextes
 
-- **intégration** : le compagnon est disponible, la réussite consiste à
-  vérifier puis répondre avec une source officielle traçable ;
-- **mode dégradé** : le compagnon est indisponible, la réussite consiste à
-  annoncer ce mode et à s'abstenir de fournir la donnée exacte non vérifiée.
+- `--context-mode full` charge le bundle de compatibilité ;
+- `--context-mode selective` charge le noyau, les branches déclarées par le cas
+  et le gabarit demandé.
 
-## Critères architecturaux
+Carrière-paie est réparti entre statut/discipline, rémunération/paie et
+temps de travail/fin de fonctions. Les dossiers mixtes déclarent plusieurs
+contextes.
 
-Les cas architecturaux sont jugés comme des cas de réussite ordinaires, avec
-des critères transversaux renforcés. Une réponse peut être juridiquement juste
-et néanmoins échouer si elle :
+## Niveaux de preuve
 
-- conclut avant d'avoir qualifié le dossier et identifié les variables
-  bloquantes ;
-- confond une règle nationale impérative avec une délibération ou un choix
-  local ;
-- ignore une branche nécessaire ou applique le régime du titulaire à un
-  contractuel ;
-- ne formule ni état de décision ni recommandation ;
-- ne fournit pas de plan d'action opérationnel ;
-- annonce un livrable sans le produire réellement.
+- `rules` : vérifie l'obéissance aux instructions et l'abstention ;
+- `snapshot` : ajoute un dossier de sources figées avec `--source-pack` ;
+- `live` : exige `--evidence-file`, qui trace par cas la source officielle, la
+  date de consultation, la version, le passage utile et la conclusion soutenue.
 
-Réciproquement, une architecture réussie ne compense pas une affirmation
-juridique fausse. Le juge rend deux appréciations distinctes :
+Un lien présent dans une réponse ne prouve pas une consultation. Le mode
+`snapshot` reste une évaluation reproductible d'un corpus daté ; il ne prouve
+pas l'état actuel du droit.
 
-- **architecture d'exécution** ;
-- **fiabilité juridique**.
+Exemple de trace :
 
-Une erreur juridique, y compris dans un développement surnuméraire, fait
-échouer la fiabilité juridique et le verdict global. Une référence récente ou
-postérieure à une date de cutoff ne peut pas être déclarée inventée pour ce seul
-motif : elle doit être vérifiée sur une source officielle ou rester classée
-comme non tranchée.
-
-Le référentiel de ces exigences est
-`references/contrat-execution.md`. L'ajout des cas au JSON ne constitue pas une
-preuve de réussite : seuls une campagne répondant + juge effectivement exécutée
-et son rapport permettent de conclure sur le comportement du modèle.
-
-## Deux protocoles, une seule source de cas
-
-1. **Harnais API** (`run_tests.py` + `cas-de-test.json`) — automatisé,
-   reproductible : en mode nominal, injecte le bundle DRH et le dépôt ou bundle
-   du compagnon dans `system`; en mode dégradé, injecte le bundle DRH avec
-   l'indisponibilité explicite du compagnon. Il rejoue les 30 cas actifs du
-   mode choisi ; le juge applique `echec_si` et, pour les cas adversariaux,
-   inverse la logique de verdict (réussite = refus correct).
-2. **Protocole sous-agents Claude Code** (`prompt-claude-code.md`) — orchestré
-   par Claude Code sur le dépôt courant (pas de clonage) : un sous-agent
-   **répondant** au contexte frais par cas, puis un sous-agent **juge**
-   indépendant qui lit `cas-de-test.json` pour les critères et les règles
-   transverses (référence inventée → ÉCHEC ; cas adversarial → réussite si
-   refus/abstention/redirection).
-
-S'y ajoute `cas-co-activation.md` : cas transverse testant la collaboration
-`drh-fpt` × `recherche-juridique` (abandon de poste / radiation des cadres),
-jouable aussi en variante dégradée avec `drh-fpt` seul.
-
-## Contenu
-
-- `cas-de-test.json` — **source unique** des cas (standard + architecturaux +
-  adversariaux),
-  attendus et `echec_si` (harnais API + protocole sous-agents).
-- `run_tests.py` — harnais (réponse + évaluation optionnelle), lit `type` et
-  `echec_si` pour juger correctement les cas adversariaux.
-- `test_harness.py` — contrôles locaux sans API : JSON, séparation des modes,
-  chargement du compagnon et composition du contexte.
-- `prompt-claude-code.md` — protocole sous-agents (renvoie à `cas-de-test.json`
-  pour les cas et barèmes, ne les duplique plus).
-- `cas-co-activation.md` — cas transverse deux skills + barème + variante
-  dégradée (drh-fpt seul).
-- `resultats/` — sorties brutes générées (non versionnées).
-- `rapports/` — rapports de campagnes validés, datés (versionnés).
-
-## Usage
-
-```bash
-export ANTHROPIC_API_KEY=sk-...
-python tests/run_tests.py --legal-skill /chemin/recherche-juridique
-python tests/run_tests.py --judge --strict --legal-skill /chemin/recherche-juridique
-python tests/run_tests.py --mode degraded --judge --strict
+```json
+{
+  "consultations": [{
+    "case_id": "01",
+    "source_url": "https://www.legifrance.gouv.fr/...",
+    "consulted_at": "2026-09-19T10:00:00Z",
+    "version_or_date": "version en vigueur au 2026-09-19",
+    "supporting_excerpt": "Passage utile, limité au nécessaire",
+    "conclusion_supported": "Conclusion juridique soutenue"
+  }]
+}
 ```
 
-Le chemin du compagnon peut viser son dépôt, son dossier `skill/` ou un bundle
-Markdown. Le chargeur résout notamment la structure actuelle
-`droit-francais-skill/skill/SKILL.md`.
+## Commandes
 
-Options : `--model` (répondant, défaut `claude-sonnet-4-6`), `--judge-model`
-(juge, défaut `claude-opus-4-8`), `--mode` (`integration` par défaut ou
-`degraded`) et `--legal-skill` (dépôt ou bundle Markdown du compagnon,
-obligatoire en intégration). `--strict` exige `--judge` et renvoie un code
-non nul si la campagne est incomplète, tronquée, non parsable, exécutée depuis
-un dépôt sale, si un critère n'est pas entièrement satisfait ou si l'un des
-verdicts attendus est en échec.
+```bash
+# Campagne Anthropic complète
+export ANTHROPIC_API_KEY=sk-...
+python tests/run_tests.py --judge --strict \
+  --legal-skill /chemin/recherche-juridique
 
-Le juge API reçoit le même corpus de skills que le répondant afin de contrôler
-les règles applicables. Il ne dispose toutefois d'aucun accès direct à
-Légifrance : cette campagne est un **préflight reproductible**, pas une preuve
-autonome de fraîcheur juridique. Toute référence non contrôlable dans le corpus
-doit rester signalée comme non tranchée.
+# Mode dégradé
+python tests/run_tests.py --mode degraded --judge --strict
 
-Chaque campagne enregistre automatiquement :
+# Diagnostic ciblé en contexte sélectif
+python tests/run_tests.py --case 01 --case 07 --context-mode selective \
+  --legal-skill /chemin/recherche-juridique
 
-- un identifiant de campagne et les dates UTC ;
-- le mode et les modèles ;
-- la version, le SHA Git et l'état propre/sale de chaque skill ;
-- le SHA-256 de chaque contexte chargé et la liste des sources du compagnon ;
-- ces éléments dans `_provenance.json`, `_bilan.json` et l'en-tête de chaque
-  réponse brute.
+# Reprise compatible ; les réponses terminées ne sont pas régénérées
+python tests/run_tests.py --resume <campagne-id> --judge \
+  --legal-skill /chemin/recherche-juridique
 
-## Lecture des résultats
+# Nouveau jugement des réponses existantes
+python tests/run_tests.py --judge-only <campagne-id> \
+  --legal-skill /chemin/recherche-juridique \
+  --judge-provider openai --judge-model <modele>
 
-- `resultats/<campagne-id>/<id>.md` — la réponse du sous-agent vierge.
-- `resultats/<campagne-id>/<id>-eval.json` — l'évaluation (statut par critère,
-  erreurs, score).
-- `resultats/<campagne-id>/_provenance.json` — empreinte reproductible des deux
-  skills, du JSON des cas et de la campagne.
-- `resultats/<campagne-id>/_bilan.json` — moyenne globale (inclut le `type` par
-  cas) et résultat détaillé du gate strict.
+# Preuve par corpus figé ou traces de consultation
+python tests/run_tests.py --evidence-mode snapshot --source-pack sources/...
+python tests/run_tests.py --evidence-mode live --evidence-file traces.json
+```
 
-## Gate de sortie de brouillon
+Une reprise exige la même empreinte des cas, le même contexte, le même modèle
+répondant et les mêmes paramètres. Un jugement ultérieur reçoit un identifiant
+propre dans `evaluations/` et ne remplace pas les évaluations précédentes.
 
-La validation finale d'une version exige **deux campagnes distinctes** avec le
-protocole outillé `prompt-claude-code.md` :
+## Résultats
 
-1. `integration` — 30 cas, avec `recherche-juridique` réellement chargé ;
-2. `degraded` — 30 cas, sans compagnon, pour vérifier l'abstention.
+```text
+resultats/<campagne-id>/
+├── _provenance.json
+├── <cas>.md
+├── <cas>-response.json
+└── evaluations/<evaluation-id>/
+    ├── <cas>-eval.json
+    └── _bilan.json
+```
 
-Chaque campagne doit porter sur le même SHA propre du candidat et satisfaire
-simultanément les conditions suivantes :
+Les réponses Markdown restent lisibles. Les fichiers JSON portent les
+métriques, les empreintes et la validation automatisée.
 
-- 30 réponses et 30 jugements exploitables ;
-- aucune erreur API/outillage, troncature ou sortie non parsable ;
-- tous les critères `SATISFAIT` ;
-- 30 verdicts globaux `REUSSITE` ;
-- 30 verdicts de fiabilité juridique `REUSSITE` ;
-- architecture `REUSSITE` pour chaque cas architectural et aucun verdict
-  d'architecture `ECHEC` ;
-- aucune erreur juridique, référence inventée ou référence suspecte non
-  résolue après contrôle en source officielle.
+## Gate de publication
 
-Un échec impose une correction puis le rejeu complet du mode concerné sur le
-nouveau SHA. Seuls les rapports qui satisfont ces critères sont copiés dans
-`tests/rapports/` et versionnés. La sortie de brouillon intervient après la
-publication des deux rapports et la réussite des contrôles déterministes.
+Une version exige une campagne complète `integration` et une campagne complète
+`degraded` sur le même commit propre. Chaque campagne doit fournir les 30
+réponses et jugements, sans incident, troncature, critère incomplet, erreur
+juridique ou échec d'architecture. Le mode `live` exige en plus les traces de
+consultation pour les cas juridiquement engageants.
 
-## Étendre
+Le gate strict impose `live` à la campagne d'intégration et un modèle juge
+distinct du répondant. La campagne dégradée vérifie l'abstention sans prétendre
+avoir consulté les sources.
 
-Ajouter un cas = un objet dans `cas-de-test.json` (`id`, `branche`, `type`,
-`prompt`, `attendus`, `echec_si`). Viser les comportements sensibles : données
-volatiles, statuts particuliers, actes faisant grief, pièges de qualification.
-Pour un cas adversarial, mettre `type: "echec_attendu"`, décrire dans
-`attendus` le comportement de refus/abstention attendu, et lister dans
-`echec_si` les comportements disqualifiants (répond normalement, invente,
-transpose).
+Les campagnes ciblées servent à corriger. Après une modification du skill, le
+mode concerné est rejoué en entier. Les rapports validés sont copiés dans
+`tests/rapports/` avec le commit, les modèles, les paramètres et les empreintes.
+
+## Contrôles locaux
+
+```bash
+python3 -m unittest discover -s tests -p 'test_*.py'
+python3 -m py_compile scripts/*.py tests/*.py
+python3 -m json.tool tests/cas-de-test.json >/dev/null
+python3 scripts/build_bundle.py --check
+python3 scripts/check_coherence.py
+```

@@ -16,9 +16,9 @@ description: >-
   FPT, les fonctions publiques d'État ou hospitalière, ni pour les
   collectivités de moins de 350 agents.
 metadata:
-  version: 0.6.0
-  statut: huit branches + dispositif de tests + gabarits de livrables
-  date_derniere_revue_methodologique: 2026-07-14
+  version: 0.7.0
+  statut: huit branches modulaires + preuves de vérification + harnais multifournisseur
+  date_derniere_revue_methodologique: 2026-09-19
   date_derniere_verification_sources: 2026-09-04
   perimetre: collectivités territoriales de plus de 350 agents
   dependances:
@@ -26,10 +26,11 @@ metadata:
   compatibilite:
     - Claude Opus (testé avec claude-opus-4-8)
     - Claude Sonnet (testé avec claude-sonnet-4-6)
+    - OpenAI Responses API (harnais compatible ; modèle à préciser en campagne)
   langue: français
 ---
 
-# Skill : drh-fpt (v0.6.0)
+# Skill : drh-fpt (v0.7.0)
 
 > **Objet** : expertise d'une Direction des Ressources Humaines territoriale,
 > à la fois **opérationnelle** (rapide, orientée décision et livrable) et
@@ -227,6 +228,19 @@ branches suivent le **gabarit décisionnel** de
 | **Agents contractuels** | `references/contractuels.md` ✅ |
 | **Statut : garanties, déontologie & signalements** | `references/statut-garanties.md` ✅ |
 
+Pour **Carrière & paie**, lire d'abord le routeur commun puis uniquement les
+modules nécessaires :
+
+- statut, carrière, instances et discipline →
+  `references/carriere-paie/statut-discipline.md` ;
+- traitement, régime indemnitaire, cotisations et retraite →
+  `references/carriere-paie/remuneration-paie.md` ;
+- temps de travail, abandon de poste, emplois fonctionnels, grève et fin de
+  fonctions → `references/carriere-paie/temps-fin-fonctions.md`.
+
+Lire plusieurs modules lorsque la question les croise. En environnement ne
+permettant pas un chargement ciblé fiable, utiliser le bundle complet.
+
 > **Renvois inter-branches** : une question en croise souvent plusieurs. Réflexes
 > fréquents — PSC/coût → masse salariale ; LDG et RSU → CST/dialogue social ;
 > entretien professionnel → recrutement-formation et carrière-paie ; formation
@@ -254,6 +268,11 @@ Produits à la demande, **classés par niveau** (le niveau guide le format) :
 
 Gabarits et éléments obligatoires par type → `assets/`. Quand un livrable
 revient, **proposer d'en créer le gabarit**.
+
+Adapter la longueur visible à la demande sans réduire les vérifications : lire
+`references/restitution-proportionnee.md`. Une question précise appelle une
+réponse ciblée ; un arbitrage appelle options, recommandation et risques ; un
+acte ou dossier complexe appelle l'analyse utile et le livrable complet.
 
 ---
 

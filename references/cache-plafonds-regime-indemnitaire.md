@@ -16,7 +16,7 @@
 
 ## 1. ISFE — police municipale et gardes champêtres (décret n° 2024-614 du 26 juin 2024)
 
-> **Source interne unique : `carriere-paie.md` §5.7.** Les valeurs ci-dessous en
+> **Source interne unique : `carriere-paie/remuneration-paie.md` §5.7.** Les valeurs ci-dessous en
 > sont recopiées pour commodité. En cas de mise à jour, **modifier d'abord
 > §5.7**, puis reporter ici — ne jamais laisser diverger les deux.
 
