@@ -76,6 +76,8 @@ drh-fpt/
 │   ├── context_loader.py                 Charge le noyau, les branches et gabarits nécessaires
 │   ├── measure_contexts.py               Compare la taille des contextes complet et ciblé
 │   └── check_coherence.py                Vérifie version/bundle/CHANGELOG/renvois/arbre README
+├── docs/superpowers/plans/
+│   └── 2026-10-12-pr18-revue.md           Plan de corrections approuvé
 ├── references/
 │   ├── _gabarit-branche.md               Gabarit décisionnel des branches
 │   ├── contrat-execution.md               Contrat d'exécution transversal testable
@@ -109,6 +111,12 @@ drh-fpt/
     ├── run_tests.py                      Point d'entrée du harnais
     ├── campaign.py                       Reprise, jugement, preuves et métriques
     ├── providers.py                      Adaptateurs Anthropic et OpenAI
+    ├── claude_cli.py                     Claude Code OAuth, traces et confinement
+    ├── native_runtime.py                 Projet natif limité au corpus du cas
+    ├── suites.json                       Développement, régression ciblée, qualification A/B
+    ├── suites.py                         Approbation, gel et consommation des jeux
+    ├── arbitration.py                    Score brut et décisions humaines séparées
+    ├── sources-revue-pr18.json            Consultation primaire ciblée du 12 octobre
     ├── evidence.schema.json              Schéma des traces de consultation
     ├── test_harness.py                   Tests déterministes du harnais
     ├── test_context_loader.py            Tests du chargement ciblé
@@ -120,6 +128,7 @@ drh-fpt/
         ├── CONTEXTE-PR18-2026-10-11.md    Mesure du commit testé de la PR18
         ├── CONTEXTE-PR18-2026-10-11.json  Données et provenance de cette mesure
         ├── VALIDATION-PR18-2026-10-11.md  Deux campagnes finales et historique
+        ├── REVUE-PR18-2026-10-12.md       Corrections, sources relues et limites
         ├── PREUVES-PR18-2026-10-11.zip    Réponses, jugements et sources brutes
         └── RAPPORT-2026-06-27.md         Campagne 10 cas (v0.4.2, archivée)
 ```
@@ -169,7 +178,7 @@ répondant/juge à contextes séparés — voir `tests/`) :
   **réussite 5/5 sur 9 critères**.
 - Historique : 3 tests internes initiaux + 5 portages externes (Gemini,
   ChatGPT, Grok réussis ; Vibe conservé comme contre-exemple).
-- **PR18, validation du 11 octobre 2026** : **30/30 intégration et 30/30
+- **PR18, développement du 11 octobre 2026** : **30/30 intégration et 30/30
   dégradé**, tous les critères obligatoires satisfaits, aucune erreur juridique
   détectée et contrôle commun des preuves réussi sur `cc1f56f6f7a18cdfb569e757795d717d7f206b79`.
   Répondant `gpt-6.1-sol`, juge distinct `gpt-6-sol`, effort `high`.
@@ -177,6 +186,10 @@ répondant/juge à contextes séparés — voir `tests/`) :
   [le rapport et son archive](tests/rapports/VALIDATION-PR18-2026-10-11.md).
   La validation porte sur ces cas et ce corpus daté ; une réponse juridique
   future exige de nouvelles consultations.
+- **Qualification après relecture** : en préparation. Les 30 cas précédents
+  ont servi aux corrections successives ; ils ne mesurent pas la généralisation.
+  Jeux neufs A/B, barèmes approuvés par Jo, puis juges de familles différentes
+  et chargement natif Claude Code sont requis avant une nouvelle conclusion.
 - **Chargement sélectif** : réduction moyenne de **59.0 % des octets
   DRH** sur les 30 cas d’intégration ; compagnon juridique et sources en
   supplément. [Mesure datée](tests/rapports/CONTEXTE-PR18-2026-10-11.md).

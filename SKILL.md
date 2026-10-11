@@ -17,16 +17,17 @@ description: >-
   collectivités de moins de 350 agents.
 metadata:
   version: 0.7.0
-  statut: huit branches modulaires + preuves de vérification + harnais multifournisseur
-  date_derniere_revue_methodologique: 2026-09-19
-  date_derniere_verification_sources: 2026-09-04
+  statut: candidate ; huit branches dont carrière-paie divisée en trois modules
+  date_derniere_revue_methodologique: 2026-10-12
+  date_derniere_verification_sources: 2026-10-12
+  portee_verification_sources: ciblée PR18 ; ne certifie pas toutes les références ni une réponse future
   perimetre: collectivités territoriales de plus de 350 agents
   dependances:
     - recherche-juridique >= 2.2.0 (obligatoire pour le fonctionnement nominal)
   compatibilite:
-    - Claude Opus (testé avec claude-opus-4-8)
-    - Claude Sonnet (testé avec claude-sonnet-4-6)
-    - OpenAI Responses API (harnais compatible ; modèle à préciser en campagne)
+    - Codex CLI (développement v0.7 ; répondant gpt-6.1-sol, juge gpt-6-sol, effort high)
+    - Claude Code natif (qualification v0.7 à réaliser)
+    - API Anthropic et OpenAI (adaptateurs disponibles ; compatibilité non qualifiée v0.7)
   langue: français
 ---
 
@@ -233,20 +234,26 @@ modules nécessaires :
 
 - statut, carrière, instances et discipline →
   `references/carriere-paie/statut-discipline.md` ;
-- traitement, régime indemnitaire, cotisations et retraite →
+- traitement, régime indemnitaire, cotisations et affiliation retraite →
   `references/carriere-paie/remuneration-paie.md` ;
-- temps de travail, abandon de poste, emplois fonctionnels, grève et fin de
-  fonctions → `references/carriere-paie/temps-fin-fonctions.md`.
+- temps de travail, retraite progressive, départ à la retraite, rupture
+  conventionnelle, chômage, insuffisance professionnelle, abandon de poste,
+  emplois fonctionnels et grève → `references/carriere-paie/temps-fin-fonctions.md`.
 
 Lire plusieurs modules lorsque la question les croise. En environnement ne
 permettant pas un chargement ciblé fiable, utiliser le bundle complet.
 
-Dans un contexte assemblé, lire le compagnon et les sources avant les modules
-DRH et leur contrôle de couverture final : les sources établissent la preuve,
-le contrat métier organise la réponse. Charger chaque matériau une seule fois.
-Après les modules et gabarits, relire `references/restitution-proportionnee.md`
-pour sélectionner les contrôles nécessaires à la demande et vérifier leur
-présence dans la réponse finale.
+Lire `references/contrat-execution.md` : c'est le contrat métier transversal.
+Son ordre de raisonnement est : qualifier, lever les variables, borner,
+vérifier, décider, agir, livrer, sécuriser.
+
+L'ordre d'assemblage du harnais est distinct : compagnon et documents officiels,
+puis instructions DRH, modules et gabarits, enfin restitution. Cet assemblage
+ne dispense pas de qualifier le dossier avant d'interpréter une source.
+Charger chaque matériau une seule fois. Appliquer en dernier les contrôles de
+`references/restitution-proportionnee.md` : acteurs, compétences et distinctions
+utiles doivent être visibles. Le bundle complet est un portage ; le chargement
+natif de Claude Code se mesure séparément.
 
 > **Renvois inter-branches** : une question en croise souvent plusieurs. Réflexes
 > fréquents — PSC/coût → masse salariale ; LDG et RSU → CST/dialogue social ;
@@ -333,6 +340,12 @@ La checklist du §10 élève la qualité à chaque exécution.
 
 ## 11. Limites et précautions
 
+- **DPO** : pour les traitements de données RH, articuler avec dpo-ct les
+  analyses RGPD ; DRH conserve la qualification statutaire.
+- **DPM** : pour les agents de police municipale, DRH traite le statut et la
+  paie ; les pouvoirs de police et l'organisation opérationnelle relèvent du DPM.
+- **DirFi** : articuler coût et masse salariale avec la direction financière ;
+  les règles budgétaires et comptables locales relèvent de dirfi-fpt.
 - Ne remplace pas l'avis d'un juriste, d'un avocat ou du contrôle de légalité
   pour les décisions à fort enjeu contentieux.
 - Périmètre borné aux collectivités de **plus de 350 agents**.

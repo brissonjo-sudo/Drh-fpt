@@ -3,10 +3,12 @@
 from __future__ import annotations
 
 import argparse
+import suites
 import hashlib
 import json
 import re
 import subprocess
+import tempfile
 import sys
 import uuid
 from datetime import datetime, timezone
@@ -161,11 +163,6 @@ def build_system_context(
     # Les matériaux de vérification précèdent le contrat de restitution :
     # aucune duplication, aucun attendu de cas dans le contexte répondant.
     parts.extend(("\n\n<!-- SKILL MÉTIER : DRH FPT -->\n",drh_context))
-    reminder_text=(ROOT/'references/restitution-proportionnee.md').read_text(encoding='utf8')
-    marker='## Rappel final de restitution'
-    if marker not in reminder_text:
-        raise ValueError('Rappel de restitution DRH absent')
-    parts.append('\n\n<!-- DERNIÈRE ÉTAPE : RESTITUTION DRH -->\n'+reminder_text.split(marker,1)[1])
     return "".join(parts)
 
 
@@ -214,6 +211,9 @@ adaptées au traitement décrit sans exiger un exposé juridique supplémentaire
 Une source officielle réellement fournie et vérifiée n'a pas à être annoncée
 comme non consultée ; les réserves portent sur les points non vérifiés.
 Recopie les libellés des critères à l'identique, même s'ils sont longs.
+Consigne toute question juridique non tranchée dans incertitudes (liste de
+phrases non vides, vide seulement si aucun doute résiduel). Une incertitude
+non arbitrée bloque la qualification. Les scores de style sont indicatifs.
 Ne transforme pas un soupçon juridique en erreur confirmée sans contrôler le
 champ de la source et les décisions du dossier. En mode dégradé, les sources
 OU les pièces à consulter suffisent si le critère le prévoit ; ne réclame pas
@@ -221,7 +221,7 @@ de références numérotées. Tout énoncé ferme non vérifié reste sanctionn�
 
 Schéma :
 {"criteres":[{"id":"...","critere":"...","statut":"SATISFAIT|PARTIEL|ABSENT","note":"..."}],
-"erreurs":[],"score_architecture_sur_5":0,"verdict_architecture":"REUSSITE|ECHEC|NON_APPLICABLE",
+"erreurs":[],"incertitudes":[],"score_architecture_sur_5":0,"verdict_architecture":"REUSSITE|ECHEC|NON_APPLICABLE",
 "score_fiabilite_juridique_sur_5":0,"verdict_fiabilite_juridique":"REUSSITE|ECHEC",
 "score_sur_5":0,"verdict":"REUSSITE|ECHEC","synthese":"..."}
 """
@@ -262,7 +262,7 @@ def parse_judge_completion(completion: Completion) -> dict:
     return result
 
 
-def validate_judge_result(result: dict, case: dict) -> list[str]:
+def validate_judge_result(result: dict, case: dict, *, semantic: bool = True) -> list[str]:
     problems: list[str] = []
     expected = normalized_expectations(case)
     expected_by_id = {item["id"]: item["texte"] for item in expected}
@@ -295,7 +295,7 @@ def validate_judge_result(result: dict, case: dict) -> list[str]:
             status = criterion.get("statut")
             if not isinstance(status, str) or status not in VALID_CRITERION_STATUSES:
                 problems.append(f"{criterion_id} : statut invalide")
-            elif status != "SATISFAIT":
+            elif semantic and status != "SATISFAIT":
                 problems.append(f"{criterion_id} : critère non entièrement satisfait")
             note = criterion.get("note")
             if not isinstance(note, str) or not note.strip():
@@ -304,7 +304,7 @@ def validate_judge_result(result: dict, case: dict) -> list[str]:
     errors = result.get("erreurs")
     if not isinstance(errors, list):
         problems.append("champ erreurs absent ou mal formé")
-    elif errors:
+    elif semantic and errors:
         problems.append("le juge a détecté au moins une erreur")
 
     verdict = result.get("verdict")
@@ -312,17 +312,17 @@ def validate_judge_result(result: dict, case: dict) -> list[str]:
     architecture = result.get("verdict_architecture")
     if not isinstance(verdict, str) or verdict not in VALID_GLOBAL_VERDICTS:
         problems.append("verdict global absent ou invalide")
-    elif verdict != "REUSSITE":
+    elif semantic and verdict != "REUSSITE":
         problems.append("verdict global en échec")
     if not isinstance(legal, str) or legal not in VALID_GLOBAL_VERDICTS:
         problems.append("verdict juridique absent ou invalide")
-    elif legal != "REUSSITE":
+    elif semantic and legal != "REUSSITE":
         problems.append("fiabilité juridique en échec")
     if not isinstance(architecture, str) or architecture not in VALID_ARCHITECTURE_VERDICTS:
         problems.append("verdict d'architecture absent ou invalide")
-    elif architecture == "ECHEC":
+    elif semantic and architecture == "ECHEC":
         problems.append("architecture en échec")
-    elif case.get("type") == "architectural" and architecture != "REUSSITE":
+    elif semantic and case.get("type") == "architectural" and architecture != "REUSSITE":
         problems.append("cas architectural sans réussite d'architecture")
     for field in ("score_sur_5", "score_architecture_sur_5", "score_fiabilite_juridique_sur_5"):
         value = result.get(field)
@@ -405,7 +405,8 @@ def campaign_signature(provenance: dict) -> dict:
         "mode", "provider_repondant", "modele_repondant", "effort_repondant",
         "context_mode", "evidence_mode", "sha256_cas", "sha256_compagnon", "sha256_source_pack",
         "case_ids", "evidence_sha256",
-        "drh_fpt", "recherche_juridique", "context_sha256_by_case",
+        "drh_fpt", "recherche_juridique", "context_sha256_by_case", "suite", "suite_registry_sha256", "suite_seal_sha256",
+        "execution_profile", "native_runtime_sha256_by_case", "cli_versions",
     )
     return {key: provenance.get(key) for key in keys}
 
@@ -459,12 +460,24 @@ def write_answer(campaign: Path, case: dict, answer: str, completion: Completion
     )
 
 
-def validate_strict_campaign(provenance: dict, cases: list[dict], results: list[dict], subset: bool = False) -> list[str]:
+def validate_strict_campaign(provenance: dict, cases: list[dict], results: list[dict], subset: bool = False, *, semantic: bool = True) -> list[str]:
     problems = []
     if subset:
         problems.append("une sélection de cas est diagnostique et ne constitue pas une campagne complète")
-    elif len(cases) != EXPECTED_CASES_PER_MODE:
-        problems.append(f"{len(cases)} cas actifs au lieu de {EXPECTED_CASES_PER_MODE}")
+    else:
+        try:
+            suite = suites.load_suite(provenance.get('suite','developpement'))
+            expected = suite['expected_per_mode']
+            if len(cases) != expected:
+                problems.append(f"{len(cases)} cas actifs au lieu de {expected}")
+            if suite['qualification']:
+                families={'codex':'openai','openai':'openai','anthropic':'anthropic','claude-cli':'anthropic'}
+                if families.get(provenance.get('provider_repondant')) == families.get(provenance.get('provider_juge')):
+                    problems.append('qualification : familles répondant et juge identiques')
+                if provenance.get('suite_seal_sha256') != suite['seal_sha256']:
+                    problems.append('qualification : gel différent ou absent')
+        except (ValueError,OSError):
+            problems.append('suite inconnue, non approuvée ou gel invalide')
     if (
         provenance.get("provider_juge")
         and provenance.get("modele_juge")
@@ -494,15 +507,18 @@ def validate_strict_campaign(provenance: dict, cases: list[dict], results: list[
             problems.append(f"{case_id} : erreur d'exécution")
         if entry.get("tronque"):
             problems.append(f"{case_id} : réponse ou jugement tronqué")
-        for issue in entry.get("validation", ["évaluation absente"]):
-            problems.append(f"{case_id} : {issue}")
+        if semantic:
+            for issue in entry.get("validation", ["évaluation absente"]):
+                problems.append(f"{case_id} : {issue}")
     return problems
 
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--provider", choices=("anthropic", "openai", "codex"), default="anthropic")
-    parser.add_argument("--judge-provider", choices=("anthropic", "openai", "codex"))
+    parser.add_argument('--suite', default='developpement')
+    parser.add_argument('--execution-profile', choices=('assembled','claude-native'), default='assembled')
+    parser.add_argument("--provider", choices=("anthropic", "openai", "codex", "claude-cli"), default="anthropic")
+    parser.add_argument("--judge-provider", choices=("anthropic", "openai", "codex", "claude-cli"))
     parser.add_argument("--model", default=DEFAULT_MODEL)
     parser.add_argument("--judge-model", default=DEFAULT_JUDGE_MODEL)
     parser.add_argument("--reasoning-effort")
@@ -537,7 +553,19 @@ def main(argv: list[str] | None = None) -> int:
     if args.mode == "degraded" and args.evidence_mode == "live":
         raise SystemExit("Le mode dégradé ne peut pas déclarer une vérification live")
     selected = [item for group in args.case for item in group.split(",") if item]
-    all_cases = json.loads((HERE / "cas-de-test.json").read_text(encoding="utf-8"))
+    if args.execution_profile=='claude-native' and args.provider!='claude-cli':
+        raise SystemExit('Le profil natif exige claude-cli')
+    try:
+        suite = suites.load_suite(args.suite)
+    except (ValueError,OSError) as exc:
+        raise SystemExit(str(exc)) from exc
+    if suite['qualification'] and (selected or args.resume or args.judge_only):
+        raise SystemExit('Qualification : sélection et relance interdites')
+    if suite['qualification']:
+        state=git_provenance(ROOT)
+        if state.get('dirty') is not False or (not suite.get('reserve_for') and state.get('commit')!=suite['runtime_commit']):
+            raise SystemExit('Qualification : commit gelé propre requis avant tout appel')
+    all_cases = suite['cases']
     cases = active_cases(all_cases, args.mode, selected)
     for case in cases:
         normalized_expectations(case)
@@ -561,10 +589,19 @@ def main(argv: list[str] | None = None) -> int:
 
     full_bundle_path = find_bundle()
     full_bundle = full_bundle_path.read_text(encoding="utf-8")
-    cases_sha = sha256_text((HERE / "cas-de-test.json").read_text(encoding="utf-8"))
+    cases_sha = sha256_text(Path(suite['cases_path']).read_text(encoding="utf-8"))
     judge_provider = args.judge_provider or args.provider
+    if suite['qualification']:
+        families={'codex':'openai','openai':'openai','claude-cli':'anthropic','anthropic':'anthropic'}
+        if not args.strict or not args.judge or families[args.provider]==families[judge_provider]:
+            raise SystemExit('Qualification : strict, juge et familles distinctes requis')
+        if args.provider=='claude-cli' and args.execution_profile!='claude-native':
+            raise SystemExit('Qualification Claude : profil natif requis')
+        if args.provider not in {'codex','claude-cli'} or judge_provider not in {'codex','claude-cli'}:
+            raise SystemExit('Qualification : CLI Codex et Claude exacts requis')
     now = datetime.now(timezone.utc)
     contexts = {}
+    native_signatures={}
     for case in cases:
         if args.context_mode == "selective":
             drh_context, loaded_files = context_loader.build_case_context(case)
@@ -574,7 +611,17 @@ def main(argv: list[str] | None = None) -> int:
         system = build_system_context(drh_context, legal_bundle, args.mode, source_pack,
             args.evidence_mode, case_evidence)
         contexts[case["id"]] = (system, context_loader.context_metrics(drh_context, loaded_files), case_evidence)
+        if args.execution_profile=='claude-native':
+            import native_runtime
+            with tempfile.TemporaryDirectory(prefix='drh-native-preflight-') as temporary:
+                runtime=native_runtime.stage(Path(temporary)/'project',ROOT,args.mode,case['id'],case_evidence,legal_path)
+                native_signatures[case['id']]=native_runtime.signature(runtime)
     base_provenance = {
+        'suite': args.suite,
+        'suite_registry_sha256': suite['registry_sha256'],
+        'suite_seal_sha256': suite['seal_sha256'],
+        'execution_profile': args.execution_profile,
+        'native_runtime_sha256_by_case': native_signatures,
         "mode": args.mode,
         "provider_repondant": args.provider,
         "modele_repondant": args.model,
@@ -596,7 +643,14 @@ def main(argv: list[str] | None = None) -> int:
             "chemin": str(legal_path), "sources_chargees": legal_sources,
             **git_provenance(legal_path or ROOT)} if args.mode == "integration" else {}),
         "context_sha256_by_case": {key: sha256_text(value[0]) for key, value in contexts.items()},
+        "judge_context_sha256_by_case": {key:sha256_text(value[0]) for key,value in contexts.items()},
     }
+    if suite['qualification']:
+        base_provenance['cli_versions']=suites.cli_versions()
+        slot=('claude-native' if args.execution_profile=='claude-native' else args.provider)+':'+args.mode
+        suites.validate_profile(suite,slot,base_provenance)
+    if args.execution_profile=='claude-native':
+        base_provenance['context_sha256_by_case']={c['id']:sha256_text(native_runtime.prompt(c,args.mode)+native_signatures[c['id']]) for c in cases}
 
     resumed_from = args.resume or args.judge_only
     if resumed_from:
@@ -633,6 +687,11 @@ def main(argv: list[str] | None = None) -> int:
             json.dumps(provenance, ensure_ascii=False, indent=2), encoding="utf-8"
         )
 
+    if suite['qualification']:
+        suites.claim_launch(suite,RESULTS/'qualification-launches.json',
+            ('claude-native' if args.execution_profile=='claude-native' else args.provider)+':'+args.mode,
+            provenance['campagne_id'],provenance['drh_fpt']['commit'])
+
     respondent_key = None if args.judge_only else key_for_provider(args.provider)
     judge_key = key_for_provider(judge_provider) if args.judge else None
     evaluation_id = None
@@ -656,16 +715,36 @@ def main(argv: list[str] | None = None) -> int:
                 entry.update({"statut": "erreur", "erreur": "réponse absente"})
                 return entry
             try:
-                completion = complete(
-                    args.provider, respondent_key or "", args.model, system, case["prompt"],
-                    MAX_TOKENS_REPONDANT, args.reasoning_effort,
-                )
-            except ApiCallError as exc:
+                native_meta={}
+                if args.execution_profile=='claude-native':
+                    import claude_cli
+                    with tempfile.TemporaryDirectory(prefix='drh-native-case-') as temporary:
+                        runtime=native_runtime.stage(Path(temporary)/'project',ROOT,args.mode,case_id,case_evidence,legal_path)
+                        if native_runtime.signature(runtime)!=native_signatures[case_id]:
+                            raise ApiCallError('Runtime natif différent du précontrôle')
+                        native_runtime.archive(runtime,campaign/'runtime'/case_id)
+                        completion=claude_cli.complete_cli(args.model,'',native_runtime.prompt(case,args.mode),
+                            MAX_TOKENS_REPONDANT,args.reasoning_effort,runtime=runtime)
+                        native_meta={'native_runtime_sha256':native_signatures[case_id],
+                                     'execution_profile':'claude-native'}
+                else:
+                    completion = complete(
+                        args.provider, respondent_key or "", args.model, system, case["prompt"],
+                        MAX_TOKENS_REPONDANT, args.reasoning_effort,
+                    )
+            except (ApiCallError,ValueError,OSError) as exc:
                 entry.update({"statut": "erreur", "erreur": str(exc)})
+                if getattr(exc,'provider_trace',None):
+                    (campaign/f'{case_id}-respondant-failed.jsonl').write_bytes(exc.provider_trace.encode('utf8'))
+                    entry['failed_trace_sha256']=sha256_text(exc.provider_trace)
                 return entry
             answer = completion.text
             response_meta = {"truncated": completion.truncated, "metrics": {"usage": completion.usage}}
-            write_answer(campaign, case, answer, completion, {"context": context_meta})
+            metadata={"context":context_meta}
+            if native_meta:
+                metadata={'judge_context':context_meta,'context':{'profile':'claude-native',
+                    'runtime_sha256':native_signatures[case_id],'loaded_files':completion.usage.get('loaded_files',[])}}
+            write_answer(campaign, case, answer, completion, {**metadata,**native_meta})
 
         entry["tronque"] = bool(response_meta.get("truncated"))
         entry["respondant_metrics"] = response_meta.get("metrics", {})
@@ -681,6 +760,9 @@ def main(argv: list[str] | None = None) -> int:
                 evaluation = parse_judge_completion(completion)
             except ApiCallError as exc:
                 entry.update({"statut": "erreur", "erreur": str(exc)})
+                if exc.provider_trace:
+                    (evaluation_dir/f'{case_id}-juge-failed.jsonl').write_bytes(exc.provider_trace.encode('utf8'))
+                    entry['failed_judge_trace_sha256']=sha256_text(exc.provider_trace)
                 return entry
             (evaluation_dir / f"{case_id}-eval.json").write_text(
                 json.dumps(evaluation, ensure_ascii=False, indent=2), encoding="utf-8"
@@ -738,4 +820,4 @@ def main(argv: list[str] | None = None) -> int:
         print("Gate strict : " + ("RÉUSSITE" if not strict_problems else "ÉCHEC"))
         for problem in strict_problems:
             print(f"- {problem}")
-    return 1 if strict_problems else 0
+    return 1 if strict_problems or any(entry.get('statut')!='ok' for entry in results) else 0

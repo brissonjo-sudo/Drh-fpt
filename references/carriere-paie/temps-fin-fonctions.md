@@ -6,19 +6,6 @@
 
 ### 5.9 Temps de travail et fin de fonctions
 
-**Retenue pour grève en FPT** : vérifier le principe de proportionnalité sur
-CE Section, 17 juillet 2009, n° 303588, qui compare la durée de grève aux
-obligations de service. Le calcul spécifique des gardes de 24 heures dans
-cette décision concerne les sapeurs-pompiers : ne pas le transposer à une
-journée de bureau. Confirmer cycle, heures non faites et assiette avant paie.
-CE 27 avril 1994, n° 146119, traite notamment du refus de tâches alors que
-toutes les heures sont accomplies ; il ne suffit pas à vérifier la formule
-d'une grève partielle. Aucune liquidation ferme sans source applicable.
-Pour nommer le régime voisin écarté, vérifier CGFP L711-3 (agents de l'État)
-et l'article 1 du décret 62-765 (trentième indivisible). Cette comparaison
-documente l'erreur de transposition ; elle ne permet pas de traiter un dossier
-individuel de la fonction publique de l'État hors périmètre du skill.
-
 **Temps de travail**
 - **Durée annuelle de référence** : **1 607 heures** (base légale, hors
   sujétions particulières et jours de fractionnement).
@@ -177,14 +164,19 @@ consolidée** avant tout acte.
   code du travail, loi du 21 décembre 2022) : elle ne vise **pas** la FPT.
 - **Arrêté de radiation** : **motivé** (CRPA), **notifié**, avec **voies et délais de
   recours**. Ne pas fixer automatiquement l'effet au premier jour d'absence.
-  La notification est la règle d'opposabilité (CRPA L221-8), mais la date
-  d'effet en abandon de poste appelle un contrôle jurisprudentiel distinct :
+  **Principe prudent** : retenir une date d'effet à compter de la notification
+  et contrôler la non-rétroactivité avant signature. CRPA L221-8 établit
+  l'opposabilité, sans régler seul toutes les exceptions de date d'effet.
+  Une date antérieure exige une analyse jurisprudentielle du dossier :
   CAA Paris, 9 novembre 2021, n° 20PA03502, §8, admet un effet antérieur à la
   notification, au terme de la mise en demeure dans cette espèce concernant
   un stagiaire de l'État. Ne pas en déduire automatiquement la même date pour
   tout dossier FPT ; vérifier la portée et l'applicabilité avant de signer.
-  Une affirmation générale « toujours effet à la notification » est donc
-  trop absolue. **Non soumis à l'obligation de transmission** au contrôle de légalité
+  Classer cette éventuelle exception **jurisprudentielle / débattue** pour la
+  FPT, à faire vérifier avant application. CAA Nancy, 4 mai 2006, n°04NC00702,
+  annule l'effet antérieur à l'échéance de la dernière mise en demeure dans
+  son espèce ; cet arrêt ne prouve pas une règle universelle d'effet à la
+  notification. **Non soumis à l'obligation de transmission** au contrôle de légalité
   (hors liste actuelle de l'art. L. 2131-2 du CGCT). Ne pas réintroduire depuis
   une ancienne version de cet article une exception visant la révocation, la
   mise à la retraite d'office ou les sanctions disciplinaires en général.
@@ -238,16 +230,23 @@ consolidée** avant tout acte.
   L'accord de l'agent ne suffit pas à écarter ce délai statutaire.
   Rendre cette limite explicite même quand seul un départ immédiat est demandé :
   un protocole de transition n'est pas une dispense des protections statutaires.
-- **Options de sortie du fonctionnaire déchargé** :
-  - **réintégration** sur un emploi vacant correspondant à son grade
-    d'origine, dans la collectivité ou l'établissement ;
-  - à défaut d'emploi vacant : **congé spécial** (modalités, durée maximale et
-    quotité de rémunération : **à vérifier**, ne pas chiffrer de mémoire) ;
-  - **prise en charge** par le **centre de gestion** (CDG) ou le **CNFPT**
-    selon la catégorie, le temps de rechercher un reclassement ;
-  - **indemnité de licenciement**, le cas échéant, si aucune de ces solutions
-    n'aboutit dans les conditions prévues par les textes (**conditions
-    d'ouverture et montant à vérifier**).
+- **Options de sortie du fonctionnaire déchargé** : rechercher d'abord l'offre
+  d'un emploi de son grade par la collectivité mettant fin au détachement.
+  Si elle ne peut lui en offrir, L544-4 ouvre **quatre options**, sur demande
+  du fonctionnaire, sans ordre obligatoire entre elles :
+  1. **Reclassement**, dans les conditions de L542-5, puis, le cas échéant,
+     prise en charge selon la section 2 du chapitre II et L451-10 ;
+  2. **prise en charge directe**, dans ces mêmes conditions ;
+  3. **congé spécial de droit**, selon la sous-section 3 (L544-10 à L544-16) ;
+  4. **indemnité de licenciement**, selon les conditions applicables, notamment
+     L544-6 ; elle rompt le lien avec la FPT, sous réserve des droits à pension.
+  Vérifier champ de l'emploi, organisme compétent (CDG/CNFPT), conditions
+  réglementaires du congé et de l'indemnité, demande et choix de l'agent.
+  Le congé n'est pas ouvert à toute population : L544-5 exclut notamment les
+  directeurs et directeurs adjoints de SIS qu'il vise. La demande de congé
+  spécial de droit peut intervenir de la fin du détachement jusqu'au terme
+  de la prise en charge (L544-12). Ne pas imposer l'épuisement des autres
+  options avant l'indemnité, ni promettre un congé sans vérifier ses conditions.
 - **Pièges à bloquer** :
   1. Traiter la décharge de fonctions comme une **sanction disciplinaire**
      (elle ne l'est pas → pas de conseil de discipline, pas de communication
@@ -266,6 +265,18 @@ consolidée** avant tout acte.
      délai d'effet différé**.
 
 ### 5.12 Grève et retenues
+
+**Retenue pour grève en FPT** : vérifier le principe de proportionnalité sur
+CE Section, 17 juillet 2009, n°303588, qui compare la durée de grève aux
+obligations de service. Son calcul des gardes de 24 heures concerne les
+sapeurs-pompiers : ne pas le transposer à une journée de bureau. Confirmer
+cycle, heures non faites et assiette avant paie. CE, 27 avril 1994, n°146119,
+traite du refus de tâches lorsque toutes les heures sont accomplies ; il ne
+suffit pas à vérifier la formule d'une grève partielle.
+Pour le régime voisin écarté, vérifier CGFP L711-3 (agents de l'État) et
+l'article 1 du décret 62-765. Cette comparaison ne permet pas de traiter
+un dossier individuel de l'État hors périmètre. Aucune liquidation ferme sans
+source applicable.
 
 - **Droit de grève** : reconnu aux agents publics, exercé dans le cadre légal
   (préavis de grève déposé par une organisation syndicale représentative,

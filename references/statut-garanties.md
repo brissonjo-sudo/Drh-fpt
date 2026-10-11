@@ -150,7 +150,7 @@ confirmer)
   en conflit d'intérêts), **contradictoire adapté** (agent mis en cause
   entendu, sans retarder les mesures de protection), **confidentialité**,
   **traçabilité** écrite. **Distincte** de la procédure disciplinaire (établit
-  les faits ; la discipline en tire les conséquences — voir carriere-paie
+  les faits ; la discipline en tire les conséquences — voir references/carriere-paie/statut-discipline.md
   §5.5). Articulation protection fonctionnelle : demandable sans attendre la
   fin de l'enquête. Articulation pénale : **art. 40 CPP** (référence stable)
   — aviser sans délai le procureur si infraction possible, en parallèle de
@@ -168,7 +168,7 @@ confirmer)
   classées sans discontinuité ; **interdiction absolue** des mentions
   relatives aux opinions/activités **politiques, syndicales, religieuses** ;
   **droit d'accès** de l'agent à tout moment (à distinguer du droit de
-  communication renforcé propre à la discipline, carriere-paie §5.5).
+  communication renforcé propre à la discipline, references/carriere-paie/statut-discipline.md §5.5).
 - **Durées de conservation** : suivre le **référentiel CNIL RH secteur
   public** en vigueur — jamais de durée précise de mémoire.
 - **Données de santé** : circuit **cloisonné** via la médecine de
@@ -182,7 +182,7 @@ confirmer)
 
 ### 5.5 Renvois inter-branches
 
-**Discipline et suspension conservatoire** → `carriere-paie` §5.5 (cette
+**Discipline et suspension conservatoire** → `references/carriere-paie/statut-discipline.md` §5.5 (cette
 branche traite seulement l'articulation enquête/discipline, pas la
 procédure). **Santé au travail, RPS** → `qvt-sante` (volet médical et
 prévention d'un signalement). **Diffusion interne** du dispositif de
@@ -234,7 +234,7 @@ Appliquer le noyau de vérification (matrice §2.2 du SKILL.md) dès que :
     généraliste au **dossier individuel** de l'agent public, qu'il exclut
     explicitement (régi par l'arrêté du 21 décembre 2012).
 11. Confondre l'accès **ordinaire** au dossier et le droit de **communication
-    intégrale** propre à la discipline (carriere-paie §5.5).
+    intégrale** propre à la discipline (references/carriere-paie/statut-discipline.md §5.5).
 
 ## 9. Données volatiles à vérifier
 

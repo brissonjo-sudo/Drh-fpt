@@ -20,9 +20,12 @@
   statutaires (ancienneté, parfois examen professionnel) et les **ratios
   promus-promouvables** votés par l'assemblée. Orienté par les **LDG**.
 - **Promotion interne** : changement de **cadre d'emplois** (souvent de
-  catégorie), par **liste d'aptitude**, soumise à **quotas**. Établie **en
-  propre** si la collectivité est non affiliée au CDG ; via le CDG si
-  affiliation (volontaire au-dessus de 350 agents).
+  catégorie), par **liste d'aptitude**, soumise à **quotas**. Vérifier la
+  compétence d'établissement des listes : collectivité obligatoirement affiliée,
+  ou volontairement affiliée ayant **confié** cette compétence au CDG. Dans ces
+  cas, les LDG de promotion interne sont arrêtées par le CDG selon L413-6 et
+  R413-37 du CGFP, après les consultations requises. L'affiliation volontaire
+  seule ne suffit pas ; sinon contrôler la compétence propre de la collectivité.
 
 ### 5.3 Positions statutaires
 Activité (dont **mise à disposition**, qui est une modalité de l'activité),
@@ -73,8 +76,20 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
   information de l'agent, **communication de l'intégralité du dossier**, droit à
   l'**assistance** d'un conseil de son choix, **délai suffisant** pour préparer
   sa défense. Leur méconnaissance entache la sanction d'illégalité.
-  Contrôler aussi l'information sur le **droit de se taire** avant le recueil
-  des observations, conformément aux textes et décisions applicables.
+  Contrôler aussi l'information sur le **droit de se taire** avant la première
+  audition sur les manquements dans une procédure disciplinaire engagée,
+  puis pour l'ensemble de cette procédure, y compris l'enquête administrative
+  menée pendant celle-ci. Sources à consulter : Conseil constitutionnel,
+  décision 2024-1105 QPC du 4 octobre 2024 (§9,15,18) et CE, 19 décembre 2024,
+  n°490157. L532-4 seul ne contient pas ce droit : son ancien deuxième alinéa
+  a été abrogé à compter du 1er octobre 2025. Ne pas présenter la mesure
+  transitoire de la QPC comme encore en vigueur après cette date.
+  Le principe général dégagé par le CE ne transpose pas la procédure propre
+  aux magistrats à la FPT. Sauf détournement, échanges hiérarchiques ordinaires
+  et enquête préalable à l'engagement disciplinaire ne sont pas couverts
+  automatiquement ; qualifier leur chronologie. L'absence d'information
+  n'entraîne pas automatiquement l'annulation : vérifier si la sanction repose
+  de manière déterminante sur les propos recueillis sans cette information.
 - **Prescription** de l'action disciplinaire : **3 ans** à compter du jour où
   l'administration a eu **connaissance effective** des faits (**art. L532-2
   CGFP**, référence stable) ; délai **interrompu** en cas de poursuites pénales,

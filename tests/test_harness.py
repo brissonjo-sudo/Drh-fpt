@@ -126,9 +126,10 @@ class HarnessTests(unittest.TestCase):
         self.assertNotIn("LEGAL", degraded)
 
     def test_final_restitution_reminder_follows_sources_in_both_modes(self):
-        integrated=RUN_TESTS.build_system_context('DRH','LEGAL','integration','SOURCE-FIN','snapshot')
-        degraded=RUN_TESTS.build_system_context('DRH',None,'degraded')
-        marker='DERNIÈRE ÉTAPE : RESTITUTION DRH'
+        drh=(HERE.parent/'references/restitution-proportionnee.md').read_text(encoding='utf8')
+        integrated=RUN_TESTS.build_system_context(drh,'LEGAL','integration','SOURCE-FIN','snapshot')
+        degraded=RUN_TESTS.build_system_context(drh,None,'degraded')
+        marker='## Rappel final de restitution'
         self.assertGreater(integrated.index(marker),integrated.index('SOURCE-FIN'))
         self.assertIn(marker,degraded)
         self.assertEqual(integrated.split(marker)[-1],degraded.split(marker)[-1])

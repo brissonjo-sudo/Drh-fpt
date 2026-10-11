@@ -41,8 +41,8 @@ sont pas levées.
 ## 5. Règles métier — modules à charger selon le dossier
 
 - Statut, carrière, instances et discipline : `references/carriere-paie/statut-discipline.md`.
-- Traitement, régime indemnitaire, cotisations et retraite : `references/carriere-paie/remuneration-paie.md`.
-- Temps de travail, abandon de poste, emplois fonctionnels, grève et fin de fonctions : `references/carriere-paie/temps-fin-fonctions.md`.
+- Traitement, régime indemnitaire, cotisations et affiliation retraite : `references/carriere-paie/remuneration-paie.md`.
+- Temps de travail, retraite progressive, départ à la retraite, rupture conventionnelle, chômage, insuffisance professionnelle, abandon de poste, emplois fonctionnels et grève : `references/carriere-paie/temps-fin-fonctions.md`.
 
 Lire plusieurs modules si le dossier les croise. Le fichier présent conserve les calculs, déclencheurs de vérification, pièges, livrables et contrôles communs.
 
@@ -57,7 +57,7 @@ employeur) :
   locaux** (délibération indemnitaire, régime du temps de travail) ;
 - pour tout **calcul de régime indemnitaire** : d'abord **croiser filière et
   cadre d'emplois du grade concerné avec le régime** (RIFSEEP vs ISFE police
-  municipale/gardes champêtres — cf. §5.7) **avant de nommer le régime**, sans le
+  municipale/gardes champêtres — cf. `references/carriere-paie/remuneration-paie.md`, §5.7) **avant de nommer le régime**, sans le
   déduire du profil de l'interlocuteur.
 
 Ne jamais produire un montant ferme sur une valeur de mémoire. **La vérification
@@ -77,7 +77,7 @@ Appliquer le noyau de vérification (matrice §2.2 du SKILL.md) dès que :
 
 ## 8. Pièges & confusions fréquentes
 
-1. Citer une **valeur d'indexation de mémoire** (point, cotisation) → erreur de version. (Un plafond réglementaire daté reste, lui, citable sous réserve.)
+1. Citer une **valeur d'indexation ou un plafond de mémoire** → erreur de version. La consultation de la source officielle applicable est obligatoire avant toute valeur juridique exacte ; une réserve après le chiffre ne suffit pas.
 2. Confondre **avancement d'échelon** (ancienneté) et **avancement de grade**
    (tableau + ratios).
 3. Confondre **avancement de grade** (même cadre d'emplois) et **promotion

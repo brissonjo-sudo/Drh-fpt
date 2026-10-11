@@ -18,6 +18,9 @@ RETRYABLE_HTTP_STATUS = {408, 409, 429, 500, 502, 503, 504, 529}
 
 class ApiCallError(RuntimeError):
     """Échec d'un appel après épuisement des tentatives."""
+    def __init__(self,message,*,provider_trace=None):
+        super().__init__(message)
+        self.provider_trace=provider_trace
 
 
 @dataclass
@@ -31,7 +34,7 @@ class Completion:
 
 
 def key_for_provider(provider: str) -> str:
-    if provider == "codex":
+    if provider in {"codex", "claude-cli"}:
         return ""  # L'authentification existante reste gérée par le CLI.
     env_name = {"anthropic": "ANTHROPIC_API_KEY", "openai": "OPENAI_API_KEY"}[provider]
     key = os.environ.get(env_name)
@@ -200,6 +203,9 @@ def complete(
     max_tokens: int,
     reasoning_effort: str | None = None,
 ) -> Completion:
+    if provider == 'claude-cli':
+        from claude_cli import complete_cli
+        return complete_cli(model,system,user,max_tokens,reasoning_effort)
     if provider == "codex":
         return _codex(model, system, user, max_tokens, reasoning_effort)
     if provider == "anthropic":

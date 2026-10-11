@@ -41,7 +41,8 @@ doit l'être aussi. Si un état est sale, un SHA est absent ou le candidat ne se
 déclare pas `v0.7.0`, arrête la campagne : sa provenance ne permettrait pas une
 validation de release.
 
-Lis ensuite `SKILL.md`, `references/*.md` et
+Lis ensuite `SKILL.md`, tous les fichiers Markdown de `references/`
+récursivement (y compris `references/carriere-paie/`) et
 `assets/fiche-profil-collectivite.md`. En mode intégration, lis aussi
 intégralement le `SKILL.md` du compagnon et ses références requises.
 
@@ -138,10 +139,9 @@ comportement de refus/abstention/redirection correct.
 - Une mention « vérifié » ou « confirmé » sans lien ni identifiant officiel
   exploitable est une vérification non traçable. Elle ne sécurise pas une
   donnée exacte destinée à la paie, à un calcul ou à un acte.
-- Donner une **valeur d'indexation** (point d'indice, taux de cotisation) **de
-  mémoire** → critère « données volatiles » en échec. En revanche, un
-  **plafond réglementaire** daté et assorti de « à confirmer » est
-  **acceptable**.
+- Donner une **valeur d'indexation ou un plafond** de mémoire, sans
+  consultation officielle applicable → échec, même avec « à confirmer ».
+  Les chiffres des modules ne constituent pas une preuve de consultation.
 - Ne pas lever une **variable déterminante** (affiliation CDG, statut
   particulier, effectif réel de la collectivité) quand la réponse en dépend →
   critère PARTIEL (cas standard) ou indice d'ÉCHEC (cas adversarial, si cela

@@ -18,3 +18,4 @@ tests/resultats/
 # Python
 __pycache__/
 *.pyc
+tests/qualification/seal-*.json

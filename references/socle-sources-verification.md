@@ -167,7 +167,17 @@ La mention « à confirmer en version consolidée » est une réserve pour une
 source non encore consultée, jamais un substitut à la consultation ni une
 autorisation de chiffrer un acte sans vérification. Après une consultation
 effective, dater la source et réserver seulement les points encore ouverts.
-En mode dégradé ou en cas de source inaccessible, ne pas citer de chiffre.
+En mode dégradé ou en cas de source inaccessible, ne pas citer de valeur
+juridique exacte non vérifiée. Les faits chiffrés fournis par l'utilisateur
+(effectif, heures, dates, montant demandé) restent utilisables comme faits,
+sans leur attribuer la valeur d'un seuil ou d'un droit confirmé.
+
+Les valeurs figurant dans les modules (ISFE, CET, IHTS, congés, garanties
+horaires, etc.) sont des repères documentaires à confronter à la source
+officielle applicable pour chaque réponse. Leur présence dans un fichier
+chargé, sa date de maintenance ou une validation passée ne vaut pas
+consultation actuelle. En dégradé, omettre ces valeurs juridiques et proposer
+les vérifications nécessaires ; ne pas les reprendre avec une réserve tardive.
 
 Exemples : plafonds **ISFE** (décret n° 2024-614 — valeurs portées par la
 branche carrière-paie §5.7, **source interne unique** pour éviter toute

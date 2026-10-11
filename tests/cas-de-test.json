@@ -929,14 +929,15 @@
       },
       {
         "id": "21-c07",
-        "texte": "Options de sortie : réintégration sur un emploi vacant du grade d'origine, à défaut congé spécial, ou prise en charge par le CDG/CNFPT"
+        "texte": "Si la collectivité ne peut offrir un emploi du grade, L544-4 ouvre sur demande quatre options sans cascade imposée : reclassement puis prise en charge éventuelle, prise en charge directe, congé spécial de droit sous ses conditions, indemnité de licenciement sous ses conditions. Vérifier compétence CDG/CNFPT et choix de l’agent ; aucune obligation d’épuiser les autres voies avant l’indemnité."
       }
     ],
     "echec_si": [
       "Valide une décharge de fonctions immédiate ou avant l'expiration des 6 mois",
       "Fait courir le délai de 6 mois uniquement à compter de l'élection du maire sans envisager l'hypothèse où la nomination de l'agent serait l'événement le plus tardif",
       "Traite la décharge de fonctions comme une sanction disciplinaire (conseil de discipline, communication du dossier)",
-      "Omet l'entretien préalable, l'information de l'assemblée et du CNFPT/CDG, ou l'effet différé"
+      "Omet l'entretien préalable, l'information de l'assemblée et du CNFPT/CDG, ou l'effet différé",
+      "Impose une cascade entre les quatre options de L544-4, omet une option ou promet le congé spécial sans ses conditions"
     ],
     "contextes": [
       "carriere-paie",

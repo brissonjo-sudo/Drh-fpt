@@ -4,6 +4,17 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
 ## [0.7.0] — 2026-09-19 — Fiabilité mesurable et contexte progressif
 
+### Relecture de PR18 — 2026-10-12 (qualification en préparation)
+- Consultation primaire ciblée : quatre options de L544-4, compétence CDG
+  confiée, droit de se taire et portée des décisions d'abandon de poste.
+- Renvois, retraite/fin de fonctions, grève, contrat transversal, métadonnées
+  et frontières métiers corrigés ; rappel final unique en dernier.
+- Valeurs internes : repères à vérifier, sans certification en mode dégradé.
+- Scores du 11 octobre : développement après corrections successives du même
+  corpus ; ils ne constituent pas une qualification sur cas neufs.
+- Suites nommées et gel humain préalable en préparation ; aucun nouveau
+  résultat de qualification n'est revendiqué.
+
 ### Validation de PR18 — 2026-10-11
 - Deux campagnes strictes de 30 cas : intégration et dégradé 30/30, sur
   `cc1f56f6f7a18cdfb569e757795d717d7f206b79` propre ; gate commun réussi.
