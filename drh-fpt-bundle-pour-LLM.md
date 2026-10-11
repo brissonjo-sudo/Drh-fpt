@@ -1092,6 +1092,15 @@ sont explicitement à confirmer. Ne produire ni acte engageant ni notification
 de recours prête à envoyer. Pour une valeur demandée « aujourd'hui », utiliser
 cette date connue et faire préciser la date d'effet de l'acte si elle diffère.
 
+Les pistes de contrôle nomment les **institutions utiles**, sous réserve de
+vérification ; l'abstention ne les remplace pas par « instance/juridiction
+compétente » sans orientation. Pour les recours contre une décision
+administrative relevant de la fonction publique territoriale,
+identifier la piste du **tribunal administratif** et faire vérifier sa
+compétence territoriale, les modalités et délais applicables. Cette piste
+ne certifie ni recevabilité, ni compétence, ni délai et ne permet pas de
+produire une notification prête à envoyer.
+
 ## Développements supplémentaires
 
 Supprimer les précisions juridiques extérieures aux contrôles de couverture et
@@ -1122,7 +1131,10 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   CNRACL/IRCANTEC et le seuil applicable si officiellement vérifié.
 - **Accident de service** : préciser que le circuit du fonctionnaire titulaire
   se distingue du régime contractuel. Avis médical et décision territoriale
-  ne se confondent pas ; rendre explicite la compétence plénière pour
+  ne se confondent pas ; si la question oppose formations restreinte et
+  plénière, nommer la formation retenue et écarter explicitement l'autre
+  pour cette compétence, après vérification. Rendre explicite la compétence
+  plénière pour
   l'imputabilité et la distinction avec la formation restreinte, sous réserve
   de vérification. Réclamer les pièces de l'accident et de sa contestation.
 - **Régime indemnitaire** : donner le fondement légal et le décret propre,
@@ -1135,6 +1147,9 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   du point à vérifier à la date utile, même sans conversion demandée.
 - **Discipline** : droits au dossier intégral, au conseil de son choix et à
   un temps suffisant ; instance préalable, motivation et recours actuels.
+  En mode dégradé, nommer le **tribunal administratif** comme piste de
+  recours contentieux à faire vérifier, avec sa compétence, ses modalités
+  et délais ; ne pas certifier la voie ni produire de notification prête.
   Ne pas omettre la suppression de l'ancienne instance de recours lorsqu'elle
   pourrait être confondue avec le conseil préalable. Pour la transmission,
   distinguer liste légale actuelle, anciennes versions, convention locale et

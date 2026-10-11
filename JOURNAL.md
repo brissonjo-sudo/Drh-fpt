@@ -426,3 +426,20 @@ Une entrée par cas, au format ci-dessous.
   archivés encadrent demande écrite, faits/durée, avocat/convention et
   règlement. Couverture explicitée dans fiche et restitution finale,
   sous vérification du régime applicable, sans plafond inventé.
+
+### 2026-10-11 — Huitième série et orientation dégradée
+- Résultat sur 29dbe0d : 29/30 integration et 29/30 degraded.
+  Réponses et jugements conservés sans modification.
+- La réponse dégradée29 demande de confirmer la juridiction mais omet
+  de nommer le tribunal administratif comme piste. La restitution conserve
+  désormais les noms des institutions à vérifier, avec toutes les réserves
+  de compétence, modalités et délais ; aucun acte exécutable.
+- Critères, juge, sources et gates inchangés. Nouvelles campagnes requises.
+
+- En intégration28, formation plénière et décision territoriale sont
+  justes mais la formation restreinte n’est pas expressément écartée.
+  La restitution explicite désormais les deux branches de cette alternative
+  lorsque la question les oppose, après vérification. Le juge a aussi écrit
+  « imutabilité » au lieu de « imputabilité » dans le libellé c01 ; le gate
+  strict rejette ce défaut de copie. Trace originale conservée, juge et
+  contrôle du libellé inchangés, aucune réparation manuelle.

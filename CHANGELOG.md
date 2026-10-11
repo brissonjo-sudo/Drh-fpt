@@ -5,6 +5,9 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 ## [0.7.0] — 2026-09-19 — Fiabilité mesurable et contexte progressif
 
 ### Reprise de PR18 — 2026-10-11
+- Orientation dégradée : institutions utiles nommées comme pistes à vérifier,
+  notamment tribunal administratif pour une décision administrative FPT ; aucune
+  recevabilité, compétence ou modalité certifiée sans consultation.
 - Protection fonctionnelle : assistance juridique et modalités de prise en
   charge rendues explicites, avec vérification des limites et conventions,
   sans remboursement illimité ni plafond universel inventé.
