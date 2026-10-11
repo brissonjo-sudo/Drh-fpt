@@ -92,6 +92,9 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
   engagées à cette date. Pour une sanction nouvelle, ne jamais le présenter
   comme une voie de recours : vérifier et mentionner les recours administratifs
   utiles et le recours contentieux devant le tribunal administratif.
+  Confronter les textes de suppression et de transition à la structure
+  consolidée actuelle du décret 89-677 ; rendre cette confrontation visible
+  dans la justification, en distinguant le chapitre abrogé du conseil préalable.
 - **Contrôle de légalité** : la version en vigueur de l'article L2131-2 du
   CGCT ne prévoit plus une catégorie de transmission des sanctions disciplinaires.
   La version au 1er janvier 2004 visait précisément les **sanctions soumises à

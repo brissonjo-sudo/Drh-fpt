@@ -222,6 +222,8 @@ consolidée** avant tout acte.
   suivant l'information de l'assemblée délibérante** (**art. L. 544-1, dernier
   alinéa, CGFP — à confirmer en version consolidée**).
   L'accord de l'agent ne suffit pas à écarter ce délai statutaire.
+  Rendre cette limite explicite même quand seul un départ immédiat est demandé :
+  un protocole de transition n'est pas une dispense des protections statutaires.
 - **Options de sortie du fonctionnaire déchargé** :
   - **réintégration** sur un emploi vacant correspondant à son grade
     d'origine, dans la collectivité ou l'établissement ;
@@ -238,6 +240,10 @@ consolidée** avant tout acte.
      du dossier au titre disciplinaire) tout en oubliant l'exigence de
      **motivation par l'intérêt du service**, qui reste un contrôle de
      légalité à part entière.
+     Vérifier notamment CAA Lyon, 7 mars 2024, n° 22LY01568, points 8 à 10 :
+     intérêt du service, perte de confiance et absence de sanction déguisée.
+     La communication du dossier peut néanmoins être due pour une mesure
+     prise en considération de la personne (point 6), sans régime disciplinaire.
   2. **Décharger un emploi fonctionnel dans les 6 mois** suivant le plus
      tardif de la nomination de l'agent dans l'emploi ou de la désignation de
      l'autorité territoriale — cause d'illégalité quasi automatique.

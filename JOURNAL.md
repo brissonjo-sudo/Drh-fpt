@@ -334,3 +334,14 @@ Une entrée par cas, au format ci-dessous.
   encore la vérification de la valeur du point malgré l'assiette citée.
   Consigne de conversion clarifiée pour toute réponse sur un plafond
   assis sur le traitement indiciaire, même sans montant individuel demandé.
+- Diagnostic sur 9186f7f : 18 et 22 entièrement satisfaits ; 08, 13, 21 et 29
+  comportent encore des critères partiels. Le contrôle du point apparaît
+  désormais. Une relecture indépendante identifie une contradiction entre
+  couverture systématique et réponse de seule valeur : le circuit RH imposé
+  dépasse la demande de plafonds. Couverture adaptée à l'objet demandé.
+- Les matériaux juridiques précèdent maintenant le contrat métier, sans
+  duplication, pour préserver la priorité de restitution après consultation.
+  Orientation hors périmètre distinguée d'une procédure exécutable ; contrôle
+  de structure consolidée rendu traçable. CAA Lyon 7 mars 2024 n°22LY01568
+  réellement consultée et archivée pour la nature de la fin de détachement.
+  Dossier complémentaire : 271 traces, 36 archives. Nouvelle validation requise.

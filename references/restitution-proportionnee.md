@@ -9,8 +9,12 @@ sans exposer mécaniquement chaque étape.
 Pour une question précise, donner d'abord la réponse exploitable. Ajouter la
 condition qui peut la faire varier, la source utile lorsqu'une vérification est
 requise et la réserve qui change réellement la décision. La concision retire
-exemples et répétitions, jamais les contrôles de couverture de la famille
-concernée ci-dessous. Éviter les actions sans objet dans le dossier.
+exemples et répétitions, jamais les distinctions qui déterminent la réponse
+demandée. Les contrôles de couverture ci-dessous sont adaptés à cet objet.
+Pour une valeur ou un plafond seul : champ, assiette, bornes, date et source,
+conversion et réserves utiles ; ne pas ajouter le circuit d'attribution ou
+un plan de mise en œuvre qui n'est pas demandé. Pour une procédure ou un
+régime à mettre en place : couvrir aussi les acteurs, actes et garanties.
 
 ## Arbitrage
 
@@ -60,7 +64,7 @@ Chaque chiffre, délai, compétence ou règle précis reste soumis à vérificat
 
 Ces contrôles ne sont pas des faits supposés. Écarter ceux dont l'inapplicabilité
 est établie et expliquer ceux qui conditionnent la décision. Une question
-ciblée conserve les distinctions de la famille concernée, en une phrase chacune.
+ciblée conserve les distinctions nécessaires à son objet, en une phrase chacune.
 
 ## Restitution en mode dégradé
 
@@ -100,7 +104,8 @@ Toute règle précise reste subordonnée à la consultation officielle. En mode
 dégradé, ces mêmes éléments deviennent des **contrôles à faire vérifier**,
 sans valeur exacte, compétence certifiée ou procédure exécutable.
 
-Avant d'envoyer, vérifier les points de la famille concernée :
+Avant d'envoyer, vérifier les points de la famille concernée et restituer ceux
+nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
 
 - **Avancement** : tableau, conditions statutaires, ratio fixé par l'assemblée,
   LDG et rôle actuel de la CAP. Dans une question mixte retraite, distinguer
@@ -162,8 +167,8 @@ Avant d'envoyer, vérifier les points de la famille concernée :
   employeur et texte propre, notamment pour Paris ; ne pas assimiler les
   corps parisiens aux cadres d'emplois territoriaux de droit commun.
 
-Ces points complètent la restitution proportionnée : écarter uniquement ceux
-dont l'inapplicabilité est établie. Un document local absent devient une pièce
+Ces points complètent la restitution proportionnée : conserver les contrôles
+nécessaires à l'objet demandé. Un document local absent devient une pièce
 à réclamer, pas un contrôle supprimé. Une règle non vérifiée devient une
 réserve préalable et une piste de contrôle, pas une affirmation de mémoire.
 
@@ -174,7 +179,9 @@ contrôle de couverture de chaque famille concernée. Rappeler les faits connus
 qui bornent le régime, sans redemander ces données. Développer les sigles à
 leur première occurrence. Rendre explicites statut/champ, autorité/instance,
 conditions/seuils **et leurs conséquences**, distinctions avec les régimes
-voisins, actes/garanties, pièces, sources et limites.
+voisins, sources et limites. Pour une procédure, un acte ou une mise en place,
+inclure aussi actes/garanties et pièces ; pour une simple valeur, rester sur
+champ, assiette, bornes et conversion, sans plan RH supplémentaire.
 Pour une assiette indiciaire, nommer l'indice et la valeur du point à vérifier
 à la date utile avant conversion en euros.
 Une décision individuelle suspendue conserve le cadrage général vérifié et

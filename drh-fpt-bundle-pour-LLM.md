@@ -287,6 +287,10 @@ modules nécessaires :
 Lire plusieurs modules lorsque la question les croise. En environnement ne
 permettant pas un chargement ciblé fiable, utiliser le bundle complet.
 
+Dans un contexte assemblé, lire le compagnon et les sources avant les modules
+DRH et leur contrôle de couverture final : les sources établissent la preuve,
+le contrat métier organise la réponse. Charger chaque matériau une seule fois.
+
 > **Renvois inter-branches** : une question en croise souvent plusieurs. Réflexes
 > fréquents — PSC/coût → masse salariale ; LDG et RSU → CST/dialogue social ;
 > entretien professionnel → recrutement-formation et carrière-paie ; formation
@@ -443,6 +447,12 @@ le fond** : ne pas fournir ensuite la règle détaillée, le taux, le calcul ou 
 projet d'acte que le skill vient de déclarer hors base. L'assistance peut
 uniquement expliquer la limite, identifier la branche ou la source compétente
 et proposer une méthode de vérification.
+
+Pour une petite collectivité, l'orientation peut identifier l'instance adaptée
+et le seuil qui détermine ce rattachement, si une source officielle les vérifie.
+Ce repérage ne permet pas de dérouler la procédure hors périmètre. Pour le CST,
+orienter vers le contrôle du CST placé auprès du CDG et du seuil d'un CST propre ;
+en mode dégradé, demander de vérifier ce rattachement sans certifier le seuil.
 
 ## 2. Lever les variables
 
@@ -988,8 +998,12 @@ sans exposer mécaniquement chaque étape.
 Pour une question précise, donner d'abord la réponse exploitable. Ajouter la
 condition qui peut la faire varier, la source utile lorsqu'une vérification est
 requise et la réserve qui change réellement la décision. La concision retire
-exemples et répétitions, jamais les contrôles de couverture de la famille
-concernée ci-dessous. Éviter les actions sans objet dans le dossier.
+exemples et répétitions, jamais les distinctions qui déterminent la réponse
+demandée. Les contrôles de couverture ci-dessous sont adaptés à cet objet.
+Pour une valeur ou un plafond seul : champ, assiette, bornes, date et source,
+conversion et réserves utiles ; ne pas ajouter le circuit d'attribution ou
+un plan de mise en œuvre qui n'est pas demandé. Pour une procédure ou un
+régime à mettre en place : couvrir aussi les acteurs, actes et garanties.
 
 ## Arbitrage
 
@@ -1039,7 +1053,7 @@ Chaque chiffre, délai, compétence ou règle précis reste soumis à vérificat
 
 Ces contrôles ne sont pas des faits supposés. Écarter ceux dont l'inapplicabilité
 est établie et expliquer ceux qui conditionnent la décision. Une question
-ciblée conserve les distinctions de la famille concernée, en une phrase chacune.
+ciblée conserve les distinctions nécessaires à son objet, en une phrase chacune.
 
 ## Restitution en mode dégradé
 
@@ -1079,7 +1093,8 @@ Toute règle précise reste subordonnée à la consultation officielle. En mode
 dégradé, ces mêmes éléments deviennent des **contrôles à faire vérifier**,
 sans valeur exacte, compétence certifiée ou procédure exécutable.
 
-Avant d'envoyer, vérifier les points de la famille concernée :
+Avant d'envoyer, vérifier les points de la famille concernée et restituer ceux
+nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
 
 - **Avancement** : tableau, conditions statutaires, ratio fixé par l'assemblée,
   LDG et rôle actuel de la CAP. Dans une question mixte retraite, distinguer
@@ -1141,8 +1156,8 @@ Avant d'envoyer, vérifier les points de la famille concernée :
   employeur et texte propre, notamment pour Paris ; ne pas assimiler les
   corps parisiens aux cadres d'emplois territoriaux de droit commun.
 
-Ces points complètent la restitution proportionnée : écarter uniquement ceux
-dont l'inapplicabilité est établie. Un document local absent devient une pièce
+Ces points complètent la restitution proportionnée : conserver les contrôles
+nécessaires à l'objet demandé. Un document local absent devient une pièce
 à réclamer, pas un contrôle supprimé. Une règle non vérifiée devient une
 réserve préalable et une piste de contrôle, pas une affirmation de mémoire.
 
@@ -1153,7 +1168,9 @@ contrôle de couverture de chaque famille concernée. Rappeler les faits connus
 qui bornent le régime, sans redemander ces données. Développer les sigles à
 leur première occurrence. Rendre explicites statut/champ, autorité/instance,
 conditions/seuils **et leurs conséquences**, distinctions avec les régimes
-voisins, actes/garanties, pièces, sources et limites.
+voisins, sources et limites. Pour une procédure, un acte ou une mise en place,
+inclure aussi actes/garanties et pièces ; pour une simple valeur, rester sur
+champ, assiette, bornes et conversion, sans plan RH supplémentaire.
 Pour une assiette indiciaire, nommer l'indice et la valeur du point à vérifier
 à la date utile avant conversion en euros.
 Une décision individuelle suspendue conserve le cadrage général vérifié et
@@ -1791,6 +1808,9 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
   engagées à cette date. Pour une sanction nouvelle, ne jamais le présenter
   comme une voie de recours : vérifier et mentionner les recours administratifs
   utiles et le recours contentieux devant le tribunal administratif.
+  Confronter les textes de suppression et de transition à la structure
+  consolidée actuelle du décret 89-677 ; rendre cette confrontation visible
+  dans la justification, en distinguant le chapitre abrogé du conseil préalable.
 - **Contrôle de légalité** : la version en vigueur de l'article L2131-2 du
   CGCT ne prévoit plus une catégorie de transmission des sanctions disciplinaires.
   La version au 1er janvier 2004 visait précisément les **sanctions soumises à
@@ -2143,6 +2163,8 @@ consolidée** avant tout acte.
   suivant l'information de l'assemblée délibérante** (**art. L. 544-1, dernier
   alinéa, CGFP — à confirmer en version consolidée**).
   L'accord de l'agent ne suffit pas à écarter ce délai statutaire.
+  Rendre cette limite explicite même quand seul un départ immédiat est demandé :
+  un protocole de transition n'est pas une dispense des protections statutaires.
 - **Options de sortie du fonctionnaire déchargé** :
   - **réintégration** sur un emploi vacant correspondant à son grade
     d'origine, dans la collectivité ou l'établissement ;
@@ -2159,6 +2181,10 @@ consolidée** avant tout acte.
      du dossier au titre disciplinaire) tout en oubliant l'exigence de
      **motivation par l'intérêt du service**, qui reste un contrôle de
      légalité à part entière.
+     Vérifier notamment CAA Lyon, 7 mars 2024, n° 22LY01568, points 8 à 10 :
+     intérêt du service, perte de confiance et absence de sanction déguisée.
+     La communication du dossier peut néanmoins être due pour une mesure
+     prise en considération de la personne (point 6), sans régime disciplinaire.
   2. **Décharger un emploi fonctionnel dans les 6 mois** suivant le plus
      tardif de la nomination de l'agent dans l'emploi ou de la désignation de
      l'autorité territoriale — cause d'illégalité quasi automatique.

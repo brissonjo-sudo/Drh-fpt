@@ -127,7 +127,7 @@ def build_system_context(
     evidence_mode: str = "rules",
     evidence: list[dict] | None = None,
 ) -> str:
-    parts = ["<!-- SKILL MÉTIER : DRH FPT -->\n", drh_context]
+    parts = []
     if mode == "integration":
         if legal_bundle is None:
             raise ValueError("Le compagnon juridique manque en mode integration")
@@ -158,6 +158,9 @@ def build_system_context(
             "doit correspondre à une trace de consultation officielle fournie à la campagne.\n"
         )
         parts.append(live_sources.source_context(evidence or []))
+    # Les matériaux de vérification précèdent le contrat de restitution :
+    # aucune duplication, aucun attendu de cas dans le contexte répondant.
+    parts.extend(("\n\n<!-- SKILL MÉTIER : DRH FPT -->\n",drh_context))
     reminder_text=(ROOT/'references/restitution-proportionnee.md').read_text(encoding='utf8')
     marker='## Rappel final de restitution'
     if marker not in reminder_text:

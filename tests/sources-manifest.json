@@ -656,6 +656,14 @@
       "cases": [
         "29-nonregression-discipline-recours"
       ]
+    },
+    {
+      "key": "emploi-fonctionnel-lyon-2024",
+      "kind": "decision",
+      "text_id": "CETATEXT000049336214",
+      "cases": [
+        "21"
+      ]
     }
   ]
 }

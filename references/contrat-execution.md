@@ -41,6 +41,12 @@ projet d'acte que le skill vient de déclarer hors base. L'assistance peut
 uniquement expliquer la limite, identifier la branche ou la source compétente
 et proposer une méthode de vérification.
 
+Pour une petite collectivité, l'orientation peut identifier l'instance adaptée
+et le seuil qui détermine ce rattachement, si une source officielle les vérifie.
+Ce repérage ne permet pas de dérouler la procédure hors périmètre. Pour le CST,
+orienter vers le contrôle du CST placé auprès du CDG et du seuil d'un CST propre ;
+en mode dégradé, demander de vérifier ce rattachement sans certifier le seuil.
+
 ## 2. Lever les variables
 
 Classer explicitement les informations utiles dans trois catégories :

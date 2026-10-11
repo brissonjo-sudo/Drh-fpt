@@ -134,6 +134,12 @@ class HarnessTests(unittest.TestCase):
         self.assertEqual(integrated.split(marker)[-1],degraded.split(marker)[-1])
         self.assertNotIn('01-c',integrated)
 
+    def test_business_contract_follows_legal_material_without_duplication(self):
+        text=RUN_TESTS.build_system_context('DRH-UNIQUE','LEGAL-UNIQUE','integration','SOURCE-UNIQUE','snapshot')
+        self.assertEqual(text.count('DRH-UNIQUE'),1)
+        self.assertGreater(text.index('DRH-UNIQUE'),text.index('LEGAL-UNIQUE'))
+        self.assertGreater(text.index('DRH-UNIQUE'),text.index('SOURCE-UNIQUE'))
+
     def test_live_evidence_requires_complete_trace_for_required_cases(self):
         cases = [{"id": "a", "type": "standard"}, {"id": "b", "type": "echec_attendu"}]
         problems = RUN_TESTS.validate_evidence([], cases, "integration", "live")
