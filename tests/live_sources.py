@@ -256,7 +256,9 @@ def structure_text(raw: dict) -> str:
                 ' | '+optional_date(section.get('dateDebut'))+' → '+optional_date(section.get('dateFin')))
             walk(section,depth+1)
         for article in node.get('articles',[]):
-            lines.append('  '*depth+'Article '+article['num']+' | '+article['etat']+
+            number=article.get('num')
+            if number is None:number='numéro non renseigné ('+str(article.get('id','identifiant non renseigné'))+')'
+            lines.append('  '*depth+'Article '+str(number)+' | '+article['etat']+
                 ' | '+optional_date(article.get('dateDebut'))+' → '+optional_date(article.get('dateFin')))
     walk(raw)
     return '\n'.join(lines)

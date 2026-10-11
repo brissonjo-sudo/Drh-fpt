@@ -11,9 +11,9 @@ from providers import ApiCallError
 
 MODEL='claude-sonnet-4-6'
 
-def stream(*blocks, error=False, denied=None):
+def stream(*blocks, error=False, denied=None, plugins=None, skills=None):
     events=[{'type':'system','subtype':'init','model':MODEL,'session_id':'fresh',
-             'mcp_servers':[],'plugins':[],'tools':[]}]
+             'mcp_servers':[],'plugins':plugins or [],'skills':skills or [],'tools':[]}]
     if blocks:events.append({'type':'assistant','message':{'model':MODEL,'content':list(blocks)}})
     for block in blocks:
         if block.get('type')=='tool_use':
@@ -27,6 +27,32 @@ def stream(*blocks, error=False, denied=None):
 
 
 class ClaudeCliTests(unittest.TestCase):
+    def test_cli_automatic_continuation_or_compaction_is_not_a_fresh_single_response(self):
+        for text in ['Output token limit hit. Resume directly — no apology.',
+                     'This session is being continued from a previous conversation that ran out of context.']:
+            continuation={'type':'user','message':{'content':[{'type':'text','text':text}]}}
+            with self.assertRaises(ApiCallError):
+                claude_cli.parse_stream(stream()+'\n'+json.dumps(continuation),MODEL)
+        for content in ['Continue la réponse après interruption.',{},None,[{'type':'unknown'}]]:
+            with self.assertRaises(ApiCallError):
+                claude_cli.parse_stream(stream()+'\n'+json.dumps({'type':'user','message':{'content':content}}),MODEL)
+    def test_native_skill_accepts_question_as_normal_text_arguments(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);path=root/'SKILL.md';path.write_text('skill')
+            runtime={'root':str(root),'files':{'SKILL.md':claude_cli.file_sha(path)},
+                     'skills':{'drh-eval:drh-fpt':'SKILL.md'}}
+            inputs={'skill':'drh-eval:drh-fpt','args':'Question RH territoriale'}
+            result=claude_cli.parse_stream(stream({'type':'tool_use','id':'s','name':'Skill','input':inputs}),MODEL,runtime=runtime)
+            self.assertTrue(result.usage['loaded_files'][0]['full'])
+            self.assertEqual(result.usage['tool_calls'][0]['input'],inputs)
+            for invalid in [{'skill':'external','args':'Question'},
+                            {'skill':'drh-eval:drh-fpt','args':{'file':'../secret'}}]:
+                with self.assertRaises(ApiCallError):
+                    claude_cli.parse_stream(stream({'type':'tool_use','id':'s','name':'Skill','input':invalid}),MODEL,runtime=runtime)
+    def test_native_requires_candidate_plugin_and_catalogue_before_accepting_output(self):
+        runtime={'root':'.','files':{},'skills':{},'plugin':{'name':'drh-eval'},'expected_skills':['drh-eval:drh-fpt']}
+        with self.assertRaises(ApiCallError):claude_cli.parse_stream(stream(),MODEL,runtime=runtime)
+        self.assertEqual(claude_cli.parse_stream(stream(plugins=[{'name':'drh-eval'}],skills=['drh-eval:drh-fpt']),MODEL,runtime=runtime).text,'réponse')
     def test_timeout_preserves_partial_original_stream(self):
         partial=b'{"type":"system","subtype":"init"}\n'
         failure=subprocess.TimeoutExpired('fixture',600,output=partial)

@@ -8,6 +8,13 @@ from datetime import datetime,timezone,timedelta
 
 
 class LiveSourceTests(unittest.TestCase):
+    def test_structure_preserves_an_article_with_no_reported_number(self):
+        raw={'title':'Décret CST','articles':[{'num':None,'id':'LEGIARTI-fixture','etat':'ABROGE',
+              'dateDebut':None,'dateFin':None}]}
+        text=live_sources.structure_text(raw)
+        self.assertIn('numéro non renseigné',text)
+        self.assertIn('LEGIARTI-fixture',text)
+        self.assertIn('ABROGE',text)
     def test_numeric_dates_before_1970_are_portable(self):
         instant=datetime(1962,7,11,tzinfo=timezone.utc)
         epoch=datetime(1970,1,1,tzinfo=timezone.utc)

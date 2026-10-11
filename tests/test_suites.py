@@ -43,6 +43,7 @@ class SuiteTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             root=Path(folder)
             cases=[{'id':f'A-{i:02}', 'prompt':f'Question {i}',
+                    'required_source_ids':['LEGIARTI-fixture'],
                     'attendus':[{'id':f'a{i}', 'texte':'requis'}],
                     'attendus_degraded':[{'id':f'd{i}', 'texte':'requis'}]} for i in range(12)]
             path=root/'cases.json';path.write_text(json.dumps(cases),encoding='utf8')
@@ -59,6 +60,19 @@ class SuiteTests(unittest.TestCase):
                 suites.freeze(path,{**approval,'decision':'pending'},root/'bad.json')
             with self.assertRaises(FileExistsError):
                 suites.freeze(path,approval,root/'sealed.json')
+
+    def test_source_exemption_must_be_the_explicit_boolean_false(self):
+        from unittest.mock import patch
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)
+            for flag in [None,'',0]:
+                cases=[{'id':str(i),'required_source_ids':[],'preuve_requise':flag,
+                        'attendus':[{'id':'i','texte':'critère'}],
+                        'attendus_degraded':[{'id':'d','texte':'critère'}]} for i in range(12)]
+                path=root/'cases.json';path.write_text(json.dumps(cases),encoding='utf8')
+                with patch('suites.validate_approval'):
+                    with self.assertRaisesRegex(ValueError,'exemption'):
+                        suites.freeze(path,{'runtime_commit':'a'*40},root/'invalid-seal.json')
 
     def test_launch_once_per_slot_and_exact_runtime(self):
         with tempfile.TemporaryDirectory() as folder:

@@ -2,11 +2,20 @@ import json
 import unittest
 import tempfile
 from pathlib import Path
+from unittest.mock import patch
 import campaign
 from providers import Completion
 
 
 class CampaignSafetyTests(unittest.TestCase):
+    def test_qualification_integration_requires_live_before_claim_or_calls(self):
+        with patch('campaign.suites.load_suite',return_value={'qualification':True}),\
+             patch('campaign.git_provenance',side_effect=AssertionError('précontrôle trop tardif')),\
+             patch('campaign.suites.claim_launch') as claim,patch('campaign.complete') as call:
+            with self.assertRaisesRegex(SystemExit,'live'):
+                campaign.main(['--suite','qualification-a-v1','--provider','codex',
+                               '--strict','--judge','--judge-provider','claude-cli'])
+            claim.assert_not_called();call.assert_not_called()
     def test_non_object_json_judgments_are_failures_not_crashes(self):
         for value in ([], None, 'string'):
             completion = Completion(json.dumps(value), False, {}, 'j', 1)

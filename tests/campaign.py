@@ -378,6 +378,14 @@ def validate_evidence(consultations: list[dict], cases: list[dict], mode: str, e
     missing_cases = sorted(required_ids - set(by_case))
     if missing_cases:
         problems.append("cas sans preuve de consultation : " + ", ".join(missing_cases))
+    if mode=='integration':
+        for case in cases:
+            required=case.get('required_source_ids',[])
+            if not isinstance(required,list) or any(not isinstance(x,str) or not x.strip() for x in required):
+                problems.append(case['id']+' : liste des sources requises invalide');continue
+            actual={trace.get('source_id') for trace in by_case.get(case['id'],[])}
+            missing=sorted(set(required)-actual)
+            if missing:problems.append(case['id']+' : sources requises non consultées : '+', '.join(missing))
     return problems
 
 
@@ -561,6 +569,8 @@ def main(argv: list[str] | None = None) -> int:
         raise SystemExit(str(exc)) from exc
     if suite['qualification'] and (selected or args.resume or args.judge_only):
         raise SystemExit('Qualification : sélection et relance interdites')
+    if suite['qualification'] and args.mode=='integration' and args.evidence_mode!='live':
+        raise SystemExit('Qualification intégration : evidence_mode=live requis avant réservation et génération')
     if suite['qualification']:
         state=git_provenance(ROOT)
         if state.get('dirty') is not False or (not suite.get('reserve_for') and state.get('commit')!=suite['runtime_commit']):
@@ -614,7 +624,8 @@ def main(argv: list[str] | None = None) -> int:
         if args.execution_profile=='claude-native':
             import native_runtime
             with tempfile.TemporaryDirectory(prefix='drh-native-preflight-') as temporary:
-                runtime=native_runtime.stage(Path(temporary)/'project',ROOT,args.mode,case['id'],case_evidence,legal_path)
+                runtime=native_runtime.stage(Path(temporary)/'project',ROOT,args.mode,case['id'],case_evidence,legal_path,
+                    proof_required=case.get('preuve_requise',case.get('type')!='echec_attendu'))
                 native_signatures[case['id']]=native_runtime.signature(runtime)
     base_provenance = {
         'suite': args.suite,
@@ -719,7 +730,8 @@ def main(argv: list[str] | None = None) -> int:
                 if args.execution_profile=='claude-native':
                     import claude_cli
                     with tempfile.TemporaryDirectory(prefix='drh-native-case-') as temporary:
-                        runtime=native_runtime.stage(Path(temporary)/'project',ROOT,args.mode,case_id,case_evidence,legal_path)
+                        runtime=native_runtime.stage(Path(temporary)/'project',ROOT,args.mode,case_id,case_evidence,legal_path,
+                            proof_required=case.get('preuve_requise',case.get('type')!='echec_attendu'))
                         if native_runtime.signature(runtime)!=native_signatures[case_id]:
                             raise ApiCallError('Runtime natif différent du précontrôle')
                         archive_directory=campaign/'runtime'/case_id

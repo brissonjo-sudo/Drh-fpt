@@ -15,6 +15,9 @@ Chaque réponse vient d’une session indépendante puis d’un modèle juge dis
 Les jeux neufs sont écrits par Claude, relus par Codex puis soumis à **Jo**.
 Le gel est refusé sans décision humaine explicite sur les fichiers concrets,
 leurs empreintes et les quatre profils (modèles, efforts, versions CLI).
+Chaque cas déclare les identifiants officiels de ses sources indispensables :
+les traces doivent couvrir cette liste entière avant génération. Un cas
+purement organisationnel peut avoir une exemption explicite revue par Jo.
 Les seals restent locaux pendant les campagnes pour conserver un commit testé
 propre ; ils seront inclus dans les preuves publiées. Ils prouvent une
 traçabilité locale, pas une signature d'identité humaine ou fournisseur.
@@ -42,6 +45,12 @@ désactivés, aucun Bash, aucune écriture, aucun fallback ni reprise de session
 Une connexion expirée ou disposant de moins d'une heure est refusée avant
 copie et appel : reconnecter Claude par son flux normal. L'adaptateur n'écrit
 jamais dans le magasin de connexion permanent.
+Le corpus est déclaré comme plugin local `drh-eval` via `--plugin-dir` : le
+mode `--restricted` ignore la découverte liée aux réglages du projet. Le
+catalogue doit contenir les skills candidats sous leur nom complet. Le prompt
+demande leur usage sans préassembler leur contenu ; les invocations Skill et
+lectures Read sont conservées. Ce montage est contrôlé et éphémère, sans
+installation du plugin dans la configuration de l'utilisateur.
 Le répondant reçoit la question et l'emplacement des documents : pas de bundle,
 de rappel final ajouté, de critères ni de réponses antérieures.
 
@@ -50,6 +59,11 @@ du runtime et les fichiers nécessaires réellement lus. Le corpus préparé et
 les fichiers lus sont deux mesures différentes. Le juge Claude utilise une
 session séparée, sans outils. Les traces vérifient la cohérence des preuves,
 **pas l'authenticité cryptographique des appels fournisseur**.
+Une continuation automatique après limite de sortie ou une compaction du CLI
+est refusée, même si le dernier événement annonce un succès. La limite de
+tokens passée au CLI reste indicative. Un cas organisationnel explicitement
+exempté ne reçoit pas de fausse source et n'exige pas de lire un fichier
+officiel absent ; les lectures du noyau DRH restent obligatoires.
 
 Ce test natif fournit des documents préconsultés. Il **ne valide pas** la
 recherche autonome via le serveur juridique en fonctionnement nominal.

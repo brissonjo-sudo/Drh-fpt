@@ -6,6 +6,7 @@ import importlib.util
 import json
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -38,6 +39,15 @@ def successful_result(criteria):
 
 
 class HarnessTests(unittest.TestCase):
+    def test_qualification_evidence_covers_every_frozen_required_source(self):
+        case={'id':'A-01','required_source_ids':['LEGIARTI-ONE','CETATEXT-TWO']}
+        trace={'case_id':'A-01','source_id':'LEGIARTI-ONE','source_url':'https://www.legifrance.gouv.fr/x',
+               'consulted_at':'2026-10-12T00:00:00Z','version_or_date':'2026-10-12',
+               'supporting_excerpt':'texte','conclusion_supported':'à confronter'}
+        with patch('campaign.live_sources.verify_trace',return_value=[]):
+            problems=RUN_TESTS.validate_evidence([trace],[case],'integration','live')
+            self.assertTrue(any('CETATEXT-TWO' in issue for issue in problems),problems)
+            self.assertEqual(RUN_TESTS.validate_evidence([trace,{**trace,'source_id':'CETATEXT-TWO'}],[case],'integration','live'),[])
     def setUp(self):
         self.cases = json.loads((HERE / "cas-de-test.json").read_text(encoding="utf-8"))
 

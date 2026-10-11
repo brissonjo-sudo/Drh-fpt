@@ -57,6 +57,13 @@ def compare_provenances(integration, degraded, expected_commit):
     return problems
 
 
+def native_required_files(case,mode):
+    required={'.claude/skills/drh-fpt/'+rel for rel in campaign.context_loader.files_for_case(case)}
+    if mode=='integration' and case.get('preuve_requise',case.get('type')!='echec_attendu'):
+        required|={'.claude/skills/recherche-juridique/SKILL.md','sources/official.md'}
+    return required
+
+
 def check_claude_trace(path,expected_sha,expected,model,*,judge=False,runtime=None):
     try:
         if not expected_sha or hashlib.sha256(path.read_bytes()).hexdigest()!=expected_sha:
@@ -151,8 +158,7 @@ def check_report(path, evidence_file=None, decisions=None, launch_state=None):
                 problems += [ident+' : '+issue for issue in issues]
                 if runtime and completion:
                     loaded={x['path'] for x in completion.usage['loaded_files'] if x.get('full')}
-                    required={'.claude/skills/drh-fpt/'+rel for rel in campaign.context_loader.files_for_case(c)}
-                    if p['mode']=='integration':required|={'.claude/skills/recherche-juridique/SKILL.md','sources/official.md'}
+                    required=native_required_files(c,p['mode'])
                     if required-loaded:problems.append(ident+' : fichiers nécessaires non lus entièrement : '+', '.join(sorted(required-loaded)))
             elif meta.get('provider_trace_sha256'):
                 actual=hashlib.sha256((root/(ident+'-respondant.jsonl')).read_bytes()).hexdigest()

@@ -14,6 +14,9 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
   corpus ; ils ne constituent pas une qualification sur cas neufs.
 - Suites nommées et gel humain préalable en préparation ; aucun nouveau
   résultat de qualification n'est revendiqué.
+- Chargement natif explicite du noyau avant le fond ; plugin local de test,
+  sources indispensables contrôlées avant génération et continuations
+  automatiques refusées. Les diagnostics ne valent pas qualification.
 
 ### Validation de PR18 — 2026-10-11
 - Deux campagnes strictes de 30 cas : intégration et dégradé 30/30, sur

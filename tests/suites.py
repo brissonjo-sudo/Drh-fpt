@@ -92,6 +92,13 @@ def freeze(path: Path, approval: dict, output: Path) -> dict:
     if len(cases)!=12 or len({x['id'] for x in cases})!=12:
         raise ValueError('12 cas neufs exacts requis')
     for case in cases:
+        if not isinstance(case.get('preuve_requise',True),bool):
+            raise ValueError('Toute exemption de source exige preuve_requise=false explicite')
+        required=case.get('required_source_ids')
+        if not isinstance(required,list) or any(not isinstance(x,str) or not x.strip() for x in required):
+            raise ValueError('Sources primaires requises à identifier avant gel')
+        if case.get('preuve_requise',True) and not required:
+            raise ValueError('Source requise absente ; toute exemption doit être explicite et revue')
         for field in ['attendus','attendus_degraded']:
             criteria=case.get(field)
             if not isinstance(criteria,list) or not criteria:

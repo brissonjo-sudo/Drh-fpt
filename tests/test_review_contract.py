@@ -11,6 +11,10 @@ import context_loader
 
 
 class ReviewContractTests(unittest.TestCase):
+    def test_native_loading_contract_is_visible_before_the_business_sections(self):
+        opening=self.read('SKILL.md').split('## 1. Déclenchement')[0]
+        for rel in context_loader.CORE_FILES[1:]:self.assertIn(rel,opening)
+        self.assertIn('chargement natif',opening)
     def read(self, name):
         return (ROOT / name).read_text(encoding='utf8')
 

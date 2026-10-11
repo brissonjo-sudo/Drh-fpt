@@ -28,7 +28,7 @@ def executable():
     return found or 'claude'
 
 
-def command(model,system,*,native=False,effort=None,system_file=None):
+def command(model,system,*,native=False,effort=None,system_file=None,plugin_root=None):
     args=[executable(),'--print','--verbose','--output-format','stream-json',
           '--include-hook-events',
           '--no-session-persistence','--restricted','--strict-mcp-config',
@@ -42,6 +42,7 @@ def command(model,system,*,native=False,effort=None,system_file=None):
         if system_file:args.extend(['--system-prompt-file',str(system_file)])
         else:args.extend(['--system-prompt',system or 'Réponds uniquement à la demande.'])
     if effort:args.extend(['--effort',effort])
+    if native and plugin_root:args.extend(['--plugin-dir',str(plugin_root)])
     return args
 
 
@@ -64,8 +65,18 @@ def parse_stream(raw,model,*,runtime=None,duration_ms=0):
         start,result=init[0],final[0]
         if any(x.get('type')=='error' or str(x.get('subtype','')).startswith('hook_') for x in events):
             raise ValueError('événement externe ou en erreur')
+        if any(x.get('type')=='system' and x.get('subtype')=='compact_boundary' for x in events):
+            raise ValueError('compaction automatique interdite')
         if start.get('model')!=model or not model.startswith('claude-'):raise ValueError('modèle substitué')
-        if start.get('mcp_servers') or start.get('plugins'):raise ValueError('configuration externe chargée')
+        if start.get('mcp_servers'):raise ValueError('configuration MCP externe chargée')
+        plugins=start.get('plugins') or []
+        expected_plugin=runtime.get('plugin',{}).get('name') if runtime else None
+        names=[x.get('name') if isinstance(x,dict) else x for x in plugins]
+        if expected_plugin:
+            if names!=[expected_plugin]:raise ValueError('plugin candidat absent ou plugin externe chargé')
+            if set(runtime.get('expected_skills',[]))-set(start.get('skills',[])):
+                raise ValueError('skills candidats absents du catalogue natif')
+        elif plugins:raise ValueError('configuration externe chargée')
         if result.get('subtype')!='success' or result.get('is_error') or result.get('permission_denials'):
             raise ValueError('session en erreur ou permission refusée')
         if result.get('stop_reason') in {'max_tokens','max_output_tokens'}:raise ValueError('réponse tronquée')
@@ -75,9 +86,19 @@ def parse_stream(raw,model,*,runtime=None,duration_ms=0):
         loaded={}; calls={};results={}
         for event in events:
             message=event.get('message') or {}
+            content=message.get('content',[])
+            if isinstance(content,str):content=[{'type':'text','text':content}]
+            if event.get('type')=='user' and (not isinstance(content,list) or not content or
+                any(not isinstance(b,dict) or b.get('type') not in {'text','tool_result'} for b in content)):
+                raise ValueError('message utilisateur supplémentaire mal formé')
             if event.get('type')=='assistant' and message.get('model',model)!=model:
                 raise ValueError('modèle assistant différent')
-            for block in message.get('content',[]) if isinstance(message.get('content'),list) else []:
+            for block in content if isinstance(content,list) else []:
+                if event.get('type')=='user' and block.get('type')=='text':
+                    # L'expansion native d'un Skill est attendue. Une consigne
+                    # de continuation ou un résumé ajouté par le CLI ne l'est pas.
+                    if not runtime or not str(block.get('text','')).startswith('Base directory for this skill: '):
+                        raise ValueError('continuation, résumé ou message utilisateur supplémentaire')
                 if block.get('type')=='tool_result':
                     if block.get('is_error'):raise ValueError('lecture en erreur')
                     results[block.get('tool_use_id')]=block
@@ -106,7 +127,10 @@ def parse_stream(raw,model,*,runtime=None,duration_ms=0):
                 else:
                     skill=inputs.get('skill','').lstrip('/')
                     rel=runtime.get('skills',{}).get(skill)
-                    if not rel or inputs.get('args'):raise ValueError('skill externe ou arguments inattendus')
+                    # Skill transmet normalement la question en argument texte.
+                    # Cela n'ajoute ni outil ni surface de lecture au runtime.
+                    if not rel or not isinstance(inputs.get('args',''),str):
+                        raise ValueError('skill externe ou arguments mal formés')
                     path,_=confined_path(rel,runtime)
                     if file_sha(path)!=runtime['files'][rel]:raise ValueError('skill altéré')
                     loaded[rel]={'path':rel,'sha256':runtime['files'][rel],'tool':'Skill','full':True}
@@ -158,7 +182,8 @@ def complete_cli(model,system,user,max_tokens,effort=None,*,runtime=None):
                 system_file=Path(config)/'system-prompt.txt'
                 system_file.write_text(system or 'Réponds uniquement à la demande.',encoding='utf8')
             try:
-                response=subprocess.run(command(model,'',native=bool(runtime),effort=effort,system_file=system_file),
+                response=subprocess.run(command(model,'',native=bool(runtime),effort=effort,system_file=system_file,
+                    plugin_root=runtime['root'] if runtime else None),
                     cwd=cwd,env=env,input=prompt,capture_output=True,text=True,
                     encoding='utf8',errors='strict',timeout=1800 if max_tokens>4000 else 600,check=False)
             except subprocess.TimeoutExpired as exc:

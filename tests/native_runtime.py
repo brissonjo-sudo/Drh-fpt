@@ -32,10 +32,11 @@ def copy_skill(source: Path,target: Path):
 
 
 def stage(root: Path,drh: Path,mode: str,case_id: str,evidence: list,
-          companion: Path|None=None) -> dict:
+          companion: Path|None=None,*,proof_required: bool=True) -> dict:
     if mode not in {'integration','degraded'}:raise ValueError('Mode invalide')
     if any(x.get('case_id')!=case_id for x in evidence):raise ValueError('Sources d’un autre cas')
-    if mode=='integration' and (not companion or not evidence):raise ValueError('Compagnon et sources requis')
+    if mode=='integration' and (not companion or (proof_required and not evidence)):
+        raise ValueError('Compagnon et sources requis sauf exemption explicite')
     if mode=='degraded' and (companion or evidence):raise ValueError('Dégradé sans compagnon ni sources')
     root.mkdir(parents=True,exist_ok=False)
     skills={'drh-fpt':'.claude/skills/drh-fpt/SKILL.md'}
@@ -43,17 +44,29 @@ def stage(root: Path,drh: Path,mode: str,case_id: str,evidence: list,
     if mode=='integration':
         copy_skill(companion,root/'.claude/skills/recherche-juridique')
         skills['recherche-juridique']='.claude/skills/recherche-juridique/SKILL.md'
-        (root/'sources').mkdir()
-        (root/'sources/official.md').write_text(live_sources.source_context(evidence),encoding='utf8')
+        if evidence:
+            (root/'sources').mkdir()
+            (root/'sources/official.md').write_text(live_sources.source_context(evidence),encoding='utf8')
+    # --restricted ignore les sources de réglages projet, donc leur découverte
+    # de skills. Un plugin local explicitement fourni est une voie native
+    # documentée, sans ajouter de répertoire extérieur ni activer de réglages.
+    (root/'.claude-plugin').mkdir()
+    manifest={'name':'drh-eval','version':'0.7.0','skills':['./.claude/skills/']}
+    (root/'.claude-plugin/plugin.json').write_text(json.dumps(manifest,indent=2),encoding='utf8')
+    namespaced={f'drh-eval:{name}':rel for name,rel in skills.items()}
+    skills.update(namespaced)
     files={p.relative_to(root).as_posix():file_sha(p) for p in sorted(root.rglob('*')) if p.is_file()}
     return {'schema_version':1,'profile':'claude-native','root':str(root.resolve()),
-            'mode':mode,'case_id':case_id,'files':files,'skills':skills}
+            'mode':mode,'case_id':case_id,'files':files,'skills':skills,
+            'plugin':{'name':'drh-eval','relative_root':'.'},'expected_skills':list(namespaced)}
 
 
 def prompt(case: dict,mode: str) -> str:
-    instruction='/drh-fpt\n'
+    instruction='Utilise le skill drh-eval:drh-fpt pour répondre à la question suivante.\n'
     if mode=='integration':
-        instruction+='Le compagnon recherche-juridique est installé. Les documents officiels de cette réponse sont dans sources/official.md ; consulte-les.\n'
+        instruction+='Le compagnon drh-eval:recherche-juridique est installé.\n'
+        if case.get('preuve_requise',case.get('type')!='echec_attendu'):
+            instruction+='Les documents officiels de cette réponse sont dans sources/official.md ; consulte-les.\n'
     else:
         instruction+='Le compagnon recherche-juridique est indisponible pour cette réponse.\n'
     return instruction+'\n'+case['prompt']

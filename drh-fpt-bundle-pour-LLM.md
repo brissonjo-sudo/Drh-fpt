@@ -93,6 +93,20 @@ metadata:
 
 ---
 
+## 0. Chargement obligatoire
+
+Pour une question dans le périmètre du skill, lire avant l'analyse du fond :
+
+1. `references/contrat-execution.md` : qualification et variables bloquantes ;
+2. `references/socle-sources-verification.md` : vérification et abstention ;
+3. `references/parametres-collectivite.md` : contexte institutionnel.
+
+Lire ensuite le routeur de la branche et les modules nécessaires (§7). Avant
+de livrer la réponse, appliquer `references/restitution-proportionnee.md`.
+En **chargement natif**, l'invocation du skill ne charge pas automatiquement
+ces références : les ouvrir effectivement. Si leur texte est déjà présent
+dans le contexte assemblé, l'utiliser sans le charger une seconde fois.
+
 ## 1. Déclenchement
 
 Activer ce skill dès que l'utilisateur traite un sujet RH territorial :
