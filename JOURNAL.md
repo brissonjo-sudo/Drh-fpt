@@ -359,3 +359,9 @@ Une entrée par cas, au format ci-dessous.
   du 7 août 2019 ; le module et le critère 29-c02 étaient trop restrictifs.
   Correction corroborée par relecture indépendante. L'anomalie « 2009 » de
   l'article 31 II du décret 2020-1533 est conservée et explicitement qualifiée.
+- Quatrième série : le cas de grève écarte le trentième sans nommer son
+  régime d'origine ; le mode dégradé reprend l'acte mais omet l'employeur
+  communal connu. Restitution clarifiée pour identifier le régime voisin
+  écarté et résumer les faits établis, sans nouvelle affirmation en mode dégradé.
+  La collecte d'un texte de 1962 révèle une limite Windows des timestamps
+  négatifs : conversion arithmétique UTC avec test de régression.

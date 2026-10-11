@@ -8,6 +8,11 @@ from datetime import datetime,timezone,timedelta
 
 
 class LiveSourceTests(unittest.TestCase):
+    def test_numeric_dates_before_1970_are_portable(self):
+        instant=datetime(1962,7,11,tzinfo=timezone.utc)
+        epoch=datetime(1970,1,1,tzinfo=timezone.utc)
+        self.assertEqual(live_sources.date_value((instant-epoch).total_seconds()*1000),instant)
+
     def test_structure_preserves_unreported_section_dates_without_inventing_them(self):
         raw={'title':'Décret','sections':[{'title':'Chapitre abrogé','etat':'ABROGE',
             'dateDebut':None,'dateFin':None}]}

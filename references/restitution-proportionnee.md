@@ -77,7 +77,10 @@ une compétence certaine, un seuil ou une procédure exécutable non vérifiés.
 
 Livrer un dossier de préparation : faits connus, variables manquantes,
 pièces et sources officielles à consulter, responsable du contrôle et niveau
-de confiance. Identifier les distinctions métier utiles comme contrôles,
+de confiance. Ouvrir ce dossier par une brève rubrique **Faits connus** :
+employeur, statut, objet de l'acte et dates ou durées explicitement fournis.
+Ne pas compléter un fait absent ni redemander un fait établi. Identifier les
+distinctions métier utiles comme contrôles,
 sans certifier leur résultat. Les références numérotées éventuellement citées
 sont explicitement à confirmer. Ne produire ni acte engageant ni notification
 de recours prête à envoyer. Pour une valeur demandée « aujourd'hui », utiliser
@@ -186,6 +189,9 @@ conditions/seuils **et leurs conséquences**, distinctions avec les régimes
 voisins, sources et limites. Pour une procédure, un acte ou une mise en place,
 inclure aussi actes/garanties et pièces ; pour une simple valeur, rester sur
 champ, assiette, bornes et conversion, sans plan RH supplémentaire.
+Lorsqu'une règle d'un régime voisin est écartée, nommer ce régime et la
+distinction pertinente si elle est vérifiée ; un simple « pas applicable »
+ne suffit pas à prévenir la confusion.
 Pour une assiette indiciaire, nommer l'indice et la valeur du point à vérifier
 à la date utile avant conversion en euros.
 Une décision individuelle suspendue conserve le cadrage général vérifié et

@@ -14,6 +14,10 @@ journée de bureau. Confirmer cycle, heures non faites et assiette avant paie.
 CE 27 avril 1994, n° 146119, traite notamment du refus de tâches alors que
 toutes les heures sont accomplies ; il ne suffit pas à vérifier la formule
 d'une grève partielle. Aucune liquidation ferme sans source applicable.
+Pour nommer le régime voisin écarté, vérifier CGFP L711-3 (agents de l'État)
+et l'article 1 du décret 62-765 (trentième indivisible). Cette comparaison
+documente l'erreur de transposition ; elle ne permet pas de traiter un dossier
+individuel de la fonction publique de l'État hors périmètre du skill.
 
 **Temps de travail**
 - **Durée annuelle de référence** : **1 607 heures** (base légale, hors

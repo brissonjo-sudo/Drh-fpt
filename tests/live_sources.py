@@ -51,7 +51,9 @@ def official_page_text(value: str) -> str:
 
 def date_value(value) -> datetime:
     if isinstance(value, (int, float)):
-        return datetime.fromtimestamp(value / 1000, timezone.utc)
+        # Les CRT Windows refusent certains timestamps négatifs ; l'époque
+        # plus un timedelta conserve les dates historiques en UTC.
+        return datetime(1970,1,1,tzinfo=timezone.utc)+timedelta(milliseconds=value)
     return datetime.fromisoformat(str(value).replace('Z', '+00:00')).replace(tzinfo=timezone.utc)
 
 
