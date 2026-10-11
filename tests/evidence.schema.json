@@ -33,6 +33,7 @@
           "supporting_excerpt": {"type": "string", "minLength": 1},
           "conclusion_supported": {"type": "string", "minLength": 1},
           "source_title": {"type": "string"},
+          "article_number": {"type": "string", "minLength": 1},
           "kind": {"enum": ["decision", "jorf", "official_page", "consolidated_structure"]},
           "excerpt_extractor": {"enum": ["visible-html-v1"]},
           "reference_date": {"type": "string", "format": "date"},

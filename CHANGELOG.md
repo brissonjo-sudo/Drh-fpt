@@ -5,6 +5,14 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 ## [0.7.0] — 2026-09-19 — Fiabilité mesurable et contexte progressif
 
 ### Reprise de PR18 — 2026-10-11
+- Références officielles : numéro d’article affiché et contrôlé contre
+  l’archive brute lorsqu’il est fourni ; compatibilité des anciens paquets.
+  Trois tests de vérification supplémentaires.
+- Portée indemnitaire : distinguer plafonds seuls et mise en place dans
+  chaque contrôle de couverture ; versements/sauvegarde exclus du premier
+  format s’ils ne changent pas la borne demandée.
+- Communication RH : distinguer explicitement message d’information et
+  acte adopté, sans assimiler toutes les notes de service à ce message.
 - Dégradé : distinguer limites du dossier et règles juridiques négatives ;
   conditions et effets restent des contrôles à vérifier, sans affirmation
   ferme dissimulée dans une formulation prudente.

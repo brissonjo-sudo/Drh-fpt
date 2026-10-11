@@ -455,3 +455,39 @@ Une entrée par cas, au format ci-dessous.
   réserve sur les autres exceptions de saisine omise. La restitution ajoute
   ce contrôle sans inventer de dispense ni de cas réglementaire précis.
 - Critères, juge, sources et gates inchangés ; nouvelle paire requise.
+
+### 2026-10-11 — Dixième série et conflit de portée
+- Résultat sur 5f8a531 : 27/30 integration et 29/30 degraded.
+  Traces conservées sans modification.
+- Intégration08 : versements/sauvegarde ajoutés à une demande de plafonds.
+  Relecture confirme un conflit : famille finale exigeait des éléments de
+  mise en place sans condition malgré le format ciblé défini en ouverture.
+  Tableau et famille sont scindés selon l’objet, sans supprimer les
+  transitions qui changent réellement une borne ni le circuit de mise en place.
+- Intégration06 : message d’accompagnement non explicitement distingué
+  de l’acte adopté. Contrôle final communication ajouté, déjà fondé dans
+  la fiche et le tableau ; aucune assimilation de toute note de service.
+- La phrase08 sur le taux individuel suit littéralement l’article3 fourni
+  du décret2024-614 ; aucune erreur de droit confirmée à son sujet.
+- Critères, juge, sources et gates inchangés ; nouvelle paire requise.
+
+- Dégradé19 : la base indemnitaire est évoquée mais les pièces de
+  rémunération ne sont pas collectées. Référence de paie/bulletins et
+  paramètres sont rendus explicites, sans montant ni formule certifiés.
+- Intégration07 : lien primaire exact fourni pour le fondement CGFP, mais
+  numéro L714-13 non rendu lisible. Relecture confirme le fondement dans
+  l’archive ; le reproche formel du juge est discutable, pas une source
+  manquante. Les métadonnées doivent conserver le numéro officiel du raw
+  sans le déduire d’un identifiant opaque ni modifier le paquet ancien.
+
+- Métadonnées enrichies dans un nouveau paquet `sources-round8` : 272
+  numéros d’articles extraits des archives officielles originales, parmi
+  les mêmes 288 traces et 39 archives brutes de `sources-round7`.
+  Dates de consultation et octets bruts sont conservés : aucune nouvelle
+  consultation n’est revendiquée. Le contexte affiche désormais ces numéros.
+- Le numéro reste facultatif pour les anciens paquets ; lorsqu’il est présent,
+  le contrôle impose son égalité avec la source brute et refuse son usage
+  pour une trace non article. Trois tests ajoutés ont échoué avant la
+  correction, puis les 56 tests déterministes ont réussi.
+  Les critères, le juge et les seuils de réussite restent inchangés ; la
+  vérification de l’intégrité des sources est renforcée.

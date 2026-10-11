@@ -102,6 +102,7 @@ def archive_consultation(root: Path, source_key: str, endpoint: str, request: di
     return [{
         'case_id': case_id, 'source_url': 'https://www.legifrance.gouv.fr/codes/article_lc/' + a['id'],
         'source_id': a['id'], 'consulted_at': at, 'reference_date': reference_date,
+        'article_number': str(a['num']),
         'version_or_date': f"{a['start']} ≤ {reference_date} < {a['end']}",
         'supporting_excerpt': a['text'], 'conclusion_supported': 'Règle à analyser dans son champ et ses conditions',
         'source_title': raw.get('title') or raw.get('titre') or source_key,
@@ -146,6 +147,12 @@ def verify_trace(trace: dict, root: Path, *, max_age_hours: int = 24, as_of: dat
         if hashlib.sha256(data).hexdigest() != trace.get('raw_response_sha256'):
             raise ValueError('empreinte de l’archive différente')
         raw = decode_archive(data)
+        if 'article_number' in trace and (
+            trace.get('kind') not in (None, 'jorf')
+            or not isinstance(trace['article_number'], str)
+            or not trace['article_number'].strip()
+        ):
+            raise ValueError('numéro d’article invalide ou présent sur une trace non article')
         if trace.get('kind') == 'official_page':
             if raw.get('url') != url or raw.get('status') != 200 or trace.get('source_id') != url:
                 raise ValueError('archive de page officielle incohérente')
@@ -164,6 +171,8 @@ def verify_trace(trace: dict, root: Path, *, max_age_hours: int = 24, as_of: dat
             if trace.get('endpoint') != '/consult/jorf' or trace.get('request') != {'textCid': raw.get('cid')}:
                 raise ValueError('requête de publication incohérente')
             a = next(a for a in all_articles(raw) if a.get('id') == trace.get('source_id'))
+            if 'article_number' in trace and trace['article_number'] != str(a.get('num', '')):
+                raise ValueError('numéro d’article différent de la publication officielle')
             if trace.get('supporting_excerpt') != plain_text(a.get('content') or a.get('texte') or ''):
                 raise ValueError('extrait différent de la publication officielle')
             published = date_value(raw['dateParution']).date().isoformat()
@@ -207,6 +216,8 @@ def verify_trace(trace: dict, root: Path, *, max_age_hours: int = 24, as_of: dat
         if not candidates or any(c != candidates[0] for c in candidates):
             raise ValueError('identifiant officiel absent ou ambigu dans l’archive')
         a = extract_articles({'articles': [candidates[0]]}, [candidates[0]['num']], trace['reference_date'])[0]
+        if 'article_number' in trace and trace['article_number'] != str(a['num']):
+            raise ValueError('numéro d’article différent de la source officielle')
         if trace.get('supporting_excerpt') != a['text']:
             raise ValueError('extrait différent de la source officielle')
         expected_version = f"{a['start']} ≤ {trace['reference_date']} < {a['end']}"
@@ -228,7 +239,8 @@ def source_context(traces: list[dict]) -> str:
         'Vérifie leur champ, les renvois et la date avant de conclure ; '
         'signale les points que ce dossier ne permet pas de vérifier.\n']
     for trace in traces:
-        chunks.append(f"\n{trace.get('source_title', '')} — {trace['source_url']}\n"
+        article_label = f" — Article {trace['article_number']}" if trace.get('article_number') else ''
+        chunks.append(f"\n{trace.get('source_title', '')}{article_label} — {trace['source_url']}\n"
                       f"Version : {trace['version_or_date']} ; consulté : {trace['consulted_at']}\n"
                       f"{trace['supporting_excerpt']}\n")
     return ''.join(chunks)
@@ -330,6 +342,7 @@ def collect(manifest: dict, legal_skill: Path, output: Path) -> None:
                         'endpoint':endpoint,'request':request,'raw_response_file':archive.relative_to(output).as_posix(),
                         'raw_response_sha256':hashlib.sha256(archive.read_bytes()).hexdigest()})
                     if kind=='official_page':evidence[-1]['excerpt_extractor']='visible-html-v1'
+                    if kind=='jorf':evidence[-1]['article_number']=str(a['num'])
             print(f"Consulté : {source['key']} ({kind})",flush=True)
             (output/'evidence.json').write_text(json.dumps({'consultations':evidence},ensure_ascii=False,indent=2),encoding='utf-8')
             continue

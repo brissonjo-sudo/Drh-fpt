@@ -55,7 +55,7 @@ Chaque chiffre, délai, compétence ou règle précis reste soumis à vérificat
 | LDG | Compétence de l'autorité ou du CDG selon l'objet et l'affiliation, stratégie pluriannuelle et RSU, avis du CST et rôle distinct de la CAP, révision et mise à disposition des agents. |
 | Masse salariale | Périmètre, période, effectifs, coût actuel et projeté, données manquantes à collecter ; séparer les données établies des hypothèses et signaler les paramètres volatils. |
 | Communication RH | Public visé, document juridique adopté et date, consultations, canal accessible, diffusion et données personnelles ; une note d'information ne remplace pas l'acte juridique. |
-| Régime indemnitaire | Cadre d'emplois, bénéficiaires, texte propre et exclusions, parts et plafonds, sauvegarde et transitions ; CST, délibération puis décisions individuelles ; conversion en euros selon les données de paie vérifiées. |
+| Régime indemnitaire | Valeur/plafond seul : champ, parts, assiette, bornes, date/source et conversion. Mise en place : bénéficiaires et exclusions, sauvegarde/transitions, CST, délibération puis décisions individuelles. Ajouter une transition à une valeur seule uniquement si elle change la borne demandée. |
 | Discipline | Statut et échelle propre, faits et date de connaissance, dossier intégral, défense et droit de se taire, instance préalable, proportionnalité, motivation, notification, recours actuels et transmission. |
 | Protection fonctionnelle | Statut, lien avec le service, faits et faute personnelle détachable éventuelle, demande et pièces ; protection, assistance, réparation, décision et refus motivé avec recours. |
 | Fin de fonctions | Régime et motif, dates, dossier, procédure et instance, indemnité propre, notification et recours ; distinguer les règles du titulaire et du contractuel. |
@@ -141,12 +141,16 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   plénière pour
   l'imputabilité et la distinction avec la formation restreinte, sous réserve
   de vérification. Réclamer les pièces de l'accident et de sa contestation.
-- **Régime indemnitaire** : donner le fondement légal et le décret propre,
-  les exclusions de régime, les parts, la sauvegarde, les instances et actes
-  successifs. Si un régime remplace des décrets antérieurs, identifier les
-  textes abrogés et distinguer entrée en vigueur et abrogation. Tout plafond
-  en pourcentage appelle une phrase sur l'assiette et les paramètres à
-  vérifier pour sa conversion en euros, notamment le point d'indice.
+- **Régime indemnitaire** : pour une **valeur ou un plafond seul**, donner
+  champ, parts, assiette, bornes, date et source. Écarter les modalités de
+  versement, la sauvegarde individuelle et le circuit de mise en place qui
+  ne changent pas la borne demandée ; ne pas les ajouter parce que la source
+  les contient. Pour un **régime à instaurer ou une décision à préparer**,
+  couvrir aussi fondement et décret propre, exclusions, sauvegarde/transitions,
+  instances et actes successifs ; si des textes sont remplacés, identifier
+  les textes remplacés ou abrogés, puis distinguer entrée en vigueur et
+  abrogation. Tout plafond en pourcentage appelle
+  l'assiette et les paramètres de conversion en euros, notamment le point.
   Si l'assiette est le traitement indiciaire, nommer l'indice et la valeur
   du point à vérifier à la date utile, même sans conversion demandée.
 - **Discipline** : droits au dossier intégral, au conseil de son choix et à
@@ -190,6 +194,10 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   période d'essai ; distinguer ces exceptions du changement d'ordre de
   consultation lié à certaines situations syndicales. Ne pas déduire une
   dispense du seul changement d'ordre ; faire vérifier séparément les deux.
+  Réunir aussi les pièces du calcul : rémunération de référence et bulletins,
+  contrats/ancienneté, quotités et congés utiles ; contrôler base, exclusions,
+  réduction propre au motif et préavis. En mode dégradé, demander ces données
+  et leurs sources sans chiffrer ni certifier la formule.
   Faire apparaître le contrôle de la réduction propre à l'insuffisance et du
   texte d'indemnité du titulaire ; une abstention sur le montant individuel
   ne doit pas effacer la règle de calcul officiellement vérifiée.
@@ -214,6 +222,11 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   immédiat, ces alternatives bornent la suite légale possible. Comparer les
   dates de nomination et de désignation de l'autorité et énoncer que la
   protection repart de la plus tardive, avant d'appliquer la règle au dossier.
+- **Communication RH** : identifier le texte adopté, sa version et l'avis
+  préalable requis, puis une diffusion accessible et sans données personnelles
+  inutiles. Rendre explicite le statut du **message ou de la note d'information**
+  qui accompagne le document : il informe et ne remplace pas l'acte juridique
+  adopté. Ne pas assimiler à cette communication toutes les notes de service.
 - **Prévision de masse salariale** : extraction de paie avec indices,
   rémunérations, cotisations, effectifs et quotités ; entrées/sorties,
   calendrier et hypothèses. Identifier les données absentes à collecter.

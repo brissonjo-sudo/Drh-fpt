@@ -137,5 +137,53 @@ class LiveSourceTests(unittest.TestCase):
         self.assertNotIn('Réponse attendue secrète', context)
 
 
+    def test_article_number_is_preserved_verified_and_rendered(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            raw={'title':'Code officiel','articles':[{'id':'LEGIARTI123','num':'L714-13',
+                'etat':'VIGUEUR','content':'Texte officiel','dateDebut':0,
+                'dateFin':32472144000000}]}
+            trace=live_sources.archive_consultation(root,'number','/consult/legiPart',
+                {'textId':'CODE','date':1791676800000},raw,['L714-13'],['07'],'2026-10-11')[0]
+            self.assertEqual(trace['article_number'],'L714-13')
+            self.assertIn('Article L714-13',live_sources.source_context([trace]))
+            self.assertEqual(live_sources.verify_trace(trace,root),[])
+            legacy={k:v for k,v in trace.items() if k!='article_number'}
+            self.assertEqual(live_sources.verify_trace(legacy,root),[])
+            for bad in ['L714-14','',42]:
+                self.assertTrue(live_sources.verify_trace({**trace,'article_number':bad},root))
+
+    def test_journal_article_number_is_checked_against_raw(self):
+        import gzip,hashlib
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);at=datetime.now(timezone.utc).isoformat()
+            raw={'cid':'JORFTEXT123','dateParution':1791676800000,
+                'articles':[{'id':'JORFARTI123','num':'94','content':'Publication officielle'}]}
+            archive=root/'journal.gz'
+            archive.write_bytes(gzip.compress(json.dumps(raw).encode(),mtime=0))
+            trace={'kind':'jorf','case_id':'29','source_id':'JORFARTI123',
+                'source_url':'https://www.legifrance.gouv.fr/jorf/article_jo/JORFARTI123',
+                'consulted_at':at,'reference_date':'2026-10-11',
+                'version_or_date':'Publication au JORF le 2026-10-11',
+                'supporting_excerpt':'Publication officielle','endpoint':'/consult/jorf',
+                'request':{'textCid':'JORFTEXT123'},'raw_response_file':archive.name,
+                'raw_response_sha256':hashlib.sha256(archive.read_bytes()).hexdigest(),
+                'article_number':'94'}
+            self.assertEqual(live_sources.verify_trace(trace,root),[])
+            self.assertTrue(live_sources.verify_trace({**trace,'article_number':'95'},root))
+            legacy={k:v for k,v in trace.items() if k!='article_number'}
+            self.assertEqual(live_sources.verify_trace(legacy,root),[])
+
+    def test_non_article_trace_cannot_invent_article_number(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            raw={'cid':'LEGITEXT123','title':'Structure','dateDebutVersion':0,
+                'dateFinVersion':32472144000000,'sections':[]}
+            trace=live_sources.archive_structure_consultation(root,'structure',
+                {'textId':'LEGITEXT123','date':1791676800000},raw,['29'],'2026-10-11')[0]
+            self.assertEqual(live_sources.verify_trace(trace,root),[])
+            self.assertTrue(live_sources.verify_trace({**trace,'article_number':'94'},root))
+
+
 if __name__ == '__main__':
     unittest.main()
