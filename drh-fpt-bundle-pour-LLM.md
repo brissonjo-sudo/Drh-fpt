@@ -1058,7 +1058,7 @@ Chaque chiffre, délai, compétence ou règle précis reste soumis à vérificat
 | Avancement et retraite | Grade actuel et cible, échelon, services et ancienneté ; tableau, ratios, LDG, compétence des instances ; emploi à temps complet ou non complet, durée de l'emploi, temps partiel autorisé et affiliation. |
 | CITIS | Statut, date et circonstances, certificat, déclaration et contestation ; distinguer le régime du titulaire de celui du contractuel, l'avis médical de la décision de l'autorité et les formations du conseil médical. |
 | Recrutement contractuel | Nature et durée du besoin, emploi et quotité, fondement, publicité et priorité statutaire, CDD/CDI et limites de durée, historique des services, clauses écrites, compétence et formalités. |
-| LDG | Compétence de l'autorité ou du CDG selon l'objet et l'affiliation, stratégie pluriannuelle et RSU, avis du CST et rôle distinct de la CAP, révision et mise à disposition des agents. |
+| LDG | Distinguer LDG locales et promotion interne ; identifier qui établit les listes d'aptitude selon affiliation et compétence confiée au CDG, puis vérifier auteur et circuit d'avis. Stratégie pluriannuelle et RSU, CST distinct de la CAP, révision et mise à disposition des agents. En dégradé, contrôles à vérifier. |
 | Masse salariale | Périmètre, période, effectifs, coût actuel et projeté, données manquantes à collecter ; séparer les données établies des hypothèses et signaler les paramètres volatils. |
 | Communication RH | Public visé, document juridique adopté et date, consultations, canal accessible, diffusion et données personnelles ; une note d'information ne remplace pas l'acte juridique. |
 | Régime indemnitaire | Valeur/plafond seul : champ, parts, assiette, bornes, date/source et conversion. Mise en place : bénéficiaires et exclusions, sauvegarde/transitions, CST, délibération puis décisions individuelles. Ajouter une transition à une valeur seule uniquement si elle change la borne demandée. |
@@ -1171,9 +1171,12 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   recours contentieux à faire vérifier, avec sa compétence, ses modalités
   et délais ; ne pas certifier la voie ni produire de notification prête.
   Ne pas omettre la suppression de l'ancienne instance de recours lorsqu'elle
-  pourrait être confondue avec le conseil préalable. Pour la transmission,
-  distinguer liste légale actuelle, anciennes versions, convention locale et
-  demandes du préfet. Réunir explicitement les dates **d'ouverture de
+  pourrait être confondue avec le conseil préalable. Pour une question sur
+  la transmission, même ciblée, distinguer liste légale actuelle, anciennes
+  versions et demandes du préfet ; contrôler aussi la convention ou pratique
+  locale de télétransmission, le cas échéant, sans en présumer l'existence
+  ni créer une obligation légale. Cette réserve ne diffère pas la conclusion
+  légale vérifiée. Réunir explicitement les dates **d'ouverture de
   procédure, de sanction et de notification**, même en mode dégradé ;
   nommer ces événements plutôt qu'un calendrier général. Contrôler les
   versions et garanties applicables, sans déduire le critère d'un régime
@@ -1241,7 +1244,10 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   motivée selon le texte vérifié. Présenter aussi la PPR avec
   convention/traitement/durées/reports vérifiés, la disponibilité envisageable
   et les issues ultimes selon l'affiliation ; ne pas promettre une indemnité
-  générale. Distinguer maintien après PPR et prolongation de la PPR.
+  générale. Distinguer maintien après PPR et prolongation de la PPR : relier
+  explicitement le maintien à la demande de reclassement, à sa prise d'effet
+  et à la limite vérifiée prévue par le renvoi à la procédure de reclassement.
+  Ne pas confondre cette limite avec une nouvelle prolongation de la PPR.
 - **Emploi fonctionnel** : intérêt du service et absence de caractère
   disciplinaire, dates déterminant la protection, entretien, informations,
   effet différé et accord de l'agent qui ne dispense pas du délai. Donner les
@@ -3056,9 +3062,13 @@ collective.
   à la représentativité. Modalités précises **à vérifier**.
 
 ### 5.4 Pilotage du dialogue social
-- **LDG** (lignes directrices de gestion) : établies par l'autorité territoriale
-  **après avis du CST** ; stratégie RH pluriannuelle et orientations de
-  promotion. Voir branche carrière-paie.
+- **LDG** (lignes directrices de gestion) : distinguer les LDG locales de
+  stratégie RH et de promotion/parcours des LDG relatives à la **promotion
+  interne**. Identifier qui établit les listes d'aptitude selon l'affiliation
+  au CDG et l'éventuelle compétence confiée, puis vérifier l'auteur des LDG,
+  le CST et le circuit d'avis correspondant (CGFP L413-6/R413-37, versions
+  applicables à consulter). En dégradé, conserver ces points comme contrôles,
+  sans certifier la compétence ni la procédure. Voir branche carrière-paie.
 - **RSU** (rapport social unique) : **annuel**, remplace le bilan social,
   alimente la base de données sociales (voir branche SI RH).
 - **Négociation collective** : ordonnance n° 2021-174 du 17 février 2021 ;

@@ -5,6 +5,11 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 ## [0.7.0] — 2026-09-19 — Fiabilité mesurable et contexte progressif
 
 ### Reprise de PR18 — 2026-10-11
+- Maintien après PPR : durée rattachée explicitement à cette phase et
+  au renvoi à la procédure de reclassement, sans prolongation automatique.
+- LDG : distinction des orientations locales et de la promotion interne,
+  compétence des listes d’aptitude à identifier selon affiliation et
+  compétence confiée ; contrôles conditionnels conservés en dégradé.
 - Première citation des fondements vérifiés avec date officielle ; voies
   alternatives restituées avec effet, condition et acteur, sans répétition
   ni certification des conditions encore non vérifiées.

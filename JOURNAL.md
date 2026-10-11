@@ -566,3 +566,25 @@ Une entrée par cas, au format ci-dessous.
   condition d'ouverture et acteur, brièvement.
 - Sources du paquet10 conservées, critères, juge et seuils inchangés.
   Nouvelle paire complète requise sur le prochain commit propre.
+
+### 2026-10-11 — Quinzième paire : compétence des LDG
+- Commit6505d7e : 28/30 intégration, 29/30 dégradé.
+- En dégradé, rôle du CDG selon objet/affiliation mentionné sans distinguer
+  promotion interne ni compétence d’établissement des listes d’aptitude.
+  Omission de qualification confirmée par relecture indépendante. La fiche
+  CST ne distinguait pas assez LDG locales et promotion interne.
+- Fiche et contrôle LDG précisent affiliation et compétence confiée, puis
+  auteur/circuit à vérifier. En dégradé, aucune compétence certifiée.
+  L413-6/R413-37 figurent déjà dans les consultations officielles.
+- Paquet10, critères, juge et seuils inchangés. Réponses/jugements originaux
+  conservés ; nouvelle paire complète sur commit propre nécessaire.
+- PPR : maintien après la période distingué de sa prolongation, mais
+  borne citée seulement pour la procédure de reclassement ; omission de
+  rattachement confirmée, sans contresens établi. Article2 du décret85-1054
+  déjà consulté suffisant : lien entre maintien, demande, prise d’effet et
+  limite du renvoi rendu explicite, sans nouveau délai automatique.
+- Transmission : conclusion légale correcte et distinction volontaire/
+  demande préfet présentes, mais convention/pratique locale non mentionnée.
+  Omission documentaire confirmée ; contrôle déjà présent rendu explicite
+  pour les questions ciblées de transmission, sans présomption de convention
+  ni nouvelle obligation légale. Aucune source supplémentaire requise.
