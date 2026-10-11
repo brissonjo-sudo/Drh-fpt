@@ -63,7 +63,8 @@ ciblée, ne garder que les distinctions nécessaires à une réponse correcte.
 
 ## Restitution en mode dégradé
 
-Annoncer d'abord le mode et l'absence de consultation officielle. Pour chaque
+Annoncer d'abord : « Mode dégradé : la vérification officielle est indisponible
+pour cette réponse ; aucune source officielle n'a été consultée. » Pour chaque
 point juridique demandé, formuler une **piste documentaire à vérifier** plutôt
 qu'une réponse ferme, même si la règle figure dans le module interne. Un titre
 « selon le corpus » ne suffit pas à autoriser ensuite un « oui/non » juridique,
@@ -81,3 +82,83 @@ cette date connue et faire préciser la date d'effet de l'acte si elle diffère.
 
 Supprimer les précisions juridiques sans effet sur la réponse. Toute précision
 conservée supporte le même niveau de vérification que la conclusion principale.
+
+## Contrôle de couverture avant restitution
+
+La concision ne permet pas d'effacer une distinction de régime, l'acteur qui
+fixe ou décide, une compétence d'instance ou un seuil qui évite une confusion
+dans le dossier. Rendre ces éléments **visibles** dans la réponse, même quand
+la décision individuelle reste non tranchable. Une phrase par distinction
+suffit ; ne pas développer tout le régime alternatif.
+
+Pour une procédure, couvrir le circuit complet sous conditions : qualification,
+conditions, acteurs/instances, garanties, décision, notification et recours,
+pièces encore manquantes. Ne pas s'arrêter à la première variable bloquante.
+Toute règle précise reste subordonnée à la consultation officielle. En mode
+dégradé, ces mêmes éléments deviennent des **contrôles à faire vérifier**,
+sans valeur exacte, compétence certifiée ou procédure exécutable.
+
+Avant d'envoyer, vérifier les points de la famille concernée :
+
+- **Avancement** : tableau, conditions statutaires, ratio fixé par l'assemblée,
+  LDG et rôle actuel de la CAP. Dans une question mixte retraite, distinguer
+  temps partiel et durée d'un emploi non complet, avec la conséquence
+  CNRACL/IRCANTEC et le seuil applicable si officiellement vérifié.
+- **Accident de service** : préciser que le circuit du fonctionnaire titulaire
+  se distingue du régime contractuel. Avis médical et décision territoriale
+  ne se confondent pas ; rendre explicite la compétence plénière pour
+  l'imputabilité et la distinction avec la formation restreinte, sous réserve
+  de vérification. Réclamer les pièces de l'accident et de sa contestation.
+- **Régime indemnitaire** : donner le fondement légal et le décret propre,
+  les exclusions de régime, les parts, la sauvegarde, les instances et actes
+  successifs. Si un régime remplace des décrets antérieurs, identifier les
+  textes abrogés et distinguer entrée en vigueur et abrogation. Tout plafond
+  en pourcentage appelle une phrase sur l'assiette et les paramètres à
+  vérifier pour sa conversion en euros, notamment le point d'indice.
+- **Discipline** : droits au dossier intégral, au conseil de son choix et à
+  un temps suffisant ; instance préalable, motivation et recours actuels.
+  Ne pas omettre la suppression de l'ancienne instance de recours lorsqu'elle
+  pourrait être confondue avec le conseil préalable. Pour la transmission,
+  distinguer liste légale actuelle, anciennes versions, convention locale et
+  demandes du préfet. Réunir date d'ouverture de la procédure et date de
+  sanction pour contrôler tout régime transitoire.
+- **Abandon de poste** : expliciter la distinction licenciement/discipline,
+  l'absence de conseil disciplinaire et de communication du dossier au titre
+  disciplinaire ; distinguer la piste FPT de la présomption de démission
+  privée. Conserver les contrôles de mise en demeure, justification, date
+  d'effet, motivation et recours, sans date automatiquement inventée.
+- **Protection fonctionnelle** : distinguer obligation lorsque les conditions
+  sont réunies et décision d'octroi ; lien au service, faute détachable,
+  indépendance du jugement pénal, protection/assistance et réparation.
+  Examiner aussi le refus motivé et ses recours, sans attendre une
+  condamnation pour instruire la demande.
+- **Insuffisance professionnelle** : statut, période d'essai, faits, dossier,
+  instances, entretien, notification, indemnité et calcul propre au motif.
+  Faire apparaître le contrôle de la réduction propre à l'insuffisance et du
+  texte d'indemnité du titulaire ; une abstention sur le montant individuel
+  ne doit pas effacer la règle de calcul officiellement vérifiée.
+  Si la réponse compare, donner les différences de procédure et
+  d'indemnité entre titulaire et contractuel, sans transposition des règles.
+- **Inaptitude** : demander la portée temporaire/définitive et le champ exact
+  de l'avis. Présenter la recherche sérieuse de reclassement, la PPR avec
+  convention/traitement/durées/reports vérifiés, la disponibilité envisageable
+  et les issues ultimes selon l'affiliation ; ne pas promettre une indemnité
+  générale. Distinguer maintien après PPR et prolongation de la PPR.
+- **Emploi fonctionnel** : intérêt du service et absence de caractère
+  disciplinaire, dates déterminant la protection, entretien, informations,
+  effet différé et accord de l'agent qui ne dispense pas du délai. Donner les
+  voies de sortie selon la situation et les règles vérifiées.
+- **Prévision de masse salariale** : extraction de paie avec indices,
+  rémunérations, cotisations, effectifs et quotités ; entrées/sorties,
+  calendrier et hypothèses. Identifier les données absentes à collecter.
+- **Temps de travail et grève** : relever cycle, quotité, heures travaillées et
+  absentes, rémunération et assiette, pièces locales et SIRH ; distinguer les
+  garanties nationales du choix local et les règles FPT de celles de l'État.
+- **Régime particulier** : identifier corps/cadre d'emplois **et grade exact**,
+  employeur et texte propre, notamment pour Paris ; ne pas assimiler les
+  corps parisiens aux cadres d'emplois territoriaux de droit commun.
+
+Ces points complètent la restitution proportionnée : écarter uniquement ceux
+dont l'inapplicabilité est établie. Un document local absent devient une pièce
+à réclamer, pas un contrôle supprimé. Une règle non vérifiée devient une
+réserve préalable et une piste de contrôle, pas une affirmation de mémoire.

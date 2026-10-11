@@ -192,6 +192,14 @@ def source_context(traces: list[dict]) -> str:
     return ''.join(chunks)
 
 
+def reference_date_for_source(manifest: dict, source: dict) -> str:
+    """Une comparaison historique conserve sa date sans changer le droit actuel."""
+    value = source.get('reference_date', manifest['reference_date'])
+    if not isinstance(value, str) or datetime.fromisoformat(value).date().isoformat() != value:
+        raise ValueError('Date de référence attendue au format YYYY-MM-DD')
+    return value
+
+
 def collect(manifest: dict, legal_skill: Path, output: Path) -> None:
     script_dir = legal_skill / 'skill' / 'scripts'
     if not script_dir.is_dir():
@@ -207,10 +215,10 @@ def collect(manifest: dict, legal_skill: Path, output: Path) -> None:
                 if attempt == 3:
                     raise
                 time.sleep(2 ** attempt)
-    reference = manifest['reference_date']
     evidence = []
     output.mkdir(parents=True, exist_ok=True)
     for source in manifest['sources']:
+        reference = reference_date_for_source(manifest, source)
         if source.get('kind') in {'jorf', 'official_page'}:
             kind = source['kind']
             if kind == 'jorf':

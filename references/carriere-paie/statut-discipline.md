@@ -93,9 +93,10 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
   comme une voie de recours : vérifier et mentionner les recours administratifs
   utiles et le recours contentieux devant le tribunal administratif.
 - **Contrôle de légalité** : la version en vigueur de l'article L2131-2 du
-  CGCT ne comporte plus de catégorie générale couvrant « les sanctions
-  disciplinaires de toute nature ». Ne pas annoncer une transmission
-  obligatoire sur ce seul fondement ; vérifier la version applicable, la
+  CGCT ne prévoit plus une catégorie de transmission des sanctions disciplinaires.
+  La version au 1er janvier 2004 visait précisément les **sanctions soumises à
+  l'avis du conseil de discipline**, pas toutes les sanctions « de toute nature ».
+  Ne pas appliquer cette ancienne liste à un acte actuel ; vérifier la version applicable, la
   nature exacte de l'acte et, séparément, les modalités locales de
   télétransmission.
   Le cadrage préalable réunit la collectivité concernée, la date et la nature

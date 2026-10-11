@@ -6,6 +6,15 @@
 
 ### 5.9 Temps de travail et fin de fonctions
 
+**Retenue pour grève en FPT** : vérifier le principe de proportionnalité sur
+CE Section, 17 juillet 2009, n° 303588, qui compare la durée de grève aux
+obligations de service. Le calcul spécifique des gardes de 24 heures dans
+cette décision concerne les sapeurs-pompiers : ne pas le transposer à une
+journée de bureau. Confirmer cycle, heures non faites et assiette avant paie.
+CE 27 avril 1994, n° 146119, traite notamment du refus de tâches alors que
+toutes les heures sont accomplies ; il ne suffit pas à vérifier la formule
+d'une grève partielle. Aucune liquidation ferme sans source applicable.
+
 **Temps de travail**
 - **Durée annuelle de référence** : **1 607 heures** (base légale, hors
   sujétions particulières et jours de fractionnement).

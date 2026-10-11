@@ -315,6 +315,9 @@ La checklist du §10 élève la qualité à chaque exécution.
 10. **Livrable** demandé effectivement produit ?
 11. **Cas journalisable** apparu → proposé ?
 12. Pas de **donnée personnelle d'agent** exposée inutilement.
+13. Les acteurs, compétences, seuils et distinctions de régime utiles sont-ils
+    **visibles** dans la réponse, y compris conditionnelle ? Appliquer le
+    contrôle de couverture de `references/restitution-proportionnee.md`.
 
 ---
 

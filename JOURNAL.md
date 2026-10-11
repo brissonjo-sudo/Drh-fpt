@@ -299,3 +299,19 @@ Une entrée par cas, au format ci-dessous.
   des premières campagnes sont conservés, sans modification ni remplacement.
 - Statut : corrections locales et 44 tests déterministes réussis ; nouvelles
   campagnes complètes nécessaires sur le même commit propre avant publication.
+
+### 2026-10-11 — Deuxième série complète et couverture de restitution
+- Contexte : mêmes modèles distincts, effort high, commit propre 595d62e.
+- Résultat : 30 cas dans chaque mode ; 17 integration et 22 degraded
+  entièrement satisfaits. Gates stricts encore en échec.
+- Constat : distinctions utiles omises malgré leur présence dans les modules ;
+  mode dégradé sûr mais inventaire de pièces incomplet. La consultation
+  initiale sur la grève ne démontrait pas directement la proportionnalité.
+- Action : contrôle de couverture visible par famille, déclaration explicite
+  d'indisponibilité de vérification, CE17 juillet2009 n°303588 consulté et
+  archivé. Source historique CGCT2004 consultée : elle visait les sanctions
+  soumises au conseil de discipline ; formulation et critère corrigés sans
+  élargir cette catégorie à toutes les sanctions. Date propre à une source
+  historique conservée par le collecteur.
+- Statut : 45 tests déterministes réussis ; nouvelle validation complète
+  requise avant sortie de brouillon.

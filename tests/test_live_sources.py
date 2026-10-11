@@ -8,6 +8,13 @@ from datetime import datetime,timezone,timedelta
 
 
 class LiveSourceTests(unittest.TestCase):
+    def test_source_specific_date_preserves_historical_comparison(self):
+        manifest={'reference_date':'2026-10-11'}
+        self.assertEqual(live_sources.reference_date_for_source(manifest,{}),'2026-10-11')
+        self.assertEqual(live_sources.reference_date_for_source(manifest,{'reference_date':'2004-01-01'}),'2004-01-01')
+        with self.assertRaises(ValueError):
+            live_sources.reference_date_for_source(manifest,{'reference_date':'bad'})
+
     def test_official_page_requires_allowed_host_and_https(self):
         from unittest.mock import patch
         with tempfile.TemporaryDirectory() as tmp:

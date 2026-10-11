@@ -23,6 +23,10 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 - Juge respectant les alternatives, conditions et mentions facultatives ;
   réserves cohérentes avec une consultation effective. Les critères stricts
   obligatoires restent intégralement exigés.
+- Contrôle final de couverture visible et indisponibilité de vérification
+  explicitée en mode dégradé ; principe de retenue pour grève vérifié sur CE
+  17 juillet 2009 n°303588. Catégorie historique du CGCT2004 rectifiée :
+  sanctions soumises au conseil de discipline, et non « de toute nature ».
 
 ### Renforcé
 - Chaque attendu de test possède un identifiant stable. Le validateur refuse

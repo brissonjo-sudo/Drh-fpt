@@ -615,6 +615,24 @@
       "cases": [
         "19"
       ]
+    },
+    {
+      "key": "greve-proportionnalite",
+      "kind": "decision",
+      "text_id": "CETATEXT000020871105",
+      "cases": [
+        "20"
+      ]
+    },
+    {
+      "key": "cgct-historique",
+      "text_id": "LEGITEXT000006070633",
+      "cases": {
+        "30-nonregression-controle-legalite-sanction": [
+          "L2131-2"
+        ]
+      },
+      "reference_date": "2004-01-01"
     }
   ]
 }
