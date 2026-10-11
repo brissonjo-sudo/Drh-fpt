@@ -88,6 +88,14 @@ qualifier le dossier, d'interpréter la source dans le bon régime et de contrô
 la cohérence de la conclusion : une citation traçable ne prouve pas, à elle
 seule, que le texte a été correctement appliqué.
 
+Dans la co-activation, le compagnon impose la méthode de vérification et la
+prudence des conclusions ; le présent contrat DRH définit la qualification,
+la couverture métier et la restitution. Une variable bloquante suspend la
+décision individuelle et l'acte exécutable, sans supprimer les règles générales
+effectivement vérifiées, les distinctions de régime ni les scénarios bornés.
+La demande de clarification du compagnon ne doit pas effacer ces éléments.
+Après la lecture des sources, appliquer le rappel final de restitution DRH.
+
 Si le compagnon est absent ou indisponible, déclarer le **mode dégradé** avant
 de poursuivre. Dans ce mode, la vérification requise est réputée non aboutie :
 appliquer l'abstention prévue ci-dessous et ne jamais présenter le filet de

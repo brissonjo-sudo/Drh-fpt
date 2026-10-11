@@ -8,6 +8,39 @@ from datetime import datetime,timezone,timedelta
 
 
 class LiveSourceTests(unittest.TestCase):
+    def test_consolidated_structure_proves_repeal_and_checks_archive(self):
+        raw={'cid':'LEGITEXT123','title':'Décret disciplinaire','dateDebutVersion':0,
+            'dateFinVersion':32472144000000,'sections':[{'title':'Conseils de recours',
+            'etat':'ABROGE','dateDebut':0,'dateFin':1607558400000,'articles':[]}]}
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            trace=live_sources.archive_structure_consultation(root,'structure',
+                {'textId':'LEGITEXT123','date':1791676800000},raw,['29'],'2026-10-11')[0]
+            self.assertIn('ABROGE',trace['supporting_excerpt'])
+            self.assertIn('2020-12-10',trace['supporting_excerpt'])
+            self.assertEqual(live_sources.verify_trace(trace,root),[])
+            self.assertTrue(live_sources.verify_trace({**trace,'supporting_excerpt':'Inventé'},root))
+            self.assertTrue(live_sources.verify_trace({**trace,'request':{'textId':'LEGITEXT123','date':0}},root))
+
+    def test_official_html_keeps_visible_law_and_removes_script_style_head(self):
+        body='<html><head><style>.cache{}</style><title>Navigation</title></head><body><script>secret()</script><p>Règle &amp; condition</p><p>Exception importante</p></body></html>'
+        self.assertEqual(live_sources.official_page_text(body),'Règle & condition Exception importante')
+        self.assertEqual(live_sources.official_page_text('<nav>Menu</nav><main><p>Règle</p><p>Exception</p></main><footer>Liens</footer>'),'Règle Exception')
+
+    def test_official_html_trace_rejects_unknown_extractor(self):
+        import gzip,hashlib
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);at=datetime.now(timezone.utc).isoformat();url='https://www.cnil.fr/fr/texte'
+            raw={'url':url,'status':200,'body':'<style>inutile</style><p>Texte officiel</p>','consulted_at':at}
+            archive=root/'raw.gz';archive.write_bytes(gzip.compress(json.dumps(raw).encode()))
+            trace={'kind':'official_page','source_url':url,'source_id':url,'consulted_at':at,
+                'version_or_date':'Page consultée le '+at,'supporting_excerpt':'Texte officiel',
+                'raw_response_file':archive.name,'raw_response_sha256':hashlib.sha256(archive.read_bytes()).hexdigest(),
+                'endpoint':'https','request':{'url':url},'excerpt_extractor':'visible-html-v1'}
+            self.assertEqual(live_sources.verify_trace(trace,root),[])
+            self.assertTrue(live_sources.verify_trace({**trace,'excerpt_extractor':'unknown'},root))
+            self.assertTrue(live_sources.verify_trace({**trace,'supporting_excerpt':'Faux'},root))
+
     def test_source_specific_date_preserves_historical_comparison(self):
         manifest={'reference_date':'2026-10-11'}
         self.assertEqual(live_sources.reference_date_for_source(manifest,{}),'2026-10-11')

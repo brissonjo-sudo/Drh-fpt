@@ -125,6 +125,15 @@ class HarnessTests(unittest.TestCase):
         self.assertIn("mode dégradé", degraded)
         self.assertNotIn("LEGAL", degraded)
 
+    def test_final_restitution_reminder_follows_sources_in_both_modes(self):
+        integrated=RUN_TESTS.build_system_context('DRH','LEGAL','integration','SOURCE-FIN','snapshot')
+        degraded=RUN_TESTS.build_system_context('DRH',None,'degraded')
+        marker='DERNIÈRE ÉTAPE : RESTITUTION DRH'
+        self.assertGreater(integrated.index(marker),integrated.index('SOURCE-FIN'))
+        self.assertIn(marker,degraded)
+        self.assertEqual(integrated.split(marker)[-1],degraded.split(marker)[-1])
+        self.assertNotIn('01-c',integrated)
+
     def test_live_evidence_requires_complete_trace_for_required_cases(self):
         cases = [{"id": "a", "type": "standard"}, {"id": "b", "type": "echec_attendu"}]
         problems = RUN_TESTS.validate_evidence([], cases, "integration", "live")

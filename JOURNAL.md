@@ -315,3 +315,18 @@ Une entrée par cas, au format ci-dessous.
   historique conservée par le collecteur.
 - Statut : 45 tests déterministes réussis ; nouvelle validation complète
   requise avant sortie de brouillon.
+
+### 2026-10-11 — Troisième série et diagnostic des consignes concurrentes
+- Résultat sur 2dc44ac : 30 cas par mode ; 20 integration et 28 degraded
+  entièrement satisfaits, gates stricts en échec. Traces conservées.
+- Constat : la couverture reste omise malgré la liste métier ; la concision
+  et la suspension de l'analyse du compagnon concurrencent la restitution
+  DRH. Un diagnostic 07/08 répétant le fichier entier en fin de contexte
+  ne suffit pas à supprimer les omissions.
+- Action : clarifier la priorité du contrat DRH, ajouter un rappel final
+  générique identique pour tous les cas, extraire le contenu principal des
+  pages avec vérification sur l'archive intacte. Compléter les sources déjà
+  consultées pour le contractuel victime d'accident, la décision indemnitaire,
+  la protection et les suites d'une décharge de fonctions.
+- Statut : corrections à valider en diagnostic puis par deux campagnes
+  complètes. Les critères de la troisième série ne sont pas modifiés.

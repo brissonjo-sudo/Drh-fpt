@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import gzip
 import html
+from html.parser import HTMLParser
 import json
 import re
 import sys
@@ -21,6 +22,31 @@ def plain_text(value: str) -> str:
     value = re.sub(r'<(script|style)\b[^>]*>.*?</\1>', '', value, flags=re.I | re.S)
     value = re.sub(r'<(?:br\s*/?|/p|/div|/li)>', '\n', value, flags=re.I)
     return html.unescape(re.sub(r'<[^>]*>', '', value)).strip()
+
+
+def official_page_text(value: str) -> str:
+    """Texte visible du main, ou de la page sans navigation si main absent."""
+    class VisibleHTML(HTMLParser):
+        def __init__(self):
+            super().__init__(convert_charrefs=True)
+            self.main_only=bool(re.search(r'<main\b',value,re.I))
+            self.in_main=False
+            self.ignored=[]
+            self.parts=[]
+
+        def handle_starttag(self,tag,attrs):
+            if tag=='main':self.in_main=True
+            if tag in {'script','style','head','nav','footer'}:self.ignored.append(tag)
+
+        def handle_endtag(self,tag):
+            if self.ignored and tag==self.ignored[-1]:self.ignored.pop()
+            if tag=='main':self.in_main=False
+
+        def handle_data(self,data):
+            if not self.ignored and (self.in_main or not self.main_only):self.parts.append(data)
+
+    parser=VisibleHTML();parser.feed(value);parser.close()
+    return re.sub(r'\s+',' ',' '.join(parser.parts)).strip()
 
 
 def date_value(value) -> datetime:
@@ -121,7 +147,11 @@ def verify_trace(trace: dict, root: Path, *, max_age_hours: int = 24, as_of: dat
         if trace.get('kind') == 'official_page':
             if raw.get('url') != url or raw.get('status') != 200 or trace.get('source_id') != url:
                 raise ValueError('archive de page officielle incohérente')
-            if raw.get('consulted_at') != trace.get('consulted_at') or trace.get('supporting_excerpt') != plain_text(raw['body']):
+            extractor=trace.get('excerpt_extractor')
+            if extractor not in {None,'visible-html-v1'}:
+                raise ValueError('extracteur de page inconnu')
+            text=official_page_text(raw['body']) if extractor else plain_text(raw['body'])
+            if raw.get('consulted_at') != trace.get('consulted_at') or trace.get('supporting_excerpt') != text:
                 raise ValueError('date ou extrait différent de la page consultée')
             if trace.get('version_or_date') != 'Page consultée le ' + trace['consulted_at']:
                 raise ValueError('version de page incohérente')
@@ -161,6 +191,16 @@ def verify_trace(trace: dict, root: Path, *, max_age_hours: int = 24, as_of: dat
             raise ValueError('date de requête différente de la date de référence')
         if raw.get('cid') and request.get('textId') != raw['cid']:
             raise ValueError('identifiant de requête différent du texte officiel')
+        if trace.get('kind')=='consolidated_structure':
+            start=date_value(raw['dateDebutVersion']).date().isoformat()
+            end=date_value(raw['dateFinVersion']).date().isoformat()
+            if not start<=trace['reference_date']<end or trace['version_or_date']!=f"{start} ≤ {trace['reference_date']} < {end}":
+                raise ValueError('Version de structure incohérente')
+            if trace['source_id']!=raw['cid'] or trace['supporting_excerpt']!=structure_text(raw):
+                raise ValueError('Structure différente de la source officielle')
+            if url!='https://www.legifrance.gouv.fr/loda/id/'+raw['cid']+'/'+trace['reference_date']:
+                raise ValueError('URL de structure incohérente')
+            return problems
         candidates = [a for a in all_articles(raw) if a.get('id') == trace.get('source_id')]
         if not candidates or any(c != candidates[0] for c in candidates):
             raise ValueError('identifiant officiel absent ou ambigu dans l’archive')
@@ -190,6 +230,36 @@ def source_context(traces: list[dict]) -> str:
                       f"Version : {trace['version_or_date']} ; consulté : {trace['consulted_at']}\n"
                       f"{trace['supporting_excerpt']}\n")
     return ''.join(chunks)
+
+
+def structure_text(raw: dict) -> str:
+    lines=[raw['title']]
+    def walk(node,depth=0):
+        for section in node.get('sections',[]):
+            lines.append('  '*depth+plain_text(section['title'])+' | '+section['etat']+
+                ' | '+date_value(section['dateDebut']).date().isoformat()+' → '+date_value(section['dateFin']).date().isoformat())
+            walk(section,depth+1)
+        for article in node.get('articles',[]):
+            lines.append('  '*depth+'Article '+article['num']+' | '+article['etat']+
+                ' | '+date_value(article['dateDebut']).date().isoformat()+' → '+date_value(article['dateFin']).date().isoformat())
+    walk(raw)
+    return '\n'.join(lines)
+
+
+def archive_structure_consultation(output,key,request,raw,cases,reference):
+    archive=output/'raw'/(key+'.json.gz');archive.parent.mkdir(parents=True,exist_ok=True)
+    archive.write_bytes(gzip.compress(json.dumps(raw,ensure_ascii=False,indent=2).encode('utf8'),mtime=0))
+    start=date_value(raw['dateDebutVersion']).date().isoformat()
+    end=date_value(raw['dateFinVersion']).date().isoformat()
+    if not start<=reference<end:raise ValueError('Structure hors version applicable')
+    return [{'kind':'consolidated_structure','case_id':case,'source_id':raw['cid'],
+        'source_title':raw['title']+' — structure consolidée (statuts des sections et articles)',
+        'source_url':'https://www.legifrance.gouv.fr/loda/id/'+raw['cid']+'/'+reference,
+        'consulted_at':datetime.now(timezone.utc).isoformat(),'reference_date':reference,
+        'version_or_date':f'{start} ≤ {reference} < {end}',
+        'supporting_excerpt':structure_text(raw),'conclusion_supported':'Structure à confronter aux textes de modification',
+        'endpoint':'/consult/legiPart','request':request,'raw_response_file':archive.relative_to(output).as_posix(),
+        'raw_response_sha256':hashlib.sha256(archive.read_bytes()).hexdigest()} for case in cases]
 
 
 def reference_date_for_source(manifest: dict, source: dict) -> str:
@@ -251,10 +321,11 @@ def collect(manifest: dict, legal_skill: Path, output: Path) -> None:
                         'source_id':a['id'], 'source_title':raw.get('title') or source['key'],
                         'consulted_at':at,'reference_date':reference,
                         'version_or_date':('Publication au JORF le '+date_value(raw['dateParution']).date().isoformat()) if kind=='jorf' else 'Page consultée le '+at,
-                        'supporting_excerpt':plain_text(a.get('content') or a.get('texte') or ''),
+                        'supporting_excerpt':official_page_text(a['content']) if kind=='official_page' else plain_text(a.get('content') or a.get('texte') or ''),
                         'conclusion_supported':'Champ et application à confronter aux sources consolidées',
                         'endpoint':endpoint,'request':request,'raw_response_file':archive.relative_to(output).as_posix(),
                         'raw_response_sha256':hashlib.sha256(archive.read_bytes()).hexdigest()})
+                    if kind=='official_page':evidence[-1]['excerpt_extractor']='visible-html-v1'
             print(f"Consulté : {source['key']} ({kind})",flush=True)
             (output/'evidence.json').write_text(json.dumps({'consultations':evidence},ensure_ascii=False,indent=2),encoding='utf-8')
             continue
@@ -299,6 +370,10 @@ def collect(manifest: dict, legal_skill: Path, output: Path) -> None:
             text_id = titles[0]['cid']
         request = {'textId': text_id, 'date': lf._epoch_ms(reference)}
         raw = call('/consult/legiPart', request)
+        if source.get('kind')=='consolidated_structure':
+            evidence.extend(archive_structure_consultation(output,source['key'],request,raw,source['cases'],reference))
+            print(f"Consulté : {source['key']} (structure consolidée)",flush=True)
+            continue
         for case_id, numbers in source['cases'].items():
             evidence.extend(archive_consultation(output, source['key'], '/consult/legiPart',
                 request, raw, numbers, [case_id], reference))

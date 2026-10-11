@@ -158,6 +158,11 @@ def build_system_context(
             "doit correspondre à une trace de consultation officielle fournie à la campagne.\n"
         )
         parts.append(live_sources.source_context(evidence or []))
+    reminder_text=(ROOT/'references/restitution-proportionnee.md').read_text(encoding='utf8')
+    marker='## Rappel final de restitution'
+    if marker not in reminder_text:
+        raise ValueError('Rappel de restitution DRH absent')
+    parts.append('\n\n<!-- DERNIÈRE ÉTAPE : RESTITUTION DRH -->\n'+reminder_text.split(marker,1)[1])
     return "".join(parts)
 
 

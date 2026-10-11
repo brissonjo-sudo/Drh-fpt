@@ -319,6 +319,9 @@ Adapter la longueur visible à la demande sans réduire les vérifications : lir
 `references/restitution-proportionnee.md`. Une question précise appelle une
 réponse ciblée ; un arbitrage appelle options, recommandation et risques ; un
 acte ou dossier complexe appelle l'analyse utile et le livrable complet.
+La concision conserve les contrôles de couverture de la famille concernée.
+Après consultation des sources, appliquer le rappel final de restitution :
+le compagnon vérifie, le contrat DRH encadre la couverture métier et la réponse.
 
 ---
 
@@ -487,6 +490,14 @@ En fonctionnement nominal, cette étape active obligatoirement
 qualifier le dossier, d'interpréter la source dans le bon régime et de contrôler
 la cohérence de la conclusion : une citation traçable ne prouve pas, à elle
 seule, que le texte a été correctement appliqué.
+
+Dans la co-activation, le compagnon impose la méthode de vérification et la
+prudence des conclusions ; le présent contrat DRH définit la qualification,
+la couverture métier et la restitution. Une variable bloquante suspend la
+décision individuelle et l'acte exécutable, sans supprimer les règles générales
+effectivement vérifiées, les distinctions de régime ni les scénarios bornés.
+La demande de clarification du compagnon ne doit pas effacer ces éléments.
+Après la lecture des sources, appliquer le rappel final de restitution DRH.
 
 Si le compagnon est absent ou indisponible, déclarer le **mode dégradé** avant
 de poursuivre. Dans ce mode, la vérification requise est réputée non aboutie :
@@ -976,8 +987,9 @@ sans exposer mécaniquement chaque étape.
 
 Pour une question précise, donner d'abord la réponse exploitable. Ajouter la
 condition qui peut la faire varier, la source utile lorsqu'une vérification est
-requise et la réserve qui change réellement la décision. Éviter le plan d'action
-complet si aucune action complexe n'est demandée.
+requise et la réserve qui change réellement la décision. La concision retire
+exemples et répétitions, jamais les contrôles de couverture de la famille
+concernée ci-dessous. Éviter les actions sans objet dans le dossier.
 
 ## Arbitrage
 
@@ -1026,8 +1038,8 @@ Chaque chiffre, délai, compétence ou règle précis reste soumis à vérificat
 | Temps de travail et grève | Emploi, quotité et cycle, heures réellement travaillées/non travaillées, rémunération et assiette, règles nationales et délibération locale, paramétrage du SIRH ; distinguer les versants. |
 
 Ces contrôles ne sont pas des faits supposés. Écarter ceux dont l'inapplicabilité
-est établie et expliquer ceux qui conditionnent la décision. Pour une question
-ciblée, ne garder que les distinctions nécessaires à une réponse correcte.
+est établie et expliquer ceux qui conditionnent la décision. Une question
+ciblée conserve les distinctions de la famille concernée, en une phrase chacune.
 
 ## Restitution en mode dégradé
 
@@ -1048,8 +1060,9 @@ cette date connue et faire préciser la date d'effet de l'acte si elle diffère.
 
 ## Développements supplémentaires
 
-Supprimer les précisions juridiques sans effet sur la réponse. Toute précision
-conservée supporte le même niveau de vérification que la conclusion principale.
+Supprimer les précisions juridiques extérieures aux contrôles de couverture et
+sans effet sur la réponse. Toute précision conservée supporte le même niveau
+de vérification que la conclusion principale.
 
 ## Contrôle de couverture avant restitution
 
@@ -1130,6 +1143,19 @@ Ces points complètent la restitution proportionnée : écarter uniquement ceux
 dont l'inapplicabilité est établie. Un document local absent devient une pièce
 à réclamer, pas un contrôle supprimé. Une règle non vérifiée devient une
 réserve préalable et une piste de contrôle, pas une affirmation de mémoire.
+
+## Rappel final de restitution
+
+Après la lecture des sources, relire la réponse avec le contrat DRH et le
+contrôle de couverture de chaque famille concernée. Rappeler les faits connus
+qui bornent le régime, sans redemander ces données. Développer les sigles à
+leur première occurrence. Rendre explicites statut/champ, autorité/instance,
+conditions/seuils **et leurs conséquences**, distinctions avec les régimes
+voisins, actes/garanties, pièces, sources et limites. Une décision individuelle
+suspendue conserve le cadrage général vérifié et les scénarios conditionnels.
+Ne pas s'arrêter à la conclusion principale en omettant ces contrôles.
+En mode dégradé, identifier les familles de sources officielles à consulter
+et les pièces nécessaires ; aucun résultat juridique n'est certifié.
 
 ================================================================================
 ### SOURCE : FICHE PROFIL (cadrage d'ouverture)

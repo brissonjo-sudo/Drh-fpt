@@ -5,6 +5,9 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 ## [0.7.0] — 2026-09-19 — Fiabilité mesurable et contexte progressif
 
 ### Reprise de PR18 — 2026-10-11
+- Priorité de restitution DRH clarifiée dans la co-activation, rappel final
+  générique après les données de sources et extraction vérifiée du contenu
+  principal des pages officielles, archives originales inchangées.
 - Consultation PISTE et CNRACL archivée, intégrité des extraits et versions
   contrôlée, NOTA conservés, passages effectivement fournis au répondant.
 - Critères propres au mode dégradé ; corrections juridiques des délais PPR,

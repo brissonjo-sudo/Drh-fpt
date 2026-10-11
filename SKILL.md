@@ -273,6 +273,9 @@ Adapter la longueur visible à la demande sans réduire les vérifications : lir
 `references/restitution-proportionnee.md`. Une question précise appelle une
 réponse ciblée ; un arbitrage appelle options, recommandation et risques ; un
 acte ou dossier complexe appelle l'analyse utile et le livrable complet.
+La concision conserve les contrôles de couverture de la famille concernée.
+Après consultation des sources, appliquer le rappel final de restitution :
+le compagnon vérifie, le contrat DRH encadre la couverture métier et la réponse.
 
 ---
 
