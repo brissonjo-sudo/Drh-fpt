@@ -330,3 +330,7 @@ Une entrée par cas, au format ci-dessous.
   la protection et les suites d'une décharge de fonctions.
 - Statut : corrections à valider en diagnostic puis par deux campagnes
   complètes. Les critères de la troisième série ne sont pas modifiés.
+- Diagnostic sur 063b523 : 01, 02 et 07 entièrement satisfaits ; 08 omet
+  encore la vérification de la valeur du point malgré l'assiette citée.
+  Consigne de conversion clarifiée pour toute réponse sur un plafond
+  assis sur le traitement indiciaire, même sans montant individuel demandé.

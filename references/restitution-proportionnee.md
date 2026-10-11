@@ -117,6 +117,8 @@ Avant d'envoyer, vérifier les points de la famille concernée :
   textes abrogés et distinguer entrée en vigueur et abrogation. Tout plafond
   en pourcentage appelle une phrase sur l'assiette et les paramètres à
   vérifier pour sa conversion en euros, notamment le point d'indice.
+  Si l'assiette est le traitement indiciaire, nommer l'indice et la valeur
+  du point à vérifier à la date utile, même sans conversion demandée.
 - **Discipline** : droits au dossier intégral, au conseil de son choix et à
   un temps suffisant ; instance préalable, motivation et recours actuels.
   Ne pas omettre la suppression de l'ancienne instance de recours lorsqu'elle
@@ -172,8 +174,11 @@ contrôle de couverture de chaque famille concernée. Rappeler les faits connus
 qui bornent le régime, sans redemander ces données. Développer les sigles à
 leur première occurrence. Rendre explicites statut/champ, autorité/instance,
 conditions/seuils **et leurs conséquences**, distinctions avec les régimes
-voisins, actes/garanties, pièces, sources et limites. Une décision individuelle
-suspendue conserve le cadrage général vérifié et les scénarios conditionnels.
+voisins, actes/garanties, pièces, sources et limites.
+Pour une assiette indiciaire, nommer l'indice et la valeur du point à vérifier
+à la date utile avant conversion en euros.
+Une décision individuelle suspendue conserve le cadrage général vérifié et
+les scénarios conditionnels.
 Ne pas s'arrêter à la conclusion principale en omettant ces contrôles.
 En mode dégradé, identifier les familles de sources officielles à consulter
 et les pièces nécessaires ; aucun résultat juridique n'est certifié.

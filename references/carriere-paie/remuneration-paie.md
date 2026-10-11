@@ -76,6 +76,10 @@ par **équivalence** :
     annuellement, sans dépasser le plafond.
   > Le **montant en euros** de la part fixe dépend de la valeur du point
   > (volatile) : citer le taux, vérifier la valeur du point pour chiffrer.
+  > Même si la demande porte seulement sur les plafonds, préciser dans la
+  > réponse que la conversion de la part fixe en euros exige l'indice de
+  > l'agent et la **valeur du point à la date utile**, à vérifier avant calcul.
+  > La seule mention « dépend du traitement » ne rend pas ce contrôle visible.
   **Procédure d'institution** (tout régime indemnitaire) : **avis préalable du
   CST** → **délibération** de l'assemblée (visant L. 714-13 CGFP et le décret
   2024-614, fixant taux et critères) → **arrêtés individuels** (actes faisant
