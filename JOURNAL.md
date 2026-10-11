@@ -491,3 +491,22 @@ Une entrée par cas, au format ci-dessous.
   correction, puis les 56 tests déterministes ont réussi.
   Les critères, le juge et les seuils de réussite restent inchangés ; la
   vérification de l’intégrité des sources est renforcée.
+
+### 2026-10-11 — Onzième paire : distinctions visibles
+- Commit98b6766 : 27/30 integration, 30/30 degraded.
+  Traces et jugements originaux conservés.
+- Inaptitude22 : recherche documentée et impossibilité motivée présentes ;
+  absence de garantie de résultat seulement implicite, sans erreur juridique
+  confirmée. L’article3 du décret85-1054 archivé prévoit propositions et
+  impossibilité motivée. La distinction déjà dans la fiche est reprise
+  dans sa liste de contrôle et la famille finale, avec le régime applicable.
+- Valeur15 : date et source officielle présentes, confiance omise dans une
+  réponse courte destinée à un acte. Le rappel final reprend cette exigence
+  du contrat, avec ses limites, sans ajouter de circuit RH.
+- Aucun critère, juge, seuil ou consultation modifié. Nouvelle paire complète
+  sur le même commit propre nécessaire ; aucune fusion effectuée.
+- Contractuel26 : contrat, clauses et cadre local déjà recherchés ; le
+  juge assimile « fondement contractuel » au fondement légal du recrutement.
+  Relecture : reproche formel discutable, pas erreur de droit confirmée.
+  Qualification du recours inscrit au contrat rendue visible, déjà prévue
+  dans la fiche métier, sans procédure de recrutement supplémentaire.

@@ -314,7 +314,8 @@ périmètre de l'index égalité (loi du 19 juillet 2023).
    participation et adhésion distinguées ; contrats, dates, délibération et
    **accord collectif** (ou absence) réunis, validité/clauses contrôlées ?
 4. Décision défavorable → motivation + voies de recours ?
-5. Inaptitude : recherche de reclassement **sérieuse** documentée, PPR
-   proposée le cas échéant ?
+5. Inaptitude : recherche effective de postes compatibles documentée,
+   diligences obligatoires mais aboutissement non garanti, impossibilité
+   motivée selon le régime vérifié ; PPR proposée le cas échéant ?
 6. Plan d'action égalité et nominations équilibrées : seuils et taux
    vérifiés (jamais de mémoire) ?

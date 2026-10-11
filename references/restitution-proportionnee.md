@@ -153,6 +153,12 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   l'assiette et les paramètres de conversion en euros, notamment le point.
   Si l'assiette est le traitement indiciaire, nommer l'indice et la valeur
   du point à vérifier à la date utile, même sans conversion demandée.
+- **Rémunération contractuelle** : qualifier nature et fondement du recours
+  inscrit au contrat, réunir ses clauses/avenants, le cadre local et les
+  dates du dernier réexamen. Distinguer référence indiciaire et grade,
+  prise en compte de l'expérience et reprise statutaire, réévaluation
+  obligatoire et augmentation non automatique. Ces contrôles n'imposent
+  pas de refaire un parcours de recrutement ni de citer un numéro de mémoire.
 - **Discipline** : droits au dossier intégral, au conseil de son choix et à
   un temps suffisant ; instance préalable, motivation et recours actuels.
   En mode dégradé, nommer le **tribunal administratif** comme piste de
@@ -210,7 +216,10 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   et montant local. En mode dégradé, réclamer ces pièces et paramètres sans
   certifier calendrier, montant ni obligation d'adhésion.
 - **Inaptitude** : demander la portée temporaire/définitive et le champ exact
-  de l'avis. Présenter la recherche sérieuse de reclassement, la PPR avec
+  de l'avis. Présenter une recherche réelle et documentée de postes
+  compatibles : les diligences sont obligatoires dans le régime applicable,
+  sans garantie d'aboutissement ; l'impossibilité de proposer doit être
+  motivée selon le texte vérifié. Présenter aussi la PPR avec
   convention/traitement/durées/reports vérifiés, la disponibilité envisageable
   et les issues ultimes selon l'affiliation ; ne pas promettre une indemnité
   générale. Distinguer maintien après PPR et prolongation de la PPR.
@@ -252,6 +261,11 @@ conditions/seuils **et leurs conséquences**, distinctions avec les régimes
 voisins, sources et limites. Pour une procédure, un acte ou une mise en place,
 inclure aussi actes/garanties et pièces ; pour une simple valeur, rester sur
 champ, assiette, bornes et conversion, sans plan RH supplémentaire.
+Indiquer brièvement la date de référence et le niveau de confiance de la
+conclusion juridique ou de la valeur vérifiée, même dans une réponse courte
+destinée à un acte. Rattacher cette confiance à la source/version consultée
+et aux limites restant à vérifier ; ne pas certifier le dossier individuel
+du seul fait qu'une règle ou une valeur nationale est vérifiée.
 Lorsqu'une règle d'un régime voisin est écartée, nommer ce régime et la
 distinction pertinente si elle est vérifiée ; un simple « pas applicable »
 ne suffit pas à prévenir la confusion.

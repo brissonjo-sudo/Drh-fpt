@@ -5,6 +5,10 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 ## [0.7.0] — 2026-09-19 — Fiabilité mesurable et contexte progressif
 
 ### Reprise de PR18 — 2026-10-11
+- Inaptitude : distinguer diligences de reclassement et absence de garantie
+  de résultat ; impossibilité motivée dans le régime vérifié.
+- Valeurs ciblées : date et confiance explicites avec leurs limites, même
+  dans une réponse courte destinée à un acte.
 - Références officielles : numéro d’article affiché et contrôlé contre
   l’archive brute lorsqu’il est fourni ; compatibilité des anciens paquets.
   Trois tests de vérification supplémentaires.
