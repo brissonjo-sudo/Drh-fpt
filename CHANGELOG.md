@@ -5,6 +5,11 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 ## [0.7.0] — 2026-09-19 — Fiabilité mesurable et contexte progressif
 
 ### Reprise de PR18 — 2026-10-11
+- Dégradé : distinguer limites du dossier et règles juridiques négatives ;
+  conditions et effets restent des contrôles à vérifier, sans affirmation
+  ferme dissimulée dans une formulation prudente.
+- Contractuels : exceptions de saisine CCP à vérifier rendues explicites,
+  distinctes de l’ordre particulier de consultation.
 - Orientation dégradée : institutions utiles nommées comme pistes à vérifier,
   notamment tribunal administratif pour une décision administrative FPT ; aucune
   recevabilité, compétence ou modalité certifiée sans consultation.

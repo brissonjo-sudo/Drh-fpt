@@ -86,6 +86,16 @@ sont explicitement à confirmer. Ne produire ni acte engageant ni notification
 de recours prête à envoyer. Pour une valeur demandée « aujourd'hui », utiliser
 cette date connue et faire préciser la date d'effet de l'acte si elle diffère.
 
+Les négations portant sur des **conditions ou effets juridiques** restent
+des règles à vérifier : « une condition ne suffit pas » ou « un fait ne
+permet pas tel effet » ne deviennent pas des affirmations sûres parce
+qu'elles sont prudentes. Les transformer en contrôles documentaires.
+Exprimer la limite de cette réponse en la rattachant aux informations et
+consultations manquantes : « avec ces pièces et sans vérification officielle,
+je ne peux conclure ». Conserver les recommandations conservatoires et
+les contrôles méthodologiques ; ne pas confondre ceux-ci avec une règle
+substantielle certifiée.
+
 Les pistes de contrôle nomment les **institutions utiles**, sous réserve de
 vérification ; l'abstention ne les remplace pas par « instance/juridiction
 compétente » sans orientation. Pour les recours contre une décision
@@ -175,6 +185,11 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   condamnation pour instruire la demande.
 - **Insuffisance professionnelle** : statut, période d'essai, faits, dossier,
   instances, entretien, notification, indemnité et calcul propre au motif.
+  Pour le contractuel, rendre explicite la vérification des exceptions
+  réglementaires à la saisine de la CCP, selon le statut, le motif et la
+  période d'essai ; distinguer ces exceptions du changement d'ordre de
+  consultation lié à certaines situations syndicales. Ne pas déduire une
+  dispense du seul changement d'ordre ; faire vérifier séparément les deux.
   Faire apparaître le contrôle de la réduction propre à l'insuffisance et du
   texte d'indemnité du titulaire ; une abstention sur le montant individuel
   ne doit pas effacer la règle de calcul officiellement vérifiée.
@@ -238,3 +253,8 @@ conserve le format ciblé.
 Ne pas s'arrêter à la conclusion principale en omettant ces contrôles.
 En mode dégradé, identifier les familles de sources officielles à consulter
 et les pièces nécessaires ; aucun résultat juridique n'est certifié.
+
+En mode dégradé, relire aussi les phrases juridiques négatives : les
+conditions et effets deviennent des contrôles à vérifier, même si leur
+formulation semble protectrice. Rattacher l’absence de conclusion aux
+sources/pièces manquantes dans cette réponse, sans certifier une règle.

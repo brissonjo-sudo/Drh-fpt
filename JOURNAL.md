@@ -443,3 +443,15 @@ Une entrée par cas, au format ci-dessous.
   « imutabilité » au lieu de « imputabilité » dans le libellé c01 ; le gate
   strict rejette ce défaut de copie. Trace originale conservée, juge et
   contrôle du libellé inchangés, aucune réparation manuelle.
+
+### 2026-10-11 — Neuvième série et réserves explicites
+- Résultat sur 1bee33a : 29/30 integration et 29/30 degraded.
+  Traces et jugements conservés sans modification.
+- Dégradé17 : phrase négative générale ambiguë sur la rupture du lien,
+  interprétable comme règle ferme. Relecture indépendante confirme cette
+  lecture défendable, sans établir d’erreur de droit. Consigne générique
+  distingue limites de la réponse et conditions/effets juridiques non vérifiés.
+- Intégration19 : régime hors essai et ordre particulier de la CCP couverts,
+  réserve sur les autres exceptions de saisine omise. La restitution ajoute
+  ce contrôle sans inventer de dispense ni de cas réglementaire précis.
+- Critères, juge, sources et gates inchangés ; nouvelle paire requise.
