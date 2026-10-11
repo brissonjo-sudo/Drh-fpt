@@ -167,8 +167,11 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   Ne pas omettre la suppression de l'ancienne instance de recours lorsqu'elle
   pourrait être confondue avec le conseil préalable. Pour la transmission,
   distinguer liste légale actuelle, anciennes versions, convention locale et
-  demandes du préfet. Réunir date d'ouverture de la procédure et date de
-  sanction pour contrôler tout régime transitoire. Lorsqu'une instance est
+  demandes du préfet. Réunir explicitement les dates **d'ouverture de
+  procédure, de sanction et de notification**, même en mode dégradé ;
+  nommer ces événements plutôt qu'un calendrier général. Contrôler les
+  versions et garanties applicables, sans déduire le critère d'un régime
+  transitoire de la seule date d'ouverture. Lorsqu'une instance est
   présentée comme supprimée, justifier la concordance entre le texte
   modificatif consulté et la structure consolidée actuelle, avec leurs dates.
   Si un régime ancien est cité, nommer les conditions d'accès et les délais
@@ -213,7 +216,11 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   participation employeur/adhésion des agents ; relever date, contrats,
   conventions, dispositif local et **accord collectif**, existence et clauses
   à vérifier. Contrôler échéances, transitoire, dispenses, minimum national
-  et montant local. En mode dégradé, réclamer ces pièces et paramètres sans
+  et montant local. Avant tout chiffrage, vérifier aussi le champ des
+  garanties et les renvois du texte. Un renvoi devenu incohérent est signalé,
+  pas corrigé silencieusement ; confronter le règlement à la norme supérieure
+  applicable sans confondre santé et prévoyance. En mode dégradé,
+  réclamer ces pièces et paramètres sans
   certifier calendrier, montant ni obligation d'adhésion.
 - **Inaptitude** : demander la portée temporaire/définitive et le champ exact
   de l'avis. Présenter une recherche réelle et documentée de postes

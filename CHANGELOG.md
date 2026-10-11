@@ -5,6 +5,10 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 ## [0.7.0] — 2026-09-19 — Fiabilité mesurable et contexte progressif
 
 ### Reprise de PR18 — 2026-10-11
+- PSC : compléter les renvois utiles aux garanties et minima dans le
+  manifeste ; contrôler leur concordance sans réécrire le texte publié.
+- Discipline dégradée : nommer ouverture, sanction et notification dans
+  la collecte chronologique, sans présumer leur portée juridique.
 - Inaptitude : distinguer diligences de reclassement et absence de garantie
   de résultat ; impossibilité motivée dans le régime vérifié.
 - Valeurs ciblées : date et confiance explicites avec leurs limites, même

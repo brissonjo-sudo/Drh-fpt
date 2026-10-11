@@ -510,3 +510,22 @@ Une entrée par cas, au format ci-dessous.
   Relecture : reproche formel discutable, pas erreur de droit confirmée.
   Qualification du recours inscrit au contrat rendue visible, déjà prévue
   dans la fiche métier, sans procédure de recrutement supplémentaire.
+
+### 2026-10-11 — Douzième paire : renvois et chronologie
+- Commit dd4bdd6 : 29/30 integration, 29/30 degraded.
+  Traces et jugements originaux conservés.
+- PSC10 : article 2 fourni mais renvoi définissant le champ des garanties
+  absent du contexte, sans erreur confirmée du calcul de 7 euros.
+  Paquet9 : articles 1/3/4/6 extraits du même texte brut déjà consulté,
+  292 traces et 39 archives identiques ; dates originales conservées.
+  Le manifeste inclut ces articles pour les futures consultations.
+- Contrôle des garanties/renvois avant chiffrage renforcé : santé, référence
+  de 30 euros et minimum de 15 euros ; prévoyance, ancien minimum de 7 euros
+  et nouveau régime selon les dispositions transitoires de 2025.
+  Article 5 : renvoi littéral à L827-11 conservé malgré son changement
+  dans le code ; financement santé établi par L827-10 et article 6.
+- Dégradé29 : calendrier de procédure seulement générique ; événements
+  ouverture/sanction/notification nommés dans la collecte. L’ouverture ne
+  devient pas le critère du transitoire 2019, fondé sur la date de sanction.
+- Compléments relus indépendamment ; aucun critère, juge ou seuil modifié.
+  Nouvelle paire complète nécessaire ; aucune fusion effectuée.
