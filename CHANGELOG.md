@@ -5,6 +5,10 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 ## [0.7.0] — 2026-09-19 — Fiabilité mesurable et contexte progressif
 
 ### Reprise de PR18 — 2026-10-11
+- Protection fonctionnelle : instruction de la faute par l’employeur, sans
+  preuve générale d’absence exigée de l’agent ; dérogation d’intérêt général
+  sous contrôle du juge. Critère trop absolu corrigé sur décision CE2024
+  réellement consultée et relecture indépendante.
 - PSC : compléter les renvois utiles aux garanties et minima dans le
   manifeste ; contrôler leur concordance sans réécrire le texte publié.
 - Discipline dégradée : nommer ouverture, sanction et notification dans

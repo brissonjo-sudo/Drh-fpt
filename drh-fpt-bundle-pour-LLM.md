@@ -1193,7 +1193,13 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   de date d'effet, motivation et recours, sans date automatiquement inventée.
 - **Protection fonctionnelle** : distinguer obligation lorsque les conditions
   sont réunies et décision d'octroi ; lien au service, faute détachable,
-  indépendance du jugement pénal ; rendre explicites **assistance juridique**,
+  indépendance du jugement pénal. L'agent documente les attaques et leur lien
+  au service ; l'employeur apprécie une éventuelle faute personnelle imputable
+  à l'agent, sans exiger de lui une preuve générale d'absence. Ne pas présenter
+  cette faute comme le seul motif légal possible de refus : une dérogation
+  d'intérêt général doit être légalement admissible, établie et contrôlable
+  par le juge ; ne pas inventer ce motif dans le dossier.
+  Rendre explicites **assistance juridique**,
   frais de procédure/avocat et réparation éventuelle, avec une courte réserve
   sur les modalités et limites de prise en charge à vérifier. Si des frais
   d'avocat sont demandés, contrôler demande écrite, faits/durée couverts,
@@ -3754,6 +3760,15 @@ version consolidée)
   poursuites civiles/pénales pour des faits commis dans l'exercice des
   fonctions, **sauf faute personnelle détachable** (intentionnelle, excès
   manifeste, comportement étranger au service).
+- **Instruction de la faute** : l'agent documente les attaques et leur lien
+  au service ; l'employeur apprécie une éventuelle faute personnelle qui lui
+  serait imputable, au vu du dossier. Ne pas exiger une preuve générale
+  d'absence de faute de l'agent, ni présumer sa faute ou l'écarter sans examen.
+- **Dérogation** : une protection due ne devient pas une faculté de refus.
+  Des motifs d'intérêt général légalement admissibles, établis et soumis au
+  contrôle du juge peuvent toutefois justifier une dérogation (CE, 7 juin
+  2024, n°476196, §3 ; version et portée à vérifier). N'inventer aucun motif
+  dans un dossier qui n'en révèle pas.
 - **Contenu** : assistance juridique, prise en charge des frais de
   procédure/avocat, réparation du préjudice. Plafonds et modalités précises :
   **à vérifier** (convention d'assurance statutaire le cas échéant).
@@ -3967,7 +3982,9 @@ Gabarits → `assets/`.
 
 1. Qualité du demandeur et nature des faits (victime/mis en cause)
    identifiées avant toute protection fonctionnelle ?
-2. Faute personnelle détachable explicitement écartée ou identifiée ?
+2. Faute personnelle éventuelle appréciée par l'employeur, sans preuve
+   générale d'absence exigée de l'agent ? Motif d'intérêt général éventuel
+   vérifié et motivé, sans motif inventé ni refus discrétionnaire ?
 3. Assistance juridique, frais de procédure/avocat et réparation explicités,
    modalités/limites à vérifier sans plafond inventé ? Si refus (protection,
    cumul) : motivation et voies de recours présentes ?

@@ -735,7 +735,7 @@
       },
       {
         "id": "18-c04",
-        "texte": "En tant que victime, la protection n'est refusée qu'en cas de faute personnelle détachable de l'agent lui-même — à écarter ici, pas à démontrer par l'agent"
+        "texte": "La faute personnelle envisagée est imputable à l’agent lui-même et appréciée par l’employeur au vu des faits, sans imposer à l’agent une preuve générale d’absence de faute. Ne présente pas la faute personnelle comme le seul motif légal possible de refus : les motifs d’intérêt général légalement admissibles restent établis et soumis au contrôle du juge, sans motif inventé dans ce dossier"
       },
       {
         "id": "18-c05",
@@ -749,7 +749,7 @@
     "echec_si": [
       "Subordonne l'octroi de la protection fonctionnelle à une condamnation pénale préalable de l'agresseur",
       "Traite le refus éventuel comme un acte sans motivation ni voies de recours",
-      "Exige de l'agent qu'il prouve l'absence de faute personnelle plutôt que d'écarter cette hypothèse d'office au vu des faits"
+      "Exige de l’agent une preuve générale d’absence de faute personnelle, présume sa faute sans instruction ou invente un motif de refus non établi"
     ],
     "contextes": [
       "statut-garanties"

@@ -714,6 +714,14 @@
         "16-echec-hors-base",
         "17-echec-droit-prive"
       ]
+    },
+    {
+      "key": "protection-ce-476196",
+      "kind": "decision",
+      "text_id": "CETATEXT000049675953",
+      "cases": [
+        "18"
+      ]
     }
   ]
 }

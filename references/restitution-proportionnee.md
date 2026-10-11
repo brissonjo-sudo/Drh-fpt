@@ -187,7 +187,13 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   de date d'effet, motivation et recours, sans date automatiquement inventée.
 - **Protection fonctionnelle** : distinguer obligation lorsque les conditions
   sont réunies et décision d'octroi ; lien au service, faute détachable,
-  indépendance du jugement pénal ; rendre explicites **assistance juridique**,
+  indépendance du jugement pénal. L'agent documente les attaques et leur lien
+  au service ; l'employeur apprécie une éventuelle faute personnelle imputable
+  à l'agent, sans exiger de lui une preuve générale d'absence. Ne pas présenter
+  cette faute comme le seul motif légal possible de refus : une dérogation
+  d'intérêt général doit être légalement admissible, établie et contrôlable
+  par le juge ; ne pas inventer ce motif dans le dossier.
+  Rendre explicites **assistance juridique**,
   frais de procédure/avocat et réparation éventuelle, avec une courte réserve
   sur les modalités et limites de prise en charge à vérifier. Si des frais
   d'avocat sont demandés, contrôler demande écrite, faits/durée couverts,

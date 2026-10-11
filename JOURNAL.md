@@ -529,3 +529,23 @@ Une entrée par cas, au format ci-dessous.
   devient pas le critère du transitoire 2019, fondé sur la date de sanction.
 - Compléments relus indépendamment ; aucun critère, juge ou seuil modifié.
   Nouvelle paire complète nécessaire ; aucune fusion effectuée.
+
+### 2026-10-11 — Treizième paire : protection fonctionnelle
+- Commit d52d70a : 29/30 integration, 30/30 degraded.
+  Traces et jugements originaux conservés.
+- Protection18 : examen par l’employeur déjà indiqué mais formulation
+  « pièces établissant l’absence de faute » ambiguë ; pas d’erreur de droit
+  certaine confirmée. Instruction et qualification par l’employeur distinguées
+  des pièces des attaques fournies par l’agent, sans preuve négative générale.
+- Critère18-c04 trop absolu : « refusée qu’en cas de faute personnelle »
+  excluait la dérogation d’intérêt général reconnue par CE, 7 juin 2024,
+  n°476196, §3. Consultation réelle archivée et relecture indépendante :
+  critère et échec associé corrigés, sans faculté discrétionnaire ni motif
+  inventé. L’appréciation de la faute reste exigée, sans l’écarter d’office.
+- CE2024 énonce le principe codifié L134-1/L134-5 dans une affaire d’agent
+  de préfecture ; seules ces règles générales sont utilisées en FPT.
+  La décision ne formule pas une règle autonome de charge de preuve.
+- Paquet10 : ancienne292 traces inchangées, plus cette consultation réelle ;
+  293 traces, 40 archives. Manifeste, fiche et restitution complétés.
+- Juge, seuils et jugements antérieurs inchangés. Nouvelle paire complète
+  nécessaire sur le même commit propre ; aucune fusion effectuée.
