@@ -1811,13 +1811,24 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
 - Toute sanction est un **acte faisant grief** → vérification + motivation +
   voies de recours (§7, §10).
 - Le **conseil de discipline de recours** a été supprimé par la réforme de
-  2019 et ses textes d'application en 2020, hors procédures transitoires déjà
-  engagées à cette date. Pour une sanction nouvelle, ne jamais le présenter
+  2019 et ses textes d'application en 2020. Le régime transitoire de l'article
+  94 XI de la loi 2019-828 vise les recours contre des **sanctions intervenues
+  avant la publication de la loi, le 7 août 2019**, pas seulement les recours
+  déjà engagés à cette date. Vérifier les conditions et délais propres au
+  dossier ancien ; ne pas ouvrir automatiquement aujourd'hui un recours.
+  Pour une sanction nouvelle, ne jamais le présenter
   comme une voie de recours : vérifier et mentionner les recours administratifs
   utiles et le recours contentieux devant le tribunal administratif.
   Confronter les textes de suppression et de transition à la structure
   consolidée actuelle du décret 89-677 ; rendre cette confrontation visible
   dans la justification, en distinguant le chapitre abrogé du conseil préalable.
+  L'article 31 II du décret 2020-1533 porte « septembre 2009 », alors que ses
+  visas et son chapitre II visent le décret de 1989. Ne pas corriger le texte
+  officiel silencieusement ni fonder le transitoire sur cette seule mention :
+  s'appuyer sur l'article 94 XI de la loi et qualifier l'anomalie si elle est citée.
+  Pour les voies administratives utiles, vérifier le recours gracieux auprès
+  de l'auteur et son effet sur le délai contentieux (CRPA L410-1 et L411-2) ;
+  ne pas inventer un supérieur hiérarchique de l'autorité territoriale.
 - **Contrôle de légalité** : la version en vigueur de l'article L2131-2 du
   CGCT ne prévoit plus une catégorie de transmission des sanctions disciplinaires.
   La version au 1er janvier 2004 visait précisément les **sanctions soumises à

@@ -5,6 +5,10 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 ## [0.7.0] — 2026-09-19 — Fiabilité mesurable et contexte progressif
 
 ### Reprise de PR18 — 2026-10-11
+- Restitution adaptée à l'objet demandé ; compagnon et sources avant le
+  contrat métier, contrôle de couverture après les modules, sans duplication.
+- Transitoire disciplinaire corrigé d'après la loi 2019-828, article 94 XI
+  (date de sanction) ; recours gracieux étayé par CRPA L410-1/L411-2.
 - Priorité de restitution DRH clarifiée dans la co-activation, rappel final
   générique après les données de sources et extraction vérifiée du contenu
   principal des pages officielles, archives originales inchangées.

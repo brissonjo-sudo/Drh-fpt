@@ -500,6 +500,10 @@
         "27-architecture-decision-action": [
           "L211-2",
           "L211-5"
+        ],
+        "29-nonregression-discipline-recours": [
+          "L410-1",
+          "L411-2"
         ]
       }
     },
@@ -603,6 +607,14 @@
         "04": [
           "10",
           "30",
+          "94"
+        ],
+        "29-nonregression-discipline-recours": [
+          "32",
+          "94"
+        ],
+        "09": [
+          "32",
           "94"
         ]
       }

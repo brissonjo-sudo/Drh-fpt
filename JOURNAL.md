@@ -345,8 +345,17 @@ Une entrée par cas, au format ci-dessous.
   de structure consolidée rendu traçable. CAA Lyon 7 mars 2024 n°22LY01568
   réellement consultée et archivée pour la nature de la fin de détachement.
   Dossier complémentaire : 271 traces, 36 archives. Nouvelle validation requise.
-- Diagnostic sur 51d1040 : 08, 13 et 29 entièrement satisfaits ; 21 conserve
+- Diagnostic sur 51d1040 : 08 et 13 entièrement satisfaits ; 29 valide la
+  confrontation de structure mais réserve le recours gracieux faute de preuve ;
+  21 conserve
   deux omissions (règle générale du point de départ et voies de sortie).
   La checklist de restitution est lue après les modules, une seule fois ;
   les alternatives légales de fin de fonctions restent nécessaires même
   lorsque la demande porte sur un départ immédiat.
+- Complément de sources : CRPA L410-1/L411-2 pour le recours gracieux et loi
+  2019-828 articles 32/94 pour le transitoire disciplinaire, extraits des
+  archives déjà réellement consultées, horodatages d'origine préservés.
+  L'article 94 XI vise la date de la sanction, antérieure à la publication
+  du 7 août 2019 ; le module et le critère 29-c02 étaient trop restrictifs.
+  Correction corroborée par relecture indépendante. L'anomalie « 2009 » de
+  l'article 31 II du décret 2020-1533 est conservée et explicitement qualifiée.
