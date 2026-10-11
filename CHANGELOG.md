@@ -4,6 +4,15 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
 ## [0.7.0] — 2026-09-19 — Fiabilité mesurable et contexte progressif
 
+### Validation de PR18 — 2026-10-11
+- Deux campagnes strictes de 30 cas : intégration et dégradé 30/30, sur
+  `cc1f56f6f7a18cdfb569e757795d717d7f206b79` propre ; gate commun réussi.
+- 56 tests déterministes, preuves originales et sources officielles archivées ;
+  rapports datés et reproduction portable. Les échecs antérieurs sont conservés.
+- Réduction moyenne de 59.0 % des octets DRH en chargement sélectif,
+  compagnon et sources en supplément. Aucun changement de comportement dans
+  le commit de publication documentaire ; aucune fusion effectuée.
+
 ### Reprise de PR18 — 2026-10-11
 - Maintien après PPR : durée rattachée explicitement à cette phase et
   au renvoi à la procédure de reclassement, sans prolongation automatique.

@@ -588,3 +588,12 @@ Une entrée par cas, au format ci-dessous.
   Omission documentaire confirmée ; contrôle déjà présent rendu explicite
   pour les questions ciblées de transmission, sans présomption de convention
   ni nouvelle obligation légale. Aucune source supplémentaire requise.
+
+### 2026-10-11 — Validation complète de PR18
+- Commit testé : cc1f56f6f7a18cdfb569e757795d717d7f206b79, propre dans les deux modes.
+- Intégration 30/30 et dégradé 30/30 ; tous les critères obligatoires SATISFAIT,
+  aucune erreur juridique détectée. Gate commun des traces et provenances réussi.
+- 56 tests déterministes, bundle et cohérence réussis ; relecture indépendante
+  sans défaut bloquant. Rapport daté et archive portable dans tests/rapports/.
+- Historique des échecs conservé sans réécriture. Validation limitée aux cas,
+  modèles et corpus daté, sans garantie universelle. Aucune fusion effectuée.

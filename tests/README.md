@@ -1,6 +1,6 @@
 # Validation de DRH-FPT
 
-`cas-de-test.json` contient 32 variantes : **30 cas d’intégration et30 cas dégradés**.
+`cas-de-test.json` contient 32 variantes : **30 cas d’intégration et 30 cas dégradés**.
 Chaque réponse vient d’une session indépendante puis d’un modèle juge distinct.
 
 ## Consultation réelle avant intégration
@@ -10,7 +10,7 @@ restent dans son environnement local. Le manifeste fixe les textes, passages,
 cas et date de référence ; mettre cette date à jour pour une nouvelle revue.
 
 ```powershell
-python tests/live_sources.py --manifest tests/sources-manifest.json `
+python -X utf8 tests/live_sources.py --manifest tests/sources-manifest.json `
   --legal-skill 'C:\chemin\droit-francais-skill' `
   --output tests/resultats/sources
 ```
@@ -34,19 +34,19 @@ Partir d’un commit propre, avec un compagnon propre et versionné.
 Exemple avec le CLI Codex déjà connecté au compte de l’utilisateur :
 
 ```powershell
-python tests/run_tests.py --provider codex --model gpt-6.1-sol `
+python -X utf8 tests/run_tests.py --provider codex --model gpt-6.1-sol `
   --judge --judge-provider codex --judge-model gpt-6-sol `
   --reasoning-effort medium --judge-reasoning-effort medium `
   --strict --workers 2 --context-mode selective `
   --legal-skill 'C:\chemin\droit-francais-skill' `
   --evidence-mode live --evidence-file tests/resultats/sources/evidence.json
 
-python tests/run_tests.py --mode degraded --provider codex --model gpt-6.1-sol `
+python -X utf8 tests/run_tests.py --mode degraded --provider codex --model gpt-6.1-sol `
   --judge --judge-provider codex --judge-model gpt-6-sol `
   --reasoning-effort medium --judge-reasoning-effort medium `
   --strict --workers 2 --context-mode selective
 
-python tests/release_gate.py --integration '<bilan-integration.json>' `
+python -X utf8 tests/release_gate.py --integration '<bilan-integration.json>' `
   --degraded '<bilan-degraded.json>' --output tests/resultats/gate-publication.json
 ```
 
@@ -102,7 +102,14 @@ il ne constitue pas une nouvelle exécution du skill.
 ## Contrôles locaux
 
 ```powershell
-python -m unittest discover -s tests -p 'test_*.py'
-python scripts/build_bundle.py --check
-python scripts/check_coherence.py
+python -X utf8 -m unittest discover -s tests -p 'test_*.py'
+python -X utf8 scripts/build_bundle.py --check
+python -X utf8 scripts/check_coherence.py
 ```
+
+## Validation de la PR18 — 11 octobre 2026
+
+[Rapport complet et archive portable](rapports/VALIDATION-PR18-2026-10-11.md).
+Deux campagnes de 30 cas sur le même commit propre, gate commun réussi.
+Les preuves et la documentation sont publiées dans un commit distinct ;
+le commit testé est identifié dans le rapport et la mesure.

@@ -115,8 +115,12 @@ drh-fpt/
     ├── test_providers.py                 Tests des adaptateurs sans réseau
     ├── prompt-claude-code.md             Protocole sous-agents Claude Code (lit cas-de-test.json)
     ├── cas-co-activation.md              Cas transverse drh-fpt × recherche-juridique
-    └── rapports/                         Rapports de campagnes validés (datés)
-        ├── CONTEXTE-v0.7.0.md            Mesure complet/sélectif du candidat v0.7.0
+    └── rapports/                         Rapports datés et preuves de validation
+        ├── CONTEXTE-v0.7.0.md            Mesure historique du 19 septembre 2026
+        ├── CONTEXTE-PR18-2026-10-11.md    Mesure du commit testé de la PR18
+        ├── CONTEXTE-PR18-2026-10-11.json  Données et provenance de cette mesure
+        ├── VALIDATION-PR18-2026-10-11.md  Deux campagnes finales et historique
+        ├── PREUVES-PR18-2026-10-11.zip    Réponses, jugements et sources brutes
         └── RAPPORT-2026-06-27.md         Campagne 10 cas (v0.4.2, archivée)
 ```
 
@@ -165,9 +169,17 @@ répondant/juge à contextes séparés — voir `tests/`) :
   **réussite 5/5 sur 9 critères**.
 - Historique : 3 tests internes initiaux + 5 portages externes (Gemini,
   ChatGPT, Grok réussis ; Vibe conservé comme contre-exemple).
-- **Candidat v0.7.0** : harnais multifournisseur, critères identifiés, reprise,
-  traces de consultation et chargement sélectif. Sa publication reste soumise
-  aux deux campagnes complètes décrites dans `tests/README.md`.
+- **PR18, validation du 11 octobre 2026** : **30/30 intégration et 30/30
+  dégradé**, tous les critères obligatoires satisfaits, aucune erreur juridique
+  détectée et contrôle commun des preuves réussi sur `cc1f56f6f7a18cdfb569e757795d717d7f206b79`.
+  Répondant `gpt-6.1-sol`, juge distinct `gpt-6-sol`, effort `high`.
+  **56 tests déterministes** réussis. Les échecs antérieurs sont conservés dans
+  [le rapport et son archive](tests/rapports/VALIDATION-PR18-2026-10-11.md).
+  La validation porte sur ces cas et ce corpus daté ; une réponse juridique
+  future exige de nouvelles consultations.
+- **Chargement sélectif** : réduction moyenne de **59.0 % des octets
+  DRH** sur les 30 cas d’intégration ; compagnon juridique et sources en
+  supplément. [Mesure datée](tests/rapports/CONTEXTE-PR18-2026-10-11.md).
 
 Détail : `tests/rapports/`, `JOURNAL.md`, `CHANGELOG.md`.
 
