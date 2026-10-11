@@ -5,6 +5,12 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 ## [0.7.0] — 2026-09-19 — Fiabilité mesurable et contexte progressif
 
 ### Reprise de PR18 — 2026-10-11
+- Protection fonctionnelle : assistance juridique et modalités de prise en
+  charge rendues explicites, avec vérification des limites et conventions,
+  sans remboursement illimité ni plafond universel inventé.
+- PSC : pièces locales, accord collectif et clauses d’adhésion intégrés aux
+  variables et contrôles ; distinction participation/adhésion, santé/prévoyance
+  et vérification du transitoire, sans certifier de règle en mode dégradé.
 - Garanties de décision individuelle (motivation applicable, notification et
   recours, y compris refus) couvertes dès l'analyse, sans attendre la rédaction
   d'un acte ; maintien du format ciblé pour une simple valeur ou un plafond.

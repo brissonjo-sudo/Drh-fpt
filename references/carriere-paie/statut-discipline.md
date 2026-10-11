@@ -93,6 +93,11 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
   avant la publication de la loi, le 7 août 2019**, pas seulement les recours
   déjà engagés à cette date. Vérifier les conditions et délais propres au
   dossier ancien ; ne pas ouvrir automatiquement aujourd'hui un recours.
+  Lorsque la réponse rappelle ce régime ancien, conserver dans la même
+  phrase la réserve « sous les conditions d'accès et délais du régime
+  transitoire à vérifier », même si sa date exclut le dossier actuel.
+  La date de la sanction n'est pas à elle seule une preuve d'éligibilité
+  d'un dossier ancien ; ne pas détailler un régime hors objet.
   Pour une sanction nouvelle, ne jamais le présenter
   comme une voie de recours : vérifier et mentionner les recours administratifs
   utiles et le recours contentieux devant le tribunal administratif.

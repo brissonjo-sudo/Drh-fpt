@@ -149,7 +149,13 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   de date d'effet, motivation et recours, sans date automatiquement inventée.
 - **Protection fonctionnelle** : distinguer obligation lorsque les conditions
   sont réunies et décision d'octroi ; lien au service, faute détachable,
-  indépendance du jugement pénal, protection/assistance et réparation.
+  indépendance du jugement pénal ; rendre explicites **assistance juridique**,
+  frais de procédure/avocat et réparation éventuelle, avec une courte réserve
+  sur les modalités et limites de prise en charge à vérifier. Si des frais
+  d'avocat sont demandés, contrôler demande écrite, faits/durée couverts,
+  avocat choisi et convention agent-avocat communiquée à l'employeur ;
+  distinguer la convention employeur-avocat facultative et ses justificatifs.
+  Aucune prise en charge illimitée ni plafond inventé.
   Examiner aussi le refus motivé et ses recours, sans attendre une
   condamnation pour instruire la demande.
 - **Insuffisance professionnelle** : statut, période d'essai, faits, dossier,
@@ -159,6 +165,12 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   ne doit pas effacer la règle de calcul officiellement vérifiée.
   Si la réponse compare, donner les différences de procédure et
   d'indemnité entre titulaire et contractuel, sans transposition des règles.
+- **Protection sociale complémentaire** : distinguer santé/prévoyance et
+  participation employeur/adhésion des agents ; relever date, contrats,
+  conventions, dispositif local et **accord collectif**, existence et clauses
+  à vérifier. Contrôler échéances, transitoire, dispenses, minimum national
+  et montant local. En mode dégradé, réclamer ces pièces et paramètres sans
+  certifier calendrier, montant ni obligation d'adhésion.
 - **Inaptitude** : demander la portée temporaire/définitive et le champ exact
   de l'avis. Présenter la recherche sérieuse de reclassement, la PPR avec
   convention/traitement/durées/reports vérifiés, la disponibilité envisageable

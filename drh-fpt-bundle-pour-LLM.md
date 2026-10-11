@@ -1155,7 +1155,13 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   de date d'effet, motivation et recours, sans date automatiquement inventée.
 - **Protection fonctionnelle** : distinguer obligation lorsque les conditions
   sont réunies et décision d'octroi ; lien au service, faute détachable,
-  indépendance du jugement pénal, protection/assistance et réparation.
+  indépendance du jugement pénal ; rendre explicites **assistance juridique**,
+  frais de procédure/avocat et réparation éventuelle, avec une courte réserve
+  sur les modalités et limites de prise en charge à vérifier. Si des frais
+  d'avocat sont demandés, contrôler demande écrite, faits/durée couverts,
+  avocat choisi et convention agent-avocat communiquée à l'employeur ;
+  distinguer la convention employeur-avocat facultative et ses justificatifs.
+  Aucune prise en charge illimitée ni plafond inventé.
   Examiner aussi le refus motivé et ses recours, sans attendre une
   condamnation pour instruire la demande.
 - **Insuffisance professionnelle** : statut, période d'essai, faits, dossier,
@@ -1165,6 +1171,12 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   ne doit pas effacer la règle de calcul officiellement vérifiée.
   Si la réponse compare, donner les différences de procédure et
   d'indemnité entre titulaire et contractuel, sans transposition des règles.
+- **Protection sociale complémentaire** : distinguer santé/prévoyance et
+  participation employeur/adhésion des agents ; relever date, contrats,
+  conventions, dispositif local et **accord collectif**, existence et clauses
+  à vérifier. Contrôler échéances, transitoire, dispenses, minimum national
+  et montant local. En mode dégradé, réclamer ces pièces et paramètres sans
+  certifier calendrier, montant ni obligation d'adhésion.
 - **Inaptitude** : demander la portée temporaire/définitive et le champ exact
   de l'avis. Présenter la recherche sérieuse de reclassement, la PPR avec
   convention/traitement/durées/reports vérifiés, la disponibilité envisageable
@@ -1848,6 +1860,11 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
   avant la publication de la loi, le 7 août 2019**, pas seulement les recours
   déjà engagés à cette date. Vérifier les conditions et délais propres au
   dossier ancien ; ne pas ouvrir automatiquement aujourd'hui un recours.
+  Lorsque la réponse rappelle ce régime ancien, conserver dans la même
+  phrase la réserve « sous les conditions d'accès et délais du régime
+  transitoire à vérifier », même si sa date exclut le dossier actuel.
+  La date de la sanction n'est pas à elle seule une preuve d'éligibilité
+  d'un dossier ancien ; ne pas détailler un régime hors objet.
   Pour une sanction nouvelle, ne jamais le présenter
   comme une voie de recours : vérifier et mentionner les recours administratifs
   utiles et le recours contentieux devant le tribunal administratif.
@@ -2379,6 +2396,11 @@ invalidité ; égalité professionnelle (plan d'action, nominations
 - **Origine de l'affection** : maladie ordinaire vs imputable au service (CITIS).
 - **Organisation locale** : médecine de prévention interne ou conventionnée ;
   délibération télétravail ; offre d'action sociale (CNAS, COS).
+- **PSC** : date de référence, couverture santé ou prévoyance, contrats ou
+  conventions de participation et leurs échéances, délibération locale,
+  existence d'un **accord collectif**, validité et clauses d'adhésion/dispense.
+  Demander l'accord ou le constat de son absence ; un contrat collectif ne
+  prouve pas à lui seul l'existence d'un accord collectif valide.
 - **Effectif** : la formation spécialisée en SSCT est obligatoire à 200 agents
   (acquise au-dessus de 350) → voir branche CST.
 
@@ -2440,6 +2462,16 @@ n° 2022-581, loi n° 2025-1251 du 22 décembre 2025) :
 
 > Montants planchers et taux de participation **évoluent** → données volatiles,
 > à vérifier (§9). Débat préalable obligatoire en assemblée et association du CST.
+
+**Participation et adhésion sont distinctes.** Pour la santé, vérifier si
+un accord collectif valide prévoit la souscription obligatoire des agents
+(CGFP L827-2, [référence officielle à consulter dans sa version applicable](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424412)).
+Examiner le contrat, l'accord et ses clauses avant de qualifier l'adhésion.
+Pour la prévoyance, vérifier aussi le calendrier de la réforme et le régime
+transitoire du contrat existant ; ne pas déduire la règle de santé de celle
+de prévoyance. Distinguer minimum national et participation locale.
+En mode dégradé, ces éléments sont des pièces et contrôles à faire vérifier ;
+aucun calendrier, montant ou caractère obligatoire n'est certifié.
 
 ### 5.7 Égalité professionnelle
 
@@ -2643,7 +2675,9 @@ périmètre de l'index égalité (loi du 19 juillet 2023).
 
 1. Statut de l'agent identifié (régime de congés) ?
 2. Imputabilité au service tranchée (ou avis sollicité) ?
-3. Montants (PSC, télétravail) vérifiés, jamais de mémoire ?
+3. Montants (PSC, télétravail) vérifiés, jamais de mémoire ? Pour la PSC,
+   participation et adhésion distinguées ; contrats, dates, délibération et
+   **accord collectif** (ou absence) réunis, validité/clauses contrôlées ?
 4. Décision défavorable → motivation + voies de recours ?
 5. Inaptitude : recherche de reclassement **sérieuse** documentée, PPR
    proposée le cas échéant ?
@@ -3653,6 +3687,17 @@ version consolidée)
 - **Contenu** : assistance juridique, prise en charge des frais de
   procédure/avocat, réparation du préjudice. Plafonds et modalités précises :
   **à vérifier** (convention d'assurance statutaire le cas échéant).
+- **Mise en œuvre concrète** : rendre explicites l'assistance juridique,
+  les frais de procédure/avocat et la réparation éventuelle, même si la
+  question porte d'abord sur le moment de l'octroi. Réserver brièvement
+  l'étendue et les modalités de prise en charge à leur vérification officielle.
+  Si des frais d'avocat sont demandés, vérifier la demande écrite, les faits
+  et la durée couverts, l'avocat choisi et la convention agent-avocat à
+  communiquer à l'employeur. La convention de l'employeur avec l'avocat est une
+  possibilité à vérifier, pas une obligation générale ; elle encadre les
+  honoraires et autres frais, avec règlement/justificatifs prévus. Ne pas
+  promettre un remboursement illimité ni inventer un plafond universel.
+  En mode dégradé, demander ces pièces et contrôles sans certifier de régime.
 - **Octroi** par décision de **l'autorité territoriale**, pas l'assemblée.
 - **Refus = acte faisant grief** : motivation + voies et délais de recours
   obligatoires.
@@ -3853,7 +3898,9 @@ Gabarits → `assets/`.
 1. Qualité du demandeur et nature des faits (victime/mis en cause)
    identifiées avant toute protection fonctionnelle ?
 2. Faute personnelle détachable explicitement écartée ou identifiée ?
-3. Si refus (protection, cumul) : motivation et voies de recours présentes ?
+3. Assistance juridique, frais de procédure/avocat et réparation explicités,
+   modalités/limites à vérifier sans plafond inventé ? Si refus (protection,
+   cumul) : motivation et voies de recours présentes ?
 4. Emploi qualifié d'« exposé » avant de statuer sur cumul/départ privé
    (interne vs HATVP) ?
 5. Circuit de signalement et référents identifiés (propre ou mutualisé) ?

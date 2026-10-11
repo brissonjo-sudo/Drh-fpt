@@ -31,6 +31,11 @@ invalidité ; égalité professionnelle (plan d'action, nominations
 - **Origine de l'affection** : maladie ordinaire vs imputable au service (CITIS).
 - **Organisation locale** : médecine de prévention interne ou conventionnée ;
   délibération télétravail ; offre d'action sociale (CNAS, COS).
+- **PSC** : date de référence, couverture santé ou prévoyance, contrats ou
+  conventions de participation et leurs échéances, délibération locale,
+  existence d'un **accord collectif**, validité et clauses d'adhésion/dispense.
+  Demander l'accord ou le constat de son absence ; un contrat collectif ne
+  prouve pas à lui seul l'existence d'un accord collectif valide.
 - **Effectif** : la formation spécialisée en SSCT est obligatoire à 200 agents
   (acquise au-dessus de 350) → voir branche CST.
 
@@ -92,6 +97,16 @@ n° 2022-581, loi n° 2025-1251 du 22 décembre 2025) :
 
 > Montants planchers et taux de participation **évoluent** → données volatiles,
 > à vérifier (§9). Débat préalable obligatoire en assemblée et association du CST.
+
+**Participation et adhésion sont distinctes.** Pour la santé, vérifier si
+un accord collectif valide prévoit la souscription obligatoire des agents
+(CGFP L827-2, [référence officielle à consulter dans sa version applicable](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424412)).
+Examiner le contrat, l'accord et ses clauses avant de qualifier l'adhésion.
+Pour la prévoyance, vérifier aussi le calendrier de la réforme et le régime
+transitoire du contrat existant ; ne pas déduire la règle de santé de celle
+de prévoyance. Distinguer minimum national et participation locale.
+En mode dégradé, ces éléments sont des pièces et contrôles à faire vérifier ;
+aucun calendrier, montant ou caractère obligatoire n'est certifié.
 
 ### 5.7 Égalité professionnelle
 
@@ -295,7 +310,9 @@ périmètre de l'index égalité (loi du 19 juillet 2023).
 
 1. Statut de l'agent identifié (régime de congés) ?
 2. Imputabilité au service tranchée (ou avis sollicité) ?
-3. Montants (PSC, télétravail) vérifiés, jamais de mémoire ?
+3. Montants (PSC, télétravail) vérifiés, jamais de mémoire ? Pour la PSC,
+   participation et adhésion distinguées ; contrats, dates, délibération et
+   **accord collectif** (ou absence) réunis, validité/clauses contrôlées ?
 4. Décision défavorable → motivation + voies de recours ?
 5. Inaptitude : recherche de reclassement **sérieuse** documentée, PPR
    proposée le cas échéant ?

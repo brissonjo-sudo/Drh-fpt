@@ -405,3 +405,24 @@ Une entrée par cas, au format ci-dessous.
 - La réponse29 cite la structure et borne le régime ancien, mais omet
   la concordance avec le texte modificatif et le contrôle des conditions
   d’accès ; checklist de restitution précisée, critères29 inchangés.
+
+### 2026-10-11 — Septième série et collecte PSC
+- Résultat sur 2c8ceda : 28/30 integration et 29/30 degraded.
+  Traces conservées intégralement.
+- La réponse dégradée PSC omet l’accord collectif. La fiche QVT ne le
+  demandait pas dans les variables et la restitution ne couvrait pas la PSC.
+  CGFP L827-2 réellement consulté établit son rôle dans la souscription.
+- Variables, règle conditionnelle et checklist complétées : contrats, dates,
+  accord ou absence, validité/clauses, participation et adhésion distinctes.
+  Critères, juge et gates inchangés ; nouvelles campagnes complètes requises.
+
+- Le cas 29 exclut correctement la sanction de 2026 et justifie
+  l’abrogation mais omet la réserve conditions/délais du régime ancien.
+  Lorsqu’il est cité, cette réserve reste jointe à la date : celle-ci
+  ne démontre pas à elle seule l’éligibilité d’un ancien dossier.
+
+- La réponse au cas 18 couvre frais et réparation mais omet explicitement
+  l’assistance juridique. Les articles R134-1 à R134-5 déjà consultés et
+  archivés encadrent demande écrite, faits/durée, avocat/convention et
+  règlement. Couverture explicitée dans fiche et restitution finale,
+  sous vérification du régime applicable, sans plafond inventé.

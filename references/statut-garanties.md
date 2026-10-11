@@ -64,6 +64,17 @@ version consolidée)
 - **Contenu** : assistance juridique, prise en charge des frais de
   procédure/avocat, réparation du préjudice. Plafonds et modalités précises :
   **à vérifier** (convention d'assurance statutaire le cas échéant).
+- **Mise en œuvre concrète** : rendre explicites l'assistance juridique,
+  les frais de procédure/avocat et la réparation éventuelle, même si la
+  question porte d'abord sur le moment de l'octroi. Réserver brièvement
+  l'étendue et les modalités de prise en charge à leur vérification officielle.
+  Si des frais d'avocat sont demandés, vérifier la demande écrite, les faits
+  et la durée couverts, l'avocat choisi et la convention agent-avocat à
+  communiquer à l'employeur. La convention de l'employeur avec l'avocat est une
+  possibilité à vérifier, pas une obligation générale ; elle encadre les
+  honoraires et autres frais, avec règlement/justificatifs prévus. Ne pas
+  promettre un remboursement illimité ni inventer un plafond universel.
+  En mode dégradé, demander ces pièces et contrôles sans certifier de régime.
 - **Octroi** par décision de **l'autorité territoriale**, pas l'assemblée.
 - **Refus = acte faisant grief** : motivation + voies et délais de recours
   obligatoires.
@@ -264,7 +275,9 @@ Gabarits → `assets/`.
 1. Qualité du demandeur et nature des faits (victime/mis en cause)
    identifiées avant toute protection fonctionnelle ?
 2. Faute personnelle détachable explicitement écartée ou identifiée ?
-3. Si refus (protection, cumul) : motivation et voies de recours présentes ?
+3. Assistance juridique, frais de procédure/avocat et réparation explicités,
+   modalités/limites à vérifier sans plafond inventé ? Si refus (protection,
+   cumul) : motivation et voies de recours présentes ?
 4. Emploi qualifié d'« exposé » avant de statuer sur cumul/départ privé
    (interne vs HATVP) ?
 5. Circuit de signalement et référents identifiés (propre ou mutualisé) ?
