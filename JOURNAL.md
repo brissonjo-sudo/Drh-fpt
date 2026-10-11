@@ -549,3 +549,20 @@ Une entrée par cas, au format ci-dessous.
   293 traces, 40 archives. Manifeste, fiche et restitution complétés.
 - Juge, seuils et jugements antérieurs inchangés. Nouvelle paire complète
   nécessaire sur le même commit propre ; aucune fusion effectuée.
+
+### 2026-10-11 — Quatorzième paire : citations et voies de sortie
+- Commit e543b25 : 28/30 intégration, 30/30 dégradé. Les deux omissions
+  restantes et tous les jugements originaux sont conservés.
+- ISFE : numéro, fondement et liens identifient le régime, mais la date du
+  décret demandée par 07-c01 manque. Relecture indépendante : incomplétude
+  formelle confirmée, sans erreur juridique établie. Première citation d'un
+  fondement vérifié avec intitulé court, numéro et date officielle, sans
+  répétitions ni invention en dégradé.
+- Décharge d'emploi fonctionnel : la recherche d'un emploi du grade et les
+  options sont citées sans expliciter le retour sur emploi disponible ni
+  l'organisme de prise en charge. L544-4/L544-12 et la décision Lyon 2024
+  déjà consultés suffisent au cadrage ; modalités et compétence exacte
+  restent à vérifier. La restitution des alternatives précise effet,
+  condition d'ouverture et acteur, brièvement.
+- Sources du paquet10 conservées, critères, juge et seuils inchangés.
+  Nouvelle paire complète requise sur le prochain commit propre.

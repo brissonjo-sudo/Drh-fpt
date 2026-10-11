@@ -5,6 +5,9 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 ## [0.7.0] — 2026-09-19 — Fiabilité mesurable et contexte progressif
 
 ### Reprise de PR18 — 2026-10-11
+- Première citation des fondements vérifiés avec date officielle ; voies
+  alternatives restituées avec effet, condition et acteur, sans répétition
+  ni certification des conditions encore non vérifiées.
 - Protection fonctionnelle : instruction de la faute par l’employeur, sans
   preuve générale d’absence exigée de l’agent ; dérogation d’intérêt général
   sous contrôle du juge. Critère trop absolu corrigé sur décision CE2024

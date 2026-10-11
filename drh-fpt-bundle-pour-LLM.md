@@ -1245,8 +1245,12 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
 - **Emploi fonctionnel** : intérêt du service et absence de caractère
   disciplinaire, dates déterminant la protection, entretien, informations,
   effet différé et accord de l'agent qui ne dispense pas du délai. Donner les
-  voies de sortie selon la situation et les règles vérifiées : emploi du grade,
-  à défaut congé spécial ou prise en charge. Même pour une demande de départ
+  voies de sortie selon la situation et les règles vérifiées : retour ou
+  réintégration sur un emploi disponible du grade ; en son absence, options
+  de congé spécial ou de prise en charge par le centre de gestion (CDG) ou
+  le CNFPT, selon la compétence à vérifier. Réserver les conditions encore
+  non vérifiées sans omettre la nature de l'option ni son acteur identifié.
+  Même pour une demande de départ
   immédiat, ces alternatives bornent la suite légale possible. Comparer les
   dates de nomination et de désignation de l'autorité et énoncer que la
   protection repart de la plus tardive, avant d'appliquer la règle au dossier.
@@ -1280,6 +1284,15 @@ conditions/seuils **et leurs conséquences**, distinctions avec les régimes
 voisins, sources et limites. Pour une procédure, un acte ou une mise en place,
 inclure aussi actes/garanties et pièces ; pour une simple valeur, rester sur
 champ, assiette, bornes et conversion, sans plan RH supplémentaire.
+À la première citation d'un fondement déterminant effectivement vérifié
+(décret ou décision), donner l'intitulé court, le numéro et la date officielle lus dans la
+source, puis l'article ou le point et la version utiles. Distinguer date du
+texte, publication et entrée en vigueur ; ne pas déduire une date d'un
+identifiant ni répéter toutes ces métadonnées à chaque renvoi. En mode
+dégradé, les références restent des pistes à confirmer.
+Pour chaque voie alternative utile, préciser brièvement son effet, sa
+condition d'ouverture et l'acteur identifié par les sources ; réserver les
+conditions non vérifiées sans réduire l'option à un intitulé abstrait.
 Indiquer brièvement la date de référence et le niveau de confiance de la
 conclusion juridique ou de la valeur vérifiée, même dans une réponse courte
 destinée à un acte. Rattacher cette confiance à la source/version consultée
