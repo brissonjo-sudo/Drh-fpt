@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import json
 import os
+import subprocess
+import tempfile
 import time
 import urllib.error
 import urllib.request
@@ -25,9 +27,12 @@ class Completion:
     usage: dict
     response_id: str | None
     duration_ms: int
+    provider_trace: str | None = None
 
 
 def key_for_provider(provider: str) -> str:
+    if provider == "codex":
+        return ""  # L'authentification existante reste gérée par le CLI.
     env_name = {"anthropic": "ANTHROPIC_API_KEY", "openai": "OPENAI_API_KEY"}[provider]
     key = os.environ.get(env_name)
     if not key:
@@ -135,6 +140,57 @@ def _openai(
     )
 
 
+def _codex(model: str, system: str, user: str, max_tokens: int,
+           reasoning_effort: str | None) -> Completion:
+    started = time.monotonic()
+    with tempfile.TemporaryDirectory(prefix="drh-eval-") as isolated:
+        command = ["codex", "exec", "--ignore-user-config", "--ephemeral",
+            "--skip-git-repo-check", "--sandbox", "read-only", "--json",
+            "--cd", isolated, "--model", model, "-c", 'web_search="disabled"']
+        if reasoning_effort:
+            command.extend(["-c", f'model_reasoning_effort="{reasoning_effort}"'])
+        prompt = (
+            "Évaluation isolée. Réponds à la question avec le corpus fourni. "
+            "N'utilise aucun outil, fichier, skill installé, mémoire ni accès réseau. "
+            "Tu n'as ni les autres cas ni leurs critères. "
+            f"Vise une sortie de moins de {max_tokens} tokens (limite indicative du CLI).\n\n"
+            f"<corpus>\n{system}\n</corpus>\n\n<question>\n{user}\n</question>"
+        )
+        try:
+            result = subprocess.run(command, input=prompt, capture_output=True, text=True,
+                encoding="utf-8", errors="replace", timeout=300, check=False)
+        except (OSError, subprocess.TimeoutExpired) as exc:
+            raise ApiCallError(f"Exécution Codex impossible : {type(exc).__name__}") from exc
+    if result.returncode:
+        # Les logs ne sont pas incorporés dans une erreur publique : pas de secret accidentel.
+        raise ApiCallError(f"Codex a échoué (code {result.returncode})")
+    events = []
+    for line in result.stdout.splitlines():
+        try:
+            events.append(json.loads(line))
+        except json.JSONDecodeError:
+            continue
+    messages, usage, response_id, finished = [], {}, None, False
+    for event in events:
+        if event.get("type") == "thread.started":
+            response_id = event.get("thread_id")
+        if event.get("type") in {"turn.failed", "error"}:
+            raise ApiCallError("Échec de la session Codex")
+        if event.get("type") == "item.completed":
+            item = event.get("item", {})
+            if item.get("type") == "agent_message":
+                messages.append(item.get("text", ""))
+            elif item.get("type") != "reasoning":
+                raise ApiCallError("Outil inattendu : l'isolation de l'évaluation n'est pas respectée")
+        if event.get("type") == "turn.completed":
+            finished, usage = True, event.get("usage", {})
+    if not finished or not messages or not messages[-1].strip():
+        raise ApiCallError("Session Codex sans réponse finale complète")
+    usage["output_token_limit_enforced"] = False
+    return Completion(messages[-1], False, usage, response_id,
+        round((time.monotonic() - started) * 1000), result.stdout)
+
+
 def complete(
     provider: str,
     key: str,
@@ -144,6 +200,8 @@ def complete(
     max_tokens: int,
     reasoning_effort: str | None = None,
 ) -> Completion:
+    if provider == "codex":
+        return _codex(model, system, user, max_tokens, reasoning_effort)
     if provider == "anthropic":
         if reasoning_effort:
             raise ApiCallError(

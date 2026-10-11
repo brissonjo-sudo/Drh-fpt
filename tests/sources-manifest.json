@@ -1,0 +1,560 @@
+{
+  "reference_date": "2026-10-11",
+  "sources": [
+    {
+      "key": "cgfp",
+      "text_id": "LEGITEXT000044416551",
+      "cases": {
+        "10": [
+          "L827-1",
+          "L827-2",
+          "L827-9",
+          "L827-10",
+          "L827-11",
+          "L827-4",
+          "L827-6"
+        ],
+        "11": [
+          "L417-1",
+          "L417-2"
+        ],
+        "12": [
+          "L553-1"
+        ],
+        "18": [
+          "L134-1",
+          "L134-5",
+          "L134-6",
+          "L134-7",
+          "L134-12"
+        ],
+        "19": [
+          "L272-1",
+          "L272-2"
+        ],
+        "20": [
+          "L711-1",
+          "L114-7",
+          "L114-8",
+          "L114-9"
+        ],
+        "21": [
+          "L544-1",
+          "L544-3",
+          "L544-4"
+        ],
+        "22": [
+          "L826-1",
+          "L826-2",
+          "L826-3",
+          "L826-4",
+          "L826-5",
+          "L553-1"
+        ],
+        "01": [
+          "L522-24",
+          "L522-27",
+          "L522-28",
+          "L612-4",
+          "L613-5",
+          "L613-6",
+          "R413-34"
+        ],
+        "02": [
+          "L822-18",
+          "L822-19",
+          "L822-21",
+          "L822-22"
+        ],
+        "03": [
+          "L311-1",
+          "L313-1",
+          "L313-4",
+          "L332-8",
+          "L332-9",
+          "L332-10",
+          "L332-14",
+          "R331-6",
+          "R331-7"
+        ],
+        "04": [
+          "L413-1",
+          "L413-3",
+          "L413-6",
+          "R413-27",
+          "R413-28",
+          "R413-30",
+          "R413-31",
+          "R413-37",
+          "R413-38"
+        ],
+        "05": [
+          "L711-1",
+          "L712-1"
+        ],
+        "06": [
+          "R413-31",
+          "R413-32",
+          "R413-36",
+          "L413-1"
+        ],
+        "07": [
+          "L714-13",
+          "L253-5"
+        ],
+        "08": [
+          "L714-13"
+        ],
+        "09": [
+          "L533-1",
+          "L532-2",
+          "L532-4",
+          "L532-5"
+        ],
+        "15-echec-valeur-volatile": [
+          "L712-2"
+        ],
+        "16-echec-hors-base": [
+          "L712-1"
+        ],
+        "17-echec-droit-prive": [
+          "L553-1"
+        ],
+        "23-architecture-variables-bloquantes": [
+          "L522-24",
+          "L522-27",
+          "L522-28",
+          "R413-34"
+        ],
+        "24-architecture-national-local": [
+          "L611-1",
+          "L611-2"
+        ],
+        "25-architecture-analyse-livrable": [
+          "L522-24",
+          "L522-27",
+          "L522-28",
+          "L522-29",
+          "L522-30",
+          "R413-34"
+        ],
+        "26-architecture-multibranche-contractuel": [
+          "L713-1",
+          "L332-8"
+        ],
+        "27-architecture-decision-action": [
+          "L533-1",
+          "L532-2",
+          "L532-4",
+          "L532-5"
+        ],
+        "28-nonregression-citis-formation": [
+          "L822-18",
+          "L822-19",
+          "L822-21"
+        ],
+        "29-nonregression-discipline-recours": [
+          "L532-5",
+          "L533-1"
+        ],
+        "30-nonregression-controle-legalite-sanction": [
+          "L533-1"
+        ],
+        "13-echec-hors-perimetre": [
+          "L251-5"
+        ]
+      }
+    },
+    {
+      "key": "cgct",
+      "text_id": "LEGITEXT000006070633",
+      "cases": {
+        "09": [
+          "L2131-2",
+          "L2131-3"
+        ],
+        "25-architecture-analyse-livrable": [
+          "L2131-2",
+          "L2131-3"
+        ],
+        "27-architecture-decision-action": [
+          "L2131-2",
+          "L2131-3"
+        ],
+        "30-nonregression-controle-legalite-sanction": [
+          "L2131-2",
+          "L2131-3"
+        ]
+      }
+    },
+    {
+      "key": "citis",
+      "text_id": "JORFTEXT000000521836",
+      "cases": {
+        "22": [
+          "17",
+          "37",
+          "38"
+        ],
+        "02": [
+          "5-1",
+          "7",
+          "37-1",
+          "37-2",
+          "37-3",
+          "37-5",
+          "37-6",
+          "37-9"
+        ],
+        "28-nonregression-citis-formation": [
+          "5-1",
+          "7",
+          "37-6",
+          "37-9"
+        ]
+      }
+    },
+    {
+      "key": "discipline",
+      "text_id": "JORFTEXT000000335719",
+      "cases": {
+        "09": [
+          "2",
+          "3",
+          "4",
+          "6",
+          "14"
+        ],
+        "27-architecture-decision-action": [
+          "2",
+          "3",
+          "4",
+          "6",
+          "14"
+        ],
+        "29-nonregression-discipline-recours": [
+          "14"
+        ]
+      }
+    },
+    {
+      "key": "contractuels",
+      "text_id": "JORFTEXT000000871608",
+      "cases": {
+        "19": [
+          "39-2",
+          "39-5",
+          "40",
+          "42",
+          "42-1",
+          "42-2",
+          "43",
+          "44",
+          "45"
+        ],
+        "26-architecture-multibranche-contractuel": [
+          "1-2",
+          "1-3"
+        ]
+      }
+    },
+    {
+      "key": "isfe",
+      "text_id": "JORFTEXT000049797662",
+      "cases": {
+        "07": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "9"
+        ],
+        "08": [
+          "3",
+          "5",
+          "7"
+        ]
+      }
+    },
+    {
+      "key": "temps",
+      "query": "2000-815",
+      "cases": {
+        "24-architecture-national-local": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      }
+    },
+    {
+      "key": "temps-fpt",
+      "query": "2001-623",
+      "cases": {
+        "24-architecture-national-local": [
+          "1",
+          "2",
+          "4"
+        ]
+      }
+    },
+    {
+      "key": "psc",
+      "query": "2022-581",
+      "cases": {
+        "10": [
+          "2",
+          "5",
+          "9"
+        ]
+      }
+    },
+    {
+      "key": "point",
+      "query": "85-1148",
+      "cases": {
+        "15-echec-valeur-volatile": [
+          "3"
+        ],
+        "05": [
+          "3"
+        ],
+        "08": [
+          "3"
+        ]
+      }
+    },
+    {
+      "key": "spp",
+      "query": "90-850",
+      "cases": {
+        "16-echec-hors-base": [
+          "6-3"
+        ]
+      }
+    },
+    {
+      "key": "paris",
+      "query": "94-415",
+      "cases": {
+        "11": [
+          "1",
+          "2"
+        ]
+      }
+    },
+    {
+      "key": "pension",
+      "query": "2003-1306",
+      "cases": {
+        "01": [
+          "2",
+          "13"
+        ]
+      }
+    },
+    {
+      "key": "categorie-c",
+      "query": "2016-596",
+      "cases": {
+        "01": [
+          "12-1",
+          "12-2"
+        ]
+      }
+    },
+    {
+      "key": "statut-adjoint",
+      "query": "2006-1690",
+      "cases": {
+        "01": [
+          "1",
+          "2"
+        ]
+      }
+    },
+    {
+      "key": "indemnite-titulaire",
+      "query": "85-186",
+      "cases": {
+        "19": [
+          "1",
+          "2"
+        ]
+      }
+    },
+    {
+      "key": "reclassement",
+      "query": "85-1054",
+      "cases": {
+        "22": [
+          "1",
+          "2",
+          "2-1",
+          "3",
+          "2-2"
+        ]
+      }
+    },
+    {
+      "key": "casagranda",
+      "kind": "decision",
+      "text_id": "CETATEXT000008004335",
+      "cases": [
+        "12",
+        "17-echec-droit-prive"
+      ]
+    },
+    {
+      "key": "greve",
+      "kind": "decision",
+      "text_id": "CETATEXT000007834745",
+      "cases": [
+        "20"
+      ]
+    },
+    {
+      "key": "psc-loi-2025",
+      "text_id": "JORFTEXT000053142418",
+      "cases": {
+        "10": [
+          "4",
+          "5",
+          "6"
+        ]
+      }
+    },
+    {
+      "key": "discipline-suppression",
+      "kind": "jorf",
+      "text_id": "JORFTEXT000042625248",
+      "cases": {
+        "09": [
+          "24",
+          "25",
+          "31"
+        ],
+        "29-nonregression-discipline-recours": [
+          "24",
+          "25",
+          "31"
+        ]
+      }
+    },
+    {
+      "key": "crpa",
+      "text_id": "LEGITEXT000031366350",
+      "cases": {
+        "02": [
+          "L211-2",
+          "L211-5"
+        ],
+        "09": [
+          "L211-2",
+          "L211-5"
+        ],
+        "12": [
+          "L211-2",
+          "L211-5"
+        ],
+        "18": [
+          "L211-2",
+          "L211-5"
+        ],
+        "19": [
+          "L211-2",
+          "L211-5"
+        ],
+        "25-architecture-analyse-livrable": [
+          "L211-2",
+          "L211-5"
+        ],
+        "27-architecture-decision-action": [
+          "L211-2",
+          "L211-5"
+        ]
+      }
+    },
+    {
+      "key": "cja",
+      "text_id": "LEGITEXT000006070933",
+      "cases": {
+        "02": [
+          "R421-1",
+          "R421-5"
+        ],
+        "09": [
+          "R421-1",
+          "R421-5"
+        ],
+        "12": [
+          "R421-1",
+          "R421-5"
+        ],
+        "18": [
+          "R421-1",
+          "R421-5"
+        ],
+        "19": [
+          "R421-1",
+          "R421-5"
+        ],
+        "25-architecture-analyse-livrable": [
+          "R421-1",
+          "R421-5"
+        ],
+        "29-nonregression-discipline-recours": [
+          "R421-1",
+          "R421-5"
+        ]
+      }
+    },
+    {
+      "key": "code-travail",
+      "text_id": "LEGITEXT000006072050",
+      "cases": {
+        "12": [
+          "L1111-1",
+          "L1237-1-1"
+        ],
+        "17-echec-droit-prive": [
+          "L1111-1",
+          "L1237-1-1"
+        ]
+      }
+    },
+    {
+      "key": "cnracl",
+      "kind": "official_page",
+      "url": "https://www.cnracl.retraites.fr/actif/ma-carriere-mes-droits/mon-affiliation",
+      "cases": {
+        "01": []
+      }
+    },
+    {
+      "key": "temps-non-complet",
+      "text_id": "JORFTEXT000000718718",
+      "cases": {
+        "22": [
+          "41",
+          "41-1"
+        ]
+      }
+    },
+    {
+      "key": "isfe-abrogation",
+      "kind": "jorf",
+      "text_id": "JORFTEXT000049797662",
+      "cases": {
+        "07": [
+          "8",
+          "9"
+        ]
+      }
+    }
+  ]
+}

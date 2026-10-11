@@ -4,6 +4,18 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
 ## [0.7.0] — 2026-09-19 — Fiabilité mesurable et contexte progressif
 
+### Reprise de PR18 — 2026-10-11
+- Consultation PISTE et CNRACL archivée, intégrité des extraits et versions
+  contrôlée, NOTA conservés, passages effectivement fournis au répondant.
+- Critères propres au mode dégradé ; corrections juridiques des délais PPR,
+  décharge de fonctions, entrée en vigueur ISFE et exceptions PSC.
+- Défense disciplinaire incluant l'avertissement et le droit de se taire ;
+  indemnité d'inaptitude conditionnée au régime d'affiliation.
+- Sessions Codex éphémères, traces JSONL, modèle juge distinct, parallélisme
+  borné et gate commun des deux campagnes sur le même commit propre.
+- Reprise refusée après changement de SHA ou de corpus ; formats du juge
+  invalides rejetés sans interrompre le bilan.
+
 ### Renforcé
 - Chaque attendu de test possède un identifiant stable. Le validateur refuse
   critères absents, inconnus, dupliqués, renommés, sans justification ou

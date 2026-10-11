@@ -170,10 +170,14 @@ fonctions adaptées, ou constate l'inaptitude.
 - **Période de préparation au reclassement (PPR)** : droit reconnu à
   l'agent déclaré inapte à ses fonctions ; durée de principe **1 an**, avec
   **report possible du point de départ** (≤ 2 mois, sur accord des parties,
-  à compter de l'avis du conseil médical) et **prolongation possible**
-  (≤ 3 mois) ; maintien du traitement pendant la période ; formalisée par une
-  **convention** entre l'agent et l'employeur. Base : **décret n° 2019-172
-  du 5 mars 2019 modifié** (dont décret n° 2022-626 du 22 avril 2022) —
+  à compter de l'avis du conseil médical). Les congés prévus par le texte
+  reportent également la fin de la PPR. Après la PPR, l'agent ayant demandé
+  son reclassement peut être **maintenu en activité jusqu'à trois mois** :
+  ce maintien est distinct d'une prolongation de la PPR. Maintien du
+  traitement pendant la période ; formalisée par une
+  **convention** entre l'agent, l'employeur et le CNFPT ou le CDG compétent.
+  Base consolidée : **décret n° 85-1054, articles 2 à 2-2**, modifié
+  notamment par les décrets n° 2019-172 et n° 2022-626 —
   **référence et durées à confirmer en version consolidée**.
 - **Disponibilité d'office pour raison de santé** : prononcée lorsque les
   droits à congé sont épuisés et que l'agent n'est ni apte à la reprise ni
@@ -186,8 +190,10 @@ fonctions adaptées, ou constate l'inaptitude.
     service** ou non (incidence sur les droits) ;
   - **licenciement pour inaptitude** : possible seulement après recherche
     de reclassement infructueuse et absence de solution de disponibilité
-    ou de retraite pour invalidité ; ouvre droit à **indemnité de
-    licenciement** (montant à vérifier).
+    ou de retraite pour invalidité. Vérifier l'affiliation avant de conclure
+    sur l'indemnité : pour les fonctionnaires ne relevant pas de la CNRACL,
+    contrôler les articles 41 et 41-1 du décret n° 91-298. Ne pas promettre
+    automatiquement une indemnité à tout titulaire.
 
 **Fonds et prévention de l'usure professionnelle.** Le **FIPU** (fonds
 d'investissement dans la prévention de l'usure professionnelle, réforme des

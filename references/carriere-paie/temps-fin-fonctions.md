@@ -202,10 +202,10 @@ consolidée** avant tout acte.
   de l'**assemblée délibérante** (information, pas vote) **et du CNFPT ou du
   centre de gestion** (selon la catégorie de l'emploi) — **art. L. 544-1, 2°
   CGFP**.
-- **Effet différé** : la fin de détachement prend effet, sauf accord de
-  l'agent pour une date plus rapprochée, au **premier jour du troisième mois
+- **Effet différé** : la fin de détachement prend effet au **premier jour du troisième mois
   suivant l'information de l'assemblée délibérante** (**art. L. 544-1, dernier
   alinéa, CGFP — à confirmer en version consolidée**).
+  L'accord de l'agent ne suffit pas à écarter ce délai statutaire.
 - **Options de sortie du fonctionnaire déchargé** :
   - **réintégration** sur un emploi vacant correspondant à son grade
     d'origine, dans la collectivité ou l'établissement ;

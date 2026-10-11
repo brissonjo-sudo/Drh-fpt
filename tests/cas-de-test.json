@@ -33,6 +33,29 @@
     "contextes": [
       "carriere-paie",
       "carriere-remuneration-paie"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "01-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "01-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : grade cible, échelon, ancienneté, temps partiel ou emploi à temps non complet, quotité de l’emploi et affiliation ; examiner tableau, ratios et LDG avant de décider"
+      },
+      {
+        "id": "01-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "01-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
     ]
   },
   {
@@ -47,11 +70,11 @@
       },
       {
         "id": "02-c02",
-        "texte": "Base légale FPT : CGFP art. L. 822-18 et s., et décret n° 2019-301 du 10 avril 2019 (CITIS FPT)"
+        "texte": "Base légale FPT : CGFP L822-18 et suivants et décret87-602 consolidé relatif au CITIS ; le décret2019-301 peut être cité comme texte créateur sous réserve de vérification"
       },
       {
         "id": "02-c03",
-        "texte": "Signale explicitement qu'il ne faut PAS viser le décret n° 2019-122 du 21 février 2019, propre à la fonction publique d'État"
+        "texte": "Écarte le régime de la fonction publique d’État et ne vise pas un décret propre à la FPE comme base du CITIS territorial"
       },
       {
         "id": "02-c04",
@@ -78,6 +101,29 @@
     ],
     "contextes": [
       "qvt-sante"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "02-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "02-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : circonstances, date, certificat et statut titulaire ; orienter la vérification vers le CITIS FPT, l’imputabilité et la compétence du conseil médical, sans confondre avis et décision"
+      },
+      {
+        "id": "02-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "02-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
     ]
   },
   {
@@ -109,6 +155,29 @@
     ],
     "contextes": [
       "recrutement-formation"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "03-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "03-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : motif de recours, emploi et vacance, recherche de fonctionnaire, durée et clauses du contrat ; faire vérifier le fondement FPT et la publicité"
+      },
+      {
+        "id": "03-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "03-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
     ]
   },
   {
@@ -140,6 +209,29 @@
     ],
     "contextes": [
       "cst-dialogue-social"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "04-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "04-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : autorité territoriale, affiliation CDG, compétence de promotion interne et LDG locales ; faire vérifier le CST, l’élaboration et la version applicable"
+      },
+      {
+        "id": "04-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "04-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
     ]
   },
   {
@@ -173,6 +265,29 @@
     ],
     "contextes": [
       "si-rh-masse-salariale"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "05-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "05-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : effectifs, entrées-sorties, indices, temps de travail, mesures salariales, cotisations et hypothèses budgétaires ; proposer une méthode d’estimation sans inventer de chiffres"
+      },
+      {
+        "id": "05-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "05-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
     ]
   },
   {
@@ -203,6 +318,29 @@
     ],
     "contextes": [
       "communication-interne"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "06-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "06-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : projet de LDG, avis du CST, version adoptée et destinataires ; préparer le contrôle avant diffusion et protéger les données individuelles"
+      },
+      {
+        "id": "06-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "06-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
     ]
   },
   {
@@ -237,7 +375,7 @@
       },
       {
         "id": "07-c07",
-        "texte": "Décret 2024-614 applicable dès sa publication en 2024 ; seule l'abrogation des anciens régimes (décrets 97-702, 2000-45, 2006-1397) est datée au 1er janvier 2025 — ne pas dater l'entrée en vigueur de l'ISFE au 1/1/2025"
+        "texte": "Distingue l'entrée en vigueur le lendemain de la publication en2024 et l'abrogation des anciens régimes au1er janvier2025, conformément aux articles8 et9 du décret2024-614"
       }
     ],
     "echec_si": [
@@ -249,6 +387,29 @@
     "contextes": [
       "carriere-paie",
       "carriere-statut-discipline"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "07-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "07-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : cadre d’emplois PM, délibération, avis CST et régime antérieur ; orienter vers le régime spécifique ISFE sans appliquer le RIFSEEP comme certain"
+      },
+      {
+        "id": "07-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "07-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
     ]
   },
   {
@@ -282,7 +443,30 @@
       "carriere-paie",
       "carriere-remuneration-paie"
     ],
-    "profil_restitution": "ciblee"
+    "profil_restitution": "ciblee",
+    "attendus_degraded": [
+      {
+        "id": "08-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "08-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : cadre d’emplois directeur PM et date de référence ; renvoyer aux plafonds officiels à consulter sans donner un pourcentage ou un montant non vérifié"
+      },
+      {
+        "id": "08-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "08-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
+    ]
   },
   {
     "id": "09",
@@ -323,6 +507,29 @@
     "contextes": [
       "carriere-paie",
       "carriere-statut-discipline"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "09-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "09-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : statut de l’agent, faits, pièces et date de connaissance ; faire vérifier le groupe de sanction, le conseil de discipline, la défense et les recours sans dérouler une procédure exécutable"
+      },
+      {
+        "id": "09-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "09-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
     ]
   },
   {
@@ -337,7 +544,7 @@
       },
       {
         "id": "10-c02",
-        "texte": "Adhésion des agents à la complémentaire santé facultative"
+        "texte": "Participation santé obligatoire au1er janvier2026 ; adhésion en principe facultative, sous réserve d'un accord collectif valide prévoyant une souscription obligatoire"
       },
       {
         "id": "10-c03",
@@ -358,6 +565,29 @@
     ],
     "contextes": [
       "qvt-sante"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "10-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "10-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : date, contrat santé/prévoyance, dispositif local et accord collectif ; faire vérifier les échéances, l’adhésion et les participations sans annoncer un calendrier ou un montant comme vérifiés"
+      },
+      {
+        "id": "10-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "10-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
     ]
   },
   {
@@ -385,6 +615,29 @@
     "contextes": [
       "carriere-paie",
       "carriere-statut-discipline"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "11-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "11-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : Ville de Paris, corps et grade exacts ; signaler le régime parisien spécifique et vérifier ses textes avant toute assimilation au droit commun"
+      },
+      {
+        "id": "11-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "11-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
     ]
   },
   {
@@ -433,6 +686,29 @@
     "contextes": [
       "carriere-paie",
       "carriere-temps-fin-fonctions"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "12-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "12-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : dates, absence et éventuels justificatifs, situation médicale, notifications et mise en demeure ; distinguer abandon de poste et sanction, et exclure l’application directe de la présomption de démission privée"
+      },
+      {
+        "id": "12-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "12-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
     ]
   },
   {
@@ -473,6 +749,29 @@
     ],
     "contextes": [
       "statut-garanties"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "18-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "18-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : faits, lien au service, qualité de victime et pièces ; signaler la protection fonctionnelle et la nécessité de vérifier son octroi autonome sans affirmer qu’il faut attendre une condamnation"
+      },
+      {
+        "id": "18-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "18-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
     ]
   },
   {
@@ -514,6 +813,29 @@
     ],
     "contextes": [
       "contractuels"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "19-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "19-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : CDI, emploi, faits d’insuffisance, essai, dossier et rémunération ; distinguer régime contractuel et titulaire, et faire vérifier CCP, notification, indemnité et portée du reclassement"
+      },
+      {
+        "id": "19-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "19-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
     ]
   },
   {
@@ -546,6 +868,29 @@
     "contextes": [
       "carriere-paie",
       "carriere-temps-fin-fonctions"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "20-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "20-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : heures réellement non travaillées, cycle, assiette et paramétrage SIRH ; ne pas valider le trentième indivisible FPE pour la FPT et faire vérifier la proportionnalité avant calcul"
+      },
+      {
+        "id": "20-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "20-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
     ]
   },
   {
@@ -576,7 +921,7 @@
       },
       {
         "id": "21-c06",
-        "texte": "Effet différé au premier jour du troisième mois suivant l'information de l'assemblée délibérante (art. L. 544-1, dernier alinéa, CGFP, à confirmer en version consolidée), sauf accord de l'agent pour une date plus rapprochée"
+        "texte": "Effet différé au premier jour du troisième mois suivant l’information de l’assemblée délibérante (CGFP L544-1) ; aucun raccourcissement sur le seul accord de l’agent"
       },
       {
         "id": "21-c07",
@@ -592,6 +937,29 @@
     "contextes": [
       "carriere-paie",
       "carriere-temps-fin-fonctions"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "21-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "21-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : emploi fonctionnel, dates de nomination et de désignation du maire, intérêt du service ; faire vérifier le délai protecteur et les formalités sans autoriser une décharge immédiate"
+      },
+      {
+        "id": "21-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "21-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
     ]
   },
   {
@@ -610,7 +978,7 @@
       },
       {
         "id": "22-c03",
-        "texte": "Proposer la période de préparation au reclassement (PPR) : droit de l'agent, durée de principe 1 an, avec report possible du point de départ (≤ 2 mois, accord des parties, à compter de l'avis du conseil médical) et prolongation possible (≤ 3 mois) ; maintien du traitement ; formalisée par convention ; base décret n° 2019-172 du 5 mars 2019 modifié (dont décret n° 2022-626 du 22 avril 2022), à confirmer en version consolidée"
+        "texte": "Propose la PPR prévue au décret85-1054 articles2 à2-2 : durée maximale d’un an sous les reports prévus, report initial possible de deux mois sur accord, traitement maintenu et convention avec l’agent, l’employeur et le CNFPT/CDG ; distingue le maintien en activité jusqu’à trois mois après PPR d’une prolongation de PPR"
       },
       {
         "id": "22-c04",
@@ -618,7 +986,7 @@
       },
       {
         "id": "22-c05",
-        "texte": "En dernier recours seulement : retraite pour invalidité (CNRACL, avis du conseil médical, distinction imputable/non imputable au service) ou licenciement pour inaptitude, ce dernier ouvrant droit à indemnité de licenciement"
+        "texte": "En dernier recours, examine retraite pour invalidité ou licenciement selon l’affiliation et la portée de l’inaptitude ; ne promet pas automatiquement une indemnité à tout titulaire et fait vérifier les règles du régime applicable"
       }
     ],
     "echec_si": [
@@ -628,6 +996,29 @@
     ],
     "contextes": [
       "qvt-sante"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "22-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "22-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : avis médical, caractère temporaire ou définitif et portée de l’inaptitude, droits épuisés ; orienter vers adaptation, reclassement et PPR à vérifier sans autoriser un licenciement direct"
+      },
+      {
+        "id": "22-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "22-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
     ]
   },
   {
@@ -660,6 +1051,30 @@
     ],
     "contextes": [
       "parametres-collectivite"
+    ],
+    "preuve_requise": true,
+    "attendus_degraded": [
+      {
+        "id": "13-echec-hors-perimetre-degraded-c01",
+        "texte": "Annonce le mode dégradé et l’absence de consultation officielle"
+      },
+      {
+        "id": "13-echec-hors-perimetre-degraded-c02",
+        "texte": "Identifie le hors-périmètre de moins de350agents, l’effectif exact, l’affiliation et l’instance CDG/CST à vérifier ; oriente vers une expertise adaptée sans certifier un seuil non consulté"
+      },
+      {
+        "id": "13-echec-hors-perimetre-degraded-c03",
+        "texte": "Ne fournit aucune procédure exécutable ni conclusion juridique définitive ; toute référence numérotée ou datée reste à confirmer"
+      },
+      {
+        "id": "13-echec-hors-perimetre-degraded-c04",
+        "texte": "Indique les pièces et sources officielles à consulter et un niveau de confiance cohérent avec l’abstention"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend vérifier une source inaccessible",
+      "Applique le droit privé au fonctionnaire ou certifie une procédure non vérifiée",
+      "Ignore les réserves de périmètre et de vérification"
     ]
   },
   {
@@ -850,6 +1265,29 @@
     ],
     "contextes": [
       "parametres-collectivite"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "17-echec-droit-prive-degraded-c01",
+        "texte": "Annonce le mode dégradé et l’absence de consultation officielle"
+      },
+      {
+        "id": "17-echec-droit-prive-degraded-c02",
+        "texte": "Identifie le statut public et l’absence, distingue abandon de poste et présomption de démission privée ; recueille dates, justificatifs et notifications et réserve la procédure à une vérification officielle"
+      },
+      {
+        "id": "17-echec-droit-prive-degraded-c03",
+        "texte": "Ne fournit aucune procédure exécutable ni conclusion juridique définitive ; toute référence numérotée ou datée reste à confirmer"
+      },
+      {
+        "id": "17-echec-droit-prive-degraded-c04",
+        "texte": "Indique les pièces et sources officielles à consulter et un niveau de confiance cohérent avec l’abstention"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend vérifier une source inaccessible",
+      "Applique le droit privé au fonctionnaire ou certifie une procédure non vérifiée",
+      "Ignore les réserves de périmètre et de vérification"
     ]
   },
   {
@@ -887,6 +1325,29 @@
     "contextes": [
       "carriere-paie",
       "carriere-statut-discipline"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "23-architecture-variables-bloquantes-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "23-architecture-variables-bloquantes-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : grade, échelon, ancienneté, services, examen, statut particulier, ratios, tableau, LDG et date ; décision non tranchable tant que ces variables et les sources ne sont pas contrôlées"
+      },
+      {
+        "id": "23-architecture-variables-bloquantes-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "23-architecture-variables-bloquantes-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
     ]
   },
   {
@@ -924,6 +1385,29 @@
     "contextes": [
       "carriere-paie",
       "carriere-temps-fin-fonctions"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "24-architecture-national-local-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "24-architecture-national-local-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : délibération locale, avis CST, cycle, sujétions et date ; distinguer garanties nationales à vérifier et choix locaux sans valider l’organisation actuelle"
+      },
+      {
+        "id": "24-architecture-national-local-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "24-architecture-national-local-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
     ]
   },
   {
@@ -967,7 +1451,30 @@
       "carriere-paie",
       "carriere-statut-discipline"
     ],
-    "profil_restitution": "dossier-complexe"
+    "profil_restitution": "dossier-complexe",
+    "attendus_degraded": [
+      {
+        "id": "25-architecture-analyse-livrable-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "25-architecture-analyse-livrable-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : qualification, grade, conditions, tableau, ratios, LDG, autorité et date d’effet ; analyse bornée et liste des champs à réunir avant rédaction, sans arrêté juridiquement engageant ni prêt à signer"
+      },
+      {
+        "id": "25-architecture-analyse-livrable-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "25-architecture-analyse-livrable-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
+    ]
   },
   {
     "id": "26-architecture-multibranche-contractuel",
@@ -1006,6 +1513,29 @@
       "carriere-statut-discipline",
       "carriere-remuneration-paie",
       "contractuels"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "26-architecture-multibranche-contractuel-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "26-architecture-multibranche-contractuel-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : régime du CDI, contrat, clauses, cadre local de rémunération et réévaluation ; articuler Carrière & paie et Agents contractuels et ne pas déduire un grade d’une référence indiciaire"
+      },
+      {
+        "id": "26-architecture-multibranche-contractuel-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "26-architecture-multibranche-contractuel-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
     ]
   },
   {
@@ -1045,6 +1575,29 @@
     "contextes": [
       "carriere-paie",
       "carriere-statut-discipline"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "27-architecture-decision-action-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "27-architecture-decision-action-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : faits, statut, preuves, connaissance des faits et compétence ; décision non tranchable sur la sanction, recommandation de sécurisation et plan de collecte/contrôle avant procédure"
+      },
+      {
+        "id": "27-architecture-decision-action-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "27-architecture-decision-action-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
     ]
   },
   {
@@ -1076,6 +1629,29 @@
     ],
     "contextes": [
       "qvt-sante"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "28-nonregression-citis-formation-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "28-nonregression-citis-formation-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : accident, contestation et pièces ; désigner les compétences du conseil médical comme à vérifier, distinguer avis et décision territoriale et ne pas certifier une formation sans source"
+      },
+      {
+        "id": "28-nonregression-citis-formation-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "28-nonregression-citis-formation-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
     ]
   },
   {
@@ -1108,6 +1684,29 @@
     "contextes": [
       "carriere-paie",
       "carriere-statut-discipline"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "29-nonregression-discipline-recours-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "29-nonregression-discipline-recours-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : date de sanction et date d’ouverture de procédure ; faire vérifier la suppression du recours disciplinaire, le transitoire et le tribunal administratif sans inventer de voie ni de délai"
+      },
+      {
+        "id": "29-nonregression-discipline-recours-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "29-nonregression-discipline-recours-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
     ]
   },
   {
@@ -1140,6 +1739,29 @@
     "contextes": [
       "carriere-paie",
       "carriere-statut-discipline"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "30-nonregression-controle-legalite-sanction-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l’impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "30-nonregression-controle-legalite-sanction-degraded-c02",
+        "texte": "Fournit un cadrage ciblé et identifie les variables ou contrôles utiles : date, nature de l’acte et collectivité ; faire vérifier la liste actuelle du CGCT, la convention de télétransmission et la demande possible du préfet sans affirmer que toutes les sanctions sont transmissibles"
+      },
+      {
+        "id": "30-nonregression-controle-legalite-sanction-degraded-c03",
+        "texte": "S’abstient de toute conclusion définitive, valeur chiffrée non vérifiée, procédure détaillée exécutable ou acte juridiquement engageant ; ne prétend pas avoir consulté de source"
+      },
+      {
+        "id": "30-nonregression-controle-legalite-sanction-degraded-c04",
+        "texte": "Indique les sources officielles ou pièces à consulter et le niveau de confiance ; toute référence numérotée ou datée est explicitement à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
+      "Tranche définitivement une décision soumise à une vérification obligatoire"
     ]
   }
 ]

@@ -66,10 +66,12 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
   à l'échelle applicable aux fonctionnaires territoriaux.
 - Pouvoir disciplinaire : **autorité territoriale** (art. L532-1 CGFP), pas
   l'assemblée. Pas de liste légale des fautes (art. L530-1).
-- **Droits de la défense** (toute sanction au-delà de l'avertissement) :
+- **Droits de la défense** (toute procédure disciplinaire, y compris avertissement) :
   information de l'agent, **communication de l'intégralité du dossier**, droit à
   l'**assistance** d'un conseil de son choix, **délai suffisant** pour préparer
   sa défense. Leur méconnaissance entache la sanction d'illégalité.
+  Contrôler aussi l'information sur le **droit de se taire** avant le recueil
+  des observations, conformément aux textes et décisions applicables.
 - **Prescription** de l'action disciplinaire : **3 ans** à compter du jour où
   l'administration a eu **connaissance effective** des faits (**art. L532-2
   CGFP**, référence stable) ; délai **interrompu** en cas de poursuites pénales,
@@ -93,3 +95,8 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
   obligatoire sur ce seul fondement ; vérifier la version applicable, la
   nature exacte de l'acte et, séparément, les modalités locales de
   télétransmission.
+  Le cadrage préalable réunit la collectivité concernée, la date et la nature
+  de l'acte, la convention de télétransmission et les éventuelles demandes du
+  préfet (y compris pour un acte hors transmission obligatoire). En mode
+  dégradé, ces contrôles constituent les pièces à faire vérifier ; ils ne
+  permettent pas de certifier une obligation de transmission.

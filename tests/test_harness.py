@@ -134,7 +134,7 @@ class HarnessTests(unittest.TestCase):
             "consulted_at": "2026-09-19T10:00:00Z", "version_or_date": "2026-09-19",
             "supporting_excerpt": "passage", "conclusion_supported": "conclusion",
         }]
-        self.assertEqual(RUN_TESTS.validate_evidence(trace, cases, "integration", "live"), [])
+        self.assertTrue(RUN_TESTS.validate_evidence(trace, cases, "integration", "live"))
 
     def test_resume_signature_tracks_cases_and_evidence_but_not_judge(self):
         base = {

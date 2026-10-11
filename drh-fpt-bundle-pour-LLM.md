@@ -1590,10 +1590,12 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
   à l'échelle applicable aux fonctionnaires territoriaux.
 - Pouvoir disciplinaire : **autorité territoriale** (art. L532-1 CGFP), pas
   l'assemblée. Pas de liste légale des fautes (art. L530-1).
-- **Droits de la défense** (toute sanction au-delà de l'avertissement) :
+- **Droits de la défense** (toute procédure disciplinaire, y compris avertissement) :
   information de l'agent, **communication de l'intégralité du dossier**, droit à
   l'**assistance** d'un conseil de son choix, **délai suffisant** pour préparer
   sa défense. Leur méconnaissance entache la sanction d'illégalité.
+  Contrôler aussi l'information sur le **droit de se taire** avant le recueil
+  des observations, conformément aux textes et décisions applicables.
 - **Prescription** de l'action disciplinaire : **3 ans** à compter du jour où
   l'administration a eu **connaissance effective** des faits (**art. L532-2
   CGFP**, référence stable) ; délai **interrompu** en cas de poursuites pénales,
@@ -1617,6 +1619,11 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
   obligatoire sur ce seul fondement ; vérifier la version applicable, la
   nature exacte de l'acte et, séparément, les modalités locales de
   télétransmission.
+  Le cadrage préalable réunit la collectivité concernée, la date et la nature
+  de l'acte, la convention de télétransmission et les éventuelles demandes du
+  préfet (y compris pour un acte hors transmission obligatoire). En mode
+  dégradé, ces contrôles constituent les pièces à faire vérifier ; ils ne
+  permettent pas de certifier une obligation de transmission.
 
 ================================================================================
 ### SOURCE : MODULE — Rémunération et paie
@@ -1933,10 +1940,10 @@ consolidée** avant tout acte.
   de l'**assemblée délibérante** (information, pas vote) **et du CNFPT ou du
   centre de gestion** (selon la catégorie de l'emploi) — **art. L. 544-1, 2°
   CGFP**.
-- **Effet différé** : la fin de détachement prend effet, sauf accord de
-  l'agent pour une date plus rapprochée, au **premier jour du troisième mois
+- **Effet différé** : la fin de détachement prend effet au **premier jour du troisième mois
   suivant l'information de l'assemblée délibérante** (**art. L. 544-1, dernier
   alinéa, CGFP — à confirmer en version consolidée**).
+  L'accord de l'agent ne suffit pas à écarter ce délai statutaire.
 - **Options de sortie du fonctionnaire déchargé** :
   - **réintégration** sur un emploi vacant correspondant à son grade
     d'origine, dans la collectivité ou l'établissement ;
@@ -2222,10 +2229,14 @@ fonctions adaptées, ou constate l'inaptitude.
 - **Période de préparation au reclassement (PPR)** : droit reconnu à
   l'agent déclaré inapte à ses fonctions ; durée de principe **1 an**, avec
   **report possible du point de départ** (≤ 2 mois, sur accord des parties,
-  à compter de l'avis du conseil médical) et **prolongation possible**
-  (≤ 3 mois) ; maintien du traitement pendant la période ; formalisée par une
-  **convention** entre l'agent et l'employeur. Base : **décret n° 2019-172
-  du 5 mars 2019 modifié** (dont décret n° 2022-626 du 22 avril 2022) —
+  à compter de l'avis du conseil médical). Les congés prévus par le texte
+  reportent également la fin de la PPR. Après la PPR, l'agent ayant demandé
+  son reclassement peut être **maintenu en activité jusqu'à trois mois** :
+  ce maintien est distinct d'une prolongation de la PPR. Maintien du
+  traitement pendant la période ; formalisée par une
+  **convention** entre l'agent, l'employeur et le CNFPT ou le CDG compétent.
+  Base consolidée : **décret n° 85-1054, articles 2 à 2-2**, modifié
+  notamment par les décrets n° 2019-172 et n° 2022-626 —
   **référence et durées à confirmer en version consolidée**.
 - **Disponibilité d'office pour raison de santé** : prononcée lorsque les
   droits à congé sont épuisés et que l'agent n'est ni apte à la reprise ni
@@ -2238,8 +2249,10 @@ fonctions adaptées, ou constate l'inaptitude.
     service** ou non (incidence sur les droits) ;
   - **licenciement pour inaptitude** : possible seulement après recherche
     de reclassement infructueuse et absence de solution de disponibilité
-    ou de retraite pour invalidité ; ouvre droit à **indemnité de
-    licenciement** (montant à vérifier).
+    ou de retraite pour invalidité. Vérifier l'affiliation avant de conclure
+    sur l'indemnité : pour les fonctionnaires ne relevant pas de la CNRACL,
+    contrôler les articles 41 et 41-1 du décret n° 91-298. Ne pas promettre
+    automatiquement une indemnité à tout titulaire.
 
 **Fonds et prévention de l'usure professionnelle.** Le **FIPU** (fonds
 d'investissement dans la prévention de l'usure professionnelle, réforme des

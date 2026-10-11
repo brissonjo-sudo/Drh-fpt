@@ -10,6 +10,7 @@ import subprocess
 import sys
 import uuid
 from datetime import datetime, timezone
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -19,6 +20,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(HERE))
 
 import context_loader  # noqa: E402
+import live_sources  # noqa: E402
 from providers import ApiCallError, Completion, complete, key_for_provider  # noqa: E402
 
 
@@ -123,6 +125,7 @@ def build_system_context(
     mode: str,
     source_pack: str = "",
     evidence_mode: str = "rules",
+    evidence: list[dict] | None = None,
 ) -> str:
     parts = ["<!-- SKILL MÉTIER : DRH FPT -->\n", drh_context]
     if mode == "integration":
@@ -154,6 +157,7 @@ def build_system_context(
             "\n\n<!-- PREUVE DE CONSULTATION -->\nToute affirmation présentée comme vérifiée "
             "doit correspondre à une trace de consultation officielle fournie à la campagne.\n"
         )
+        parts.append(live_sources.source_context(evidence or []))
     return "".join(parts)
 
 
@@ -204,6 +208,9 @@ def judge_prompt(case: dict, answer: str, evidence: list[dict] | None = None) ->
         f"RÉPONSE :\n{answer}",
         "CRITÈRES :\n" + "\n".join(f"- [{x['id']}] {x['texte']}" for x in expected),
         f"TYPE : {case.get('type', 'standard')}",
+        f"MODE ÉVALUÉ : {case.get('mode_evaluation', 'integration')} — "
+        "En mode dégradé, contrôler les réserves et l'abstention. Ne pas exiger une consultation "
+        "absente ni une décision ou un acte que les critères de ce mode interdisent.",
     ]
     if case.get("echec_si"):
         blocks.append("CONDITIONS D'ÉCHEC :\n" + "\n".join(f"- {x}" for x in case["echec_si"]))
@@ -216,7 +223,9 @@ def parse_judge_completion(completion: Completion) -> dict:
     raw = completion.text.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
     try:
         result = json.loads(raw)
-    except json.JSONDecodeError:
+        if not isinstance(result, dict):
+            raise ValueError("Le jugement JSON n'est pas un objet")
+    except (json.JSONDecodeError, ValueError):
         result = {"verdict": None, "synthese": "Réponse du juge non parsable", "raw": raw}
     result["tronque"] = completion.truncated
     result["metriques"] = {
@@ -237,7 +246,8 @@ def validate_judge_result(result: dict, case: dict) -> list[str]:
     if not isinstance(criteria, list):
         problems.append("critères absents ou mal formés")
     else:
-        received_ids = [item.get("id") for item in criteria if isinstance(item, dict)]
+        received_ids = [item.get("id") for item in criteria
+                        if isinstance(item, dict) and isinstance(item.get("id"), str)]
         if len(received_ids) != len(criteria):
             problems.append("au moins un critère est mal formé")
         if len(received_ids) != len(set(received_ids)):
@@ -252,10 +262,12 @@ def validate_judge_result(result: dict, case: dict) -> list[str]:
             if not isinstance(criterion, dict):
                 continue
             criterion_id = criterion.get("id")
+            if not isinstance(criterion_id, str):
+                continue
             if criterion_id in expected_by_id and criterion.get("critere") != expected_by_id[criterion_id]:
                 problems.append(f"{criterion_id} : libellé différent de l'attendu")
             status = criterion.get("statut")
-            if status not in VALID_CRITERION_STATUSES:
+            if not isinstance(status, str) or status not in VALID_CRITERION_STATUSES:
                 problems.append(f"{criterion_id} : statut invalide")
             elif status != "SATISFAIT":
                 problems.append(f"{criterion_id} : critère non entièrement satisfait")
@@ -272,15 +284,15 @@ def validate_judge_result(result: dict, case: dict) -> list[str]:
     verdict = result.get("verdict")
     legal = result.get("verdict_fiabilite_juridique")
     architecture = result.get("verdict_architecture")
-    if verdict not in VALID_GLOBAL_VERDICTS:
+    if not isinstance(verdict, str) or verdict not in VALID_GLOBAL_VERDICTS:
         problems.append("verdict global absent ou invalide")
     elif verdict != "REUSSITE":
         problems.append("verdict global en échec")
-    if legal not in VALID_GLOBAL_VERDICTS:
+    if not isinstance(legal, str) or legal not in VALID_GLOBAL_VERDICTS:
         problems.append("verdict juridique absent ou invalide")
     elif legal != "REUSSITE":
         problems.append("fiabilité juridique en échec")
-    if architecture not in VALID_ARCHITECTURE_VERDICTS:
+    if not isinstance(architecture, str) or architecture not in VALID_ARCHITECTURE_VERDICTS:
         problems.append("verdict d'architecture absent ou invalide")
     elif architecture == "ECHEC":
         problems.append("architecture en échec")
@@ -309,7 +321,8 @@ def load_evidence(path: str | None) -> tuple[list[dict], str | None]:
     return consultations, hashlib.sha256(evidence_path.read_bytes()).hexdigest()
 
 
-def validate_evidence(consultations: list[dict], cases: list[dict], mode: str, evidence_mode: str) -> list[str]:
+def validate_evidence(consultations: list[dict], cases: list[dict], mode: str, evidence_mode: str,
+                      evidence_root: Path | None = None, as_of: datetime | None = None) -> list[str]:
     if evidence_mode != "live":
         return []
     problems = []
@@ -326,11 +339,28 @@ def validate_evidence(consultations: list[dict], cases: list[dict], mode: str, e
         missing = [field for field in fields if not isinstance(item.get(field), str) or not item[field].strip()]
         if missing:
             problems.append(f"trace {index} : champs vides {', '.join(missing)}")
-        by_case.setdefault(item.get("case_id", ""), []).append(item)
+        case_id = item.get("case_id")
+        if not isinstance(case_id, str):
+            problems.append(f"trace {index} : identifiant de cas invalide")
+            continue
+        if case_id not in {case["id"] for case in cases}:
+            problems.append(f"trace {index} : cas inconnu ou inactif {case_id}")
+            continue
+        for issue in live_sources.verify_trace(item, evidence_root or HERE, as_of=as_of):
+            problems.append(f"trace {index} : {issue}")
+        by_case.setdefault(case_id, []).append(item)
     missing_cases = sorted(required_ids - set(by_case))
     if missing_cases:
         problems.append("cas sans preuve de consultation : " + ", ".join(missing_cases))
     return problems
+
+
+def case_for_mode(case: dict, mode: str) -> dict:
+    result = {**case, "mode_evaluation": mode}
+    if mode == "degraded" and "attendus_degraded" in case:
+        result["attendus"] = case["attendus_degraded"]
+        result["echec_si"] = case["echec_si_degraded"]
+    return result
 
 
 def active_cases(all_cases: list[dict], mode: str, selected: list[str]) -> list[dict]:
@@ -341,7 +371,7 @@ def active_cases(all_cases: list[dict], mode: str, selected: list[str]) -> list[
         missing = wanted - {case["id"] for case in cases}
         if missing:
             raise SystemExit("Cas inconnus ou inactifs : " + ", ".join(sorted(missing)))
-    return cases
+    return [case_for_mode(case, mode) for case in cases]
 
 
 def campaign_signature(provenance: dict) -> dict:
@@ -349,6 +379,7 @@ def campaign_signature(provenance: dict) -> dict:
         "mode", "provider_repondant", "modele_repondant", "effort_repondant",
         "context_mode", "evidence_mode", "sha256_cas", "sha256_compagnon", "sha256_source_pack",
         "case_ids", "evidence_sha256",
+        "drh_fpt", "recherche_juridique", "context_sha256_by_case",
     )
     return {key: provenance.get(key) for key in keys}
 
@@ -382,6 +413,10 @@ def read_answer(campaign: Path, case_id: str) -> tuple[str, dict]:
 
 
 def write_answer(campaign: Path, case: dict, answer: str, completion: Completion, metadata: dict) -> None:
+    if completion.provider_trace is not None:
+        trace_file = campaign / f"{case['id']}-respondant.jsonl"
+        trace_file.write_bytes(completion.provider_trace.encode("utf-8"))
+        metadata["provider_trace_sha256"] = sha256_text(completion.provider_trace)
     payload = {
         "id": case["id"], "branche": case["branche"], "answer": answer,
         "truncated": completion.truncated, "metrics": {
@@ -440,8 +475,8 @@ def validate_strict_campaign(provenance: dict, cases: list[dict], results: list[
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--provider", choices=("anthropic", "openai"), default="anthropic")
-    parser.add_argument("--judge-provider", choices=("anthropic", "openai"))
+    parser.add_argument("--provider", choices=("anthropic", "openai", "codex"), default="anthropic")
+    parser.add_argument("--judge-provider", choices=("anthropic", "openai", "codex"))
     parser.add_argument("--model", default=DEFAULT_MODEL)
     parser.add_argument("--judge-model", default=DEFAULT_JUDGE_MODEL)
     parser.add_argument("--reasoning-effort")
@@ -450,6 +485,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--strict", action="store_true")
     parser.add_argument("--mode", choices=("integration", "degraded"), default="integration")
     parser.add_argument("--legal-skill")
+    parser.add_argument("--workers", type=int, choices=range(1, 5), default=1)
     parser.add_argument("--case", action="append", default=[])
     parser.add_argument("--resume")
     parser.add_argument("--judge-only")
@@ -492,13 +528,26 @@ def main(argv: list[str] | None = None) -> int:
             legal_bundle, legal_path, legal_sources = load_legal_skill(args.legal_skill)
     source_pack, source_pack_path, source_pack_files = load_source_pack(args.source_pack)
     evidence, evidence_sha = load_evidence(args.evidence_file)
-    evidence_problems = validate_evidence(evidence, cases, args.mode, args.evidence_mode)
+    evidence_problems = validate_evidence(evidence, active_cases(all_cases, args.mode, []), args.mode,
+        args.evidence_mode, Path(args.evidence_file).resolve().parent if args.evidence_file else None)
+    if evidence_problems:
+        raise SystemExit("Preuves invalides avant génération :\n" + "\n".join(evidence_problems))
 
     full_bundle_path = find_bundle()
     full_bundle = full_bundle_path.read_text(encoding="utf-8")
     cases_sha = hashlib.sha256((HERE / "cas-de-test.json").read_bytes()).hexdigest()
     judge_provider = args.judge_provider or args.provider
     now = datetime.now(timezone.utc)
+    contexts = {}
+    for case in cases:
+        if args.context_mode == "selective":
+            drh_context, loaded_files = context_loader.build_case_context(case)
+        else:
+            drh_context, loaded_files = full_bundle, [str(full_bundle_path)]
+        case_evidence = [item for item in evidence if item.get("case_id") == case["id"]]
+        system = build_system_context(drh_context, legal_bundle, args.mode, source_pack,
+            args.evidence_mode, case_evidence)
+        contexts[case["id"]] = (system, context_loader.context_metrics(drh_context, loaded_files), case_evidence)
     base_provenance = {
         "mode": args.mode,
         "provider_repondant": args.provider,
@@ -514,6 +563,13 @@ def main(argv: list[str] | None = None) -> int:
         "sha256_source_pack": sha256_text(source_pack) if source_pack else None,
         "case_ids": [case["id"] for case in cases],
         "evidence_sha256": evidence_sha,
+        "evidence_file": str(Path(args.evidence_file).resolve()) if args.evidence_file else None,
+        "drh_fpt": {"version": read_skill_version(), "bundle": str(full_bundle_path),
+            "sha256_bundle": sha256_text(full_bundle), **git_provenance(ROOT)},
+        "recherche_juridique": ({"version": read_version_from_text(legal_bundle or ""),
+            "chemin": str(legal_path), "sources_chargees": legal_sources,
+            **git_provenance(legal_path or ROOT)} if args.mode == "integration" else {}),
+        "context_sha256_by_case": {key: sha256_text(value[0]) for key, value in contexts.items()},
     }
 
     resumed_from = args.resume or args.judge_only
@@ -560,15 +616,10 @@ def main(argv: list[str] | None = None) -> int:
         evaluation_dir = campaign / "evaluations" / evaluation_id
         evaluation_dir.mkdir(parents=True, exist_ok=False)
 
-    results = []
-    for case in cases:
+    def execute_case(case):
         case_id = case["id"]
-        if args.context_mode == "selective":
-            drh_context, loaded_files = context_loader.build_case_context(case)
-        else:
-            drh_context, loaded_files = full_bundle, [str(full_bundle_path)]
-        system = build_system_context(drh_context, legal_bundle, args.mode, source_pack, args.evidence_mode)
-        context_meta = context_loader.context_metrics(drh_context, loaded_files)
+        print(f"{args.mode} {case_id} : génération / évaluation", flush=True)
+        system, context_meta, case_evidence = contexts[case_id]
         entry = {"id": case_id, "branche": case["branche"], "statut": "ok", "validation": []}
         try:
             answer, response_meta = read_answer(campaign, case_id)
@@ -577,8 +628,7 @@ def main(argv: list[str] | None = None) -> int:
         except FileNotFoundError:
             if args.judge_only:
                 entry.update({"statut": "erreur", "erreur": "réponse absente"})
-                results.append(entry)
-                continue
+                return entry
             try:
                 completion = complete(
                     args.provider, respondent_key or "", args.model, system, case["prompt"],
@@ -586,8 +636,7 @@ def main(argv: list[str] | None = None) -> int:
                 )
             except ApiCallError as exc:
                 entry.update({"statut": "erreur", "erreur": str(exc)})
-                results.append(entry)
-                continue
+                return entry
             answer = completion.text
             response_meta = {"truncated": completion.truncated, "metrics": {"usage": completion.usage}}
             write_answer(campaign, case, answer, completion, {"context": context_meta})
@@ -606,17 +655,22 @@ def main(argv: list[str] | None = None) -> int:
                 evaluation = parse_judge_completion(completion)
             except ApiCallError as exc:
                 entry.update({"statut": "erreur", "erreur": str(exc)})
-                results.append(entry)
-                continue
+                return entry
             (evaluation_dir / f"{case_id}-eval.json").write_text(
                 json.dumps(evaluation, ensure_ascii=False, indent=2), encoding="utf-8"
             )
+            if completion.provider_trace is not None:
+                (evaluation_dir / f"{case_id}-juge.jsonl").write_bytes(completion.provider_trace.encode("utf-8"))
+                entry["juge_trace_sha256"] = sha256_text(completion.provider_trace)
             entry["validation"] = validate_judge_result(evaluation, case)
             entry["tronque"] = entry["tronque"] or evaluation.get("tronque", False)
             entry["score_sur_5"] = evaluation.get("score_sur_5")
             entry["verdict"] = evaluation.get("verdict")
             entry["juge_metrics"] = evaluation.get("metriques", {})
-        results.append(entry)
+        return entry
+
+    with ThreadPoolExecutor(max_workers=args.workers) as executor:
+        results = list(executor.map(execute_case, cases))
 
     evaluation_provenance = {
         **provenance,
