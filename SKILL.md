@@ -303,7 +303,7 @@ La checklist du §10 élève la qualité à chaque exécution.
 2. Toute affirmation relevant d'une ligne « Oui » de la **matrice (§2.2)** a-t-elle été **vérifiée** (ou signalée « à vérifier ») ?
    Toute précision surnuméraire a-t-elle subi le même contrôle que le noyau de
    la réponse ?
-3. **Valeur d'indexation** (point d'indice, cotisations) confirmée à la date utile, jamais de mémoire ? **Plafond réglementaire** cité avec sa source datée et la réserve « à confirmer en version consolidée » ? (cf. socle §6)
+3. **Valeur d'indexation** (point d'indice, cotisations) confirmée à la date utile, jamais de mémoire ? **Plafond réglementaire** contrôlé sur sa source officielle datée et dans sa version applicable ? Les réserves portent-elles sur les points encore ouverts, sans autoriser un chiffre non vérifié ? (cf. socle §6)
 4. **Éligibilité** vérifiée (RIFSEEP/ISFE, promotion interne…) ?
 5. **Obligation vs faculté**, **national vs choix local**, **titulaire vs contractuel** distingués ?
 6. **Niveau de confiance** indiqué quand utile ?

@@ -152,9 +152,16 @@ consolidée** avant tout acte.
   post-cutoff ou secondaire comme vérifiée.
 - **Ne pas appliquer la présomption de démission** du privé (art. L. 1237-1-1 du
   code du travail, loi du 21 décembre 2022) : elle ne vise **pas** la FPT.
-- **Arrêté de radiation** : **motivé** (CRPA), **notifié**, **non rétroactif**
-  (effet à la notification, non à la date d'absence), avec **voies et délais de
-  recours**. **Non soumis à l'obligation de transmission** au contrôle de légalité
+- **Arrêté de radiation** : **motivé** (CRPA), **notifié**, avec **voies et délais de
+  recours**. Ne pas fixer automatiquement l'effet au premier jour d'absence.
+  La notification est la règle d'opposabilité (CRPA L221-8), mais la date
+  d'effet en abandon de poste appelle un contrôle jurisprudentiel distinct :
+  CAA Paris, 9 novembre 2021, n° 20PA03502, §8, admet un effet antérieur à la
+  notification, au terme de la mise en demeure dans cette espèce concernant
+  un stagiaire de l'État. Ne pas en déduire automatiquement la même date pour
+  tout dossier FPT ; vérifier la portée et l'applicabilité avant de signer.
+  Une affirmation générale « toujours effet à la notification » est donc
+  trop absolue. **Non soumis à l'obligation de transmission** au contrôle de légalité
   (hors liste actuelle de l'art. L. 2131-2 du CGCT). Ne pas réintroduire depuis
   une ancienne version de cet article une exception visant la révocation, la
   mise à la retraite d'office ou les sanctions disciplinaires en général.

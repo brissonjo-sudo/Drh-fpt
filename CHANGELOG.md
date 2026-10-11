@@ -15,6 +15,14 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
   borné et gate commun des deux campagnes sur le même commit propre.
 - Reprise refusée après changement de SHA ou de corpus ; formats du juge
   invalides rejetés sans interrompre le bilan.
+- Chargement des modules manquants dans les dossiers mixtes ; couverture des
+  variables, garanties et formalités avant restitution, y compris dégradée.
+- Date d'effet de l'abandon de poste corrigée sur jurisprudence primaire ;
+  distinction entre recours contre un licenciement d'agent public et exception
+  contractuelle de R421-1 ; dates d'application de la réforme CAP précisées.
+- Juge respectant les alternatives, conditions et mentions facultatives ;
+  réserves cohérentes avec une consultation effective. Les critères stricts
+  obligatoires restent intégralement exigés.
 
 ### Renforcé
 - Chaque attendu de test possède un identifiant stable. Le validateur refuse

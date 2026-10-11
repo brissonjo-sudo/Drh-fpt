@@ -34,8 +34,11 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
 > à réintégration, indemnisation éventuelle).
 
 ### 5.4 Instances et pilotage
-- **CAP** : depuis 2019, **plus** consultée a priori sur l'avancement, la
-  promotion ou la mutation. Reste compétente pour :
+- **CAP** : la réforme de 2019 retire sa consultation préalable sur la mobilité
+  à compter de 2020 et sur l'avancement et la promotion à compter de 2021
+  (loi n° 2019-828, articles 10, 30 et 94 ; CGFP L263-3). Vérifier la date
+  et la compétence applicable ; ne pas dater toutes les suppressions de 2019.
+  Reste compétente, dans les cas prévus par les textes, pour :
   - les **décisions individuelles défavorables** ;
   - la **discipline** (le conseil de discipline est une formation de la CAP) ;
   - les **saisines à l'initiative de l'agent** : révision du compte rendu de

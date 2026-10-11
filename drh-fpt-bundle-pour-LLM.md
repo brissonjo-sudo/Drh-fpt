@@ -349,7 +349,7 @@ La checklist du §10 élève la qualité à chaque exécution.
 2. Toute affirmation relevant d'une ligne « Oui » de la **matrice (§2.2)** a-t-elle été **vérifiée** (ou signalée « à vérifier ») ?
    Toute précision surnuméraire a-t-elle subi le même contrôle que le noyau de
    la réponse ?
-3. **Valeur d'indexation** (point d'indice, cotisations) confirmée à la date utile, jamais de mémoire ? **Plafond réglementaire** cité avec sa source datée et la réserve « à confirmer en version consolidée » ? (cf. socle §6)
+3. **Valeur d'indexation** (point d'indice, cotisations) confirmée à la date utile, jamais de mémoire ? **Plafond réglementaire** contrôlé sur sa source officielle datée et dans sa version applicable ? Les réserves portent-elles sur les points encore ouverts, sans autoriser un chiffre non vérifié ? (cf. socle §6)
 4. **Éligibilité** vérifiée (RIFSEEP/ISFE, promotion interne…) ?
 5. **Obligation vs faculté**, **national vs choix local**, **titulaire vs contractuel** distingués ?
 6. **Niveau de confiance** indiqué quand utile ?
@@ -424,6 +424,12 @@ Avant toute conclusion :
 - identifier la date de référence et la date d'effet recherchée ;
 - activer toutes les branches concernées. En cas de dossier mixte, articuler
   leurs règles et appliquer le régime propre à chaque population.
+
+Dans la réponse, rendre explicite l'articulation des régimes qui modifie la
+décision, sans imposer les noms des fichiers ou modules. Pour rémunérer un
+contractuel, recueillir aussi le contrat et ses clauses, le fondement du
+recrutement, la délibération ou le cadre local de rémunération et les règles
+de réévaluation applicables ; un indice de référence ne confère pas un grade.
 
 Si le dossier est hors périmètre ou hors de la base documentaire effectivement
 chargée, le dire avant de poursuivre. Cette qualification est **terminale pour
@@ -787,12 +793,18 @@ la valeur en vigueur à la date utile :
 
 Figer ces valeurs serait contre-productif : elles périment.
 
-### 6.2 Plafonds et barèmes réglementaires (stables) — citables sous réserve
+### 6.2 Plafonds et barèmes réglementaires — vérifier avant citation
 Fixés par un décret identifié, ils restent stables tant qu'il n'est pas modifié.
 Ils **peuvent être cités**, à trois conditions :
 1. **dater le texte source** (ex. décret n° 2024-614) ;
 2. rattacher si possible le plafond à son **article** ;
-3. signaler « **à confirmer en version consolidée** » à la date utile.
+3. consulter la **version applicable à la date utile** et conserver la trace.
+
+La mention « à confirmer en version consolidée » est une réserve pour une
+source non encore consultée, jamais un substitut à la consultation ni une
+autorisation de chiffrer un acte sans vérification. Après une consultation
+effective, dater la source et réserver seulement les points encore ouverts.
+En mode dégradé ou en cas de source inaccessible, ne pas citer de chiffre.
 
 Exemples : plafonds **ISFE** (décret n° 2024-614 — valeurs portées par la
 branche carrière-paie §5.7, **source interne unique** pour éviter toute
@@ -982,6 +994,53 @@ Demander uniquement une information absente qui peut modifier le régime, la
 décision, le calcul ou le contenu du livrable. Utiliser les données déjà établies
 dans la conversation. Une information utile mais non bloquante devient une
 hypothèse explicite ou un champ à compléter.
+
+Une variable bloquante suspend la conclusion définitive, pas l'inventaire du
+dossier. Réunir en une fois les variables qui changent la décision, puis
+donner les scénarios utiles et les contrôles restant à faire. Ne pas s'arrêter
+à la première information manquante en omettant les garanties de la procédure
+ou l'autre branche d'une question mixte.
+
+## Couverture du dossier
+
+Pour une procédure ou un arbitrage, parcourir les contrôles de la branche
+avant de rédiger. Les présenter brièvement, sous conditions si nécessaire.
+Chaque chiffre, délai, compétence ou règle précis reste soumis à vérification.
+
+| Dossier | Informations et contrôles à réunir |
+|---------|------------------------------------|
+| Avancement et retraite | Grade actuel et cible, échelon, services et ancienneté ; tableau, ratios, LDG, compétence des instances ; emploi à temps complet ou non complet, durée de l'emploi, temps partiel autorisé et affiliation. |
+| CITIS | Statut, date et circonstances, certificat, déclaration et contestation ; distinguer le régime du titulaire de celui du contractuel, l'avis médical de la décision de l'autorité et les formations du conseil médical. |
+| Recrutement contractuel | Nature et durée du besoin, emploi et quotité, fondement, publicité et priorité statutaire, CDD/CDI et limites de durée, historique des services, clauses écrites, compétence et formalités. |
+| LDG | Compétence de l'autorité ou du CDG selon l'objet et l'affiliation, stratégie pluriannuelle et RSU, avis du CST et rôle distinct de la CAP, révision et mise à disposition des agents. |
+| Masse salariale | Périmètre, période, effectifs, coût actuel et projeté, données manquantes à collecter ; séparer les données établies des hypothèses et signaler les paramètres volatils. |
+| Communication RH | Public visé, document juridique adopté et date, consultations, canal accessible, diffusion et données personnelles ; une note d'information ne remplace pas l'acte juridique. |
+| Régime indemnitaire | Cadre d'emplois, bénéficiaires, texte propre et exclusions, parts et plafonds, sauvegarde et transitions ; CST, délibération puis décisions individuelles ; conversion en euros selon les données de paie vérifiées. |
+| Discipline | Statut et échelle propre, faits et date de connaissance, dossier intégral, défense et droit de se taire, instance préalable, proportionnalité, motivation, notification, recours actuels et transmission. |
+| Protection fonctionnelle | Statut, lien avec le service, faits et faute personnelle détachable éventuelle, demande et pièces ; protection, assistance, réparation, décision et refus motivé avec recours. |
+| Fin de fonctions | Régime et motif, dates, dossier, procédure et instance, indemnité propre, notification et recours ; distinguer les règles du titulaire et du contractuel. |
+| Inaptitude | Portée exacte de l'avis, droits à congé, aménagement, recherche réelle de reclassement, PPR et convention avec durées/reports à vérifier, disponibilité, affiliation, retraite pour invalidité ou licenciement en dernier recours. |
+| Temps de travail et grève | Emploi, quotité et cycle, heures réellement travaillées/non travaillées, rémunération et assiette, règles nationales et délibération locale, paramétrage du SIRH ; distinguer les versants. |
+
+Ces contrôles ne sont pas des faits supposés. Écarter ceux dont l'inapplicabilité
+est établie et expliquer ceux qui conditionnent la décision. Pour une question
+ciblée, ne garder que les distinctions nécessaires à une réponse correcte.
+
+## Restitution en mode dégradé
+
+Annoncer d'abord le mode et l'absence de consultation officielle. Pour chaque
+point juridique demandé, formuler une **piste documentaire à vérifier** plutôt
+qu'une réponse ferme, même si la règle figure dans le module interne. Un titre
+« selon le corpus » ne suffit pas à autoriser ensuite un « oui/non » juridique,
+une compétence certaine, un seuil ou une procédure exécutable non vérifiés.
+
+Livrer un dossier de préparation : faits connus, variables manquantes,
+pièces et sources officielles à consulter, responsable du contrôle et niveau
+de confiance. Identifier les distinctions métier utiles comme contrôles,
+sans certifier leur résultat. Les références numérotées éventuellement citées
+sont explicitement à confirmer. Ne produire ni acte engageant ni notification
+de recours prête à envoyer. Pour une valeur demandée « aujourd'hui », utiliser
+cette date connue et faire préciser la date d'effet de l'acte si elle diffère.
 
 ## Développements supplémentaires
 
@@ -1346,7 +1405,8 @@ d'application. Renvoyer aux textes / délibérations applicables.]
 
 > Structure conforme à `_gabarit-branche.md`. Valeurs chiffrées : régime du
 > socle §6 — indexations (point, cotisations) jamais de mémoire ; plafonds
-> réglementaires citables si datés et « à confirmer en version consolidée ».
+> réglementaires citables après consultation officielle de la version applicable ;
+> aucun chiffre en mode dégradé, réserves limitées aux points non vérifiés.
 
 ## 1. Périmètre
 
@@ -1455,7 +1515,7 @@ Appliquer le noyau de vérification (matrice §2.2 du SKILL.md) dès que :
 - **Volatiles, jamais de mémoire** : valeur du point d'indice, minimum de
   traitement, grilles indiciaires, montant GIPA, taux de cotisation, barèmes
   d'astreinte/permanence, montants forfaitaires d'indemnisation du CET.
-- **Réglementaires, citables si datées + « à confirmer en version consolidée »** :
+- **Réglementaires, citables après consultation officielle de la version applicable** :
   plafonds ISFE (33/32/30 % ; 9 500/7 000/5 000 €), plafonds RIFSEEP par groupe
   de fonctions, contingent IHTS (25 h), garanties minimales de temps de travail
   (décret 2000-815 : 10 h/jour, 48 h/semaine), plafond CET (60 jours) et seuil
@@ -1558,8 +1618,11 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
 > à réintégration, indemnisation éventuelle).
 
 ### 5.4 Instances et pilotage
-- **CAP** : depuis 2019, **plus** consultée a priori sur l'avancement, la
-  promotion ou la mutation. Reste compétente pour :
+- **CAP** : la réforme de 2019 retire sa consultation préalable sur la mobilité
+  à compter de 2020 et sur l'avancement et la promotion à compter de 2021
+  (loi n° 2019-828, articles 10, 30 et 94 ; CGFP L263-3). Vérifier la date
+  et la compétence applicable ; ne pas dater toutes les suppressions de 2019.
+  Reste compétente, dans les cas prévus par les textes, pour :
   - les **décisions individuelles défavorables** ;
   - la **discipline** (le conseil de discipline est une formation de la CAP) ;
   - les **saisines à l'initiative de l'agent** : révision du compte rendu de
@@ -1694,11 +1757,11 @@ par **équivalence** :
   variable liée à l'engagement), fondée sur l'article **L. 714-13 du CGFP**.
   Exclusive d'autres primes **sauf** IHTS, travail de nuit/dimanche/jours
   fériés, astreintes et NBI. **Clause de sauvegarde** du montant antérieur.
-  Décret **applicable depuis sa publication (2024)** ; seuls les anciens régimes
+  Décret **applicable le lendemain de sa publication (2024)** ; seuls les anciens régimes
   propres (décrets n° 97-702, 2000-45 et 2006-1397) sont **abrogés au 1er janvier
   2025** — ne pas dater l'entrée en vigueur de l'ISFE au 1/1/2025.
   **Plafonds réglementaires** (décret 2024-614, à confirmer en version
-  consolidée) — *citables car fixés par décret* :
+  consolidée avant citation) — *valeurs documentaires à contrôler sur la source officielle* :
   - part fixe (taux du traitement) : **33 %** directeurs, **32 %** chefs de
     service, **30 %** agents et gardes champêtres ;
   - part variable (plafond annuel) : **9 500 €** directeurs, **7 000 €** chefs
@@ -1890,9 +1953,16 @@ consolidée** avant tout acte.
   post-cutoff ou secondaire comme vérifiée.
 - **Ne pas appliquer la présomption de démission** du privé (art. L. 1237-1-1 du
   code du travail, loi du 21 décembre 2022) : elle ne vise **pas** la FPT.
-- **Arrêté de radiation** : **motivé** (CRPA), **notifié**, **non rétroactif**
-  (effet à la notification, non à la date d'absence), avec **voies et délais de
-  recours**. **Non soumis à l'obligation de transmission** au contrôle de légalité
+- **Arrêté de radiation** : **motivé** (CRPA), **notifié**, avec **voies et délais de
+  recours**. Ne pas fixer automatiquement l'effet au premier jour d'absence.
+  La notification est la règle d'opposabilité (CRPA L221-8), mais la date
+  d'effet en abandon de poste appelle un contrôle jurisprudentiel distinct :
+  CAA Paris, 9 novembre 2021, n° 20PA03502, §8, admet un effet antérieur à la
+  notification, au terme de la mise en demeure dans cette espèce concernant
+  un stagiaire de l'État. Ne pas en déduire automatiquement la même date pour
+  tout dossier FPT ; vérifier la portée et l'applicabilité avant de signer.
+  Une affirmation générale « toujours effet à la notification » est donc
+  trop absolue. **Non soumis à l'obligation de transmission** au contrôle de légalité
   (hors liste actuelle de l'art. L. 2131-2 du CGCT). Ne pas réintroduire depuis
   une ancienne version de cet article une exception visant la révocation, la
   mise à la retraite d'office ou les sanctions disciplinaires en général.
@@ -2061,7 +2131,8 @@ consolidée** avant tout acte.
 
 > Structure conforme à `_gabarit-branche.md`. Valeurs chiffrées : régime du
 > socle §6 — indexations (point, cotisations) jamais de mémoire ; plafonds
-> réglementaires citables si datés et « à confirmer en version consolidée ».
+> réglementaires citables après consultation officielle de la version applicable ;
+> aucun chiffre en mode dégradé, réserves limitées aux points non vérifiés.
 
 ## 1. Périmètre
 
@@ -2368,7 +2439,8 @@ périmètre de l'index égalité (loi du 19 juillet 2023).
 
 > Structure conforme à `_gabarit-branche.md`. Valeurs chiffrées : régime du
 > socle §6 — indexations (point, cotisations) jamais de mémoire ; plafonds
-> réglementaires citables si datés et « à confirmer en version consolidée ».
+> réglementaires citables après consultation officielle de la version applicable ;
+> aucun chiffre en mode dégradé, réserves limitées aux points non vérifiés.
 
 ## 1. Périmètre
 
@@ -2580,7 +2652,8 @@ l'apprentissage ; conditions d'ouverture de la NBI au maître d'apprentissage ;
 
 > Structure conforme à `_gabarit-branche.md`. Valeurs chiffrées : régime du
 > socle §6 — indexations (point, cotisations) jamais de mémoire ; plafonds
-> réglementaires citables si datés et « à confirmer en version consolidée ».
+> réglementaires citables après consultation officielle de la version applicable ;
+> aucun chiffre en mode dégradé, réserves limitées aux points non vérifiés.
 
 ## 1. Périmètre
 
@@ -2708,7 +2781,8 @@ calendrier des élections professionnelles ; périmètre des accords négociable
 
 > Structure conforme à `_gabarit-branche.md`. Valeurs chiffrées : régime du
 > socle §6 — indexations (point, cotisations) jamais de mémoire ; plafonds
-> réglementaires citables si datés et « à confirmer en version consolidée ».
+> réglementaires citables après consultation officielle de la version applicable ;
+> aucun chiffre en mode dégradé, réserves limitées aux points non vérifiés.
 
 ## 1. Périmètre
 
@@ -2944,7 +3018,8 @@ en vigueur (LDG, RSU) et les règles RGPD applicables.
 
 > Structure conforme à `_gabarit-branche.md`. Valeurs chiffrées : régime du
 > socle §6 — indexations (point, cotisations) jamais de mémoire ; plafonds
-> réglementaires citables si datés et « à confirmer en version consolidée ».
+> réglementaires citables après consultation officielle de la version applicable ;
+> aucun chiffre en mode dégradé, réserves limitées aux points non vérifiés.
 
 ## 1. Périmètre
 
@@ -3088,6 +3163,15 @@ période d'essai, sous les exceptions prévues par le CGFP réglementaire
 **reclassement uniquement lorsque le motif et le texte l'imposent** ;
 (4) **notification motivée** + voies et délais de recours.
 
+Le licenciement d'un agent public est une décision susceptible de recours
+pour excès de pouvoir. Ne pas lui appliquer mécaniquement l'exception de
+R421-1 CJA relative aux mesures d'exécution d'un contrat : CAA Douai,
+30 janvier 2024, n° 22DA01446, §5-6, applique le délai de deux mois à un
+licenciement d'agent contractuel public. Vérifier la notification, le motif,
+le tribunal compétent et les règles applicables à l'espèce avant d'inscrire
+les voies et délais. Cette décision ne permet pas de transposer les règles
+de fond du décret FPE au licenciement territorial.
+
 Le reclassement préalable n'est **pas** une obligation générale pour tout
 licenciement non disciplinaire :
 
@@ -3104,7 +3188,11 @@ licenciement non disciplinaire :
 **Indemnité de licenciement** : due
 sauf faute grave/disciplinaire ou pension à taux plein ; mode de calcul
 (base, plafond, ancienneté) fixé par le décret 88-145 — **à vérifier avant
-tout montant chiffré**. **Droits au chômage** : en principe auto-assurance de
+tout montant chiffré**, notamment la réduction de moitié en cas d'insuffisance
+professionnelle prévue à l'article 46. Si une comparaison avec le titulaire
+est demandée, examiner séparément l'indemnité du décret n° 85-186 du 7 février
+1985, sous ses conditions, sans transposer le calcul du contractuel.
+**Droits au chômage** : en principe auto-assurance de
 l'employeur (sauf convention France Travail) — vérifier le régime local.
 
 ### 5.7 Discipline des contractuels — échelle propre (décret 88-145)

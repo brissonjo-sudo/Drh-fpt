@@ -1,6 +1,7 @@
 """Contrôles du chargement progressif des références."""
 
 import sys
+import json
 import unittest
 from pathlib import Path
 
@@ -10,6 +11,16 @@ import context_loader
 
 
 class ContextLoaderTests(unittest.TestCase):
+    def test_real_mixed_cases_load_their_missing_business_modules(self):
+        cases={x['id']:x for x in json.loads((ROOT/'tests/cas-de-test.json').read_text(encoding='utf8'))}
+        expected={'01':'references/carriere-paie/statut-discipline.md',
+                  '03':'references/contractuels.md',
+                  '06':'references/cst-dialogue-social.md',
+                  '07':'references/carriere-paie/remuneration-paie.md',
+                  '17-echec-droit-prive':'references/carriere-paie/temps-fin-fonctions.md'}
+        for ident,module in expected.items():
+            self.assertIn(module,context_loader.files_for_case(cases[ident]))
+
     def test_selective_career_payroll_loads_only_requested_module(self):
         case = {
             "id": "pay", "prompt": "Calcule l'ISFE", "branche": "Carrière & paie",

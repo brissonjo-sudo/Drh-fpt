@@ -65,7 +65,7 @@ def check_report(path, evidence_file=None):
             problems+=campaign.validate_evidence(traces,cases,'integration','live',source_path.resolve().parent,as_of=at)
         except (OSError,ValueError,TypeError,KeyError,SystemExit):
             problems.append('dossier de sources absent ou invalide')
-    if p.get('sha256_cas')!=hashlib.sha256((campaign.HERE/'cas-de-test.json').read_bytes()).hexdigest():
+    if p.get('sha256_cas')!=campaign.sha256_text((campaign.HERE/'cas-de-test.json').read_text(encoding='utf-8')):
         problems.append('critères différents des cas courants')
     if p.get('case_ids')!=[c['id'] for c in cases] or p.get('selection_diagnostique'):
         problems.append('sélection incomplète ou diagnostique')

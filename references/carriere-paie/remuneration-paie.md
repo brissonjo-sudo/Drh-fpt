@@ -63,11 +63,11 @@ par **équivalence** :
   variable liée à l'engagement), fondée sur l'article **L. 714-13 du CGFP**.
   Exclusive d'autres primes **sauf** IHTS, travail de nuit/dimanche/jours
   fériés, astreintes et NBI. **Clause de sauvegarde** du montant antérieur.
-  Décret **applicable depuis sa publication (2024)** ; seuls les anciens régimes
+  Décret **applicable le lendemain de sa publication (2024)** ; seuls les anciens régimes
   propres (décrets n° 97-702, 2000-45 et 2006-1397) sont **abrogés au 1er janvier
   2025** — ne pas dater l'entrée en vigueur de l'ISFE au 1/1/2025.
   **Plafonds réglementaires** (décret 2024-614, à confirmer en version
-  consolidée) — *citables car fixés par décret* :
+  consolidée avant citation) — *valeurs documentaires à contrôler sur la source officielle* :
   - part fixe (taux du traitement) : **33 %** directeurs, **32 %** chefs de
     service, **30 %** agents et gardes champêtres ;
   - part variable (plafond annuel) : **9 500 €** directeurs, **7 000 €** chefs

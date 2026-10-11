@@ -282,3 +282,20 @@ Une entrée par cas, au format ci-dessous.
   évaluations immuables, métriques multifournisseurs, trois niveaux de preuve
   et chargement sélectif des branches et gabarits.
 - Statut : intégré (candidat v0.7.0), campagnes LLM à exécuter.
+
+### 2026-10-11 — Sources réelles et premières campagnes de PR18
+- Type : erreurs métier, erreurs du juge et protocole de preuve.
+- Contexte : cas fictifs publics, sans donnée d'agent ; compagnon juridique
+  v3.5.0 et consultations officielles archivées.
+- Campagnes initiales sur a83f031 : 30 cas integration et 30 degraded,
+  répondant gpt-6.1-sol et juge distinct gpt-6-sol, effort medium. Le gate
+  strict échoue dans les deux modes (9 et 10 cas entièrement satisfaits).
+- Constat : modules absents de certains contextes mixtes, omissions de
+  contrôles ; faux négatifs du juge sur alternatives et critères facultatifs ;
+  critère de date d'effet d'abandon de poste trop absolu.
+- Action : compléter les contextes et le dossier de sources, corriger la règle
+  et les critères incompatibles avec les sources, préciser l'inventaire des
+  contrôles et l'abstention en mode dégradé. Les réponses, jugements et traces
+  des premières campagnes sont conservés, sans modification ni remplacement.
+- Statut : corrections locales et 44 tests déterministes réussis ; nouvelles
+  campagnes complètes nécessaires sur le même commit propre avant publication.

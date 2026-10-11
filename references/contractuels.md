@@ -2,7 +2,8 @@
 
 > Structure conforme à `_gabarit-branche.md`. Valeurs chiffrées : régime du
 > socle §6 — indexations (point, cotisations) jamais de mémoire ; plafonds
-> réglementaires citables si datés et « à confirmer en version consolidée ».
+> réglementaires citables après consultation officielle de la version applicable ;
+> aucun chiffre en mode dégradé, réserves limitées aux points non vérifiés.
 
 ## 1. Périmètre
 
@@ -146,6 +147,15 @@ période d'essai, sous les exceptions prévues par le CGFP réglementaire
 **reclassement uniquement lorsque le motif et le texte l'imposent** ;
 (4) **notification motivée** + voies et délais de recours.
 
+Le licenciement d'un agent public est une décision susceptible de recours
+pour excès de pouvoir. Ne pas lui appliquer mécaniquement l'exception de
+R421-1 CJA relative aux mesures d'exécution d'un contrat : CAA Douai,
+30 janvier 2024, n° 22DA01446, §5-6, applique le délai de deux mois à un
+licenciement d'agent contractuel public. Vérifier la notification, le motif,
+le tribunal compétent et les règles applicables à l'espèce avant d'inscrire
+les voies et délais. Cette décision ne permet pas de transposer les règles
+de fond du décret FPE au licenciement territorial.
+
 Le reclassement préalable n'est **pas** une obligation générale pour tout
 licenciement non disciplinaire :
 
@@ -162,7 +172,11 @@ licenciement non disciplinaire :
 **Indemnité de licenciement** : due
 sauf faute grave/disciplinaire ou pension à taux plein ; mode de calcul
 (base, plafond, ancienneté) fixé par le décret 88-145 — **à vérifier avant
-tout montant chiffré**. **Droits au chômage** : en principe auto-assurance de
+tout montant chiffré**, notamment la réduction de moitié en cas d'insuffisance
+professionnelle prévue à l'article 46. Si une comparaison avec le titulaire
+est demandée, examiner séparément l'indemnité du décret n° 85-186 du 7 février
+1985, sous ses conditions, sans transposer le calcul du contractuel.
+**Droits au chômage** : en principe auto-assurance de
 l'employeur (sauf convention France Travail) — vérifier le régime local.
 
 ### 5.7 Discipline des contractuels — échelle propre (décret 88-145)

@@ -32,7 +32,8 @@
     ],
     "contextes": [
       "carriere-paie",
-      "carriere-remuneration-paie"
+      "carriere-remuneration-paie",
+      "carriere-statut-discipline"
     ],
     "attendus_degraded": [
       {
@@ -154,7 +155,8 @@
       "Omet la déclaration de vacance et la publicité"
     ],
     "contextes": [
-      "recrutement-formation"
+      "recrutement-formation",
+      "contractuels"
     ],
     "attendus_degraded": [
       {
@@ -317,7 +319,8 @@
       "Ignore l'exigence d'avis préalable du CST avant toute diffusion générale"
     ],
     "contextes": [
-      "communication-interne"
+      "communication-interne",
+      "cst-dialogue-social"
     ],
     "attendus_degraded": [
       {
@@ -386,7 +389,8 @@
     ],
     "contextes": [
       "carriere-paie",
-      "carriere-statut-discipline"
+      "carriere-statut-discipline",
+      "carriere-remuneration-paie"
     ],
     "attendus_degraded": [
       {
@@ -420,7 +424,7 @@
     "attendus": [
       {
         "id": "08-c01",
-        "texte": "Traite ces plafonds comme réglementaires (décret 2024-614) — peut les citer (part fixe 33 %, part variable 9 500 €) en datant le décret et en signalant « à confirmer en version consolidée »"
+        "texte": "Traite les plafonds comme réglementaires (décret 2024-614), et ne cite 33 % et 9 500 € que sur une source officielle effectivement consultée dans sa version applicable ; sinon réserve explicite avant tout usage, sans chiffre non vérifié"
       },
       {
         "id": "08-c02",
@@ -652,7 +656,7 @@
       },
       {
         "id": "12-c02",
-        "texte": "Fondement textuel exact : article L. 553-1, 1° du CGFP (issu de l'ordonnance n° 2021-1574 du 24 novembre 2021), cité comme fondement textuel et non comme invention"
+        "texte": "Cite l’article L. 553-1, 1° du CGFP comme fondement textuel du licenciement pour abandon de poste ; l’ordonnance de codification peut être mentionnée si vérifiée, sans être obligatoire"
       },
       {
         "id": "12-c03",
@@ -664,7 +668,7 @@
       },
       {
         "id": "12-c05",
-        "texte": "Mentionne la jurisprudence-pivot CE Section, 11 décembre 1998, Casagranda, n° 147511 et/ou n° 147512, en la signalant comme « à confirmer sur Légifrance / conseil-etat.fr » avant de la viser dans un acte"
+        "texte": "Appuie le formalisme de la mise en demeure sur CE Section, 11 décembre 1998, n° 147511 et/ou 147512 (Casagranda) ; une trace officielle effectivement consultée permet de citer la décision, sinon la référence est explicitement à confirmer avant visa dans un acte"
       },
       {
         "id": "12-c06",
@@ -672,7 +676,7 @@
       },
       {
         "id": "12-c07",
-        "texte": "Arrêté de radiation motivé, notifié, non rétroactif (effet à la notification et non à la date d'absence), avec voies et délais de recours"
+        "texte": "Arrêté de radiation motivé, notifié, avec voies et délais de recours ; ne fixe pas automatiquement l’effet au premier jour d’absence et fait contrôler la date selon la mise en demeure et la jurisprudence applicable, sans affirmer que la notification est toujours la seule date possible"
       }
     ],
     "echec_si": [
@@ -1033,7 +1037,7 @@
       },
       {
         "id": "13-echec-hors-perimetre-c02",
-        "texte": "Indique qu'en deçà de 50 agents, il n'y a pas de CST propre : la collectivité relève d'un CST commun placé auprès du centre de gestion (CDG)"
+        "texte": "Oriente le contrôle vers le CST placé auprès du CDG et le seuil d’un CST propre, sans dérouler une procédure hors périmètre ; toute affirmation du seuil de 50 agents repose sur la source officielle consultée"
       },
       {
         "id": "13-echec-hors-perimetre-c03",
@@ -1060,7 +1064,7 @@
       },
       {
         "id": "13-echec-hors-perimetre-degraded-c02",
-        "texte": "Identifie le hors-périmètre de moins de350agents, l’effectif exact, l’affiliation et l’instance CDG/CST à vérifier ; oriente vers une expertise adaptée sans certifier un seuil non consulté"
+        "texte": "Fournit seulement une orientation hors périmètre vers le CDG ou une expertise adaptée aux petites collectivités, avec les pièces et paramètres utiles à faire vérifier, sans certifier une compétence ou un seuil non vérifié"
       },
       {
         "id": "13-echec-hors-perimetre-degraded-c03",
@@ -1195,7 +1199,7 @@
       },
       {
         "id": "15-degrade-valeur-volatile-c03",
-        "texte": "Renvoie à la source officielle à consulter avant tout usage dans l'arrêté et demande la date de référence"
+        "texte": "Renvoie à la source officielle à consulter avant tout usage dans l’arrêté et identifie la date de référence : aujourd’hui est fourni ; demander ou faire confirmer la date d’effet de l’acte si elle diffère"
       }
     ],
     "echec_si": [
@@ -1264,7 +1268,9 @@
       "Omet de renvoyer vers la procédure d'abandon de poste propre à la FPT"
     ],
     "contextes": [
-      "parametres-collectivite"
+      "parametres-collectivite",
+      "carriere-paie",
+      "carriere-temps-fin-fonctions"
     ],
     "attendus_degraded": [
       {
@@ -1273,7 +1279,7 @@
       },
       {
         "id": "17-echec-droit-prive-degraded-c02",
-        "texte": "Identifie le statut public et l’absence, distingue abandon de poste et présomption de démission privée ; recueille dates, justificatifs et notifications et réserve la procédure à une vérification officielle"
+        "texte": "Identifie comme contrôles à faire vérifier la distinction droit privé/fonctionnaire territorial, les faits et dates d’absence, les justificatifs et les démarches de contact ou mise en demeure ; oriente vers l’abandon de poste FPT sans certifier une procédure non vérifiée"
       },
       {
         "id": "17-echec-droit-prive-degraded-c03",
@@ -1484,7 +1490,7 @@
     "attendus": [
       {
         "id": "26-architecture-multibranche-contractuel-c01",
-        "texte": "Active et articule explicitement les branches Carrière & paie et Agents contractuels"
+        "texte": "Articule explicitement les règles de carrière statutaire et de rémunération des agents contractuels, sans exiger les noms des modules internes"
       },
       {
         "id": "26-architecture-multibranche-contractuel-c02",

@@ -28,6 +28,12 @@ Avant toute conclusion :
 - activer toutes les branches concernées. En cas de dossier mixte, articuler
   leurs règles et appliquer le régime propre à chaque population.
 
+Dans la réponse, rendre explicite l'articulation des régimes qui modifie la
+décision, sans imposer les noms des fichiers ou modules. Pour rémunérer un
+contractuel, recueillir aussi le contrat et ses clauses, le fondement du
+recrutement, la délibération ou le cadre local de rémunération et les règles
+de réévaluation applicables ; un indice de référence ne confère pas un grade.
+
 Si le dossier est hors périmètre ou hors de la base documentaire effectivement
 chargée, le dire avant de poursuivre. Cette qualification est **terminale pour
 le fond** : ne pas fournir ensuite la règle détaillée, le taux, le calcul ou le

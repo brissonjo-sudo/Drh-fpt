@@ -193,6 +193,24 @@ reste non tranchée. Une affirmation présentée comme vérifiée sans trace
 exploitable n'est pas une vérification. Une réussite d'architecture ne compense
 jamais une erreur juridique.
 
+Évalue le sens de chaque critère, sans ajouter d'exigence. Accepte les
+équivalences métier (par exemple statut particulier et décret statutaire du
+cadre d'emplois). Respecte les alternatives « ou » et les conditions « si ».
+Une mention « peut mentionner » est facultative : si elle est absente, ou si
+la condition d'un critère ne se réalise pas, indique SATISFAIT avec la note
+« non applicable » et sa raison. Une mention facultative effectivement donnée
+reste soumise au contrôle de justesse. Une demande de collecte de pièces ou
+un tableau explicite à renseigner suffit à demander des données ; aucune
+forme interrogative particulière n'est exigée. Contrôle les précautions
+adaptées au traitement décrit sans exiger un exposé juridique supplémentaire.
+Une source officielle réellement fournie et vérifiée n'a pas à être annoncée
+comme non consultée ; les réserves portent sur les points non vérifiés.
+Recopie les libellés des critères à l'identique, même s'ils sont longs.
+Ne transforme pas un soupçon juridique en erreur confirmée sans contrôler le
+champ de la source et les décisions du dossier. En mode dégradé, les sources
+OU les pièces à consulter suffisent si le critère le prévoit ; ne réclame pas
+de références numérotées. Tout énoncé ferme non vérifié reste sanctionné.
+
 Schéma :
 {"criteres":[{"id":"...","critere":"...","statut":"SATISFAIT|PARTIEL|ABSENT","note":"..."}],
 "erreurs":[],"score_architecture_sur_5":0,"verdict_architecture":"REUSSITE|ECHEC|NON_APPLICABLE",
@@ -535,7 +553,7 @@ def main(argv: list[str] | None = None) -> int:
 
     full_bundle_path = find_bundle()
     full_bundle = full_bundle_path.read_text(encoding="utf-8")
-    cases_sha = hashlib.sha256((HERE / "cas-de-test.json").read_bytes()).hexdigest()
+    cases_sha = sha256_text((HERE / "cas-de-test.json").read_text(encoding="utf-8"))
     judge_provider = args.judge_provider or args.provider
     now = datetime.now(timezone.utc)
     contexts = {}

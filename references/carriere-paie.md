@@ -2,7 +2,8 @@
 
 > Structure conforme à `_gabarit-branche.md`. Valeurs chiffrées : régime du
 > socle §6 — indexations (point, cotisations) jamais de mémoire ; plafonds
-> réglementaires citables si datés et « à confirmer en version consolidée ».
+> réglementaires citables après consultation officielle de la version applicable ;
+> aucun chiffre en mode dégradé, réserves limitées aux points non vérifiés.
 
 ## 1. Périmètre
 
@@ -111,7 +112,7 @@ Appliquer le noyau de vérification (matrice §2.2 du SKILL.md) dès que :
 - **Volatiles, jamais de mémoire** : valeur du point d'indice, minimum de
   traitement, grilles indiciaires, montant GIPA, taux de cotisation, barèmes
   d'astreinte/permanence, montants forfaitaires d'indemnisation du CET.
-- **Réglementaires, citables si datées + « à confirmer en version consolidée »** :
+- **Réglementaires, citables après consultation officielle de la version applicable** :
   plafonds ISFE (33/32/30 % ; 9 500/7 000/5 000 €), plafonds RIFSEEP par groupe
   de fonctions, contingent IHTS (25 h), garanties minimales de temps de travail
   (décret 2000-815 : 10 h/jour, 48 h/semaine), plafond CET (60 jours) et seuil

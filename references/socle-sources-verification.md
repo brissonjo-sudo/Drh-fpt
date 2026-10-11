@@ -156,12 +156,18 @@ la valeur en vigueur à la date utile :
 
 Figer ces valeurs serait contre-productif : elles périment.
 
-### 6.2 Plafonds et barèmes réglementaires (stables) — citables sous réserve
+### 6.2 Plafonds et barèmes réglementaires — vérifier avant citation
 Fixés par un décret identifié, ils restent stables tant qu'il n'est pas modifié.
 Ils **peuvent être cités**, à trois conditions :
 1. **dater le texte source** (ex. décret n° 2024-614) ;
 2. rattacher si possible le plafond à son **article** ;
-3. signaler « **à confirmer en version consolidée** » à la date utile.
+3. consulter la **version applicable à la date utile** et conserver la trace.
+
+La mention « à confirmer en version consolidée » est une réserve pour une
+source non encore consultée, jamais un substitut à la consultation ni une
+autorisation de chiffrer un acte sans vérification. Après une consultation
+effective, dater la source et réserver seulement les points encore ouverts.
+En mode dégradé ou en cas de source inaccessible, ne pas citer de chiffre.
 
 Exemples : plafonds **ISFE** (décret n° 2024-614 — valeurs portées par la
 branche carrière-paie §5.7, **source interne unique** pour éviter toute

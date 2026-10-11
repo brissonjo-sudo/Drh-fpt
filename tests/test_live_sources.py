@@ -8,6 +8,21 @@ from datetime import datetime,timezone,timedelta
 
 
 class LiveSourceTests(unittest.TestCase):
+    def test_official_page_requires_allowed_host_and_https(self):
+        from unittest.mock import patch
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp); import gzip,hashlib
+            at=datetime.now(timezone.utc).isoformat(); url='https://www.cnil.fr/fr/texte'
+            raw={'url':url,'status':200,'body':'Texte officiel','consulted_at':at}
+            path=root/'raw.json.gz';path.write_bytes(gzip.compress(json.dumps(raw).encode()))
+            trace={'kind':'official_page','source_url':url,'source_id':url,'consulted_at':at,
+                   'version_or_date':'Page consultée le '+at,'supporting_excerpt':'Texte officiel',
+                   'raw_response_file':path.name,'raw_response_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),
+                   'endpoint':'https','request':{'url':url}}
+            self.assertEqual(live_sources.verify_trace(trace,root),[])
+            self.assertTrue(live_sources.verify_trace({**trace,'source_url':url.replace('https:','http:')},root))
+            self.assertTrue(live_sources.verify_trace({**trace,'source_url':'https://example.com/texte'},root))
+
     def test_extracts_nested_current_articles_not_repealed_ones(self):
         raw = {'title': 'Texte officiel', 'articles': [], 'sections': [
             {'articles': [{'id': 'LEGIARTI123', 'num': '2', 'etat': 'VIGUEUR',
