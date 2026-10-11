@@ -5,6 +5,9 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 ## [0.7.0] — 2026-09-19 — Fiabilité mesurable et contexte progressif
 
 ### Reprise de PR18 — 2026-10-11
+- Garanties de décision individuelle (motivation applicable, notification et
+  recours, y compris refus) couvertes dès l'analyse, sans attendre la rédaction
+  d'un acte ; maintien du format ciblé pour une simple valeur ou un plafond.
 - Abandon de poste : examen des réponses et justificatifs, non-reprise à
   l'échéance et rupture du lien, sans condition de silence absolu ; critères
   12 et 17 harmonisés sur les décisions primaires. Transmission rapprochée

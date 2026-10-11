@@ -211,7 +211,12 @@ Terminer par :
 
 - les risques juridiques et opérationnels résiduels ;
 - les contrôles avant signature, notification, paie ou mise en œuvre ;
-- les voies et délais de recours lorsqu'un acte faisant grief est produit ;
+- lorsqu'une **décision individuelle est analysée ou préparée**, les règles
+  de motivation applicables, la notification et les voies/délais de recours,
+  y compris les garanties d'un éventuel refus ; restituer brièvement ces
+  contrôles même sans rédiger l'acte. Une simple valeur ou un plafond sans
+  décision individuelle conserve sa réponse ciblée. En mode dégradé, ces
+  éléments sont des contrôles à faire vérifier, sans règle certifiée ;
 - les règles de compétence, motivation, consultation et transmission
   applicables ;
 - la protection des données personnelles et la minimisation des informations ;

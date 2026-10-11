@@ -391,3 +391,17 @@ Une entrée par cas, au format ci-dessous.
 - La réponse29 exclut correctement la sanction2026 et vise la date légale,
   mais omet les conditions et délais des recours anciens : rappel générique
   ajouté à la restitution, sans changer le critère29-c02.
+
+### 2026-10-11 — Sixième série et garanties sans acte rédigé
+- Résultat sur ee1c59f : 28/30 integration et 30/30 degraded.
+  Anciennes réponses et évaluations conservées, sans reprise sélective.
+- La réponse de protection omet la motivation et les recours d'un refus.
+  Le contrat limitait les recours aux actes produits, concurrençant la
+  checklist métier. La règle couvre maintenant toute décision individuelle
+  analysée ou préparée, même sans rédaction, en préservant le format ciblé
+  d'une simple valeur. Relecture indépendante confirme cette vraie omission
+  et la concurrence des consignes. Sources déjà disponibles ; aucun critère
+  ni juge ni gate abaissé. Deux nouvelles campagnes complètes requises.
+- La réponse29 cite la structure et borne le régime ancien, mais omet
+  la concordance avec le texte modificatif et le contrôle des conditions
+  d’accès ; checklist de restitution précisée, critères29 inchangés.

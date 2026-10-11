@@ -621,7 +621,12 @@ Terminer par :
 
 - les risques juridiques et opérationnels résiduels ;
 - les contrôles avant signature, notification, paie ou mise en œuvre ;
-- les voies et délais de recours lorsqu'un acte faisant grief est produit ;
+- lorsqu'une **décision individuelle est analysée ou préparée**, les règles
+  de motivation applicables, la notification et les voies/délais de recours,
+  y compris les garanties d'un éventuel refus ; restituer brièvement ces
+  contrôles même sans rédiger l'acte. Une simple valeur ou un plafond sans
+  décision individuelle conserve sa réponse ciblée. En mode dégradé, ces
+  éléments sont des contrôles à faire vérifier, sans règle certifiée ;
 - les règles de compétence, motivation, consultation et transmission
   applicables ;
 - la protection des données personnelles et la minimisation des informations ;
@@ -1134,9 +1139,12 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   pourrait être confondue avec le conseil préalable. Pour la transmission,
   distinguer liste légale actuelle, anciennes versions, convention locale et
   demandes du préfet. Réunir date d'ouverture de la procédure et date de
-  sanction pour contrôler tout régime transitoire. Si un régime ancien est
-  cité, rappeler que ses conditions et délais restent à contrôler ; une
-  sanction ancienne ne rouvre pas automatiquement un recours aujourd'hui.
+  sanction pour contrôler tout régime transitoire. Lorsqu'une instance est
+  présentée comme supprimée, justifier la concordance entre le texte
+  modificatif consulté et la structure consolidée actuelle, avec leurs dates.
+  Si un régime ancien est cité, nommer les conditions d'accès et les délais
+  qui restent à contrôler dans le dossier ; rappeler seulement l'absence
+  de réouverture automatique ne remplace pas ces deux contrôles.
 - **Abandon de poste** : expliciter la distinction licenciement/discipline,
   l'absence de conseil disciplinaire et de communication du dossier au titre
   disciplinaire ; distinguer la piste FPT de la présomption de démission
@@ -1201,7 +1209,11 @@ ne suffit pas à prévenir la confusion.
 Pour une assiette indiciaire, nommer l'indice et la valeur du point à vérifier
 à la date utile avant conversion en euros.
 Une décision individuelle suspendue conserve le cadrage général vérifié et
-les scénarios conditionnels.
+les scénarios conditionnels. Si la réponse analyse ou prépare une décision
+individuelle, rappeler aussi les règles de motivation applicables, notification
+et recours d'un éventuel refus, même si aucun acte n'est rédigé. Ces garanties
+sont restituées brièvement ; une simple valeur sans décision individuelle
+conserve le format ciblé.
 Ne pas s'arrêter à la conclusion principale en omettant ces contrôles.
 En mode dégradé, identifier les familles de sources officielles à consulter
 et les pièces nécessaires ; aucun résultat juridique n'est certifié.
