@@ -345,3 +345,8 @@ Une entrée par cas, au format ci-dessous.
   de structure consolidée rendu traçable. CAA Lyon 7 mars 2024 n°22LY01568
   réellement consultée et archivée pour la nature de la fin de détachement.
   Dossier complémentaire : 271 traces, 36 archives. Nouvelle validation requise.
+- Diagnostic sur 51d1040 : 08, 13 et 29 entièrement satisfaits ; 21 conserve
+  deux omissions (règle générale du point de départ et voies de sortie).
+  La checklist de restitution est lue après les modules, une seule fois ;
+  les alternatives légales de fin de fonctions restent nécessaires même
+  lorsque la demande porte sur un départ immédiat.

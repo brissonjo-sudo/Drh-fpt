@@ -69,6 +69,9 @@ def files_for_case(case: dict) -> list[str]:
     for needle, rel in DELIVERABLE_ASSETS.items():
         if needle in requested:
             _append_unique(files, rel)
+    restitution='references/restitution-proportionnee.md'
+    files.remove(restitution)
+    files.append(restitution)
     return files
 
 

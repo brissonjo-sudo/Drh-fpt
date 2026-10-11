@@ -11,6 +11,12 @@ import context_loader
 
 
 class ContextLoaderTests(unittest.TestCase):
+    def test_restitution_is_read_last_without_duplicate_sources(self):
+        case={'id':'x','prompt':'Donne les plafonds','contextes':['carriere-paie','carriere-remuneration-paie']}
+        files=context_loader.files_for_case(case)
+        self.assertEqual(files[-1],'references/restitution-proportionnee.md')
+        self.assertEqual(len(files),len(set(files)))
+
     def test_real_mixed_cases_load_their_missing_business_modules(self):
         cases={x['id']:x for x in json.loads((ROOT/'tests/cas-de-test.json').read_text(encoding='utf8'))}
         expected={'01':'references/carriere-paie/statut-discipline.md',

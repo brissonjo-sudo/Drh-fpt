@@ -244,6 +244,9 @@ permettant pas un chargement ciblé fiable, utiliser le bundle complet.
 Dans un contexte assemblé, lire le compagnon et les sources avant les modules
 DRH et leur contrôle de couverture final : les sources établissent la preuve,
 le contrat métier organise la réponse. Charger chaque matériau une seule fois.
+Après les modules et gabarits, relire `references/restitution-proportionnee.md`
+pour sélectionner les contrôles nécessaires à la demande et vérifier leur
+présence dans la réponse finale.
 
 > **Renvois inter-branches** : une question en croise souvent plusieurs. Réflexes
 > fréquents — PSC/coût → masse salariale ; LDG et RSU → CST/dialogue social ;
