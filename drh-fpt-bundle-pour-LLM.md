@@ -606,6 +606,15 @@ publicité et la transmission au contrôle de légalité. Ne jamais écrire qu'u
 acte « n'appelle pas de recours » : distinguer, après vérification, les droits
 du destinataire et ceux des tiers.
 
+Pour une transmission obligatoire, rapprocher la **nature exacte de l'acte**
+d'une catégorie de la liste actuelle et citer cette catégorie. Ne pas traiter
+la nomination d'un titulaire par avancement de grade comme le recrutement
+d'un agent non titulaire : elle n'appartient pas pour ce seul motif à la liste
+actuelle de L2131-2 du CGCT. Le délai de transmission ne s'applique qu'après
+avoir établi l'obligation. À défaut de catégorie vérifiée, conserver une clause
+conditionnelle et distinguer transmission volontaire, pratique locale et
+demande préfectorale.
+
 ## 8. Sécuriser
 
 Terminer par :
@@ -2114,8 +2123,18 @@ consolidée** avant tout acte.
   être licencié […] 1° Pour abandon de poste »), issu de l'ordonnance n° 2021-1574
   du 24 novembre 2021 — *citable, ce n'est pas une invention*. Seul le **régime de
   la mise en demeure** est d'origine **jurisprudentielle**.
-- **Caractérisation** : **absence injustifiée** (aucun justificatif) **+
-  non-réponse à la mise en demeure**. L'**épuisement des droits à congé de maladie
+- **Caractérisation** : absence injustifiée et non-reprise après une mise en
+  demeure régulière et un délai approprié ; examiner les réponses, intentions
+  et justificatifs matériels ou médicaux pour apprécier la rupture du lien
+  avec le service. Le silence absolu n'est pas une condition indispensable :
+  une lettre de refus peut ne pas suffire à préserver ce lien. Ne pas déduire
+  automatiquement l'abandon d'une non-reprise sans apprécier les justificatifs.
+  CE 26 septembre 2014, n°365918, précise le délai approprié (espèce FPH) ;
+  CAA Versailles 14 avril 2026, n°24VE00726, §11–13, confirme que la réponse
+  refusant la reprise peut laisser caractériser la rupture (fonctionnaire FPE).
+  Ces décisions corroborent les principes communs ; ne pas transposer leurs
+  particularités de fait ou de statut à un dossier territorial.
+  L'**épuisement des droits à congé de maladie
   n'est ni nécessaire ni suffisant** — ne pas en faire une condition. (Il ne
   devient pertinent que si un certificat est produit tardivement après épuisement
   — cf. CE *Bouillargues*, à vérifier.) Les congés maladie statutaires restent par

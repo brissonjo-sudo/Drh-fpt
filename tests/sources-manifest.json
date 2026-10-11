@@ -687,6 +687,24 @@
           "1"
         ]
       }
+    },
+    {
+      "key": "abandon-delai-approprie",
+      "kind": "decision",
+      "text_id": "CETATEXT000029504219",
+      "cases": [
+        "16-echec-hors-base",
+        "17-echec-droit-prive"
+      ]
+    },
+    {
+      "key": "abandon-reponse-refus",
+      "kind": "decision",
+      "text_id": "CETATEXT000053906348",
+      "cases": [
+        "16-echec-hors-base",
+        "17-echec-droit-prive"
+      ]
     }
   ]
 }

@@ -365,3 +365,12 @@ Une entrée par cas, au format ci-dessous.
   écarté et résumer les faits établis, sans nouvelle affirmation en mode dégradé.
   La collecte d'un texte de 1962 révèle une limite Windows des timestamps
   négatifs : conversion arithmétique UTC avec test de régression.
+- Quatrième série terminée sur 31060ec : 27/30 integration, 29/30 degraded,
+  gates en échec. Outre les deux omissions de restitution, le projet
+  d'avancement affirme à tort une transmission obligatoire. Contrôle de la
+  nature exacte de l'acte et de sa catégorie légale renforcé avant tout délai.
+- Le critère 17-c02 et le module exigeaient le silence absolu de l'agent :
+  les décisions consultées montrent qu'une réponse refusant la reprise peut
+  rester compatible avec un abandon. Critère et règle corrigés pour contrôler
+  non-reprise, réponses et justificatifs après mise en demeure régulière ;
+  aucune radiation automatique. Périmètres FPE/FPH des décisions explicités.

@@ -196,6 +196,15 @@ publicité et la transmission au contrôle de légalité. Ne jamais écrire qu'u
 acte « n'appelle pas de recours » : distinguer, après vérification, les droits
 du destinataire et ceux des tiers.
 
+Pour une transmission obligatoire, rapprocher la **nature exacte de l'acte**
+d'une catégorie de la liste actuelle et citer cette catégorie. Ne pas traiter
+la nomination d'un titulaire par avancement de grade comme le recrutement
+d'un agent non titulaire : elle n'appartient pas pour ce seul motif à la liste
+actuelle de L2131-2 du CGCT. Le délai de transmission ne s'applique qu'après
+avoir établi l'obligation. À défaut de catégorie vérifiée, conserver une clause
+conditionnelle et distinguer transmission volontaire, pratique locale et
+demande préfectorale.
+
 ## 8. Sécuriser
 
 Terminer par :
