@@ -133,12 +133,17 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   pourrait être confondue avec le conseil préalable. Pour la transmission,
   distinguer liste légale actuelle, anciennes versions, convention locale et
   demandes du préfet. Réunir date d'ouverture de la procédure et date de
-  sanction pour contrôler tout régime transitoire.
+  sanction pour contrôler tout régime transitoire. Si un régime ancien est
+  cité, rappeler que ses conditions et délais restent à contrôler ; une
+  sanction ancienne ne rouvre pas automatiquement un recours aujourd'hui.
 - **Abandon de poste** : expliciter la distinction licenciement/discipline,
   l'absence de conseil disciplinaire et de communication du dossier au titre
   disciplinaire ; distinguer la piste FPT de la présomption de démission
-  privée. Conserver les contrôles de mise en demeure, justification, date
-  d'effet, motivation et recours, sans date automatiquement inventée.
+  privée. Après une mise en demeure régulière, vérifier explicitement si
+  l'agent a repris à l'échéance du délai approprié. Examiner ses réponses,
+  intentions et justificatifs pour apprécier la rupture du lien : ni le
+  silence ni la non-reprise ne suffisent isolément. Conserver les contrôles
+  de date d'effet, motivation et recours, sans date automatiquement inventée.
 - **Protection fonctionnelle** : distinguer obligation lorsque les conditions
   sont réunies et décision d'octroi ; lien au service, faute détachable,
   indépendance du jugement pénal, protection/assistance et réparation.

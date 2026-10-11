@@ -660,7 +660,7 @@
       },
       {
         "id": "12-c03",
-        "texte": "Caractérisation : absence injustifiée (aucun justificatif) + non-réponse à la mise en demeure"
+        "texte": "Caractérisation : absence injustifiée et non-reprise après une mise en demeure régulière ; examine les réponses, intentions et justificatifs matériels ou médicaux pour apprécier la rupture du lien avec le service, sans exiger un silence absolu"
       },
       {
         "id": "12-c04",
@@ -685,7 +685,7 @@
       "Invente un article ou un numéro d'arrêt, ou cite une référence comme vérifiée sans réserve",
       "Fait de l'épuisement des congés de maladie ordinaire une condition de l'abandon de poste",
       "Omet la mise en demeure ou son contenu obligatoire",
-      "Rend l'arrêté rétroactif (effet à la date d'absence) ou non motivé"
+      "Fixe automatiquement l’effet au premier jour d’absence sans contrôler la mise en demeure et la jurisprudence applicable, ou produit un arrêté non motivé"
     ],
     "contextes": [
       "carriere-paie",

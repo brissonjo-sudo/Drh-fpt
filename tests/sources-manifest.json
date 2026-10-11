@@ -271,7 +271,10 @@
           "42-2",
           "43",
           "44",
-          "45"
+          "45",
+          "46",
+          "48",
+          "49"
         ],
         "26-architecture-multibranche-contractuel": [
           "1-2",
@@ -693,6 +696,7 @@
       "kind": "decision",
       "text_id": "CETATEXT000029504219",
       "cases": [
+        "12",
         "16-echec-hors-base",
         "17-echec-droit-prive"
       ]
@@ -702,6 +706,7 @@
       "kind": "decision",
       "text_id": "CETATEXT000053906348",
       "cases": [
+        "12",
         "16-echec-hors-base",
         "17-echec-droit-prive"
       ]

@@ -374,3 +374,20 @@ Une entrée par cas, au format ci-dessous.
   rester compatible avec un abandon. Critère et règle corrigés pour contrôler
   non-reprise, réponses et justificatifs après mise en demeure régulière ;
   aucune radiation automatique. Périmètres FPE/FPH des décisions explicités.
+
+### 2026-10-11 — Cinquième série et harmonisation des contrôles
+- Résultat sur c3e3a22 : 26/30 integration et 30/30 degraded.
+  La paire reste invalide ; les 60 réponses et jugements sont conservés.
+- Le critère 12-c03 exigeait encore la non-réponse absolue corrigée au cas17 :
+  harmonisation sur non-reprise, réponses et justificatifs ; date d’effet
+  contrôlée, sans automaticité au premier jour d’absence. Relecture primaire
+  indépendante confirme la correction.
+- La réponse 17 omet effectivement la non-reprise à l’échéance : contrôle
+  générique de restitution précisé, sans modifier son critère ni le juge.
+- La réponse 19 réserve la réduction faute d’article46 dans les extraits :
+  ajout des articles46/48/49 de l’archive déjà consultée, horodatage préservé.
+- Nouveau dossier immuable :288 traces/39 archives ; les283 traces précédentes
+  restent identiques. Nouvelles campagnes complètes nécessaires.
+- La réponse29 exclut correctement la sanction2026 et vise la date légale,
+  mais omet les conditions et délais des recours anciens : rappel générique
+  ajouté à la restitution, sans changer le critère29-c02.

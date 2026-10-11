@@ -5,6 +5,12 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 ## [0.7.0] — 2026-09-19 — Fiabilité mesurable et contexte progressif
 
 ### Reprise de PR18 — 2026-10-11
+- Abandon de poste : examen des réponses et justificatifs, non-reprise à
+  l'échéance et rupture du lien, sans condition de silence absolu ; critères
+  12 et 17 harmonisés sur les décisions primaires. Transmission rapprochée
+  de la nature exacte de l'acte, sans assimiler avancement et recrutement
+  non titulaire. Dossier indemnitaire du contractuel complété (88-145,
+  articles 46, 48 et 49), sans modifier les jugements antérieurs.
 - Restitution adaptée à l'objet demandé ; compagnon et sources avant le
   contrat métier, contrôle de couverture après les modules, sans duplication.
 - Transitoire disciplinaire corrigé d'après la loi 2019-828, article 94 XI
