@@ -5,7 +5,7 @@ import json
 import os
 import subprocess
 import shutil
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 HERE=Path(__file__).resolve().parent
@@ -142,6 +142,7 @@ def claim_launch(suite: dict, state: Path, slot: str, run_id: str, commit: str) 
         os.close(descriptor)
         data=json.loads(state.read_text(encoding='utf8')) if state.exists() else {}
         game=data.setdefault(suite['name'],{'seal_sha256':suite['seal_sha256'],'runtime_commit':commit,'runs':{}})
+        if game.get('outcome'):raise ValueError('Jeu clos et consommé : tout nouveau créneau est interdit')
         if game['runtime_commit']!=commit:raise ValueError('Runtime différent du commit de ce jeu consommé')
         if game['seal_sha256']!=suite['seal_sha256']:raise ValueError('Jeu consommé avec un autre gel')
         if slot in game['runs']:raise ValueError('Créneau déjà consommé ; aucune relance de score')
@@ -176,4 +177,45 @@ def record_outcome(suite: dict,state: Path,reports: dict,result: dict) -> None:
         proofs[slot]={'report_sha256':file_sha(path),'path':str(path)}
     game.update({'outcome':'passed' if result['reussite'] else 'failed',
                  'reports':proofs,'issues':result['motifs_echec']})
+    temporary=state.with_suffix('.tmp');temporary.write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf8');temporary.replace(state)
+
+
+def validate_launch(suite: dict,state: Path,provenance: dict,report: Path) -> None:
+    data=json.loads(state.read_text(encoding='utf8'));game=data.get(suite['name'])
+    if not game or game.get('seal_sha256')!=suite['seal_sha256']:
+        raise ValueError('Registre de lancement absent ou gel différent')
+    if game.get('outcome')=='failed':raise ValueError('Jeu clos en échec : qualification définitivement refusée')
+    slot=('claude-native' if provenance.get('execution_profile')=='claude-native' else provenance.get('provider_repondant',''))+':'+provenance.get('mode','')
+    if game.get('runs',{}).get(slot)!=provenance.get('campagne_id') or game.get('runtime_commit')!=provenance.get('drh_fpt',{}).get('commit'):
+        raise ValueError('Rapport sans créneau réservé sur ce commit')
+    if game.get('outcome')=='passed' and game.get('reports',{}).get(slot,{}).get('report_sha256')!=file_sha(report):
+        raise ValueError('Rapport différent de la clôture réussie')
+
+
+def abandon_game(suite: dict,state: Path,results_root: Path,kind: str,reason: str,*,new_commit=None) -> None:
+    """Consommer un jeu interrompu/invalide sans fabriquer de bilan ni rejouer."""
+    if kind not in {'interruption','execution_error','runtime_changed'} or not reason.strip():
+        raise ValueError('Motif technique explicite requis')
+    data=json.loads(state.read_text(encoding='utf8'));game=data.get(suite['name'])
+    if not game or not game.get('runs') or game.get('outcome'):raise ValueError('Jeu non lancé ou déjà clos')
+    if game.get('seal_sha256')!=suite['seal_sha256']:raise ValueError('Gel différent')
+    root=results_root.resolve();proofs={};interrupted=False;execution_error=False
+    for slot,run_id in game['runs'].items():
+        folder=(root/run_id).resolve()
+        folder.relative_to(root)
+        path=folder/'_provenance.json'
+        if not path.is_file():raise ValueError('Provenance du lancement absente')
+        p=json.loads(path.read_text(encoding='utf8'))
+        if p.get('campagne_id')!=run_id or p.get('suite')!=suite['name'] or p.get('drh_fpt',{}).get('commit')!=game['runtime_commit']:
+            raise ValueError('Provenance différente du lancement')
+        reports=list(folder.rglob('_bilan.json'))
+        interrupted |= not reports
+        execution_error |= any(any(x.get('statut')!='ok' for x in json.loads(report.read_text(encoding='utf8')).get('cas',[])) for report in reports)
+        proofs[slot]={f.relative_to(folder).as_posix():file_sha(f) for f in folder.rglob('*') if f.is_file()}
+    if kind=='interruption' and not interrupted:raise ValueError('Aucune interruption constatée')
+    if kind=='execution_error' and not execution_error:raise ValueError('Aucune erreur d’exécution constatée')
+    if kind=='runtime_changed' and (not new_commit or new_commit==game['runtime_commit']):raise ValueError('Aucun nouveau commit constaté')
+    game.update({'outcome':'failed','abandonment':{'kind':kind,'reason':reason,
+        'at':datetime.now(timezone.utc).isoformat(),'new_commit':new_commit,'proofs':proofs,
+        'business_score':'not-qualified','human_decision':None}})
     temporary=state.with_suffix('.tmp');temporary.write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf8');temporary.replace(state)

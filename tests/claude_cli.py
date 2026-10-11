@@ -132,6 +132,12 @@ def isolated_environment(config):
             env.pop(key,None)
     credentials=original/'.credentials.json'
     if not credentials.exists():raise ApiCallError('Authentification OAuth locale indisponible')
+    try:
+        expires=json.loads(credentials.read_text(encoding='utf8'))['claudeAiOauth']['expiresAt']
+        if not isinstance(expires,(int,float)) or expires/1000<time.time()+3600:
+            raise ValueError('expiration proche ou passée')
+    except (OSError,ValueError,KeyError,TypeError) as exc:
+        raise ApiCallError('Reconnecte Claude Code par son flux normal avant la campagne (OAuth expiré ou moins d’une heure restante)') from exc
     # Temporaire hors cwd du modèle ; jamais archivé ni envoyé au modèle.
     shutil.copyfile(credentials,Path(config)/'.credentials.json')
     env['CLAUDE_CONFIG_DIR']=str(config)
@@ -154,8 +160,12 @@ def complete_cli(model,system,user,max_tokens,effort=None,*,runtime=None):
             try:
                 response=subprocess.run(command(model,'',native=bool(runtime),effort=effort,system_file=system_file),
                     cwd=cwd,env=env,input=prompt,capture_output=True,text=True,
-                    encoding='utf8',errors='strict',timeout=600,check=False)
-            except (OSError,subprocess.TimeoutExpired) as exc:
+                    encoding='utf8',errors='strict',timeout=1800 if max_tokens>4000 else 600,check=False)
+            except subprocess.TimeoutExpired as exc:
+                partial=exc.stdout or ''
+                if isinstance(partial,bytes):partial=partial.decode('utf8',errors='replace')
+                raise ApiCallError('Exécution Claude impossible : TimeoutExpired',provider_trace=partial) from exc
+            except OSError as exc:
                 raise ApiCallError('Exécution Claude impossible : '+type(exc).__name__) from exc
             if response.returncode:raise ApiCallError(f'Claude a échoué (code {response.returncode})',provider_trace=response.stdout)
             return parse_stream(response.stdout,model,runtime=runtime,

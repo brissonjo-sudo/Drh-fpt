@@ -70,7 +70,7 @@ def check_claude_trace(path,expected_sha,expected,model,*,judge=False,runtime=No
     except (OSError,ValueError,ApiCallError):return None,['trace Claude invalide']
 
 
-def check_report(path, evidence_file=None, decisions=None):
+def check_report(path, evidence_file=None, decisions=None, launch_state=None):
     report=json.loads(path.read_text(encoding='utf8'));p=report.get('provenance_evaluation') or {}
     problems=[]
     gate=report.get('gate_strict') or {}
@@ -81,6 +81,8 @@ def check_report(path, evidence_file=None, decisions=None):
     cases=campaign.active_cases(suite['cases'],p.get('mode'),[])
     qualification=suite['qualification']
     if qualification:
+        try:suites.validate_launch(suite,Path(launch_state or campaign.RESULTS/'qualification-launches.json'),p,path)
+        except (OSError,ValueError,KeyError,TypeError) as exc:problems.append('registre de consommation : '+str(exc))
         slot=('claude-native' if p.get('execution_profile')=='claude-native' else p.get('provider_repondant',''))+':'+p.get('mode','')
         try:suites.validate_profile(suite,slot,p)
         except ValueError as exc:problems.append(str(exc))
@@ -111,7 +113,7 @@ def check_report(path, evidence_file=None, decisions=None):
     if {e.get('id') for e in entries}!={c['id'] for c in cases} or len(entries)!=suite['expected_per_mode']:
         problems.append(str(suite['expected_per_mode'])+' résultats exacts requis')
     folder=path.parent;root=folder.parent.parent
-    assessments={}
+    assessments={};bindings=[]
     for c in cases:
         ident=c['id']
         try:
@@ -125,6 +127,7 @@ def check_report(path, evidence_file=None, decisions=None):
                 binding={'suite_sha256':suite['sha256'],
                          'answer_sha256':hashlib.sha256(campaign.response_path(root,ident).read_bytes()).hexdigest(),
                          'judge_sha256':hashlib.sha256((folder/(ident+'-eval.json')).read_bytes()).hexdigest()}
+                bindings.append({**binding,'case_id':ident})
                 assessment=arbitration.assess(judge,c,binding,decisions or [])
                 assessments[ident]=assessment
                 if not assessment['arbitrated_pass']:problems.append(ident+' : qualification métier non validée ou arbitrage requis')
@@ -133,9 +136,11 @@ def check_report(path, evidence_file=None, decisions=None):
             elif p.get('provider_repondant')=='claude-cli':
                 runtime=None
                 if p.get('execution_profile')=='claude-native':
-                    runtime=json.loads((root/'runtime'/ident/'_runtime.json').read_text(encoding='utf8'))
+                    directory=(root/meta.get('native_runtime_directory','runtime/'+ident)).resolve()
+                    directory.relative_to((root/'runtime').resolve())
+                    runtime=json.loads((directory/'_runtime.json').read_text(encoding='utf8'))
                     # Le chemin de l'archive est résolu localement, pas repris du fichier.
-                    runtime['root']=str((root/'runtime'/ident).resolve())
+                    runtime['root']=str(directory)
                     for rel,sha in runtime['files'].items():
                         file,normalized=claude_cli.confined_path(rel,{**runtime,'execution_root':runtime['root']})
                         if native_runtime.file_sha(file)!=sha:problems.append(ident+' : runtime altéré')
@@ -166,6 +171,7 @@ def check_report(path, evidence_file=None, decisions=None):
         except (OSError,KeyError,ValueError,StopIteration,TypeError,ApiCallError) as exc:
             problems.append(ident+' : artefact invalide ('+type(exc).__name__+')')
     p['_qualification_assessments']=assessments
+    p['_arbitration_bindings']=bindings
     return p,problems
 
 
@@ -173,20 +179,22 @@ def main():
     parser=argparse.ArgumentParser();parser.add_argument('--integration',required=True);parser.add_argument('--degraded',required=True)
     parser.add_argument('--claude-integration');parser.add_argument('--claude-degraded')
     parser.add_argument('--arbitrations')
+    parser.add_argument('--launch-state',help='registre portable de consommation, obligatoire pour qualifier')
     parser.add_argument('--close-game',action='store_true')
     parser.add_argument('--expected-commit');parser.add_argument('--output');parser.add_argument('--evidence-file')
     args=parser.parse_args();commit=args.expected_commit or campaign.git_provenance(campaign.ROOT)['commit']
     decisions=json.loads(Path(args.arbitrations).read_text(encoding='utf8')) if args.arbitrations else []
     if not isinstance(decisions,list):raise SystemExit('Arbitrages : liste de décisions attendue')
-    left,a=check_report(Path(args.integration),args.evidence_file,decisions);right,b=check_report(Path(args.degraded),decisions=decisions)
+    left,a=check_report(Path(args.integration),args.evidence_file,decisions,args.launch_state);right,b=check_report(Path(args.degraded),decisions=decisions,launch_state=args.launch_state)
     problems=a+b+compare_provenances(left,right,commit)
     assessments={'codex_integration':left.get('_qualification_assessments',{}),'codex_degraded':right.get('_qualification_assessments',{})}
+    bindings=left.get('_arbitration_bindings',[])+right.get('_arbitration_bindings',[])
     if left.get('suite','').startswith('qualification-'):
         if not args.claude_integration or not args.claude_degraded:
             problems.append('qualification commune : deux campagnes Claude natives requises')
         else:
-            native_i,c=check_report(Path(args.claude_integration),decisions=decisions)
-            native_d,d=check_report(Path(args.claude_degraded),decisions=decisions)
+            native_i,c=check_report(Path(args.claude_integration),decisions=decisions,launch_state=args.launch_state)
+            native_d,d=check_report(Path(args.claude_degraded),decisions=decisions,launch_state=args.launch_state)
             problems+=c+d+compare_provenances(native_i,native_d,commit)
             for original,native in [(left,native_i),(right,native_d)]:
                 for field in ['suite','sha256_cas','suite_seal_sha256','suite_registry_sha256']:
@@ -196,12 +204,14 @@ def main():
                 if native.get('provider_repondant')!='claude-cli' or native.get('provider_juge')!='codex' or native.get('execution_profile')!='claude-native':
                     problems.append('couple Claude natif/Codex attendu')
             assessments.update({'claude_integration':native_i.get('_qualification_assessments',{}),'claude_degraded':native_d.get('_qualification_assessments',{})})
+            bindings+=native_i.get('_arbitration_bindings',[])+native_d.get('_arbitration_bindings',[])
+    problems+=arbitration.validate_routing(decisions,bindings)
     result={'reussite':not problems,'commit_teste':commit,'integration':args.integration,'degraded':args.degraded,'motifs_echec':problems}
     if any(assessments.values()):result['qualification_assessments']=assessments
     if args.close_game:
         if not left.get('suite','').startswith('qualification-') or not args.claude_integration or not args.claude_degraded:
             raise SystemExit('Clôture : quatre campagnes de qualification requises')
-        suites.record_outcome(suites.load_suite(left['suite']),campaign.RESULTS/'qualification-launches.json',
+        suites.record_outcome(suites.load_suite(left['suite']),Path(args.launch_state or campaign.RESULTS/'qualification-launches.json'),
             {'codex:integration':Path(args.integration),'codex:degraded':Path(args.degraded),
              'claude-native:integration':Path(args.claude_integration),'claude-native:degraded':Path(args.claude_degraded)},result)
     if args.output:Path(args.output).write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf8')

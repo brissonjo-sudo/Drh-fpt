@@ -60,5 +60,19 @@ class ArbitrationTests(unittest.TestCase):
         self.assertFalse(arbitration.assess(self.judge,self.case,self.binding,[])['arbitrated_pass'])
         self.assertTrue(arbitration.assess(self.judge,self.case,self.binding,[self.decision('doubt:0','false_positive')])['arbitrated_pass'])
 
+    def test_other_profile_same_case_does_not_invalidate_this_response(self):
+        decision=self.decision('criterion:c1','satisfied')
+        decision['answer_sha256']='other-profile'
+        result=arbitration.assess(self.judge,self.case,self.binding,[decision])
+        self.assertTrue(result['arbitrated_pass'])
+        self.assertEqual(result['invalid_decisions'],[])
+
+    def test_common_router_rejects_orphan_or_ambiguous_decisions(self):
+        binding={**self.binding,'case_id':'A01'}
+        decision=self.decision('criterion:c1','satisfied')
+        self.assertEqual(arbitration.validate_routing([decision],[binding]),[])
+        self.assertTrue(arbitration.validate_routing([decision],[]))
+        self.assertTrue(arbitration.validate_routing([decision],[binding,binding]))
+
 
 if __name__=='__main__':unittest.main()

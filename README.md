@@ -115,8 +115,10 @@ drh-fpt/
     ├── native_runtime.py                 Projet natif limité au corpus du cas
     ├── suites.json                       Développement, régression ciblée, qualification A/B
     ├── suites.py                         Approbation, gel et consommation des jeux
+    ├── qualification_control.py          Gel humain et abandon technique tracés
     ├── arbitration.py                    Score brut et décisions humaines séparées
     ├── sources-revue-pr18.json            Consultation primaire ciblée du 12 octobre
+    ├── sources-regression-v1.json         Sources des 14 cas critiques (à consulter avant campagne)
     ├── evidence.schema.json              Schéma des traces de consultation
     ├── test_harness.py                   Tests déterministes du harnais
     ├── test_context_loader.py            Tests du chargement ciblé
@@ -129,6 +131,7 @@ drh-fpt/
         ├── CONTEXTE-PR18-2026-10-11.json  Données et provenance de cette mesure
         ├── VALIDATION-PR18-2026-10-11.md  Deux campagnes finales et historique
         ├── REVUE-PR18-2026-10-12.md       Corrections, sources relues et limites
+        ├── SOURCES-REVUE-PR18-2026-10-12.zip  Sources primaires de cette relecture
         ├── PREUVES-PR18-2026-10-11.zip    Réponses, jugements et sources brutes
         └── RAPPORT-2026-06-27.md         Campagne 10 cas (v0.4.2, archivée)
 ```

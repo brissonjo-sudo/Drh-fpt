@@ -38,5 +38,19 @@ class NativeFlowTests(unittest.TestCase):
             folder=next(Path(tmp).glob('*/'))
             self.assertEqual((folder/'14-echec-mauvaise-fp-respondant-failed.jsonl').read_text(encoding='utf8'),'{"type":"error"}')
 
+    def test_diagnostic_resume_after_native_error_keeps_first_runtime(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            options=['--provider','claude-cli','--model','claude-sonnet-4-6',
+                     '--mode','degraded','--case','14-echec-mauvaise-fp','--execution-profile','claude-native']
+            with patch.object(campaign,'RESULTS',Path(tmp)),patch('claude_cli.complete_cli',side_effect=ApiCallError('échec')):
+                self.assertEqual(campaign.main(options),1)
+            folder=next(Path(tmp).glob('*/'));original=(folder/'runtime/14-echec-mauvaise-fp/_runtime.json').read_bytes()
+            completion=Completion('Réponse',False,{},'id',1,'{}')
+            with patch.object(campaign,'RESULTS',Path(tmp)),patch('claude_cli.complete_cli',return_value=completion) as call:
+                self.assertEqual(campaign.main([*options,'--resume',str(folder)]),0)
+            call.assert_called_once()
+            self.assertEqual((folder/'runtime/14-echec-mauvaise-fp/_runtime.json').read_bytes(),original)
+            self.assertNotEqual(campaign.read_answer(folder,'14-echec-mauvaise-fp')[1]['native_runtime_directory'],'runtime/14-echec-mauvaise-fp')
+
 
 if __name__=='__main__':unittest.main()

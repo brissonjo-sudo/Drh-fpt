@@ -39,6 +39,9 @@ cas. Le CLI utilise l'authentification OAuth existante dans une configuration
 temporaire séparée ; aucun secret ni fichier de configuration n'est copié dans
 le corpus ou les preuves. Outils limités à Read/Glob/Grep/Skill, hooks et MCP
 désactivés, aucun Bash, aucune écriture, aucun fallback ni reprise de session.
+Une connexion expirée ou disposant de moins d'une heure est refusée avant
+copie et appel : reconnecter Claude par son flux normal. L'adaptateur n'écrit
+jamais dans le magasin de connexion permanent.
 Le répondant reçoit la question et l'emplacement des documents : pas de bundle,
 de rappel final ajouté, de critères ni de réponses antérieures.
 
@@ -68,6 +71,16 @@ et `--claude-degraded`. `--close-game` clôture le jeu seulement après les
 quatre campagnes et la résolution des disputes ; la réserve reste bloquée
 tant que A n'est pas clos en échec. Ne pas renseigner une décision humaine
 sur la seule initiative d'un modèle.
+
+Si un processus est interrompu avant bilan, ne pas inventer de résultats pour
+clôturer A. `qualification_control.py abandon` consomme le jeu en échec
+technique, avec motif, provenance et empreintes des fichiers déjà produits.
+Il n'autorise aucune relance de A ni réussite métier. Le gel concret s'effectue
+avec `qualification_control.py freeze --suite <nom> --approval <décision-Jo.json>`.
+La réserve peut ensuite qualifier le candidat corrigé sous son propre commit.
+Le contrôle exige le registre de consommation ; pour une archive portable,
+fournir `--launch-state <registre.json>`. Un jeu clos en échec reste refusé
+même si des bilans anciens paraissent favorables.
 
 ## Consultation réelle avant intégration
 

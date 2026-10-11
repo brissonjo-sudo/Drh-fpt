@@ -1,4 +1,6 @@
 import json
+import time
+import subprocess
 from types import SimpleNamespace
 import tempfile
 import unittest
@@ -25,6 +27,31 @@ def stream(*blocks, error=False, denied=None):
 
 
 class ClaudeCliTests(unittest.TestCase):
+    def test_timeout_preserves_partial_original_stream(self):
+        partial=b'{"type":"system","subtype":"init"}\n'
+        failure=subprocess.TimeoutExpired('fixture',600,output=partial)
+        with patch('claude_cli.isolated_environment',return_value={}),patch('claude_cli.subprocess.run',side_effect=failure):
+            with self.assertRaises(ApiCallError) as caught:claude_cli.complete_cli(MODEL,'system','question',1000)
+        self.assertEqual(caught.exception.provider_trace,partial.decode('utf8'))
+    def test_expired_credentials_refused_before_snapshot_or_provider_call(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);original=root/'original';original.mkdir();isolated=root/'isolated';isolated.mkdir()
+            (original/'.credentials.json').write_text(json.dumps({'claudeAiOauth':{'expiresAt':int((time.time()-1)*1000)}}))
+            with patch.dict('claude_cli.os.environ',{'CLAUDE_CONFIG_DIR':str(original)}):
+                with self.assertRaisesRegex(ApiCallError,'Reconnecte'):
+                    claude_cli.isolated_environment(isolated)
+            self.assertFalse((isolated/'.credentials.json').exists())
+
+    def test_fresh_auth_snapshot_never_writes_persistent_credentials(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);original=root/'original';original.mkdir();isolated=root/'isolated';isolated.mkdir()
+            path=original/'.credentials.json';path.write_text(json.dumps({'claudeAiOauth':{'expiresAt':int((time.time()+7200)*1000)}}))
+            before=path.read_bytes()
+            with patch.dict('claude_cli.os.environ',{'CLAUDE_CONFIG_DIR':str(original)}):
+                env=claude_cli.isolated_environment(isolated)
+            self.assertEqual(path.read_bytes(),before)
+            self.assertEqual((isolated/'.credentials.json').read_bytes(),before)
+            self.assertEqual(env['CLAUDE_CONFIG_DIR'],str(isolated))
     def test_large_corpus_is_loaded_from_file_not_windows_command_line(self):
         corpus='c'*100000
         def execute(args,**kwargs):

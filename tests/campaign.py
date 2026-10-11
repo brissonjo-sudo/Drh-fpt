@@ -722,10 +722,14 @@ def main(argv: list[str] | None = None) -> int:
                         runtime=native_runtime.stage(Path(temporary)/'project',ROOT,args.mode,case_id,case_evidence,legal_path)
                         if native_runtime.signature(runtime)!=native_signatures[case_id]:
                             raise ApiCallError('Runtime natif différent du précontrôle')
-                        native_runtime.archive(runtime,campaign/'runtime'/case_id)
+                        archive_directory=campaign/'runtime'/case_id
+                        if archive_directory.exists():
+                            archive_directory=campaign/'runtime'/(case_id+'-attempts')/uuid.uuid4().hex
+                        native_runtime.archive(runtime,archive_directory)
                         completion=claude_cli.complete_cli(args.model,'',native_runtime.prompt(case,args.mode),
                             MAX_TOKENS_REPONDANT,args.reasoning_effort,runtime=runtime)
                         native_meta={'native_runtime_sha256':native_signatures[case_id],
+                                     'native_runtime_directory':archive_directory.relative_to(campaign).as_posix(),
                                      'execution_profile':'claude-native'}
                 else:
                     completion = complete(
@@ -735,8 +739,11 @@ def main(argv: list[str] | None = None) -> int:
             except (ApiCallError,ValueError,OSError) as exc:
                 entry.update({"statut": "erreur", "erreur": str(exc)})
                 if getattr(exc,'provider_trace',None):
-                    (campaign/f'{case_id}-respondant-failed.jsonl').write_bytes(exc.provider_trace.encode('utf8'))
+                    failure_path=campaign/f'{case_id}-respondant-failed.jsonl'
+                    if failure_path.exists():failure_path=campaign/f'{case_id}-respondant-failed-{uuid.uuid4().hex}.jsonl'
+                    failure_path.write_bytes(exc.provider_trace.encode('utf8'))
                     entry['failed_trace_sha256']=sha256_text(exc.provider_trace)
+                    entry['failed_trace_file']=failure_path.name
                 return entry
             answer = completion.text
             response_meta = {"truncated": completion.truncated, "metrics": {"usage": completion.usage}}
@@ -811,6 +818,9 @@ def main(argv: list[str] | None = None) -> int:
         "gate_strict": {"active": args.strict, "reussite": args.strict and not strict_problems, "motifs_echec": strict_problems},
     }
     destination = evaluation_dir / "_bilan.json" if evaluation_dir else campaign / "_bilan.json"
+    if destination.exists():
+        history=campaign/'report-history';history.mkdir(exist_ok=True)
+        (history/(uuid.uuid4().hex+'.json')).write_bytes(destination.read_bytes())
     destination.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Campagne : {campaign}")
     if evaluation_dir:

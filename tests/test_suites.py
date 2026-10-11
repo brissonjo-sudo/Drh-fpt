@@ -103,6 +103,32 @@ class SuiteTests(unittest.TestCase):
             self.assertEqual(closed['outcome'],'failed')
             self.assertEqual(closed['reports']['codex:integration']['report_sha256'],suites.file_sha(reports['codex:integration']))
 
+    def test_interrupted_game_can_be_abandoned_without_fake_completed_reports(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);state=root/'runs.json'
+            suite={'name':'qualification-a-v1','qualification':True,'seal_sha256':'c'*64,'runtime_commit':'a'*40}
+            suites.claim_launch(suite,state,'codex:integration','run1','a'*40)
+            run=root/'run1';run.mkdir()
+            (run/'_provenance.json').write_text(json.dumps({'campagne_id':'run1','suite':suite['name'],
+                'drh_fpt':{'commit':'a'*40}}),encoding='utf8')
+            original=(run/'_provenance.json').read_bytes()
+            suites.abandon_game(suite,state,root,'interruption','Processus interrompu avant bilan')
+            game=json.loads(state.read_text(encoding='utf8'))[suite['name']]
+            self.assertEqual(game['outcome'],'failed')
+            self.assertEqual(game['abandonment']['kind'],'interruption')
+            self.assertEqual((run/'_provenance.json').read_bytes(),original)
+            with self.assertRaisesRegex(ValueError,'consomm'):
+                suites.claim_launch(suite,state,'codex:integration','run2','a'*40)
+            with self.assertRaisesRegex(ValueError,'consomm'):
+                suites.claim_launch(suite,state,'codex:degraded','run2','a'*40)
+
+    def test_abandonment_requires_observed_provenance_and_cannot_relabel_success(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);state=root/'runs.json'
+            suite={'name':'qualification-a-v1','qualification':True,'seal_sha256':'c'*64,'runtime_commit':'a'*40}
+            suites.claim_launch(suite,state,'codex:integration','run1','a'*40)
+            with self.assertRaises(ValueError):suites.abandon_game(suite,state,root,'interruption','arrêt')
+
     def test_exact_profile_no_silent_model_effort_or_cli_change(self):
         profile={'provider_repondant':'codex','modele_repondant':'gpt-6.1-sol','effort_repondant':'high',
                  'provider_juge':'claude-cli','modele_juge':'claude-sonnet-4-6','effort_juge':'high',

@@ -28,9 +28,9 @@ def assess(judge,case,binding,decisions):
         try:
             if not isinstance(entry,dict):raise ValueError('décision mal formée')
             if entry.get('case_id')!=case['id']:continue
+            if any(entry.get(k)!=v for k,v in binding.items()):continue
             target=entry['target']
             if target not in failures or target in resolutions:raise ValueError('cible inconnue ou doublon')
-            if any(entry.get(k)!=v for k,v in binding.items()):raise ValueError('empreinte différente')
             if entry.get('reviewer')!='Jo' or entry.get('confirmed') is not True:raise ValueError('arbitrage humain non confirmé')
             if datetime.fromisoformat(entry['decided_at']).tzinfo is None:raise ValueError('date sans fuseau')
             if not entry.get('reason','').strip() or not entry.get('evidence','').strip():raise ValueError('motif ou preuve humaine absent')
@@ -49,3 +49,12 @@ def assess(judge,case,binding,decisions):
             'arbitrated_pass':not integrity and not invalid and not unresolved and not confirmed,
             'unresolved':unresolved,'confirmed_failures':confirmed,'invalid_decisions':invalid,
             'human_resolutions':resolutions,'style_scores':'indicative'}
+
+
+def validate_routing(decisions,bindings):
+    issues=[]
+    for entry in decisions:
+        if not isinstance(entry,dict):issues.append('arbitrage mal formé');continue
+        matches=[binding for binding in bindings if all(entry.get(k)==v for k,v in binding.items())]
+        if len(matches)!=1:issues.append('arbitrage orphelin ou ambigu : '+str(entry.get('case_id','inconnu')))
+    return issues
