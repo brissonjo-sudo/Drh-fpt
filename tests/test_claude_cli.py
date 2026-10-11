@@ -1,4 +1,5 @@
 import json
+from types import SimpleNamespace
 import tempfile
 import unittest
 from pathlib import Path
@@ -24,6 +25,22 @@ def stream(*blocks, error=False, denied=None):
 
 
 class ClaudeCliTests(unittest.TestCase):
+    def test_large_corpus_is_loaded_from_file_not_windows_command_line(self):
+        corpus='c'*100000
+        def execute(args,**kwargs):
+            self.assertTrue(all(len(str(value))<30000 for value in args))
+            path=Path(args[args.index('--system-prompt-file')+1])
+            self.assertEqual(path.read_text(encoding='utf8'),corpus)
+            return SimpleNamespace(returncode=0,stdout=stream())
+        with patch('claude_cli.isolated_environment',return_value={}),patch('claude_cli.subprocess.run',side_effect=execute):
+            self.assertEqual(claude_cli.complete_cli(MODEL,corpus,'question',1000).text,'réponse')
+    def test_windows_npm_wrapper_resolves_native_executable(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);shim=root/'claude.cmd';shim.write_text('wrapper')
+            native=root/'node_modules/@anthropic-ai/claude-code/bin/claude.exe'
+            native.parent.mkdir(parents=True);native.write_text('binary')
+            with patch('claude_cli.shutil.which',side_effect=lambda name:str(shim) if name=='claude.cmd' else None):
+                self.assertEqual(claude_cli.command(MODEL,'corpus')[0],str(native))
     def test_exact_model_success_trace_and_usage(self):
         raw=stream({'type':'text','text':'réponse'})
         result=claude_cli.parse_stream(raw,MODEL)

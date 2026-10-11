@@ -20,9 +20,16 @@ READ_TOOLS={'Read','Glob','Grep','Skill'}
 def file_sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
-def command(model,system,*,native=False,effort=None):
-    executable=shutil.which('claude.exe') or shutil.which('claude.cmd') or shutil.which('claude') or 'claude'
-    args=[executable,'--print','--verbose','--output-format','stream-json',
+def executable():
+    found=shutil.which('claude.exe') or shutil.which('claude.cmd') or shutil.which('claude')
+    if found and Path(found).suffix.lower() in {'.cmd','.ps1'}:
+        native=Path(found).parent/'node_modules/@anthropic-ai/claude-code/bin/claude.exe'
+        if native.is_file():return str(native)
+    return found or 'claude'
+
+
+def command(model,system,*,native=False,effort=None,system_file=None):
+    args=[executable(),'--print','--verbose','--output-format','stream-json',
           '--include-hook-events',
           '--no-session-persistence','--restricted','--strict-mcp-config',
           '--mcp-config','{"mcpServers":{}}','--no-chrome',
@@ -30,7 +37,10 @@ def command(model,system,*,native=False,effort=None):
           '--settings','{"disableAllHooks":true,"autoMemoryEnabled":false,"enabledPlugins":{}}',
           '--model',model,'--tools','Read,Glob,Grep,Skill' if native else '']
     if native:args.extend(['--allowedTools','Read,Glob,Grep,Skill'])
-    else:args.extend(['--safe-mode','--system-prompt',system or 'Réponds uniquement à la demande.'])
+    else:
+        args.append('--safe-mode')
+        if system_file:args.extend(['--system-prompt-file',str(system_file)])
+        else:args.extend(['--system-prompt',system or 'Réponds uniquement à la demande.'])
     if effort:args.extend(['--effort',effort])
     return args
 
@@ -137,8 +147,12 @@ def complete_cli(model,system,user,max_tokens,effort=None,*,runtime=None):
         with tempfile.TemporaryDirectory(prefix='drh-claude-judge-') as empty:
             cwd=runtime['root'] if runtime else empty
             prompt=user if runtime else f'{user}\n\nLimite indicative : {max_tokens} tokens.'
+            system_file=None
+            if not runtime:
+                system_file=Path(config)/'system-prompt.txt'
+                system_file.write_text(system or 'Réponds uniquement à la demande.',encoding='utf8')
             try:
-                response=subprocess.run(command(model,system,native=bool(runtime),effort=effort),
+                response=subprocess.run(command(model,'',native=bool(runtime),effort=effort,system_file=system_file),
                     cwd=cwd,env=env,input=prompt,capture_output=True,text=True,
                     encoding='utf8',errors='strict',timeout=600,check=False)
             except (OSError,subprocess.TimeoutExpired) as exc:

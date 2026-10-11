@@ -109,6 +109,9 @@ def cli_versions() -> dict:
     result={}
     for provider,binary in [('codex','codex'),('claude-cli','claude')]:
         executable=shutil.which(binary+'.exe') or shutil.which(binary+'.cmd') or shutil.which(binary)
+        if provider=='claude-cli':
+            from claude_cli import executable as claude_executable
+            executable=claude_executable()
         if not executable:raise ValueError('CLI absent : '+binary)
         response=subprocess.run([executable,'--version'],capture_output=True,text=True,encoding='utf8',timeout=30)
         if response.returncode or not response.stdout.strip():raise ValueError('Version CLI inconnue')
