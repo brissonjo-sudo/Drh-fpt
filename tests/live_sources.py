@@ -234,14 +234,16 @@ def source_context(traces: list[dict]) -> str:
 
 def structure_text(raw: dict) -> str:
     lines=[raw['title']]
+    def optional_date(value):
+        return date_value(value).date().isoformat() if value is not None else 'non renseigné'
     def walk(node,depth=0):
         for section in node.get('sections',[]):
             lines.append('  '*depth+plain_text(section['title'])+' | '+section['etat']+
-                ' | '+date_value(section['dateDebut']).date().isoformat()+' → '+date_value(section['dateFin']).date().isoformat())
+                ' | '+optional_date(section.get('dateDebut'))+' → '+optional_date(section.get('dateFin')))
             walk(section,depth+1)
         for article in node.get('articles',[]):
             lines.append('  '*depth+'Article '+article['num']+' | '+article['etat']+
-                ' | '+date_value(article['dateDebut']).date().isoformat()+' → '+date_value(article['dateFin']).date().isoformat())
+                ' | '+optional_date(article.get('dateDebut'))+' → '+optional_date(article.get('dateFin')))
     walk(raw)
     return '\n'.join(lines)
 

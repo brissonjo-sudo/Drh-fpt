@@ -648,6 +648,14 @@
         ]
       },
       "reference_date": "2004-01-01"
+    },
+    {
+      "key": "discipline-structure",
+      "kind": "consolidated_structure",
+      "text_id": "JORFTEXT000000335719",
+      "cases": [
+        "29-nonregression-discipline-recours"
+      ]
     }
   ]
 }

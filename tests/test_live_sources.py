@@ -8,6 +8,11 @@ from datetime import datetime,timezone,timedelta
 
 
 class LiveSourceTests(unittest.TestCase):
+    def test_structure_preserves_unreported_section_dates_without_inventing_them(self):
+        raw={'title':'Décret','sections':[{'title':'Chapitre abrogé','etat':'ABROGE',
+            'dateDebut':None,'dateFin':None}]}
+        self.assertIn('non renseigné',live_sources.structure_text(raw))
+
     def test_consolidated_structure_proves_repeal_and_checks_archive(self):
         raw={'cid':'LEGITEXT123','title':'Décret disciplinaire','dateDebutVersion':0,
             'dateFinVersion':32472144000000,'sections':[{'title':'Conseils de recours',
