@@ -5,6 +5,8 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 ## [0.7.0] — 2026-09-19 — Candidate non publiée — Fiabilité mesurable et contexte progressif
 
 ### Relecture de PR18 — 2026-10-12 (qualification en préparation)
+- État, contrôles et mesures : [registre daté de PR18](tests/rapports/ETAT-PR18-2026-10-12.md).
+  Détails de session et plan interne conservés hors du candidat, dans l’archive locale du chantier.
 - Consultation primaire ciblée : quatre options de L544-4, compétence CDG
   confiée, droit de se taire et portée des décisions d'abandon de poste.
 - Renvois, retraite/fin de fonctions, grève, contrat transversal, métadonnées
@@ -19,11 +21,10 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
   automatiques refusées. Les diagnostics ne valent pas qualification.
 
 ### Validation de PR18 — 2026-10-11
-- Deux campagnes strictes de 30 cas : intégration et dégradé 30/30, sur
-  `cc1f56f6f7a18cdfb569e757795d717d7f206b79` propre ; gate commun réussi.
-- 56 tests déterministes, preuves originales et sources officielles archivées ;
-  rapports datés et reproduction portable. Les échecs antérieurs sont conservés.
-- Réduction moyenne de 59.0 % des octets DRH en chargement sélectif,
+- Résultats de développement, tests et preuves : [rapport historique daté et
+  rattaché à son commit](tests/rapports/VALIDATION-PR18-2026-10-11.md).
+  Les échecs antérieurs restent conservés.
+- Chargement sélectif : [mesure historique du même candidat](tests/rapports/CONTEXTE-PR18-2026-10-11.md),
   compagnon et sources en supplément. Aucun changement de comportement dans
   le commit de publication documentaire ; aucune fusion effectuée.
 

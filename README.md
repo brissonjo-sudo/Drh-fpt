@@ -76,8 +76,6 @@ drh-fpt/
 │   ├── context_loader.py                 Charge le noyau, les branches et gabarits nécessaires
 │   ├── measure_contexts.py               Compare la taille des contextes complet et ciblé
 │   └── check_coherence.py                Vérifie version/bundle/CHANGELOG/renvois/arbre README
-├── docs/superpowers/plans/
-│   └── 2026-10-12-pr18-revue.md           Plan de corrections approuvé
 ├── references/
 │   ├── _gabarit-branche.md               Gabarit décisionnel des branches
 │   ├── contrat-execution.md               Contrat d'exécution transversal testable
@@ -132,6 +130,9 @@ drh-fpt/
     ├── prompt-claude-code.md             Protocole sous-agents Claude Code (lit cas-de-test.json)
     ├── cas-co-activation.md              Cas transverse drh-fpt × recherche-juridique
     └── rapports/                         Rapports datés et preuves de validation
+        ├── ETAT-PR18-2026-10-12.md        État courant, références par date et SHA
+        ├── CONTEXTE-PR18-2026-10-12.md    Mesure locale du candidat technique
+        ├── CONTEXTE-PR18-2026-10-12.json  Données par cas et empreintes
         ├── CONTEXTE-v0.7.0.md            Mesure historique du 19 septembre 2026
         ├── CONTEXTE-PR18-2026-10-11.md    Mesure du commit testé de la PR18
         ├── CONTEXTE-PR18-2026-10-11.json  Données et provenance de cette mesure
@@ -188,21 +189,10 @@ répondant/juge à contextes séparés — voir `tests/`) :
   **réussite 5/5 sur 9 critères**.
 - Historique : 3 tests internes initiaux + 5 portages externes (Gemini,
   ChatGPT, Grok réussis ; Vibe conservé comme contre-exemple).
-- **PR18, développement du 11 octobre 2026** : **30/30 intégration et 30/30
-  dégradé**, tous les critères obligatoires satisfaits, aucune erreur juridique
-  détectée et contrôle commun des preuves réussi sur `cc1f56f6f7a18cdfb569e757795d717d7f206b79`.
-  Répondant `gpt-6.1-sol`, juge distinct `gpt-6-sol`, effort `high`.
-  **56 tests déterministes** réussis. Les échecs antérieurs sont conservés dans
-  [le rapport et son archive](tests/rapports/VALIDATION-PR18-2026-10-11.md).
-  La validation porte sur ces cas et ce corpus daté ; une réponse juridique
-  future exige de nouvelles consultations.
-- **Qualification après relecture** : en préparation. Les 30 cas précédents
-  ont servi aux corrections successives ; ils ne mesurent pas la généralisation.
-  Jeux neufs A/B, barèmes approuvés par Jo, puis juges de familles différentes
-  et chargement natif Claude Code sont requis avant une nouvelle conclusion.
-- **Chargement sélectif** : réduction moyenne de **59.0 % des octets
-  DRH** sur les 30 cas d’intégration ; compagnon juridique et sources en
-  supplément. [Mesure datée](tests/rapports/CONTEXTE-PR18-2026-10-11.md).
+- **PR18, candidate non publiée** : [état daté et références par SHA](tests/rapports/ETAT-PR18-2026-10-12.md).
+  Développement historique, contrôles locaux, mesures de contexte et
+  qualification en préparation y sont distingués. Les jeux neufs A/B et
+  barèmes restent à approuver par Jo. Aucun gel ni lancement nouveau.
 
 Détail : `tests/rapports/`, `JOURNAL.md`, `CHANGELOG.md`.
 
