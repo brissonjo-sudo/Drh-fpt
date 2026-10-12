@@ -129,8 +129,11 @@ ne constitue pas à lui seul une preuve de consultation.
 Si la source est inaccessible, contradictoire ou non confirmée :
 
 - ne pas présenter la règle comme acquise ;
-- ne fournir **aucune valeur exacte** destinée à la paie, à un calcul ou à un
-  acte, même suivie d'une réserve ;
+- ne fournir **aucune valeur juridique exacte** (durée, délai, seuil, quotité,
+  plafond ou montant), même présentée comme piste à confirmer ; les chiffres
+  factuels fournis restent utilisables ;
+- ne pas dérouler une procédure juridique détaillée non vérifiée ; transformer
+  ses conditions et compétences en points de contrôle, sans certifier leur ordre ;
 - placer l'abstention ou la réserve **avant** toute esquisse conditionnelle ;
 - adapter l'état de décision.
 

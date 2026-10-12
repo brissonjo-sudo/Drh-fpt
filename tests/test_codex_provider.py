@@ -6,6 +6,13 @@ import providers
 
 
 class CodexProviderTests(unittest.TestCase):
+    def test_timeout_retains_partial_provider_trace(self):
+        partial=b'{"type":"thread.started","thread_id":"incomplete"}\n'
+        with patch('providers.subprocess.run',side_effect=subprocess.TimeoutExpired(['codex'],300,output=partial)):
+            with self.assertRaises(providers.ApiCallError) as caught:
+                providers.complete('codex','','model','S','Q',100)
+        self.assertEqual(caught.exception.provider_trace,partial.decode('utf8'))
+
     def test_preserves_usage_and_trace_in_fresh_tool_free_session(self):
         events = [
             {'type': 'thread.started', 'thread_id': 'fresh'},

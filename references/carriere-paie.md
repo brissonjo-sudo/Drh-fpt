@@ -3,7 +3,8 @@
 > Structure conforme à `_gabarit-branche.md`. Valeurs chiffrées : régime du
 > socle §6 — indexations (point, cotisations) jamais de mémoire ; plafonds
 > réglementaires citables après consultation officielle de la version applicable ;
-> aucun chiffre en mode dégradé, réserves limitées aux points non vérifiés.
+> aucun chiffre juridique non vérifié en mode dégradé ; les faits chiffrés
+> fournis restent utilisables, réserves limitées aux points non vérifiés.
 
 ## 1. Périmètre
 

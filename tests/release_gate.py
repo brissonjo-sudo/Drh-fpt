@@ -57,10 +57,11 @@ def compare_provenances(integration, degraded, expected_commit):
     return problems
 
 
-def native_required_files(case,mode):
+def native_required_files(case,mode,runtime=None):
     required={'.claude/skills/drh-fpt/'+rel for rel in campaign.context_loader.files_for_case(case)}
     if mode=='integration' and case.get('preuve_requise',case.get('type')!='echec_attendu'):
         required|={'.claude/skills/recherche-juridique/SKILL.md','sources/official.md'}
+        required.update((runtime or {}).get('source_files',[]))
     return required
 
 
@@ -158,7 +159,7 @@ def check_report(path, evidence_file=None, decisions=None, launch_state=None):
                 problems += [ident+' : '+issue for issue in issues]
                 if runtime and completion:
                     loaded={x['path'] for x in completion.usage['loaded_files'] if x.get('full')}
-                    required=native_required_files(c,p['mode'])
+                    required=native_required_files(c,p['mode'],runtime)
                     if required-loaded:problems.append(ident+' : fichiers nécessaires non lus entièrement : '+', '.join(sorted(required-loaded)))
             elif meta.get('provider_trace_sha256'):
                 actual=hashlib.sha256((root/(ident+'-respondant.jsonl')).read_bytes()).hexdigest()

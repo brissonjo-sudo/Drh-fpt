@@ -7,6 +7,7 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import re
 import shutil
 import subprocess
 import tempfile
@@ -56,6 +57,51 @@ def confined_path(value,runtime):
     return root/relative,relative
 
 
+def normalized_newlines(text):
+    return text.replace('\r\n','\n').replace('\r','\n')
+
+
+def verified_read_lines(path,inputs,result):
+    """Prouve les lignes reçues, jamais la seule étendue demandée."""
+    text=normalized_newlines(path.read_text(encoding='utf8'))
+    lines=text.split('\n');count=len(lines)-(1 if text.endswith('\n') else 0)
+    offset=inputs.get('offset') or 1;limit=inputs.get('limit') or 2000
+    if type(offset) is not int or type(limit) is not int or offset<1 or limit<1:
+        raise ValueError('étendue Read invalide')
+    content=result.get('content')
+    if isinstance(content,list) and len(content)==1 and content[0].get('type')=='text':content=content[0].get('text')
+    if not isinstance(content,str) or not content:raise ValueError('contenu Read vide ou inconnu')
+    received=set()
+    for line in normalized_newlines(content).splitlines():
+        match=re.fullmatch(r'[ ]*(\d+)\t(.*)',line)
+        if not match:raise ValueError('contenu Read non numéroté ou tronqué')
+        number=int(match[1])
+        if number in received or not offset<=number<offset+limit or not 1<=number<=len(lines):
+            raise ValueError('numérotation Read incohérente')
+        if match[2]!=lines[number-1]:raise ValueError('contenu Read différent de l’archive')
+        received.add(number)
+    expected=set(range(offset,min(count+1,offset+limit)))
+    if not expected<=received:raise ValueError('contenu Read incomplet ou tronqué')
+    # La dernière ligne vide est facultative dans la restitution du CLI.
+    optional={count+1} if text.endswith('\n') else set()
+    if received-expected-optional:raise ValueError('lignes Read supplémentaires')
+    return received & set(range(1,count+1)),count
+
+
+def verified_skill_expansion(text,runtime,pending):
+    text=normalized_newlines(text);head,separator,body=text.partition('\n')
+    if not separator:raise ValueError('expansion Skill vide')
+    base=head.removeprefix('Base directory for this skill: ')
+    path,rel=confined_path(str(Path(base)/'SKILL.md'),runtime)
+    if rel not in pending or rel not in runtime['files'] or file_sha(path)!=runtime['files'][rel]:
+        raise ValueError('expansion Skill orpheline ou hors runtime')
+    expected=normalized_newlines(path.read_text(encoding='utf8'))
+    expected=re.sub(r'^---\n.*?\n---(?:\n|$)','',expected,count=1,flags=re.S)
+    if body.strip('\n')!=expected.strip('\n'):raise ValueError('corps Skill absent, tronqué ou différent')
+    pending.remove(rel)
+    return rel
+
+
 def parse_stream(raw,model,*,runtime=None,duration_ms=0):
     try:
         events=[json.loads(line) for line in raw.splitlines() if line.strip()]
@@ -83,7 +129,7 @@ def parse_stream(raw,model,*,runtime=None,duration_ms=0):
         if not isinstance(result.get('result'),str) or not result['result'].strip():raise ValueError('réponse vide')
         allowed=READ_TOOLS if runtime else set()
         if set(start.get('tools',[]))-allowed:raise ValueError('outils disponibles inattendus')
-        loaded={}; calls={};results={}
+        loaded={}; calls={};results={};read_requests={};coverage={};pending_skills=[]
         for event in events:
             message=event.get('message') or {}
             content=message.get('content',[])
@@ -99,21 +145,31 @@ def parse_stream(raw,model,*,runtime=None,duration_ms=0):
                     # de continuation ou un résumé ajouté par le CLI ne l'est pas.
                     if not runtime or not str(block.get('text','')).startswith('Base directory for this skill: '):
                         raise ValueError('continuation, résumé ou message utilisateur supplémentaire')
+                    rel=verified_skill_expansion(block['text'],runtime,pending_skills)
+                    loaded[rel]={'path':rel,'sha256':runtime['files'][rel],'tool':'Skill','full':True}
                 if block.get('type')=='tool_result':
                     if block.get('is_error'):raise ValueError('lecture en erreur')
-                    results[block.get('tool_use_id')]=block
+                    identifier=block.get('tool_use_id')
+                    if identifier not in calls or identifier in results:raise ValueError('résultat orphelin ou dupliqué')
+                    results[identifier]=block
+                    if identifier in read_requests:
+                        path,rel,inputs=read_requests[identifier]
+                        received,count=verified_read_lines(path,inputs,block)
+                        coverage.setdefault(rel,set()).update(received)
+                        full=set(range(1,count+1))<=coverage[rel]
+                        loaded[rel]={'path':rel,'sha256':runtime['files'][rel],'tool':'Read',
+                                     'full':full or loaded.get(rel,{}).get('full',False)}
                 if block.get('type')!='tool_use':continue
                 name=block.get('name');inputs=block.get('input') or {}
                 if name not in allowed:raise ValueError('outil non autorisé : '+str(name))
+                if not isinstance(block.get('id'),str) or not block['id'] or block['id'] in calls:
+                    raise ValueError('identifiant d’outil absent ou dupliqué')
                 calls[block['id']]=block
                 if name=='Read':
                     path,rel=confined_path(inputs['file_path'],runtime)
                     if rel not in runtime['files'] or file_sha(path)!=runtime['files'][rel]:
                         raise ValueError('fichier absent ou altéré')
-                    lines=len(path.read_text(encoding='utf8').splitlines())
-                    offset=inputs.get('offset',1);limit=inputs.get('limit',2000)
-                    full=offset in {None,1} and (limit is None or limit>=lines)
-                    loaded[rel]={'path':rel,'sha256':runtime['files'][rel],'tool':'Read','full':full or loaded.get(rel,{}).get('full',False)}
+                    read_requests[block['id']]=(path,rel,inputs)
                 elif name in {'Glob','Grep'}:
                     path,rel=confined_path(inputs.get('path','.'),runtime)
                     # Toute surface recherchée est journalisée ; une recherche ne
@@ -133,10 +189,11 @@ def parse_stream(raw,model,*,runtime=None,duration_ms=0):
                         raise ValueError('skill externe ou arguments mal formés')
                     path,_=confined_path(rel,runtime)
                     if file_sha(path)!=runtime['files'][rel]:raise ValueError('skill altéré')
-                    loaded[rel]={'path':rel,'sha256':runtime['files'][rel],'tool':'Skill','full':True}
+                    pending_skills.append(rel)
         # Certains CLI émettent le résultat d'un Skill comme un message utilisateur.
         # Toute invocation doit néanmoins avoir un résultat d'outil associé.
         if set(calls)-set(results):raise ValueError('résultat de lecture absent')
+        if pending_skills:raise ValueError('expansion native Skill absente')
         usage=dict(result.get('usage') or {})
         model_usage=result.get('modelUsage') or {}
         if set(model_usage)-{model}:raise ValueError('usage d’un autre modèle')

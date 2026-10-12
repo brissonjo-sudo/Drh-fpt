@@ -95,6 +95,10 @@ metadata:
 
 ## 0. Chargement obligatoire
 
+Les chemins `references/` et `assets/` se résolvent depuis le **répertoire contenant `SKILL.md`**.
+En chargement natif, utiliser le répertoire de base affiché par l'outil d'activation
+du skill ; ce n'est pas le répertoire de travail du projet.
+
 Pour une question dans le périmètre du skill, lire avant l'analyse du fond :
 
 1. `references/contrat-execution.md` : qualification et variables bloquantes ;
@@ -103,9 +107,15 @@ Pour une question dans le périmètre du skill, lire avant l'analyse du fond :
 
 Lire ensuite le routeur de la branche et les modules nécessaires (§7). Avant
 de livrer la réponse, appliquer `references/restitution-proportionnee.md`.
+Pour Carrière & paie, ouvrir `references/carriere-paie.md` **avant tout sous-module** :
+ses règles communes restent obligatoires, même si le module semble suffisant.
 En **chargement natif**, l'invocation du skill ne charge pas automatiquement
 ces références : les ouvrir effectivement. Si leur texte est déjà présent
 dans le contexte assemblé, l'utiliser sans le charger une seconde fois.
+En fonctionnement nominal, **co-activer `recherche-juridique`** et lire ses
+instructions avant d'interpréter les sources, y compris des documents officiels
+déjà fournis. Si ce compagnon ou les sources sont indisponibles, appliquer le
+mode dégradé du socle ; une source fournie ne remplace pas la méthode de vérification.
 
 ## 1. Déclenchement
 
@@ -176,6 +186,9 @@ aucune procédure détaillée et aucun projet d'acte juridiquement engageant ne
 doivent être livrés sans la vérification requise. Fournir uniquement le cadrage,
 les variables à réunir, la méthode de contrôle et une abstention motivée sur le
 fond non vérifié.
+Les durées, délais, seuils, quotités et montants présents dans les modules
+restent des repères de recherche. En mode dégradé, ne pas les reproduire,
+même comme « pistes à vérifier ». Les faits chiffrés fournis restent utilisables.
 
 **Les quatre réflexes du filet de sécurité** :
 
@@ -568,8 +581,11 @@ ne constitue pas à lui seul une preuve de consultation.
 Si la source est inaccessible, contradictoire ou non confirmée :
 
 - ne pas présenter la règle comme acquise ;
-- ne fournir **aucune valeur exacte** destinée à la paie, à un calcul ou à un
-  acte, même suivie d'une réserve ;
+- ne fournir **aucune valeur juridique exacte** (durée, délai, seuil, quotité,
+  plafond ou montant), même présentée comme piste à confirmer ; les chiffres
+  factuels fournis restent utilisables ;
+- ne pas dérouler une procédure juridique détaillée non vérifiée ; transformer
+  ses conditions et compétences en points de contrôle, sans certifier leur ordre ;
 - placer l'abstention ou la réserve **avant** toute esquisse conditionnelle ;
 - adapter l'état de décision.
 
@@ -1398,7 +1414,8 @@ d'application. Renvoyer aux textes / délibérations applicables.]
 > Structure conforme à `_gabarit-branche.md`. Valeurs chiffrées : régime du
 > socle §6 — indexations (point, cotisations) jamais de mémoire ; plafonds
 > réglementaires citables après consultation officielle de la version applicable ;
-> aucun chiffre en mode dégradé, réserves limitées aux points non vérifiés.
+> aucun chiffre juridique non vérifié en mode dégradé ; les faits chiffrés
+> fournis restent utilisables, réserves limitées aux points non vérifiés.
 
 ## 1. Périmètre
 
@@ -4079,7 +4096,19 @@ Ne pas s'arrêter à la conclusion principale en omettant ces contrôles.
 En mode dégradé, identifier les familles de sources officielles à consulter
 et les pièces nécessaires ; aucun résultat juridique n'est certifié.
 
-En mode dégradé, relire aussi les phrases juridiques négatives : les
-conditions et effets deviennent des contrôles à vérifier, même si leur
-formulation semble protectrice. Rattacher l’absence de conclusion aux
-sources/pièces manquantes dans cette réponse, sans certifier une règle.
+En mode dégradé, les durées, délais, seuils, quotités, plafonds et montants
+juridiques tirés des modules sont exclus de la réponse, **même présentés comme des pistes**
+à confirmer. Une réserve générale ne permet pas de les énoncer. Les faits chiffrés fournis
+restent utilisables ; les références numérotées peuvent désigner les textes à consulter.
+Ne pas dérouler une procédure juridique détaillée à partir du seul module.
+Une règle du module non vérifiée devient une **question de contrôle**, pas une
+affirmation suivie de « à vérifier » : demander quelle autorité est compétente,
+si une garantie s'applique et selon quelles conditions. Éviter les formules
+« le code prévoit », « impose », « obligatoire » ou « constitue une illégalité »
+lorsque leur fondement n'a pas été consulté pour la réponse. Une liste numérotée
+de passages obligés reste une procédure détaillée, même appelée « pistes ».
+Relire aussi les phrases juridiques négatives : conditions, compétences et effets
+deviennent des points de contrôle, même si leur formulation semble protectrice.
+Si la règle déterminante n'est pas vérifiée, retenir **Décision suspendue** ; ne
+pas conclure « impossible » à partir d'une règle seulement mémorisée. Livrer
+la collecte des pièces et les recherches nécessaires, avec leur objet précis.

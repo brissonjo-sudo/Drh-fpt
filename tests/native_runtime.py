@@ -6,6 +6,20 @@ import shutil
 from pathlib import Path
 import live_sources
 
+MAX_SOURCE_SEGMENT_BYTES=16000
+
+
+def source_segments(text):
+    """Borne octets et lignes sans perdre ni modifier un caractère source."""
+    pieces=[];buffer=[];size=0;lines=0
+    for char in text:
+        width=len(char.encode('utf8'))
+        if size+width>MAX_SOURCE_SEGMENT_BYTES or (char=='\n' and lines>=300):
+            pieces.append(''.join(buffer));buffer=[];size=0;lines=0
+        buffer.append(char);size+=width;lines+=char=='\n'
+    if buffer:pieces.append(''.join(buffer))
+    return pieces
+
 
 def file_sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -41,12 +55,20 @@ def stage(root: Path,drh: Path,mode: str,case_id: str,evidence: list,
     root.mkdir(parents=True,exist_ok=False)
     skills={'drh-fpt':'.claude/skills/drh-fpt/SKILL.md'}
     copy_skill(drh,root/'.claude/skills/drh-fpt')
+    source_files=[]
     if mode=='integration':
         copy_skill(companion,root/'.claude/skills/recherche-juridique')
         skills['recherche-juridique']='.claude/skills/recherche-juridique/SKILL.md'
         if evidence:
             (root/'sources').mkdir()
-            (root/'sources/official.md').write_text(live_sources.source_context(evidence),encoding='utf8')
+            chunks=source_segments(live_sources.source_context(evidence))
+            for number,chunk in enumerate(chunks,1):
+                rel=f'sources/official-{number:03}.md';source_files.append(rel)
+                (root/rel).write_text(chunk,encoding='utf8',newline='\n')
+            index='# Documents officiels du cas\n\n'
+            index+='Lire tous les fragments ci-dessous dans cet ordre avant de conclure. Leur concaténation restitue intégralement le dossier consulté ; une coupure peut se situer au milieu d’un passage.\n\n'
+            index+='\n'.join(f'- `{rel}`' for rel in source_files)+'\n'
+            (root/'sources/official.md').write_text(index,encoding='utf8',newline='\n')
     # --restricted ignore les sources de réglages projet, donc leur découverte
     # de skills. Un plugin local explicitement fourni est une voie native
     # documentée, sans ajouter de répertoire extérieur ni activer de réglages.
@@ -58,13 +80,14 @@ def stage(root: Path,drh: Path,mode: str,case_id: str,evidence: list,
     files={p.relative_to(root).as_posix():file_sha(p) for p in sorted(root.rglob('*')) if p.is_file()}
     return {'schema_version':1,'profile':'claude-native','root':str(root.resolve()),
             'mode':mode,'case_id':case_id,'files':files,'skills':skills,
+            'source_files':source_files,
             'plugin':{'name':'drh-eval','relative_root':'.'},'expected_skills':list(namespaced)}
 
 
 def prompt(case: dict,mode: str) -> str:
     instruction='Utilise le skill drh-eval:drh-fpt pour répondre à la question suivante.\n'
     if mode=='integration':
-        instruction+='Le compagnon drh-eval:recherche-juridique est installé.\n'
+        instruction+='Utilise aussi le skill drh-eval:recherche-juridique pour cette réponse.\n'
         if case.get('preuve_requise',case.get('type')!='echec_attendu'):
             instruction+='Les documents officiels de cette réponse sont dans sources/official.md ; consulte-les.\n'
     else:

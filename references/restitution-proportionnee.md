@@ -313,7 +313,19 @@ Ne pas s'arrêter à la conclusion principale en omettant ces contrôles.
 En mode dégradé, identifier les familles de sources officielles à consulter
 et les pièces nécessaires ; aucun résultat juridique n'est certifié.
 
-En mode dégradé, relire aussi les phrases juridiques négatives : les
-conditions et effets deviennent des contrôles à vérifier, même si leur
-formulation semble protectrice. Rattacher l’absence de conclusion aux
-sources/pièces manquantes dans cette réponse, sans certifier une règle.
+En mode dégradé, les durées, délais, seuils, quotités, plafonds et montants
+juridiques tirés des modules sont exclus de la réponse, **même présentés comme des pistes**
+à confirmer. Une réserve générale ne permet pas de les énoncer. Les faits chiffrés fournis
+restent utilisables ; les références numérotées peuvent désigner les textes à consulter.
+Ne pas dérouler une procédure juridique détaillée à partir du seul module.
+Une règle du module non vérifiée devient une **question de contrôle**, pas une
+affirmation suivie de « à vérifier » : demander quelle autorité est compétente,
+si une garantie s'applique et selon quelles conditions. Éviter les formules
+« le code prévoit », « impose », « obligatoire » ou « constitue une illégalité »
+lorsque leur fondement n'a pas été consulté pour la réponse. Une liste numérotée
+de passages obligés reste une procédure détaillée, même appelée « pistes ».
+Relire aussi les phrases juridiques négatives : conditions, compétences et effets
+deviennent des points de contrôle, même si leur formulation semble protectrice.
+Si la règle déterminante n'est pas vérifiée, retenir **Décision suspendue** ; ne
+pas conclure « impossible » à partir d'une règle seulement mémorisée. Livrer
+la collecte des pièces et les recherches nécessaires, avec leur objet précis.

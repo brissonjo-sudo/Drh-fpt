@@ -162,7 +162,11 @@ def _codex(model: str, system: str, user: str, max_tokens: int,
         try:
             result = subprocess.run(command, input=prompt, capture_output=True, text=True,
                 encoding="utf-8", errors="replace", timeout=300, check=False)
-        except (OSError, subprocess.TimeoutExpired) as exc:
+        except subprocess.TimeoutExpired as exc:
+            partial=exc.stdout or ''
+            if isinstance(partial,bytes):partial=partial.decode('utf8',errors='replace')
+            raise ApiCallError('Exécution Codex impossible : TimeoutExpired',provider_trace=partial) from exc
+        except OSError as exc:
             raise ApiCallError(f"Exécution Codex impossible : {type(exc).__name__}") from exc
     if result.returncode:
         # Les logs ne sont pas incorporés dans une erreur publique : pas de secret accidentel.

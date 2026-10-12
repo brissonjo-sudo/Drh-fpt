@@ -11,14 +11,23 @@ from providers import ApiCallError
 
 MODEL='claude-sonnet-4-6'
 
-def stream(*blocks, error=False, denied=None, plugins=None, skills=None):
+def stream(*blocks, error=False, denied=None, plugins=None, skills=None, skill_expansion=None):
     events=[{'type':'system','subtype':'init','model':MODEL,'session_id':'fresh',
              'mcp_servers':[],'plugins':plugins or [],'skills':skills or [],'tools':[]}]
     if blocks:events.append({'type':'assistant','message':{'model':MODEL,'content':list(blocks)}})
     for block in blocks:
         if block.get('type')=='tool_use':
+            content='lecture effectuée'
+            if block.get('name')=='Read':
+                path=Path(block['input']['file_path'])
+                if path.is_file():
+                    lines=path.read_text(encoding='utf8').split('\n')
+                    offset=block['input'].get('offset',1);limit=block['input'].get('limit',2000)
+                    content='\n'.join(f'{i+1}\t{line}' for i,line in enumerate(lines) if offset-1<=i<offset-1+limit)
             events.append({'type':'user','message':{'content':[{'type':'tool_result',
-                'tool_use_id':block['id'],'content':'lecture effectuée'}]}})
+                'tool_use_id':block['id'],'content':content}]}})
+            if block.get('name')=='Skill' and skill_expansion is not None:
+                events.append({'type':'user','message':{'content':[{'type':'text','text':skill_expansion}]}})
     events.append({'type':'result','subtype':'success','is_error':error,'result':'réponse',
                    'session_id':'fresh','permission_denials':denied or [],
                    'modelUsage':{MODEL:{'inputTokens':4,'outputTokens':2}},
@@ -42,7 +51,7 @@ class ClaudeCliTests(unittest.TestCase):
             runtime={'root':str(root),'files':{'SKILL.md':claude_cli.file_sha(path)},
                      'skills':{'drh-eval:drh-fpt':'SKILL.md'}}
             inputs={'skill':'drh-eval:drh-fpt','args':'Question RH territoriale'}
-            result=claude_cli.parse_stream(stream({'type':'tool_use','id':'s','name':'Skill','input':inputs}),MODEL,runtime=runtime)
+            result=claude_cli.parse_stream(stream({'type':'tool_use','id':'s','name':'Skill','input':inputs},skill_expansion=f'Base directory for this skill: {root}\n\nskill'),MODEL,runtime=runtime)
             self.assertTrue(result.usage['loaded_files'][0]['full'])
             self.assertEqual(result.usage['tool_calls'][0]['input'],inputs)
             for invalid in [{'skill':'external','args':'Question'},

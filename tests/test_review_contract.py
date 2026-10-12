@@ -11,6 +11,21 @@ import context_loader
 
 
 class ReviewContractTests(unittest.TestCase):
+    def test_native_reference_base_and_companion_activation_precede_analysis(self):
+        opening=self.read('SKILL.md').split('## 1. Déclenchement')[0]
+        self.assertTrue('répertoire contenant `SKILL.md`' in opening,'base de résolution native absente')
+        self.assertTrue('co-activer' in opening,'activation du compagnon absente du démarrage')
+    def test_native_career_parent_is_explicit_in_initial_loading_contract(self):
+        opening=self.read('SKILL.md').split('## 1. Déclenchement')[0]
+        self.assertIn('references/carriere-paie.md',opening)
+        self.assertIn('avant tout sous-module',opening)
+
+    def test_degraded_final_rule_blocks_exact_legal_hints_but_keeps_supplied_facts(self):
+        final=self.read('references/restitution-proportionnee.md')
+        self.assertIn('même présentés comme des pistes',final)
+        self.assertIn('faits chiffrés fournis',final)
+        self.assertIn('Décision suspendue',final)
+        self.assertNotIn('aucun chiffre en mode dégradé',self.read('references/carriere-paie.md'))
     def test_native_loading_contract_is_visible_before_the_business_sections(self):
         opening=self.read('SKILL.md').split('## 1. Déclenchement')[0]
         for rel in context_loader.CORE_FILES[1:]:self.assertIn(rel,opening)

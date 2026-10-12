@@ -47,6 +47,10 @@ metadata:
 
 ## 0. Chargement obligatoire
 
+Les chemins `references/` et `assets/` se résolvent depuis le **répertoire contenant `SKILL.md`**.
+En chargement natif, utiliser le répertoire de base affiché par l'outil d'activation
+du skill ; ce n'est pas le répertoire de travail du projet.
+
 Pour une question dans le périmètre du skill, lire avant l'analyse du fond :
 
 1. `references/contrat-execution.md` : qualification et variables bloquantes ;
@@ -55,9 +59,15 @@ Pour une question dans le périmètre du skill, lire avant l'analyse du fond :
 
 Lire ensuite le routeur de la branche et les modules nécessaires (§7). Avant
 de livrer la réponse, appliquer `references/restitution-proportionnee.md`.
+Pour Carrière & paie, ouvrir `references/carriere-paie.md` **avant tout sous-module** :
+ses règles communes restent obligatoires, même si le module semble suffisant.
 En **chargement natif**, l'invocation du skill ne charge pas automatiquement
 ces références : les ouvrir effectivement. Si leur texte est déjà présent
 dans le contexte assemblé, l'utiliser sans le charger une seconde fois.
+En fonctionnement nominal, **co-activer `recherche-juridique`** et lire ses
+instructions avant d'interpréter les sources, y compris des documents officiels
+déjà fournis. Si ce compagnon ou les sources sont indisponibles, appliquer le
+mode dégradé du socle ; une source fournie ne remplace pas la méthode de vérification.
 
 ## 1. Déclenchement
 
@@ -128,6 +138,9 @@ aucune procédure détaillée et aucun projet d'acte juridiquement engageant ne
 doivent être livrés sans la vérification requise. Fournir uniquement le cadrage,
 les variables à réunir, la méthode de contrôle et une abstention motivée sur le
 fond non vérifié.
+Les durées, délais, seuils, quotités et montants présents dans les modules
+restent des repères de recherche. En mode dégradé, ne pas les reproduire,
+même comme « pistes à vérifier ». Les faits chiffrés fournis restent utilisables.
 
 **Les quatre réflexes du filet de sécurité** :
 

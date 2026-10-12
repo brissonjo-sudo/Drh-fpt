@@ -15,7 +15,7 @@ from pathlib import Path
 from functools import lru_cache
 from urllib.parse import urlparse
 
-OFFICIAL_PAGE_HOSTS = {'www.cnracl.retraites.fr', 'www.cnil.fr'}
+OFFICIAL_PAGE_HOSTS = {'www.cnracl.retraites.fr', 'www.cnil.fr', 'eur-lex.europa.eu'}
 
 
 def plain_text(value: str) -> str:
@@ -288,6 +288,24 @@ def reference_date_for_source(manifest: dict, source: dict) -> str:
     return value
 
 
+def matching_text_ids(source: dict,search: dict) -> list[str]:
+    term=source['query'];found=[]
+    for result in search.get('results',[]):
+        for title in result.get('titles',[]):
+            text=plain_text(title['title'])
+            matches=(bool(re.match(r'^(?:Décret|Loi) n°\s*'+re.escape(term)+r'\b',text,re.I))
+                     if re.fullmatch(r'\d{2,4}-\d+',term)
+                     else source['title_contains'].casefold() in text.casefold())
+            if matches and title['cid'] not in found:found.append(title['cid'])
+    return found
+
+
+def checkpoint_evidence(output: Path,evidence: list) -> None:
+    temporary=output/'evidence.json.tmp'
+    temporary.write_text(json.dumps({'consultations':evidence},ensure_ascii=False,indent=2),encoding='utf8')
+    temporary.replace(output/'evidence.json')
+
+
 def collect(manifest: dict, legal_skill: Path, output: Path) -> None:
     script_dir = legal_skill / 'skill' / 'scripts'
     if not script_dir.is_dir():
@@ -346,7 +364,7 @@ def collect(manifest: dict, legal_skill: Path, output: Path) -> None:
                     if kind=='official_page':evidence[-1]['excerpt_extractor']='visible-html-v1'
                     if kind=='jorf':evidence[-1]['article_number']=str(a['num'])
             print(f"Consulté : {source['key']} ({kind})",flush=True)
-            (output/'evidence.json').write_text(json.dumps({'consultations':evidence},ensure_ascii=False,indent=2),encoding='utf-8')
+            checkpoint_evidence(output,evidence)
             continue
         if source.get('kind') == 'decision':
             request = {'textId': source['text_id']}
@@ -369,6 +387,7 @@ def collect(manifest: dict, legal_skill: Path, output: Path) -> None:
                     'raw_response_file': archive.relative_to(output).as_posix(),
                     'raw_response_sha256': hashlib.sha256(archive.read_bytes()).hexdigest()})
             print(f"Consulté : {source['key']} (jurisprudence)", flush=True)
+            checkpoint_evidence(output,evidence)
             continue
         text_id = source.get('text_id')
         if not text_id:
@@ -380,25 +399,23 @@ def collect(manifest: dict, legal_skill: Path, output: Path) -> None:
                 'pageNumber': 1, 'pageSize': 100, 'operateur': 'ET', 'sort': 'PERTINENCE', 'typePagination': 'ARTICLE'}}
             search = call('/search', request)
             (output / f"search-{source['key']}.json").write_text(json.dumps(search, ensure_ascii=False, indent=2), encoding='utf-8')
-            titles = [t for r in search.get('results', []) for t in r.get('titles', [])
-                      if (re.match(r'^(?:Décret|Loi) n°\s*' + re.escape(term) + r'\b', plain_text(t['title']))
-                          if re.fullmatch(r'\d{2,4}-\d+', term)
-                          else source['title_contains'].casefold() in plain_text(t['title']).casefold())]
-            if len(titles) != 1:
-                raise ValueError(f"{source['key']} : identification ambiguë ({len(titles)})")
-            text_id = titles[0]['cid']
+            ids=matching_text_ids(source,search)
+            if len(ids) != 1:
+                raise ValueError(f"{source['key']} : identification ambiguë ({len(ids)})")
+            text_id = ids[0]
         request = {'textId': text_id, 'date': lf._epoch_ms(reference)}
         raw = call('/consult/legiPart', request)
         if source.get('kind')=='consolidated_structure':
             evidence.extend(archive_structure_consultation(output,source['key'],request,raw,source['cases'],reference))
             print(f"Consulté : {source['key']} (structure consolidée)",flush=True)
+            checkpoint_evidence(output,evidence)
             continue
         for case_id, numbers in source['cases'].items():
             evidence.extend(archive_consultation(output, source['key'], '/consult/legiPart',
                 request, raw, numbers, [case_id], reference))
         print(f"Consulté : {source['key']} ({len(source['cases'])} cas)", flush=True)
-        (output / 'evidence.json').write_text(json.dumps({'consultations': evidence}, ensure_ascii=False, indent=2), encoding='utf-8')
-    (output / 'evidence.json').write_text(json.dumps({'consultations': evidence}, ensure_ascii=False, indent=2), encoding='utf-8')
+        checkpoint_evidence(output,evidence)
+    checkpoint_evidence(output,evidence)
 
 
 if __name__ == '__main__':

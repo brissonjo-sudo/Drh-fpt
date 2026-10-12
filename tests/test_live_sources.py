@@ -8,6 +8,36 @@ from datetime import datetime,timezone,timedelta
 
 
 class LiveSourceTests(unittest.TestCase):
+    def test_primary_title_matching_accepts_uppercase_law_and_deduplicates_same_cid(self):
+        title={'title':'LOI n° 2010-1330 du 9 novembre 2010 portant réforme des retraites','cid':'LEGITEXT-fixture'}
+        search={'results':[{'titles':[title,title,{'title':'LOI n° 2010-13301 du 9 novembre 2010','cid':'wrong'}]}]}
+        self.assertEqual(live_sources.matching_text_ids({'query':'2010-1330'},search),['LEGITEXT-fixture'])
+
+    def test_partial_collection_checkpoints_decision_and_structure_before_next_failure(self):
+        from unittest.mock import patch
+        from types import SimpleNamespace
+        import sys
+        for kind in ['decision','consolidated_structure']:
+            decision={'text':{'id':'CETATEXT-fixture','titre':'Décision','texte':'Motifs officiels','dateTexte':0}}
+            structure={'cid':'LEGITEXT-fixture','title':'Structure','dateDebutVersion':0,'dateFinVersion':32472144000000,'sections':[]}
+            def api(endpoint,request,token):
+                if request.get('textId')=='BROKEN':raise ValueError('fixture interruption')
+                return decision if endpoint=='/consult/juri' else structure
+            fake=SimpleNamespace(load_dotenv=lambda:None,get_token=lambda:'fixture',api_call=api,LegifranceError=RuntimeError,
+                                 _epoch_ms=lambda d:int(datetime.fromisoformat(d).replace(tzinfo=timezone.utc).timestamp()*1000))
+            with tempfile.TemporaryDirectory() as tmp:
+                root=Path(tmp)
+                manifest={'reference_date':'2026-10-12','sources':[
+                    {'key':'first','kind':kind,'text_id':'CETATEXT-fixture' if kind=='decision' else 'LEGITEXT-fixture','cases':{'A01':[]}},
+                    {'key':'broken','text_id':'BROKEN','cases':{'A01':['1']}}]}
+                with patch.dict(sys.modules,{'legifrance':fake}):
+                    with self.assertRaisesRegex(ValueError,'fixture interruption'):
+                        live_sources.collect(manifest,root/'legal',root/'out')
+                path=root/'out/evidence.json'
+                self.assertTrue(path.exists(),'consultation réussie non enregistrée avant échec suivant')
+                self.assertEqual(len(json.loads(path.read_text(encoding='utf8'))['consultations']),1)
+    def test_primary_european_publication_host_is_allowed_for_rgpd(self):
+        self.assertIn('eur-lex.europa.eu',live_sources.OFFICIAL_PAGE_HOSTS)
     def test_structure_preserves_an_article_with_no_reported_number(self):
         raw={'title':'Décret CST','articles':[{'num':None,'id':'LEGIARTI-fixture','etat':'ABROGE',
               'dateDebut':None,'dateFin':None}]}

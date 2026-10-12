@@ -63,6 +63,7 @@ class NativeRuntimeTests(unittest.TestCase):
         self.assertNotIn('SECRET',prompt)
         self.assertNotIn('Rappel final',prompt)
         self.assertNotIn('qualifier →',prompt)
+        self.assertIn('Utilise aussi le skill drh-eval:recherche-juridique',prompt)
 
     def test_archive_keeps_signature_and_replays_old_absolute_read_paths(self):
         from test_claude_cli import stream, MODEL

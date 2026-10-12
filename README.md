@@ -123,6 +123,12 @@ drh-fpt/
     ├── test_harness.py                   Tests déterministes du harnais
     ├── test_context_loader.py            Tests du chargement ciblé
     ├── test_providers.py                 Tests des adaptateurs sans réseau
+    ├── test_native_read_proof.py         Contenus reçus, expansions et segments natifs
+    ├── qualification/
+    │   ├── DOSSIER-JO-PR18.md            Questions, barèmes, réserves et profils à approuver
+    │   ├── cases-a.json                  Douze cas neufs, non gelés
+    │   ├── cases-b.json                  Douze cas de réserve, non gelés
+    │   └── profiles-v1.json              Quatre profils exacts proposés avant gel
     ├── prompt-claude-code.md             Protocole sous-agents Claude Code (lit cas-de-test.json)
     ├── cas-co-activation.md              Cas transverse drh-fpt × recherche-juridique
     └── rapports/                         Rapports datés et preuves de validation
@@ -132,6 +138,7 @@ drh-fpt/
         ├── VALIDATION-PR18-2026-10-11.md  Deux campagnes finales et historique
         ├── REVUE-PR18-2026-10-12.md       Corrections, sources relues et limites
         ├── SOURCES-REVUE-PR18-2026-10-12.zip  Sources primaires de cette relecture
+        ├── SOURCES-JEUX-PR18-2026-10-12.zip  Sources publiques des deux jeux neufs
         ├── PREUVES-PR18-2026-10-11.zip    Réponses, jugements et sources brutes
         └── RAPPORT-2026-06-27.md         Campagne 10 cas (v0.4.2, archivée)
 ```
