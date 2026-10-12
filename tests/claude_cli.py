@@ -93,12 +93,19 @@ def verified_skill_expansion(text,runtime,pending):
     if not separator:raise ValueError('expansion Skill vide')
     base=head.removeprefix('Base directory for this skill: ')
     path,rel=confined_path(str(Path(base)/'SKILL.md'),runtime)
-    if rel not in pending or rel not in runtime['files'] or file_sha(path)!=runtime['files'][rel]:
+    matches=[i for i,item in enumerate(pending) if item['rel']==rel]
+    if not matches or rel not in runtime['files'] or file_sha(path)!=runtime['files'][rel]:
         raise ValueError('expansion Skill orpheline ou hors runtime')
+    index=matches[0];arguments=normalized_newlines(pending[index]['args']).strip('\n')
+    if arguments:
+        suffix='\n\nARGUMENTS: '+arguments
+        body=body.strip('\n')
+        if not body.endswith(suffix):raise ValueError('arguments de l’expansion Skill absents ou différents')
+        body=body[:-len(suffix)]
     expected=normalized_newlines(path.read_text(encoding='utf8'))
     expected=re.sub(r'^---\n.*?\n---(?:\n|$)','',expected,count=1,flags=re.S)
     if body.strip('\n')!=expected.strip('\n'):raise ValueError('corps Skill absent, tronqué ou différent')
-    pending.remove(rel)
+    pending.pop(index)
     return rel
 
 
@@ -189,7 +196,7 @@ def parse_stream(raw,model,*,runtime=None,duration_ms=0):
                         raise ValueError('skill externe ou arguments mal formés')
                     path,_=confined_path(rel,runtime)
                     if file_sha(path)!=runtime['files'][rel]:raise ValueError('skill altéré')
-                    pending_skills.append(rel)
+                    pending_skills.append({'rel':rel,'args':inputs.get('args','')})
         # Certains CLI émettent le résultat d'un Skill comme un message utilisateur.
         # Toute invocation doit néanmoins avoir un résultat d'outil associé.
         if set(calls)-set(results):raise ValueError('résultat de lecture absent')

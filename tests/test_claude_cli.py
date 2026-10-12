@@ -51,9 +51,13 @@ class ClaudeCliTests(unittest.TestCase):
             runtime={'root':str(root),'files':{'SKILL.md':claude_cli.file_sha(path)},
                      'skills':{'drh-eval:drh-fpt':'SKILL.md'}}
             inputs={'skill':'drh-eval:drh-fpt','args':'Question RH territoriale'}
-            result=claude_cli.parse_stream(stream({'type':'tool_use','id':'s','name':'Skill','input':inputs},skill_expansion=f'Base directory for this skill: {root}\n\nskill'),MODEL,runtime=runtime)
+            result=claude_cli.parse_stream(stream({'type':'tool_use','id':'s','name':'Skill','input':inputs},skill_expansion=f'Base directory for this skill: {root}\n\nskill\n\nARGUMENTS: Question RH territoriale'),MODEL,runtime=runtime)
             self.assertTrue(result.usage['loaded_files'][0]['full'])
             self.assertEqual(result.usage['tool_calls'][0]['input'],inputs)
+            for expansion in [f'Base directory for this skill: {root}\n\nskill',
+                              f'Base directory for this skill: {root}\n\nskill\n\nARGUMENTS: autre question']:
+                with self.assertRaises(ApiCallError):
+                    claude_cli.parse_stream(stream({'type':'tool_use','id':'s','name':'Skill','input':inputs},skill_expansion=expansion),MODEL,runtime=runtime)
             for invalid in [{'skill':'external','args':'Question'},
                             {'skill':'drh-eval:drh-fpt','args':{'file':'../secret'}}]:
                 with self.assertRaises(ApiCallError):
