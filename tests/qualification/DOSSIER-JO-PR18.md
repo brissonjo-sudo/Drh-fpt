@@ -41,9 +41,9 @@ Cycle A : 48 réponses de qualification et 48 jugements, puis 28 réponses/28 ju
 
 ## Empreintes exactes
 
-- Jeu A : `03380068c6fb03b039665196cf4d3a4a24f9f1850dddd3af3c52c94d67b2e1ba`
-- Jeu B : `1d0b82f23a34566f66b7400d26dbbc1c39df71bd091465f94e045810c154a11a`
-- Profils : `0179b12bbcb2a35080a8c918c807d61c7f33025939ce8c11f54b3eddfde23e1f`
+- Jeu A : `147f1d9351c25c94c585311001861e08f429ab8e1342be0a0deeac37aca6f2fe`
+- Jeu B : `f0ec8e5c09542c4925e37ad7e84cd227d9505beef39c31f249f8f88a45df98e0`
+- Profils : `315f90c12e52c28434dc7cbdc4262fa0abacee5d1733eb63c260d05be3645665`
 - Archive primaire : `467bd64c3537f98e0793412f581aef496520edb3767a40736118f7a0666eb090`
 
 Le commit exact est joint à la demande d’approbation après publication du candidat propre. Aucun sceau humain n’est créé à ce stade.

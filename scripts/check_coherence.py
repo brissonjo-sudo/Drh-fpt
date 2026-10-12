@@ -334,4 +334,7 @@ def main() -> int:
 
 
 if __name__ == "__main__":
+    # Les avertissements utilisent des caractères absents de la page cp1252.
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     raise SystemExit(main())

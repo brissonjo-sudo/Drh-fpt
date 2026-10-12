@@ -2,7 +2,7 @@
 
 Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
-## [0.7.0] — 2026-09-19 — Fiabilité mesurable et contexte progressif
+## [0.7.0] — 2026-09-19 — Candidate non publiée — Fiabilité mesurable et contexte progressif
 
 ### Relecture de PR18 — 2026-10-12 (qualification en préparation)
 - Consultation primaire ciblée : quatre options de L544-4, compétence CDG

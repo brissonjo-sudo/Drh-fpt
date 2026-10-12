@@ -16,7 +16,7 @@ from providers import Completion
 class CampaignFlowTests(unittest.TestCase):
     def setUp(self):
         self.case = next(
-            case for case in json.loads((HERE / "cas-de-test.json").read_text())
+            case for case in json.loads((HERE / "cas-de-test.json").read_text(encoding="utf-8"))
             if case["id"] == "01"
         )
 
@@ -50,7 +50,7 @@ class CampaignFlowTests(unittest.TestCase):
                 ])
             self.assertEqual(code, 0)
             campaign_dir = next(results.iterdir())
-            response = json.loads((campaign_dir / "01-response.json").read_text())
+            response = json.loads((campaign_dir / "01-response.json").read_text(encoding="utf-8"))
             self.assertEqual(response["answer"], "Réponse initiale")
             evaluations_before = list((campaign_dir / "evaluations").iterdir())
 
@@ -64,7 +64,7 @@ class CampaignFlowTests(unittest.TestCase):
                 ])
             self.assertEqual(code, 0)
             self.assertEqual(mocked.call_count, 1)
-            self.assertEqual(response["answer"], json.loads((campaign_dir / "01-response.json").read_text())["answer"])
+            self.assertEqual(response["answer"], json.loads((campaign_dir / "01-response.json").read_text(encoding="utf-8"))["answer"])
             self.assertEqual(len(list((campaign_dir / "evaluations").iterdir())), len(evaluations_before) + 1)
 
 
