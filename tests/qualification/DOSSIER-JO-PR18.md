@@ -54,6 +54,17 @@ Contrôles relancés : les **125 tests existants + 2 nouveaux**, soit **127/127 
 
 Trois appels réels triviaux au total (un Claude, deux essais Codex), hors campagne et sans cas de qualification. Registres JSON et résultats comparés avant/après : contenus et horodatages inchangés. Le skill global n'est ni réparé ni modifié. Zéro tentative de qualification consommée, aucun gel, aucun push. La correction Claude est prête à relire ; l'isolation Codex reste un blocage avant qualification.
 
+
+## Décisions de Jo du 15 octobre 2026 — préparation T72
+
+**Identité Codex acceptée par Jo : « gpt-6.1-sol : modèle demandé, non attesté ».** Cette mention accompagne chaque nouvelle trace Codex (répondant, juge et échec/timeout), dans un en-tête `harness.model_identity` attribué explicitement à `local_harness`. `requested_model` porte le modèle demandé, `returned_model` reste nul et `attestation` vaut `requested_unattested`. L'en-tête contient l'empreinte SHA-256 des événements fournisseur ; ceux-ci sont conservés après l'en-tête, sans modification. Les métriques portent aussi cette mention. Il s'agit d'une annotation décidée par Jo, pas d'une identité certifiée par le fournisseur. Aucune trace ni preuve historique n'est réécrite.
+
+**Isolation Codex : quarantaine temporaire retenue**, exclusivement dans la fenêtre de campagne et après accord explicite de Jo à ce moment. [Procédure préparée](PROCEDURE-QUARANTAINE-CODEX.md) : contrôle des chemins et empreintes, déplacement hors `.agents/skills` dans un dossier daté, sonde triviale sans chargement de skill dans stderr, campagne seulement si tous les prérequis sont validés, puis restauration avec comparaison des empreintes même si la sonde ou la campagne échoue.
+
+Contrôles T72 : les mêmes **127/127 tests en cp1252**, puis **127/127 en UTF-8**, cohérence et bundle réussis. Syntaxe des quatre blocs PowerShell et du code Python de sonde vérifiée sans exécution. Les tests couvrent l’en-tête d’identité sur succès, timeout et échec, la préservation des événements fournisseur et la compatibilité du contrôle de traces ; aucune sonde réelle relancée dans ce tour.
+
+Cette procédure n'est pas exécutée lors de la préparation T72. Le dossier global reste en place et intact ; aucune sonde d'isolation après déplacement n'est prétendue réalisée. Le choix opératoire est arrêté, mais sa preuve reste à établir au moment autorisé. Aucun gel ni autorisation implicite de campagne. Les seuils, 24 cas, modèles/efforts et empreintes brutes des jeux/profils restent inchangés.
+
 ## Sources et limites
 
 [Archive des sources](../rapports/SOURCES-JEUX-PR18-2026-10-12.zip) : 234 liaisons de preuve aux cas, 19 archives brutes. Ces nombres décrivent l'archive historique du 12/10 ; le PDF RGPD du 14/10 et ses index sont ajoutés séparément, sans réécrire cette archive. Il ne s’agit pas de 234 appels réseau : des passages sont réutilisés entre cas. Dates de consultation originales conservées ; certains horodatages récupérés de l’écriture de l’archive sont signalés comme tels.

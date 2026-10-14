@@ -79,3 +79,8 @@ class ReleaseGateTests(unittest.TestCase):
             self.assertEqual(release_gate.check_codex_trace(p,sha,'Original'),[])
             self.assertTrue(release_gate.check_codex_trace(p,sha,'Modifie'))
             self.assertTrue(release_gate.check_codex_trace(p,None,'Original'))
+            from providers import annotate_codex_trace
+            p.write_text(annotate_codex_trace(p.read_text(encoding='utf8'),'gpt-6.1-sol'),encoding='utf8')
+            sha=hashlib.sha256(p.read_bytes()).hexdigest()
+            self.assertEqual(release_gate.check_codex_trace(p,sha,'Original'),[])
+            self.assertTrue(release_gate.check_codex_trace(p,sha,'Modifie'))

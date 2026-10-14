@@ -143,6 +143,22 @@ def _openai(
     )
 
 
+def codex_model_identity(model: str) -> dict:
+    """Décision Jo : le CLI ne renvoie pas d'identité de modèle attestée."""
+    return {"requested_model": model, "returned_model": None,
+            "attestation": "requested_unattested",
+            "statement": f"{model} : modèle demandé, non attesté"}
+
+
+def annotate_codex_trace(raw: str, model: str) -> str:
+    """Préfixe local explicite ; les octets des événements fournisseur sont conservés."""
+    import hashlib
+    header = {"type": "harness.model_identity", "origin": "local_harness",
+              **codex_model_identity(model),
+              "provider_events_sha256": hashlib.sha256(raw.encode("utf-8")).hexdigest()}
+    return json.dumps(header, ensure_ascii=False) + "\n" + raw
+
+
 def _codex(model: str, system: str, user: str, max_tokens: int,
            reasoning_effort: str | None) -> Completion:
     started = time.monotonic()
@@ -165,12 +181,14 @@ def _codex(model: str, system: str, user: str, max_tokens: int,
         except subprocess.TimeoutExpired as exc:
             partial=exc.stdout or ''
             if isinstance(partial,bytes):partial=partial.decode('utf8',errors='replace')
-            raise ApiCallError('Exécution Codex impossible : TimeoutExpired',provider_trace=partial) from exc
+            raise ApiCallError('Exécution Codex impossible : TimeoutExpired',provider_trace=annotate_codex_trace(partial, model)) from exc
         except OSError as exc:
-            raise ApiCallError(f"Exécution Codex impossible : {type(exc).__name__}") from exc
+            raise ApiCallError(f"Exécution Codex impossible : {type(exc).__name__}",
+                provider_trace=annotate_codex_trace('', model)) from exc
     if result.returncode:
         # Les logs ne sont pas incorporés dans une erreur publique : pas de secret accidentel.
-        raise ApiCallError(f"Codex a échoué (code {result.returncode})")
+        raise ApiCallError(f"Codex a échoué (code {result.returncode})",
+            provider_trace=annotate_codex_trace(result.stdout, model))
     events = []
     for line in result.stdout.splitlines():
         try:
@@ -182,20 +200,24 @@ def _codex(model: str, system: str, user: str, max_tokens: int,
         if event.get("type") == "thread.started":
             response_id = event.get("thread_id")
         if event.get("type") in {"turn.failed", "error"}:
-            raise ApiCallError("Échec de la session Codex")
+            raise ApiCallError("Échec de la session Codex",
+                provider_trace=annotate_codex_trace(result.stdout, model))
         if event.get("type") == "item.completed":
             item = event.get("item", {})
             if item.get("type") == "agent_message":
                 messages.append(item.get("text", ""))
             elif item.get("type") != "reasoning":
-                raise ApiCallError("Outil inattendu : l'isolation de l'évaluation n'est pas respectée")
+                raise ApiCallError("Outil inattendu : l'isolation de l'évaluation n'est pas respectée",
+                provider_trace=annotate_codex_trace(result.stdout, model))
         if event.get("type") == "turn.completed":
             finished, usage = True, event.get("usage", {})
     if not finished or not messages or not messages[-1].strip():
-        raise ApiCallError("Session Codex sans réponse finale complète")
+        raise ApiCallError("Session Codex sans réponse finale complète",
+                provider_trace=annotate_codex_trace(result.stdout, model))
     usage["output_token_limit_enforced"] = False
+    usage["model_identity"] = codex_model_identity(model)
     return Completion(messages[-1], False, usage, response_id,
-        round((time.monotonic() - started) * 1000), result.stdout)
+        round((time.monotonic() - started) * 1000), annotate_codex_trace(result.stdout, model))
 
 
 def complete(

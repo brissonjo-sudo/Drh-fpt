@@ -11,7 +11,9 @@ class CodexProviderTests(unittest.TestCase):
         with patch('providers.subprocess.run',side_effect=subprocess.TimeoutExpired(['codex'],300,output=partial)):
             with self.assertRaises(providers.ApiCallError) as caught:
                 providers.complete('codex','','model','S','Q',100)
-        self.assertEqual(caught.exception.provider_trace,partial.decode('utf8'))
+        header,raw=caught.exception.provider_trace.split('\n',1)
+        self.assertEqual(raw,partial.decode('utf8'))
+        self.assertEqual(json.loads(header)['statement'],'model : modèle demandé, non attesté')
 
     def test_preserves_usage_and_trace_in_fresh_tool_free_session(self):
         events = [
@@ -25,7 +27,16 @@ class CodexProviderTests(unittest.TestCase):
         self.assertEqual(completion.text, 'Réponse')
         self.assertEqual(completion.response_id, 'fresh')
         self.assertEqual(completion.usage['input_tokens'], 15)
-        self.assertEqual(completion.provider_trace, stdout)
+        header,raw=completion.provider_trace.split('\n',1)
+        header=json.loads(header)
+        self.assertEqual(raw,stdout)
+        self.assertEqual(header['origin'],'local_harness')
+        self.assertEqual(header['type'],'harness.model_identity')
+        self.assertEqual(header['statement'],'model-a : modèle demandé, non attesté')
+        self.assertIsNone(header['returned_model'])
+        import hashlib
+        self.assertEqual(header['provider_events_sha256'],hashlib.sha256(stdout.encode('utf8')).hexdigest())
+        self.assertEqual(completion.usage['model_identity']['attestation'],'requested_unattested')
         command = run.call_args.args[0]
         self.assertIn('--ephemeral', command)
         self.assertIn('--ignore-user-config', command)
@@ -38,8 +49,11 @@ class CodexProviderTests(unittest.TestCase):
         ]:
             with self.subTest(events=events), patch('providers.subprocess.run',
                 return_value=subprocess.CompletedProcess([], 0, '\n'.join(json.dumps(e) for e in events), '')):
-                with self.assertRaises(providers.ApiCallError):
+                with self.assertRaises(providers.ApiCallError) as caught:
                     providers.complete('codex', '', 'model', 'S', 'Q', 100)
+                header,raw=caught.exception.provider_trace.split('\n',1)
+                self.assertEqual(json.loads(header)['statement'],'model : modèle demandé, non attesté')
+                self.assertEqual(raw,'\n'.join(json.dumps(e) for e in events))
 
 
 if __name__ == '__main__':
