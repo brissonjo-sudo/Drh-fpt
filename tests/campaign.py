@@ -26,7 +26,7 @@ import live_sources  # noqa: E402
 from providers import ApiCallError, Completion, complete, key_for_provider  # noqa: E402
 
 
-DEFAULT_MODEL = "claude-sonnet-5-5"
+DEFAULT_MODEL = "claude-opus-5-5"
 DEFAULT_JUDGE_MODEL = "claude-opus-5-5"
 MAX_TOKENS_REPONDANT = 4000
 MAX_TOKENS_JUGE = 3000
