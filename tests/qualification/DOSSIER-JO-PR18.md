@@ -27,7 +27,9 @@ En dégradé : pas de compagnon ni de source. Les faits fournis restent utilisab
 
 [Archive des sources](../rapports/SOURCES-JEUX-PR18-2026-10-12.zip) : 234 liaisons de preuve aux cas, 19 archives brutes. Il ne s’agit pas de 234 appels réseau : des passages sont réutilisés entre cas. Dates de consultation originales conservées ; certains horodatages récupérés de l’écriture de l’archive sont signalés comme tels.
 
-RGPD et CNIL : **non vérifiés le 14/10/2026** (pages CNIL en erreur HTTP 503 selon le rapport de Claude). Les reproductions CNIL des chapitres 2/3/4 restent des acquisitions historiques ; acquisition directe EUR-Lex bloquée. **Loi 2016-1691 : non vérifiée**. La lecture primaire ne valide pas automatiquement la portée ni les faits locaux. Les délibérations, contrats, dossiers individuels, actes de dissolution et autres pièces locales absentes restent à rechercher ; les critères permettent une suspension ciblée.
+Selon le complément du rapport de Claude du 14/10/2026 : dispositif du RGPD lu dans le PDF EUR-Lex `CELEX:02016R0679-20160504` (sans considérants) ; articles 6, 8 et 10-1 de la loi 2016-1691 et réserves CGFP examinés via Légifrance ; deux décisions CE lues intégralement sur Ariane Web. Cette provenance est celle du rapport, pas une nouvelle consultation primaire par Codex. Les archives du 12/10 restent historiques et n'acquièrent pas rétroactivement les nouveaux textes. Les pièces locales absentes restent à rechercher ; les critères permettent une suspension ciblée.
+
+Restent non vérifiés selon ce complément : considérants RGPD 26, 43, 51, lignes directrices CEPD/CNIL et pages CNIL (503 rapporté), partie réglementaire du CGFP sur l'affichage syndical, articles 12 à 13-1 de la loi 2016-1691.
 
 Les références historiques du skill non réellement relues restent réservées. La validation de cette PR ne constitue pas une validation juridique humaine d’un déploiement opérationnel dans une collectivité (ADR0007 du plugin).
 
@@ -39,25 +41,30 @@ Chaque jeu couvre les huit branches principales (cas 01–08) et quatre transver
 
 Cycle A : 48 réponses de qualification et 48 jugements, puis 28 réponses/28 jugements de non-régression ciblée, soit 76+76. La réserve ajoute 48+48. Rédaction, relectures, diagnostics et arbitrages sont comptés à part ; aucun coût monétaire déduit des jetons.
 
-## Relecture ciblée du 14 octobre 2026 — préparation locale
+## Corrections et complément du 14 octobre 2026
 
-Source : rapport `verification-baremes-legifrance-2026-10-14.md` de Claude, tête de départ `0fa4a8b`. Cinq corrections appliquées dans 206e428. Les nuances N1 à N6 sont désormais intégrées selon les formulations retenues par Jo ; N7 reste en l’état. Aucun gel ni approbation juridique des 24 cas, aucune campagne ni poussée.
+Premier lot publié : cinq corrections dans `206e428`, puis nuances N1 à N6 dans `f21bec6` ; N7 est conservée. Second lot préparé localement depuis `f21bec6`, selon la section « Complément du 14/10/2026 » du même rapport, sans poussée ni gel. Aucune approbation globale des 24 cas et aucune campagne exécutée.
 
-Les empreintes des jeux A et B ci-dessous sont des SHA-256 des **octets bruts du fichier**, comme `tests/suites.py:file_sha`, puis vérifiées par recalcul. Les scénarios, profils, critères dégradés et seuils ne changent pas.
+**A-03 — correction prioritaire** : L332-8 renvoie aux formalités de L313-1 (création de l'emploi par délibération, mention de la possibilité de recruter un contractuel) ; la publicité de la vacance relève de L313-4, auquel renvoie L332-14. L313-1 ne doit plus être présenté comme un texte de publicité. Sa lecture est désormais rapportée par le complément ; les archives de sources du 12/10 ne sont pas modifiées.
 
-Sources ajoutées aux exigences : A-03 L313-1 (`LEGIARTI000044427026`), A-07 R331-12 (`LEGIARTI000051962528`) et R331-13 (`LEGIARTI000051962530`), A-10 L253-6 (`LEGIARTI000044427238`). L253-6 complète la traçabilité de la consultation ; la nuance A-10-i01 est désormais appliquée selon la validation de Jo. Les suffixes abrégés du rapport sont développés avec le préfixe LEGIARTI ; R331-12/13 existent déjà dans A-03. L’ajout d’un identifiant ne vaut pas acquisition du texte ni validation humaine ; L313-1 reste non lu selon le rapport, R331-12/13 restent à consulter dans le dossier.
+Les corrections du tableau RGPD sont répercutées dans A-06-i03/i04, B-05-i02, B-06-i01/i02, B-09-i02 et B-11-i01/i03. B-09-i01 précise les conditions de l'art. 6 I et la voie interne ouverte aux candidats par l'art. 8 I-A 1° de la loi 2016-1691. B-12-i02 reste conforme à N6. L123-7 reste distinct du régime de L123-5 ; L553-3 ne sert pas de texte de procédure (seule l'indemnité éventuelle est visée selon le complément).
 
-Sources retirées des exigences après recherche dans les contextes DRH et les cas : A-05 L712-3 (`LEGIARTI000044424807`), A-06 art. 9 du Code civil (`LEGIARTI000006419288`). Aucun usage retrouvé ; les archives historiques restent intactes.
+**CE 461914 — réserve « résumé web » levée selon le complément** : point 19 lu en texte intégral sur Ariane Web ; décision du 13/07/2022 **inédite**. Le constat concerne le congé de maladie et l'action disciplinaire ; le point ne traite ni du CLM en particulier ni des droits de la défense pendant l'arrêt. Aucun nouveau contrôle primaire indépendant par Codex.
 
-Limites : vérification de conformité des modifications au rapport, pas nouvel audit juridique exhaustif. Les pages Légifrance essayées dans cette session renvoient HTTP 403. CE 461914 reste vérifié partiellement à partir d’un résumé web selon le rapport ; texte intégral à relire avant citation. RGPD/CNIL et loi 2016-1691 restent **non vérifiés**. Les autres réserves du rapport restent ouvertes. Les mentions historiques « fourni/consulté/vérifié » ne valent pas levée de ces réserves.
+CE, Section, 22/12/2023, n°462455, Lebon : texte intégral lu sur Ariane Web selon le complément ; points 4 et 5 décrits comme motifs décisoires. « Contenu utile à préserver » est une inférence ; la transposition d'un agent de l'État après sanction à une enquête préalable de collectivité est signalée, sans la présenter comme une identité de situations.
 
-B-08-d02 et B-10-d01 conservent les pistes de recherche du mode dégradé, sans certifier de régime ; les corrections ciblent les attendus d’intégration et les descriptions des sources. A-03 conserve la catégorie A comme fait du scénario, sans en faire une restriction légale.
+### Deux abstentions à conserver
 
-### Nuances retenues par Jo — 14 octobre 2026
+- **Communication syndicale — B-06-i03** : aucun article d'affichage ou de diffusion trouvé dans L213, L214 et L215 de la partie législative du CGFP, selon le complément. Partie réglementaire non lue. Abstention sur la base précise du régime : l'absence de résultat ne signifie pas absence de règle.
+- **Rattachement nominatif du SFT — B-08-i02** : L711-5 rend applicable le code du travail ; L3252-3 vise notamment les allocations ou indemnités pour charges de famille, mais **ne nomme pas le SFT**. Le rattachement nominatif du SFT est une **inférence** ; abstention sur toute présentation d'une exclusion nominative explicitement écrite dans ces textes.
 
-Après poussée normale de `206e428` et CI verte, préparation locale de N1 à N6 : A-04-i02 (quorum et alinéa), A-01-i02 (caractère préalable déduit), A-10-i01 (articulation avec L253-6), B-02-i01 (signalement et protection contre sanction/retenue), B-06-i03 (portée de L121-2), B-12-i02 (protection directement rattachée à L133-3). Les six formulations proposées sont reprises exactement. N7 conserve ses cinq attendus sans changement.
+### Identifiants, preuves et portée des contrôles
 
-Cette décision porte sur les formulations retenues ; elle ne gèle ni n’approuve l’ensemble des 24 cas, les profils ou une campagne. Aucun scénario, source requise, critère dégradé, seuil ou profil n’est modifié par cette reprise. Les réserves RGPD/CNIL, loi 2016-1691, décisions CE et autres limites du rapport restent ouvertes. Ce nouveau candidat reste local, sans poussée.
+Les identifiants du complément sont ajoutés seulement aux cas qui les visent : L123-7 pour A-01 ; L711-5 pour B-08 ; loi 2016-1691 art. 6, 8 et 10-1 pour B-09/B-12 ; CELEX du dispositif RGPD pour A-06/B-05/B-06/B-09/B-11. L135-4 est déjà présent ; L553-3 n'est pas ajouté puisqu'aucun attendu ne vise son indemnité. Les suffixes abrégés sont développés avec le préfixe LEGIARTI, sans nouveau numéro de mémoire.
+
+Les anciennes URL CNIL requises sont conservées : aucun retrait n'a été demandé. Elles ne sont pas déclarées accessibles. Avant gel et qualification, réconcilier ces exigences avec la source EUR-Lex, acquérir/archiver les pièces utiles et vérifier leur prise en charge par la chaîne de preuves, notamment pour le PDF/CELEX. L'ajout d'un identifiant ne crée ni une trace de lecture ni une archive et les 125 tests déterministes ne qualifient pas cette collecte réelle.
+
+Les scénarios, profils, modes dégradés et seuils restent inchangés. Toutes les empreintes A/B ci-dessous portent sur les octets bruts, comme `suites.file_sha`, et sont vérifiées par recalcul. Les ZIP T29 restent présents et inchangés ; leur traitement reste soumis à validation séparée avant la fusion. Les profils et le commit de runtime final doivent être approuvés explicitement avant tout gel.
 
 ### Contrôles déterministes locaux du 14 octobre 2026
 
@@ -67,8 +74,8 @@ Python 3.13 / Windows : `python -m unittest discover -s tests -p 'test_*.py'` r�
 
 ## Empreintes exactes
 
-- Jeu A : `7d81cd67d533283d874ad781e5405599fbd3cf849f98fb1a4ef6164c279301bd`
-- Jeu B : `9d4d2c7f69463d673daf6b8760bdd16eb3fc346cbc84d903851628e14b8a2504`
+- Jeu A : `fc6303e6fb78be0621e988b975bb65ec17f1a07e0c8bd515302671ff65ddf22a`
+- Jeu B : `214806e938f7c49a0d3bb62f4c10837cedd1c842bc7347bfc9ce9f57687cb4a6`
 - Profils : `315f90c12e52c28434dc7cbdc4262fa0abacee5d1733eb63c260d05be3645665`
 - Archive primaire : `467bd64c3537f98e0793412f581aef496520edb3767a40736118f7a0666eb090`
 
@@ -112,6 +119,7 @@ Un agent territorial titulaire occupe un emploi permanent à temps non complet (
 - CGFP L123-5 et L123-6 — Conditions du cumul pour emploi permanent à temps non complet ≤70 %, obligation déclarative (consulte_dans_dossier).
 - CGFP R123-5 et R123-6 — Modalités de la déclaration, information de l'agent (consulte_dans_dossier).
 - CGFP R123-2 — Motifs d'opposition au cumul par l'autorité hiérarchique (consulte_dans_dossier).
+- CGFP L123-7 — Activité accessoire autorisée : régime distinct de L123-5 ; référence utilisée par le critère d'échec (verifie_selon_complement_2026-10-14).
 - Dossier réellement fourni : [Code général de la fonction publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000046933345), passages L123-1, L123-5, L123-6, R123-1, R123-2, R123-5, R123-6.
 
 Liste exhaustive des identifiants et critères : [jeuAJSON](cases-a.json).
@@ -194,7 +202,7 @@ Une commune de 600 agents doit pourvoir un emploi permanent vacant de responsabl
 - CGFP L332-8 2°, L332-9, L332-10 — Conditions du recrutement permanent, renvoi de L332-8 à L313-1, durée, renouvellement, CDIsation et décompte des services (consulte_dans_dossier).
 - CGFP L332-14 — Vacance temporaire, renvoi de L332-14 à L313-4, durée 1 an prolongeable 2 ans si procédure infructueuse (consulte_dans_dossier).
 - CGFP R332-9 — Constat d'infructuosité préalable à l'examen des candidatures non fonctionnaires (consulte_dans_dossier).
-- CGFP L313-1 et L313-4 (renvois respectifs de L332-8 et L332-14) — Formalités de publicité : L332-8 renvoie à L313-1 ; L332-14 renvoie à L313-4 ; contenu de L313-1 non disponible au dossier (consulte_dans_dossier).
+- CGFP L313-1 et L313-4 (renvois respectifs de L332-8 et L332-14) — L332-8 renvoie aux formalités de L313-1 (création de l'emploi par délibération, mention de la possibilité de recruter un contractuel) ; la publicité de la vacance relève de L313-4, auquel renvoie L332-14 (verifie_selon_complement_2026-10-14).
 - CGFP R331-6 à R331-11 — Fondement légal du contrat, motif précis et descriptif du poste annexé pour L332-14 (consulte_dans_dossier).
 - Dossier réellement fourni : [Code général de la fonction publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048778058), passages L332-8, L332-9, L332-10, L332-14, L313-4, R332-9, R332-10, R332-11, R332-12, R332-13, R331-1, R331-2, R331-3, R331-4, R331-5, R331-6, R331-7, R331-8, R331-9, R331-10, R331-11, R331-12, R331-13.
 - Dossier réellement fourni : [Décret n°88-145 du 15 février 1988 relatif aux agents contractuels de la fonction publique territoriale](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051980613), passages 1.
@@ -295,8 +303,8 @@ Liste exhaustive des identifiants et critères : [jeuAJSON](cases-a.json).
 
 - **A-06-i01** : Analyse de la finalité et de la nécessité de l'annuaire pour chaque catégorie de donnée ; exclusion explicite du fondement 'intérêt légitime' (RGPD art. 6 f) pour les traitements relevant des missions publiques ; examen des bases envisageables pour les coordonnées professionnelles et de leur fondement juridique, avec conclusion conditionnelle ou suspension précise du choix si ce fondement manque ; qualification de la base applicable à la photo selon sa nécessité à la finalité retenue.
 - **A-06-i02** : Traitement des refus de photo : distinction entre retrait du consentement lorsque le traitement repose sur le consentement (RGPD art. 7) et opposition selon les conditions de l'article 21 lorsque la base retenue est l'exécution d'une mission d'intérêt public ; proposition d'une solution alternative (initiales ou avatar neutre), sans ériger en règle universelle l'absence de contrainte ou de sanction.
-- **A-06-i03** : Information préalable comportant au moins : identité et coordonnées du responsable du traitement, finalité et base légale, durée de conservation ou, lorsque ce n'est pas possible, critères utilisés pour la déterminer, droits d'accès/rectification/effacement, coordonnées du DPO, droit de retrait si le consentement est retenu comme base (RGPD art. 13).
-- **A-06-i04** : Rôle du DPO : association en temps utile, conseil documenté (RGPD art. 38-39), sans substitution au responsable du traitement pour la décision sur les contenus publiés et la tenue du registre.
+- **A-06-i03** : Information préalable comportant au moins : identité et coordonnées du responsable du traitement, finalité et base légale, destinataires, durée de conservation ou, lorsque ce n'est pas possible, critères utilisés pour la déterminer, droits d'accès/rectification/effacement et d'opposition, coordonnées du DPO, droit de retrait si le consentement est retenu comme base, droit de réclamation (RGPD art. 13, notamment §1 e, §2 b et d) ; art. 14 si la donnée n'est pas collectée auprès de l'agent.
+- **A-06-i04** : Rôle du DPO : association en temps utile, conseil (RGPD art. 39 §1 a) ; documentation à la charge du responsable du traitement (art. 5 §2), sans substitution du DPO au responsable pour la décision sur les contenus publiés et la tenue du registre.
 
 **Échecs — intégration**
 
@@ -319,13 +327,13 @@ Liste exhaustive des identifiants et critères : [jeuAJSON](cases-a.json).
 
 **Sources annoncées et réserves**
 
-- RGPD art. 6 — Licéité du traitement ; inapplicabilité du point f aux autorités publiques dans l'exécution de leurs missions (non vérifié au 14/10/2026).
-- RGPD art. 13 — Informations à fournir lors de la collecte : responsable, finalité, base légale, droits, DPO, durée de conservation (non vérifié au 14/10/2026).
-- RGPD art. 38-39 — Missions et indépendance du DPO ; association en temps utile sans pouvoir décisionnel (non vérifié au 14/10/2026).
+- RGPD art. 6 (dispositif EUR-Lex CELEX:02016R0679-20160504) — Licéité du traitement ; inapplicabilité du point f aux autorités publiques dans l'exécution de leurs missions (verifie_selon_complement_2026-10-14).
+- RGPD art. 13 et 14 (dispositif EUR-Lex CELEX:02016R0679-20160504) — Information : destinataires (13 §1 e), opposition (13 §2 b), réclamation (13 §2 d), autres mentions de l'attendu ; art. 14 si la donnée n'est pas collectée auprès de l'agent (verifie_selon_complement_2026-10-14).
+- RGPD art. 38-39 et 5 §2 (dispositif EUR-Lex CELEX:02016R0679-20160504) — Association du DPO et conseil (39 §1 a) ; documentation à la charge du responsable du traitement (5 §2), sans pouvoir décisionnel du DPO (verifie_selon_complement_2026-10-14).
 - Recommandations CNIL sur les annuaires professionnels — Traitement de la photo d'agent dans un annuaire interne (a_consulter).
-- Dossier réellement fourni : [rgpd2 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2), passages document. Acquisition historique ; non vérifié au 14/10/2026 (HTTP 503 rapporté).
-- Dossier réellement fourni : [rgpd3 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3), passages document. Acquisition historique ; non vérifié au 14/10/2026 (HTTP 503 rapporté).
-- Dossier réellement fourni : [rgpd4 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4), passages document. Acquisition historique ; non vérifié au 14/10/2026 (HTTP 503 rapporté).
+- Dossier réellement fourni : [rgpd2 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
+- Dossier réellement fourni : [rgpd3 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
+- Dossier réellement fourni : [rgpd4 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
 - Dossier réellement fourni : [Code civil](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006419288), passages 9. Article 9, hors sujet selon le rapport, conservé dans l’archive historique mais retiré des sources exigées du cas A-06.
 
 Liste exhaustive des identifiants et critères : [jeuAJSON](cases-a.json).
@@ -411,7 +419,7 @@ Liste exhaustive des identifiants et critères : [jeuAJSON](cases-a.json).
 - CGFP L137-1 à L137-4 — Dossier individuel : composition, accès permanent de l'agent (verifie).
 - CGFP L532-4 — Communication du dossier et assistance après engagement disciplinaire (verifie).
 - Décret 89-677, art. 4 — Délai suffisant pour la défense après engagement disciplinaire (a_consulter).
-- CE 22/12/2023, n° 462455 — Points 4-6 : communication des témoignages, risque avéré de préjudice, appréciation de la privation de la garantie de défense (verifie).
+- CE, Section, 22/12/2023, n°462455, Lebon — Texte intégral Ariane Web selon le complément : points 4 et 5, motifs décisoires ; témoignages, risque avéré apprécié selon la situation du témoin, défense utile ; contenu utile à préserver et transposition à une enquête préalable de collectivité à signaler comme inférences (verifie_selon_complement_2026-10-14).
 - CRPA L311-2, L311-6, L311-7 — Documents préparatoires non communicables ; occultation des mentions protégées (verifie).
 - Dossier réellement fourni : [Code général de la fonction publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044427574), passages L137-1, L137-2, L137-3, L137-4, L532-4.
 - Dossier réellement fourni : [Code des relations entre le public et l'administration](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033218946), passages L311-1, L311-2, L311-3, L311-6, L311-7, R311-13.
@@ -453,7 +461,7 @@ Collectivité FPT >350 agents, 12 octobre 2026. Un adjoint administratif titulai
 
 - CGFP L532-2 — Délai de prescription : connaissance effective de la réalité, nature et ampleur des faits (verifie).
 - CGFP L532-4 ; décret 89-677 arts 4 et 6 — Garanties de défense : dossier, délai suffisant, convocation, assistance (verifie).
-- CE 13 juillet 2022, n°461914, point 19 — Le congé de maladie ne fait pas obstacle à l'action disciplinaire ; point 19 lu dans un résumé web, texte intégral à relire avant toute citation (verifie_partiel).
+- CE 13 juillet 2022, n°461914, point 19, inédit — Le congé de maladie ne fait pas obstacle à l'action disciplinaire ; point 19 lu en texte intégral sur Ariane Web selon le complément ; aucune précision sur le CLM en particulier ni sur les droits de la défense pendant l'arrêt (verifie_selon_complement_2026-10-14).
 - Dossier réellement fourni : [Code général de la fonction publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044425430), passages L532-2, L532-4.
 - Dossier réellement fourni : [Décret n°89-677 du 18 septembre 1989 relatif à la procédure disciplinaire applicable aux fonctionnaires territoriaux](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053007836), passages 4, 6.
 - Dossier réellement fourni : [Conseil d'État, 8ème - 3ème chambres réunies, 13/07/2022, 461914, Inédit au recueil Lebon](https://www.legifrance.gouv.fr/ceta/id/CETATEXT000046046053), passages document.
@@ -748,7 +756,7 @@ Collectivité FPT >350 agents, 12 octobre 2026. À l'issue d'une migration du SI
 **Critères obligatoires — intégration**
 
 - **B-05-i01** : Le répondant identifie les vérifications à conduire avant ouverture (cohérence des données reprises, droits d'accès, intégrité des référentiels) et les responsabilités contractuelles DRH/prestataire à établir à partir du contrat de sous-traitance, avec les textes vérifiés.
-- **B-05-i02** : Le répondant précise les obligations RGPD applicables au prestataire en tant que sous-traitant (instructions documentées, garanties, traçabilité, restitution ou suppression) et les contrôles que la DRH doit exercer, avec les articles vérifiés.
+- **B-05-i02** : Le répondant précise les obligations RGPD applicables au prestataire en tant que sous-traitant (instructions documentées, garanties, informations et audits selon l'art. 28 §3 h, registre du sous-traitant selon l'art. 30 §2, sécurité selon l'art. 32, restitution ou suppression) et les contrôles que la DRH doit exercer, avec les articles vérifiés.
 - **B-05-i03** : Le répondant propose une procédure de décision d'ouverture conditionnelle distinguant anomalies bloquantes et corrections différables, et propose une répartition des rôles (DRH, DSI, DPO, finances) à valider selon les habilitations locales et le contrat, sans abandonner la décision d'ouverture au prestataire.
 
 **Échecs — intégration**
@@ -771,11 +779,11 @@ Collectivité FPT >350 agents, 12 octobre 2026. À l'issue d'une migration du SI
 
 **Sources annoncées et réserves**
 
-- RGPD art. 28 — Obligations du sous-traitant : instructions documentées, garanties, audit, suppression ou restitution des données (non vérifié au 14/10/2026).
-- RGPD art. 5, 25, 32 — Principes de minimisation, privacy by design, sécurité du traitement applicables à la reprise de données (non vérifié au 14/10/2026).
+- RGPD art. 28, 30 §2 et 32 (dispositif EUR-Lex CELEX:02016R0679-20160504) — Instructions documentées, garanties, informations et audits (28 §3 h), registre du sous-traitant (30 §2), sécurité (32), restitution ou suppression (verifie_selon_complement_2026-10-14).
+- RGPD art. 5, 25, 32 (dispositif EUR-Lex CELEX:02016R0679-20160504) — Principes de minimisation, privacy by design, sécurité du traitement applicables à la reprise de données (verifie_selon_complement_2026-10-14).
 - Contrat de sous-traitance SIRH — Répartition des responsabilités en cas d'erreurs de reprise, délais de correction, conditions de recette (piece_locale).
-- Dossier réellement fourni : [rgpd2 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2), passages document. Acquisition historique ; non vérifié au 14/10/2026 (HTTP 503 rapporté).
-- Dossier réellement fourni : [rgpd4 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4), passages document. Acquisition historique ; non vérifié au 14/10/2026 (HTTP 503 rapporté).
+- Dossier réellement fourni : [rgpd2 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
+- Dossier réellement fourni : [rgpd4 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
 
 Liste exhaustive des identifiants et critères : [jeuBJSON](cases-b.json).
 
@@ -787,8 +795,8 @@ Collectivité FPT >350 agents, 12 octobre 2026. La DRH souhaite lancer une newsl
 
 **Critères obligatoires — intégration**
 
-- **B-06-i01** : Le répondant vérifie rubrique par rubrique si un traitement de données personnelles est effectivement en jeu (notamment pour les données présentées comme anonymisées) et, pour les rubriques concernées, justifie le fondement applicable lorsque les éléments fournis le permettent ; sinon identifie les fondements à examiner et suspend précisément leur validation en indiquant le texte ou la documentation manquante.
-- **B-06-i02** : Le répondant précise, pour les traitements impliquant des données personnelles, les obligations d'information des agents et les droits applicables selon le fondement retenu, en distinguant le droit d'opposition (art. 21) des autres droits.
+- **B-06-i01** : Le répondant vérifie rubrique par rubrique si un traitement de données personnelles est effectivement en jeu (notamment pour les données présentées comme anonymisées) et, pour les rubriques concernées, justifie le fondement applicable lorsque les éléments fournis le permettent ; pour une rubrique nominative révélant l'appartenance syndicale, examine aussi l'art. 9 §1 RGPD ; sinon identifie les fondements à examiner et suspend précisément leur validation en indiquant le texte ou la documentation manquante.
+- **B-06-i02** : Le répondant précise, pour les traitements impliquant des données personnelles, les obligations d'information des agents (RGPD art. 13 ou 14 selon que les données sont ou non collectées auprès de l'agent) et les droits applicables selon le fondement retenu, en distinguant le droit d'opposition (art. 21, dont §4) des autres droits.
 - **B-06-i03** : Le répondant délimite les rôles du DPO et de la DRH et identifie le texte manquant sur la communication syndicale. L121-2 porte sur la neutralité et la laïcité de l'agent ; il ne suffit pas à fonder le régime de cette rubrique.
 
 **Échecs — intégration**
@@ -812,12 +820,12 @@ Collectivité FPT >350 agents, 12 octobre 2026. La DRH souhaite lancer une newsl
 
 **Sources annoncées et réserves**
 
-- RGPD art. 6, 13, 21 — Base légale pour traitements RH de service public ; obligations d'information ; droit d'opposition selon le fondement (non vérifié au 14/10/2026).
-- RGPD art. 30, 38-39 — Tenue du registre par le responsable du traitement ; missions du DPO sans pouvoir décisionnel (non vérifié au 14/10/2026).
-- CGFP L121-2 et texte régissant la communication syndicale dans les collectivités — Obligation de neutralité du service ; modalités de communication par l'employeur sur des sujets syndicaux (a_consulter).
-- Dossier réellement fourni : [rgpd2 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2), passages document. Acquisition historique ; non vérifié au 14/10/2026 (HTTP 503 rapporté).
-- Dossier réellement fourni : [rgpd3 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3), passages document. Acquisition historique ; non vérifié au 14/10/2026 (HTTP 503 rapporté).
-- Dossier réellement fourni : [rgpd4 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4), passages document. Acquisition historique ; non vérifié au 14/10/2026 (HTTP 503 rapporté).
+- RGPD art. 6, 9 §1, 13, 14 et 21 §4 (dispositif EUR-Lex CELEX:02016R0679-20160504) — Fondement des traitements ; appartenance syndicale pour une rubrique nominative (9 §1) ; information selon 13 ou 14 ; droit d'opposition dont 21 §4 (verifie_selon_complement_2026-10-14).
+- RGPD art. 30, 38-39 (dispositif EUR-Lex CELEX:02016R0679-20160504) — Tenue du registre par le responsable du traitement ; missions du DPO sans pouvoir décisionnel (verifie_selon_complement_2026-10-14).
+- CGFP L121-2 et texte régissant la communication syndicale dans les collectivités — L121-2 vise la neutralité et la laïcité de l'agent ; aucun article d'affichage ou de diffusion syndicale trouvé dans L213, L214, L215, partie législative du CGFP ; partie réglementaire non lue : abstention sur le régime de cette communication (abstention_partie_legislative_recherchee_reglementaire_non_lue).
+- Dossier réellement fourni : [rgpd2 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
+- Dossier réellement fourni : [rgpd3 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
+- Dossier réellement fourni : [rgpd4 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
 - Dossier réellement fourni : [Code général de la fonction publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044427911), passages L121-2, L121-6, L121-7.
 
 Liste exhaustive des identifiants et critères : [jeuBJSON](cases-b.json).
@@ -897,7 +905,7 @@ Collectivité FPT >350 agents, 12 octobre 2026. La DRH reçoit une notification 
 
 - CPCE R212-1-14, R212-2, R212-4, L212-8 (fournis) — Déclaration au commissaire de justice répartiteur ; régime particulier aux employeurs publics ; copie au comptable assignataire (verifie).
 - Code du travail L3252-3, R3252-2, R3252-3 (fournis) — Assiette après déductions ; barème par tranches ; correctif par personne à charge sous condition de ressources et sur justification (verifie).
-- CGFP ou texte FPT : éléments de rémunération insaisissables des fonctionnaires — Exclusions de l'assiette : SFT, remboursements de frais, indemnités à caractère familial (a_consulter).
+- CGFP L711-5 et code du travail L3252-3 — L711-5 rend applicable le code du travail ; L3252-3 exclut les indemnités insaisissables, remboursements de frais, allocations ou indemnités pour charges de famille ; SFT non nommé : son rattachement nominatif est une inférence, pas une exclusion textuelle nominative certifiée (verifie_selon_complement_2026-10-14).
 - CPCE R212-3, R212-6 (fournis) ; L212-14 (fourni) — Circuit de versement par le comptable public et déclarations du service employeur ; sanctions du tiers saisi défaillant (L212-14) ; L212-12 à consulter uniquement si son contenu précis est nécessaire (verifie).
 - Dossier réellement fourni : [Code des procédures civiles d'exécution](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048447274), passages L212-1, L212-5, L212-8, L212-14, R212-1-4, R212-1-14, R212-1-15, R212-1-16, R212-1-17, R212-1-18, R212-1-19, R212-1-20, R212-2, R212-3, R212-4, R212-5, R212-6.
 - Dossier réellement fourni : [Code du travail](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006902878), passages L3252-2, L3252-3, R3252-2, R3252-3, R3252-5.
@@ -912,8 +920,8 @@ Le 12 octobre 2026, dans une communauté d'agglomération de 410 agents (>350), 
 
 **Critères obligatoires — intégration**
 
-- **B-09-i01** : Analyse l'allégation de discrimination liée à la grossesse au regard de L131-1 et L131-2 CGFP sans tenir le lien causal pour établi ; examine la portée de ces textes et de L131-12 et L135-4 pour une candidate externe et suspend la conclusion sur ses protections lorsque le fondement manque ; distingue la question du statut de lanceur d'alerte (art. 6 et 8 de la loi du 9 décembre 2016) comme condition à vérifier.
-- **B-09-i02** : Vérifie les données effectivement traitées et leur qualification, les finalités, le fondement de l'article 6 RGPD et, si applicable, une exception de l'article 9 ; distingue l'utilisation des données pour sélectionner des candidats d'une conservation limitée et sécurisée de preuves, sans conclure a priori à l'absence de fondement ni à une suppression obligatoire.
+- **B-09-i01** : Analyse l'allégation de discrimination liée à la grossesse au regard de L131-1 et L131-2 CGFP sans tenir le lien causal pour établi ; examine la portée de ces textes et de L131-12 et L135-4 pour une candidate externe et suspend la conclusion sur ses protections lorsque le fondement manque ; distingue la qualification de lanceur d'alerte selon l'art. 6 I de la loi 2016-1691 et la voie interne ouverte aux personnes candidates à un emploi par l'art. 8 I-A 1°, sans tenir la qualification de lanceur d'alerte pour acquise.
+- **B-09-i02** : Vérifie les données effectivement traitées et leur qualification, les finalités, le fondement de l'article 6 RGPD et, si applicable, une exception de l'article 9 ; la qualification de la grossesse comme donnée de santé (art. 4 §15 et art. 9 §1) est à établir sur les faits ; distingue l'utilisation des données pour sélectionner des candidats d'une conservation limitée et sécurisée de preuves, en examinant l'art. 17 §3 e, sans conclure a priori à l'absence de fondement ni à une suppression obligatoire.
 - **B-09-i03** : Propose des mesures correctives proportionnées aux faits : contrôle des motifs du rejet, réexamen impartial, adaptation éventuelle de la procédure ou du jury, préservation des preuves ; définit le contenu minimal de la communication interne aux membres du jury sur la pertinence des données collectées et l'absence de critères discriminatoires, sans imposer l'éviction automatique du jury.
 
 **Échecs — intégration**
@@ -937,12 +945,12 @@ Le 12 octobre 2026, dans une communauté d'agglomération de 410 agents (>350), 
 **Sources annoncées et réserves**
 
 - CGFP L131-1, L131-2, L131-12, L135-4 — Interdiction des discriminations fondées sur le sexe et la grossesse ; champ des agents publics et conditions propres à chaque protection, portée à vérifier pour une candidate externe sans protection présumée applicable (verifie).
-- RGPD art. 5, 6, 9 (reproduction CNIL chapitre 2) — Données effectivement traitées et leur qualification ; finalités et fondement de l'article 6 ; exceptions de l'article 9 dont 9 §2 f) ; distinction entre usage pour sélectionner et conservation limitée de preuves, sans conclusion prédéterminée sur l'absence de fondement ou la suppression (non vérifié au 14/10/2026).
-- Loi 2016-1691 art. 6, 8, 10-1 — Conditions de qualification comme lanceur d'alerte et protections renvoyées, non reproduites dans le corpus et à vérifier (non vérifié au 14/10/2026).
+- RGPD art. 4 §15, 5, 6, 9 et 17 §3 e (dispositif EUR-Lex CELEX:02016R0679-20160504) — Qualification de la grossesse comme donnée de santé à établir sur les faits ; finalités, fondement et exceptions de l'art. 9, dont 9 §2 f ; conservation limitée et sécurisée de preuves et examen de l'art. 17 §3 e (verifie_selon_complement_2026-10-14).
+- Loi 2016-1691 art. 6, 8, 10-1 — Qualification de l'alerte selon l'art. 6 I ; voie interne ouverte aux personnes candidates à un emploi (8 I-A 1°) ; interdiction des représailles, dont licenciement et mesures disciplinaires (10-1 II) ; textes en vigueur depuis le 01/09/2022 selon le complément (verifie_selon_complement_2026-10-14).
 - Dossier réellement fourni : [Code général de la fonction publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044427698), passages L131-1, L131-2, L131-12, L131-13, L135-4.
-- Dossier réellement fourni : [rgpd2 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2), passages document. Acquisition historique ; non vérifié au 14/10/2026 (HTTP 503 rapporté).
-- Dossier réellement fourni : [rgpd3 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3), passages document. Acquisition historique ; non vérifié au 14/10/2026 (HTTP 503 rapporté).
-- Dossier réellement fourni : [rgpd4 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4), passages document. Acquisition historique ; non vérifié au 14/10/2026 (HTTP 503 rapporté).
+- Dossier réellement fourni : [rgpd2 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
+- Dossier réellement fourni : [rgpd3 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
+- Dossier réellement fourni : [rgpd4 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
 
 Liste exhaustive des identifiants et critères : [jeuBJSON](cases-b.json).
 
@@ -995,9 +1003,9 @@ Le 12 octobre 2026, la DRH d'une collectivité de 520 agents (>350) souhaite dé
 
 **Critères obligatoires — intégration**
 
-- **B-11-i01** : Analyse si l'outil relève de l'article 22 RGPD en examinant les effets réels du classement (exclusion effective de candidats du vivier, effets juridiques ou significatifs) et le degré réel d'intervention humaine sur chaque inscription finale au tableau, sans conclure sur la seule présence d'une validation humaine formelle.
+- **B-11-i01** : Analyse si l'outil relève de l'article 22 RGPD en examinant les effets réels du classement (exclusion effective de candidats du vivier, effets juridiques ou significatifs) et le degré réel d'intervention humaine sur chaque inscription finale au tableau ; examine les exceptions de l'art. 22 §2 a-c et les garanties du §3 ; ne présente pas une validation humaine formelle comme une obligation fondée sur l'article 22 lui-même.
 - **B-11-i02** : Qualifie le projet pour identifier la base de consultation du CST applicable parmi R253-7, 1° (organisation des services), 11° (critères d'appréciation de la valeur professionnelle) ou 8° et 12° (LDG promotion et taux d'avancement), et précise que la consultation doit précéder la mise en production.
-- **B-11-i03** : Délimite les rôles : le DPO vérifie la conformité RGPD et conseille sur l'éventuelle AIPD au sens de l'article 35 RGPD ; la DSI assure le déploiement technique ; mais la décision sur les critères de scoring et les inscriptions au tableau relève de l'autorité territoriale compétente selon les LDG et délégations locales, et non du DPO ou de la DSI.
+- **B-11-i03** : Délimite les rôles : l'AIPD est conduite par le responsable du traitement avant le traitement selon l'art. 35 §1 RGPD, et requise notamment dans l'hypothèse du §3 a ; le DPO conseille selon l'art. 35 §2 et l'art. 39 §1 c ; la DSI assure le déploiement technique ; la décision sur les critères de scoring et les inscriptions au tableau relève de l'autorité territoriale compétente selon les LDG et délégations locales, et non du DPO ou de la DSI.
 
 **Échecs — intégration**
 
@@ -1019,12 +1027,12 @@ Le 12 octobre 2026, la DRH d'une collectivité de 520 agents (>350) souhaite dé
 
 **Sources annoncées et réserves**
 
-- RGPD art. 22 (reproduction CNIL, rgpd3/21) — Décision fondée exclusivement sur traitement automatisé produisant des effets juridiques ou significatifs ; conditions d'exemption (non vérifié au 14/10/2026).
+- RGPD art. 22 (dispositif EUR-Lex CELEX:02016R0679-20160504) — Décision fondée exclusivement sur traitement automatisé produisant des effets juridiques ou significatifs ; exceptions §2 a-c et garanties §3 ; la validation humaine formelle n'est pas fondée sur cet article lui-même (verifie_selon_complement_2026-10-14).
 - CGFP R253-7, 1°, 8°, 11°, 12° — Compétence du CST sur organisation des services, LDG promotion, critères d'appréciation de la valeur professionnelle, taux d'avancement (verifie).
-- RGPD art. 35 (reproduction CNIL, rgpd4/35) — Conditions déclenchant une AIPD ; évaluation systématique fondée sur traitement automatisé (non vérifié au 14/10/2026).
-- Dossier réellement fourni : [rgpd2 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2), passages document. Acquisition historique ; non vérifié au 14/10/2026 (HTTP 503 rapporté).
-- Dossier réellement fourni : [rgpd3 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3), passages document. Acquisition historique ; non vérifié au 14/10/2026 (HTTP 503 rapporté).
-- Dossier réellement fourni : [rgpd4 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4), passages document. Acquisition historique ; non vérifié au 14/10/2026 (HTTP 503 rapporté).
+- RGPD art. 35 et 39 §1 c (dispositif EUR-Lex CELEX:02016R0679-20160504) — AIPD conduite par le responsable avant le traitement (35 §1), requise notamment au §3 a ; conseil du DPO (35 §2 et 39 §1 c) (verifie_selon_complement_2026-10-14).
+- Dossier réellement fourni : [rgpd2 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
+- Dossier réellement fourni : [rgpd3 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
+- Dossier réellement fourni : [rgpd4 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
 - Dossier réellement fourni : [Code général de la fonction publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044425506), passages L522-24, L522-27, L253-5, R253-7.
 
 Liste exhaustive des identifiants et critères : [jeuBJSON](cases-b.json).
@@ -1063,7 +1071,7 @@ Le 12 octobre 2026, dans une collectivité de 480 agents (>350), un agent titula
 
 - CGFP L553-1 3°, L553-2 — Licenciement pour insuffisance professionnelle prononcé selon la procédure disciplinaire ; distinction avec sanction disciplinaire (verifie).
 - CGFP L133-2, L133-3, L134-5, L135-4, L135-6 — Harcèlement moral ; protection de l'agent signalant contre mesures défavorables selon leurs conditions ; protection fonctionnelle ; dispositif de recueil des signalements (verifie).
-- Loi 2016-1691 art. 6, 8, 10-1 — Conditions de qualification comme lanceur d'alerte et protections renvoyées, non reproduites dans le corpus et à vérifier (non vérifié au 14/10/2026).
+- Loi 2016-1691 art. 6, 8, 10-1 — Qualification de l'alerte selon l'art. 6 I ; voie interne ouverte aux personnes candidates à un emploi (8 I-A 1°) ; interdiction des représailles, dont licenciement et mesures disciplinaires (10-1 II) ; textes en vigueur depuis le 01/09/2022 selon le complément (verifie_selon_complement_2026-10-14).
 - Dossier réellement fourni : [Code général de la fonction publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044425184), passages L553-1, L553-2, L133-1, L133-2, L133-3, L135-1, L135-4, L135-5, L135-6, L134-1, L134-5, R135-1, R135-2, R135-3, R135-4, R135-5, R135-6, R135-7, R135-8, R135-9, R135-10.
 
 Liste exhaustive des identifiants et critères : [jeuBJSON](cases-b.json).

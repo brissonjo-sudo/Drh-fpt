@@ -364,7 +364,7 @@
       },
       {
         "id": "B-05-i02",
-        "texte": "Le répondant précise les obligations RGPD applicables au prestataire en tant que sous-traitant (instructions documentées, garanties, traçabilité, restitution ou suppression) et les contrôles que la DRH doit exercer, avec les articles vérifiés."
+        "texte": "Le répondant précise les obligations RGPD applicables au prestataire en tant que sous-traitant (instructions documentées, garanties, informations et audits selon l'art. 28 §3 h, registre du sous-traitant selon l'art. 30 §2, sécurité selon l'art. 32, restitution ou suppression) et les contrôles que la DRH doit exercer, avec les articles vérifiés."
       },
       {
         "id": "B-05-i03",
@@ -397,14 +397,14 @@
     ],
     "source_requirements": [
       {
-        "reference": "RGPD art. 28",
-        "passage_a_consulter": "Obligations du sous-traitant : instructions documentées, garanties, audit, suppression ou restitution des données",
-        "statut_verification": "verifie"
+        "reference": "RGPD art. 28, 30 §2 et 32 (dispositif EUR-Lex CELEX:02016R0679-20160504)",
+        "passage_a_consulter": "Instructions documentées, garanties, informations et audits (28 §3 h), registre du sous-traitant (30 §2), sécurité (32), restitution ou suppression",
+        "statut_verification": "verifie_selon_complement_2026-10-14"
       },
       {
-        "reference": "RGPD art. 5, 25, 32",
+        "reference": "RGPD art. 5, 25, 32 (dispositif EUR-Lex CELEX:02016R0679-20160504)",
         "passage_a_consulter": "Principes de minimisation, privacy by design, sécurité du traitement applicables à la reprise de données",
-        "statut_verification": "verifie"
+        "statut_verification": "verifie_selon_complement_2026-10-14"
       },
       {
         "reference": "Contrat de sous-traitance SIRH",
@@ -429,6 +429,7 @@
       "patch_text_sha256": "153dd390a9fcf7ef915d02785f442afa657d9767b145daf3bea6a2f10b14f359"
     },
     "required_source_ids": [
+      "CELEX:02016R0679-20160504",
       "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2",
       "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4"
     ]
@@ -446,11 +447,11 @@
     "attendus": [
       {
         "id": "B-06-i01",
-        "texte": "Le répondant vérifie rubrique par rubrique si un traitement de données personnelles est effectivement en jeu (notamment pour les données présentées comme anonymisées) et, pour les rubriques concernées, justifie le fondement applicable lorsque les éléments fournis le permettent ; sinon identifie les fondements à examiner et suspend précisément leur validation en indiquant le texte ou la documentation manquante."
+        "texte": "Le répondant vérifie rubrique par rubrique si un traitement de données personnelles est effectivement en jeu (notamment pour les données présentées comme anonymisées) et, pour les rubriques concernées, justifie le fondement applicable lorsque les éléments fournis le permettent ; pour une rubrique nominative révélant l'appartenance syndicale, examine aussi l'art. 9 §1 RGPD ; sinon identifie les fondements à examiner et suspend précisément leur validation en indiquant le texte ou la documentation manquante."
       },
       {
         "id": "B-06-i02",
-        "texte": "Le répondant précise, pour les traitements impliquant des données personnelles, les obligations d'information des agents et les droits applicables selon le fondement retenu, en distinguant le droit d'opposition (art. 21) des autres droits."
+        "texte": "Le répondant précise, pour les traitements impliquant des données personnelles, les obligations d'information des agents (RGPD art. 13 ou 14 selon que les données sont ou non collectées auprès de l'agent) et les droits applicables selon le fondement retenu, en distinguant le droit d'opposition (art. 21, dont §4) des autres droits."
       },
       {
         "id": "B-06-i03",
@@ -484,19 +485,19 @@
     ],
     "source_requirements": [
       {
-        "reference": "RGPD art. 6, 13, 21",
-        "passage_a_consulter": "Base légale pour traitements RH de service public ; obligations d'information ; droit d'opposition selon le fondement",
-        "statut_verification": "verifie"
+        "reference": "RGPD art. 6, 9 §1, 13, 14 et 21 §4 (dispositif EUR-Lex CELEX:02016R0679-20160504)",
+        "passage_a_consulter": "Fondement des traitements ; appartenance syndicale pour une rubrique nominative (9 §1) ; information selon 13 ou 14 ; droit d'opposition dont 21 §4",
+        "statut_verification": "verifie_selon_complement_2026-10-14"
       },
       {
-        "reference": "RGPD art. 30, 38-39",
+        "reference": "RGPD art. 30, 38-39 (dispositif EUR-Lex CELEX:02016R0679-20160504)",
         "passage_a_consulter": "Tenue du registre par le responsable du traitement ; missions du DPO sans pouvoir décisionnel",
-        "statut_verification": "verifie"
+        "statut_verification": "verifie_selon_complement_2026-10-14"
       },
       {
         "reference": "CGFP L121-2 et texte régissant la communication syndicale dans les collectivités",
-        "passage_a_consulter": "Obligation de neutralité du service ; modalités de communication par l'employeur sur des sujets syndicaux",
-        "statut_verification": "a_consulter"
+        "passage_a_consulter": "L121-2 vise la neutralité et la laïcité de l'agent ; aucun article d'affichage ou de diffusion syndicale trouvé dans L213, L214, L215, partie législative du CGFP ; partie réglementaire non lue : abstention sur le régime de cette communication",
+        "statut_verification": "abstention_partie_legislative_recherchee_reglementaire_non_lue"
       }
     ],
     "coverage": "communication-interne",
@@ -516,6 +517,7 @@
       "patch_text_sha256": "153dd390a9fcf7ef915d02785f442afa657d9767b145daf3bea6a2f10b14f359"
     },
     "required_source_ids": [
+      "CELEX:02016R0679-20160504",
       "LEGIARTI000044427901",
       "LEGIARTI000044427903",
       "LEGIARTI000044427911",
@@ -684,9 +686,9 @@
         "statut_verification": "verifie"
       },
       {
-        "reference": "CGFP ou texte FPT : éléments de rémunération insaisissables des fonctionnaires",
-        "passage_a_consulter": "Exclusions de l'assiette : SFT, remboursements de frais, indemnités à caractère familial",
-        "statut_verification": "a_consulter"
+        "reference": "CGFP L711-5 et code du travail L3252-3",
+        "passage_a_consulter": "L711-5 rend applicable le code du travail ; L3252-3 exclut les indemnités insaisissables, remboursements de frais, allocations ou indemnités pour charges de famille ; SFT non nommé : son rattachement nominatif est une inférence, pas une exclusion textuelle nominative certifiée",
+        "statut_verification": "verifie_selon_complement_2026-10-14"
       },
       {
         "reference": "CPCE R212-3, R212-6 (fournis) ; L212-14 (fourni)",
@@ -716,6 +718,7 @@
       "LEGIARTI000025938541",
       "LEGIARTI000031694644",
       "LEGIARTI000033812428",
+      "LEGIARTI000044424821",
       "LEGIARTI000048438800",
       "LEGIARTI000048438948",
       "LEGIARTI000048439077",
@@ -750,11 +753,11 @@
     "attendus": [
       {
         "id": "B-09-i01",
-        "texte": "Analyse l'allégation de discrimination liée à la grossesse au regard de L131-1 et L131-2 CGFP sans tenir le lien causal pour établi ; examine la portée de ces textes et de L131-12 et L135-4 pour une candidate externe et suspend la conclusion sur ses protections lorsque le fondement manque ; distingue la question du statut de lanceur d'alerte (art. 6 et 8 de la loi du 9 décembre 2016) comme condition à vérifier."
+        "texte": "Analyse l'allégation de discrimination liée à la grossesse au regard de L131-1 et L131-2 CGFP sans tenir le lien causal pour établi ; examine la portée de ces textes et de L131-12 et L135-4 pour une candidate externe et suspend la conclusion sur ses protections lorsque le fondement manque ; distingue la qualification de lanceur d'alerte selon l'art. 6 I de la loi 2016-1691 et la voie interne ouverte aux personnes candidates à un emploi par l'art. 8 I-A 1°, sans tenir la qualification de lanceur d'alerte pour acquise."
       },
       {
         "id": "B-09-i02",
-        "texte": "Vérifie les données effectivement traitées et leur qualification, les finalités, le fondement de l'article 6 RGPD et, si applicable, une exception de l'article 9 ; distingue l'utilisation des données pour sélectionner des candidats d'une conservation limitée et sécurisée de preuves, sans conclure a priori à l'absence de fondement ni à une suppression obligatoire."
+        "texte": "Vérifie les données effectivement traitées et leur qualification, les finalités, le fondement de l'article 6 RGPD et, si applicable, une exception de l'article 9 ; la qualification de la grossesse comme donnée de santé (art. 4 §15 et art. 9 §1) est à établir sur les faits ; distingue l'utilisation des données pour sélectionner des candidats d'une conservation limitée et sécurisée de preuves, en examinant l'art. 17 §3 e, sans conclure a priori à l'absence de fondement ni à une suppression obligatoire."
       },
       {
         "id": "B-09-i03",
@@ -792,14 +795,14 @@
         "statut_verification": "verifie"
       },
       {
-        "reference": "RGPD art. 5, 6, 9 (reproduction CNIL chapitre 2)",
-        "passage_a_consulter": "Données effectivement traitées et leur qualification ; finalités et fondement de l'article 6 ; exceptions de l'article 9 dont 9 §2 f) ; distinction entre usage pour sélectionner et conservation limitée de preuves, sans conclusion prédéterminée sur l'absence de fondement ou la suppression",
-        "statut_verification": "verifie"
+        "reference": "RGPD art. 4 §15, 5, 6, 9 et 17 §3 e (dispositif EUR-Lex CELEX:02016R0679-20160504)",
+        "passage_a_consulter": "Qualification de la grossesse comme donnée de santé à établir sur les faits ; finalités, fondement et exceptions de l'art. 9, dont 9 §2 f ; conservation limitée et sécurisée de preuves et examen de l'art. 17 §3 e",
+        "statut_verification": "verifie_selon_complement_2026-10-14"
       },
       {
         "reference": "Loi 2016-1691 art. 6, 8, 10-1",
-        "passage_a_consulter": "Conditions de qualification comme lanceur d'alerte et protections renvoyées, non reproduites dans le corpus et à vérifier",
-        "statut_verification": "a_verifier"
+        "passage_a_consulter": "Qualification de l'alerte selon l'art. 6 I ; voie interne ouverte aux personnes candidates à un emploi (8 I-A 1°) ; interdiction des représailles, dont licenciement et mesures disciplinaires (10-1 II) ; textes en vigueur depuis le 01/09/2022 selon le complément",
+        "statut_verification": "verifie_selon_complement_2026-10-14"
       }
     ],
     "coverage": "transversal",
@@ -819,9 +822,13 @@
       "patch_text_sha256": "aee6a67532c6166c5ece775a59bfaf2855a9872ae2e3df75a5fbf4a29936723a"
     },
     "required_source_ids": [
+      "CELEX:02016R0679-20160504",
       "LEGIARTI000044427666",
       "LEGIARTI000044427694",
       "LEGIARTI000044427698",
+      "LEGIARTI000045389749",
+      "LEGIARTI000045391750",
+      "LEGIARTI000045391755",
       "LEGIARTI000045392464",
       "LEGIARTI000045392551",
       "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2",
@@ -945,7 +952,7 @@
     "attendus": [
       {
         "id": "B-11-i01",
-        "texte": "Analyse si l'outil relève de l'article 22 RGPD en examinant les effets réels du classement (exclusion effective de candidats du vivier, effets juridiques ou significatifs) et le degré réel d'intervention humaine sur chaque inscription finale au tableau, sans conclure sur la seule présence d'une validation humaine formelle."
+        "texte": "Analyse si l'outil relève de l'article 22 RGPD en examinant les effets réels du classement (exclusion effective de candidats du vivier, effets juridiques ou significatifs) et le degré réel d'intervention humaine sur chaque inscription finale au tableau ; examine les exceptions de l'art. 22 §2 a-c et les garanties du §3 ; ne présente pas une validation humaine formelle comme une obligation fondée sur l'article 22 lui-même."
       },
       {
         "id": "B-11-i02",
@@ -953,7 +960,7 @@
       },
       {
         "id": "B-11-i03",
-        "texte": "Délimite les rôles : le DPO vérifie la conformité RGPD et conseille sur l'éventuelle AIPD au sens de l'article 35 RGPD ; la DSI assure le déploiement technique ; mais la décision sur les critères de scoring et les inscriptions au tableau relève de l'autorité territoriale compétente selon les LDG et délégations locales, et non du DPO ou de la DSI."
+        "texte": "Délimite les rôles : l'AIPD est conduite par le responsable du traitement avant le traitement selon l'art. 35 §1 RGPD, et requise notamment dans l'hypothèse du §3 a ; le DPO conseille selon l'art. 35 §2 et l'art. 39 §1 c ; la DSI assure le déploiement technique ; la décision sur les critères de scoring et les inscriptions au tableau relève de l'autorité territoriale compétente selon les LDG et délégations locales, et non du DPO ou de la DSI."
       }
     ],
     "attendus_degraded": [
@@ -982,9 +989,9 @@
     ],
     "source_requirements": [
       {
-        "reference": "RGPD art. 22 (reproduction CNIL, rgpd3/21)",
-        "passage_a_consulter": "Décision fondée exclusivement sur traitement automatisé produisant des effets juridiques ou significatifs ; conditions d'exemption",
-        "statut_verification": "verifie"
+        "reference": "RGPD art. 22 (dispositif EUR-Lex CELEX:02016R0679-20160504)",
+        "passage_a_consulter": "Décision fondée exclusivement sur traitement automatisé produisant des effets juridiques ou significatifs ; exceptions §2 a-c et garanties §3 ; la validation humaine formelle n'est pas fondée sur cet article lui-même",
+        "statut_verification": "verifie_selon_complement_2026-10-14"
       },
       {
         "reference": "CGFP R253-7, 1°, 8°, 11°, 12°",
@@ -992,9 +999,9 @@
         "statut_verification": "verifie"
       },
       {
-        "reference": "RGPD art. 35 (reproduction CNIL, rgpd4/35)",
-        "passage_a_consulter": "Conditions déclenchant une AIPD ; évaluation systématique fondée sur traitement automatisé",
-        "statut_verification": "verifie"
+        "reference": "RGPD art. 35 et 39 §1 c (dispositif EUR-Lex CELEX:02016R0679-20160504)",
+        "passage_a_consulter": "AIPD conduite par le responsable avant le traitement (35 §1), requise notamment au §3 a ; conseil du DPO (35 §2 et 39 §1 c)",
+        "statut_verification": "verifie_selon_complement_2026-10-14"
       }
     ],
     "coverage": "transversal",
@@ -1014,6 +1021,7 @@
       "patch_text_sha256": "aee6a67532c6166c5ece775a59bfaf2855a9872ae2e3df75a5fbf4a29936723a"
     },
     "required_source_ids": [
+      "CELEX:02016R0679-20160504",
       "LEGIARTI000044425500",
       "LEGIARTI000044425506",
       "LEGIARTI000044427240",
@@ -1087,8 +1095,8 @@
       },
       {
         "reference": "Loi 2016-1691 art. 6, 8, 10-1",
-        "passage_a_consulter": "Conditions de qualification comme lanceur d'alerte et protections renvoyées, non reproduites dans le corpus et à vérifier",
-        "statut_verification": "a_verifier"
+        "passage_a_consulter": "Qualification de l'alerte selon l'art. 6 I ; voie interne ouverte aux personnes candidates à un emploi (8 I-A 1°) ; interdiction des représailles, dont licenciement et mesures disciplinaires (10-1 II) ; textes en vigueur depuis le 01/09/2022 selon le complément",
+        "statut_verification": "verifie_selon_complement_2026-10-14"
       }
     ],
     "coverage": "transversal",
@@ -1116,6 +1124,9 @@
       "LEGIARTI000044427622",
       "LEGIARTI000044427628",
       "LEGIARTI000044427630",
+      "LEGIARTI000045389749",
+      "LEGIARTI000045391750",
+      "LEGIARTI000045391755",
       "LEGIARTI000045392482",
       "LEGIARTI000045392497",
       "LEGIARTI000045392551",

@@ -63,6 +63,11 @@
         "reference": "CGFP R123-2",
         "passage_a_consulter": "Motifs d'opposition au cumul par l'autorité hiérarchique",
         "statut_verification": "consulte_dans_dossier"
+      },
+      {
+        "reference": "CGFP L123-7",
+        "passage_a_consulter": "Activité accessoire autorisée : régime distinct de L123-5 ; référence utilisée par le critère d'échec",
+        "statut_verification": "verifie_selon_complement_2026-10-14"
       }
     ],
     "coverage": "carriere-paie",
@@ -82,6 +87,7 @@
       "patch_text_sha256": "6fe15069af797abb95f3389d7f74862ee9cec4ffb4296e1cd36050ed1ee05db7"
     },
     "required_source_ids": [
+      "LEGIARTI000044427803",
       "LEGIARTI000044427807",
       "LEGIARTI000044427809",
       "LEGIARTI000046933345",
@@ -259,8 +265,8 @@
       },
       {
         "reference": "CGFP L313-1 et L313-4 (renvois respectifs de L332-8 et L332-14)",
-        "passage_a_consulter": "Formalités de publicité : L332-8 renvoie à L313-1 ; L332-14 renvoie à L313-4 ; contenu de L313-1 non disponible au dossier",
-        "statut_verification": "consulte_dans_dossier"
+        "passage_a_consulter": "L332-8 renvoie aux formalités de L313-1 (création de l'emploi par délibération, mention de la possibilité de recruter un contractuel) ; la publicité de la vacance relève de L313-4, auquel renvoie L332-14",
+        "statut_verification": "verifie_selon_complement_2026-10-14"
       },
       {
         "reference": "CGFP R331-6 à R331-11",
@@ -528,11 +534,11 @@
       },
       {
         "id": "A-06-i03",
-        "texte": "Information préalable comportant au moins : identité et coordonnées du responsable du traitement, finalité et base légale, durée de conservation ou, lorsque ce n'est pas possible, critères utilisés pour la déterminer, droits d'accès/rectification/effacement, coordonnées du DPO, droit de retrait si le consentement est retenu comme base (RGPD art. 13)."
+        "texte": "Information préalable comportant au moins : identité et coordonnées du responsable du traitement, finalité et base légale, destinataires, durée de conservation ou, lorsque ce n'est pas possible, critères utilisés pour la déterminer, droits d'accès/rectification/effacement et d'opposition, coordonnées du DPO, droit de retrait si le consentement est retenu comme base, droit de réclamation (RGPD art. 13, notamment §1 e, §2 b et d) ; art. 14 si la donnée n'est pas collectée auprès de l'agent."
       },
       {
         "id": "A-06-i04",
-        "texte": "Rôle du DPO : association en temps utile, conseil documenté (RGPD art. 38-39), sans substitution au responsable du traitement pour la décision sur les contenus publiés et la tenue du registre."
+        "texte": "Rôle du DPO : association en temps utile, conseil (RGPD art. 39 §1 a) ; documentation à la charge du responsable du traitement (art. 5 §2), sans substitution du DPO au responsable pour la décision sur les contenus publiés et la tenue du registre."
       }
     ],
     "attendus_degraded": [
@@ -562,19 +568,19 @@
     ],
     "source_requirements": [
       {
-        "reference": "RGPD art. 6",
+        "reference": "RGPD art. 6 (dispositif EUR-Lex CELEX:02016R0679-20160504)",
         "passage_a_consulter": "Licéité du traitement ; inapplicabilité du point f aux autorités publiques dans l'exécution de leurs missions",
-        "statut_verification": "verifie"
+        "statut_verification": "verifie_selon_complement_2026-10-14"
       },
       {
-        "reference": "RGPD art. 13",
-        "passage_a_consulter": "Informations à fournir lors de la collecte : responsable, finalité, base légale, droits, DPO, durée de conservation",
-        "statut_verification": "verifie"
+        "reference": "RGPD art. 13 et 14 (dispositif EUR-Lex CELEX:02016R0679-20160504)",
+        "passage_a_consulter": "Information : destinataires (13 §1 e), opposition (13 §2 b), réclamation (13 §2 d), autres mentions de l'attendu ; art. 14 si la donnée n'est pas collectée auprès de l'agent",
+        "statut_verification": "verifie_selon_complement_2026-10-14"
       },
       {
-        "reference": "RGPD art. 38-39",
-        "passage_a_consulter": "Missions et indépendance du DPO ; association en temps utile sans pouvoir décisionnel",
-        "statut_verification": "verifie"
+        "reference": "RGPD art. 38-39 et 5 §2 (dispositif EUR-Lex CELEX:02016R0679-20160504)",
+        "passage_a_consulter": "Association du DPO et conseil (39 §1 a) ; documentation à la charge du responsable du traitement (5 §2), sans pouvoir décisionnel du DPO",
+        "statut_verification": "verifie_selon_complement_2026-10-14"
       },
       {
         "reference": "Recommandations CNIL sur les annuaires professionnels",
@@ -599,6 +605,7 @@
       "patch_text_sha256": "789e0ec147d06e6fbd75d6ea8e52f7eb0c640dac6999e58ec1210053cbc434d9"
     },
     "required_source_ids": [
+      "CELEX:02016R0679-20160504",
       "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2",
       "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3",
       "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4"
@@ -780,9 +787,9 @@
         "statut_verification": "a_consulter"
       },
       {
-        "reference": "CE 22/12/2023, n° 462455",
-        "passage_a_consulter": "Points 4-6 : communication des témoignages, risque avéré de préjudice, appréciation de la privation de la garantie de défense",
-        "statut_verification": "verifie"
+        "reference": "CE, Section, 22/12/2023, n°462455, Lebon",
+        "passage_a_consulter": "Texte intégral Ariane Web selon le complément : points 4 et 5, motifs décisoires ; témoignages, risque avéré apprécié selon la situation du témoin, défense utile ; contenu utile à préserver et transposition à une enquête préalable de collectivité à signaler comme inférences",
+        "statut_verification": "verifie_selon_complement_2026-10-14"
       },
       {
         "reference": "CRPA L311-2, L311-6, L311-7",
@@ -882,9 +889,9 @@
         "statut_verification": "verifie"
       },
       {
-        "reference": "CE 13 juillet 2022, n°461914, point 19",
-        "passage_a_consulter": "Le congé de maladie ne fait pas obstacle à l'action disciplinaire ; point 19 lu dans un résumé web, texte intégral à relire avant toute citation",
-        "statut_verification": "verifie_partiel"
+        "reference": "CE 13 juillet 2022, n°461914, point 19, inédit",
+        "passage_a_consulter": "Le congé de maladie ne fait pas obstacle à l'action disciplinaire ; point 19 lu en texte intégral sur Ariane Web selon le complément ; aucune précision sur le CLM en particulier ni sur les droits de la défense pendant l'arrêt",
+        "statut_verification": "verifie_selon_complement_2026-10-14"
       }
     ],
     "coverage": "transversal",
