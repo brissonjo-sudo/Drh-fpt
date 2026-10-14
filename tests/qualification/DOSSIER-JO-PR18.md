@@ -25,7 +25,7 @@ En dégradé : pas de compagnon ni de source. Les faits fournis restent utilisab
 
 ## Sources et limites
 
-[Archive des sources](../rapports/SOURCES-JEUX-PR18-2026-10-12.zip) : 234 liaisons de preuve aux cas, 19 archives brutes. Il ne s’agit pas de 234 appels réseau : des passages sont réutilisés entre cas. Dates de consultation originales conservées ; certains horodatages récupérés de l’écriture de l’archive sont signalés comme tels.
+[Archive des sources](../rapports/SOURCES-JEUX-PR18-2026-10-12.zip) : 234 liaisons de preuve aux cas, 19 archives brutes. Ces nombres décrivent l'archive historique du 12/10 ; le PDF RGPD du 14/10 et ses index sont ajoutés séparément, sans réécrire cette archive. Il ne s’agit pas de 234 appels réseau : des passages sont réutilisés entre cas. Dates de consultation originales conservées ; certains horodatages récupérés de l’écriture de l’archive sont signalés comme tels.
 
 Selon le complément du rapport de Claude du 14/10/2026 : dispositif du RGPD lu dans le PDF EUR-Lex `CELEX:02016R0679-20160504` (sans considérants) ; articles 6, 8 et 10-1 de la loi 2016-1691 et réserves CGFP examinés via Légifrance ; deux décisions CE lues intégralement sur Ariane Web. Cette provenance est celle du rapport, pas une nouvelle consultation primaire par Codex. Les archives du 12/10 restent historiques et n'acquièrent pas rétroactivement les nouveaux textes. Les pièces locales absentes restent à rechercher ; les critères permettent une suspension ciblée.
 
@@ -43,7 +43,7 @@ Cycle A : 48 réponses de qualification et 48 jugements, puis 28 réponses/28 ju
 
 ## Corrections et complément du 14 octobre 2026
 
-Premier lot publié : cinq corrections dans `206e428`, puis nuances N1 à N6 dans `f21bec6` ; N7 est conservée. Second lot préparé localement depuis `f21bec6`, selon la section « Complément du 14/10/2026 » du même rapport, sans poussée ni gel. Aucune approbation globale des 24 cas et aucune campagne exécutée.
+Premier lot publié : cinq corrections dans `206e428`, puis nuances N1 à N6 dans `f21bec6` ; N7 est conservée. Second lot préparé depuis `f21bec6` puis publié sur `209e1d5` après validation T68 et CI verte. La présente réconciliation RGPD est préparée localement depuis `209e1d5`, sans poussée ni gel. Aucune approbation globale des 24 cas et aucune campagne exécutée.
 
 **A-03 — correction prioritaire** : L332-8 renvoie aux formalités de L313-1 (création de l'emploi par délibération, mention de la possibilité de recruter un contractuel) ; la publicité de la vacance relève de L313-4, auquel renvoie L332-14. L313-1 ne doit plus être présenté comme un texte de publicité. Sa lecture est désormais rapportée par le complément ; les archives de sources du 12/10 ne sont pas modifiées.
 
@@ -62,9 +62,23 @@ CE, Section, 22/12/2023, n°462455, Lebon : texte intégral lu sur Ariane Web se
 
 Les identifiants du complément sont ajoutés seulement aux cas qui les visent : L123-7 pour A-01 ; L711-5 pour B-08 ; loi 2016-1691 art. 6, 8 et 10-1 pour B-09/B-12 ; CELEX du dispositif RGPD pour A-06/B-05/B-06/B-09/B-11. L135-4 est déjà présent ; L553-3 n'est pas ajouté puisqu'aucun attendu ne vise son indemnité. Les suffixes abrégés sont développés avec le préfixe LEGIARTI, sans nouveau numéro de mémoire.
 
-Les anciennes URL CNIL requises sont conservées : aucun retrait n'a été demandé. Elles ne sont pas déclarées accessibles. Avant gel et qualification, réconcilier ces exigences avec la source EUR-Lex, acquérir/archiver les pièces utiles et vérifier leur prise en charge par la chaîne de preuves, notamment pour le PDF/CELEX. L'ajout d'un identifiant ne crée ni une trace de lecture ni une archive et les 125 tests déterministes ne qualifient pas cette collecte réelle.
+Réconciliation RGPD préparée le 14/10/2026 : les 14 liaisons vers les reproductions CNIL des chapitres 2/3/4 sont remplacées, dans les cinq cas A-06/B-05/B-06/B-09/B-11, par l'identifiant déjà présent `CELEX:02016R0679-20160504`, relié au PDF consolidé EUR-Lex archivé ci-dessous. Les recommandations CNIL non vérifiées restent une réserve distincte. Aucun attendu, critère d'échec, profil ou seuil n'est modifié par cette réconciliation.
 
 Les scénarios, profils, modes dégradés et seuils restent inchangés. Toutes les empreintes A/B ci-dessous portent sur les octets bruts, comme `suites.file_sha`, et sont vérifiées par recalcul. Les ZIP T29 restent présents et inchangés ; leur traitement reste soumis à validation séparée avant la fusion. Les profils et le commit de runtime final doivent être approuvés explicitement avant tout gel.
+
+### PDF RGPD — archive documentaire du 14 octobre 2026
+
+**État : prêt pour la relecture de Jo avant gel**, sur les fichiers et réserves explicités ici. Ce statut ne vaut ni approbation globale des 24 cas ni gel ni autorisation de campagne.
+
+Source RGPD à relire : [PDF consolidé EUR-Lex archivé](../rapports/rgpd-2026-10-14/CELEX-02016R0679-20160504-FR-consulte-2026-10-14.pdf) ; identifiant requis `CELEX:02016R0679-20160504` ; [provenance et empreinte](../rapports/rgpd-2026-10-14/provenance.json), [articles et pages par cas](../rapports/rgpd-2026-10-14/articles-rgpd.json).
+
+- PDF français de 78 pages, en-tête `02016R0679 — FR — 04.05.2016 — 000.002`, dispositif avec rectificatif cité dans le document. Les 99 articles sont identifiés ; 17 articles utiles sont extraits sans modification et indexés par pages pour les cinq cas. Les extraits facilitent la relecture ; le PDF reste la pièce primaire conservée.
+- SHA-256 brut du PDF : `e5984442f70f842034f9b5cb39bf3d6137630252260830c07b0449f354faa718` ; taille : 662538 octets. Copie identique au fichier local retrouvé et à l'extraction textuelle locale, après normalisation des espaces pour cette dernière comparaison.
+- Consultation le **14/10/2026** : date rapportée par le complément de Claude. L'heure exacte n'est pas disponible. L'horodatage du fichier local est enregistré séparément ; il ne devient pas une heure de consultation certifiée. L'archivage de cette copie est daté au moment réel de la copie dans `provenance.json`.
+- Une récupération directe EUR-Lex tentée pendant cette reprise a renvoyé une page de contrôle navigateur/HTTP 202, pas un PDF. La copie locale préexistante a été conservée sans altération. Son identité est cohérente avec le rapport et ses textes ; l'attribution à la consultation de Claude reste une inférence de provenance, sans hash de téléchargement original ni signature d'identité.
+- Les anciennes archives ZIP demeurent historiques et intactes. Le présent PDF et ses JSON sont ajoutés séparément parmi les preuves ; T29 reste distincte et reportée à la préparation de la fusion.
+- Les considérants, recommandations CEPD/CNIL et autres réserves du complément ne sont pas validés par cet archivage. Les deux abstentions communication syndicale/SFT sont conservées.
+- **Limite d'exécution** : `provenance.json` et `articles-rgpd.json` sont des preuves documentaires pour la relecture. Le harnais `live_sources.verify_trace` ne reconnaît actuellement pas une archive PDF/CELEX en tant que trace de qualification. Ce tour ne modifie pas le harnais et ne fabrique pas de trace compatible ; cette prise en charge et l'ensemble des autres sources seront à préparer avant de fixer le runtime de campagne. Aucun gel n'est exécuté.
 
 ### Contrôles déterministes locaux du 14 octobre 2026
 
@@ -74,8 +88,8 @@ Python 3.13 / Windows : `python -m unittest discover -s tests -p 'test_*.py'` r�
 
 ## Empreintes exactes
 
-- Jeu A : `fc6303e6fb78be0621e988b975bb65ec17f1a07e0c8bd515302671ff65ddf22a`
-- Jeu B : `214806e938f7c49a0d3bb62f4c10837cedd1c842bc7347bfc9ce9f57687cb4a6`
+- Jeu A : `9f4047721a26b7f4d6ff210e3c4165b3bf6d72ac1baa433b95014cd514150b9c`
+- Jeu B : `1f1776debc25b33a73249d425a43150900a5855d5df3680e013dd8d61d238833`
 - Profils : `315f90c12e52c28434dc7cbdc4262fa0abacee5d1733eb63c260d05be3645665`
 - Archive primaire : `467bd64c3537f98e0793412f581aef496520edb3767a40736118f7a0666eb090`
 
@@ -331,9 +345,7 @@ Liste exhaustive des identifiants et critères : [jeuAJSON](cases-a.json).
 - RGPD art. 13 et 14 (dispositif EUR-Lex CELEX:02016R0679-20160504) — Information : destinataires (13 §1 e), opposition (13 §2 b), réclamation (13 §2 d), autres mentions de l'attendu ; art. 14 si la donnée n'est pas collectée auprès de l'agent (verifie_selon_complement_2026-10-14).
 - RGPD art. 38-39 et 5 §2 (dispositif EUR-Lex CELEX:02016R0679-20160504) — Association du DPO et conseil (39 §1 a) ; documentation à la charge du responsable du traitement (5 §2), sans pouvoir décisionnel du DPO (verifie_selon_complement_2026-10-14).
 - Recommandations CNIL sur les annuaires professionnels — Traitement de la photo d'agent dans un annuaire interne (a_consulter).
-- Dossier réellement fourni : [rgpd2 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
-- Dossier réellement fourni : [rgpd3 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
-- Dossier réellement fourni : [rgpd4 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
+- Source RGPD à relire : [PDF consolidé EUR-Lex archivé](../rapports/rgpd-2026-10-14/CELEX-02016R0679-20160504-FR-consulte-2026-10-14.pdf) ; identifiant requis `CELEX:02016R0679-20160504` ; [provenance et empreinte](../rapports/rgpd-2026-10-14/provenance.json), [articles et pages par cas](../rapports/rgpd-2026-10-14/articles-rgpd.json).
 - Dossier réellement fourni : [Code civil](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006419288), passages 9. Article 9, hors sujet selon le rapport, conservé dans l’archive historique mais retiré des sources exigées du cas A-06.
 
 Liste exhaustive des identifiants et critères : [jeuAJSON](cases-a.json).
@@ -782,8 +794,7 @@ Collectivité FPT >350 agents, 12 octobre 2026. À l'issue d'une migration du SI
 - RGPD art. 28, 30 §2 et 32 (dispositif EUR-Lex CELEX:02016R0679-20160504) — Instructions documentées, garanties, informations et audits (28 §3 h), registre du sous-traitant (30 §2), sécurité (32), restitution ou suppression (verifie_selon_complement_2026-10-14).
 - RGPD art. 5, 25, 32 (dispositif EUR-Lex CELEX:02016R0679-20160504) — Principes de minimisation, privacy by design, sécurité du traitement applicables à la reprise de données (verifie_selon_complement_2026-10-14).
 - Contrat de sous-traitance SIRH — Répartition des responsabilités en cas d'erreurs de reprise, délais de correction, conditions de recette (piece_locale).
-- Dossier réellement fourni : [rgpd2 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
-- Dossier réellement fourni : [rgpd4 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
+- Source RGPD à relire : [PDF consolidé EUR-Lex archivé](../rapports/rgpd-2026-10-14/CELEX-02016R0679-20160504-FR-consulte-2026-10-14.pdf) ; identifiant requis `CELEX:02016R0679-20160504` ; [provenance et empreinte](../rapports/rgpd-2026-10-14/provenance.json), [articles et pages par cas](../rapports/rgpd-2026-10-14/articles-rgpd.json).
 
 Liste exhaustive des identifiants et critères : [jeuBJSON](cases-b.json).
 
@@ -823,9 +834,7 @@ Collectivité FPT >350 agents, 12 octobre 2026. La DRH souhaite lancer une newsl
 - RGPD art. 6, 9 §1, 13, 14 et 21 §4 (dispositif EUR-Lex CELEX:02016R0679-20160504) — Fondement des traitements ; appartenance syndicale pour une rubrique nominative (9 §1) ; information selon 13 ou 14 ; droit d'opposition dont 21 §4 (verifie_selon_complement_2026-10-14).
 - RGPD art. 30, 38-39 (dispositif EUR-Lex CELEX:02016R0679-20160504) — Tenue du registre par le responsable du traitement ; missions du DPO sans pouvoir décisionnel (verifie_selon_complement_2026-10-14).
 - CGFP L121-2 et texte régissant la communication syndicale dans les collectivités — L121-2 vise la neutralité et la laïcité de l'agent ; aucun article d'affichage ou de diffusion syndicale trouvé dans L213, L214, L215, partie législative du CGFP ; partie réglementaire non lue : abstention sur le régime de cette communication (abstention_partie_legislative_recherchee_reglementaire_non_lue).
-- Dossier réellement fourni : [rgpd2 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
-- Dossier réellement fourni : [rgpd3 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
-- Dossier réellement fourni : [rgpd4 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
+- Source RGPD à relire : [PDF consolidé EUR-Lex archivé](../rapports/rgpd-2026-10-14/CELEX-02016R0679-20160504-FR-consulte-2026-10-14.pdf) ; identifiant requis `CELEX:02016R0679-20160504` ; [provenance et empreinte](../rapports/rgpd-2026-10-14/provenance.json), [articles et pages par cas](../rapports/rgpd-2026-10-14/articles-rgpd.json).
 - Dossier réellement fourni : [Code général de la fonction publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044427911), passages L121-2, L121-6, L121-7.
 
 Liste exhaustive des identifiants et critères : [jeuBJSON](cases-b.json).
@@ -948,9 +957,7 @@ Le 12 octobre 2026, dans une communauté d'agglomération de 410 agents (>350), 
 - RGPD art. 4 §15, 5, 6, 9 et 17 §3 e (dispositif EUR-Lex CELEX:02016R0679-20160504) — Qualification de la grossesse comme donnée de santé à établir sur les faits ; finalités, fondement et exceptions de l'art. 9, dont 9 §2 f ; conservation limitée et sécurisée de preuves et examen de l'art. 17 §3 e (verifie_selon_complement_2026-10-14).
 - Loi 2016-1691 art. 6, 8, 10-1 — Qualification de l'alerte selon l'art. 6 I ; voie interne ouverte aux personnes candidates à un emploi (8 I-A 1°) ; interdiction des représailles, dont licenciement et mesures disciplinaires (10-1 II) ; textes en vigueur depuis le 01/09/2022 selon le complément (verifie_selon_complement_2026-10-14).
 - Dossier réellement fourni : [Code général de la fonction publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044427698), passages L131-1, L131-2, L131-12, L131-13, L135-4.
-- Dossier réellement fourni : [rgpd2 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
-- Dossier réellement fourni : [rgpd3 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
-- Dossier réellement fourni : [rgpd4 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
+- Source RGPD à relire : [PDF consolidé EUR-Lex archivé](../rapports/rgpd-2026-10-14/CELEX-02016R0679-20160504-FR-consulte-2026-10-14.pdf) ; identifiant requis `CELEX:02016R0679-20160504` ; [provenance et empreinte](../rapports/rgpd-2026-10-14/provenance.json), [articles et pages par cas](../rapports/rgpd-2026-10-14/articles-rgpd.json).
 
 Liste exhaustive des identifiants et critères : [jeuBJSON](cases-b.json).
 
@@ -1030,9 +1037,7 @@ Le 12 octobre 2026, la DRH d'une collectivité de 520 agents (>350) souhaite dé
 - RGPD art. 22 (dispositif EUR-Lex CELEX:02016R0679-20160504) — Décision fondée exclusivement sur traitement automatisé produisant des effets juridiques ou significatifs ; exceptions §2 a-c et garanties §3 ; la validation humaine formelle n'est pas fondée sur cet article lui-même (verifie_selon_complement_2026-10-14).
 - CGFP R253-7, 1°, 8°, 11°, 12° — Compétence du CST sur organisation des services, LDG promotion, critères d'appréciation de la valeur professionnelle, taux d'avancement (verifie).
 - RGPD art. 35 et 39 §1 c (dispositif EUR-Lex CELEX:02016R0679-20160504) — AIPD conduite par le responsable avant le traitement (35 §1), requise notamment au §3 a ; conseil du DPO (35 §2 et 39 §1 c) (verifie_selon_complement_2026-10-14).
-- Dossier réellement fourni : [rgpd2 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
-- Dossier réellement fourni : [rgpd3 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
-- Dossier réellement fourni : [rgpd4 — reproduction officielle CNIL du RGPD](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4), passages document. Acquisition historique CNIL ; page toujours en 503 selon le complément. Dispositif RGPD relu sur EUR-Lex selon le rapport ; aucune nouvelle archive ajoutée ici.
+- Source RGPD à relire : [PDF consolidé EUR-Lex archivé](../rapports/rgpd-2026-10-14/CELEX-02016R0679-20160504-FR-consulte-2026-10-14.pdf) ; identifiant requis `CELEX:02016R0679-20160504` ; [provenance et empreinte](../rapports/rgpd-2026-10-14/provenance.json), [articles et pages par cas](../rapports/rgpd-2026-10-14/articles-rgpd.json).
 - Dossier réellement fourni : [Code général de la fonction publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044425506), passages L522-24, L522-27, L253-5, R253-7.
 
 Liste exhaustive des identifiants et critères : [jeuBJSON](cases-b.json).

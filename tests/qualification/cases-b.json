@@ -429,9 +429,7 @@
       "patch_text_sha256": "153dd390a9fcf7ef915d02785f442afa657d9767b145daf3bea6a2f10b14f359"
     },
     "required_source_ids": [
-      "CELEX:02016R0679-20160504",
-      "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2",
-      "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4"
+      "CELEX:02016R0679-20160504"
     ]
   },
   {
@@ -520,10 +518,7 @@
       "CELEX:02016R0679-20160504",
       "LEGIARTI000044427901",
       "LEGIARTI000044427903",
-      "LEGIARTI000044427911",
-      "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2",
-      "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3",
-      "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4"
+      "LEGIARTI000044427911"
     ]
   },
   {
@@ -830,10 +825,7 @@
       "LEGIARTI000045391750",
       "LEGIARTI000045391755",
       "LEGIARTI000045392464",
-      "LEGIARTI000045392551",
-      "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2",
-      "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3",
-      "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4"
+      "LEGIARTI000045392551"
     ]
   },
   {
@@ -1025,10 +1017,7 @@
       "LEGIARTI000044425500",
       "LEGIARTI000044425506",
       "LEGIARTI000044427240",
-      "LEGIARTI000054087794",
-      "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2",
-      "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3",
-      "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4"
+      "LEGIARTI000054087794"
     ]
   },
   {

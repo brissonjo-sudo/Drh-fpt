@@ -605,10 +605,7 @@
       "patch_text_sha256": "789e0ec147d06e6fbd75d6ea8e52f7eb0c640dac6999e58ec1210053cbc434d9"
     },
     "required_source_ids": [
-      "CELEX:02016R0679-20160504",
-      "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2",
-      "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3",
-      "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4"
+      "CELEX:02016R0679-20160504"
     ]
   },
   {
