@@ -4,13 +4,13 @@
     "modele_repondant": "gpt-6.1-sol",
     "effort_repondant": "high",
     "provider_juge": "claude-cli",
-    "modele_juge": "claude-sonnet-4-6",
+    "modele_juge": "claude-sonnet-5-5",
     "effort_juge": "high",
     "execution_profile": "assembled",
     "context_mode": "selective",
     "cli_versions": {
       "codex": "codex-cli 0.162.0-alpha.17.2",
-      "claude-cli": "2.1.277 (Claude Code)"
+      "claude-cli": "2.1.288 (Claude Code)"
     }
   },
   "codex:degraded": {
@@ -18,18 +18,18 @@
     "modele_repondant": "gpt-6.1-sol",
     "effort_repondant": "high",
     "provider_juge": "claude-cli",
-    "modele_juge": "claude-sonnet-4-6",
+    "modele_juge": "claude-sonnet-5-5",
     "effort_juge": "high",
     "execution_profile": "assembled",
     "context_mode": "selective",
     "cli_versions": {
       "codex": "codex-cli 0.162.0-alpha.17.2",
-      "claude-cli": "2.1.277 (Claude Code)"
+      "claude-cli": "2.1.288 (Claude Code)"
     }
   },
   "claude-native:integration": {
     "provider_repondant": "claude-cli",
-    "modele_repondant": "claude-opus-4-8",
+    "modele_repondant": "claude-opus-5-5",
     "effort_repondant": "high",
     "provider_juge": "codex",
     "modele_juge": "gpt-6.1-sol",
@@ -38,12 +38,12 @@
     "context_mode": "selective",
     "cli_versions": {
       "codex": "codex-cli 0.162.0-alpha.17.2",
-      "claude-cli": "2.1.277 (Claude Code)"
+      "claude-cli": "2.1.288 (Claude Code)"
     }
   },
   "claude-native:degraded": {
     "provider_repondant": "claude-cli",
-    "modele_repondant": "claude-opus-4-8",
+    "modele_repondant": "claude-opus-5-5",
     "effort_repondant": "high",
     "provider_juge": "codex",
     "modele_juge": "gpt-6.1-sol",
@@ -52,7 +52,7 @@
     "context_mode": "selective",
     "cli_versions": {
       "codex": "codex-cli 0.162.0-alpha.17.2",
-      "claude-cli": "2.1.277 (Claude Code)"
+      "claude-cli": "2.1.288 (Claude Code)"
     }
   }
 }

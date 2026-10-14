@@ -14,10 +14,22 @@ Seuil fixé avant lancement : 100 % des critères obligatoires, aucune erreur ju
 
 | Répondant | Juge | Modes | Contexte |
 |---|---|---|---|
-| Codex `gpt-6.1-sol`, high | Claude `claude-sonnet-4-6`, high | intégration + dégradé | assemblage sélectif |
-| Claude Code `claude-opus-4-8`, high | Codex `gpt-6.1-sol`, high | intégration + dégradé | activation native des skills |
+| Codex `gpt-6.1-sol`, high | Claude `claude-sonnet-5-5`, high | intégration + dégradé | assemblage sélectif |
+| Claude Code `claude-opus-5-5`, high | Codex `gpt-6.1-sol`, high | intégration + dégradé | activation native des skills |
 
-Versions exactes : Codex `codex-cli 0.162.0-alpha.17.2` ; Claude `2.1.277 (Claude Code)`. [Configuration complète](profiles-v1.json). Aucun remplacement silencieux.
+Versions effectives relevées le **14/10/2026 à 21:10 UTC (23:10 à Paris)**, par les résolveurs du harnais (`suites.cli_versions` et `claude_cli.executable`) : Codex `codex-cli 0.162.0-alpha.17.2` ; Claude `2.1.288 (Claude Code)`. [Configuration complète](profiles-v1.json). Aucun remplacement silencieux. Ces versions sont à recontrôler avant tout gel.
+
+### Mise à jour des profils Claude — 14 octobre 2026 (T70)
+
+Décision de Jo, depuis `7b5450c` : répondant natif `claude-opus-5-5` et juge Claude `claude-sonnet-5-5` dans les quatre profils ; Codex `gpt-6.1-sol`, efforts `high`, modes et contextes inchangés. Les valeurs par défaut de `tests/campaign.py`, réellement utilisées par `--model` et `--judge-model` lorsqu'ils sont omis, deviennent respectivement Sonnet 5.5 et Opus 5.5. Elles gardent leurs rôles génériques antérieurs ; les quatre profils de qualification exigent les modèles et fournisseurs explicites du tableau, sans substitution.
+
+Exécutables effectivement résolus sur ce poste : Claude `C:\Users\Krn\.local\bin\claude.exe` ; Codex `C:\Users\Krn\AppData\Local\OpenAI\Codex\bin\2e5e00daee91c61d\codex.exe`. La commande PowerShell `claude --version` renvoie elle aussi `2.1.288 (Claude Code)` lors du contrôle ; le `2.1.133` signalé par Jo n'est pas reproduit dans cet environnement. Le `2.1.277` des anciens profils est remplacé par la version constatée, sans installation ni mise à jour de CLI pendant ce tour.
+
+**Acceptation effective des deux modèles : non vérifiée.** Deux sondes minimales ont été préparées hors `campaign.py`, sans charger les jeux A/B ni appeler `suites.claim_launch`. Pour les deux identifiants, `claude_cli.complete_cli` s'arrête dans la vérification OAuth préalable : « OAuth expiré ou moins d'une heure restante ». Aucun sous-processus d'inférence n'est lancé, aucun appel modèle ni créneau de qualification consommé ; aucun fallback et aucun contournement de ce garde-fou. Reconnexion par le flux normal puis sondes isolées à revalider avant gel. La [documentation officielle des modèles](https://code.claude.com/docs/en/model-config) et la [référence CLI](https://code.claude.com/docs/en/cli-reference), consultées le 14/10/2026 après indisponibilité de Context7 (quota), documentent les identifiants exacts et `--model` ; elles ne prouvent pas l'accès effectif de ce compte.
+
+Contrôles locaux T70 du 14/10/2026 : **125/125 tests déterministes en cp1252**, puis les mêmes **125/125 en UTF-8** ; cohérence et `build_bundle.py --check` réussis dans les deux environnements. Avertissement conservé : tag `v0.7.0` absent, contrôle de l’incrément de version ignoré. Empreinte brute des profils recalculée après écriture et comparée à `suites.file_sha` ; empreintes des jeux A/B inchangées et recontrôlées. Ces contrôles ne prouvent pas l’accès aux modèles ; aucun gel ni qualification réelle.
+
+Les octets de `cases-a.json` et `cases-b.json`, dont `final_revision_model` (provenance historique), sont inchangés. Les preuves et rapports historiques ne sont pas réécrits. Les paragraphes datés des corrections juridiques décrivent leur propre périmètre antérieur ; la présente décision modifie uniquement les profils courants, leurs valeurs par défaut et ce dossier. Aucun gel ni campagne n'est exécuté.
 
 En intégration native, les deux skills sont demandés explicitement et les documents officiels sont préconsultés. Tous les fragments et fichiers obligatoires doivent être effectivement reçus intégralement. Cela ne teste ni la recherche autonome via le serveur juridique ni la co-activation automatique sans demande explicite.
 
@@ -90,7 +102,7 @@ Python 3.13 / Windows : `python -m unittest discover -s tests -p 'test_*.py'` r�
 
 - Jeu A : `9f4047721a26b7f4d6ff210e3c4165b3bf6d72ac1baa433b95014cd514150b9c`
 - Jeu B : `1f1776debc25b33a73249d425a43150900a5855d5df3680e013dd8d61d238833`
-- Profils : `315f90c12e52c28434dc7cbdc4262fa0abacee5d1733eb63c260d05be3645665`
+- Profils : `578d4a45eb2eadfdcb8c907ed25a6ba17e84b7b5356bc94dfa4e4c43464f950a`
 - Archive primaire : `467bd64c3537f98e0793412f581aef496520edb3767a40736118f7a0666eb090`
 
 Le commit exact est joint à la demande d’approbation après publication du candidat propre. Aucun sceau humain n’est créé à ce stade.
