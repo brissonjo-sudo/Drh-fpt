@@ -636,7 +636,7 @@
     "attendus": [
       {
         "id": "B-08-i01",
-        "texte": "Le répondant vérifie l'identité de l'émetteur compétent (greffe ou commissaire de justice répartiteur selon le régime en vigueur depuis le 1er juillet 2025) et le régime applicable aux employeurs publics, en citant les articles vérifiés."
+        "texte": "Le répondant vérifie l'identité de l'émetteur compétent (commissaire de justice répartiteur, régime en vigueur depuis le 1er juillet 2025, R212-3 CPCE) et le régime applicable aux employeurs publics, en citant les articles vérifiés."
       },
       {
         "id": "B-08-i02",
@@ -845,7 +845,7 @@
     "attendus": [
       {
         "id": "B-10-i01",
-        "texte": "Identifie le mécanisme de reprise à partir de l'acte de dissolution, des compétences concernées et du cadre applicable (CGCT L5212-33, L5711-4, L5211-4-1 IV bis), puis applique ses dispositions aux titulaires et aux contractuels, ou suspend précisément cette conclusion ; ne mobilise L445-1 et L445-2 CGFP qu'après vérification de leurs conditions et de leur articulation avec le dispositif spécial, sans présenter la reprise comme automatique."
+        "texte": "Identifie la base de la dissolution (CGCT L5212-33), sans en déduire le transfert des agents ; distingue la substitution vers un syndicat mixte (L5711-4) du mécanisme de reprise à déterminer à partir de l'acte de dissolution et des compétences concernées, puis applique le cadre de reprise établi aux titulaires et aux contractuels, ou suspend précisément cette conclusion ; ne mobilise L445-1 et L445-2 CGFP qu'après vérification de leurs conditions et de leur articulation avec le dispositif spécial, sans présenter la reprise comme automatique."
       },
       {
         "id": "B-10-i02",
@@ -886,8 +886,8 @@
     ],
     "source_requirements": [
       {
-        "reference": "CGCT L5212-33, L5711-4, L5211-4-1 IV bis",
-        "passage_a_consulter": "Hypothèses de dissolution et de substitution ; cadre de reprise des agents à déterminer selon l'acte de dissolution et les compétences concernées, sans régime présumé",
+        "reference": "CGCT L5212-33 et L5711-4",
+        "passage_a_consulter": "Base de la dissolution (L5212-33), non du transfert des agents ; substitution vers un syndicat mixte (L5711-4) ; cadre de reprise à déterminer selon l'acte de dissolution et les compétences concernées, sans régime présumé",
         "statut_verification": "verifie"
       },
       {

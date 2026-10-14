@@ -244,12 +244,12 @@
     "source_requirements": [
       {
         "reference": "CGFP L332-8 2°, L332-9, L332-10",
-        "passage_a_consulter": "Conditions recrutement permanent catégorie A, durée, renouvellement, CDIsation et décompte des services",
+        "passage_a_consulter": "Conditions du recrutement permanent, renvoi de L332-8 à L313-1, durée, renouvellement, CDIsation et décompte des services",
         "statut_verification": "consulte_dans_dossier"
       },
       {
         "reference": "CGFP L332-14",
-        "passage_a_consulter": "Vacance temporaire, durée 1 an prolongeable 2 ans si procédure infructueuse",
+        "passage_a_consulter": "Vacance temporaire, renvoi de L332-14 à L313-4, durée 1 an prolongeable 2 ans si procédure infructueuse",
         "statut_verification": "consulte_dans_dossier"
       },
       {
@@ -258,8 +258,8 @@
         "statut_verification": "consulte_dans_dossier"
       },
       {
-        "reference": "CGFP L313-4 (renvoi à L313-1 non reproduit)",
-        "passage_a_consulter": "Formalités de publicité de la vacance ; contenu de L313-1 non disponible au dossier",
+        "reference": "CGFP L313-1 et L313-4 (renvois respectifs de L332-8 et L332-14)",
+        "passage_a_consulter": "Formalités de publicité : L332-8 renvoie à L313-1 ; L332-14 renvoie à L313-4 ; contenu de L313-1 non disponible au dossier",
         "statut_verification": "consulte_dans_dossier"
       },
       {
@@ -288,6 +288,7 @@
       "LEGIARTI000044426684",
       "LEGIARTI000044426696",
       "LEGIARTI000044427020",
+      "LEGIARTI000044427026",
       "LEGIARTI000046119123",
       "LEGIARTI000048778058",
       "LEGIARTI000051962486",
@@ -503,7 +504,6 @@
       "LEGIARTI000006528554",
       "LEGIARTI000006528555",
       "LEGIARTI000042914580",
-      "LEGIARTI000044424807",
       "LEGIARTI000044424811",
       "LEGIARTI000044424813"
     ]
@@ -599,7 +599,6 @@
       "patch_text_sha256": "789e0ec147d06e6fbd75d6ea8e52f7eb0c640dac6999e58ec1210053cbc434d9"
     },
     "required_source_ids": [
-      "LEGIARTI000006419288",
       "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2",
       "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre3",
       "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4"
@@ -671,8 +670,13 @@
         "statut_verification": "verifie"
       },
       {
-        "reference": "CGFP R331-12, R331-13 et décret 88-145 art. 39-3",
+        "reference": "CGFP R331-12 et R331-13",
         "passage_a_consulter": "Critères de modification substantielle du contrat et formalités requises",
+        "statut_verification": "a_consulter"
+      },
+      {
+        "reference": "Décret 88-145 art. 39-3",
+        "passage_a_consulter": "Motifs de licenciement, dont le refus d'une modification substantielle du contrat (4°)",
         "statut_verification": "a_consulter"
       }
     ],
@@ -695,6 +699,8 @@
     "required_source_ids": [
       "LEGIARTI000043498480",
       "LEGIARTI000044424781",
+      "LEGIARTI000051962528",
+      "LEGIARTI000051962530",
       "LEGIARTI000051980593",
       "LEGIARTI000054242039"
     ]
@@ -877,7 +883,7 @@
       },
       {
         "reference": "CE 13 juillet 2022, n°461914, point 19",
-        "passage_a_consulter": "Compatibilité congé maladie et sanction disciplinaire ; portée limitée sur convocation pendant CLM compromettant la défense",
+        "passage_a_consulter": "Le congé de maladie ne fait pas obstacle à l'action disciplinaire ; point 19 lu dans un résumé web, texte intégral à relire avant toute citation",
         "statut_verification": "verifie_partiel"
       }
     ],
@@ -1001,6 +1007,7 @@
     },
     "required_source_ids": [
       "LEGIARTI000044426132",
+      "LEGIARTI000044427238",
       "LEGIARTI000044427304",
       "LEGIARTI000044427678",
       "LEGIARTI000051968704",
