@@ -96,7 +96,7 @@
     "attendus": [
       {
         "id": "B-02-i01",
-        "texte": "Conditions du droit de retrait identifiées sur source (article 5-1 du décret 85-603) : motif raisonnable de penser à un danger grave et imminent pour la vie ou la santé, ou défectuosité du système de protection, signalé immédiatement au supérieur hiérarchique ; l'exercice de cette faculté ne devant pas créer pour autrui une nouvelle situation de danger grave et imminent."
+        "texte": "Distingue le signalement d'un danger grave et imminent ou d'une défectuosité et les conditions du droit de retrait. La protection contre sanction et retenue de traitement prévue à l'article 5-1 du décret 85-603 exige un motif raisonnable de penser à un danger grave et imminent ; la seule défectuosité ne suffit pas. L'exercice du retrait ne crée pas pour autrui une nouvelle situation de danger grave et imminent."
       },
       {
         "id": "B-02-i02",
@@ -454,7 +454,7 @@
       },
       {
         "id": "B-06-i03",
-        "texte": "Le répondant délimite le rôle du DPO (conseil, contrôle, contribution au registre tenu par le responsable du traitement) et celui de la DRH (décision éditoriale), et identifie les risques liés à la rubrique informations syndicales au regard de la neutralité du service, en précisant le texte manquant à consulter pour cette rubrique."
+        "texte": "Le répondant délimite les rôles du DPO et de la DRH et identifie le texte manquant sur la communication syndicale. L121-2 porte sur la neutralité et la laïcité de l'agent ; il ne suffit pas à fonder le régime de cette rubrique."
       }
     ],
     "attendus_degraded": [
@@ -1043,7 +1043,7 @@
       },
       {
         "id": "B-12-i02",
-        "texte": "Identifie la protection de l'agent signalant contre les mesures défavorables prises en raison de son signalement (L133-3, L135-4 CGFP) ; analyse le risque de confusion causé par l'identité entre l'auteur du rapport d'insuffisance et la personne mise en cause dans le signalement ; recommande une mesure conservatoire d'organisation impartiale de l'instruction."
+        "texte": "Identifie la protection contre les mesures défavorables prises en raison du signalement en la rattachant directement à L133-3 ; distingue la portée de L135-4, qui ne cite pas expressément le licenciement pour insuffisance. Analyse le conflit identifié et recommande une organisation impartiale de l'instruction."
       },
       {
         "id": "B-12-i03",

@@ -16,7 +16,7 @@
       },
       {
         "id": "A-01-i02",
-        "texte": "L'obligation déclarative (L123-6, R123-6) est distinguée de l'obligation d'autorisation préalable ; la déclaration préalable est requise, non une autorisation, au titre de L123-5."
+        "texte": "L'obligation déclarative (L123-6, R123-6) est distinguée de l'autorisation préalable : la déclaration porte sur l'activité envisagée. Son caractère préalable est explicité comme une déduction de R123-6, sans exiger que le texte utilise ce mot."
       },
       {
         "id": "A-01-i03",
@@ -329,7 +329,7 @@
       },
       {
         "id": "A-04-i02",
-        "texte": "Les règles de quorum du second examen sont précisées avec base vérifiée (R254-68 alinéa 3) : le comité siège valablement quel que soit le nombre de représentants du personnel présents ; il ne peut être appelé à délibérer une nouvelle fois selon cette procédure ; l'allègement du quorum ne concerne que les représentants du personnel et ne dispense pas du quorum du collège employeur lorsque son avis est recueilli selon la délibération locale applicable (R254-56, R254-66)."
+        "texte": "Les règles du second examen sont précisées à partir de R254-68, sans imposer un numéro d'alinéa non vérifiable : le comité siège valablement quel que soit le nombre de représentants du personnel présents et ne peut être appelé à délibérer une nouvelle fois selon cette procédure. Le quorum du collège employeur, lorsque son avis est recueilli, doit être examiné séparément au regard de R254-56 et de la délibération locale applicable."
       },
       {
         "id": "A-04-i03",
@@ -928,7 +928,7 @@
     "attendus": [
       {
         "id": "A-10-i01",
-        "texte": "Identifie l'acte normatif FPT (délibération de l'organe délibérant) et l'instance à consulter selon l'objet et la portée du projet, en articulant la formation spécialisée obligatoire au seuil applicable (L251-9) avec la compétence du CST seul prévue par R253-80 (R432-1 2°, R253-7) ; distingue cet acte d'un accord collectif et qualifie les options que la DRH peut proposer."
+        "texte": "Identifie la délibération de l'organe délibérant et l'instance à consulter selon l'objet et la portée du projet, en articulant R432-1 2°, L253-6 et R253-80 ; ne pénalise pas une réponse qui cite L253-6. Distingue cet acte d'un accord collectif et qualifie les options proposées à la DRH."
       },
       {
         "id": "A-10-i02",

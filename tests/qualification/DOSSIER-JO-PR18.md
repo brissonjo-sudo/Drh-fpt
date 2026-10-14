@@ -41,17 +41,23 @@ Cycle A : 48 réponses de qualification et 48 jugements, puis 28 réponses/28 ju
 
 ## Relecture ciblée du 14 octobre 2026 — préparation locale
 
-Source : rapport `verification-baremes-legifrance-2026-10-14.md` de Claude, tête de départ `0fa4a8b`. Cinq corrections appliquées ; les sept nuances restent inchangées et seront arbitrées séparément par Jo. Aucun gel ni approbation juridique des 24 cas, aucune campagne ni poussée.
+Source : rapport `verification-baremes-legifrance-2026-10-14.md` de Claude, tête de départ `0fa4a8b`. Cinq corrections appliquées dans 206e428. Les nuances N1 à N6 sont désormais intégrées selon les formulations retenues par Jo ; N7 reste en l’état. Aucun gel ni approbation juridique des 24 cas, aucune campagne ni poussée.
 
 Les empreintes des jeux A et B ci-dessous sont des SHA-256 des **octets bruts du fichier**, comme `tests/suites.py:file_sha`, puis vérifiées par recalcul. Les scénarios, profils, critères dégradés et seuils ne changent pas.
 
-Sources ajoutées aux exigences : A-03 L313-1 (`LEGIARTI000044427026`), A-07 R331-12 (`LEGIARTI000051962528`) et R331-13 (`LEGIARTI000051962530`), A-10 L253-6 (`LEGIARTI000044427238`). L253-6 complète la traçabilité de la consultation sans appliquer la nuance A-10-i01. Les suffixes abrégés du rapport sont développés avec le préfixe LEGIARTI ; R331-12/13 existent déjà dans A-03. L’ajout d’un identifiant ne vaut pas acquisition du texte ni validation humaine ; L313-1 reste non lu selon le rapport, R331-12/13 restent à consulter dans le dossier.
+Sources ajoutées aux exigences : A-03 L313-1 (`LEGIARTI000044427026`), A-07 R331-12 (`LEGIARTI000051962528`) et R331-13 (`LEGIARTI000051962530`), A-10 L253-6 (`LEGIARTI000044427238`). L253-6 complète la traçabilité de la consultation ; la nuance A-10-i01 est désormais appliquée selon la validation de Jo. Les suffixes abrégés du rapport sont développés avec le préfixe LEGIARTI ; R331-12/13 existent déjà dans A-03. L’ajout d’un identifiant ne vaut pas acquisition du texte ni validation humaine ; L313-1 reste non lu selon le rapport, R331-12/13 restent à consulter dans le dossier.
 
 Sources retirées des exigences après recherche dans les contextes DRH et les cas : A-05 L712-3 (`LEGIARTI000044424807`), A-06 art. 9 du Code civil (`LEGIARTI000006419288`). Aucun usage retrouvé ; les archives historiques restent intactes.
 
 Limites : vérification de conformité des modifications au rapport, pas nouvel audit juridique exhaustif. Les pages Légifrance essayées dans cette session renvoient HTTP 403. CE 461914 reste vérifié partiellement à partir d’un résumé web selon le rapport ; texte intégral à relire avant citation. RGPD/CNIL et loi 2016-1691 restent **non vérifiés**. Les autres réserves du rapport restent ouvertes. Les mentions historiques « fourni/consulté/vérifié » ne valent pas levée de ces réserves.
 
 B-08-d02 et B-10-d01 conservent les pistes de recherche du mode dégradé, sans certifier de régime ; les corrections ciblent les attendus d’intégration et les descriptions des sources. A-03 conserve la catégorie A comme fait du scénario, sans en faire une restriction légale.
+
+### Nuances retenues par Jo — 14 octobre 2026
+
+Après poussée normale de `206e428` et CI verte, préparation locale de N1 à N6 : A-04-i02 (quorum et alinéa), A-01-i02 (caractère préalable déduit), A-10-i01 (articulation avec L253-6), B-02-i01 (signalement et protection contre sanction/retenue), B-06-i03 (portée de L121-2), B-12-i02 (protection directement rattachée à L133-3). Les six formulations proposées sont reprises exactement. N7 conserve ses cinq attendus sans changement.
+
+Cette décision porte sur les formulations retenues ; elle ne gèle ni n’approuve l’ensemble des 24 cas, les profils ou une campagne. Aucun scénario, source requise, critère dégradé, seuil ou profil n’est modifié par cette reprise. Les réserves RGPD/CNIL, loi 2016-1691, décisions CE et autres limites du rapport restent ouvertes. Ce nouveau candidat reste local, sans poussée.
 
 ### Contrôles déterministes locaux du 14 octobre 2026
 
@@ -61,8 +67,8 @@ Python 3.13 / Windows : `python -m unittest discover -s tests -p 'test_*.py'` r�
 
 ## Empreintes exactes
 
-- Jeu A : `d68b1fa185c28d99d104ec854ae1d27bd80f5f2897d4d5421570901bf57bf8a7`
-- Jeu B : `bad1126fc6193f29336d4c1348b1991395e3b2395d3efdef888bd2b4151b2b91`
+- Jeu A : `7d81cd67d533283d874ad781e5405599fbd3cf849f98fb1a4ef6164c279301bd`
+- Jeu B : `9d4d2c7f69463d673daf6b8760bdd16eb3fc346cbc84d903851628e14b8a2504`
 - Profils : `315f90c12e52c28434dc7cbdc4262fa0abacee5d1733eb63c260d05be3645665`
 - Archive primaire : `467bd64c3537f98e0793412f581aef496520edb3767a40736118f7a0666eb090`
 
@@ -79,7 +85,7 @@ Un agent territorial titulaire occupe un emploi permanent à temps non complet (
 **Critères obligatoires — intégration**
 
 - **A-01-i01** : L123-5 est identifié comme base de la dérogation : un agent occupant un emploi permanent à temps non complet avec une durée ≤70 % de la durée légale peut exercer une activité privée lucrative ; la compatibilité avec l'interdiction générale de L123-1 est explicitée.
-- **A-01-i02** : L'obligation déclarative (L123-6, R123-6) est distinguée de l'obligation d'autorisation préalable ; la déclaration préalable est requise, non une autorisation, au titre de L123-5.
+- **A-01-i02** : L'obligation déclarative (L123-6, R123-6) est distinguée de l'autorisation préalable : la déclaration porte sur l'activité envisagée. Son caractère préalable est explicité comme une déduction de R123-6, sans exiger que le texte utilise ce mot.
 - **A-01-i03** : Les trois motifs d'opposition de l'autorité territoriale (R123-2 : intérêt du service, informations inexactes, incompatibilité déontologique) sont identifiés et appliqués aux faits ; les motifs sont confrontés aux faits disponibles ; la réponse distingue absence de motif établi et compatibilité démontrée. Elle fournit une position motivée sur les éléments acquis et, si nécessaire, un projet conditionnel en précisant les seules informations manquantes. Elle ne transforme pas le régime déclaratif en autorisation préalable.
 
 **Échecs — intégration**
@@ -204,7 +210,7 @@ Le CST d'une collectivité de 800 agents est consulté sur le projet de délibé
 **Critères obligatoires — intégration**
 
 - **A-04-i01** : La procédure de réexamen obligatoire est fondée sur R254-68 vérifié : la question fait l'objet d'un réexamen ; une nouvelle délibération est organisée dans un délai entre 8 et 30 jours ; la nouvelle convocation est adressée dans un délai d'au moins 8 jours à compter de la première séance.
-- **A-04-i02** : Les règles de quorum du second examen sont précisées avec base vérifiée (R254-68 alinéa 3) : le comité siège valablement quel que soit le nombre de représentants du personnel présents ; il ne peut être appelé à délibérer une nouvelle fois selon cette procédure ; l'allègement du quorum ne concerne que les représentants du personnel et ne dispense pas du quorum du collège employeur lorsque son avis est recueilli selon la délibération locale applicable (R254-56, R254-66).
+- **A-04-i02** : Les règles du second examen sont précisées à partir de R254-68, sans imposer un numéro d'alinéa non vérifiable : le comité siège valablement quel que soit le nombre de représentants du personnel présents et ne peut être appelé à délibérer une nouvelle fois selon cette procédure. Le quorum du collège employeur, lorsque son avis est recueilli, doit être examiné séparément au regard de R254-56 et de la délibération locale applicable.
 - **A-04-i03** : La condition déclenchante est identifiée sur bases vérifiées : vote unanime défavorable sur une question soumise en application de R253-7 et dont la mise en œuvre nécessite une délibération ; le taux de promotion (R253-7 12°, L522-27) satisfait cette double condition ; l'exception de R254-56 est réservée : R254-68 ne s'applique pas lorsque le vote unanime défavorable intervient lors de la seconde réunion organisée après un défaut de quorum ; une conclusion conditionnelle sur ces éléments locaux absents est admise sans remettre en doute les faits fournis.
 
 **Échecs — intégration**
@@ -462,7 +468,7 @@ Collectivité FPT de 420 agents, 12 octobre 2026. La DRH souhaite instaurer le t
 
 **Critères obligatoires — intégration**
 
-- **A-10-i01** : Identifie l'acte normatif FPT (délibération de l'organe délibérant) et l'instance à consulter selon l'objet et la portée du projet, en articulant la formation spécialisée obligatoire au seuil applicable (L251-9) avec la compétence du CST seul prévue par R253-80 (R432-1 2°, R253-7) ; distingue cet acte d'un accord collectif et qualifie les options que la DRH peut proposer.
+- **A-10-i01** : Identifie la délibération de l'organe délibérant et l'instance à consulter selon l'objet et la portée du projet, en articulant R432-1 2°, L253-6 et R253-80 ; ne pénalise pas une réponse qui cite L253-6. Distingue cet acte d'un accord collectif et qualifie les options proposées à la DRH.
 - **A-10-i02** : Détermine si le régime applicable aux contractuels (CDI et CDD) diffère de celui des titulaires sur l'accès au télétravail ; cite la base textuelle applicable sur le versant FPT et signale ce qui reste à vérifier.
 - **A-10-i03** : Traite séparément la demande de dérogation au quota (R431-6 1° : conditions et durée maximale) et la demande d'aménagement du lieu de télétravail (R433-3, L131-8 : sous réserve de charges non disproportionnées) ; conclut si l'obligation d'aménagement est automatique ou conditionnelle.
 - **A-10-i04** : Propose un suivi opérationnel des jours dans le SIRH et une communication d'accompagnement ; identifie les traitements et les questions RGPD à vérifier, sans certifier les obligations dont les sources sont absentes.
@@ -626,7 +632,7 @@ Un agent technique territorial titulaire (collectivité de 450 agents, 12 octobr
 
 **Critères obligatoires — intégration**
 
-- **B-02-i01** : Conditions du droit de retrait identifiées sur source (article 5-1 du décret 85-603) : motif raisonnable de penser à un danger grave et imminent pour la vie ou la santé, ou défectuosité du système de protection, signalé immédiatement au supérieur hiérarchique ; l'exercice de cette faculté ne devant pas créer pour autrui une nouvelle situation de danger grave et imminent.
+- **B-02-i01** : Distingue le signalement d'un danger grave et imminent ou d'une défectuosité et les conditions du droit de retrait. La protection contre sanction et retenue de traitement prévue à l'article 5-1 du décret 85-603 exige un motif raisonnable de penser à un danger grave et imminent ; la seule défectuosité ne suffit pas. L'exercice du retrait ne crée pas pour autrui une nouvelle situation de danger grave et imminent.
 - **B-02-i02** : Interdiction de retenue sur traitement et d'aucune sanction lorsque le motif raisonnable est établi, identifiée sur source ; impossibilité pour l'autorité territoriale d'ordonner la reprise si le danger persiste qualifiée.
 - **B-02-i03** : Note de procédure produite : instruction conditionnelle (vérifier la défectuosité, apprécier le motif raisonnable avant toute retenue ou sanction, constituer les pièces) ; décision sur la reprise subordonnée au résultat de cette vérification.
 
@@ -783,7 +789,7 @@ Collectivité FPT >350 agents, 12 octobre 2026. La DRH souhaite lancer une newsl
 
 - **B-06-i01** : Le répondant vérifie rubrique par rubrique si un traitement de données personnelles est effectivement en jeu (notamment pour les données présentées comme anonymisées) et, pour les rubriques concernées, justifie le fondement applicable lorsque les éléments fournis le permettent ; sinon identifie les fondements à examiner et suspend précisément leur validation en indiquant le texte ou la documentation manquante.
 - **B-06-i02** : Le répondant précise, pour les traitements impliquant des données personnelles, les obligations d'information des agents et les droits applicables selon le fondement retenu, en distinguant le droit d'opposition (art. 21) des autres droits.
-- **B-06-i03** : Le répondant délimite le rôle du DPO (conseil, contrôle, contribution au registre tenu par le responsable du traitement) et celui de la DRH (décision éditoriale), et identifie les risques liés à la rubrique informations syndicales au regard de la neutralité du service, en précisant le texte manquant à consulter pour cette rubrique.
+- **B-06-i03** : Le répondant délimite les rôles du DPO et de la DRH et identifie le texte manquant sur la communication syndicale. L121-2 porte sur la neutralité et la laïcité de l'agent ; il ne suffit pas à fonder le régime de cette rubrique.
 
 **Échecs — intégration**
 
@@ -1032,7 +1038,7 @@ Le 12 octobre 2026, dans une collectivité de 480 agents (>350), un agent titula
 **Critères obligatoires — intégration**
 
 - **B-12-i01** : Qualifie la procédure en cours comme licenciement pour insuffisance professionnelle (L553-1 3°, L553-2 CGFP) conduit selon les formes disciplinaires, en la distinguant d'une sanction disciplinaire, et analyse si le signalement de harcèlement peut légalement la suspendre en identifiant les textes applicables et les incertitudes à vérifier.
-- **B-12-i02** : Identifie la protection de l'agent signalant contre les mesures défavorables prises en raison de son signalement (L133-3, L135-4 CGFP) ; analyse le risque de confusion causé par l'identité entre l'auteur du rapport d'insuffisance et la personne mise en cause dans le signalement ; recommande une mesure conservatoire d'organisation impartiale de l'instruction.
+- **B-12-i02** : Identifie la protection contre les mesures défavorables prises en raison du signalement en la rattachant directement à L133-3 ; distingue la portée de L135-4, qui ne cite pas expressément le licenciement pour insuffisance. Analyse le conflit identifié et recommande une organisation impartiale de l'instruction.
 - **B-12-i03** : Distingue les objets et décisions des deux procédures ; propose une organisation impartiale adaptée au conflit identifié, sans présenter des acteurs entièrement distincts comme une obligation générale ; identifie les vérifications locales nécessaires et assure confidentialité et examen des besoins de protection de chaque partie, appréciés selon leurs conditions, notamment L134-5.
 
 **Échecs — intégration**
