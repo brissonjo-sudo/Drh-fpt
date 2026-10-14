@@ -124,12 +124,19 @@ def parse_stream(raw,model,*,runtime=None,duration_ms=0):
         if start.get('mcp_servers'):raise ValueError('configuration MCP externe chargée')
         plugins=start.get('plugins') or []
         expected_plugin=runtime.get('plugin',{}).get('name') if runtime else None
-        names=[x.get('name') if isinstance(x,dict) else x for x in plugins]
+        if not isinstance(plugins,list):raise ValueError('liste de plugins invalide')
+        builtin_plugins=[];names=[]
+        for plugin in plugins:
+            identifier=plugin.get('source',plugin.get('name')) if isinstance(plugin,dict) else plugin
+            if isinstance(identifier,str) and identifier.endswith('@builtin') and identifier[:-8].strip():
+                builtin_plugins.append(plugin)
+            else:
+                names.append(plugin.get('name') if isinstance(plugin,dict) else plugin)
         if expected_plugin:
             if names!=[expected_plugin]:raise ValueError('plugin candidat absent ou plugin externe chargé')
             if set(runtime.get('expected_skills',[]))-set(start.get('skills',[])):
                 raise ValueError('skills candidats absents du catalogue natif')
-        elif plugins:raise ValueError('configuration externe chargée')
+        elif names:raise ValueError('configuration externe chargée')
         if result.get('subtype')!='success' or result.get('is_error') or result.get('permission_denials'):
             raise ValueError('session en erreur ou permission refusée')
         if result.get('stop_reason') in {'max_tokens','max_output_tokens'}:raise ValueError('réponse tronquée')
@@ -204,7 +211,8 @@ def parse_stream(raw,model,*,runtime=None,duration_ms=0):
         usage=dict(result.get('usage') or {})
         model_usage=result.get('modelUsage') or {}
         if set(model_usage)-{model}:raise ValueError('usage d’un autre modèle')
-        usage.update({'resolved_model':model,'loaded_files':list(loaded.values()),
+        usage.update({'resolved_model':model,'plugins':plugins,'builtin_plugins':builtin_plugins,
+                      'loaded_files':list(loaded.values()),
                       'tool_calls':[{'name':x['name'],'input':x['input']} for x in calls.values()]})
         return Completion(result['result'],False,usage,result.get('session_id'),duration_ms,raw)
     except (ValueError,KeyError,TypeError,AttributeError,OSError) as exc:

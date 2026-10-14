@@ -37,6 +37,23 @@ En intégration native, les deux skills sont demandés explicitement et les docu
 
 En dégradé : pas de compagnon ni de source. Les faits fournis restent utilisables ; les règles, compétences, durées, plafonds et procédures ne peuvent être certifiés, même avec réserve. Une réponse doit préparer utilement la vérification et la décision conditionnelle.
 
+
+## Préparation du 15 octobre 2026 — T71 (partielle, sans gel)
+
+Depuis `11ead2c`, le parseur Claude accepte les plugins dont l'identifiant (`source` lorsqu'il est présent, sinon `name` ou la chaîne reçue) se termine par `@builtin`. Ils sont conservés dans la trace brute et dans `usage.plugins` / `usage.builtin_plugins`. Les autres plugins restent refusés hors du seul plugin candidat exigé pour le runtime natif ; ce candidat et son catalogue restent obligatoires. Deux tests supplémentaires couvrent builtin seuls acceptés, conservation de la trace, runtime natif et rejet d'un plugin non builtin même mêlé aux builtin.
+
+Sonde réelle du 15/10 à 00:17 Paris (14/10 22:17 UTC) : Claude Code 2.1.288, effort high, invite triviale, garde-fou OAuth accepté ; réponse OK, modèle renvoyé `claude-opus-5-5`, trois plugins builtin consignés, aucun outil/MCP ni cas A/B. La trace corrigée est acceptée par le harnais.
+
+**Isolation Codex non résolue.** Sur `codex-cli 0.162.0-alpha.17.2`, les deux essais locaux ont laissé dans stderr le chargement refusé du skill global `C:\Users\Krn\.agents\skills\recherche-juridique\SKILL.md` (description manquante). `--enable skip_host_skill_discovery`, listé under development par le CLI mais non décrit dans les pages publiques consultées, n'isole pas `codex exec` et émet en plus un avertissement rejeté par l'adaptateur. Le diagnostic prompt-input n'a pas permis de distinguer les deux situations et n'est pas une preuve d'isolation. La désactivation par chemin `skills.config` / `enabled=false`, appliquée uniquement par `-c` selon la documentation publique, permet la réponse OK mais ne supprime pas l'erreur de chargement. Ces deux essais sont retirés du candidat ; l'adaptateur Codex est inchangé. Aucun mécanisme documenté efficace n'a été établi sur cette version ; la preuve demandée d'un stderr sans chargement de skill n'est pas obtenue. Aucun fichier ou réglage utilisateur n'est modifié.
+
+Les événements Codex réellement reçus contiennent thread.started, turn.started, item.completed et turn.completed ; aucun champ attestant le modèle. Mention proposée à Jo : **« gpt-6.1-sol : modèle demandé, non attesté »**. Cette proposition n'est pas une validation implicite de l'identité ni une qualification. Aucune valeur d'attestation n'est fabriquée dans le harnais.
+
+Sources techniques consultées le 15/10 : [référence CLI](https://learn.chatgpt.com/docs/developer-commands?surface=cli), [configuration](https://learn.chatgpt.com/docs/config-file/config-reference), [skills](https://learn.chatgpt.com/docs/build-skills), aide/features du CLI installé. Context7 tenté en premier, quota épuisé. La documentation distingue l'absence de config utilisateur et la découverte des skills ; la désactivation documentée d'un skill ne constitue pas ici une preuve d'absence de chargement.
+
+Contrôles relancés : les **125 tests existants + 2 nouveaux**, soit **127/127 en cp1252**, puis les mêmes **127/127 en UTF-8** ; cohérence et bundle réussis dans les deux encodages. Avertissement conservé : tag v0.7.0 absent, contrôle de l'incrément ignoré. Empreintes brutes des profils et jeux A/B recontrôlées et inchangées ; provenance historique conservée.
+
+Trois appels réels triviaux au total (un Claude, deux essais Codex), hors campagne et sans cas de qualification. Registres JSON et résultats comparés avant/après : contenus et horodatages inchangés. Le skill global n'est ni réparé ni modifié. Zéro tentative de qualification consommée, aucun gel, aucun push. La correction Claude est prête à relire ; l'isolation Codex reste un blocage avant qualification.
+
 ## Sources et limites
 
 [Archive des sources](../rapports/SOURCES-JEUX-PR18-2026-10-12.zip) : 234 liaisons de preuve aux cas, 19 archives brutes. Ces nombres décrivent l'archive historique du 12/10 ; le PDF RGPD du 14/10 et ses index sont ajoutés séparément, sans réécrire cette archive. Il ne s’agit pas de 234 appels réseau : des passages sont réutilisés entre cas. Dates de consultation originales conservées ; certains horodatages récupérés de l’écriture de l’archive sont signalés comme tels.

@@ -36,6 +36,31 @@ def stream(*blocks, error=False, denied=None, plugins=None, skills=None, skill_e
 
 
 class ClaudeCliTests(unittest.TestCase):
+    def test_builtin_plugins_are_accepted_and_retained_in_trace(self):
+        plugins=[{'name':'cc-plugin-agents-md','source':'cc-plugin-agents-md@builtin','path':'builtin'},
+                 'other@builtin']
+        raw=stream(plugins=plugins)
+        result=claude_cli.parse_stream(raw,MODEL)
+        self.assertEqual(result.text,'réponse')
+        self.assertEqual(result.usage['builtin_plugins'],plugins)
+        self.assertEqual(result.usage['plugins'],plugins)
+        self.assertEqual(result.provider_trace,raw)
+        runtime={'root':'.','files':{},'plugin':{'name':'drh-eval'},'expected_skills':['drh-eval:drh-fpt']}
+        result=claude_cli.parse_stream(stream(plugins=plugins+[{'name':'drh-eval'}],
+            skills=['drh-eval:drh-fpt']),MODEL,runtime=runtime)
+        self.assertEqual(result.usage['builtin_plugins'],plugins)
+
+    def test_any_non_builtin_plugin_is_still_rejected(self):
+        builtin={'name':'cc-plugin-agents-md','source':'cc-plugin-agents-md@builtin'}
+        for external in ['external',{'name':'external','source':'external@marketplace'},
+                         {'name':'external@builtin','source':'external@marketplace','path':'builtin'},
+                         {'name':'external','source':None},'@builtin','fake@builtin-extra']:
+            with self.subTest(plugin=external),self.assertRaisesRegex(ApiCallError,'configuration externe'):
+                claude_cli.parse_stream(stream(plugins=[builtin,external]),MODEL)
+        with self.assertRaisesRegex(ApiCallError,'plugin externe'):
+            runtime={'root':'.','files':{},'plugin':{'name':'drh-eval'}}
+            claude_cli.parse_stream(stream(plugins=[{'name':'drh-eval'},builtin,{'name':'external'}]),MODEL,runtime=runtime)
+
     def test_cli_automatic_continuation_or_compaction_is_not_a_fresh_single_response(self):
         for text in ['Output token limit hit. Resume directly — no apology.',
                      'This session is being continued from a previous conversation that ran out of context.']:
