@@ -68,17 +68,25 @@ Cette procédure n'est pas exécutée lors de la préparation T72. Le dossier gl
 
 ## Relecture des 24 cas du 15 octobre 2026 — préparation T73
 
-Source unique : [rapport fourni par Jo](../rapports/relecture-24-cas-2026-10-15.md), SHA-256 `d6594cfafb4c53c439c44522d15ba47dc49e96df10917f27e7a0f4f99f53346f`. La section finale « Points juridiques vérifiés » prime sur les propositions antérieures ; il s'agit de vérifications rapportées par Claude et ses agents, pas de nouvelles consultations par Codex. Aucun article, identifiant ou règle n'est ajouté de mémoire.
+Source du premier lot : [rapport fourni par Jo](../rapports/relecture-24-cas-2026-10-15.md), SHA-256 `d6594cfafb4c53c439c44522d15ba47dc49e96df10917f27e7a0f4f99f53346f`. La section finale « Points juridiques vérifiés » prime sur les propositions antérieures ; il s'agit de vérifications rapportées par Claude et ses agents, pas de nouvelles consultations par Codex. Aucun article, identifiant ou règle n'est ajouté de mémoire.
 
 Les cinq corrections transverses sont appliquées avant les corrections A/B : hypothèse distincte de certification, attendus composites scindés avec identifiants stables et suffixes pour les nouveaux items, source vérifiée citée plutôt que présence dans le dossier, articles présents dans l'énoncé évalués pour leur articulation, et « vérifié » défini comme une preuve de consultation exploitable en intégration. Le mode dégradé n'exige aucune référence précise. Les seuils restent100% des critères obligatoires, zéro erreur juridique confirmée, doute non arbitré bloquant ; la scission change le nombre de critères à relire, pas le seuil.
 
 En particulier : B-10 conserve L445-1/2 pour les contractuels et attend une conclusion suspendue sur les titulaires sans mécanisme établi ; le CST de la communauté de380agents est propre. B-02 utilise R253-58 à63 avec la réserve explicite R253-61 et exclut les articles5-2/5-3 abrogés du décret85-603. B-04 est borné à la partie législative lue. A-07 retient la variante deux ans deCDI après six ans deCDD. A-10 n'impose pas une différence statutaire sans source ni un échec « charte/accord ». A-11 n'exige aucune autorité médicale nommée non établie par les textes du rapport.
 
-**Énoncés A-10/B-10 en attente** : [propositions présentées à Jo](PROPOSITIONS-A10-B10-2026-10-15.md), non intégrées aux prompts à ce stade. Les corrections de barème autorisées sont préparées ; l'incohérence des anciens énoncés reste signalée, pas masquée. Ce candidat n'est pas prêt au gel. [Liste « non traité »](NON-TRAITE-RELECTURE-2026-10-15.md), notamment références réservées, mapping des identifiants non fourni et déséquilibre A/B non corrigé sans proposition.
+**Énoncés A-10/B-10 intégrés après validation de Jo du 15/10/2026** : [texte approuvé et provenance](PROPOSITIONS-A10-B10-2026-10-15.md). A-10 est repris tel que proposé. B-10 décrit désormais un syndicat mixte dont la communauté est membre avec plusieurs communes, et la reprise des compétences et de l'activité du syndicat. L'adhésion, l'arrêté et la date d'effet sont des faits du scénario validés par Jo. Cette validation ciblée ne vaut pas approbation globale des 24 cas ni gel. [Liste « non traité »](NON-TRAITE-RELECTURE-2026-10-15.md) maintenue pour les autres réserves.
 
 Empreintes brutes A/B recalculées après écriture, reportées ci-dessous et comparées à `suites.file_sha`. Profils et `author_provenance`/`final_revision_model` inchangés. Sources et traces historiques conservées ; aucun modèle, gel, campagne, déplacement du skill global ou push dans ce tour.
 
-Contrôles locaux T73 du 15/10/2026 :127tests déterministes réussis sous cp1252 et127sous UTF-8 ; encodage effectif confirmé pour chaque exécution. Cohérence et `build_bundle.py --check` réussis dans les deux environnements. Cinq avertissements non bloquants de cohérence : quatre chemins de documentation absents du bloc Structure du README (dont la procédure de quarantaine préexistante), et tag `v0.7.0` absent de cette copie. Aucun appel modèle réel ; seules les fixtures temporaires des tests ont exercé le harnais. Les registres et profils de qualification restent inchangés ; aucun gel ni tentative consommée.
+Contrôles locaux du premier candidat T73 (`a38507e`) du 15/10/2026 :127tests déterministes réussis sous cp1252 et127sous UTF-8 ; encodage effectif confirmé pour chaque exécution. Cohérence et `build_bundle.py --check` réussis dans les deux environnements. Cinq avertissements non bloquants de cohérence : quatre chemins de documentation absents du bloc Structure du README (dont la procédure de quarantaine préexistante), et tag `v0.7.0` absent de cette copie. Aucun appel modèle réel ; seules les fixtures temporaires des tests ont exercé le harnais. Les registres et profils de qualification restent inchangés ; aucun gel ni tentative consommée.
+
+### Complément T73 — intégration des énoncés validés le 15 octobre 2026
+
+Depuis `a38507e`, Jo valide A-10 tel que proposé et B-10 avec les deux corrections de formulation ci-dessus. Le nouvel identifiant `LEGIARTI000044190730` (CGCT L5711-1), explicitement fourni par Jo et relu par Claude selon son message, est ajouté aux sources requises de B-10 ; l'attendu B-10-i01 articule cette qualification avec L5212-33. Aucune nouvelle consultation primaire par Codex, aucune référence de mémoire et aucun article cité dans l'énoncé B-10. Les autres critères, seuils, profils et provenances historiques sont conservés. Les quatre chemins manquants sont ajoutés au seul bloc Structure du README.
+
+Les empreintes brutes A/B sont recalculées après intégration, reportées à la section Empreintes exactes et comparées à `suites.file_sha`. La poussée du nouveau candidat reste soumise à validation séparée ; aucun gel ni campagne.
+
+Contrôles après intégration des énoncés, le 15/10/2026 : **127/127 tests en cp1252**, puis **127/127 en UTF-8** ; encodages effectifs confirmés. Cohérence et `build_bundle.py --check` réussis dans les deux environnements. Les quatre avertissements README sont corrigés ; seul demeure l'avertissement préexistant sur le tag `v0.7.0` absent de cette copie, avec contrôle d'incrément de version ignoré. Les empreintes brutes A/B sont vérifiées par recalcul et par `suites.file_sha`. Aucun appel modèle réel, aucun registre de qualification modifié, aucune tentative consommée. Les preuves historiques restent intactes.
 
 ## Sources et limites
 
@@ -145,8 +153,8 @@ Python 3.13 / Windows : `python -m unittest discover -s tests -p 'test_*.py'` r�
 
 ## Empreintes exactes
 
-- Jeu A : `76907c79ad311b5cbcce590e53c9be42d734636c1b2a2178aaf665f0a18a1bce`
-- Jeu B : `3bb8e7155a6f688ef192fefe0c05b1d08cd499e8090f5c9e3b92e14edfbab18c`
+- Jeu A : `192b4e7dca5f3324223ac260a65c4b5e6d5c26f00d8d39bb2e5fb967e94351b0`
+- Jeu B : `310cafaf57fa4a42af587049e48ca08c2f94d60471eef72007963ccf72ed96cf`
 - Profils : `65301665ed0e9b1b2d1b613f2e4ba4baf5e4ae36dc7e65fb12de3610e7cc4c29`
 - Archive primaire : `467bd64c3537f98e0793412f581aef496520edb3767a40736118f7a0666eb090`
 
@@ -576,7 +584,7 @@ Liste exhaustive des identifiants et critères : [jeuAJSON](cases-a.json).
 
 **Question**
 
-Collectivité FPT de 420 agents, 12 octobre 2026. La DRH souhaite instaurer le télétravail de manière pérenne pour les postes éligibles. Elle doit : identifier l'acte normatif applicable et l'instance à consulter selon la portée du projet (R432-1 2°, R253-7, R253-80) ; définir les critères d'éligibilité en distinguant titulaires et contractuels ; gérer le cas d'un agent reconnu en situation de handicap demandant à la fois une dérogation au quota standard et des aménagements sur son lieu de télétravail ; intégrer le suivi des jours dans le SIRH avec les exigences RGPD associées ; et concevoir la communication interne d'accompagnement. Produire un plan de déploiement structuré.
+Collectivité FPT de 420 agents, 12 octobre 2026. La DRH souhaite instaurer le télétravail de manière pérenne pour les postes éligibles. Elle doit identifier l'acte applicable et l'instance à consulter selon la portée du projet ; examiner les conditions d'accès des titulaires et des contractuels ; traiter séparément la demande d'un agent reconnu en situation de handicap concernant une dérogation au quota standard et des aménagements sur son lieu de télétravail ; organiser le suivi des jours dans le SIRH et examiner les questions RGPD associées ; préparer la communication interne. Produire un plan de déploiement en signalant les points que les sources disponibles ne permettent pas de trancher.
 
 **Critères obligatoires — intégration**
 
@@ -1087,11 +1095,11 @@ Liste exhaustive des identifiants et critères : [jeuBJSON](cases-b.json).
 
 **Question**
 
-Le 12 octobre 2026, une communauté de communes de 380 agents (>350) absorbe par dissolution légale d'un syndicat intercommunal 42 agents : 28 titulaires (catégories A, B, C) et 14 contractuels de droit public (6 en CDI, 8 en CDD dont certains arrivent à terme dans les 6 mois suivant le transfert). Le transfert est effectif dans 90 jours. La DRH doit qualifier le régime juridique applicable à chaque catégorie d'agents à partir des textes pertinents, identifier les obligations de consultation du CST, évaluer l'impact sur la masse salariale et le SIRH, et produire un plan de conduite du changement RH.
+Le 12 octobre 2026, une communauté de communes de 380 agents, membre, avec plusieurs communes, d'un syndicat mixte, prépare la reprise des compétences et de l'activité du syndicat. Un arrêté préfectoral de dissolution identifie les compétences reprises et prévoit une prise d'effet dans 90 jours. L'activité concerne 42 agents : 28 titulaires (catégories A, B, C) et 14 contractuels de droit public (6 CDI, 8 CDD, dont certains arrivent à terme dans les six mois suivant la reprise). Le dossier ne précise pas le mécanisme individuel applicable aux titulaires. La DRH doit examiner séparément leur situation et celle des contractuels, identifier les consultations nécessaires, estimer l'impact salarial et préparer la reprise SIRH et l'accompagnement. Produire un plan motivé ; suspendre précisément toute conclusion que les pièces ou sources ne permettent pas d'établir.
 
 **Critères obligatoires — intégration**
 
-- **B-10-i01** : Identifie L5212-33 comme base de dissolution, sans en déduire un transfert automatique des agents.
+- **B-10-i01** : Identifie le syndicat mixte composé de communes et d'EPCI et articule le renvoi de L5711-1 aux règles des syndicats de communes avec L5212-33 pour la dissolution, sans en déduire un transfert automatique des agents.
 - **B-10-i01-b** : Distingue la substitution vers un syndicat mixte (L5711-4) du mécanisme de reprise à établir à partir de l'arrêté et des compétences concernées.
 - **B-10-i01-c** : Pour les 14 contractuels de droit public, examine L445-1 et L445-2 : reprise de l'activité d'une personne morale de droit public par une autre personne publique, conditions et proposition de contrat, sans présenter la reprise des contrats comme automatique.
 - **B-10-i01-d** : Pour les 28 titulaires, établit le mécanisme applicable à partir de l'arrêté de dissolution ou suspend précisément cette conclusion ; les textes lus dans le rapport n'établissent pas leur transfert automatique à l'EPCI.
@@ -1123,6 +1131,7 @@ Le 12 octobre 2026, une communauté de communes de 380 agents (>350) absorbe par
 - CGFP L445-1, L445-2 — L445-1 vise la reprise de l'activité d'une personne morale de droit public par une autre personne publique pour les contractuels de droit public ; L445-1/2 sont conservés pour les 14 contractuels. Leur champ ne permet pas d'en déduire le transfert automatique des titulaires. (verifie_selon_relecture_2026-10-15).
 - CGFP R253-7, 1° — Compétence du CST sur les projets d'organisation des services (verifie).
 - CGFP L251-5 — Seuil de 50 agents pour le CST propre ; la communauté de communes de 380 agents dispose de son CST propre selon la section finale du rapport. (verifie_selon_relecture_2026-10-15).
+- CGCT L5711-1 — Syndicat de communes et d'EPCI : syndicat mixte soumis aux règles des syndicats de communes, selon la référence relue par Claude et fournie par Jo pour corriger le scénario B-10. (relu_par_Claude_selon_decision_Jo_2026-10-15).
 
 - Dossier réellement fourni : [Code général des collectivités territoriales](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038922544), passages L5212-33, L5211-4-1, L5211-25-1, L5211-26, L5711-4.
 - Dossier réellement fourni : [Code général de la fonction publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044426064), passages L445-1, L445-2, L445-3, L253-5, R253-7.

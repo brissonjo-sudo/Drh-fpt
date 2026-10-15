@@ -1,6 +1,7 @@
 # Non traité — périmètre et réserves du rapport
 
-- Énoncés A-10/B-10 : proposés et présentés, non intégrés faute de validation ciblée reçue. Leurs anciens énoncés restent en place, avec signalement explicite ; le candidat n'est donc pas prêt au gel.
+Mise à jour du 15/10/2026 : les énoncés A-10/B-10 validés par Jo sont intégrés. Ce point est clos ; les réserves ci-dessous restent ouvertes. Aucun gel.
+
 - Partie réglementaire de la négociation (R221/R222) : non trouvée selon le rapport, aucune conclusion nouvelle.
 - Sort automatique des titulaires d'un syndicat dissous : non établi ; pas de mécanisme inventé. L'intitulé exact des compétences n'est pas fourni et reste à préciser pour B-10 si Jo le souhaite.
 - R432-3 à R432-8 (éligibilité télétravail), article 24 du décret85-603, R253-61/64/65 : non vérifiés selon le rapport ; aucun attendu nouveau n'en certifie le contenu.

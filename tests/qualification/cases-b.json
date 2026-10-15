@@ -914,7 +914,7 @@
     "id": "B-10",
     "branche": "transversal",
     "type": "architectural",
-    "prompt": "Le 12 octobre 2026, une communauté de communes de 380 agents (>350) absorbe par dissolution légale d'un syndicat intercommunal 42 agents : 28 titulaires (catégories A, B, C) et 14 contractuels de droit public (6 en CDI, 8 en CDD dont certains arrivent à terme dans les 6 mois suivant le transfert). Le transfert est effectif dans 90 jours. La DRH doit qualifier le régime juridique applicable à chaque catégorie d'agents à partir des textes pertinents, identifier les obligations de consultation du CST, évaluer l'impact sur la masse salariale et le SIRH, et produire un plan de conduite du changement RH.",
+    "prompt": "Le 12 octobre 2026, une communauté de communes de 380 agents, membre, avec plusieurs communes, d'un syndicat mixte, prépare la reprise des compétences et de l'activité du syndicat. Un arrêté préfectoral de dissolution identifie les compétences reprises et prévoit une prise d'effet dans 90 jours. L'activité concerne 42 agents : 28 titulaires (catégories A, B, C) et 14 contractuels de droit public (6 CDI, 8 CDD, dont certains arrivent à terme dans les six mois suivant la reprise). Le dossier ne précise pas le mécanisme individuel applicable aux titulaires. La DRH doit examiner séparément leur situation et celle des contractuels, identifier les consultations nécessaires, estimer l'impact salarial et préparer la reprise SIRH et l'accompagnement. Produire un plan motivé ; suspendre précisément toute conclusion que les pièces ou sources ne permettent pas d'établir.",
     "contextes": [
       "parametres-collectivite",
       "carriere-paie",
@@ -926,7 +926,7 @@
     "attendus": [
       {
         "id": "B-10-i01",
-        "texte": "Identifie L5212-33 comme base de dissolution, sans en déduire un transfert automatique des agents."
+        "texte": "Identifie le syndicat mixte composé de communes et d'EPCI et articule le renvoi de L5711-1 aux règles des syndicats de communes avec L5212-33 pour la dissolution, sans en déduire un transfert automatique des agents."
       },
       {
         "id": "B-10-i01-b",
@@ -997,6 +997,11 @@
         "reference": "CGFP L251-5",
         "passage_a_consulter": "Seuil de 50 agents pour le CST propre ; la communauté de communes de 380 agents dispose de son CST propre selon la section finale du rapport.",
         "statut_verification": "verifie_selon_relecture_2026-10-15"
+      },
+      {
+        "reference": "CGCT L5711-1",
+        "passage_a_consulter": "Syndicat de communes et d'EPCI : syndicat mixte soumis aux règles des syndicats de communes, selon la référence relue par Claude et fournie par Jo pour corriger le scénario B-10.",
+        "statut_verification": "relu_par_Claude_selon_decision_Jo_2026-10-15"
       }
     ],
     "coverage": "transversal",
@@ -1026,7 +1031,8 @@
       "LEGIARTI000044427240",
       "LEGIARTI000051732238",
       "LEGIARTI000054087794",
-      "LEGIARTI000044427312"
+      "LEGIARTI000044427312",
+      "LEGIARTI000044190730"
     ]
   },
   {

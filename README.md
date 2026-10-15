@@ -124,6 +124,9 @@ drh-fpt/
     ├── test_native_read_proof.py         Contenus reçus, expansions et segments natifs
     ├── qualification/
     │   ├── DOSSIER-JO-PR18.md            Questions, barèmes, réserves et profils à approuver
+    │   ├── NON-TRAITE-RELECTURE-2026-10-15.md  Réserves hors corrections de relecture
+    │   ├── PROCEDURE-QUARANTAINE-CODEX.md  Procédure préparée, exécution soumise à accord
+    │   ├── PROPOSITIONS-A10-B10-2026-10-15.md  Énoncés validés et provenance
     │   ├── cases-a.json                  Douze cas neufs, non gelés
     │   ├── cases-b.json                  Douze cas de réserve, non gelés
     │   └── profiles-v1.json              Quatre profils exacts proposés avant gel
@@ -141,6 +144,7 @@ drh-fpt/
         ├── SOURCES-REVUE-PR18-2026-10-12.zip  Sources primaires de cette relecture
         ├── SOURCES-JEUX-PR18-2026-10-12.zip  Sources publiques des deux jeux neufs
         ├── PREUVES-PR18-2026-10-11.zip    Réponses, jugements et sources brutes
+        ├── relecture-24-cas-2026-10-15.md  Rapport fourni pour les corrections T73
         └── RAPPORT-2026-06-27.md         Campagne 10 cas (v0.4.2, archivée)
 ```
 

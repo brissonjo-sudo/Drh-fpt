@@ -1024,7 +1024,7 @@
     "id": "A-10",
     "branche": "transversal",
     "type": "architectural",
-    "prompt": "Collectivité FPT de 420 agents, 12 octobre 2026. La DRH souhaite instaurer le télétravail de manière pérenne pour les postes éligibles. Elle doit : identifier l'acte normatif applicable et l'instance à consulter selon la portée du projet (R432-1 2°, R253-7, R253-80) ; définir les critères d'éligibilité en distinguant titulaires et contractuels ; gérer le cas d'un agent reconnu en situation de handicap demandant à la fois une dérogation au quota standard et des aménagements sur son lieu de télétravail ; intégrer le suivi des jours dans le SIRH avec les exigences RGPD associées ; et concevoir la communication interne d'accompagnement. Produire un plan de déploiement structuré.",
+    "prompt": "Collectivité FPT de 420 agents, 12 octobre 2026. La DRH souhaite instaurer le télétravail de manière pérenne pour les postes éligibles. Elle doit identifier l'acte applicable et l'instance à consulter selon la portée du projet ; examiner les conditions d'accès des titulaires et des contractuels ; traiter séparément la demande d'un agent reconnu en situation de handicap concernant une dérogation au quota standard et des aménagements sur son lieu de télétravail ; organiser le suivi des jours dans le SIRH et examiner les questions RGPD associées ; préparer la communication interne. Produire un plan de déploiement en signalant les points que les sources disponibles ne permettent pas de trancher.",
     "contextes": [
       "parametres-collectivite",
       "cst-dialogue-social",
