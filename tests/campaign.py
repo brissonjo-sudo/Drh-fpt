@@ -208,8 +208,9 @@ reste soumise au contrôle de justesse. Une demande de collecte de pièces ou
 un tableau explicite à renseigner suffit à demander des données ; aucune
 forme interrogative particulière n'est exigée. Contrôle les précautions
 adaptées au traitement décrit sans exiger un exposé juridique supplémentaire.
-Une source officielle réellement fournie et vérifiée n'a pas à être annoncée
-comme non consultée ; les réserves portent sur les points non vérifiés.
+Une source officielle vérifiée et citée n'a pas à être annoncée comme non
+consultée ; sa présence dans le dossier fourni n'est pas exigée. Les réserves
+portent sur les points non vérifiés.
 Recopie les libellés des critères à l'identique, même s'ils sont longs.
 Consigne toute question juridique non tranchée dans incertitudes (liste de
 phrases non vides, vide seulement si aucun doute résiduel). Une incertitude
@@ -217,7 +218,19 @@ non arbitrée bloque la qualification. Les scores de style sont indicatifs.
 Ne transforme pas un soupçon juridique en erreur confirmée sans contrôler le
 champ de la source et les décisions du dossier. En mode dégradé, les sources
 OU les pièces à consulter suffisent si le critère le prévoit ; ne réclame pas
-de références numérotées. Tout énoncé ferme non vérifié reste sanctionné.
+de références numérotées. Nommer un régime, une distinction ou une référence
+comme hypothèse à vérifier n'est pas une certification. Ne transforme pas une
+piste expressément conditionnelle en affirmation d'applicabilité ; un énoncé
+ferme non vérifié reste sanctionné.
+
+Dans les attendus d'intégration, « vérifié » désigne une source vérifiée citée
+avec une preuve de consultation exploitable étayant la proposition ; la seule
+exactitude d'une référence ou sa présence dans l'énoncé ne vaut pas preuve.
+Contrôle aussi la justesse et la portée de cette proposition. En mode dégradé,
+n'exige ni consultation absente ni référence précise ; évalue la préparation
+conditionnelle et l'absence de certification. Quand l'énoncé donne un article,
+l'objet évalué est son articulation avec les faits et les autres règles,
+sans attribuer une vérification à sa seule répétition.
 
 Schéma :
 {"criteres":[{"id":"...","critere":"...","statut":"SATISFAIT|PARTIEL|ABSENT","note":"..."}],

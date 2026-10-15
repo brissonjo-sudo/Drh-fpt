@@ -3,7 +3,7 @@
     "id": "B-01",
     "branche": "carriere-paie",
     "type": "standard",
-    "prompt": "Un attaché hors classe titulaire exerce dans une collectivité de 8 000 habitants depuis trois ans. Il demande sa mutation vers une commune de 450 agents (12 octobre 2026). Le service RH de la collectivité d'accueil a établi que le plafond statutaire de 10 % des attachés en activité et en détachement au 31 décembre N-1 est déjà atteint pour les promotions au grade hors classe de l'année en cours. Le DRH doit déterminer si la mutation peut néanmoins être acceptée et quelle incidence elle aura sur les promotions futures. Produire une note d'aide à la décision.",
+    "prompt": "Un attaché hors classe titulaire exerce dans une commune de 25 000 habitants depuis trois ans. Il demande sa mutation vers une commune de 450 agents (12 octobre 2026). Le service RH de la collectivité d'accueil a établi que le plafond statutaire de 10 % des attachés en activité et en détachement au 31 décembre N-1 est déjà atteint pour les promotions au grade hors classe de l'année en cours. Le DRH doit déterminer si la mutation peut néanmoins être acceptée et quelle incidence elle aura sur les promotions futures. Produire une note d'aide à la décision.",
     "contextes": [
       "parametres-collectivite",
       "carriere-paie",
@@ -43,7 +43,7 @@
       "La note d'aide à la décision n'est pas produite."
     ],
     "echec_si_degraded": [
-      "Une règle juridique non vérifiée est présentée comme applicable, même avec une réserve ; les faits fournis et les références posées comme pistes de recherche restent admis.",
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
       "Les données nécessaires au chiffrage des avancements suivants (effectif du cadre au 31/12 N-1, attachés hors classe présents, mutations de l'année) ne sont pas identifiées pour les seules conclusions qui en dépendent.",
       "Le mode dégradé n'est pas déclaré."
     ],
@@ -85,7 +85,7 @@
     "id": "B-02",
     "branche": "qvt-sante",
     "type": "standard",
-    "prompt": "Un agent technique territorial titulaire (collectivité de 450 agents, 12 octobre 2026) quitte son poste en invoquant un droit de retrait : il signale une défectuosité du système de protection d'une machine présentant selon lui un danger grave et imminent pour sa santé. Son supérieur hiérarchique estime le danger non avéré et demande à la DRH d'ordonner la reprise immédiate et, en cas de refus, d'opérer une retenue sur traitement. La DRH doit déterminer : les conditions d'un retrait légitime, si une retenue est possible, et comment instruire la situation. Produire une note de procédure.",
+    "prompt": "Un adjoint technique territorial titulaire (collectivité de 450 agents, 12 octobre 2026) quitte son poste en invoquant un droit de retrait : il signale une défectuosité du système de protection d'une machine présentant selon lui un danger grave et imminent pour sa santé. Son supérieur hiérarchique estime le danger non avéré et demande à la DRH d'ordonner la reprise immédiate et, en cas de refus, d'opérer une retenue sur traitement. La DRH doit déterminer : les conditions d'un retrait légitime, si une retenue est possible, et comment instruire la situation. Produire une note de procédure.",
     "contextes": [
       "parametres-collectivite",
       "qvt-sante",
@@ -96,7 +96,19 @@
     "attendus": [
       {
         "id": "B-02-i01",
-        "texte": "Distingue le signalement d'un danger grave et imminent ou d'une défectuosité et les conditions du droit de retrait. La protection contre sanction et retenue de traitement prévue à l'article 5-1 du décret 85-603 exige un motif raisonnable de penser à un danger grave et imminent ; la seule défectuosité ne suffit pas. L'exercice du retrait ne crée pas pour autrui une nouvelle situation de danger grave et imminent."
+        "texte": "Distingue le signalement d'un danger grave et imminent ou d'une défectuosité des conditions du droit de retrait."
+      },
+      {
+        "id": "B-02-i01-b",
+        "texte": "Identifie le motif raisonnable de penser à un danger grave et imminent requis par l'article 5-1 du décret 85-603 pour la protection contre sanction et retenue."
+      },
+      {
+        "id": "B-02-i01-c",
+        "texte": "Ne présente pas la seule défectuosité comme suffisante pour établir le droit de retrait."
+      },
+      {
+        "id": "B-02-i01-d",
+        "texte": "Précise que l'exercice du retrait ne crée pas pour autrui une nouvelle situation de danger grave et imminent."
       },
       {
         "id": "B-02-i02",
@@ -105,6 +117,10 @@
       {
         "id": "B-02-i03",
         "texte": "Note de procédure produite : instruction conditionnelle (vérifier la défectuosité, apprécier le motif raisonnable avant toute retenue ou sanction, constituer les pièces) ; décision sur la reprise subordonnée au résultat de cette vérification."
+      },
+      {
+        "id": "B-02-i04",
+        "texte": "Si la procédure d'alerte et d'instruction est décrite, la rattache aux articles R253-58 à R253-63 CGFP selon les conditions effectivement établies ; n'exige ni ne retient les articles 5-2/5-3 abrogés du décret 85-603. Le contenu de R253-61 reste réservé dans le rapport."
       }
     ],
     "attendus_degraded": [
@@ -114,7 +130,7 @@
       },
       {
         "id": "B-02-d02",
-        "texte": "Variables bloquantes identifiées : nature et réalité de la défectuosité, circonstances du signalement déjà mentionné et éléments disponibles pour documenter la situation, position documentée du supérieur, vérification technique de l'équipement."
+        "texte": "Identifie les éléments permettant d'apprécier le bien-fondé du retrait : nature et réalité de la défectuosité, circonstances du signalement déjà mentionné, éléments disponibles documentant la situation, position du supérieur et vérification technique de l'équipement."
       },
       {
         "id": "B-02-d03",
@@ -127,8 +143,8 @@
       "La note de procédure n'est pas produite."
     ],
     "echec_si_degraded": [
-      "Une règle juridique non vérifiée est présentée comme applicable, même avec une réserve ; les faits fournis et les références posées comme pistes de recherche restent admis.",
-      "Les variables bloquantes (défectuosité, circonstances du signalement, appréciation du motif raisonnable) ne sont pas identifiées.",
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
+      "Les éléments permettant d'apprécier le bien-fondé du retrait (défectuosité, circonstances du signalement, éléments techniques et position du supérieur) ne sont pas identifiés.",
       "Le mode dégradé n'est pas déclaré."
     ],
     "source_requirements": [
@@ -136,6 +152,11 @@
         "reference": "Décret 85-603 du 10 juin 1985, article 5-1",
         "passage_a_consulter": "Motif raisonnable de danger grave et imminent, signalement au supérieur, défectuosité du système de protection, interdiction de sanction et de retenue, impossibilité d'ordonner la reprise si danger persiste",
         "statut_verification": "consulte_dans_dossier"
+      },
+      {
+        "reference": "CGFP R253-58 à R253-63, sous réserve de R253-61 non vérifié",
+        "passage_a_consulter": "Registre spécial ; enquête immédiate R253-60 ; réunion sous 24 heures et inspecteur du travail R253-62 ; rapport et réponse motivée sous 15 jours R253-63, selon le rapport. R253-61 non vérifié ; R253-64/65 non vérifiés. Ne pas exiger les articles 5-2/5-3 du décret 85-603, abrogés depuis le 01/01/2023, ni l'article 68 du décret 2021-571 abrogé depuis le 01/02/2025.",
+        "statut_verification": "verifie_selon_relecture_2026-10-15"
       }
     ],
     "coverage": "qvt-sante",
@@ -156,7 +177,8 @@
     },
     "required_source_ids": [
       "LEGIARTI000006368812",
-      "LEGIARTI000025312981"
+      "LEGIARTI000025312981",
+      "LEGIARTI000050549871"
     ]
   },
   {
@@ -181,7 +203,7 @@
       },
       {
         "id": "B-03-i03",
-        "texte": "Réponse motivée à l'agent produite en version conditionnelle, précisant la position de la collectivité ; l'existence de voies de recours peut être mentionnée comme piste de vérification sans en certifier le détail procédural."
+        "texte": "Produit une réponse motivée ferme sur les conditions établies (moins de six ans de services et aucun contrat relevant de L332-8) et conditionnelle sur la chronologie restant à reconstituer. Les voies de recours peuvent être mentionnées comme piste à vérifier sans en certifier le détail procédural."
       }
     ],
     "attendus_degraded": [
@@ -204,7 +226,7 @@
       "La réponse à l'agent est absente."
     ],
     "echec_si_degraded": [
-      "Une règle juridique non vérifiée est présentée comme applicable, même avec une réserve ; les faits fournis et les références posées comme pistes de recherche restent admis.",
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
       "Les variables bloquantes (chronologie et dates des contrats, interruptions, fondement de chaque contrat) ne sont pas identifiées.",
       "Le mode dégradé n'est pas déclaré."
     ],
@@ -265,7 +287,7 @@
       },
       {
         "id": "B-04-i02",
-        "texte": "Obligation légale de négociation préalable aux LDG : conclusion limitée aux passages effectivement reproduits (L222-3 8° : déroulement des carrières dans le champ de négociation) ; absence d'une obligation d'ouverture automatique démontrée sur source ou gap explicitement identifié si la source ne permet pas de conclure."
+        "texte": "Distingue domaine ouvert à la négociation et obligation d'ouvrir ou de répondre à une demande : dans la partie législative L221-1 à L223-1 lue selon le rapport, aucune telle obligation préalable aux LDG n'est démontrée. Borne la conclusion à cette partie ; la partie réglementaire non trouvée reste à vérifier."
       },
       {
         "id": "B-04-i03",
@@ -279,7 +301,7 @@
       },
       {
         "id": "B-04-d02",
-        "texte": "Variables bloquantes identifiées : existence d'un accord, protocole ou engagement local pris en instance. La représentativité des deux organisations syndicales est tenue pour acquise ; les suffrages peuvent constituer une information utile à une vérification ciblée, sans constituer un seuil ou une règle juridique en mode dégradé."
+        "texte": "Identifie l'existence éventuelle d'un accord, protocole ou engagement local pris en instance. La représentativité des deux organisations est acquise dans l'énoncé ; elle n'est pas une variable manquante décisive pour conclure sur une obligation juridique non vérifiée."
       },
       {
         "id": "B-04-d03",
@@ -292,7 +314,7 @@
       "La note d'aide à la décision n'est pas produite."
     ],
     "echec_si_degraded": [
-      "Une règle juridique non vérifiée est présentée comme applicable, même avec une réserve ; les faits fournis et les références posées comme pistes de recherche restent admis.",
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
       "Les variables bloquantes (accord, protocole ou engagement local) ne sont pas identifiées, la représentativité syndicale étant tenue pour acquise.",
       "Le mode dégradé n'est pas déclaré."
     ],
@@ -311,6 +333,11 @@
         "reference": "CGFP L221-2, L222-3 (8°), L223-1",
         "passage_a_consulter": "Champ de la négociation collective incluant le déroulement des carrières ; conditions de validité d'un accord (50 % des suffrages) ; représentativité requise",
         "statut_verification": "consulte_dans_dossier"
+      },
+      {
+        "reference": "CGFP L221-1 à L223-1 (partie législative)",
+        "passage_a_consulter": "Aucune obligation d'ouvrir ou de répondre à une demande de négociation démontrée dans les articles lus selon le rapport. L221-3 : représentativité par au moins un siège au CST ; L223-1 : 50 % pour la validité d'un accord signé, pas pour imposer son ouverture. Partie réglementaire R221/R222 non trouvée : réserve maintenue.",
+        "statut_verification": "verifie_selon_relecture_2026-10-15"
       }
     ],
     "coverage": "cst-dialogue-social",
@@ -344,14 +371,17 @@
       "LEGIARTI000054076243",
       "LEGIARTI000054076247",
       "LEGIARTI000054076251",
-      "LEGIARTI000054087794"
+      "LEGIARTI000054087794",
+      "LEGIARTI000044427450",
+      "LEGIARTI000044427446",
+      "LEGIARTI000044427440"
     ]
   },
   {
     "id": "B-05",
     "branche": "si-rh-masse-salariale",
     "type": "standard",
-    "prompt": "Collectivité FPT >350 agents, 12 octobre 2026. À l'issue d'une migration du SIRH vers un prestataire externe finalisée il y a trois semaines, la DRH constate des erreurs de correspondance entre données reprises et référentiels locaux : échelons mal appariés pour une trentaine d'agents, droits à formation non intégrés, accès non ouverts pour plusieurs gestionnaires. Le prestataire conteste une partie des anomalies. La DRH doit piloter la recette, arbitrer les corrections à la charge du prestataire ou de la collectivité, sécuriser le contrôle RGPD des données transmises, et décider des conditions d'ouverture officielle du système.",
+    "prompt": "Collectivité FPT >350 agents, 12 octobre 2026. À l'issue d'une migration du SIRH vers un prestataire externe finalisée il y a trois semaines, la DRH constate des erreurs de correspondance entre données reprises et référentiels locaux : échelons mal appariés pour une trentaine d'agents, droits à formation non intégrés, accès non ouverts pour plusieurs gestionnaires. Le prestataire conteste une partie des anomalies. La DRH doit piloter la recette, arbitrer les corrections à la charge du prestataire ou de la collectivité, sécuriser le contrôle RGPD des données transmises, et décider des conditions d'ouverture officielle du système. Produire une note de décision.",
     "contextes": [
       "parametres-collectivite",
       "si-rh-masse-salariale",
@@ -360,7 +390,7 @@
     "attendus": [
       {
         "id": "B-05-i01",
-        "texte": "Le répondant identifie les vérifications à conduire avant ouverture (cohérence des données reprises, droits d'accès, intégrité des référentiels) et les responsabilités contractuelles DRH/prestataire à établir à partir du contrat de sous-traitance, avec les textes vérifiés."
+        "texte": "Identifie les vérifications avant ouverture (cohérence des données, droits d'accès, intégrité des référentiels) et les responsabilités à établir à partir du contrat, sans présumer la répartition DRH/prestataire."
       },
       {
         "id": "B-05-i02",
@@ -368,7 +398,7 @@
       },
       {
         "id": "B-05-i03",
-        "texte": "Le répondant propose une procédure de décision d'ouverture conditionnelle distinguant anomalies bloquantes et corrections différables, et propose une répartition des rôles (DRH, DSI, DPO, finances) à valider selon les habilitations locales et le contrat, sans abandonner la décision d'ouverture au prestataire."
+        "texte": "Le répondant propose une procédure de décision d'ouverture conditionnelle distinguant anomalies bloquantes et corrections différables, et propose une répartition des rôles (DRH, DSI, DPO, finances) à valider selon les habilitations locales et le contrat, sans abandonner la décision d'ouverture au prestataire. Traite l'effet sur la paie des échelons erronés parmi les éléments de la décision d'ouverture."
       }
     ],
     "attendus_degraded": [
@@ -386,12 +416,12 @@
       }
     ],
     "echec_si": [
-      "Attribue sans justification locale la compétence finale d'ouverture à un acteur ou abandonne au prestataire le contrôle de la recette",
+      "Abandonne au prestataire la décision d'ouverture ou le contrôle de la recette",
       "Omet les obligations RGPD du prestataire sous-traitant",
       "Ne distingue pas anomalies bloquantes et corrections différables"
     ],
     "echec_si_degraded": [
-      "Une règle juridique non vérifiée est présentée comme applicable, même avec une réserve ; les faits fournis et les références posées comme pistes de recherche restent admis.",
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
       "Ne collecte pas les variables nécessaires (contenu du contrat, types de données, liste des anomalies)",
       "Refuse toute logique conditionnelle d'ouverture"
     ],
@@ -445,7 +475,7 @@
     "attendus": [
       {
         "id": "B-06-i01",
-        "texte": "Le répondant vérifie rubrique par rubrique si un traitement de données personnelles est effectivement en jeu (notamment pour les données présentées comme anonymisées) et, pour les rubriques concernées, justifie le fondement applicable lorsque les éléments fournis le permettent ; pour une rubrique nominative révélant l'appartenance syndicale, examine aussi l'art. 9 §1 RGPD ; sinon identifie les fondements à examiner et suspend précisément leur validation en indiquant le texte ou la documentation manquante."
+        "texte": "Vérifie rubrique par rubrique si des données personnelles sont effectivement traitées, notamment pour les données présentées comme anonymisées. Pour les rubriques concernées, justifie le fondement lorsque les éléments le permettent ou suspend précisément sa validation. Si une rubrique permet d'identifier l'appartenance syndicale de personnes nommées, examine l'article 9 §1 ; sinon, l'absence de ce développement n'est pas un échec."
       },
       {
         "id": "B-06-i02",
@@ -477,7 +507,7 @@
       "Ignore les risques liés à la rubrique informations syndicales"
     ],
     "echec_si_degraded": [
-      "Une règle juridique non vérifiée est présentée comme applicable, même avec une réserve ; les faits fournis et les références posées comme pistes de recherche restent admis.",
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
       "Bloque le projet sans proposer de démarche conditionnelle",
       "Confond rôle consultatif du DPO et pouvoir décisionnel de la DRH"
     ],
@@ -549,7 +579,7 @@
     "attendus_degraded": [
       {
         "id": "B-07-d01",
-        "texte": "Le répondant indique qu'il ne peut certifier l'existence ni les conditions du congé pour convenances personnelles des contractuels CDI sans avoir consulté le texte applicable (notamment art. 17 décret 88-145), et précise ce texte à consulter."
+        "texte": "Indique qu'il ne peut certifier l'existence ni les conditions du congé pour convenances personnelles des contractuels CDI sans consulter le texte applicable ; identifie le texte à rechercher sans exigence d'article numéroté."
       },
       {
         "id": "B-07-d02",
@@ -566,7 +596,7 @@
       "Qualifie l'effet sur le CDI sans passage textuel établissant cette qualification"
     ],
     "echec_si_degraded": [
-      "Une règle juridique non vérifiée est présentée comme applicable, même avec une réserve ; les faits fournis et les références posées comme pistes de recherche restent admis.",
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
       "Ne signale pas le risque de confusion entre disponibilité fonctionnaire et congé contractuel",
       "Ne propose aucune démarche conditionnelle"
     ],
@@ -637,11 +667,31 @@
       },
       {
         "id": "B-08-i02",
-        "texte": "Le répondant identifie les éléments de rémunération inclus dans l'assiette saisissable et les exclusions documentées par les textes fournis, applique le barème par tranches en précisant les données manquantes nécessaires au calcul final (rémunération nette précise, ressources du conjoint pour le correctif)."
+        "texte": "Le répondant identifie les éléments de rémunération inclus dans l'assiette saisissable et les exclusions documentées par les sources vérifiées citées, applique le barème par tranches en précisant les données manquantes nécessaires au calcul final (rémunération nette précise, ressources du conjoint pour le correctif)."
       },
       {
         "id": "B-08-i03",
-        "texte": "Le répondant précise les obligations déclaratives de la collectivité tiers saisi et les délais documentés par les articles fournis, demande un circuit coordonné respectant les rôles textuels (service employeur, comptable assignataire) et les habilitations locales, décrit le circuit de versement à partir des sources fournies en ne signalant que les lacunes réellement restantes, et prépare une information de l'agent limitée aux éléments documentés, notamment la juridiction de contestation indiquée dans l'acte selon R212-1-15, avec identification des compléments à vérifier."
+        "texte": "Précise les obligations déclaratives de la collectivité tiers saisi sur les sources vérifiées citées."
+      },
+      {
+        "id": "B-08-i03-b",
+        "texte": "Précise les délais déclaratifs documentés, en identifiant les seuls compléments restant à vérifier."
+      },
+      {
+        "id": "B-08-i03-c",
+        "texte": "Organise le circuit de traitement en respectant les rôles textuels du service employeur et du comptable assignataire."
+      },
+      {
+        "id": "B-08-i03-d",
+        "texte": "Identifie les habilitations locales à vérifier pour le circuit coordonné."
+      },
+      {
+        "id": "B-08-i03-e",
+        "texte": "Décrit le circuit de versement sur les sources vérifiées citées, sans inventer de lacune documentaire."
+      },
+      {
+        "id": "B-08-i03-f",
+        "texte": "Prépare l'information de l'agent sur les éléments documentés, notamment la juridiction de contestation indiquée dans l'acte selon R212-1-15, et identifie les compléments à vérifier."
       }
     ],
     "attendus_degraded": [
@@ -651,7 +701,7 @@
       },
       {
         "id": "B-08-d02",
-        "texte": "Le répondant avertit que l'identité du destinataire compétent (greffe ou commissaire de justice répartiteur) doit être vérifiée avant toute retenue et propose une démarche conditionnelle sans certifier le circuit."
+        "texte": "Avertit que l'identité du destinataire compétent doit être vérifiée avant toute retenue ; le commissaire de justice répartiteur peut être nommé comme piste à vérifier, sans certifier le circuit."
       },
       {
         "id": "B-08-d03",
@@ -665,7 +715,7 @@
       "Attribue sans justification une compétence exclusive à la DRH ou confond les obligations du service employeur et du comptable assignataire"
     ],
     "echec_si_degraded": [
-      "Une règle juridique non vérifiée est présentée comme applicable, même avec une réserve ; les faits fournis et les références posées comme pistes de recherche restent admis.",
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
       "Ne collecte pas les variables manquantes pour le calcul",
       "Ignore l'urgence de qualifier la notification reçue"
     ],
@@ -748,11 +798,43 @@
     "attendus": [
       {
         "id": "B-09-i01",
-        "texte": "Analyse l'allégation de discrimination liée à la grossesse au regard de L131-1 et L131-2 CGFP sans tenir le lien causal pour établi ; examine la portée de ces textes et de L131-12 et L135-4 pour une candidate externe et suspend la conclusion sur ses protections lorsque le fondement manque ; distingue la qualification de lanceur d'alerte selon l'art. 6 I de la loi 2016-1691 et la voie interne ouverte aux personnes candidates à un emploi par l'art. 8 I-A 1°, sans tenir la qualification de lanceur d'alerte pour acquise."
+        "texte": "Analyse l'allégation de discrimination liée à la grossesse au regard de L131-1 et L131-2 CGFP sans tenir le lien causal pour établi."
+      },
+      {
+        "id": "B-09-i01-b",
+        "texte": "Examine la portée de L131-1, L131-2, L131-12 et L135-4 pour une candidate externe et suspend la conclusion sur ses protections lorsque le fondement manque."
+      },
+      {
+        "id": "B-09-i01-c",
+        "texte": "Si la loi 2016-1691 est mobilisée, distingue sa qualification de lanceur d'alerte sans la tenir pour acquise ; citer l'article 8 I-A 1° n'est pas obligatoire."
       },
       {
         "id": "B-09-i02",
-        "texte": "Vérifie les données effectivement traitées et leur qualification, les finalités, le fondement de l'article 6 RGPD et, si applicable, une exception de l'article 9 ; la qualification de la grossesse comme donnée de santé (art. 4 §15 et art. 9 §1) est à établir sur les faits ; distingue l'utilisation des données pour sélectionner des candidats d'une conservation limitée et sécurisée de preuves, en examinant l'art. 17 §3 e, sans conclure a priori à l'absence de fondement ni à une suppression obligatoire."
+        "texte": "Vérifie quelles données sont effectivement collectées ou consignées dans la procédure de recrutement."
+      },
+      {
+        "id": "B-09-i02-b",
+        "texte": "Établit sur les faits la qualification des données relatives à la grossesse, notamment au regard de l'article 4 §15 et de l'article 9 §1."
+      },
+      {
+        "id": "B-09-i02-c",
+        "texte": "Analyse les finalités et les principes de l'article 5 RGPD pour les traitements effectivement établis."
+      },
+      {
+        "id": "B-09-i02-d",
+        "texte": "Examine le fondement applicable au regard de l'article 6 RGPD."
+      },
+      {
+        "id": "B-09-i02-e",
+        "texte": "Si l'article 9 s'applique, examine l'exception pertinente sans la présumer."
+      },
+      {
+        "id": "B-09-i02-f",
+        "texte": "Distingue l'utilisation pour sélectionner les candidats de la conservation limitée et sécurisée de preuves."
+      },
+      {
+        "id": "B-09-i02-g",
+        "texte": "Examine l'article 17 §3 e pour ces preuves, sans conclure a priori à une absence de fondement ni à une suppression obligatoire."
       },
       {
         "id": "B-09-i03",
@@ -762,7 +844,7 @@
     "attendus_degraded": [
       {
         "id": "B-09-d01",
-        "texte": "Signale que la qualification de la discrimination et la portée des protections pour une candidate externe nécessitent de vérifier L131-1, L131-2, L131-12 et L135-4 CGFP et les conditions des articles 6 et 8 de la loi du 9 décembre 2016, posés comme pistes, avant toute décision."
+        "texte": "Signale que la qualification de la discrimination et la portée des protections pour une candidate externe nécessitent de vérifier leurs fondements et conditions avant toute décision, sans exigence de référence précise."
       },
       {
         "id": "B-09-d02",
@@ -779,7 +861,7 @@
       "Ne prévoit aucun examen de mesures correctives proportionnées sur la procédure de recrutement"
     ],
     "echec_si_degraded": [
-      "Une règle juridique non vérifiée est présentée comme applicable, même avec une réserve ; les faits fournis et les références posées comme pistes de recherche restent admis.",
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
       "Omet la trace écrite dans le dossier comme variable décisive à collecter.",
       "Omet de préparer des mesures correctives proportionnées ou affirme une obligation d'annulation totale de la procédure."
     ],
@@ -844,11 +926,23 @@
     "attendus": [
       {
         "id": "B-10-i01",
-        "texte": "Identifie la base de la dissolution (CGCT L5212-33), sans en déduire le transfert des agents ; distingue la substitution vers un syndicat mixte (L5711-4) du mécanisme de reprise à déterminer à partir de l'acte de dissolution et des compétences concernées, puis applique le cadre de reprise établi aux titulaires et aux contractuels, ou suspend précisément cette conclusion ; ne mobilise L445-1 et L445-2 CGFP qu'après vérification de leurs conditions et de leur articulation avec le dispositif spécial, sans présenter la reprise comme automatique."
+        "texte": "Identifie L5212-33 comme base de dissolution, sans en déduire un transfert automatique des agents."
+      },
+      {
+        "id": "B-10-i01-b",
+        "texte": "Distingue la substitution vers un syndicat mixte (L5711-4) du mécanisme de reprise à établir à partir de l'arrêté et des compétences concernées."
+      },
+      {
+        "id": "B-10-i01-c",
+        "texte": "Pour les 14 contractuels de droit public, examine L445-1 et L445-2 : reprise de l'activité d'une personne morale de droit public par une autre personne publique, conditions et proposition de contrat, sans présenter la reprise des contrats comme automatique."
+      },
+      {
+        "id": "B-10-i01-d",
+        "texte": "Pour les 28 titulaires, établit le mécanisme applicable à partir de l'arrêté de dissolution ou suspend précisément cette conclusion ; les textes lus dans le rapport n'établissent pas leur transfert automatique à l'EPCI."
       },
       {
         "id": "B-10-i02",
-        "texte": "Identifie l'obligation de consultation du CST de la collectivité d'accueil sur les projets d'organisation des services (R253-7, 1° CGFP) ; examine si un CST du syndicat dissous est encore constitué et compétent avant la dissolution effective et doit également être consulté."
+        "texte": "Identifie la consultation du CST propre de la communauté de communes, dont les 380 agents excèdent le seuil de 50 agents de L251-5, sur le projet d'organisation des services (R253-7 1°). Examine séparément si un CST du syndicat est encore constitué et compétent avant sa dissolution et doit être consulté."
       },
       {
         "id": "B-10-i03",
@@ -862,7 +956,7 @@
     "attendus_degraded": [
       {
         "id": "B-10-d01",
-        "texte": "Signale que les modalités exactes du transfert dépendent de la qualification de l'acte de dissolution et des compétences concernées ; conserve L5212-33, L5711-4, L5211-4-1 IV bis, L445-1 et L445-2 comme pistes à vérifier, sans affirmer le renvoi applicable ni le régime avant ces vérifications."
+        "texte": "Signale que les modalités de reprise sont à établir à partir de l'arrêté de dissolution et des compétences reprises ; distingue les questions concernant titulaires et contractuels sans certifier leur régime, ni exiger de référence numérotée."
       },
       {
         "id": "B-10-d02",
@@ -874,12 +968,12 @@
       }
     ],
     "echec_si": [
-      "Affirme un régime de reprise distinct pour titulaires et contractuels sans l'avoir déduit de l'acte de dissolution et du cadre de reprise applicable",
+      "Présente le transfert des titulaires à l'EPCI comme acquis sans mécanisme établi par l'arrêté de dissolution et le cadre applicable.",
       "Présente la reprise des contractuels comme automatique sans vérifier les conditions de L445-1 et L445-2",
       "Omet la consultation du CST de la collectivité d'accueil avant le transfert"
     ],
     "echec_si_degraded": [
-      "Une règle juridique non vérifiée est présentée comme applicable, même avec une réserve ; les faits fournis et les références posées comme pistes de recherche restent admis.",
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
       "Omet la durée résiduelle des CDD comme variable décisive à collecter.",
       "Délègue aux finances ou à la DSI la décision sur le régime applicable ou omet de préparer l'estimation salariale et le plan de reprise utiles."
     ],
@@ -891,13 +985,18 @@
       },
       {
         "reference": "CGFP L445-1, L445-2",
-        "passage_a_consulter": "Reprise d'activité dans un service public administratif ; proposition de contrat et clauses substantielles sous réserve des conditions générales d'emploi, à articuler avec le dispositif spécial après vérification",
-        "statut_verification": "verifie"
+        "passage_a_consulter": "L445-1 vise la reprise de l'activité d'une personne morale de droit public par une autre personne publique pour les contractuels de droit public ; L445-1/2 sont conservés pour les 14 contractuels. Leur champ ne permet pas d'en déduire le transfert automatique des titulaires.",
+        "statut_verification": "verifie_selon_relecture_2026-10-15"
       },
       {
         "reference": "CGFP R253-7, 1°",
         "passage_a_consulter": "Compétence du CST sur les projets d'organisation des services",
         "statut_verification": "verifie"
+      },
+      {
+        "reference": "CGFP L251-5",
+        "passage_a_consulter": "Seuil de 50 agents pour le CST propre ; la communauté de communes de 380 agents dispose de son CST propre selon la section finale du rapport.",
+        "statut_verification": "verifie_selon_relecture_2026-10-15"
       }
     ],
     "coverage": "transversal",
@@ -926,14 +1025,15 @@
       "LEGIARTI000044426064",
       "LEGIARTI000044427240",
       "LEGIARTI000051732238",
-      "LEGIARTI000054087794"
+      "LEGIARTI000054087794",
+      "LEGIARTI000044427312"
     ]
   },
   {
     "id": "B-11",
     "branche": "transversal",
     "type": "architectural",
-    "prompt": "Le 12 octobre 2026, la DRH d'une collectivité de 520 agents (>350) souhaite déployer un outil de scoring automatisé pour prioriser les candidatures internes aux tableaux d'avancement de grade. L'outil attribue un score à chaque agent éligible à partir des données du SIRH (ancienneté, évaluations, formations suivies). Le DPO signale un risque lié à l'article 22 du RGPD. Le CST demande à être consulté. La DRH doit piloter la gouvernance sans déléguer au DPO ni à la DSI la décision sur les critères d'avancement. Produire une note de cadrage juridique et de gouvernance.",
+    "prompt": "Le 12 octobre 2026, la DRH d'une collectivité de 520 agents (>350) souhaite déployer un outil de scoring automatisé pour prioriser l’examen des agents éligibles aux tableaux d'avancement de grade. L'outil attribue un score à chaque agent éligible à partir des données du SIRH (ancienneté, évaluations, formations suivies). Le DPO signale un risque lié à l'article 22 du RGPD. Le CST demande à être consulté. La DRH doit piloter la gouvernance sans déléguer au DPO ni à la DSI la décision sur les critères d'avancement. Produire une note de cadrage juridique et de gouvernance.",
     "contextes": [
       "parametres-collectivite",
       "carriere-paie",
@@ -944,7 +1044,23 @@
     "attendus": [
       {
         "id": "B-11-i01",
-        "texte": "Analyse si l'outil relève de l'article 22 RGPD en examinant les effets réels du classement (exclusion effective de candidats du vivier, effets juridiques ou significatifs) et le degré réel d'intervention humaine sur chaque inscription finale au tableau ; examine les exceptions de l'art. 22 §2 a-c et les garanties du §3 ; ne présente pas une validation humaine formelle comme une obligation fondée sur l'article 22 lui-même."
+        "texte": "Examine les effets réels du classement, dont l'exclusion effective du vivier et les effets juridiques ou significatifs, pour apprécier l'article 22 RGPD."
+      },
+      {
+        "id": "B-11-i01-b",
+        "texte": "Examine le degré réel d'intervention humaine sur chaque inscription finale au tableau."
+      },
+      {
+        "id": "B-11-i01-c",
+        "texte": "Examine les exceptions de l'article 22 §2 a-c."
+      },
+      {
+        "id": "B-11-i01-d",
+        "texte": "Examine les garanties de l'article 22 §3."
+      },
+      {
+        "id": "B-11-i01-e",
+        "texte": "Ne présente pas une validation humaine formelle comme une obligation fondée sur l'article 22 lui-même."
       },
       {
         "id": "B-11-i02",
@@ -952,7 +1068,23 @@
       },
       {
         "id": "B-11-i03",
-        "texte": "Délimite les rôles : l'AIPD est conduite par le responsable du traitement avant le traitement selon l'art. 35 §1 RGPD, et requise notamment dans l'hypothèse du §3 a ; le DPO conseille selon l'art. 35 §2 et l'art. 39 §1 c ; la DSI assure le déploiement technique ; la décision sur les critères de scoring et les inscriptions au tableau relève de l'autorité territoriale compétente selon les LDG et délégations locales, et non du DPO ou de la DSI."
+        "texte": "Rattache la conduite de l'AIPD au responsable du traitement (art. 35 §1 RGPD)."
+      },
+      {
+        "id": "B-11-i03-b",
+        "texte": "Situe l'AIPD avant le traitement et examine son exigibilité, notamment dans l'hypothèse de l'article 35 §3 a."
+      },
+      {
+        "id": "B-11-i03-c",
+        "texte": "Rattache au DPO une mission de conseil (art. 35 §2 et 39 §1 c)."
+      },
+      {
+        "id": "B-11-i03-d",
+        "texte": "Rattache à la DSI le déploiement technique."
+      },
+      {
+        "id": "B-11-i03-e",
+        "texte": "Rattache la décision sur les critères de scoring et les inscriptions à l'autorité territoriale compétente, selon les LDG et délégations locales, sans l'attribuer au DPO ou à la DSI."
       }
     ],
     "attendus_degraded": [
@@ -966,7 +1098,7 @@
       },
       {
         "id": "B-11-d03",
-        "texte": "Prépare les informations sur les opérations, finalités, effets, personnes concernées, données et garanties permettant la vérification de la nécessité d'une AIPD ; cite l'article 35 RGPD comme piste sans certifier ses conditions ni l'obligation ou la dispense."
+        "texte": "Prépare les informations sur les opérations, finalités, effets, personnes concernées, données et garanties permettant de vérifier la nécessité d'une AIPD ; nomme cette démarche comme piste, sans certifier ses conditions ni l'obligation ou la dispense et sans référence numérotée exigée."
       }
     ],
     "echec_si": [
@@ -975,7 +1107,7 @@
       "Omet la qualification du projet pour déterminer la base de consultation du CST applicable"
     ],
     "echec_si_degraded": [
-      "Une règle juridique non vérifiée est présentée comme applicable, même avec une réserve ; les faits fournis et les références posées comme pistes de recherche restent admis.",
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
       "Omet le paramétrage exact, les effets réels, les LDG ou les délégations locales comme variables décisives à collecter.",
       "Omet d'identifier qui décide des inscriptions au tableau selon les LDG et délégations locales ou de préparer les informations utiles à la vérification de l'AIPD."
     ],
@@ -1024,7 +1156,7 @@
     "id": "B-12",
     "branche": "transversal",
     "type": "architectural",
-    "prompt": "Le 12 octobre 2026, dans une collectivité de 480 agents (>350), un agent titulaire de catégorie B fait l'objet d'une procédure engagée depuis trois semaines en vue de son licenciement pour insuffisance professionnelle (L553-1 3° et L553-2 CGFP), conduite selon les formes de la procédure disciplinaire. Durant cette même période, il dépose auprès de la DRH un signalement de harcèlement moral dirigé contre son supérieur hiérarchique direct, auteur du rapport ayant fondé l'engagement de la procédure. L'agent invoque une protection contre les mesures défavorables et demande la suspension de la procédure en cours. La DRH doit déterminer si le signalement suspend la procédure, comment instruire les deux procédures sans confusion, et comment assurer la protection de chaque partie.",
+    "prompt": "Le 12 octobre 2026, dans une collectivité de 480 agents (>350), un agent titulaire de catégorie B fait l'objet d'une procédure engagée depuis trois semaines en vue de son licenciement pour insuffisance professionnelle conduite selon les formes de la procédure disciplinaire. Durant cette même période, il dépose auprès de la DRH un signalement de harcèlement moral dirigé contre son supérieur hiérarchique direct, auteur du rapport ayant fondé l'engagement de la procédure. L'agent invoque une protection contre les mesures défavorables et demande la suspension de la procédure en cours. La DRH doit déterminer si le signalement suspend la procédure, comment instruire les deux procédures sans confusion, et comment assurer la protection de chaque partie.",
     "contextes": [
       "parametres-collectivite",
       "carriere-paie",
@@ -1054,7 +1186,7 @@
       },
       {
         "id": "B-12-d02",
-        "texte": "Collecte les variables manquantes décisives : stade exact de la procédure au moment du signalement, existence d'une procédure interne formalisée de recueil des signalements, modalités locales inconnues ; une copie du signalement peut être demandée pour en documenter le contenu, sans remettre en cause la qualification de harcèlement moral déjà annoncée."
+        "texte": "Collecte les variables manquantes décisives : stade exact de la procédure au moment du signalement, existence d'une procédure interne formalisée de recueil, modalités locales inconnues. Une copie du signalement peut être demandée pour en documenter le contenu, sans contester qu'il allègue un harcèlement moral."
       },
       {
         "id": "B-12-d03",
@@ -1067,8 +1199,8 @@
       "Instruit ou analyse les deux procédures comme une seule démarche fusionnée"
     ],
     "echec_si_degraded": [
-      "Une règle juridique non vérifiée est présentée comme applicable, même avec une réserve ; les faits fournis et les références posées comme pistes de recherche restent admis.",
-      "Omet la protection de l'agent signalant (L133-3, L135-4) comme référence à vérifier, ou présuppose l'existence d'une procédure interne formalisée de signalement sans que le prompt l'indique.",
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
+      "Omet la protection de l'agent signalant comme question à vérifier, ou présuppose l'existence d'une procédure interne formalisée de signalement non indiquée.",
       "Omet de préparer une organisation impartiale conservatoire adaptée au conflit identifié."
     ],
     "source_requirements": [
@@ -1083,9 +1215,9 @@
         "statut_verification": "verifie"
       },
       {
-        "reference": "Loi 2016-1691 art. 6, 8, 10-1",
-        "passage_a_consulter": "Qualification de l'alerte selon l'art. 6 I ; voie interne ouverte aux personnes candidates à un emploi (8 I-A 1°) ; interdiction des représailles, dont licenciement et mesures disciplinaires (10-1 II) ; textes en vigueur depuis le 01/09/2022 selon le complément",
-        "statut_verification": "verifie_selon_complement_2026-10-14"
+        "reference": "Loi 2016-1691 art. 10-1 II",
+        "passage_a_consulter": "Interdiction des représailles selon l'article 10-1 II ; la source liée à cette loi est limitée à cette disposition dans ce cas, conformément au rapport.",
+        "statut_verification": "verifie_selon_relecture_2026-10-15"
       }
     ],
     "coverage": "transversal",

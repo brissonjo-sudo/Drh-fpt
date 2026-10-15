@@ -3,7 +3,7 @@
     "id": "A-01",
     "branche": "carriere-paie",
     "type": "standard",
-    "prompt": "Un agent territorial titulaire occupe un emploi permanent à temps non complet (quotité 60 %) dans une collectivité de 400 agents. Il déclare à son autorité territoriale qu'il exerce, en dehors de ses heures de service, une activité de consultant indépendant à titre lucratif. L'autorité territoriale s'interroge sur la légalité de cette situation et sur les conditions dans lesquelles elle peut s'y opposer. Date : 12 octobre 2026. Produire une note d'analyse sur le cadre applicable et une décision motivée sur l'opposition ou l'autorisation.",
+    "prompt": "Un agent territorial titulaire occupe un emploi permanent à temps non complet (quotité 60 %) dans une collectivité de 400 agents. Il déclare à son autorité territoriale qu'il envisage d'exercer, à compter du 1er décembre 2026, en dehors de ses heures de service, une activité de consultant indépendant à titre lucratif. L'autorité territoriale s'interroge sur la légalité de cette situation et sur les conditions dans lesquelles elle peut s'y opposer. Date : 12 octobre 2026. Produire une note d'analyse sur le cadre applicable et une décision motivée sur l'opposition ou l'autorisation.",
     "contextes": [
       "parametres-collectivite",
       "carriere-paie",
@@ -20,7 +20,27 @@
       },
       {
         "id": "A-01-i03",
-        "texte": "Les trois motifs d'opposition de l'autorité territoriale (R123-2 : intérêt du service, informations inexactes, incompatibilité déontologique) sont identifiés et appliqués aux faits ; les motifs sont confrontés aux faits disponibles ; la réponse distingue absence de motif établi et compatibilité démontrée. Elle fournit une position motivée sur les éléments acquis et, si nécessaire, un projet conditionnel en précisant les seules informations manquantes. Elle ne transforme pas le régime déclaratif en autorisation préalable."
+        "texte": "Identifie et applique aux faits le motif d'opposition tenant à l'intérêt du service (R123-2)."
+      },
+      {
+        "id": "A-01-i03-b",
+        "texte": "Identifie et applique aux faits le motif d'opposition tenant aux informations inexactes (R123-2)."
+      },
+      {
+        "id": "A-01-i03-c",
+        "texte": "Identifie et applique aux faits le motif d'opposition tenant à l'incompatibilité déontologique (R123-2)."
+      },
+      {
+        "id": "A-01-i03-d",
+        "texte": "Distingue l'absence de motif d'opposition établi d'une compatibilité démontrée."
+      },
+      {
+        "id": "A-01-i03-e",
+        "texte": "Fournit une position motivée sur les éléments acquis ou, si nécessaire, un projet conditionnel précisant les seules informations manquantes."
+      },
+      {
+        "id": "A-01-i03-f",
+        "texte": "Ne transforme pas le régime déclaratif en autorisation préalable."
       }
     ],
     "attendus_degraded": [
@@ -41,10 +61,10 @@
       "L123-5 n'est pas identifié ou le régime de l'activité accessoire autorisée (L123-7) est appliqué à la place.",
       "L'obligation déclarative est présentée comme une obligation d'autorisation préalable.",
       "Les motifs d'opposition (R123-2) ne sont pas distingués ou un motif non prévu est certifié.",
-      "Aucune décision motivée n'est produite."
+      "Aucune décision motivée ni projet de décision conditionnel n'est produit."
     ],
     "echec_si_degraded": [
-      "Une règle juridique non vérifiée est présentée comme applicable, même avec une réserve ; les faits fournis et les références posées comme pistes de recherche restent admis.",
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
       "Les informations manquantes sur les fonctions exercées et la nature de l'activité ne sont pas identifiées.",
       "Aucun projet de décision conditionnel n'est proposé."
     ],
@@ -124,7 +144,7 @@
     "attendus_degraded": [
       {
         "id": "A-02-d01",
-        "texte": "Les variables bloquantes sont identifiées : certificat médical transmis avec quotité/durée/modalités prescrites, avis du médecin agréé formalisé, existence de fonctions à conditions de santé particulières, situation vis-à-vis de l'art. 24 du décret."
+        "texte": "Les variables bloquantes sont identifiées : certificat médical transmis avec quotité/durée/modalités prescrites, avis du médecin agréé formalisé, existence de fonctions à conditions de santé particulières, droits à congé restants et perspective de réintégration."
       },
       {
         "id": "A-02-d02",
@@ -142,8 +162,8 @@
       "Les cas d'intervention du conseil médical (contestation art. 13-5 vs hypothèses art. 5 I) ne sont pas distingués."
     ],
     "echec_si_degraded": [
-      "Une règle juridique non vérifiée est présentée comme applicable, même avec une réserve ; les faits fournis et les références posées comme pistes de recherche restent admis.",
-      "Les variables manquantes (certificat médical transmis, avis agréé formalisé, existence de fonctions à conditions de santé particulières, situation vis-à-vis de l'art. 24) ne sont pas identifiées.",
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
+      "Les variables manquantes (certificat médical transmis, avis agréé formalisé, fonctions à conditions de santé particulières, droits à congé restants et perspective de réintégration) ne sont pas identifiées.",
       "Aucune structure conditionnelle n'est proposée."
     ],
     "source_requirements": [
@@ -202,7 +222,7 @@
     "id": "A-03",
     "branche": "recrutement-formation",
     "type": "standard",
-    "prompt": "Une commune de 600 agents doit pourvoir un emploi permanent vacant de responsable de la cybersécurité (catégorie A). La vacance a été publiée il y a quatre mois ; la procédure de recrutement d'un fonctionnaire n'a pas abouti, comme documenté par le service RH. La direction hésite entre L332-8 2° (recrutement contractuel permanent) et L332-14 (vacance temporaire dans l'attente d'un fonctionnaire). La recherche d'un fonctionnaire se poursuit. Date : 12 octobre 2026. Produire une note d'aide à la décision comparant les deux fondements et recommandant le choix.",
+    "prompt": "Une commune de 600 agents doit pourvoir un emploi permanent vacant de responsable de la cybersécurité (catégorie A). La vacance a été publiée il y a quatre mois ; la procédure de recrutement d'un fonctionnaire n'a pas abouti, comme documenté par le service RH. La direction hésite entre L332-8 2° (recrutement contractuel permanent) et L332-14 (vacance temporaire dans l'attente d'un fonctionnaire). La recherche d'un fonctionnaire se poursuit. La délibération créant l'emploi n'est pas jointe ; sa mention de la possibilité de recruter un contractuel reste à établir. Date : 12 octobre 2026. Produire une note d'aide à la décision comparant les deux fondements et recommandant le choix.",
     "contextes": [
       "parametres-collectivite",
       "recrutement-formation",
@@ -211,7 +231,23 @@
     "attendus": [
       {
         "id": "A-03-i01",
-        "texte": "La distinction est explicitée avec bases vérifiées : L332-8 2° exige une justification par les besoins ou la nature des fonctions ET un constat d'infructuosité documenté (R332-9 : examen des non-fonctionnaires uniquement après ce constat) ; L332-14 s'applique à la vacance temporaire dans l'attente d'un fonctionnaire, avec condition de publicité L313-4 ; les critères de choix reposent sur l'arbitrage entre une occupation contractuelle durable justifiée par les besoins ou la nature des fonctions et une occupation temporaire dans l'attente d'un fonctionnaire, sans rendre ces démarches légalement exclusives."
+        "texte": "Identifie sur une source vérifiée citée la justification par les besoins ou la nature des fonctions requise pour L332-8 2°."
+      },
+      {
+        "id": "A-03-i01-b",
+        "texte": "Identifie le constat d'infructuosité documenté préalable à l'examen des candidatures non fonctionnaires (R332-9) pour L332-8 2°."
+      },
+      {
+        "id": "A-03-i01-c",
+        "texte": "Identifie L332-14 comme une occupation temporaire dans l'attente d'un fonctionnaire."
+      },
+      {
+        "id": "A-03-i01-d",
+        "texte": "Identifie la publicité de la vacance relevant de L313-4 pour L332-14."
+      },
+      {
+        "id": "A-03-i01-e",
+        "texte": "Motive le choix entre une occupation contractuelle durable justifiée par les besoins ou la nature des fonctions et une occupation temporaire dans l'attente d'un fonctionnaire, sans rendre les démarches légalement exclusives."
       },
       {
         "id": "A-03-i02",
@@ -219,13 +255,41 @@
       },
       {
         "id": "A-03-i03",
-        "texte": "Les pièces nécessaires pour chaque fondement sont distinguées : publicité applicable ; constat préalable requis pour L332-8 2° ; pour L332-14, attente d'un fonctionnaire et justification de l'échec de son recrutement en cas de prolongation ; pour L332-8 2°, justification des besoins ou nature des fonctions ; mentions contractuelles utilisant les dispositions fournies (R331-6 à R331-11) : fondement légal du contrat et, pour L332-14, motif précis et descriptif du poste annexé, sans exiger une énumération exhaustive des clauses."
+        "texte": "Distingue les pièces établissant la publicité applicable au fondement retenu."
+      },
+      {
+        "id": "A-03-i03-b",
+        "texte": "Demande la pièce retraçant le constat préalable d'infructuosité requis pour L332-8 2°."
+      },
+      {
+        "id": "A-03-i03-c",
+        "texte": "Documente l'attente d'un fonctionnaire et, en cas de prolongation de L332-14, l'échec de son recrutement."
+      },
+      {
+        "id": "A-03-i03-d",
+        "texte": "Demande la justification des besoins ou de la nature des fonctions pour L332-8 2°."
+      },
+      {
+        "id": "A-03-i03-e",
+        "texte": "Vérifie si la délibération créant l'emploi prévoit le recrutement d'un contractuel (L313-1) ; faute de pièce, suspend précisément la conclusion sur cette condition."
+      },
+      {
+        "id": "A-03-i03-f",
+        "texte": "Prévoit le fondement légal du contrat à partir d'une source vérifiée citée (R331-6 à R331-11)."
+      },
+      {
+        "id": "A-03-i03-g",
+        "texte": "Pour L332-14, prévoit le motif précis du contrat à partir d'une source vérifiée citée."
+      },
+      {
+        "id": "A-03-i03-h",
+        "texte": "Pour L332-14, prévoit le descriptif du poste annexé, sans exiger une énumération exhaustive de clauses non établies."
       }
     ],
     "attendus_degraded": [
       {
         "id": "A-03-d01",
-        "texte": "La poursuite de la recherche d'un fonctionnaire et l'infructuosité documentée sont prises comme acquises ; leurs pièces sont demandées pour la seule traçabilité. Les informations manquantes sont identifiées : justification des besoins ou de la nature des fonctions, durée prévisible du besoin."
+        "texte": "La poursuite de la recherche d'un fonctionnaire et l'infructuosité documentée sont prises comme acquises ; leurs pièces sont demandées pour la seule traçabilité. Les informations manquantes sont identifiées : justification des besoins ou de la nature des fonctions, durée prévisible du besoin, délibération créant l'emploi et mention de la possibilité de recruter un contractuel."
       },
       {
         "id": "A-03-d02",
@@ -240,11 +304,11 @@
       "La distinction entre L332-8 2° et L332-14 n'est pas opérée ou un seul fondement est traité.",
       "Le constat d'infructuosité documenté (R332-9) est omis.",
       "Les durées maximales et la condition de prolongation de L332-14 sont ignorées.",
-      "Les mentions contractuelles obligatoires sont certifiées sans source vérifiée."
+      "Les mentions contractuelles obligatoires sont certifiées sans source vérifiée citée."
     ],
     "echec_si_degraded": [
-      "Une règle juridique non vérifiée est présentée comme applicable, même avec une réserve ; les faits fournis et les références posées comme pistes de recherche restent admis.",
-      "Les informations manquantes (justification des besoins ou de la nature des fonctions, durée prévisible du besoin) ne sont pas identifiées.",
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
+      "Les informations manquantes (justification des besoins ou de la nature des fonctions, durée prévisible du besoin, délibération créant l'emploi et possibilité d'un recrutement contractuel) ne sont pas identifiées.",
       "Aucun livrable conditionnel distinguant les deux scénarios n'est proposé."
     ],
     "source_requirements": [
@@ -345,7 +409,7 @@
     "attendus_degraded": [
       {
         "id": "A-04-d01",
-        "texte": "L'unanimité du vote défavorable et le caractère délibératoire de la question sont pris comme acquis ; les vérifications portent sur les seules modalités de séance non décrites : composition et quorum de la première séance, recueil éventuel de l'avis du collège employeur."
+        "texte": "L'unanimité du vote défavorable et le caractère délibératoire de la question sont pris comme acquis ; les vérifications portent sur les modalités de séance non décrites : composition et quorum de la première séance. Le recueil éventuel de l'avis du collège employeur peut être mentionné ; son omission n'est pas bloquante en mode dégradé."
       },
       {
         "id": "A-04-d02",
@@ -363,8 +427,8 @@
       "La double condition déclenchante (vote unanime ET question délibératoire) n'est pas traitée."
     ],
     "echec_si_degraded": [
-      "Une règle juridique non vérifiée est présentée comme applicable, même avec une réserve ; les faits fournis et les références posées comme pistes de recherche restent admis.",
-      "Les modalités de séance non décrites (composition et quorum de la première séance, recueil éventuel de l'avis du collège employeur) ne sont pas identifiées.",
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
+      "Les modalités de séance non décrites (composition et quorum de la première séance) ne sont pas identifiées ; l'avis du collège employeur reste facultatif dans ce mode.",
       "Aucun plan conditionnel n'est proposé."
     ],
     "source_requirements": [
@@ -422,7 +486,7 @@
     "id": "A-05",
     "branche": "si-rh-masse-salariale",
     "type": "standard",
-    "prompt": "12 octobre 2026, collectivité FPT de 480 agents. Lors de la préparation du budget primitif N+1, la DRH constate que le SIRH présente des écarts d'indice entre la base RH et les bulletins de paie des 18 derniers mois pour une vingtaine d'agents, à la suite d'erreurs de saisie d'échelon lors d'une mise à jour logicielle. Ces écarts génèrent des trop-versés et des sous-versés. Produire un mémo de pilotage : audit et quantification des écarts, obligations de régularisation et délais applicables, impact sur la prévision de masse salariale N+1, alertes coordonnées finances et DSI.",
+    "prompt": "12 octobre 2026, collectivité FPT de 480 agents. Lors de la préparation du budget primitif N+1, la DRH constate que le SIRH présente des écarts d'indice entre la base RH et les bulletins de paie des 18 derniers mois pour une vingtaine d'agents, à la suite d'erreurs de saisie d'échelon lors d'une mise à jour logicielle. Les arrêtés individuels sont conformes ; seules les données de paie sont erronées. Ces écarts génèrent des trop-versés et des sous-versés. Produire un mémo de pilotage : audit et quantification des écarts, obligations de régularisation et délais applicables, impact sur la prévision de masse salariale N+1, alertes coordonnées finances et DSI.",
     "contextes": [
       "parametres-collectivite",
       "si-rh-masse-salariale",
@@ -463,12 +527,12 @@
     ],
     "echec_si": [
       "Confond le régime du trop-versé et celui du sous-versé",
-      "Certifie des modalités de récupération sur paie non étayées par les textes fournis",
-      "Attribue à la DRH seule le pouvoir décisionnel de régularisation sans identifier l'autorité compétente",
+      "Certifie des modalités de récupération sur paie non étayées par une source vérifiée citée",
+      "Attribue à la DRH ou à la DSI le pouvoir de décider de la régularisation",
       "Omet l'impact sur la prévision de masse salariale N+1"
     ],
     "echec_si_degraded": [
-      "Une règle juridique non vérifiée est présentée comme applicable, même avec une réserve ; les faits fournis et les références posées comme pistes de recherche restent admis.",
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
       "Refuse de structurer le plan d'action faute de textes vérifiés",
       "Redemande le nombre d'agents ou la taille de collectivité déjà fournis"
     ],
@@ -526,15 +590,51 @@
     "attendus": [
       {
         "id": "A-06-i01",
-        "texte": "Analyse de la finalité et de la nécessité de l'annuaire pour chaque catégorie de donnée ; exclusion explicite du fondement 'intérêt légitime' (RGPD art. 6 f) pour les traitements relevant des missions publiques ; examen des bases envisageables pour les coordonnées professionnelles et de leur fondement juridique, avec conclusion conditionnelle ou suspension précise du choix si ce fondement manque ; qualification de la base applicable à la photo selon sa nécessité à la finalité retenue."
+        "texte": "Analyse la finalité et la nécessité de l'annuaire pour chaque catégorie de donnée ; ne retient pas l'intérêt légitime et, s'il l'évoque, l'écarte pour les traitements relevant des missions publiques (art. 6 §1 al. 2 RGPD). Examine les bases envisageables des coordonnées professionnelles et leur fondement ; conclut conditionnellement ou suspend précisément le choix si ce fondement manque. Qualifie la base de la photo selon sa nécessité à la finalité retenue."
       },
       {
         "id": "A-06-i02",
-        "texte": "Traitement des refus de photo : distinction entre retrait du consentement lorsque le traitement repose sur le consentement (RGPD art. 7) et opposition selon les conditions de l'article 21 lorsque la base retenue est l'exécution d'une mission d'intérêt public ; proposition d'une solution alternative (initiales ou avatar neutre), sans ériger en règle universelle l'absence de contrainte ou de sanction."
+        "texte": "Pour les refus de photo, distingue retrait du consentement (art. 7) et opposition selon les conditions de l'article 21 si la base est une mission d'intérêt public. Propose une alternative (initiales ou avatar neutre) ; ne présente ni obligation de publier la photo ni sanction du refus sans base vérifiée."
       },
       {
         "id": "A-06-i03",
-        "texte": "Information préalable comportant au moins : identité et coordonnées du responsable du traitement, finalité et base légale, destinataires, durée de conservation ou, lorsque ce n'est pas possible, critères utilisés pour la déterminer, droits d'accès/rectification/effacement et d'opposition, coordonnées du DPO, droit de retrait si le consentement est retenu comme base, droit de réclamation (RGPD art. 13, notamment §1 e, §2 b et d) ; art. 14 si la donnée n'est pas collectée auprès de l'agent."
+        "texte": "Prévoit dans l'information préalable l'identité et les coordonnées du responsable du traitement."
+      },
+      {
+        "id": "A-06-i03-b",
+        "texte": "Prévoit dans l'information préalable la finalité et la base légale."
+      },
+      {
+        "id": "A-06-i03-c",
+        "texte": "Prévoit les destinataires des données (RGPD art. 13 §1 e)."
+      },
+      {
+        "id": "A-06-i03-d",
+        "texte": "Prévoit la durée de conservation ou, lorsque ce n'est pas possible, les critères utilisés pour la déterminer."
+      },
+      {
+        "id": "A-06-i03-e",
+        "texte": "Prévoit l'information sur les droits d'accès, de rectification et d'effacement."
+      },
+      {
+        "id": "A-06-i03-f",
+        "texte": "Prévoit l'information sur le droit d'opposition (RGPD art. 13 §2 b)."
+      },
+      {
+        "id": "A-06-i03-g",
+        "texte": "Prévoit les coordonnées du DPO."
+      },
+      {
+        "id": "A-06-i03-h",
+        "texte": "Si le consentement est retenu comme base, prévoit l'information sur le droit de retrait."
+      },
+      {
+        "id": "A-06-i03-i",
+        "texte": "Prévoit le droit de réclamation (RGPD art. 13 §2 d)."
+      },
+      {
+        "id": "A-06-i03-j",
+        "texte": "Si la donnée n'est pas collectée auprès de l'agent, examine l'information relevant de l'article 14."
       },
       {
         "id": "A-06-i04",
@@ -562,7 +662,7 @@
       "Attribue au DPO un pouvoir de validation ou d'autorisation du traitement"
     ],
     "echec_si_degraded": [
-      "Une règle juridique non vérifiée est présentée comme applicable, même avec une réserve ; les faits fournis et les références posées comme pistes de recherche restent admis.",
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
       "Ne fournit aucune trame utilisable de formulaire faute de textes consultés",
       "Présente une contrainte ou une sanction comme juridiquement fondée sans sources vérifiées"
     ],
@@ -612,7 +712,7 @@
     "id": "A-07",
     "branche": "contractuels",
     "type": "standard",
-    "prompt": "12 octobre 2026, collectivité FPT de 480 agents. Un agent contractuel en CDI de droit public recruté sur le fondement de l'article L332-8 2° du CGFP pour un emploi de chargé de mission numérique (catégorie A) est en poste depuis quatre ans. Il demande par écrit une révision de sa rémunération en invoquant l'évolution significative de ses missions, l'expertise acquise et la comparaison avec la grille indiciaire des attachés. Produire une note d'analyse et un projet d'avenant conditionnel : règles de fixation et de réévaluation de la rémunération d'un CDI contractuel, qualification des changements de fonctions, procédure et éléments à documenter.",
+    "prompt": "12 octobre 2026, collectivité FPT de 480 agents. Un agent contractuel en CDI de droit public recruté sur le fondement de l'article L332-8 2° du CGFP pour un emploi de chargé de mission numérique (catégorie A) est en CDI depuis deux ans, après six ans de CDD sur cet emploi. Il demande par écrit une révision de sa rémunération en invoquant l'évolution significative de ses missions, l'expertise acquise et la comparaison avec la grille indiciaire des attachés. Produire une note d'analyse et un projet d'avenant conditionnel : règles de fixation et de réévaluation de la rémunération d'un CDI contractuel, qualification des changements de fonctions, procédure et éléments à documenter.",
     "contextes": [
       "parametres-collectivite",
       "contractuels",
@@ -654,11 +754,11 @@
     "echec_si": [
       "Applique mécaniquement la grille statutaire des attachés à un contractuel CDI",
       "Omet la réévaluation périodique prévue pour les CDI et le contrôle de sa dernière occurrence",
-      "Certifie des formalités de procédure (contrôle de légalité, conditions d'avenant) non étayées par les textes fournis",
+      "Certifie des formalités de procédure (contrôle de légalité, conditions d'avenant) non étayées par une source vérifiée citée",
       "Confond les règles de rémunération des fonctionnaires et des contractuels"
     ],
     "echec_si_degraded": [
-      "Une règle juridique non vérifiée est présentée comme applicable, même avec une réserve ; les faits fournis et les références posées comme pistes de recherche restent admis.",
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
       "Refuse de fournir une trame d'avenant faute de textes consultés",
       "Redemande le fondement contractuel L332-8 2° ou la durée déjà fournis"
     ],
@@ -682,6 +782,11 @@
         "reference": "Décret 88-145 art. 39-3",
         "passage_a_consulter": "Motifs de licenciement, dont le refus d'une modification substantielle du contrat (4°)",
         "statut_verification": "a_consulter"
+      },
+      {
+        "reference": "CGFP L332-9, L332-10 et L332-11",
+        "passage_a_consulter": "Historique du CDI à articuler avec les services antérieurs et les conditions de L332-10 ; possibilité de CDI anticipé d'un commun accord selon L332-11. La variante du scénario retient deux ans de CDI après six ans de CDD.",
+        "statut_verification": "verifie_selon_relecture_2026-10-15"
       }
     ],
     "coverage": "contractuels",
@@ -753,7 +858,7 @@
       },
       {
         "id": "A-08-d04",
-        "texte": "Trame de bordereau de communication utilisable après vérification du contenu communicable, sans certifier ce contenu."
+        "texte": "Trame de traçabilité de la communication (bordereau ou équivalent) utilisable après vérification du contenu communicable, sans certifier ce contenu."
       }
     ],
     "echec_si": [
@@ -763,8 +868,8 @@
       "Cite L135 comme fondement du dossier individuel au lieu de L137"
     ],
     "echec_si_degraded": [
-      "Une règle juridique non vérifiée est présentée comme applicable, même avec une réserve ; les faits fournis et les références posées comme pistes de recherche restent admis.",
-      "Refuse de structurer la procédure ou de fournir un bordereau type faute de textes consultés",
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
+      "Refuse de structurer la procédure ou de fournir une trame de traçabilité (bordereau ou équivalent) faute de textes consultés",
       "Redemande le grade ou la taille de collectivité déjà fournis"
     ],
     "source_requirements": [
@@ -843,7 +948,7 @@
       },
       {
         "id": "A-09-i02",
-        "texte": "Détermine si un CLM fait légalement obstacle à la poursuite d'une procédure disciplinaire déjà engagée en s'appuyant sur les textes fournis ; cite CE 13 juillet 2022, n°461914, point 19, en précisant sa portée exacte sur ce point."
+        "texte": "Examine la poursuite de la procédure pendant le CLM sur une source vérifiée citée : CE 13 juillet 2022, n°461914, point 19. Précise que ce point vise le congé de maladie en général, ni le CLM en particulier ni les droits de la défense ; n'étend pas sa portée au-delà de ce qu'il établit."
       },
       {
         "id": "A-09-i03",
@@ -861,16 +966,16 @@
       },
       {
         "id": "A-09-d03",
-        "texte": "Propose de différer la convocation jusqu'à vérification ciblée sur la capacité de l'agent à assurer sa défense, sans bloquer indéfiniment ni clore la procédure, et sans certifier l'interlocuteur compétent."
+        "texte": "Prépare conditionnellement les modalités permettant l'exercice de la défense (report, représentation, observations écrites), sous réserve des vérifications ciblées sur la capacité de l'agent, sans certifier un interlocuteur compétent ni bloquer indéfiniment ou clore la procédure."
       }
     ],
     "echec_si": [
-      "Affirme que le CLM suspend automatiquement la procédure sans citer de texte vérifiable.",
+      "Affirme que le CLM suspend ou interdit la procédure.",
       "Confond la prescription initiale (délai pour engager) avec la question d'un délai courant après engagement.",
       "Omet les garanties de défense applicables (L532-4, décret 89-677 art. 4 ; art. 6 lorsque le conseil de discipline intervient)."
     ],
     "echec_si_degraded": [
-      "Une règle juridique non vérifiée est présentée comme applicable, même avec une réserve ; les faits fournis et les références posées comme pistes de recherche restent admis.",
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
       "Ne collecte pas la date de connaissance effective des faits, absente du prompt.",
       "Recommande de clore ou poursuivre sans distinguer les précautions liées à l'état de santé."
     ],
@@ -936,7 +1041,7 @@
       },
       {
         "id": "A-10-i02",
-        "texte": "Détermine si le régime applicable aux contractuels (CDI et CDD) diffère de celui des titulaires sur l'accès au télétravail ; cite la base textuelle applicable sur le versant FPT et signale ce qui reste à vérifier."
+        "texte": "Examine le régime visant l'agent public, sans imposer une différence entre titulaires et contractuels pour l'accès au télétravail : L430-1, R431-1 et R433-1 ne les distinguent pas selon le rapport. Cite la base si elle figure dans les sources disponibles et est vérifiée, sinon signale son absence ; les conditions d'éligibilité de R432-3 à R432-8 restent à vérifier."
       },
       {
         "id": "A-10-i03",
@@ -950,7 +1055,7 @@
     "attendus_degraded": [
       {
         "id": "A-10-d01",
-        "texte": "Signale que l'acte et l'instance doivent être qualifiés selon la composition locale du CST avant d'annoncer une procédure précise, sans certifier la distinction charte/accord comme acquise."
+        "texte": "Signale que l'acte et l'instance doivent être qualifiés selon la composition locale du CST et la portée du projet avant d'annoncer une procédure précise."
       },
       {
         "id": "A-10-d02",
@@ -962,13 +1067,12 @@
       }
     ],
     "echec_si": [
-      "Présente charte et accord comme équivalents sans distinguer portée et procédure dans la FPT.",
       "Retient une instance incompatible avec la portée du projet au regard de R432-1, R253-7 et R253-80.",
       "Assimile dérogation quota et aménagement de poste handicap sans distinguer leur régime."
     ],
     "echec_si_degraded": [
-      "Une règle juridique non vérifiée est présentée comme applicable, même avec une réserve ; les faits fournis et les références posées comme pistes de recherche restent admis.",
-      "Confond ou omet la distinction titulaires/contractuels.",
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
+      "Ne pose pas la question du régime applicable aux contractuels.",
       "Omet de collecter l'existence d'une formation spécialisée CST ou d'un accord local."
     ],
     "source_requirements": [
@@ -988,9 +1092,9 @@
         "statut_verification": "verifie"
       },
       {
-        "reference": "CGFP R433-1 et L430-1",
-        "passage_a_consulter": "Égalité de droits agent télétravailleur / agent sur site ; application aux contractuels sur versant FPT à vérifier",
-        "statut_verification": "a_consulter"
+        "reference": "CGFP L430-1, R431-1 et R433-1",
+        "passage_a_consulter": "Les articles visent l'agent public sans distinguer titulaires et contractuels ; R432-3 à R432-8 (éligibilité) non lus selon le rapport.",
+        "statut_verification": "verifie_selon_relecture_2026-10-15"
       }
     ],
     "coverage": "transversal",
@@ -1032,7 +1136,7 @@
     "id": "A-11",
     "branche": "transversal",
     "type": "standard",
-    "prompt": "Collectivité FPT >350 agents, 12 octobre 2026. Un rédacteur principal de 2e classe, reconnu RQTH et bénéficiaire depuis 18 mois d'un aménagement de poste formalisé (horaires adaptés, matériel ergonomique), voit son emploi supprimé par délibération de l'organe délibérant dans le cadre d'une réorganisation. Aucune inaptitude médicale n'a été constatée. La DRH doit : conduire la procédure de suppression d'emploi (CGFP L542-1 à L542-7) ; vérifier si des obligations spécifiques s'appliquent au titre de la qualité de BOE avant, pendant ou après la suppression ; organiser la recherche d'un poste compatible avec les restrictions fonctionnelles formalisées ; identifier qui valide la compatibilité du nouveau poste. Produire une note de procédure articulant ces régimes.",
+    "prompt": "Collectivité FPT >350 agents, 12 octobre 2026. Un rédacteur principal de 2e classe, reconnu RQTH et bénéficiaire depuis 18 mois d'un aménagement de poste formalisé (horaires adaptés, matériel ergonomique), est concerné par une suppression d'emploi envisagée dans le cadre d'une réorganisation ; le projet de délibération n'a pas encore été soumis au CST. Aucune inaptitude médicale n'a été constatée. La DRH doit : conduire la procédure de suppression d'emploi (CGFP L542-1 à L542-7) ; vérifier si des obligations spécifiques s'appliquent au titre de la qualité de BOE avant, pendant ou après la suppression ; organiser la recherche d'un poste compatible avec les restrictions fonctionnelles formalisées ; identifier qui valide la compatibilité du nouveau poste. Produire une note de procédure articulant ces régimes.",
     "contextes": [
       "carriere-paie",
       "carriere-temps-fin-fonctions",
@@ -1051,7 +1155,7 @@
       },
       {
         "id": "A-11-i03",
-        "texte": "Identifie qui doit valider la compatibilité entre les restrictions fonctionnelles existantes et le poste de reclassement proposé ; distingue ce contrôle de la procédure d'inaptitude médicale, non en cause ici ; signale explicitement si cette compétence n'est pas établie dans le corpus."
+        "texte": "Signale que la validation de la compatibilité médicale du poste relève d'un avis médical dont le cadre reste à vérifier ; ne nomme pas une autorité non établie par les sources. Distingue ce point d'une procédure d'inaptitude médicale, non en cause ici."
       }
     ],
     "attendus_degraded": [
@@ -1065,7 +1169,7 @@
       },
       {
         "id": "A-11-d03",
-        "texte": "Ne confond pas suppression d'emploi (L542-1 à L542-7) et reclassement pour inaptitude médicale (procédure conseil médical) ; présente deux options conditionnelles selon les postes disponibles, sans certifier de délais."
+        "texte": "Distingue la suppression d'emploi de la procédure liée à une inaptitude médicale et prépare deux options conditionnelles selon les postes disponibles, sans certifier de délais ni exiger une référence précise."
       }
     ],
     "echec_si": [
@@ -1074,7 +1178,7 @@
       "Cite une référence au livre III du CGFP pour la suppression d'emploi (articles concernés sont au livre V)."
     ],
     "echec_si_degraded": [
-      "Une règle juridique non vérifiée est présentée comme applicable, même avec une réserve ; les faits fournis et les références posées comme pistes de recherche restent admis.",
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
       "Assimile les deux procédures dans la structure de la réponse.",
       "Omet de collecter la date envisagée et l'état des recherches de postes, absents du prompt."
     ],
@@ -1155,7 +1259,7 @@
       },
       {
         "id": "A-12-i04",
-        "texte": "Propose un dispositif de transmission des savoirs pour les 8 postes critiques en précisant les outils mobilisables et le calendrier minimal compatible avec les départs confirmés."
+        "texte": "Propose pour les 8 postes critiques un dispositif de transmission des savoirs, avec outils et calendrier compatibles avec les dates de départ confirmées et l'emploi budgétaire disponible."
       }
     ],
     "attendus_degraded": [
@@ -1179,7 +1283,7 @@
       "Assimile l'éligibilité à un départ à une cessation certaine et imminente."
     ],
     "echec_si_degraded": [
-      "Une règle juridique non vérifiée est présentée comme applicable, même avec une réserve ; les faits fournis et les références posées comme pistes de recherche restent admis.",
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
       "Présente la consultation CST avant recrutements comme automatiquement obligatoire.",
       "Ne collecte pas la répartition CNRACL/autre régime ni la distinction éligibilité/départ confirmé."
     ],
