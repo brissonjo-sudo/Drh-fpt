@@ -127,6 +127,8 @@ drh-fpt/
     │   ├── NON-TRAITE-RELECTURE-2026-10-15.md  Réserves hors corrections de relecture
     │   ├── PROCEDURE-QUARANTAINE-CODEX.md  Procédure préparée, exécution soumise à accord
     │   ├── PROPOSITIONS-A10-B10-2026-10-15.md  Énoncés validés et provenance
+    │   ├── RECONCILIATION-SOURCES-2026-10-15.md  Écarts documentaires et décisions T74
+    │   ├── reconciliation-sources-2026-10-15.json  Registre des attendus, identifiants et preuves
     │   ├── cases-a.json                  Douze cas neufs, non gelés
     │   ├── cases-b.json                  Douze cas de réserve, non gelés
     │   └── profiles-v1.json              Quatre profils exacts proposés avant gel

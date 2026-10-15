@@ -178,7 +178,11 @@
     "required_source_ids": [
       "LEGIARTI000006368812",
       "LEGIARTI000025312981",
-      "LEGIARTI000050549871"
+      "LEGIARTI000050549871",
+      "LEGIARTI000050549867",
+      "LEGIARTI000050549869",
+      "LEGIARTI000050549879",
+      "LEGIARTI000050549881"
     ]
   },
   {
@@ -877,8 +881,8 @@
         "statut_verification": "verifie_selon_complement_2026-10-14"
       },
       {
-        "reference": "Loi 2016-1691 art. 6, 8, 10-1",
-        "passage_a_consulter": "Qualification de l'alerte selon l'art. 6 I ; voie interne ouverte aux personnes candidates à un emploi (8 I-A 1°) ; interdiction des représailles, dont licenciement et mesures disciplinaires (10-1 II) ; textes en vigueur depuis le 01/09/2022 selon le complément",
+        "reference": "Loi 2016-1691 art. 6 I et 10-1 II ; art. 8 en contexte facultatif",
+        "passage_a_consulter": "Si la loi est mobilisée, ne pas tenir la qualification de l'alerte pour acquise : conditions de l'article 6 I et protection contre les représailles de l'article 10-1 II. L'article 8 I-A 1° est une piste de contexte facultative, pas une référence obligatoire au barème ni une source requise pour ce cas. Mapping et lecture rapportés par Claude le 14/10 ; réponses primaires correspondantes absentes des archives locales examinées.",
         "statut_verification": "verifie_selon_complement_2026-10-14"
       }
     ],
@@ -905,7 +909,6 @@
       "LEGIARTI000044427698",
       "LEGIARTI000045389749",
       "LEGIARTI000045391750",
-      "LEGIARTI000045391755",
       "LEGIARTI000045392464",
       "LEGIARTI000045392551"
     ]
@@ -1252,8 +1255,6 @@
       "LEGIARTI000044427628",
       "LEGIARTI000044427630",
       "LEGIARTI000045389749",
-      "LEGIARTI000045391750",
-      "LEGIARTI000045391755",
       "LEGIARTI000045392482",
       "LEGIARTI000045392497",
       "LEGIARTI000045392551",

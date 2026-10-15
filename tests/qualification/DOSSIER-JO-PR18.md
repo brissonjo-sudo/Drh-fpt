@@ -88,6 +88,19 @@ Les empreintes brutes A/B sont recalculées après intégration, reportées à l
 
 Contrôles après intégration des énoncés, le 15/10/2026 : **127/127 tests en cp1252**, puis **127/127 en UTF-8** ; encodages effectifs confirmés. Cohérence et `build_bundle.py --check` réussis dans les deux environnements. Les quatre avertissements README sont corrigés ; seul demeure l'avertissement préexistant sur le tag `v0.7.0` absent de cette copie, avec contrôle d'incrément de version ignoré. Les empreintes brutes A/B sont vérifiées par recalcul et par `suites.file_sha`. Aucun appel modèle réel, aucun registre de qualification modifié, aucune tentative consommée. Les preuves historiques restent intactes.
 
+
+## Réconciliation documentaire T74 — 15 octobre 2026
+
+Préparation locale depuis `0a483f6`, sans poussée ni gel. [Écarts et décisions](RECONCILIATION-SOURCES-2026-10-15.md) ; [registre exhaustif des attendus et identifiants](reconciliation-sources-2026-10-15.json).
+
+Huit identifiants déjà visés par les sources/attendus sont ajoutés : A-07 L332-9/10/11, A-10 R433-1 (CGFP, sans confusion avec l'article homonyme du CPCE), B-02 R253-58/59/62/63. Numéro, identifiant, texte et version sont retrouvés dans les codes complets archivés ; cette lecture locale du 15/10 ne devient pas une nouvelle consultation primaire. Leurs liaisons historiques de cas restent à préparer avant qualification.
+
+Selon la correspondance explicitement donnée dans le complément du rapport Claude du 14/10 : article 8 de la loi 2016-1691 retiré des sources obligatoires de B-09 (piste facultative conservée) ; articles 6 et 8 retirés de B-12, dont le périmètre est limité à 10-1 II depuis T73. Les réponses primaires de ces articles ne figurent pas dans les archives examinées. Le chemin CLI PISTE n'a pas d'identifiants disponibles dans ce contexte ; la récupération web des trois fiches a renvoyé 403. La correspondance figurait déjà dans le rapport : T74 corrige la réserve T73 « mapping non fourni ». Elle reste attribuée au rapport, sans certification indépendante nouvelle.
+
+Les 299 traces historiques examinées, dont 234 liées aux jeux A/B, ne présentent pas d'écart structurel selon le vérificateur existant (empreintes, requêtes, extraits et versions). Elles dépassent toutes la fenêtre de fraîcheur de 24 heures à la date de cet audit. Les dates ne sont pas réécrites. Les cinq liaisons PDF/CELEX sont documentées et hashées, mais leur prise en charge par le harnais reste T75. Aucune trace de qualification n'est fabriquée.
+
+Les 24 énoncés, 132 attendus d'intégration, 73 attendus dégradés et clauses d'échec sont inchangés depuis T73. Seuls les identifiants et la description de source facultative B-09 sont réconciliés. Profils, preuves et provenance historique intacts. Le caractère complet d'une liste d'identifiants ne certifie pas les conséquences juridiques ; les réserves du registre restent à arbitrer par Jo. Aucun gel, tentative ou campagne.
+
 ## Sources et limites
 
 [Archive des sources](../rapports/SOURCES-JEUX-PR18-2026-10-12.zip) : 234 liaisons de preuve aux cas, 19 archives brutes. Ces nombres décrivent l'archive historique du 12/10 ; le PDF RGPD du 14/10 et ses index sont ajoutés séparément, sans réécrire cette archive. Il ne s’agit pas de 234 appels réseau : des passages sont réutilisés entre cas. Dates de consultation originales conservées ; certains horodatages récupérés de l’écriture de l’archive sont signalés comme tels.
@@ -153,8 +166,8 @@ Python 3.13 / Windows : `python -m unittest discover -s tests -p 'test_*.py'` r�
 
 ## Empreintes exactes
 
-- Jeu A : `192b4e7dca5f3324223ac260a65c4b5e6d5c26f00d8d39bb2e5fb967e94351b0`
-- Jeu B : `310cafaf57fa4a42af587049e48ca08c2f94d60471eef72007963ccf72ed96cf`
+- Jeu A : `d54f06a3ab7b18207437bde1bbe0cd554c263acf4c32c70bcf868ef4c71c410c`
+- Jeu B : `aa9197233fa9b78d24ad5b8fd3723b43d1e34f36acd601f7d9f6c2a6d6512224`
 - Profils : `65301665ed0e9b1b2d1b613f2e4ba4baf5e4ae36dc7e65fb12de3610e7cc4c29`
 - Archive primaire : `467bd64c3537f98e0793412f581aef496520edb3767a40736118f7a0666eb090`
 
@@ -1084,7 +1097,7 @@ Le 12 octobre 2026, dans une communauté d'agglomération de 410 agents (>350), 
 
 - CGFP L131-1, L131-2, L131-12, L135-4 — Interdiction des discriminations fondées sur le sexe et la grossesse ; champ des agents publics et conditions propres à chaque protection, portée à vérifier pour une candidate externe sans protection présumée applicable (verifie).
 - RGPD art. 4 §15, 5, 6, 9 et 17 §3 e (dispositif EUR-Lex CELEX:02016R0679-20160504) — Qualification de la grossesse comme donnée de santé à établir sur les faits ; finalités, fondement et exceptions de l'art. 9, dont 9 §2 f ; conservation limitée et sécurisée de preuves et examen de l'art. 17 §3 e (verifie_selon_complement_2026-10-14).
-- Loi 2016-1691 art. 6, 8, 10-1 — Qualification de l'alerte selon l'art. 6 I ; voie interne ouverte aux personnes candidates à un emploi (8 I-A 1°) ; interdiction des représailles, dont licenciement et mesures disciplinaires (10-1 II) ; textes en vigueur depuis le 01/09/2022 selon le complément (verifie_selon_complement_2026-10-14).
+- Loi 2016-1691 art. 6 I et 10-1 II ; art. 8 en contexte facultatif — Si la loi est mobilisée, ne pas tenir la qualification de l'alerte pour acquise : conditions de l'article 6 I et protection contre les représailles de l'article 10-1 II. L'article 8 I-A 1° est une piste de contexte facultative, pas une référence obligatoire au barème ni une source requise pour ce cas. Mapping et lecture rapportés par Claude le 14/10 ; réponses primaires correspondantes absentes des archives locales examinées. (verifie_selon_complement_2026-10-14).
 
 - Dossier réellement fourni : [Code général de la fonction publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044427698), passages L131-1, L131-2, L131-12, L131-13, L135-4.
 - Source RGPD à relire : [PDF consolidé EUR-Lex archivé](../rapports/rgpd-2026-10-14/CELEX-02016R0679-20160504-FR-consulte-2026-10-14.pdf) ; identifiant requis `CELEX:02016R0679-20160504` ; [provenance et empreinte](../rapports/rgpd-2026-10-14/provenance.json), [articles et pages par cas](../rapports/rgpd-2026-10-14/articles-rgpd.json).
