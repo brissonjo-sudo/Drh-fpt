@@ -121,6 +121,16 @@ Jeux A/B, profils, PDF, index et archives historiques inchangés. Conservation d
 
 Le16/10/2026 : **137/137 tests déterministes en cp1252 et 137/137 en UTF-8**, soit 127 existants et 10 nouveaux tests PDF, sans échec ni test ignoré. Cohérence et `build_bundle.py --check` réussis dans les deux environnements ; seul avertissement préexistant : tag v0.7.0 absent. A/B/profils/PDF etindex restent inchangés ; hashes bruts A/B/profils concordants avec `suites.file_sha`. Le registre `suites.json` reste inchangé, aucun sceau, tentative ou appel modèle.
 
+## Pièce de consultation Claude reçue le 16 octobre 2026 — T79
+
+[Pièce archivée et diagnostic du format](T79-ARCHIVE-LOI-2026-10-16.md). SHA-256 brut de la pièce fournie par Jo : `78da546dd2d3785c4a75f925e3cb28cbc34bc0638fd2623c4acc53f17cc7550c`, copie à l’identique recontrôlée. Articles 6 et 10-1 récupérés par Claude via MCP `get_article`, en vigueur au 16/10/2026, version 01/09/2022 selon la consultation rapportée ; texte recopié depuis la réponse de l’outil, octets API originaux non disponibles. Horodatage rapporté conservé verbatim, sans heure exacte inventée par appel.
+
+Les textes et métadonnées sont maintenant présents dans cette pièce pour les 3 liaisons B-09/6, B-09/10-1, B-12/10-1. Le harnais ne peut pas comparer la transcription à la réponse source originale absente : aucune trace de campagne n’est fabriquée, aucun contrôle assoupli, aucune exemption. Demande complémentaire précise dans le rapport : réponse API consolidée et requête archivées via le collecteur, ou export MCP original à évaluer avec son schéma. Les anciens constats d’absence de texte restent historiques.
+
+Empreintes A/B/profils/PDF inchangées, sources requises conservées. Signature différée au runtime final ; acte actualisé non signé. Aucun gel ni campagne.
+
+Le 16/10/2026 : **137/137 tests déterministes en cp1252 et 137/137 en UTF-8**, sans échec ni test ignoré ; cohérence et `build_bundle.py --check` réussis dans les deux environnements. Seul avertissement préexistant : tag v0.7.0 absent. Empreintes A/B/profils inchangées et concordantes avec `suites.file_sha`. Pièce copiée à l’identique, hash recalculé concordant. Validateur, schéma, campagne et support PDF identiques à 019bce2 ; registre de suites inchangé. Aucun gel, appel modèle ou tentative de campagne.
+
 ## Sources et limites
 
 [Archive des sources](../rapports/SOURCES-JEUX-PR18-2026-10-12.zip) : 234 liaisons de preuve aux cas, 19 archives brutes. Ces nombres décrivent l'archive historique du 12/10 ; le PDF RGPD du 14/10 et ses index sont ajoutés séparément, sans réécrire cette archive. Il ne s’agit pas de 234 appels réseau : des passages sont réutilisés entre cas. Dates de consultation originales conservées ; certains horodatages récupérés de l’écriture de l’archive sont signalés comme tels.

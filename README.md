@@ -131,6 +131,7 @@ drh-fpt/
     │   ├── reconciliation-sources-2026-10-15.json  Registre des attendus, identifiants et preuves
     │   ├── FIN-RELECTURE-2026-10-16.md  Corrections ciblées et sources conservées à arbitrer
     │   ├── T75-PDF-CELEX-2026-10-16.md  Validation PDF et état des preuves primaires
+    │   ├── T79-ARCHIVE-LOI-2026-10-16.md  Pièce Claude et conditions de compatibilité des preuves
     │   ├── inventaire-sources-fin-relecture-2026-10-16.json  Inventaire courant des 239 liaisons cas/source
     │   ├── cases-a.json                  Douze cas neufs, non gelés
     │   ├── cases-b.json                  Douze cas de réserve, non gelés
