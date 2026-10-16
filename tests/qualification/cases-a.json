@@ -37,10 +37,6 @@
       {
         "id": "A-01-i03-e",
         "texte": "Fournit une position motivée sur les éléments acquis ou, si nécessaire, un projet conditionnel précisant les seules informations manquantes."
-      },
-      {
-        "id": "A-01-i03-f",
-        "texte": "Ne transforme pas le régime déclaratif en autorisation préalable."
       }
     ],
     "attendus_degraded": [
@@ -148,7 +144,7 @@
       },
       {
         "id": "A-02-d02",
-        "texte": "Sans source, aucune procédure juridique n'est certifiée, même avec réserve : compétences, délais et rôle du conseil médical sont présentés comme des points à vérifier avant tout engagement."
+        "texte": "Sans source, aucune procédure juridique n'est certifiée : compétences, délais et rôle du conseil médical sont présentés comme des points à vérifier avant tout engagement."
       },
       {
         "id": "A-02-d03",
@@ -1044,7 +1040,7 @@
       },
       {
         "id": "A-10-i02",
-        "texte": "Examine le régime visant l'agent public, sans imposer une différence entre titulaires et contractuels pour l'accès au télétravail : L430-1, R431-1 et R433-1 ne les distinguent pas selon le rapport. Cite la base si elle figure dans les sources disponibles et est vérifiée, sinon signale son absence ; les conditions d'éligibilité de R432-3 à R432-8 restent à vérifier."
+        "texte": "Examine le régime visant l'agent public, sans imposer une différence entre titulaires et contractuels pour l'accès au télétravail : L430-1, R431-1 et R433-1 ne les distinguent pas. Cite la base si elle figure dans les sources disponibles et est vérifiée, sinon signale son absence ; les conditions d'éligibilité de R432-3 à R432-8 restent à vérifier."
       },
       {
         "id": "A-10-i03",
@@ -1130,7 +1126,6 @@
       "LEGIARTI000054077137",
       "LEGIARTI000054077141",
       "LEGIARTI000054077143",
-      "LEGIARTI000054077145",
       "LEGIARTI000054077173",
       "LEGIARTI000054087794",
       "LEGIARTI000054077169"
@@ -1220,7 +1215,6 @@
       "patch_text_sha256": "0deaeb59ae71765a52a873e96a2672143a0ce97997448f618b9f419b3edab02e"
     },
     "required_source_ids": [
-      "LEGIARTI000043498231",
       "LEGIARTI000044425330",
       "LEGIARTI000044425334",
       "LEGIARTI000044425350",

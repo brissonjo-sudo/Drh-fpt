@@ -129,6 +129,8 @@ drh-fpt/
     │   ├── PROPOSITIONS-A10-B10-2026-10-15.md  Énoncés validés et provenance
     │   ├── RECONCILIATION-SOURCES-2026-10-15.md  Écarts documentaires et décisions T74
     │   ├── reconciliation-sources-2026-10-15.json  Registre des attendus, identifiants et preuves
+    │   ├── FIN-RELECTURE-2026-10-16.md  Corrections ciblées et sources conservées à arbitrer
+    │   ├── inventaire-sources-fin-relecture-2026-10-16.json  Inventaire courant des 239 liaisons cas/source
     │   ├── cases-a.json                  Douze cas neufs, non gelés
     │   ├── cases-b.json                  Douze cas de réserve, non gelés
     │   └── profiles-v1.json              Quatre profils exacts proposés avant gel

@@ -101,6 +101,16 @@ Les 299 traces historiques examinées, dont 234 liées aux jeux A/B, ne présent
 
 Les 24 énoncés, 132 attendus d'intégration, 73 attendus dégradés et clauses d'échec sont inchangés depuis T73. Seuls les identifiants et la description de source facultative B-09 sont réconciliés. Profils, preuves et provenance historique intacts. Le caractère complet d'une liste d'identifiants ne certifie pas les conséquences juridiques ; les réserves du registre restent à arbitrer par Jo. Aucun gel, tentative ou campagne.
 
+## Ajustements de fin de relecture T76 — 16 octobre 2026
+
+Préparation locale depuis `c8885eb`, sur instructions ciblées de Jo. [Corrections et inventaire à arbitrer](FIN-RELECTURE-2026-10-16.md) ; [registre des 239 liaisons restantes](inventaire-sources-fin-relecture-2026-10-16.json). Les cinq autres ajustements de formulation sont appliqués ; R253-61 n’est ni exigé ni sanctionné, la substitution de B-10 reste conditionnelle, et le doublon A-01-i03-f est supprimé.
+
+D74-4 : sept liaisons retirées seulement (B-10 L5211-4-1, L5211-25-1, L5211-26, L445-3, L253-5 ; A-10 R432-3 ; A-11 article 24 du décret85-603). L’article 24 du décret87-602 en A-02 est conservé. Les listes « Dossier réellement fourni » ci-dessous décrivent les archives historiques ; elles ne sont pas la liste des sources encore requises. La liste courante fait foi dans les JSON A/B et le registre T76 ; aucune preuve n’est supprimée.
+
+État courant : **24 cas, 131 critères d’intégration, 73 dégradés, 239 liaisons requises et 214 identifiants uniques**. Le constat T74 de132critères est historique. Les49liaisons sans attendu propre retrouvé et65rattachements implicites sont listés sans retrait. L’absence d’un numéro dans un critère n’est pas assimilée à l’absence de lien juridique. Les classements de sens restent à arbitrer ; ils ne modifient pas les seuils. Profils, provenance de rédaction et preuves historiques inchangés. Réserves, T29 et préparation PDF/CELEX T75 maintenues. Aucun gel.
+
+Le 16/10/2026 : **127/127 tests déterministes en cp1252**, puis **127/127 en UTF-8**, sans échec ni test ignoré ; encodages effectifs contrôlés. Cohérence et `build_bundle.py --check` réussis dans les deux environnements. Seul avertissement : tag `v0.7.0` absent de la copie, contrôle d’incrément ignoré. Empreintes brutes A/B/profils comparées à `suites.file_sha` et au dossier ; profils et registre `suites.json` inchangés, contenus et horodatages contrôlés. Aucun appel modèle réel, aucun gel ni tentative consommée.
+
 ## Sources et limites
 
 [Archive des sources](../rapports/SOURCES-JEUX-PR18-2026-10-12.zip) : 234 liaisons de preuve aux cas, 19 archives brutes. Ces nombres décrivent l'archive historique du 12/10 ; le PDF RGPD du 14/10 et ses index sont ajoutés séparément, sans réécrire cette archive. Il ne s’agit pas de 234 appels réseau : des passages sont réutilisés entre cas. Dates de consultation originales conservées ; certains horodatages récupérés de l’écriture de l’archive sont signalés comme tels.
@@ -166,8 +176,8 @@ Python 3.13 / Windows : `python -m unittest discover -s tests -p 'test_*.py'` r�
 
 ## Empreintes exactes
 
-- Jeu A : `d54f06a3ab7b18207437bde1bbe0cd554c263acf4c32c70bcf868ef4c71c410c`
-- Jeu B : `aa9197233fa9b78d24ad5b8fd3723b43d1e34f36acd601f7d9f6c2a6d6512224`
+- Jeu A : `c7958f40a2938e67bc62a2f9b579b39f9f59d790dcce0eb70944b9db78b1141c`
+- Jeu B : `8e7c303417e91fc7415606ba478e1f87553506674ef39157f9e6bb7008447262`
 - Profils : `65301665ed0e9b1b2d1b613f2e4ba4baf5e4ae36dc7e65fb12de3610e7cc4c29`
 - Archive primaire : `467bd64c3537f98e0793412f581aef496520edb3767a40736118f7a0666eb090`
 
@@ -190,7 +200,6 @@ Un agent territorial titulaire occupe un emploi permanent à temps non complet (
 - **A-01-i03-c** : Identifie et applique aux faits le motif d'opposition tenant à l'incompatibilité déontologique (R123-2).
 - **A-01-i03-d** : Distingue l'absence de motif d'opposition établi d'une compatibilité démontrée.
 - **A-01-i03-e** : Fournit une position motivée sur les éléments acquis ou, si nécessaire, un projet conditionnel précisant les seules informations manquantes.
-- **A-01-i03-f** : Ne transforme pas le régime déclaratif en autorisation préalable.
 
 **Échecs — intégration**
 
@@ -244,7 +253,7 @@ Un agent territorial titulaire est en congé de longue maladie depuis 18 mois da
 **Critères obligatoires — dégradé**
 
 - **A-02-d01** : Les variables bloquantes sont identifiées : certificat médical transmis avec quotité/durée/modalités prescrites, avis du médecin agréé formalisé, existence de fonctions à conditions de santé particulières, droits à congé restants et perspective de réintégration.
-- **A-02-d02** : Sans source, aucune procédure juridique n'est certifiée, même avec réserve : compétences, délais et rôle du conseil médical sont présentés comme des points à vérifier avant tout engagement.
+- **A-02-d02** : Sans source, aucune procédure juridique n'est certifiée : compétences, délais et rôle du conseil médical sont présentés comme des points à vérifier avant tout engagement.
 - **A-02-d03** : Une organisation de reprise conditionnelle est proposée ; les points non vérifiés (primes, rôle éventuel de la médecine préventive à rechercher) sont explicitement signalés comme à confirmer.
 
 **Échecs — dégradé**
@@ -602,7 +611,7 @@ Collectivité FPT de 420 agents, 12 octobre 2026. La DRH souhaite instaurer le t
 **Critères obligatoires — intégration**
 
 - **A-10-i01** : Identifie la délibération de l'organe délibérant et l'instance à consulter selon l'objet et la portée du projet, en articulant R432-1 2°, L253-6 et R253-80 ; ne pénalise pas une réponse qui cite L253-6. Distingue cet acte d'un accord collectif et qualifie les options proposées à la DRH.
-- **A-10-i02** : Examine le régime visant l'agent public, sans imposer une différence entre titulaires et contractuels pour l'accès au télétravail : L430-1, R431-1 et R433-1 ne les distinguent pas selon le rapport. Cite la base si elle figure dans les sources disponibles et est vérifiée, sinon signale son absence ; les conditions d'éligibilité de R432-3 à R432-8 restent à vérifier.
+- **A-10-i02** : Examine le régime visant l'agent public, sans imposer une différence entre titulaires et contractuels pour l'accès au télétravail : L430-1, R431-1 et R433-1 ne les distinguent pas. Cite la base si elle figure dans les sources disponibles et est vérifiée, sinon signale son absence ; les conditions d'éligibilité de R432-3 à R432-8 restent à vérifier.
 - **A-10-i03** : Traite séparément la demande de dérogation au quota (R431-6 1° : conditions et durée maximale) et la demande d'aménagement du lieu de télétravail (R433-3, L131-8 : sous réserve de charges non disproportionnées) ; conclut si l'obligation d'aménagement est automatique ou conditionnelle.
 - **A-10-i04** : Propose un suivi opérationnel des jours dans le SIRH et une communication d'accompagnement ; identifie les traitements et les questions RGPD à vérifier, sans certifier les obligations dont les sources sont absentes.
 
@@ -774,12 +783,12 @@ Un adjoint technique territorial titulaire (collectivité de 450 agents, 12 octo
 - **B-02-i01-d** : Précise que l'exercice du retrait ne crée pas pour autrui une nouvelle situation de danger grave et imminent.
 - **B-02-i02** : Interdiction de retenue sur traitement et d'aucune sanction lorsque le motif raisonnable est établi, identifiée sur source ; impossibilité pour l'autorité territoriale d'ordonner la reprise si le danger persiste qualifiée.
 - **B-02-i03** : Note de procédure produite : instruction conditionnelle (vérifier la défectuosité, apprécier le motif raisonnable avant toute retenue ou sanction, constituer les pièces) ; décision sur la reprise subordonnée au résultat de cette vérification.
-- **B-02-i04** : Si la procédure d'alerte et d'instruction est décrite, la rattache aux articles R253-58 à R253-63 CGFP selon les conditions effectivement établies ; n'exige ni ne retient les articles 5-2/5-3 abrogés du décret 85-603. Le contenu de R253-61 reste réservé dans le rapport.
+- **B-02-i04** : Si la procédure d'alerte et d'instruction est décrite, la rattache aux articles R253-58 à R253-63 CGFP selon les conditions effectivement établies ; n'exige ni ne retient les articles 5-2/5-3 abrogés du décret 85-603. R253-61 n'est ni exigé ni sanctionné.
 
 **Échecs — intégration**
 
 - La retenue sur traitement est présentée comme applicable sans examen du motif raisonnable.
-- Les conditions du droit de retrait (motif raisonnable, danger grave et imminent ou défectuosité) ne sont pas identifiées.
+- Les conditions du droit de retrait (motif raisonnable de penser à un danger grave et imminent) ne sont pas identifiées.
 - La note de procédure n'est pas produite.
 
 **Critères obligatoires — dégradé**
@@ -852,7 +861,7 @@ La DRH d'une collectivité de 420 agents (12 octobre 2026) prépare des lignes d
 **Critères obligatoires — intégration**
 
 - **B-04-i01** : Procédure légale des LDG territoriales précisée sur source : L413-1 (stratégie pluriannuelle, orientations en matière de promotion et de valorisation des parcours), L413-3 (LDG arrêtées par l'autorité compétente après avis du comité social compétent) et R413-31 (saisine pour avis du CST sur les projets de LDG).
-- **B-04-i02** : Distingue domaine ouvert à la négociation et obligation d'ouvrir ou de répondre à une demande : dans la partie législative L221-1 à L223-1 lue selon le rapport, aucune telle obligation préalable aux LDG n'est démontrée. Borne la conclusion à cette partie ; la partie réglementaire non trouvée reste à vérifier.
+- **B-04-i02** : Distingue domaine ouvert à la négociation et obligation d'ouvrir ou de répondre à une demande : dans la partie législative L221-1 à L223-1, aucune telle obligation préalable aux LDG n'est démontrée. Borne la conclusion à cette partie ; la partie réglementaire non trouvée reste à vérifier.
 - **B-04-i03** : Note d'aide à la décision produite : distinction consultation CST / négociation posée, risque contentieux en cas de défaut de consultation CST identifié, recommandation conditionnelle sur la suite à donner à la demande syndicale selon les variables locales.
 
 **Échecs — intégration**
@@ -1113,9 +1122,9 @@ Le 12 octobre 2026, une communauté de communes de 380 agents, membre, avec plus
 **Critères obligatoires — intégration**
 
 - **B-10-i01** : Identifie le syndicat mixte composé de communes et d'EPCI et articule le renvoi de L5711-1 aux règles des syndicats de communes avec L5212-33 pour la dissolution, sans en déduire un transfert automatique des agents.
-- **B-10-i01-b** : Distingue la substitution vers un syndicat mixte (L5711-4) du mécanisme de reprise à établir à partir de l'arrêté et des compétences concernées.
+- **B-10-i01-b** : Si une substitution vers un syndicat mixte est évoquée, distingue L5711-4 du mécanisme de reprise à établir à partir de l'arrêté et des compétences concernées.
 - **B-10-i01-c** : Pour les 14 contractuels de droit public, examine L445-1 et L445-2 : reprise de l'activité d'une personne morale de droit public par une autre personne publique, conditions et proposition de contrat, sans présenter la reprise des contrats comme automatique.
-- **B-10-i01-d** : Pour les 28 titulaires, établit le mécanisme applicable à partir de l'arrêté de dissolution ou suspend précisément cette conclusion ; les textes lus dans le rapport n'établissent pas leur transfert automatique à l'EPCI.
+- **B-10-i01-d** : Pour les 28 titulaires, établit le mécanisme applicable à partir de l'arrêté de dissolution ou suspend précisément cette conclusion ; ne présente pas leur transfert à l'EPCI comme automatique.
 - **B-10-i02** : Identifie la consultation du CST propre de la communauté de communes, dont les 380 agents excèdent le seuil de 50 agents de L251-5, sur le projet d'organisation des services (R253-7 1°). Examine séparément si un CST du syndicat est encore constitué et compétent avant sa dissolution et doit être consulté.
 - **B-10-i03** : Pour les CDD arrivant à terme dans les 6 mois post-transfert, identifie les variables à vérifier (durée résiduelle, ancienneté, nature du besoin) pour décider entre non-renouvellement au terme et examen d'une proposition de renouvellement ou de CDI, sans certifier les conditions d'une CDIsation sans vérification des textes applicables à la collectivité d'accueil.
 - **B-10-i04** : Prépare une estimation documentée de l'impact salarial et un plan opérationnel de reprise SIRH et d'accompagnement du changement, avec hypothèses, responsables et jalons adaptés au délai de 90 jours.

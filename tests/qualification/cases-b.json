@@ -120,7 +120,7 @@
       },
       {
         "id": "B-02-i04",
-        "texte": "Si la procédure d'alerte et d'instruction est décrite, la rattache aux articles R253-58 à R253-63 CGFP selon les conditions effectivement établies ; n'exige ni ne retient les articles 5-2/5-3 abrogés du décret 85-603. Le contenu de R253-61 reste réservé dans le rapport."
+        "texte": "Si la procédure d'alerte et d'instruction est décrite, la rattache aux articles R253-58 à R253-63 CGFP selon les conditions effectivement établies ; n'exige ni ne retient les articles 5-2/5-3 abrogés du décret 85-603. R253-61 n'est ni exigé ni sanctionné."
       }
     ],
     "attendus_degraded": [
@@ -139,7 +139,7 @@
     ],
     "echec_si": [
       "La retenue sur traitement est présentée comme applicable sans examen du motif raisonnable.",
-      "Les conditions du droit de retrait (motif raisonnable, danger grave et imminent ou défectuosité) ne sont pas identifiées.",
+      "Les conditions du droit de retrait (motif raisonnable de penser à un danger grave et imminent) ne sont pas identifiées.",
       "La note de procédure n'est pas produite."
     ],
     "echec_si_degraded": [
@@ -291,7 +291,7 @@
       },
       {
         "id": "B-04-i02",
-        "texte": "Distingue domaine ouvert à la négociation et obligation d'ouvrir ou de répondre à une demande : dans la partie législative L221-1 à L223-1 lue selon le rapport, aucune telle obligation préalable aux LDG n'est démontrée. Borne la conclusion à cette partie ; la partie réglementaire non trouvée reste à vérifier."
+        "texte": "Distingue domaine ouvert à la négociation et obligation d'ouvrir ou de répondre à une demande : dans la partie législative L221-1 à L223-1, aucune telle obligation préalable aux LDG n'est démontrée. Borne la conclusion à cette partie ; la partie réglementaire non trouvée reste à vérifier."
       },
       {
         "id": "B-04-i03",
@@ -933,7 +933,7 @@
       },
       {
         "id": "B-10-i01-b",
-        "texte": "Distingue la substitution vers un syndicat mixte (L5711-4) du mécanisme de reprise à établir à partir de l'arrêté et des compétences concernées."
+        "texte": "Si une substitution vers un syndicat mixte est évoquée, distingue L5711-4 du mécanisme de reprise à établir à partir de l'arrêté et des compétences concernées."
       },
       {
         "id": "B-10-i01-c",
@@ -941,7 +941,7 @@
       },
       {
         "id": "B-10-i01-d",
-        "texte": "Pour les 28 titulaires, établit le mécanisme applicable à partir de l'arrêté de dissolution ou suspend précisément cette conclusion ; les textes lus dans le rapport n'établissent pas leur transfert automatique à l'EPCI."
+        "texte": "Pour les 28 titulaires, établit le mécanisme applicable à partir de l'arrêté de dissolution ou suspend précisément cette conclusion ; ne présente pas leur transfert à l'EPCI comme automatique."
       },
       {
         "id": "B-10-i02",
@@ -1025,14 +1025,9 @@
     },
     "required_source_ids": [
       "LEGIARTI000022335804",
-      "LEGIARTI000023244245",
-      "LEGIARTI000038921997",
       "LEGIARTI000038922544",
-      "LEGIARTI000044426060",
       "LEGIARTI000044426062",
       "LEGIARTI000044426064",
-      "LEGIARTI000044427240",
-      "LEGIARTI000051732238",
       "LEGIARTI000054087794",
       "LEGIARTI000044427312",
       "LEGIARTI000044190730"
