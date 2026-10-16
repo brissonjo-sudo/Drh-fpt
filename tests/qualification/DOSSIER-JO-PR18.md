@@ -107,9 +107,19 @@ Préparation locale depuis `c8885eb`, sur instructions ciblées de Jo. [Correcti
 
 D74-4 : sept liaisons retirées seulement (B-10 L5211-4-1, L5211-25-1, L5211-26, L445-3, L253-5 ; A-10 R432-3 ; A-11 article 24 du décret85-603). L’article 24 du décret87-602 en A-02 est conservé. Les listes « Dossier réellement fourni » ci-dessous décrivent les archives historiques ; elles ne sont pas la liste des sources encore requises. La liste courante fait foi dans les JSON A/B et le registre T76 ; aucune preuve n’est supprimée.
 
-État courant : **24 cas, 131 critères d’intégration, 73 dégradés, 239 liaisons requises et 214 identifiants uniques**. Le constat T74 de132critères est historique. Les49liaisons sans attendu propre retrouvé et65rattachements implicites sont listés sans retrait. L’absence d’un numéro dans un critère n’est pas assimilée à l’absence de lien juridique. Les classements de sens restent à arbitrer ; ils ne modifient pas les seuils. Profils, provenance de rédaction et preuves historiques inchangés. Réserves, T29 et préparation PDF/CELEX T75 maintenues. Aucun gel.
+État courant : **24 cas, 131 critères d’intégration, 73 dégradés, 239 liaisons requises et 214 identifiants uniques**. Le constat T74 de132critères est historique. Les49liaisons sans attendu propre retrouvé et 65 rattachements implicites sont listés sans retrait. L’absence d’un numéro dans un critère n’est pas assimilée à l’absence de lien juridique. Les classements de sens restent à arbitrer ; ils ne modifient pas les seuils. Profils, provenance de rédaction et preuves historiques inchangés. Réserves, T29 et préparation PDF/CELEX T75 maintenues. Aucun gel.
 
 Le 16/10/2026 : **127/127 tests déterministes en cp1252**, puis **127/127 en UTF-8**, sans échec ni test ignoré ; encodages effectifs contrôlés. Cohérence et `build_bundle.py --check` réussis dans les deux environnements. Seul avertissement : tag `v0.7.0` absent de la copie, contrôle d’incrément ignoré. Empreintes brutes A/B/profils comparées à `suites.file_sha` et au dossier ; profils et registre `suites.json` inchangés, contenus et horodatages contrôlés. Aucun appel modèle réel, aucun gel ni tentative consommée.
+
+## Préparation runtime T75 — 16 octobre 2026
+
+Jo a relu T77 et différé sa signature jusqu’au commit runtime final. [Bilan T75](T75-PDF-CELEX-2026-10-16.md) : validation dédiée du PDF/CELEX figé et de son index, cinq traces de lecture locale datées réellement, tests de refus après altération. La lecture d’archive est distinguée de la consultation primaire rapportée du 14/10, heure inconnue ; aucune prétention à une nouvelle consultation EUR-Lex ni à la vigueur actuelle. Les anciens paragraphes disant PDF non compatible décrivent l’état historique antérieur à T75.
+
+Pour la loi 2016-1691, les deux identifiants fournis sont repris comme pistes attribuées à Claude, mais aucune nouvelle preuve primaire obtenue : identifiants PISTE absents du contexte normal du CLI utilisé, puis HTTP 403 sur les pages officielles. Les 3 liaisons B-09/B-12 restent à documenter par récupération primaire. Aucun texte, statut ou trace valide fabriqué. Les 20 liaisons historiques et la fraîcheur des autres sources restent à préparer.
+
+Jeux A/B, profils, PDF, index et archives historiques inchangés. Conservation des 49 liaisons sans attendu propre et 65 rattachements implicites confirmée par Jo ; aucun retrait. Aucun sceau ni campagne. Un nouvel acte non signé accompagnera le candidat runtime.
+
+Le16/10/2026 : **137/137 tests déterministes en cp1252 et 137/137 en UTF-8**, soit 127 existants et 10 nouveaux tests PDF, sans échec ni test ignoré. Cohérence et `build_bundle.py --check` réussis dans les deux environnements ; seul avertissement préexistant : tag v0.7.0 absent. A/B/profils/PDF etindex restent inchangés ; hashes bruts A/B/profils concordants avec `suites.file_sha`. Le registre `suites.json` reste inchangé, aucun sceau, tentative ou appel modèle.
 
 ## Sources et limites
 
