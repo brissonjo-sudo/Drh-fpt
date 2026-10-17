@@ -1,6 +1,6 @@
 # drh-fpt — Skill DRH Fonction Publique Territoriale
 
-Skill Claude d'expertise en gestion des ressources humaines de la
+Skill d'expertise en gestion des ressources humaines de la
 **fonction publique territoriale**, à la fois opérationnel et
 juridiquement sourcé.
 
@@ -27,10 +27,9 @@ Hybride :
   livrable.
 - **Vérifié sur déclencheur** — une **matrice métier/juridique** explicite
   indique quand vérifier la source (procédure, calcul, délai, condition
-  d'accès, compétence d'instance, jurisprudence). Le skill embarque un **noyau
-  de vérification autonome** (primarité, date de référence, conflit de normes,
-  abstention) et **s'appuie sur le skill `recherche-juridique`** pour
-  l'approfondissement.
+  d'accès, compétence d'instance, jurisprudence). Le skill embarque un filet de
+  sécurité (primarité, date de référence, conflit de normes, abstention) et
+  exige le skill `recherche-juridique` pour le fonctionnement nominal.
 
 ## Cadrage d'ouverture
 
@@ -74,13 +73,20 @@ drh-fpt/
 ├── scripts/
 │   ├── build_bundle.py                   Régénère le bundle depuis les sources (+ --check, --package)
 │   ├── bundle-preambule.md               Gabarit du préambule du bundle (placeholder {{VERSION}})
+│   ├── context_loader.py                 Charge le noyau, les branches et gabarits nécessaires
+│   ├── measure_contexts.py               Compare la taille des contextes complet et ciblé
 │   └── check_coherence.py                Vérifie version/bundle/CHANGELOG/renvois/arbre README
 ├── references/
 │   ├── _gabarit-branche.md               Gabarit décisionnel des branches
 │   ├── contrat-execution.md               Contrat d'exécution transversal testable
 │   ├── socle-sources-verification.md     Sources FPT, conflits de normes, valeurs chiffrées
 │   ├── parametres-collectivite.md        Variables +350 agents + garde-fous régimes spécifiques
-│   ├── carriere-paie.md                  Branche carrière & paie
+│   ├── restitution-proportionnee.md      Profondeur juridique et longueur de réponse
+│   ├── carriere-paie.md                  Routeur et contrôles communs carrière-paie
+│   ├── carriere-paie/
+│   │   ├── statut-discipline.md          Statut, carrière, instances et discipline
+│   │   ├── remuneration-paie.md          Traitement, indemnités, cotisations et retraite
+│   │   └── temps-fin-fonctions.md        Temps, abandon, grève et fins de fonctions
 │   ├── qvt-sante.md                      Branche QVT & santé
 │   ├── recrutement-formation.md          Branche recrutement & formation
 │   ├── cst-dialogue-social.md            Branche CST & dialogue social
@@ -100,11 +106,51 @@ drh-fpt/
 └── tests/
     ├── README.md                         Dispositif de tests (deux protocoles)
     ├── cas-de-test.json                  Source unique (32 variantes, 30 actives par mode)
-    ├── run_tests.py                      Harnais API (répondant + juge)
+    ├── run_tests.py                      Point d'entrée du harnais
+    ├── campaign.py                       Reprise, jugement, preuves et métriques
+    ├── providers.py                      Adaptateurs Anthropic et OpenAI
+    ├── claude_cli.py                     Claude Code OAuth, traces et confinement
+    ├── native_runtime.py                 Projet natif limité au corpus du cas
+    ├── suites.json                       Développement, régression ciblée, qualification A/B
+    ├── suites.py                         Approbation, gel et consommation des jeux
+    ├── qualification_control.py          Gel humain et abandon technique tracés
+    ├── arbitration.py                    Score brut et décisions humaines séparées
+    ├── sources-revue-pr18.json            Consultation primaire ciblée du 12 octobre
+    ├── sources-regression-v1.json         Sources des 14 cas critiques (à consulter avant campagne)
+    ├── evidence.schema.json              Schéma des traces de consultation
     ├── test_harness.py                   Tests déterministes du harnais
+    ├── test_context_loader.py            Tests du chargement ciblé
+    ├── test_providers.py                 Tests des adaptateurs sans réseau
+    ├── test_native_read_proof.py         Contenus reçus, expansions et segments natifs
+    ├── qualification/
+    │   ├── DOSSIER-JO-PR18.md            Questions, barèmes, réserves et profils à approuver
+    │   ├── NON-TRAITE-RELECTURE-2026-10-15.md  Réserves hors corrections de relecture
+    │   ├── PROCEDURE-QUARANTAINE-CODEX.md  Procédure préparée, exécution soumise à accord
+    │   ├── PROPOSITIONS-A10-B10-2026-10-15.md  Énoncés validés et provenance
+    │   ├── RECONCILIATION-SOURCES-2026-10-15.md  Écarts documentaires et décisions T74
+    │   ├── reconciliation-sources-2026-10-15.json  Registre des attendus, identifiants et preuves
+    │   ├── FIN-RELECTURE-2026-10-16.md  Corrections ciblées et sources conservées à arbitrer
+    │   ├── T75-PDF-CELEX-2026-10-16.md  Validation PDF et état des preuves primaires
+    │   ├── T79-ARCHIVE-LOI-2026-10-16.md  Pièce Claude et conditions de compatibilité des preuves
+    │   ├── inventaire-sources-fin-relecture-2026-10-16.json  Inventaire courant des 239 liaisons cas/source
+    │   ├── cases-a.json                  Douze cas neufs, non gelés
+    │   ├── cases-b.json                  Douze cas de réserve, non gelés
+    │   └── profiles-v1.json              Quatre profils exacts proposés avant gel
     ├── prompt-claude-code.md             Protocole sous-agents Claude Code (lit cas-de-test.json)
     ├── cas-co-activation.md              Cas transverse drh-fpt × recherche-juridique
-    └── rapports/                         Rapports de campagnes validés (datés)
+    └── rapports/                         Rapports datés et preuves de validation
+        ├── ETAT-PR18-2026-10-12.md        État courant, références par date et SHA
+        ├── CONTEXTE-PR18-2026-10-12.md    Mesure locale du candidat technique
+        ├── CONTEXTE-PR18-2026-10-12.json  Données par cas et empreintes
+        ├── CONTEXTE-v0.7.0.md            Mesure historique du 19 septembre 2026
+        ├── CONTEXTE-PR18-2026-10-11.md    Mesure du commit testé de la PR18
+        ├── CONTEXTE-PR18-2026-10-11.json  Données et provenance de cette mesure
+        ├── VALIDATION-PR18-2026-10-11.md  Deux campagnes finales et historique
+        ├── REVUE-PR18-2026-10-12.md       Corrections, sources relues et limites
+        ├── SOURCES-REVUE-PR18-2026-10-12.zip  Sources primaires de cette relecture
+        ├── SOURCES-JEUX-PR18-2026-10-12.zip  Sources publiques des deux jeux neufs
+        ├── PREUVES-PR18-2026-10-11.zip    Réponses, jugements et sources brutes
+        ├── relecture-24-cas-2026-10-15.md  Rapport fourni pour les corrections T73
         └── RAPPORT-2026-06-27.md         Campagne 10 cas (v0.4.2, archivée)
 ```
 
@@ -136,9 +182,10 @@ n'est livrée sans vérification (voir Validation).
 s'active automatiquement sur les questions RH territoriales.
 
 **Sur un autre LLM** : coller le contenu de `drh-fpt-bundle-pour-LLM.md` en tête
-de conversation (instructions système). Les fichiers de connaissance et de
-règles y sont consolidés avec une consigne d'adhérence et d'anti-hallucination
-(les gabarits de livrables `assets/` ne sont pas inclus dans le bundle).
+de conversation (instructions système). Les règles, branches, modules et
+gabarits de livrables y sont consolidés. Un environnement qui sait charger des
+fichiers à la demande peut utiliser `scripts/context_loader.py` pour réduire le
+contexte sans retirer le noyau de sécurité.
 
 ## Validation
 
@@ -152,9 +199,10 @@ répondant/juge à contextes séparés — voir `tests/`) :
   **réussite 5/5 sur 9 critères**.
 - Historique : 3 tests internes initiaux + 5 portages externes (Gemini,
   ChatGPT, Grok réussis ; Vibe conservé comme contre-exemple).
-- **Candidat v0.6.0** : sortie de brouillon suspendue aux deux campagnes de
-  30 cas (`integration` et `degraded`) selon le gate décrit dans
-  `tests/README.md`.
+- **PR18, candidate non publiée** : [état daté et références par SHA](tests/rapports/ETAT-PR18-2026-10-12.md).
+  Développement historique, contrôles locaux, mesures de contexte et
+  qualification en préparation y sont distingués. Les jeux neufs A/B et
+  barèmes restent à approuver par Jo. Aucun gel ni lancement nouveau.
 
 Détail : `tests/rapports/`, `JOURNAL.md`, `CHANGELOG.md`.
 

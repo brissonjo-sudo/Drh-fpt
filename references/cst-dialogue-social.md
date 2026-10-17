@@ -2,7 +2,8 @@
 
 > Structure conforme à `_gabarit-branche.md`. Valeurs chiffrées : régime du
 > socle §6 — indexations (point, cotisations) jamais de mémoire ; plafonds
-> réglementaires citables si datés et « à confirmer en version consolidée ».
+> réglementaires citables après consultation officielle de la version applicable ;
+> aucun chiffre en mode dégradé, réserves limitées aux points non vérifiés.
 
 ## 1. Périmètre
 
@@ -63,9 +64,13 @@ collective.
   à la représentativité. Modalités précises **à vérifier**.
 
 ### 5.4 Pilotage du dialogue social
-- **LDG** (lignes directrices de gestion) : établies par l'autorité territoriale
-  **après avis du CST** ; stratégie RH pluriannuelle et orientations de
-  promotion. Voir branche carrière-paie.
+- **LDG** (lignes directrices de gestion) : distinguer les LDG locales de
+  stratégie RH et de promotion/parcours des LDG relatives à la **promotion
+  interne**. Identifier qui établit les listes d'aptitude selon l'affiliation
+  au CDG et l'éventuelle compétence confiée, puis vérifier l'auteur des LDG,
+  le CST et le circuit d'avis correspondant (CGFP L413-6/R413-37, versions
+  applicables à consulter). En dégradé, conserver ces points comme contrôles,
+  sans certifier la compétence ni la procédure. Voir branche carrière-paie.
 - **RSU** (rapport social unique) : **annuel**, remplace le bilan social,
   alimente la base de données sociales (voir branche SI RH).
 - **Négociation collective** : ordonnance n° 2021-174 du 17 février 2021 ;
@@ -109,7 +114,14 @@ calendrier des élections professionnelles ; périmètre des accords négociable
 
 ## 11. Niveau de confiance (repères de la branche)
 
-- **Stable** : fusion CT/CHSCT en CST (2022), existence CAP/CCP, obligation RSU
+Ces repères documentaires ne certifient pas la réponse. Appliquer le niveau
+de confiance proposition par proposition : **Stable** seulement si un article
+consulté porte littéralement la proposition, dans sa version et son champ
+applicables. Toute conséquence conserve les réserves de sa prémisse, y compris
+dans les actes, formulaires et calendriers. Une réserve après une obligation,
+une condition ou une autorité non vérifiée ne répare pas son affirmation.
+
+- **Repères documentaires à vérifier pour la réponse** : fusion CT/CHSCT en CST (2022), existence CAP/CCP, obligation RSU
   et LDG, principe des élections quadriennales.
 - **À vérifier** : calendrier précis des élections ; barèmes des moyens
   syndicaux ; champ négociable.

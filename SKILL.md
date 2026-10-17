@@ -16,20 +16,22 @@ description: >-
   FPT, les fonctions publiques d'État ou hospitalière, ni pour les
   collectivités de moins de 350 agents.
 metadata:
-  version: 0.6.0
-  statut: huit branches + dispositif de tests + gabarits de livrables
-  date_derniere_revue_methodologique: 2026-07-14
-  date_derniere_verification_sources: 2026-09-04
+  version: 0.7.0
+  statut: candidate ; huit branches dont carrière-paie divisée en trois modules
+  date_derniere_revue_methodologique: 2026-10-12
+  date_derniere_verification_sources: 2026-10-12
+  portee_verification_sources: ciblée PR18 ; ne certifie pas toutes les références ni une réponse future
   perimetre: collectivités territoriales de plus de 350 agents
   dependances:
     - recherche-juridique >= 2.2.0 (obligatoire pour le fonctionnement nominal)
   compatibilite:
-    - Claude Opus (testé avec claude-opus-4-8)
-    - Claude Sonnet (testé avec claude-sonnet-4-6)
+    - Codex CLI (développement v0.7 ; répondant gpt-6.1-sol, juge gpt-6-sol, effort high)
+    - Claude Code natif (qualification v0.7 à réaliser)
+    - API Anthropic et OpenAI (adaptateurs disponibles ; compatibilité non qualifiée v0.7)
   langue: français
 ---
 
-# Skill : drh-fpt (v0.6.0)
+# Skill : drh-fpt (v0.7.0)
 
 > **Objet** : expertise d'une Direction des Ressources Humaines territoriale,
 > à la fois **opérationnelle** (rapide, orientée décision et livrable) et
@@ -42,6 +44,30 @@ metadata:
 > paramètres organisationnels (CDG, instances) doivent être revérifiés.
 
 ---
+
+## 0. Chargement obligatoire
+
+Les chemins `references/` et `assets/` se résolvent depuis le **répertoire contenant `SKILL.md`**.
+En chargement natif, utiliser le répertoire de base affiché par l'outil d'activation
+du skill ; ce n'est pas le répertoire de travail du projet.
+
+Pour une question dans le périmètre du skill, lire avant l'analyse du fond :
+
+1. `references/contrat-execution.md` : qualification et variables bloquantes ;
+2. `references/socle-sources-verification.md` : vérification et abstention ;
+3. `references/parametres-collectivite.md` : contexte institutionnel.
+
+Lire ensuite le routeur de la branche et les modules nécessaires (§7). Avant
+de livrer la réponse, appliquer `references/restitution-proportionnee.md`.
+Pour Carrière & paie, ouvrir `references/carriere-paie.md` **avant tout sous-module** :
+ses règles communes restent obligatoires, même si le module semble suffisant.
+En **chargement natif**, l'invocation du skill ne charge pas automatiquement
+ces références : les ouvrir effectivement. Si leur texte est déjà présent
+dans le contexte assemblé, l'utiliser sans le charger une seconde fois.
+En fonctionnement nominal, **co-activer `recherche-juridique`** et lire ses
+instructions avant d'interpréter les sources, y compris des documents officiels
+déjà fournis. Si ce compagnon ou les sources sont indisponibles, appliquer le
+mode dégradé du socle ; une source fournie ne remplace pas la méthode de vérification.
 
 ## 1. Déclenchement
 
@@ -112,6 +138,9 @@ aucune procédure détaillée et aucun projet d'acte juridiquement engageant ne
 doivent être livrés sans la vérification requise. Fournir uniquement le cadrage,
 les variables à réunir, la méthode de contrôle et une abstention motivée sur le
 fond non vérifié.
+Les durées, délais, seuils, quotités et montants présents dans les modules
+restent des repères de recherche. En mode dégradé, ne pas les reproduire,
+même comme « pistes à vérifier ». Les faits chiffrés fournis restent utilisables.
 
 **Les quatre réflexes du filet de sécurité** :
 
@@ -129,7 +158,13 @@ fond non vérifié.
    confirmée ou contradiction, ne pas trancher : ne fournir aucune valeur
    exacte destinée à un calcul, à la paie ou à un acte ; livrer seulement une
    esquisse conditionnelle bornée et signaler le point à vérifier. Une réserve
-   placée après un chiffre non vérifié ne répare pas son énoncé.
+   placée après un chiffre non vérifié ne répare pas son énoncé. La même règle
+   vaut pour une base légale, une obligation, une condition de procédure ou une
+   autorité compétente, en fonctionnement nominal comme en mode dégradé : ne
+   pas les affirmer puis les réserver tardivement. Une conséquence tirée d'une
+   prémisse « à vérifier » conserve cette réserve jusque dans l'acte, le
+   formulaire et le calendrier ; livrer un scénario conditionnel ou un champ
+   à compléter, sans passage obligé ou échéance ferme non vérifiés.
 
 Détail des sources FPT et règle de conflit →
 **`references/socle-sources-verification.md`**.
@@ -138,10 +173,29 @@ Détail des sources FPT et règle de conflit →
 
 ## 4. Niveau de confiance (à signaler en sortie)
 
+La confiance se donne **proposition par proposition**, et non globalement à
+la réponse ou au document. Une conséquence hérite des réserves de sa prémisse.
+
+**M6 — Propagation dans les livrables** : toute ligne d'un plan d'action,
+d'un tableau décisionnel, d'une synthèse, d'un projet d'acte ou d'un courrier
+qui énonce une obligation, une compétence, une formalité, un délai, une
+conséquence ou une interdiction porte soit le texte consulté qui la fonde,
+soit la forme d'un **contrôle à faire** (« vérifier si … avant … »).
+Une réserve générale en tête ou en fin de réponse ne couvre pas les lignes
+opérationnelles. Sans source consultée, ne pas transformer une option en
+étape obligatoire ni une hypothèse en circuit fermé.
+
+En **mode dégradé**, sans consultation officielle, toutes les propositions
+juridiques sont des contrôles à faire ou des questions ouvertes, y compris
+les règles périphériques : compétences d'acteurs, rattachement CDG,
+imputations comptables et voies d'envoi. Aucune date d'effet ni valeur
+réglementaire n'est reproduite.
+
 Graduation simple, pour calibrer l'assertivité :
 
-- **Stable** — source officielle effectivement consultée pour la réponse,
-  version applicable confirmée et lien ou identifiant officiel donné.
+- **Stable** — un article effectivement consulté porte littéralement la
+  proposition, dans son champ et sa version applicable ; lien ou identifiant
+  officiel donné. La seule présence d'une référence ne suffit pas.
 - **À vérifier** — texte modifié récemment **ou** valeur volatile (voir §6.1
   du socle) → vérification obligatoire avant usage en acte.
 - **Jurisprudentiel / débattu** — position non figée → recherche approfondie,
@@ -227,6 +281,32 @@ branches suivent le **gabarit décisionnel** de
 | **Agents contractuels** | `references/contractuels.md` ✅ |
 | **Statut : garanties, déontologie & signalements** | `references/statut-garanties.md` ✅ |
 
+Pour **Carrière & paie**, lire d'abord le routeur commun puis uniquement les
+modules nécessaires :
+
+- statut, carrière, instances et discipline →
+  `references/carriere-paie/statut-discipline.md` ;
+- traitement, régime indemnitaire, cotisations et affiliation retraite →
+  `references/carriere-paie/remuneration-paie.md` ;
+- temps de travail, retraite progressive, départ à la retraite, rupture
+  conventionnelle, chômage, insuffisance professionnelle, abandon de poste,
+  emplois fonctionnels et grève → `references/carriere-paie/temps-fin-fonctions.md`.
+
+Lire plusieurs modules lorsque la question les croise. En environnement ne
+permettant pas un chargement ciblé fiable, utiliser le bundle complet.
+
+Lire `references/contrat-execution.md` : c'est le contrat métier transversal.
+Son ordre de raisonnement est : qualifier, lever les variables, borner,
+vérifier, décider, agir, livrer, sécuriser.
+
+L'ordre d'assemblage du harnais est distinct : compagnon et documents officiels,
+puis instructions DRH, modules et gabarits, enfin restitution. Cet assemblage
+ne dispense pas de qualifier le dossier avant d'interpréter une source.
+Charger chaque matériau une seule fois. Appliquer en dernier les contrôles de
+`references/restitution-proportionnee.md` : acteurs, compétences et distinctions
+utiles doivent être visibles. Le bundle complet est un portage ; le chargement
+natif de Claude Code se mesure séparément.
+
 > **Renvois inter-branches** : une question en croise souvent plusieurs. Réflexes
 > fréquents — PSC/coût → masse salariale ; LDG et RSU → CST/dialogue social ;
 > entretien professionnel → recrutement-formation et carrière-paie ; formation
@@ -254,6 +334,14 @@ Produits à la demande, **classés par niveau** (le niveau guide le format) :
 
 Gabarits et éléments obligatoires par type → `assets/`. Quand un livrable
 revient, **proposer d'en créer le gabarit**.
+
+Adapter la longueur visible à la demande sans réduire les vérifications : lire
+`references/restitution-proportionnee.md`. Une question précise appelle une
+réponse ciblée ; un arbitrage appelle options, recommandation et risques ; un
+acte ou dossier complexe appelle l'analyse utile et le livrable complet.
+La concision conserve les contrôles de couverture de la famille concernée.
+Après consultation des sources, appliquer le rappel final de restitution :
+le compagnon vérifie, le contrat DRH encadre la couverture métier et la réponse.
 
 ---
 
@@ -284,7 +372,7 @@ La checklist du §10 élève la qualité à chaque exécution.
 2. Toute affirmation relevant d'une ligne « Oui » de la **matrice (§2.2)** a-t-elle été **vérifiée** (ou signalée « à vérifier ») ?
    Toute précision surnuméraire a-t-elle subi le même contrôle que le noyau de
    la réponse ?
-3. **Valeur d'indexation** (point d'indice, cotisations) confirmée à la date utile, jamais de mémoire ? **Plafond réglementaire** cité avec sa source datée et la réserve « à confirmer en version consolidée » ? (cf. socle §6)
+3. **Valeur d'indexation** (point d'indice, cotisations) confirmée à la date utile, jamais de mémoire ? **Plafond réglementaire** contrôlé sur sa source officielle datée et dans sa version applicable ? Les réserves portent-elles sur les points encore ouverts, sans autoriser un chiffre non vérifié ? (cf. socle §6)
 4. **Éligibilité** vérifiée (RIFSEEP/ISFE, promotion interne…) ?
 5. **Obligation vs faculté**, **national vs choix local**, **titulaire vs contractuel** distingués ?
 6. **Niveau de confiance** indiqué quand utile ?
@@ -296,11 +384,29 @@ La checklist du §10 élève la qualité à chaque exécution.
 10. **Livrable** demandé effectivement produit ?
 11. **Cas journalisable** apparu → proposé ?
 12. Pas de **donnée personnelle d'agent** exposée inutilement.
+13. Les acteurs, compétences, seuils et distinctions de régime utiles sont-ils
+    **visibles** dans la réponse, y compris conditionnelle ? Appliquer le
+    contrôle de couverture de `references/restitution-proportionnee.md`.
+14. Les échéances sont-elles calculées depuis la **date de référence du dossier**,
+    et non depuis la date d'exécution de la réponse ? Une date manquante reste
+    à demander ; ne pas inventer le point de départ.
+15. L'**ordre demandé** est-il respecté ? Toute séquence différente est présentée
+    comme une option motivée, sans remplacer silencieusement la demande.
+16. **Passe finale de propagation (M6)** : relire chaque section opérationnelle
+    ligne par ligne ; toute proposition sans source consultée est reformulée
+    en contrôle. Les réserves de l'analyse sont-elles reportées dans le projet
+    d'acte et le plan d'action comme conditions de finalisation ?
 
 ---
 
 ## 11. Limites et précautions
 
+- **DPO** : pour les traitements de données RH, articuler avec dpo-ct les
+  analyses RGPD ; DRH conserve la qualification statutaire.
+- **DPM** : pour les agents de police municipale, DRH traite le statut et la
+  paie ; les pouvoirs de police et l'organisation opérationnelle relèvent du DPM.
+- **DirFi** : articuler coût et masse salariale avec la direction financière ;
+  les règles budgétaires et comptables locales relèvent de dirfi-fpt.
 - Ne remplace pas l'avis d'un juriste, d'un avocat ou du contrôle de légalité
   pour les décisions à fort enjeu contentieux.
 - Périmètre borné aux collectivités de **plus de 350 agents**.

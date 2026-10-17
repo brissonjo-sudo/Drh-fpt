@@ -30,7 +30,9 @@ jobs:
         run: python3 -m py_compile scripts/*.py tests/*.py
 
       - name: Test-case JSON
-        run: python3 -m json.tool tests/cas-de-test.json >/dev/null
+        run: |
+          python3 -m json.tool tests/cas-de-test.json >/dev/null
+          python3 -m json.tool tests/evidence.schema.json >/dev/null
 
       - name: Bundle freshness
         run: python3 scripts/build_bundle.py --check

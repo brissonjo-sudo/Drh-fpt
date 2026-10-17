@@ -61,9 +61,29 @@ version consolidée)
   poursuites civiles/pénales pour des faits commis dans l'exercice des
   fonctions, **sauf faute personnelle détachable** (intentionnelle, excès
   manifeste, comportement étranger au service).
+- **Instruction de la faute** : l'agent documente les attaques et leur lien
+  au service ; l'employeur apprécie une éventuelle faute personnelle qui lui
+  serait imputable, au vu du dossier. Ne pas exiger une preuve générale
+  d'absence de faute de l'agent, ni présumer sa faute ou l'écarter sans examen.
+- **Dérogation** : une protection due ne devient pas une faculté de refus.
+  Des motifs d'intérêt général légalement admissibles, établis et soumis au
+  contrôle du juge peuvent toutefois justifier une dérogation (CE, 7 juin
+  2024, n°476196, §3 ; version et portée à vérifier). N'inventer aucun motif
+  dans un dossier qui n'en révèle pas.
 - **Contenu** : assistance juridique, prise en charge des frais de
   procédure/avocat, réparation du préjudice. Plafonds et modalités précises :
   **à vérifier** (convention d'assurance statutaire le cas échéant).
+- **Mise en œuvre concrète** : rendre explicites l'assistance juridique,
+  les frais de procédure/avocat et la réparation éventuelle, même si la
+  question porte d'abord sur le moment de l'octroi. Réserver brièvement
+  l'étendue et les modalités de prise en charge à leur vérification officielle.
+  Si des frais d'avocat sont demandés, vérifier la demande écrite, les faits
+  et la durée couverts, l'avocat choisi et la convention agent-avocat à
+  communiquer à l'employeur. La convention de l'employeur avec l'avocat est une
+  possibilité à vérifier, pas une obligation générale ; elle encadre les
+  honoraires et autres frais, avec règlement/justificatifs prévus. Ne pas
+  promettre un remboursement illimité ni inventer un plafond universel.
+  En mode dégradé, demander ces pièces et contrôles sans certifier de régime.
 - **Octroi** par décision de **l'autorité territoriale**, pas l'assemblée.
 - **Refus = acte faisant grief** : motivation + voies et délais de recours
   obligatoires.
@@ -91,6 +111,33 @@ confirmer)
   d'entreprise**
   (régime propre, durée limitée, conditions à vérifier) ; **poursuite d'une
   activité privée** dans une société pour un agent nouvellement recruté.
+- **Emploi permanent à temps non complet ou incomplet au plus égal à 70 %** :
+  L123-5 permet l'activité privée lucrative à titre professionnel dans son
+  champ ; L123-6 soumet cette dérogation à déclaration à l'autorité hiérarchique.
+  R123-6 vise une déclaration écrite de la nature des activités **envisagées**,
+  avec, le cas échéant, forme et objet social, secteur et branche de l'entreprise.
+  Lecture opérationnelle de cette articulation : recueillir la déclaration
+  avant l'exercice de l'activité envisagée, sans inventer un délai chiffré.
+  Ne pas substituer automatiquement le régime d'autorisation de l'activité
+  accessoire à cette voie déclarative. Ne pas confondre durée de l'emploi non
+  complet et temps partiel de l'agent.
+- **Opposition au cumul ou à sa poursuite** — R123-2 prévoit trois motifs :
+  intérêt du service ; informations inexactes fondant l'autorisation ou
+  communiquées dans la déclaration ; incompatibilité avec les fonctions ou
+  l'emploi au regard des obligations déontologiques du titre ou de l'article
+  432-12 du code pénal. Ne pas réduire le contrôle au seul conflit d'intérêts.
+- **Interdictions de L123-1** — conserver la réserve générale des articles
+  L123-2 à L123-8 et les cinq objets : création/reprise des entreprises visées
+  au 1° ; direction de sociétés ou associations à but lucratif ; consultations,
+  expertises ou plaidoiries dans les litiges intéressant une personne publique,
+  **sauf prestation au profit d'une personne publique hors secteur concurrentiel** ;
+  intérêts dans une entreprise contrôlée par l'administration ou en relation
+  avec elle, **de nature à compromettre l'indépendance** ; cumul d'un emploi
+  permanent à temps complet avec d'autres emplois permanents à temps complet.
+  Relire le texte entier et son champ avant d'appliquer l'une de ces interdictions.
+  Sources de maintenance : CGFP L123-1, L123-5, L123-6, R123-2 et R123-6,
+  versions au 12/10/2026 du pack PISTE du 16/10/2026 ; consultation à renouveler
+  pour toute réponse nouvelle.
 - **Contrôles de déconflit** : **départ vers le privé** et **cumul création
   d'entreprise** → contrôle **interne** (référent déontologue) pour la
   majorité des agents ; **saisine HATVP** requise pour les **emplois les plus
@@ -130,7 +177,7 @@ confirmer)
   en conflit d'intérêts), **contradictoire adapté** (agent mis en cause
   entendu, sans retarder les mesures de protection), **confidentialité**,
   **traçabilité** écrite. **Distincte** de la procédure disciplinaire (établit
-  les faits ; la discipline en tire les conséquences — voir carriere-paie
+  les faits ; la discipline en tire les conséquences — voir references/carriere-paie/statut-discipline.md
   §5.5). Articulation protection fonctionnelle : demandable sans attendre la
   fin de l'enquête. Articulation pénale : **art. 40 CPP** (référence stable)
   — aviser sans délai le procureur si infraction possible, en parallèle de
@@ -148,7 +195,7 @@ confirmer)
   classées sans discontinuité ; **interdiction absolue** des mentions
   relatives aux opinions/activités **politiques, syndicales, religieuses** ;
   **droit d'accès** de l'agent à tout moment (à distinguer du droit de
-  communication renforcé propre à la discipline, carriere-paie §5.5).
+  communication renforcé propre à la discipline, references/carriere-paie/statut-discipline.md §5.5).
 - **Durées de conservation** : suivre le **référentiel CNIL RH secteur
   public** en vigueur — jamais de durée précise de mémoire.
 - **Données de santé** : circuit **cloisonné** via la médecine de
@@ -162,7 +209,7 @@ confirmer)
 
 ### 5.5 Renvois inter-branches
 
-**Discipline et suspension conservatoire** → `carriere-paie` §5.5 (cette
+**Discipline et suspension conservatoire** → `references/carriere-paie/statut-discipline.md` §5.5 (cette
 branche traite seulement l'articulation enquête/discipline, pas la
 procédure). **Santé au travail, RPS** → `qvt-sante` (volet médical et
 prévention d'un signalement). **Diffusion interne** du dispositif de
@@ -214,7 +261,7 @@ Appliquer le noyau de vérification (matrice §2.2 du SKILL.md) dès que :
     généraliste au **dossier individuel** de l'agent public, qu'il exclut
     explicitement (régi par l'arrêté du 21 décembre 2012).
 11. Confondre l'accès **ordinaire** au dossier et le droit de **communication
-    intégrale** propre à la discipline (carriere-paie §5.5).
+    intégrale** propre à la discipline (references/carriere-paie/statut-discipline.md §5.5).
 
 ## 9. Données volatiles à vérifier
 
@@ -248,7 +295,14 @@ Gabarits → `assets/`.
 
 ## 11. Niveau de confiance (repères de la branche)
 
-- **Stable** : obligation de protection fonctionnelle et son autonomie
+Ces repères documentaires ne certifient pas la réponse. Appliquer le niveau
+de confiance proposition par proposition : **Stable** seulement si un article
+consulté porte littéralement la proposition, dans sa version et son champ
+applicables. Toute conséquence conserve les réserves de sa prémisse, y compris
+dans les actes, formulaires et calendriers. Une réserve après une obligation,
+une condition ou une autorité non vérifiée ne répare pas son affirmation.
+
+- **Repères documentaires à vérifier pour la réponse** : obligation de protection fonctionnelle et son autonomie
   vis-à-vis du pénal ; principe d'exclusivité et dérogations encadrées ;
   obligation de référents déontologue et laïcité ; double condition
   cumulative de la désobéissance légitime ; art. 40 CPP ; interdiction des
@@ -263,8 +317,12 @@ Gabarits → `assets/`.
 
 1. Qualité du demandeur et nature des faits (victime/mis en cause)
    identifiées avant toute protection fonctionnelle ?
-2. Faute personnelle détachable explicitement écartée ou identifiée ?
-3. Si refus (protection, cumul) : motivation et voies de recours présentes ?
+2. Faute personnelle éventuelle appréciée par l'employeur, sans preuve
+   générale d'absence exigée de l'agent ? Motif d'intérêt général éventuel
+   vérifié et motivé, sans motif inventé ni refus discrétionnaire ?
+3. Assistance juridique, frais de procédure/avocat et réparation explicités,
+   modalités/limites à vérifier sans plafond inventé ? Si refus (protection,
+   cumul) : motivation et voies de recours présentes ?
 4. Emploi qualifié d'« exposé » avant de statuer sur cumul/départ privé
    (interne vs HATVP) ?
 5. Circuit de signalement et référents identifiés (propre ou mutualisé) ?

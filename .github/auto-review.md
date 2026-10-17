@@ -1,15 +1,15 @@
 # Règles de relecture du dépôt
 
 Ce dépôt est le skill DRH « source », dont `ansm-drh` reprend l'architecture.
-Il n'a **aucune CI** avant l'ajout du présent workflow : `scripts/check_coherence.py`
-et `tests/run_tests.py` existent mais ne s'exécutent nulle part automatiquement.
-La relecture est donc le seul filet avant fusion, pas un complément à des
-contrôles déjà en place.
+La CI exécute les contrôles déterministes, la compilation, la validation JSON,
+la fraîcheur du bundle et la cohérence du dépôt. Les campagnes LLM restent des
+gates de publication distincts, car elles nécessitent des modèles et des traces
+de vérification.
 
 ## À vérifier en priorité, dans cet ordre
 
 - **Cohérence version / bundle / CHANGELOG**, ce que
-  `scripts/check_coherence.py` vérifierait s'il tournait : si le diff change
+  `scripts/check_coherence.py` vérifie : si le diff change
   la `version:` du YAML de `SKILL.md`, `CHANGELOG.md` doit contenir une
   entrée `## [version]` correspondante. Si le diff modifie `SKILL.md` ou un
   fichier de `references/`, `drh-fpt-bundle-pour-LLM.md` doit être régénéré

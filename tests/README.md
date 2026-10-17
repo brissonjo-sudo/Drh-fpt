@@ -1,194 +1,210 @@
-# Tests — drh-fpt
+# Validation de DRH-FPT
 
-Dispositif de test du skill par **sous-agents à contexte vierge**.
+`cas-de-test.json` contient 32 variantes : **30 cas d’intégration et 30 cas dégradés**.
+Chaque réponse vient d’une session indépendante puis d’un modèle juge distinct.
 
-## Principe
+## Protocole après relecture du 12 octobre 2026
 
-Chaque cas est traité par un **appel API indépendant** dont le seul contexte est
-le bundle du skill (en `system`) + le cas (en `user`). Le modèle ne connaît ni
-l'historique de conception, ni les réponses attendues : il répond « à froid ».
-C'est l'équivalent d'un sous-agent neutre, reproductible.
+| Suite | Cas par mode | Usage |
+|---|---:|---|
+| `developpement` (défaut) | 30 | Corpus déjà utilisé pour corriger le skill |
+| `regression-ciblee-v1` | 14 | Cas touchés et critiques, sans revendication de qualification |
+| `qualification-a-v1` | 12 | Première qualification sur cas neufs |
+| `qualification-reserve-v1` | 12 | Réserve après échec A, jamais une relance de A |
 
-Un second appel (le **juge**), tout aussi vierge, note chaque réponse contre la
-grille d'attendus et repère les affirmations fausses ou inventées.
+Les jeux neufs sont écrits par Claude, relus par Codex puis soumis à **Jo**.
+Le gel est refusé sans décision humaine explicite sur les fichiers concrets,
+leurs empreintes et les quatre profils (modèles, efforts, versions CLI).
+Chaque cas déclare les identifiants officiels de ses sources indispensables :
+les traces doivent couvrir cette liste entière avant génération. Un cas
+purement organisationnel peut avoir une exemption explicite revue par Jo.
+Les seals restent locaux pendant les campagnes pour conserver un commit testé
+propre ; ils seront inclus dans les preuves publiées. Ils prouvent une
+traçabilité locale, pas une signature d'identité humaine ou fournisseur.
 
-## `cas-de-test.json` — source unique des cas
+Avant gel, les suites de qualification refusent tout appel. Après lancement,
+chaque créneau est consommé ; `--case`, `--resume` et `--judge-only` sont
+interdits pour la qualification. Une correction du candidat consomme A ; le
+premier lancement de B fixe le nouveau commit, identique pour ses quatre
+campagnes. Les barèmes B et profils restent ceux approuvés. Si B échoue, le
+candidat est non qualifié et un nouveau cycle distinct doit être préparé.
 
-**Tous** les cas de test (harnais API et protocole sous-agents Claude Code)
-vivent désormais dans **`cas-de-test.json`**, pour éviter toute divergence
-entre deux jeux de cas. Ce fichier contient actuellement **32 cas**, dont
-**30 sont actifs dans chaque mode de campagne** :
+Ordre : A Codex intégration/dégradé (juge Claude), A Claude natif
+intégration/dégradé (juge Codex), puis développement ciblé avec
+`gpt-6.1-sol` / `gpt-6-sol`, efforts `high`. Le cycle A compte au maximum
+76 réponses et 76 jugements, hors rédaction, revue des cas et arbitrages.
 
-- **22 cas `"standard"`** — questions RH représentatives des huit branches,
-  avec leurs `attendus` (critères de réussite) ;
-- **5 cas `"echec_attendu"`** — cas **adversariaux** : le skill promet de
-  s'abstenir/rediriger dans certaines situations (hors périmètre, données
-  volatiles, sujet non couvert, transposition indue) ; ici la **réussite**
-  consiste à refuser de répondre normalement ;
-- **5 cas `"architectural"`** — cas transversaux qui évaluent la chaîne
-  d'exécution indépendamment de la seule exactitude juridique : qualification,
-  variables bloquantes, règle nationale versus choix local, activation de
-  plusieurs branches, décision, recommandation, plan d'action et production
-  effective du livrable demandé.
+### Profil Claude natif
 
-Champs par cas : `id`, `branche`, `type` (`standard`, `echec_attendu` ou
-`architectural`), `prompt`, `attendus` (liste), `echec_si` (liste,
-éventuellement vide — conditions disqualifiantes spécifiques au cas) et,
-pour les variantes conditionnelles, `modes` (`integration` ou `degraded`).
+`--provider claude-cli --execution-profile claude-native` prépare un projet
+éphémère : skill DRH, compagnon en intégration, documents officiels du seul
+cas. Le CLI utilise l'authentification OAuth existante dans une configuration
+temporaire séparée ; aucun secret ni fichier de configuration n'est copié dans
+le corpus ou les preuves. Outils limités à Read/Glob/Grep/Skill, hooks et MCP
+désactivés, aucun Bash, aucune écriture, aucun fallback ni reprise de session.
+Une connexion expirée ou disposant de moins d'une heure est refusée avant
+copie et appel : reconnecter Claude par son flux normal. L'adaptateur n'écrit
+jamais dans le magasin de connexion permanent.
+Le corpus est déclaré comme plugin local `drh-eval` via `--plugin-dir` : le
+mode `--restricted` ignore la découverte liée aux réglages du projet. Le
+catalogue doit contenir les skills candidats sous leur nom complet. Le prompt
+demande leur usage sans préassembler leur contenu ; les invocations Skill et
+lectures Read sont conservées. Ce montage est contrôlé et éphémère, sans
+installation du plugin dans la configuration de l'utilisateur.
+Le répondant reçoit la question et l'emplacement des documents : pas de bundle,
+de rappel final ajouté, de critères ni de réponses antérieures.
 
-Les cas 15 et 16 existent dans deux variantes :
+Le contrôle commun recoupe les traces JSONL, le modèle exact, les empreintes
+du runtime et les fichiers nécessaires réellement lus. Le corpus préparé et
+les fichiers lus sont deux mesures différentes. Le juge Claude utilise une
+session séparée, sans outils. Les traces vérifient la cohérence des preuves,
+**pas l'authenticité cryptographique des appels fournisseur**.
+Une continuation automatique après limite de sortie ou une compaction du CLI
+est refusée, même si le dernier événement annonce un succès. La limite de
+tokens passée au CLI reste indicative. Un cas organisationnel explicitement
+exempté ne reçoit pas de fausse source et n'exige pas de lire un fichier
+officiel absent ; les lectures du noyau DRH restent obligatoires.
 
-- **intégration** : le compagnon est disponible, la réussite consiste à
-  vérifier puis répondre avec une source officielle traçable ;
-- **mode dégradé** : le compagnon est indisponible, la réussite consiste à
-  annoncer ce mode et à s'abstenir de fournir la donnée exacte non vérifiée.
+Ce test natif fournit des documents préconsultés. Il **ne valide pas** la
+recherche autonome via le serveur juridique en fonctionnement nominal.
 
-## Critères architecturaux
+### Seuil et arbitrage
 
-Les cas architecturaux sont jugés comme des cas de réussite ordinaires, avec
-des critères transversaux renforcés. Une réponse peut être juridiquement juste
-et néanmoins échouer si elle :
+Seuil fixé avant lancement : **tous les critères obligatoires satisfaits,
+zéro erreur juridique confirmée, aucun doute non tranché**. Scores de style
+indicatifs. Une preuve absente, altérée, mal formée ou tronquée bloque toujours.
 
-- conclut avant d'avoir qualifié le dossier et identifié les variables
-  bloquantes ;
-- confond une règle nationale impérative avec une délibération ou un choix
-  local ;
-- ignore une branche nécessaire ou applique le régime du titulaire à un
-  contractuel ;
-- ne formule ni état de décision ni recommandation ;
-- ne fournit pas de plan d'action opérationnel ;
-- annonce un livrable sans le produire réellement.
+`--arbitrations <fichier.json>` fournit au contrôle commun des décisions de
+Jo séparées : cas, critère/erreur/doute, empreintes suite/réponse/jugement,
+décision confirmée, date, motif, sources et trace de l'accord humain. Aucun
+jugement original n'est réécrit. Scores bruts et après arbitrage sont rapportés
+séparément. Un arbitrage ne peut pas réparer une preuve technique invalide.
 
-Réciproquement, une architecture réussie ne compense pas une affirmation
-juridique fausse. Le juge rend deux appréciations distinctes :
+Le contrôle commun de qualification exige également `--claude-integration`
+et `--claude-degraded`. `--close-game` clôture le jeu seulement après les
+quatre campagnes et la résolution des disputes ; la réserve reste bloquée
+tant que A n'est pas clos en échec. Ne pas renseigner une décision humaine
+sur la seule initiative d'un modèle.
 
-- **architecture d'exécution** ;
-- **fiabilité juridique**.
+Si un processus est interrompu avant bilan, ne pas inventer de résultats pour
+clôturer A. `qualification_control.py abandon` consomme le jeu en échec
+technique, avec motif, provenance et empreintes des fichiers déjà produits.
+Il n'autorise aucune relance de A ni réussite métier. Le gel concret s'effectue
+avec `qualification_control.py freeze --suite <nom> --approval <décision-Jo.json>`.
+La réserve peut ensuite qualifier le candidat corrigé sous son propre commit.
+Le contrôle exige le registre de consommation ; pour une archive portable,
+fournir `--launch-state <registre.json>`. Un jeu clos en échec reste refusé
+même si des bilans anciens paraissent favorables.
 
-Une erreur juridique, y compris dans un développement surnuméraire, fait
-échouer la fiabilité juridique et le verdict global. Une référence récente ou
-postérieure à une date de cutoff ne peut pas être déclarée inventée pour ce seul
-motif : elle doit être vérifiée sur une source officielle ou rester classée
-comme non tranchée.
+## Consultation réelle avant intégration
 
-Le référentiel de ces exigences est
-`references/contrat-execution.md`. L'ajout des cas au JSON ne constitue pas une
-preuve de réussite : seuls une campagne répondant + juge effectivement exécutée
-et son rapport permettent de conclure sur le comportement du modèle.
+Le collecteur utilise le script PISTE du compagnon juridique. Les identifiants
+restent dans son environnement local. Le manifeste fixe les textes, passages,
+cas et date de référence ; mettre cette date à jour pour une nouvelle revue.
 
-## Deux protocoles, une seule source de cas
-
-1. **Harnais API** (`run_tests.py` + `cas-de-test.json`) — automatisé,
-   reproductible : en mode nominal, injecte le bundle DRH et le dépôt ou bundle
-   du compagnon dans `system`; en mode dégradé, injecte le bundle DRH avec
-   l'indisponibilité explicite du compagnon. Il rejoue les 30 cas actifs du
-   mode choisi ; le juge applique `echec_si` et, pour les cas adversariaux,
-   inverse la logique de verdict (réussite = refus correct).
-2. **Protocole sous-agents Claude Code** (`prompt-claude-code.md`) — orchestré
-   par Claude Code sur le dépôt courant (pas de clonage) : un sous-agent
-   **répondant** au contexte frais par cas, puis un sous-agent **juge**
-   indépendant qui lit `cas-de-test.json` pour les critères et les règles
-   transverses (référence inventée → ÉCHEC ; cas adversarial → réussite si
-   refus/abstention/redirection).
-
-S'y ajoute `cas-co-activation.md` : cas transverse testant la collaboration
-`drh-fpt` × `recherche-juridique` (abandon de poste / radiation des cadres),
-jouable aussi en variante dégradée avec `drh-fpt` seul.
-
-## Contenu
-
-- `cas-de-test.json` — **source unique** des cas (standard + architecturaux +
-  adversariaux),
-  attendus et `echec_si` (harnais API + protocole sous-agents).
-- `run_tests.py` — harnais (réponse + évaluation optionnelle), lit `type` et
-  `echec_si` pour juger correctement les cas adversariaux.
-- `test_harness.py` — contrôles locaux sans API : JSON, séparation des modes,
-  chargement du compagnon et composition du contexte.
-- `prompt-claude-code.md` — protocole sous-agents (renvoie à `cas-de-test.json`
-  pour les cas et barèmes, ne les duplique plus).
-- `cas-co-activation.md` — cas transverse deux skills + barème + variante
-  dégradée (drh-fpt seul).
-- `resultats/` — sorties brutes générées (non versionnées).
-- `rapports/` — rapports de campagnes validés, datés (versionnés).
-
-## Usage
-
-```bash
-export ANTHROPIC_API_KEY=sk-...
-python tests/run_tests.py --legal-skill /chemin/recherche-juridique
-python tests/run_tests.py --judge --strict --legal-skill /chemin/recherche-juridique
-python tests/run_tests.py --mode degraded --judge --strict
+```powershell
+python -X utf8 tests/live_sources.py --manifest tests/sources-manifest.json `
+  --legal-skill 'C:\chemin\droit-francais-skill' `
+  --output tests/resultats/sources
 ```
 
-Le chemin du compagnon peut viser son dépôt, son dossier `skill/` ou un bundle
-Markdown. Le chargeur résout notamment la structure actuelle
-`droit-francais-skill/skill/SKILL.md`.
+Les réponses originales sont archivées sous `raw/*.json.gz`. Chaque trace
+contient l’identifiant officiel, la requête, l’horodatage, la date applicable,
+le texte lu (avec NOTA transitoires), le chemin de l’archive et son SHA256.
+Le validateur contrôle ces champs contre l’archive et refuse une consultation
+de plus de 24 heures au démarrage. Les publications JORF prouvent le texte publié
+et sont recoupées avec la consolidation. La page CNRACL documente l’affiliation.
 
-Options : `--model` (répondant, défaut `claude-sonnet-4-6`), `--judge-model`
-(juge, défaut `claude-opus-4-8`), `--mode` (`integration` par défaut ou
-`degraded`) et `--legal-skill` (dépôt ou bundle Markdown du compagnon,
-obligatoire en intégration). `--strict` exige `--judge` et renvoie un code
-non nul si la campagne est incomplète, tronquée, non parsable, exécutée depuis
-un dépôt sale, si un critère n'est pas entièrement satisfait ou si l'un des
-verdicts attendus est en échec.
+Les passages officiels vont **au répondant et au juge**. Les critères et
+conclusions attendues vont seulement au juge. Un lien sans trace ne suffit pas.
+`rules` évalue les garde-fous ; `snapshot --source-pack` charge des Markdown
+datés sans prouver le droit actuel. L’intégration stricte exige `live`.
+Le mode dégradé exclut une vérification live et teste le cadrage et l’abstention.
 
-Le juge API reçoit le même corpus de skills que le répondant afin de contrôler
-les règles applicables. Il ne dispose toutefois d'aucun accès direct à
-Légifrance : cette campagne est un **préflight reproductible**, pas une preuve
-autonome de fraîcheur juridique. Toute référence non contrôlable dans le corpus
-doit rester signalée comme non tranchée.
+## Deux campagnes de développement complètes (historique)
 
-Chaque campagne enregistre automatiquement :
+Partir d’un commit propre, avec un compagnon propre et versionné.
+Exemple avec le CLI Codex déjà connecté au compte de l’utilisateur :
 
-- un identifiant de campagne et les dates UTC ;
-- le mode et les modèles ;
-- la version, le SHA Git et l'état propre/sale de chaque skill ;
-- le SHA-256 de chaque contexte chargé et la liste des sources du compagnon ;
-- ces éléments dans `_provenance.json`, `_bilan.json` et l'en-tête de chaque
-  réponse brute.
+```powershell
+python -X utf8 tests/run_tests.py --provider codex --model gpt-6.1-sol `
+  --judge --judge-provider codex --judge-model gpt-6-sol `
+  --reasoning-effort medium --judge-reasoning-effort medium `
+  --strict --workers 2 --context-mode selective `
+  --legal-skill 'C:\chemin\droit-francais-skill' `
+  --evidence-mode live --evidence-file tests/resultats/sources/evidence.json
 
-## Lecture des résultats
+python -X utf8 tests/run_tests.py --mode degraded --provider codex --model gpt-6.1-sol `
+  --judge --judge-provider codex --judge-model gpt-6-sol `
+  --reasoning-effort medium --judge-reasoning-effort medium `
+  --strict --workers 2 --context-mode selective
 
-- `resultats/<campagne-id>/<id>.md` — la réponse du sous-agent vierge.
-- `resultats/<campagne-id>/<id>-eval.json` — l'évaluation (statut par critère,
-  erreurs, score).
-- `resultats/<campagne-id>/_provenance.json` — empreinte reproductible des deux
-  skills, du JSON des cas et de la campagne.
-- `resultats/<campagne-id>/_bilan.json` — moyenne globale (inclut le `type` par
-  cas) et résultat détaillé du gate strict.
+python -X utf8 tests/release_gate.py --integration '<bilan-integration.json>' `
+  --degraded '<bilan-degraded.json>' --output tests/resultats/gate-publication.json
+```
 
-## Gate de sortie de brouillon
+Utiliser une paire de modèles distincts disponible sur le compte.
+Anthropic Messages (`ANTHROPIC_API_KEY`) et OpenAI Responses (`OPENAI_API_KEY`)
+restent pris en charge. Les paramètres incompatibles échouent explicitement.
+Aucun coût n’est calculé sans tarif vérifié.
 
-La validation finale d'une version exige **deux campagnes distinctes** avec le
-protocole outillé `prompt-claude-code.md` :
+Codex utilise une session éphémère en répertoire temporaire, ignore la
+configuration utilisateur, désactive la recherche et refuse les outils.
+Les journaux JSONL sont conservés. Le plafond de sortie du CLI est **indicatif** ;
+un tour final complet reste obligatoire. `--workers` autorise 1 à 4 cas concurrents.
 
-1. `integration` — 30 cas, avec `recherche-juridique` réellement chargé ;
-2. `degraded` — 30 cas, sans compagnon, pour vérifier l'abstention.
+## Critères, contexte et reprise
 
-Chaque campagne doit porter sur le même SHA propre du candidat et satisfaire
-simultanément les conditions suivantes :
+Chaque attendu possède un identifiant stable et un texte exact. Le juge
+restitue chaque critère avec une justification. Un critère PARTIEL ou ABSENT,
+une erreur, une troncature ou un verdict incohérent fait échouer le gate.
+`attendus_degraded` et `echec_si_degraded` remplacent les critères nominaux.
 
-- 30 réponses et 30 jugements exploitables ;
-- aucune erreur API/outillage, troncature ou sortie non parsable ;
-- tous les critères `SATISFAIT` ;
-- 30 verdicts globaux `REUSSITE` ;
-- 30 verdicts de fiabilité juridique `REUSSITE` ;
-- architecture `REUSSITE` pour chaque cas architectural et aucun verdict
-  d'architecture `ECHEC` ;
-- aucune erreur juridique, référence inventée ou référence suspecte non
-  résolue après contrôle en source officielle.
+`--context-mode selective` charge le noyau, les branches et le gabarit demandé.
+`full` charge le bundle. Une sélection `--case` sert seulement au diagnostic.
 
-Un échec impose une correction puis le rejeu complet du mode concerné sur le
-nouveau SHA. Seuls les rapports qui satisfont ces critères sont copiés dans
-`tests/rapports/` et versionnés. La sortie de brouillon intervient après la
-publication des deux rapports et la réussite des contrôles déterministes.
+`--resume <campagne-id>` conserve les réponses et crée une nouvelle évaluation.
+`--judge-only <campagne-id>` rejoue le juge. Reprendre avec les mêmes options
+de répondant, sources et contexte ; le compagnon reste requis en intégration.
+SHA Git, état du dépôt, cas, bundle, compagnon, preuves et contextes doivent
+correspondre. Un corpus modifié ne peut pas être associé à d’anciennes réponses.
 
-## Étendre
+## Rapports et gate commun
 
-Ajouter un cas = un objet dans `cas-de-test.json` (`id`, `branche`, `type`,
-`prompt`, `attendus`, `echec_si`). Viser les comportements sensibles : données
-volatiles, statuts particuliers, actes faisant grief, pièges de qualification.
-Pour un cas adversarial, mettre `type: "echec_attendu"`, décrire dans
-`attendus` le comportement de refus/abstention attendu, et lister dans
-`echec_si` les comportements disqualifiants (répond normalement, invente,
-transpose).
+```text
+resultats/<campagne-id>/
+  _provenance.json
+  <cas>.md
+  <cas>-response.json
+  <cas>-respondant.jsonl          # Codex
+  evaluations/<evaluation-id>/
+    <cas>-eval.json
+    <cas>-juge.jsonl              # Codex
+    _bilan.json
+```
+
+Le gate commun vérifie les deux bilans stricts, les 30 réponses et jugements
+réels par mode, les critères et empreintes, le même commit propre, bundle
+et cas. Un sous-ensemble ou un simple verdict favorable ne valide pas une version.
+Les deux campagnes définitives suivent les corrections et utilisent le même commit.
+
+Préserver rapports, réponses, jugements, traces et archives sources.
+Un commit publiant seulement les preuves doit identifier le commit testé ;
+il ne constitue pas une nouvelle exécution du skill.
+
+## Contrôles locaux
+
+```powershell
+python -X utf8 -m unittest discover -s tests -p 'test_*.py'
+python -X utf8 scripts/build_bundle.py --check
+python -X utf8 scripts/check_coherence.py
+```
+
+## Développement de la PR18 — 11 octobre 2026
+
+[Rapport complet et archive portable](rapports/VALIDATION-PR18-2026-10-11.md).
+Deux campagnes de 30 cas sur le même commit propre, gate commun réussi.
+Ces résultats suivent des corrections sur le même corpus et ne constituent
+pas la nouvelle qualification sur cas neufs.
+Les preuves et la documentation sont publiées dans un commit distinct ;
+le commit testé est identifié dans le rapport et la mesure.

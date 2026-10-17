@@ -35,14 +35,23 @@ SEP = "=" * 80
 
 # Ordre exact des sections du bundle, tel qu'observé dans
 # drh-fpt-bundle-pour-LLM.md : SKILL.md, contrat d'exécution, socle,
-# paramètres, fiche profil, puis les huit branches (routeur §7 de SKILL.md).
+# paramètres, gabarits, huit branches et modules de carrière-paie, puis
+# restitution une seule fois en dernier (routeur §7 de SKILL.md).
 SECTIONS = [
     ("RÈGLES DE CONDUITE (SKILL)", SKILL_MD),
     ("CONTRAT D'EXÉCUTION TRANSVERSAL", ROOT / "references/contrat-execution.md"),
     ("SOCLE — SOURCES & VÉRIFICATION", ROOT / "references/socle-sources-verification.md"),
     ("PARAMÈTRES & STATUTS PARTICULIERS", ROOT / "references/parametres-collectivite.md"),
     ("FICHE PROFIL (cadrage d'ouverture)", ROOT / "assets/fiche-profil-collectivite.md"),
+    ("GABARIT — décision", ROOT / "assets/decision-modele.md"),
+    ("GABARIT — délibération", ROOT / "assets/deliberation-modele.md"),
+    ("GABARIT — courrier", ROOT / "assets/courrier-modele.md"),
+    ("GABARIT — note", ROOT / "assets/note-modele.md"),
+    ("GABARIT — procédure", ROOT / "assets/procedure-modele.md"),
     ("BRANCHE — Carrière & paie", ROOT / "references/carriere-paie.md"),
+    ("MODULE — Carrière, statut et discipline", ROOT / "references/carriere-paie/statut-discipline.md"),
+    ("MODULE — Rémunération et paie", ROOT / "references/carriere-paie/remuneration-paie.md"),
+    ("MODULE — Temps de travail et fin de fonctions", ROOT / "references/carriere-paie/temps-fin-fonctions.md"),
     ("BRANCHE — QVT & santé", ROOT / "references/qvt-sante.md"),
     ("BRANCHE — Recrutement & formation", ROOT / "references/recrutement-formation.md"),
     ("BRANCHE — CST & dialogue social", ROOT / "references/cst-dialogue-social.md"),
@@ -50,10 +59,10 @@ SECTIONS = [
     ("BRANCHE — Communication interne", ROOT / "references/communication-interne.md"),
     ("BRANCHE — Agents contractuels", ROOT / "references/contractuels.md"),
     ("BRANCHE — Statut : garanties, déontologie & signalements", ROOT / "references/statut-garanties.md"),
+    ("RESTITUTION PROPORTIONNÉE", ROOT / "references/restitution-proportionnee.md"),
 ]
 
-# Exclu du bundle (documenté dans le préambule) : gabarits de livrables
-# assets/*-modele.md, méta-gabarit references/_gabarit-branche.md, tests/,
+# Exclu du bundle : méta-gabarit references/_gabarit-branche.md, tests/ et
 # registre de maintenance references/cache-plafonds-regime-indemnitaire.md.
 
 

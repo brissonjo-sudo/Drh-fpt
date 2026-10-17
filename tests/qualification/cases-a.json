@@ -1,0 +1,1330 @@
+[
+  {
+    "id": "A-01",
+    "branche": "carriere-paie",
+    "type": "standard",
+    "prompt": "Un agent territorial titulaire occupe un emploi permanent à temps non complet (quotité 60 %) dans une collectivité de 400 agents. Il déclare à son autorité territoriale qu'il envisage d'exercer, à compter du 1er décembre 2026, en dehors de ses heures de service, une activité de consultant indépendant à titre lucratif. L'autorité territoriale s'interroge sur la légalité de cette situation et sur les conditions dans lesquelles elle peut s'y opposer. Date : 12 octobre 2026. Produire une note d'analyse sur le cadre applicable et une décision motivée sur l'opposition ou l'autorisation.",
+    "contextes": [
+      "parametres-collectivite",
+      "carriere-paie",
+      "statut-garanties"
+    ],
+    "attendus": [
+      {
+        "id": "A-01-i01",
+        "texte": "L123-5 est identifié comme base de la dérogation : un agent occupant un emploi permanent à temps non complet avec une durée ≤70 % de la durée légale peut exercer une activité privée lucrative ; la compatibilité avec l'interdiction générale de L123-1 est explicitée."
+      },
+      {
+        "id": "A-01-i02",
+        "texte": "L'obligation déclarative (L123-6, R123-6) est distinguée de l'autorisation préalable : la déclaration porte sur l'activité envisagée. Son caractère préalable est explicité comme une déduction de R123-6, sans exiger que le texte utilise ce mot."
+      },
+      {
+        "id": "A-01-i03",
+        "texte": "Identifie et applique aux faits le motif d'opposition tenant à l'intérêt du service (R123-2)."
+      },
+      {
+        "id": "A-01-i03-b",
+        "texte": "Identifie et applique aux faits le motif d'opposition tenant aux informations inexactes (R123-2)."
+      },
+      {
+        "id": "A-01-i03-c",
+        "texte": "Identifie et applique aux faits le motif d'opposition tenant à l'incompatibilité déontologique (R123-2)."
+      },
+      {
+        "id": "A-01-i03-d",
+        "texte": "Distingue l'absence de motif d'opposition établi d'une compatibilité démontrée."
+      },
+      {
+        "id": "A-01-i03-e",
+        "texte": "Fournit une position motivée sur les éléments acquis ou, si nécessaire, un projet conditionnel précisant les seules informations manquantes."
+      }
+    ],
+    "attendus_degraded": [
+      {
+        "id": "A-01-d01",
+        "texte": "La quotité de 60 % est prise comme acquise ; les informations manquantes sont listées : fonctions exercées par l'agent, nature et compatibilité de l'activité avec les fonctions, existence d'un conflit d'intérêts ou d'un lien avec les missions."
+      },
+      {
+        "id": "A-01-d02",
+        "texte": "Aucune règle juridique n'est certifiée : le cadre est présenté sous forme de questions à instruire (régime applicable, obligation déclarative ou d'autorisation, motifs d'opposition) sans conclure sur la licéité."
+      },
+      {
+        "id": "A-01-d03",
+        "texte": "Un projet de décision conditionnel est proposé avec champs à compléter ; toute certification non vérifiée est un échec."
+      }
+    ],
+    "echec_si": [
+      "L123-5 n'est pas identifié ou le régime de l'activité accessoire autorisée (L123-7) est appliqué à la place.",
+      "L'obligation déclarative est présentée comme une obligation d'autorisation préalable.",
+      "Les motifs d'opposition (R123-2) ne sont pas distingués ou un motif non prévu est certifié.",
+      "Aucune décision motivée ni projet de décision conditionnel n'est produit."
+    ],
+    "echec_si_degraded": [
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
+      "Les informations manquantes sur les fonctions exercées et la nature de l'activité ne sont pas identifiées.",
+      "Aucun projet de décision conditionnel n'est proposé."
+    ],
+    "source_requirements": [
+      {
+        "reference": "CGFP L123-5 et L123-6",
+        "passage_a_consulter": "Conditions du cumul pour emploi permanent à temps non complet ≤70 %, obligation déclarative",
+        "statut_verification": "consulte_dans_dossier"
+      },
+      {
+        "reference": "CGFP R123-5 et R123-6",
+        "passage_a_consulter": "Modalités de la déclaration, information de l'agent",
+        "statut_verification": "consulte_dans_dossier"
+      },
+      {
+        "reference": "CGFP R123-2",
+        "passage_a_consulter": "Motifs d'opposition au cumul par l'autorité hiérarchique",
+        "statut_verification": "consulte_dans_dossier"
+      },
+      {
+        "reference": "CGFP L123-7",
+        "passage_a_consulter": "Activité accessoire autorisée : régime distinct de L123-5 ; référence utilisée par le critère d'échec",
+        "statut_verification": "verifie_selon_complement_2026-10-14"
+      }
+    ],
+    "coverage": "carriere-paie",
+    "novelty_reason": "Teste la dérogation à l'interdiction de cumul propre aux emplois permanents à temps non complet (L123-5) et la décision d'opposition motivée, distinct de tout cas d'avancement ou de recrutement du jeu.",
+    "modes": [
+      "integration",
+      "degraded"
+    ],
+    "preuve_requise": true,
+    "author_provenance": {
+      "family": "Claude",
+      "revision_file": "authoring-v3",
+      "old_responses_or_scores_supplied": false,
+      "final_revision_family": "Claude",
+      "final_revision_model": "claude-opus-4-8",
+      "patch_file": "A-1-20261012T104928Z.text",
+      "patch_text_sha256": "6fe15069af797abb95f3389d7f74862ee9cec4ffb4296e1cd36050ed1ee05db7"
+    },
+    "required_source_ids": [
+      "LEGIARTI000044427803",
+      "LEGIARTI000044427807",
+      "LEGIARTI000044427809",
+      "LEGIARTI000046933345",
+      "LEGIARTI000050546349",
+      "LEGIARTI000050546351",
+      "LEGIARTI000050546363",
+      "LEGIARTI000050546365"
+    ]
+  },
+  {
+    "id": "A-02",
+    "branche": "qvt-sante",
+    "type": "standard",
+    "prompt": "Un agent territorial titulaire est en congé de longue maladie depuis 18 mois dans une collectivité de 400 agents. Son médecin traitant préconise une reprise à temps partiel thérapeutique à 80 % ; un médecin agréé a rendu un avis favorable. La DRH doit organiser la reprise : qui prend la décision d'autorisation, dans quel délai, quel maintien de rémunération s'applique, et dans quels cas le conseil médical intervient-il ? Date : 12 octobre 2026. Produire une note de procédure interne.",
+    "contextes": [
+      "qvt-sante",
+      "carriere-paie",
+      "carriere-remuneration-paie"
+    ],
+    "attendus": [
+      {
+        "id": "A-02-i01",
+        "texte": "La décision d'autorisation appartient à l'autorité territoriale (art. 13-2 décret 87-602 vérifié) ; le médecin agréé peut être sollicité à l'initiative de l'employeur mais ne prend pas la décision ; le conseil médical intervient en cas de contestation d'un avis médical (art. 13-5 vérifié) ou dans les cas listés art. 5 I (réintégration après expiration des droits, fonctions à conditions de santé particulières, application art. 24) ; ces hypothèses sont distinguées des faits du cas."
+      },
+      {
+        "id": "A-02-i02",
+        "texte": "Le maintien de l'intégralité du traitement, du SFT et de l'indemnité de résidence est fondé sur CGFP L823-4 vérifié ; les éléments non couverts (primes, régime indemnitaire) sont identifiés comme nécessitant vérification séparée."
+      },
+      {
+        "id": "A-02-i03",
+        "texte": "Le délai de décision après CLM (au plus tard au jour de la reprise, art. 13-2 I décret 87-602 vérifié) est précisé ; l'information obligatoire du médecin de prévention (art. 13-8 vérifié) est mentionnée."
+      }
+    ],
+    "attendus_degraded": [
+      {
+        "id": "A-02-d01",
+        "texte": "Les variables bloquantes sont identifiées : certificat médical transmis avec quotité/durée/modalités prescrites, avis du médecin agréé formalisé, existence de fonctions à conditions de santé particulières, droits à congé restants et perspective de réintégration."
+      },
+      {
+        "id": "A-02-d02",
+        "texte": "Sans source, aucune procédure juridique n'est certifiée : compétences, délais et rôle du conseil médical sont présentés comme des points à vérifier avant tout engagement."
+      },
+      {
+        "id": "A-02-d03",
+        "texte": "Une organisation de reprise conditionnelle est proposée ; les points non vérifiés (primes, rôle éventuel de la médecine préventive à rechercher) sont explicitement signalés comme à confirmer."
+      }
+    ],
+    "echec_si": [
+      "Le conseil médical est présenté comme l'instance qui autorise le TPT.",
+      "Le maintien de rémunération est avancé sans base vérifiée ou une valeur différente de l'intégralité est certifiée.",
+      "Le délai applicable après CLM (art. 13-2 I) est ignoré.",
+      "Les cas d'intervention du conseil médical (contestation art. 13-5 vs hypothèses art. 5 I) ne sont pas distingués."
+    ],
+    "echec_si_degraded": [
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
+      "Les variables manquantes (certificat médical transmis, avis agréé formalisé, fonctions à conditions de santé particulières, droits à congé restants et perspective de réintégration) ne sont pas identifiées.",
+      "Aucune structure conditionnelle n'est proposée."
+    ],
+    "source_requirements": [
+      {
+        "reference": "CGFP L823-1, L823-2, L823-4, L823-6",
+        "passage_a_consulter": "Conditions, rémunération et renouvellement du TPT (articles reproduits au dossier)",
+        "statut_verification": "consulte_dans_dossier"
+      },
+      {
+        "reference": "Décret n°87-602, art. 13-1, 13-2, 13-5, 13-8",
+        "passage_a_consulter": "Procédure d'autorisation TPT après CLM, délais, médecin agréé, contestation, médecin de prévention",
+        "statut_verification": "consulte_dans_dossier"
+      },
+      {
+        "reference": "Décret n°87-602, art. 5 I 3° et 4° et II 2°",
+        "passage_a_consulter": "Cas de consultation du conseil médical : réintégration, fonctions à conditions particulières, contestation d'avis médical",
+        "statut_verification": "consulte_dans_dossier"
+      },
+      {
+        "reference": "Texte régissant le régime indemnitaire (RIFSEEP) pendant le TPT",
+        "passage_a_consulter": "Maintien ou suspension des primes pendant le TPT",
+        "statut_verification": "a_consulter"
+      }
+    ],
+    "coverage": "qvt-sante",
+    "novelty_reason": "Porte sur la répartition des rôles autorité/médecin agréé/conseil médical dans l'autorisation du TPT après CLM avec délai et rémunération ; distinct des cas reclassement et inaptitude du jeu.",
+    "modes": [
+      "integration",
+      "degraded"
+    ],
+    "preuve_requise": true,
+    "author_provenance": {
+      "family": "Claude",
+      "revision_file": "authoring-v3",
+      "old_responses_or_scores_supplied": false,
+      "final_revision_family": "Claude",
+      "final_revision_model": "claude-opus-4-8",
+      "patch_file": "A-1-20261012T104928Z.text",
+      "patch_text_sha256": "6fe15069af797abb95f3389d7f74862ee9cec4ffb4296e1cd36050ed1ee05db7"
+    },
+    "required_source_ids": [
+      "LEGIARTI000044311735",
+      "LEGIARTI000044311749",
+      "LEGIARTI000044424519",
+      "LEGIARTI000044424523",
+      "LEGIARTI000044424527",
+      "LEGIARTI000044424529",
+      "LEGIARTI000049428885",
+      "LEGIARTI000049428903",
+      "LEGIARTI000054641701",
+      "LEGIARTI000054641703",
+      "LEGIARTI000054641706"
+    ]
+  },
+  {
+    "id": "A-03",
+    "branche": "recrutement-formation",
+    "type": "standard",
+    "prompt": "Une commune de 600 agents doit pourvoir un emploi permanent vacant de responsable de la cybersécurité (catégorie A). La vacance a été publiée il y a quatre mois ; la procédure de recrutement d'un fonctionnaire n'a pas abouti, comme documenté par le service RH. La direction hésite entre L332-8 2° (recrutement contractuel permanent) et L332-14 (vacance temporaire dans l'attente d'un fonctionnaire). La recherche d'un fonctionnaire se poursuit. La délibération créant l'emploi n'est pas jointe ; sa mention de la possibilité de recruter un contractuel reste à établir. Date : 12 octobre 2026. Produire une note d'aide à la décision comparant les deux fondements et recommandant le choix.",
+    "contextes": [
+      "parametres-collectivite",
+      "recrutement-formation",
+      "contractuels"
+    ],
+    "attendus": [
+      {
+        "id": "A-03-i01",
+        "texte": "Identifie sur une source vérifiée citée la justification par les besoins ou la nature des fonctions requise pour L332-8 2°."
+      },
+      {
+        "id": "A-03-i01-b",
+        "texte": "Identifie le constat d'infructuosité documenté préalable à l'examen des candidatures non fonctionnaires (R332-9) pour L332-8 2°."
+      },
+      {
+        "id": "A-03-i01-c",
+        "texte": "Identifie L332-14 comme une occupation temporaire dans l'attente d'un fonctionnaire."
+      },
+      {
+        "id": "A-03-i01-d",
+        "texte": "Identifie la publicité de la vacance relevant de L313-4 pour L332-14."
+      },
+      {
+        "id": "A-03-i01-e",
+        "texte": "Motive le choix entre une occupation contractuelle durable justifiée par les besoins ou la nature des fonctions et une occupation temporaire dans l'attente d'un fonctionnaire, sans rendre les démarches légalement exclusives."
+      },
+      {
+        "id": "A-03-i02",
+        "texte": "Les durées maximales sont précisées avec bases vérifiées : L332-9 (3 ans renouvelable jusqu'à 6 ans, reconduction expresse pour CDI au-delà, conditions de décompte L332-10) pour L332-8 2° ; L332-14 (1 an, prolongeable jusqu'à 2 ans si procédure fonctionnaire demeurée infructueuse) ; la prolongation de L332-14 est conditionnée à l'échec avéré du recrutement."
+      },
+      {
+        "id": "A-03-i03",
+        "texte": "Distingue les pièces établissant la publicité applicable au fondement retenu."
+      },
+      {
+        "id": "A-03-i03-b",
+        "texte": "Demande la pièce retraçant le constat préalable d'infructuosité requis pour L332-8 2°."
+      },
+      {
+        "id": "A-03-i03-c",
+        "texte": "Documente l'attente d'un fonctionnaire et, en cas de prolongation de L332-14, l'échec de son recrutement."
+      },
+      {
+        "id": "A-03-i03-d",
+        "texte": "Demande la justification des besoins ou de la nature des fonctions pour L332-8 2°."
+      },
+      {
+        "id": "A-03-i03-e",
+        "texte": "Vérifie si la délibération créant l'emploi prévoit le recrutement d'un contractuel (L313-1) ; faute de pièce, suspend précisément la conclusion sur cette condition."
+      },
+      {
+        "id": "A-03-i03-f",
+        "texte": "Prévoit le fondement légal du contrat à partir d'une source vérifiée citée (R331-6 à R331-11)."
+      },
+      {
+        "id": "A-03-i03-g",
+        "texte": "Pour L332-14, prévoit le motif précis du contrat à partir d'une source vérifiée citée."
+      },
+      {
+        "id": "A-03-i03-h",
+        "texte": "Pour L332-14, prévoit le descriptif du poste annexé, sans exiger une énumération exhaustive de clauses non établies."
+      }
+    ],
+    "attendus_degraded": [
+      {
+        "id": "A-03-d01",
+        "texte": "La poursuite de la recherche d'un fonctionnaire et l'infructuosité documentée sont prises comme acquises ; leurs pièces sont demandées pour la seule traçabilité. Les informations manquantes sont identifiées : justification des besoins ou de la nature des fonctions, durée prévisible du besoin, délibération créant l'emploi et mention de la possibilité de recruter un contractuel."
+      },
+      {
+        "id": "A-03-d02",
+        "texte": "Sans source, aucun régime légal n'est certifié : les deux fondements sont présentés comme des scénarios à instruire, conditions et durées posées comme points à vérifier."
+      },
+      {
+        "id": "A-03-d03",
+        "texte": "Une note conditionnelle est produite listant les pièces à réunir selon le scénario retenu, avec indication explicite des points à confirmer avant signature."
+      }
+    ],
+    "echec_si": [
+      "La distinction entre L332-8 2° et L332-14 n'est pas opérée ou un seul fondement est traité.",
+      "Le constat d'infructuosité documenté (R332-9) est omis.",
+      "Les durées maximales et la condition de prolongation de L332-14 sont ignorées.",
+      "Les mentions contractuelles obligatoires sont certifiées sans source vérifiée citée."
+    ],
+    "echec_si_degraded": [
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
+      "Les informations manquantes (justification des besoins ou de la nature des fonctions, durée prévisible du besoin, délibération créant l'emploi et possibilité d'un recrutement contractuel) ne sont pas identifiées.",
+      "Aucun livrable conditionnel distinguant les deux scénarios n'est proposé."
+    ],
+    "source_requirements": [
+      {
+        "reference": "CGFP L332-8 2°, L332-9, L332-10",
+        "passage_a_consulter": "Conditions du recrutement permanent, renvoi de L332-8 à L313-1, durée, renouvellement, CDIsation et décompte des services",
+        "statut_verification": "consulte_dans_dossier"
+      },
+      {
+        "reference": "CGFP L332-14",
+        "passage_a_consulter": "Vacance temporaire, renvoi de L332-14 à L313-4, durée 1 an prolongeable 2 ans si procédure infructueuse",
+        "statut_verification": "consulte_dans_dossier"
+      },
+      {
+        "reference": "CGFP R332-9",
+        "passage_a_consulter": "Constat d'infructuosité préalable à l'examen des candidatures non fonctionnaires",
+        "statut_verification": "consulte_dans_dossier"
+      },
+      {
+        "reference": "CGFP L313-1 et L313-4 (renvois respectifs de L332-8 et L332-14)",
+        "passage_a_consulter": "L332-8 renvoie aux formalités de L313-1 (création de l'emploi par délibération, mention de la possibilité de recruter un contractuel) ; la publicité de la vacance relève de L313-4, auquel renvoie L332-14",
+        "statut_verification": "verifie_selon_complement_2026-10-14"
+      },
+      {
+        "reference": "CGFP R331-6 à R331-11",
+        "passage_a_consulter": "Fondement légal du contrat, motif précis et descriptif du poste annexé pour L332-14",
+        "statut_verification": "consulte_dans_dossier"
+      }
+    ],
+    "coverage": "recrutement-formation",
+    "novelty_reason": "Arbitrage entre deux fondements contractuels distincts avec horizons et conditions différents ; force l'analyse du constat d'infructuosité et de l'intention réelle, distinct du cas B-03 portant sur la CDIsation d'une série de CDD.",
+    "modes": [
+      "integration",
+      "degraded"
+    ],
+    "preuve_requise": true,
+    "author_provenance": {
+      "family": "Claude",
+      "revision_file": "authoring-v3",
+      "old_responses_or_scores_supplied": false,
+      "final_revision_family": "Claude",
+      "final_revision_model": "claude-opus-4-8",
+      "patch_file": "A-1-20261012T104928Z.text",
+      "patch_text_sha256": "6fe15069af797abb95f3389d7f74862ee9cec4ffb4296e1cd36050ed1ee05db7"
+    },
+    "required_source_ids": [
+      "LEGIARTI000044426684",
+      "LEGIARTI000044426696",
+      "LEGIARTI000044427020",
+      "LEGIARTI000044427026",
+      "LEGIARTI000046119123",
+      "LEGIARTI000048778058",
+      "LEGIARTI000051962486",
+      "LEGIARTI000051962495",
+      "LEGIARTI000051962502",
+      "LEGIARTI000051962504",
+      "LEGIARTI000051962508",
+      "LEGIARTI000051962514",
+      "LEGIARTI000051962516",
+      "LEGIARTI000051962518",
+      "LEGIARTI000051962520",
+      "LEGIARTI000051962522",
+      "LEGIARTI000051962524",
+      "LEGIARTI000051962528",
+      "LEGIARTI000051962530",
+      "LEGIARTI000051962557",
+      "LEGIARTI000051962559",
+      "LEGIARTI000051962561",
+      "LEGIARTI000051962563",
+      "LEGIARTI000051962565",
+      "LEGIARTI000051980613"
+    ]
+  },
+  {
+    "id": "A-04",
+    "branche": "cst-dialogue-social",
+    "type": "standard",
+    "prompt": "Le CST d'une collectivité de 800 agents est consulté sur le projet de délibération fixant le taux de promotion au grade d'attaché principal pour l'année N (question relevant de R253-7 12° et dont la mise en œuvre nécessite une délibération de l'organe délibérant). Les représentants du personnel émettent un vote unanime défavorable. Le DGS s'interroge sur les suites obligatoires et sur les conditions du second examen. Date : 12 octobre 2026. Produire un plan de procédure précisant les étapes obligatoires, les délais et les règles de quorum applicables au second examen.",
+    "contextes": [
+      "parametres-collectivite",
+      "cst-dialogue-social",
+      "carriere-paie"
+    ],
+    "attendus": [
+      {
+        "id": "A-04-i01",
+        "texte": "La procédure de réexamen obligatoire est fondée sur R254-68 vérifié : la question fait l'objet d'un réexamen ; une nouvelle délibération est organisée dans un délai entre 8 et 30 jours ; la nouvelle convocation est adressée dans un délai d'au moins 8 jours à compter de la première séance."
+      },
+      {
+        "id": "A-04-i02",
+        "texte": "Les règles du second examen sont précisées à partir de R254-68, sans imposer un numéro d'alinéa non vérifiable : le comité siège valablement quel que soit le nombre de représentants du personnel présents et ne peut être appelé à délibérer une nouvelle fois selon cette procédure. Le quorum du collège employeur, lorsque son avis est recueilli, doit être examiné séparément au regard de R254-56 et de la délibération locale applicable."
+      },
+      {
+        "id": "A-04-i03",
+        "texte": "La condition déclenchante est identifiée sur bases vérifiées : vote unanime défavorable sur une question soumise en application de R253-7 et dont la mise en œuvre nécessite une délibération ; le taux de promotion (R253-7 12°, L522-27) satisfait cette double condition ; l'exception de R254-56 est réservée : R254-68 ne s'applique pas lorsque le vote unanime défavorable intervient lors de la seconde réunion organisée après un défaut de quorum ; une conclusion conditionnelle sur ces éléments locaux absents est admise sans remettre en doute les faits fournis."
+      }
+    ],
+    "attendus_degraded": [
+      {
+        "id": "A-04-d01",
+        "texte": "L'unanimité du vote défavorable et le caractère délibératoire de la question sont pris comme acquis ; les vérifications portent sur les modalités de séance non décrites : composition et quorum de la première séance. Le recueil éventuel de l'avis du collège employeur peut être mentionné ; son omission n'est pas bloquante en mode dégradé."
+      },
+      {
+        "id": "A-04-d02",
+        "texte": "Sans source, aucun délai ni règle de quorum n'est certifié : la procédure de réexamen est présentée comme un point à vérifier ; toute certification non vérifiée est un échec."
+      },
+      {
+        "id": "A-04-d03",
+        "texte": "Un plan conditionnel est proposé avec les étapes séquencées ; l'unanimité et le caractère délibératoire étant acquis, les réserves portent sur les modalités de séance non décrites."
+      }
+    ],
+    "echec_si": [
+      "La procédure de réexamen obligatoire (R254-68) n'est pas identifiée.",
+      "Le délai encadrant la nouvelle délibération (entre 8 et 30 jours) est ignoré ou inexact.",
+      "La règle de quorum allégé au second examen est omise.",
+      "La double condition déclenchante (vote unanime ET question délibératoire) n'est pas traitée."
+    ],
+    "echec_si_degraded": [
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
+      "Les modalités de séance non décrites (composition et quorum de la première séance) ne sont pas identifiées ; l'avis du collège employeur reste facultatif dans ce mode.",
+      "Aucun plan conditionnel n'est proposé."
+    ],
+    "source_requirements": [
+      {
+        "reference": "CGFP R254-68",
+        "passage_a_consulter": "Procédure obligatoire après vote unanime défavorable sur question nécessitant délibération, délais, quorum second examen",
+        "statut_verification": "consulte_dans_dossier"
+      },
+      {
+        "reference": "CGFP R253-7 12°",
+        "passage_a_consulter": "Consultation obligatoire du CST sur le taux d'avancement de grade",
+        "statut_verification": "consulte_dans_dossier"
+      },
+      {
+        "reference": "CGFP L522-27",
+        "passage_a_consulter": "Taux de promotion fixé par l'assemblée délibérante après avis du CST",
+        "statut_verification": "consulte_dans_dossier"
+      },
+      {
+        "reference": "CGFP R254-56",
+        "passage_a_consulter": "Quorum du CST territorial et règles pour la seconde réunion",
+        "statut_verification": "consulte_dans_dossier"
+      }
+    ],
+    "coverage": "cst-dialogue-social",
+    "novelty_reason": "Teste la procédure spécifique post-vote unanime défavorable (R254-68) appliquée à une décision soumise au CST avant délibération ; distinct de toute procédure de consultation ordinaire, d'adoption de LDG ou de mise en conformité d'un cycle des autres cas du jeu.",
+    "modes": [
+      "integration",
+      "degraded"
+    ],
+    "preuve_requise": true,
+    "author_provenance": {
+      "family": "Claude",
+      "revision_file": "authoring-v3",
+      "old_responses_or_scores_supplied": false,
+      "final_revision_family": "Claude",
+      "final_revision_model": "claude-opus-4-8",
+      "patch_file": "A-1-20261012T104928Z.text",
+      "patch_text_sha256": "6fe15069af797abb95f3389d7f74862ee9cec4ffb4296e1cd36050ed1ee05db7"
+    },
+    "required_source_ids": [
+      "LEGIARTI000044425500",
+      "LEGIARTI000050550057",
+      "LEGIARTI000050550059",
+      "LEGIARTI000050550117",
+      "LEGIARTI000050550127",
+      "LEGIARTI000050550143",
+      "LEGIARTI000050550145",
+      "LEGIARTI000050550147",
+      "LEGIARTI000050550151",
+      "LEGIARTI000054087794"
+    ]
+  },
+  {
+    "id": "A-05",
+    "branche": "si-rh-masse-salariale",
+    "type": "standard",
+    "prompt": "12 octobre 2026, collectivité FPT de 480 agents. Lors de la préparation du budget primitif N+1, la DRH constate que le SIRH présente des écarts d'indice entre la base RH et les bulletins de paie des 18 derniers mois pour une vingtaine d'agents, à la suite d'erreurs de saisie d'échelon lors d'une mise à jour logicielle. Les arrêtés individuels sont conformes ; seules les données de paie sont erronées. Ces écarts génèrent des trop-versés et des sous-versés. Produire un mémo de pilotage : audit et quantification des écarts, obligations de régularisation et délais applicables, impact sur la prévision de masse salariale N+1, alertes coordonnées finances et DSI.",
+    "contextes": [
+      "parametres-collectivite",
+      "si-rh-masse-salariale",
+      "carriere-paie",
+      "carriere-remuneration-paie"
+    ],
+    "attendus": [
+      {
+        "id": "A-05-i01",
+        "texte": "Distinction des régimes : trop-versé (répétition de l'indu au profit de la collectivité, soumise à prescription biennale, loi 2000-321 art. 37-1, avec exceptions aux alinéas suivants) et sous-versé (créance de l'agent, prescription quadriennale loi 68-1250 art. 1, avec causes d'interruption art. 2)."
+      },
+      {
+        "id": "A-05-i02",
+        "texte": "Pour les trop-versés : délai de deux ans à compter du premier jour du mois suivant le versement erroné (art. 37-1 al. 1) ; exceptions aux alinéas 2 et 3 vérifiées selon la cause de l'erreur ; modalités de récupération sur paie et information préalable renvoyées à vérification des textes non fournis."
+      },
+      {
+        "id": "A-05-i03",
+        "texte": "Rôle de la DSI limité à la correction technique avec traçabilité ; instruction et coordination par la DRH ; validation et décision de régularisation par l'autorité compétente, dont l'identification relève de la collectivité."
+      },
+      {
+        "id": "A-05-i04",
+        "texte": "Impact budgétaire intégré à la note de prévision de masse salariale N+1, distinguant la charge récurrente corrigée et le one-shot de régularisation."
+      }
+    ],
+    "attendus_degraded": [
+      {
+        "id": "A-05-d01",
+        "texte": "Recensement des variables manquantes (montants par agent et par versement, dates exactes des versements et pièces permettant de reconstituer les écarts, en utilisant la période et la cause déjà fournies) sans certifier aucun délai, taux ou modalité de récupération."
+      },
+      {
+        "id": "A-05-d02",
+        "texte": "Présentation conditionnelle des deux régimes trop-versé/sous-versé, en renvoyant délais et modalités à vérification avant tout acte."
+      },
+      {
+        "id": "A-05-d03",
+        "texte": "Plan d'action structuré (audit SIRH → questions de contrôle → notification individuelle → régularisation → note finances) utilisable dès vérification des règles."
+      }
+    ],
+    "echec_si": [
+      "Confond le régime du trop-versé et celui du sous-versé",
+      "Certifie des modalités de récupération sur paie non étayées par une source vérifiée citée",
+      "Attribue à la DRH ou à la DSI le pouvoir de décider de la régularisation",
+      "Omet l'impact sur la prévision de masse salariale N+1"
+    ],
+    "echec_si_degraded": [
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
+      "Refuse de structurer le plan d'action faute de textes vérifiés",
+      "Redemande le nombre d'agents ou la taille de collectivité déjà fournis"
+    ],
+    "source_requirements": [
+      {
+        "reference": "Loi 2000-321, art. 37-1",
+        "passage_a_consulter": "Délai biennal et exceptions pour la répétition de l'indu en matière de rémunération",
+        "statut_verification": "verifie"
+      },
+      {
+        "reference": "Loi 68-1250, art. 1 à 3",
+        "passage_a_consulter": "Prescription quadriennale des créances sur la collectivité, causes d'interruption",
+        "statut_verification": "verifie"
+      },
+      {
+        "reference": "Modalités de récupération sur paie et bulletins rectificatifs FPT",
+        "passage_a_consulter": "Procédure de bulletin rectificatif, information préalable de l'agent",
+        "statut_verification": "a_consulter"
+      }
+    ],
+    "coverage": "si-rh-masse-salariale",
+    "novelty_reason": "Combine audit d'erreur SIRH post-mise à jour, double régime prescriptif trop-versé/sous-versé et impact masse salariale prospective ; aucun scénario existant ne traite la correction d'encodage SIRH avec incidences budgétaire et prescriptives.",
+    "modes": [
+      "integration",
+      "degraded"
+    ],
+    "preuve_requise": true,
+    "author_provenance": {
+      "family": "Claude",
+      "revision_file": "authoring-v3",
+      "old_responses_or_scores_supplied": false,
+      "final_revision_family": "Claude",
+      "final_revision_model": "claude-opus-4-8",
+      "patch_file": "A-2-20261012T104932Z.text",
+      "patch_text_sha256": "789e0ec147d06e6fbd75d6ea8e52f7eb0c640dac6999e58ec1210053cbc434d9"
+    },
+    "required_source_ids": [
+      "LEGIARTI000006528553",
+      "LEGIARTI000006528554",
+      "LEGIARTI000006528555",
+      "LEGIARTI000042914580",
+      "LEGIARTI000044424811",
+      "LEGIARTI000044424813"
+    ]
+  },
+  {
+    "id": "A-06",
+    "branche": "communication-interne",
+    "type": "standard",
+    "prompt": "12 octobre 2026, collectivité FPT de 520 agents. La DRH souhaite publier sur l'intranet un annuaire professionnel interne : nom, prénom, photo, service, poste, téléphone professionnel, mail professionnel. Le DPO signale que la photo constitue un traitement de données personnelles soumis au RGPD. Plusieurs agents refusent la publication de leur photo. Produire une note de procédure et un projet de formulaire d'information : analyse de la base légale par finalité et par nature de donnée, gestion des refus de photo, contenu de l'information préalable, rôle du DPO.",
+    "contextes": [
+      "parametres-collectivite",
+      "communication-interne"
+    ],
+    "attendus": [
+      {
+        "id": "A-06-i01",
+        "texte": "Analyse la finalité et la nécessité de l'annuaire pour chaque catégorie de donnée ; ne retient pas l'intérêt légitime et, s'il l'évoque, l'écarte pour les traitements relevant des missions publiques (art. 6 §1 al. 2 RGPD). Examine les bases envisageables des coordonnées professionnelles et leur fondement ; conclut conditionnellement ou suspend précisément le choix si ce fondement manque. Qualifie la base de la photo selon sa nécessité à la finalité retenue."
+      },
+      {
+        "id": "A-06-i02",
+        "texte": "Pour les refus de photo, distingue retrait du consentement (art. 7) et opposition selon les conditions de l'article 21 si la base est une mission d'intérêt public. Propose une alternative (initiales ou avatar neutre) ; ne présente ni obligation de publier la photo ni sanction du refus sans base vérifiée."
+      },
+      {
+        "id": "A-06-i03",
+        "texte": "Prévoit dans l'information préalable l'identité et les coordonnées du responsable du traitement."
+      },
+      {
+        "id": "A-06-i03-b",
+        "texte": "Prévoit dans l'information préalable la finalité et la base légale."
+      },
+      {
+        "id": "A-06-i03-c",
+        "texte": "Prévoit les destinataires des données (RGPD art. 13 §1 e)."
+      },
+      {
+        "id": "A-06-i03-d",
+        "texte": "Prévoit la durée de conservation ou, lorsque ce n'est pas possible, les critères utilisés pour la déterminer."
+      },
+      {
+        "id": "A-06-i03-e",
+        "texte": "Prévoit l'information sur les droits d'accès, de rectification et d'effacement."
+      },
+      {
+        "id": "A-06-i03-f",
+        "texte": "Prévoit l'information sur le droit d'opposition (RGPD art. 13 §2 b)."
+      },
+      {
+        "id": "A-06-i03-g",
+        "texte": "Prévoit les coordonnées du DPO."
+      },
+      {
+        "id": "A-06-i03-h",
+        "texte": "Si le consentement est retenu comme base, prévoit l'information sur le droit de retrait."
+      },
+      {
+        "id": "A-06-i03-i",
+        "texte": "Prévoit le droit de réclamation (RGPD art. 13 §2 d)."
+      },
+      {
+        "id": "A-06-i03-j",
+        "texte": "Si la donnée n'est pas collectée auprès de l'agent, examine l'information relevant de l'article 14."
+      },
+      {
+        "id": "A-06-i04",
+        "texte": "Rôle du DPO : association en temps utile, conseil (RGPD art. 39 §1 a) ; documentation à la charge du responsable du traitement (art. 5 §2), sans substitution du DPO au responsable pour la décision sur les contenus publiés et la tenue du registre."
+      }
+    ],
+    "attendus_degraded": [
+      {
+        "id": "A-06-d01",
+        "texte": "Identification des catégories de données et de leur sensibilité différenciée, avec analyse préparatoire des bases envisageables, sans certifier la base légale applicable à chaque item."
+      },
+      {
+        "id": "A-06-d02",
+        "texte": "Recommandation de gestion : différer la publication des photos refusées et proposer une alternative (initiales ou avatar neutre) pendant la vérification du régime applicable avec le DPO, sans certifier ce régime."
+      },
+      {
+        "id": "A-06-d03",
+        "texte": "Trame de formulaire d'information avec rubriques à compléter (responsable, finalité, base légale, droits, DPO) sans inventer les mentions légales définitives."
+      }
+    ],
+    "echec_si": [
+      "Retient le fondement 'intérêt légitime' (art. 6 f) pour un traitement relevant des missions publiques",
+      "Impose une base unique pour la photo sans analyse de sa nécessité à la finalité retenue",
+      "Omet l'identité du responsable du traitement ou les droits des agents dans l'information préalable",
+      "Attribue au DPO un pouvoir de validation ou d'autorisation du traitement"
+    ],
+    "echec_si_degraded": [
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
+      "Ne fournit aucune trame utilisable de formulaire faute de textes consultés",
+      "Présente une contrainte ou une sanction comme juridiquement fondée sans sources vérifiées"
+    ],
+    "source_requirements": [
+      {
+        "reference": "RGPD art. 6 (dispositif EUR-Lex CELEX:02016R0679-20160504)",
+        "passage_a_consulter": "Licéité du traitement ; inapplicabilité du point f aux autorités publiques dans l'exécution de leurs missions",
+        "statut_verification": "verifie_selon_complement_2026-10-14"
+      },
+      {
+        "reference": "RGPD art. 13 et 14 (dispositif EUR-Lex CELEX:02016R0679-20160504)",
+        "passage_a_consulter": "Information : destinataires (13 §1 e), opposition (13 §2 b), réclamation (13 §2 d), autres mentions de l'attendu ; art. 14 si la donnée n'est pas collectée auprès de l'agent",
+        "statut_verification": "verifie_selon_complement_2026-10-14"
+      },
+      {
+        "reference": "RGPD art. 38-39 et 5 §2 (dispositif EUR-Lex CELEX:02016R0679-20160504)",
+        "passage_a_consulter": "Association du DPO et conseil (39 §1 a) ; documentation à la charge du responsable du traitement (5 §2), sans pouvoir décisionnel du DPO",
+        "statut_verification": "verifie_selon_complement_2026-10-14"
+      },
+      {
+        "reference": "Recommandations CNIL sur les annuaires professionnels",
+        "passage_a_consulter": "Traitement de la photo d'agent dans un annuaire interne",
+        "statut_verification": "a_consulter"
+      }
+    ],
+    "coverage": "communication-interne",
+    "novelty_reason": "Croise publication intranet RH, analyse différenciée des bases légales RGPD par finalité et type de donnée, et gestion des refus individuels ; distinct de B-06 (newsletter, contenu différent) et de tout scénario existant.",
+    "modes": [
+      "integration",
+      "degraded"
+    ],
+    "preuve_requise": true,
+    "author_provenance": {
+      "family": "Claude",
+      "revision_file": "authoring-v3",
+      "old_responses_or_scores_supplied": false,
+      "final_revision_family": "Claude",
+      "final_revision_model": "claude-opus-4-8",
+      "patch_file": "A-2-20261012T104932Z.text",
+      "patch_text_sha256": "789e0ec147d06e6fbd75d6ea8e52f7eb0c640dac6999e58ec1210053cbc434d9"
+    },
+    "required_source_ids": [
+      "CELEX:02016R0679-20160504"
+    ]
+  },
+  {
+    "id": "A-07",
+    "branche": "contractuels",
+    "type": "standard",
+    "prompt": "12 octobre 2026, collectivité FPT de 480 agents. Un agent contractuel en CDI de droit public recruté sur le fondement de l'article L332-8 2° du CGFP pour un emploi de chargé de mission numérique (catégorie A) est en CDI depuis deux ans, après six ans de CDD sur cet emploi. Il demande par écrit une révision de sa rémunération en invoquant l'évolution significative de ses missions, l'expertise acquise et la comparaison avec la grille indiciaire des attachés. Produire une note d'analyse et un projet d'avenant conditionnel : règles de fixation et de réévaluation de la rémunération d'un CDI contractuel, qualification des changements de fonctions, procédure et éléments à documenter.",
+    "contextes": [
+      "parametres-collectivite",
+      "contractuels",
+      "carriere-paie",
+      "carriere-remuneration-paie"
+    ],
+    "attendus": [
+      {
+        "id": "A-07-i01",
+        "texte": "Règles applicables : CGFP L713-1 (fonctions, qualification requise, expérience) ; décret 88-145 art. 1-2 (réévaluation au moins tous les trois ans pour les CDI, notamment au vu des entretiens ou de l'évolution des fonctions) ; premier contrôle : date de la dernière réévaluation effectuée ; distinction entre réévaluation périodique et augmentation discrétionnaire."
+      },
+      {
+        "id": "A-07-i02",
+        "texte": "Qualification des changements allégués : distinction évolution normale de l'emploi et éventuelle modification substantielle dont la qualification et les suites restent à vérifier ; les critères précis et formalités applicables (R331-12, R331-13) doivent être vérifiés sur les textes non fournis."
+      },
+      {
+        "id": "A-07-i03",
+        "texte": "Procédure à documenter : décision de l'autorité territoriale ; préparation conditionnelle du projet demandé sous réserve de vérification des conditions et formalités applicables, les exigences de transmission et de contrôle ultérieur devant être vérifiées avant toute formalisation."
+      },
+      {
+        "id": "A-07-i04",
+        "texte": "Éléments admissibles pour instruire la demande : fonctions exercées, qualification détenue, expérience acquise, comparaison indicative avec la grille FPT sans en faire une obligation ; aucun plafond ou plancher non sourcé certifié."
+      }
+    ],
+    "attendus_degraded": [
+      {
+        "id": "A-07-d01",
+        "texte": "Identification des variables manquantes (rémunération actuelle, date de dernière réévaluation, description précise des nouvelles missions) sans certifier aucun plafond, plancher ou formalité."
+      },
+      {
+        "id": "A-07-d02",
+        "texte": "Présentation conditionnelle du besoin de formalisation si changement substantiel, en indiquant que qualification et formalités doivent être vérifiées avant tout acte."
+      },
+      {
+        "id": "A-07-d03",
+        "texte": "Trame d'avenant conditionnel avec clauses à compléter, sans fixer de montant ni certifier des règles de procédure non vérifiées."
+      }
+    ],
+    "echec_si": [
+      "Applique mécaniquement la grille statutaire des attachés à un contractuel CDI",
+      "Omet la réévaluation périodique prévue pour les CDI et le contrôle de sa dernière occurrence",
+      "Certifie des formalités de procédure (contrôle de légalité, conditions d'avenant) non étayées par une source vérifiée citée",
+      "Confond les règles de rémunération des fonctionnaires et des contractuels"
+    ],
+    "echec_si_degraded": [
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
+      "Refuse de fournir une trame d'avenant faute de textes consultés",
+      "Redemande le fondement contractuel L332-8 2° ou la durée déjà fournis"
+    ],
+    "source_requirements": [
+      {
+        "reference": "CGFP L713-1",
+        "passage_a_consulter": "Fixation de la rémunération contractuelle : fonctions, qualification, expérience",
+        "statut_verification": "verifie"
+      },
+      {
+        "reference": "Décret 88-145, art. 1-2",
+        "passage_a_consulter": "Réévaluation au moins tous les trois ans pour les CDI, entretiens professionnels, évolution des fonctions",
+        "statut_verification": "verifie"
+      },
+      {
+        "reference": "CGFP R331-12 et R331-13",
+        "passage_a_consulter": "Critères de modification substantielle du contrat et formalités requises",
+        "statut_verification": "a_consulter"
+      },
+      {
+        "reference": "Décret 88-145 art. 39-3",
+        "passage_a_consulter": "Motifs de licenciement, dont le refus d'une modification substantielle du contrat (4°)",
+        "statut_verification": "a_consulter"
+      },
+      {
+        "reference": "CGFP L332-9, L332-10 et L332-11",
+        "passage_a_consulter": "Historique du CDI à articuler avec les services antérieurs et les conditions de L332-10 ; possibilité de CDI anticipé d'un commun accord selon L332-11. La variante du scénario retient deux ans de CDI après six ans de CDD.",
+        "statut_verification": "verifie_selon_relecture_2026-10-15"
+      }
+    ],
+    "coverage": "contractuels",
+    "novelty_reason": "Traite la réévaluation mid-CDI et la frontière modification substantielle/évolution normale ; distinct de la CDIsation (B-03) et du choix de fondement initial (A-03) ; aucun scénario existant ne porte sur la sécurisation d'un avenant de révision pour CDI contractuel.",
+    "modes": [
+      "integration",
+      "degraded"
+    ],
+    "preuve_requise": true,
+    "author_provenance": {
+      "family": "Claude",
+      "revision_file": "authoring-v3",
+      "old_responses_or_scores_supplied": false,
+      "final_revision_family": "Claude",
+      "final_revision_model": "claude-opus-4-8",
+      "patch_file": "A-2-20261012T104932Z.text",
+      "patch_text_sha256": "789e0ec147d06e6fbd75d6ea8e52f7eb0c640dac6999e58ec1210053cbc434d9"
+    },
+    "required_source_ids": [
+      "LEGIARTI000043498480",
+      "LEGIARTI000044424781",
+      "LEGIARTI000051962528",
+      "LEGIARTI000051962530",
+      "LEGIARTI000051980593",
+      "LEGIARTI000054242039",
+      "LEGIARTI000044426696",
+      "LEGIARTI000046119123",
+      "LEGIARTI000044426692"
+    ]
+  },
+  {
+    "id": "A-08",
+    "branche": "statut-garanties",
+    "type": "architectural",
+    "prompt": "12 octobre 2026, collectivité FPT de 480 agents. Un attaché territorial titulaire fait l'objet d'une enquête préalable pour manquement allégué à l'obligation de discrétion professionnelle ; aucune procédure disciplinaire formelle n'est encore engagée. Il demande par écrit l'accès à l'intégralité de son dossier individuel et aux documents sur lesquels l'autorité territoriale pourrait fonder d'éventuelles poursuites, dont certains comportent des témoignages de collègues identifiables. Produire une note de procédure sécurisée : régime d'accès au dossier individuel, communicabilité des documents d'enquête selon leur état, traitement des témoignages identifiables, risques d'irrégularité et articulation avec une éventuelle procédure disciplinaire ultérieure.",
+    "contextes": [
+      "parametres-collectivite",
+      "carriere-paie",
+      "carriere-statut-discipline",
+      "statut-garanties"
+    ],
+    "attendus": [
+      {
+        "id": "A-08-i01",
+        "texte": "Distinction entre droit d'accès permanent de tout agent à son dossier individuel (CGFP L137-4) et communication des pièces fondant les poursuites disciplinaires (CGFP L532-4, applicable uniquement après engagement formel) ; la garantie disciplinaire de L532-4 n'est pas encore déclenchée ; examiner séparément les autres droits d'accès applicables."
+      },
+      {
+        "id": "A-08-i02",
+        "texte": "Communicabilité des documents d'enquête non versés au dossier : appréciation distinguant l'achèvement du document et son caractère préparatoire à une décision encore en cours d'élaboration (CRPA L311-2 : un document même achevé peut rester préparatoire et non communicable) ; application des exceptions L311-6 et L311-7 ; les pièces ne figurant pas au dossier individuel ne sont pas automatiquement communicables avant engagement."
+      },
+      {
+        "id": "A-08-i03",
+        "texte": "Traitement des témoignages identifiables : examen préalable sous le CRPA (notamment protections de L311-6 sans exigence d'un risque avéré) distinct des garanties de défense applicables si une procédure disciplinaire est ensuite engagée ; dans ce dernier cas, évaluation d'un risque avéré de préjudice selon la situation particulière du témoin (CE 22/12/2023, n° 462455, points 4-6) ; contenu utile à la défense à préserver."
+      },
+      {
+        "id": "A-08-i04",
+        "texte": "Conduite traçable de la communication : organisation et datation des pièces communicables, identification des documents d'enquête à verser ou non, et anticipation des garanties de défense en cas de procédure disciplinaire ultérieure ; le bordereau n'est qu'un moyen possible, non une forme obligatoire."
+      }
+    ],
+    "attendus_degraded": [
+      {
+        "id": "A-08-d01",
+        "texte": "Identification des deux régimes (dossier individuel / pièces d'enquête ou de poursuites) sans certifier délais, modalités d'anonymisation ni conséquences procédurales précises."
+      },
+      {
+        "id": "A-08-d02",
+        "texte": "Signal du risque opérationnel d'une communication défaillante pour la préparation de la défense, en renvoyant les conséquences juridiques exactes à vérification des textes applicables."
+      },
+      {
+        "id": "A-08-d03",
+        "texte": "Questions de contrôle ciblées : nature et état d'achèvement des documents d'enquête, contenu des témoignages, décision de versement ou non au dossier individuel."
+      },
+      {
+        "id": "A-08-d04",
+        "texte": "Trame de traçabilité de la communication (bordereau ou équivalent) utilisable après vérification du contenu communicable, sans certifier ce contenu."
+      }
+    ],
+    "echec_si": [
+      "Confond droit d'accès permanent au dossier individuel et communication disciplinaire applicable uniquement après engagement formel",
+      "Occulte, refuse ou divulgue des témoignages automatiquement, sans examiner le régime d'accès applicable et les protections pertinentes",
+      "Conclut à une nullité ou annulation automatique sans appréciation concrète de l'utilité des pièces pour la défense",
+      "Cite L135 comme fondement du dossier individuel au lieu de L137"
+    ],
+    "echec_si_degraded": [
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
+      "Refuse de structurer la procédure ou de fournir une trame de traçabilité (bordereau ou équivalent) faute de textes consultés",
+      "Redemande le grade ou la taille de collectivité déjà fournis"
+    ],
+    "source_requirements": [
+      {
+        "reference": "CGFP L137-1 à L137-4",
+        "passage_a_consulter": "Dossier individuel : composition, accès permanent de l'agent",
+        "statut_verification": "verifie"
+      },
+      {
+        "reference": "CGFP L532-4",
+        "passage_a_consulter": "Communication du dossier et assistance après engagement disciplinaire",
+        "statut_verification": "verifie"
+      },
+      {
+        "reference": "Décret 89-677, art. 4",
+        "passage_a_consulter": "Délai suffisant pour la défense après engagement disciplinaire",
+        "statut_verification": "a_consulter"
+      },
+      {
+        "reference": "CE, Section, 22/12/2023, n°462455, Lebon",
+        "passage_a_consulter": "Texte intégral Ariane Web selon le complément : points 4 et 5, motifs décisoires ; témoignages, risque avéré apprécié selon la situation du témoin, défense utile ; contenu utile à préserver et transposition à une enquête préalable de collectivité à signaler comme inférences",
+        "statut_verification": "verifie_selon_complement_2026-10-14"
+      },
+      {
+        "reference": "CRPA L311-2, L311-6, L311-7",
+        "passage_a_consulter": "Documents préparatoires non communicables ; occultation des mentions protégées",
+        "statut_verification": "verifie"
+      }
+    ],
+    "coverage": "statut-garanties",
+    "novelty_reason": "Problème architectural croisant accès permanent au dossier individuel, communicabilité des documents d'enquête préalable et protection des témoins selon CE 2023 ; distinct de tout scénario existant portant sur la discipline ou les garanties statutaires.",
+    "modes": [
+      "integration",
+      "degraded"
+    ],
+    "preuve_requise": true,
+    "author_provenance": {
+      "family": "Claude",
+      "revision_file": "authoring-v3",
+      "old_responses_or_scores_supplied": false,
+      "final_revision_family": "Claude",
+      "final_revision_model": "claude-opus-4-8",
+      "patch_file": "A-2-20261012T104932Z.text",
+      "patch_text_sha256": "789e0ec147d06e6fbd75d6ea8e52f7eb0c640dac6999e58ec1210053cbc434d9"
+    },
+    "required_source_ids": [
+      "CETATEXT000048701432",
+      "LEGIARTI000031367700",
+      "LEGIARTI000031367703",
+      "LEGIARTI000031367719",
+      "LEGIARTI000031370409",
+      "LEGIARTI000033218946",
+      "LEGIARTI000037269056",
+      "LEGIARTI000044427568",
+      "LEGIARTI000044427570",
+      "LEGIARTI000044427572",
+      "LEGIARTI000044427574",
+      "LEGIARTI000052323864"
+    ]
+  },
+  {
+    "id": "A-09",
+    "branche": "transversal",
+    "type": "standard",
+    "prompt": "Collectivité FPT >350 agents, 12 octobre 2026. Un adjoint administratif titulaire fait l'objet d'une procédure disciplinaire engagée il y a deux mois pour des faits de harcèlement moral. Le rapport d'enquête interne a été notifié à l'agent. Six semaines après l'engagement, l'agent est placé en congé de longue maladie (CLM). La DRH doit : vérifier que le délai de prescription disciplinaire était respecté à la date d'engagement ; déterminer si la procédure peut légalement continuer pendant le CLM ; identifier les conditions dans lesquelles les droits de la défense restent garantis pendant l'arrêt ; et évaluer le risque contentieux principal si la procédure se poursuit sans adaptation. Produire une note de procédure sécurisée.",
+    "contextes": [
+      "carriere-paie",
+      "carriere-statut-discipline",
+      "qvt-sante",
+      "statut-garanties"
+    ],
+    "attendus": [
+      {
+        "id": "A-09-i01",
+        "texte": "Identifie le point de départ et les éventuels événements affectant la prescription (L532-2) ; conclut lorsque les dates nécessaires sont établies, sinon suspend la seule conclusion sur la prescription et demande les éléments manquants ; distingue cette question de celle d'un délai courant après engagement."
+      },
+      {
+        "id": "A-09-i02",
+        "texte": "Examine la poursuite de la procédure pendant le CLM sur une source vérifiée citée : CE 13 juillet 2022, n°461914, point 19. Précise que ce point vise le congé de maladie en général, ni le CLM en particulier ni les droits de la défense ; n'étend pas sa portée au-delà de ce qu'il établit."
+      },
+      {
+        "id": "A-09-i03",
+        "texte": "Identifie les garanties de défense exigées : communication intégrale du dossier (L532-4), délai suffisant pour organiser la défense (décret 89-677 art. 4), droit à assistance ; si le conseil de discipline intervient, vérifier la convocation au moins quinze jours avant sa réunion (art. 6) ; précise comment l'état de santé peut affecter concrètement l'exercice de ces droits et quel risque contentieux en résulte."
+      }
+    ],
+    "attendus_degraded": [
+      {
+        "id": "A-09-d01",
+        "texte": "Signale que la règle sur la continuation d'une procédure disciplinaire pendant un CLM doit être vérifiée avant tout acte, sans certifier de position."
+      },
+      {
+        "id": "A-09-d02",
+        "texte": "Collecte les variables absentes : date de connaissance effective des faits par l'administration, stade de la procédure au moment du CLM, type de sanction envisagée."
+      },
+      {
+        "id": "A-09-d03",
+        "texte": "Prépare conditionnellement les modalités permettant l'exercice de la défense (report, représentation, observations écrites), sous réserve des vérifications ciblées sur la capacité de l'agent, sans certifier un interlocuteur compétent ni bloquer indéfiniment ou clore la procédure."
+      }
+    ],
+    "echec_si": [
+      "Affirme que le CLM suspend ou interdit la procédure.",
+      "Confond la prescription initiale (délai pour engager) avec la question d'un délai courant après engagement.",
+      "Omet les garanties de défense applicables (L532-4, décret 89-677 art. 4 ; art. 6 lorsque le conseil de discipline intervient)."
+    ],
+    "echec_si_degraded": [
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
+      "Ne collecte pas la date de connaissance effective des faits, absente du prompt.",
+      "Recommande de clore ou poursuivre sans distinguer les précautions liées à l'état de santé."
+    ],
+    "source_requirements": [
+      {
+        "reference": "CGFP L532-2",
+        "passage_a_consulter": "Délai de prescription : connaissance effective de la réalité, nature et ampleur des faits",
+        "statut_verification": "verifie"
+      },
+      {
+        "reference": "CGFP L532-4 ; décret 89-677 arts 4 et 6",
+        "passage_a_consulter": "Garanties de défense : dossier, délai suffisant, convocation, assistance",
+        "statut_verification": "verifie"
+      },
+      {
+        "reference": "CE 13 juillet 2022, n°461914, point 19, inédit",
+        "passage_a_consulter": "Le congé de maladie ne fait pas obstacle à l'action disciplinaire ; point 19 lu en texte intégral sur Ariane Web selon le complément ; aucune précision sur le CLM en particulier ni sur les droits de la défense pendant l'arrêt",
+        "statut_verification": "verifie_selon_complement_2026-10-14"
+      }
+    ],
+    "coverage": "transversal",
+    "novelty_reason": "Concomitance CLM et procédure disciplinaire engagée : décision distincte des cas 09/27/A-08 qui portent sur l'engagement initial ou les voies de recours.",
+    "modes": [
+      "integration",
+      "degraded"
+    ],
+    "preuve_requise": true,
+    "author_provenance": {
+      "family": "Claude",
+      "revision_file": "authoring-v3",
+      "old_responses_or_scores_supplied": false,
+      "final_revision_family": "Claude",
+      "final_revision_model": "claude-opus-4-8",
+      "patch_file": "A-3-20261012T104928Z.text",
+      "patch_text_sha256": "0deaeb59ae71765a52a873e96a2672143a0ce97997448f618b9f419b3edab02e"
+    },
+    "required_source_ids": [
+      "CETATEXT000046046053",
+      "LEGIARTI000006372226",
+      "LEGIARTI000044425430",
+      "LEGIARTI000052323864",
+      "LEGIARTI000053007836"
+    ]
+  },
+  {
+    "id": "A-10",
+    "branche": "transversal",
+    "type": "architectural",
+    "prompt": "Collectivité FPT de 420 agents, 12 octobre 2026. La DRH souhaite instaurer le télétravail de manière pérenne pour les postes éligibles. Elle doit identifier l'acte applicable et l'instance à consulter selon la portée du projet ; examiner les conditions d'accès des titulaires et des contractuels ; traiter séparément la demande d'un agent reconnu en situation de handicap concernant une dérogation au quota standard et des aménagements sur son lieu de télétravail ; organiser le suivi des jours dans le SIRH et examiner les questions RGPD associées ; préparer la communication interne. Produire un plan de déploiement en signalant les points que les sources disponibles ne permettent pas de trancher.",
+    "contextes": [
+      "parametres-collectivite",
+      "cst-dialogue-social",
+      "qvt-sante",
+      "si-rh-masse-salariale",
+      "communication-interne",
+      "contractuels",
+      "statut-garanties"
+    ],
+    "attendus": [
+      {
+        "id": "A-10-i01",
+        "texte": "Identifie la délibération de l'organe délibérant et l'instance à consulter selon l'objet et la portée du projet, en articulant R432-1 2°, L253-6 et R253-80 ; ne pénalise pas une réponse qui cite L253-6. Distingue cet acte d'un accord collectif et qualifie les options proposées à la DRH."
+      },
+      {
+        "id": "A-10-i02",
+        "texte": "Examine le régime visant l'agent public, sans imposer une différence entre titulaires et contractuels pour l'accès au télétravail : L430-1, R431-1 et R433-1 ne les distinguent pas. Cite la base si elle figure dans les sources disponibles et est vérifiée, sinon signale son absence ; les conditions d'éligibilité de R432-3 à R432-8 restent à vérifier."
+      },
+      {
+        "id": "A-10-i03",
+        "texte": "Traite séparément la demande de dérogation au quota (R431-6 1° : conditions et durée maximale) et la demande d'aménagement du lieu de télétravail (R433-3, L131-8 : sous réserve de charges non disproportionnées) ; conclut si l'obligation d'aménagement est automatique ou conditionnelle."
+      },
+      {
+        "id": "A-10-i04",
+        "texte": "Propose un suivi opérationnel des jours dans le SIRH et une communication d'accompagnement ; identifie les traitements et les questions RGPD à vérifier, sans certifier les obligations dont les sources sont absentes."
+      }
+    ],
+    "attendus_degraded": [
+      {
+        "id": "A-10-d01",
+        "texte": "Signale que l'acte et l'instance doivent être qualifiés selon la composition locale du CST et la portée du projet avant d'annoncer une procédure précise."
+      },
+      {
+        "id": "A-10-d02",
+        "texte": "Collecte les variables absentes : existence d'une formation spécialisée CST, accord collectif local éventuel, outil SIRH disponible, état de la délibération cadre."
+      },
+      {
+        "id": "A-10-d03",
+        "texte": "Traite l'agent handicapé en deux questions distinctes (dérogation quota / aménagement) et signale l'incertitude sur l'étendue de chaque obligation sans les affirmer comme absolues."
+      }
+    ],
+    "echec_si": [
+      "Retient une instance incompatible avec la portée du projet au regard de R432-1, R253-7 et R253-80.",
+      "Assimile dérogation quota et aménagement de poste handicap sans distinguer leur régime."
+    ],
+    "echec_si_degraded": [
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
+      "Ne pose pas la question du régime applicable aux contractuels.",
+      "Omet de collecter l'existence d'une formation spécialisée CST ou d'un accord local."
+    ],
+    "source_requirements": [
+      {
+        "reference": "CGFP R432-1 2°, R431-5, R431-6 1°",
+        "passage_a_consulter": "Délibération FPT, avis formation spécialisée ou CST, quota et dérogation pour handicap ou état de santé",
+        "statut_verification": "verifie"
+      },
+      {
+        "reference": "CGFP R253-7 et R253-80",
+        "passage_a_consulter": "Compétence du CST seul lorsque le projet relève aussi de ses attributions",
+        "statut_verification": "verifie"
+      },
+      {
+        "reference": "CGFP R433-3 et L131-8",
+        "passage_a_consulter": "Aménagements du lieu de télétravail pour agent handicapé, sous réserve de charges non disproportionnées",
+        "statut_verification": "verifie"
+      },
+      {
+        "reference": "CGFP L430-1, R431-1 et R433-1",
+        "passage_a_consulter": "Les articles visent l'agent public sans distinguer titulaires et contractuels ; R432-3 à R432-8 (éligibilité) non lus selon le rapport.",
+        "statut_verification": "verifie_selon_relecture_2026-10-15"
+      }
+    ],
+    "coverage": "transversal",
+    "novelty_reason": "Aucun scénario existant ne combine acte normatif FPT, gestion différenciée titulaires/contractuels, dérogation quota et aménagement BOE, intégration SIRH en déploiement piloté par la DRH.",
+    "modes": [
+      "integration",
+      "degraded"
+    ],
+    "preuve_requise": true,
+    "author_provenance": {
+      "family": "Claude",
+      "revision_file": "authoring-v3",
+      "old_responses_or_scores_supplied": false,
+      "final_revision_family": "Claude",
+      "final_revision_model": "claude-opus-4-8",
+      "patch_file": "A-3-20261012T104928Z.text",
+      "patch_text_sha256": "0deaeb59ae71765a52a873e96a2672143a0ce97997448f618b9f419b3edab02e"
+    },
+    "required_source_ids": [
+      "LEGIARTI000044426132",
+      "LEGIARTI000044427238",
+      "LEGIARTI000044427304",
+      "LEGIARTI000044427678",
+      "LEGIARTI000051968704",
+      "LEGIARTI000054077123",
+      "LEGIARTI000054077125",
+      "LEGIARTI000054077127",
+      "LEGIARTI000054077133",
+      "LEGIARTI000054077135",
+      "LEGIARTI000054077137",
+      "LEGIARTI000054077141",
+      "LEGIARTI000054077143",
+      "LEGIARTI000054077173",
+      "LEGIARTI000054087794",
+      "LEGIARTI000054077169"
+    ]
+  },
+  {
+    "id": "A-11",
+    "branche": "transversal",
+    "type": "standard",
+    "prompt": "Collectivité FPT >350 agents, 12 octobre 2026. Un rédacteur principal de 2e classe, reconnu RQTH et bénéficiaire depuis 18 mois d'un aménagement de poste formalisé (horaires adaptés, matériel ergonomique), est concerné par une suppression d'emploi envisagée dans le cadre d'une réorganisation ; le projet de délibération n'a pas encore été soumis au CST. Aucune inaptitude médicale n'a été constatée. La DRH doit : conduire la procédure de suppression d'emploi (CGFP L542-1 à L542-7) ; vérifier si des obligations spécifiques s'appliquent au titre de la qualité de BOE avant, pendant ou après la suppression ; organiser la recherche d'un poste compatible avec les restrictions fonctionnelles formalisées ; identifier qui valide la compatibilité du nouveau poste. Produire une note de procédure articulant ces régimes.",
+    "contextes": [
+      "carriere-paie",
+      "carriere-temps-fin-fonctions",
+      "qvt-sante",
+      "recrutement-formation",
+      "statut-garanties"
+    ],
+    "attendus": [
+      {
+        "id": "A-11-i01",
+        "texte": "Articule recherche de reclassement dès que la suppression est envisagée (L542-1), rapport et avis du CST (L542-2), puis suites conditionnelles selon les emplois pouvant être offerts (L542-5) ; distingue maintien en surnombre (L542-4) et prise en charge (L542-7) ; si les conséquences financières sont évoquées, les rattache à la prise en charge (L542-15)."
+      },
+      {
+        "id": "A-11-i02",
+        "texte": "Vérifie si les textes disponibles établissent des obligations spécifiques à l'employeur au titre de la qualité de BOE lors de la suppression d'emploi, distinctes de la procédure ordinaire (L131-8) ; indique précisément les limites de ce que le corpus permet d'affirmer."
+      },
+      {
+        "id": "A-11-i03",
+        "texte": "Signale que la validation de la compatibilité médicale du poste relève d'un avis médical dont le cadre reste à vérifier ; ne nomme pas une autorité non établie par les sources. Distingue ce point d'une procédure d'inaptitude médicale, non en cause ici."
+      }
+    ],
+    "attendus_degraded": [
+      {
+        "id": "A-11-d01",
+        "texte": "Signale que des obligations spécifiques BOE en cas de suppression d'emploi doivent être vérifiées avant d'en affirmer l'existence, sans les certifier."
+      },
+      {
+        "id": "A-11-d02",
+        "texte": "Collecte les variables absentes : date envisagée de suppression, postes vacants disponibles dans le grade, état des recherches de reclassement déjà engagées."
+      },
+      {
+        "id": "A-11-d03",
+        "texte": "Distingue la suppression d'emploi de la procédure liée à une inaptitude médicale et prépare deux options conditionnelles selon les postes disponibles, sans certifier de délais ni exiger une référence précise."
+      }
+    ],
+    "echec_si": [
+      "Traite la suppression d'emploi d'un BOE identiquement à celle d'un agent ordinaire sans mentionner la question des obligations spécifiques.",
+      "Confond reclassement pour inaptitude médicale (conseil médical) et reclassement pour suppression d'emploi.",
+      "Cite une référence au livre III du CGFP pour la suppression d'emploi (articles concernés sont au livre V)."
+    ],
+    "echec_si_degraded": [
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
+      "Assimile les deux procédures dans la structure de la réponse.",
+      "Omet de collecter la date envisagée et l'état des recherches de postes, absents du prompt."
+    ],
+    "source_requirements": [
+      {
+        "reference": "CGFP L542-1 à L542-7 et L542-15 (livre V)",
+        "passage_a_consulter": "Procédure de suppression d'emploi, consultation CST, maintien en surnombre, prise en charge, rémunération",
+        "statut_verification": "verifie"
+      },
+      {
+        "reference": "CGFP L131-8",
+        "passage_a_consulter": "Mesures appropriées pour conserver un emploi correspondant à la qualification du BOE, sous réserve de charges non disproportionnées",
+        "statut_verification": "verifie"
+      },
+      {
+        "reference": "Réglementation sur la validation médicale de compatibilité de poste dans la FPT",
+        "passage_a_consulter": "Rôle du médecin de prévention ou du conseil médical dans la validation de la compatibilité d'un poste de reclassement avec des restrictions fonctionnelles existantes (hors procédure d'inaptitude)",
+        "statut_verification": "a_consulter"
+      }
+    ],
+    "coverage": "transversal",
+    "novelty_reason": "Concomitance suppression d'emploi et obligations BOE sans inaptitude médicale : aucun scénario A/B existant ne traite ce double régime simultané.",
+    "modes": [
+      "integration",
+      "degraded"
+    ],
+    "preuve_requise": true,
+    "author_provenance": {
+      "family": "Claude",
+      "revision_file": "authoring-v3",
+      "old_responses_or_scores_supplied": false,
+      "final_revision_family": "Claude",
+      "final_revision_model": "claude-opus-4-8",
+      "patch_file": "A-3-20261012T104928Z.text",
+      "patch_text_sha256": "0deaeb59ae71765a52a873e96a2672143a0ce97997448f618b9f419b3edab02e"
+    },
+    "required_source_ids": [
+      "LEGIARTI000044425330",
+      "LEGIARTI000044425334",
+      "LEGIARTI000044425350",
+      "LEGIARTI000044425352",
+      "LEGIARTI000044425356",
+      "LEGIARTI000044425358",
+      "LEGIARTI000044425360",
+      "LEGIARTI000044425362",
+      "LEGIARTI000044425364",
+      "LEGIARTI000044426530",
+      "LEGIARTI000044427678",
+      "LEGIARTI000054087794"
+    ]
+  },
+  {
+    "id": "A-12",
+    "branche": "transversal",
+    "type": "architectural",
+    "prompt": "Collectivité FPT de 380 agents, 12 octobre 2026. La DRH identifie 34 agents susceptibles d'être éligibles à un départ en retraite dans les 18 prochains mois (certains atteignent la limite d'âge, d'autres remplissent potentiellement les conditions de durée de service) ; la répartition entre agents affiliés CNRACL et agents relevant d'un autre régime n'est pas encore établie. Parmi eux, 8 occupent des postes de catégories A et B porteurs de compétences rares. La DRH doit piloter : la préparation administrative des départs confirmés (formalités, dossier pension, cessation de fonctions) ; l'évaluation de l'impact sur la masse salariale N+1 et N+2 ; la planification d'un dispositif de transmission des savoirs pour les postes critiques ; et la présentation d'un rapport de situation devant le CST avant l'ouverture des procédures de recrutement. Produire un plan de pilotage intégré.",
+    "contextes": [
+      "parametres-collectivite",
+      "carriere-paie",
+      "carriere-temps-fin-fonctions",
+      "si-rh-masse-salariale",
+      "recrutement-formation",
+      "cst-dialogue-social"
+    ],
+    "attendus": [
+      {
+        "id": "A-12-i01",
+        "texte": "Distingue agents affiliés CNRACL et agents relevant d'un autre régime ; décrit les formalités documentées pour la CNRACL (décret 2003-1306 art. 59 : demande six mois avant, dossier employeur trois mois avant radiation ; art. 27 : entrée en jouissance) ; signale que les formalités du régime général sont absentes du corpus et ne les certifie pas ; distingue l'éligibilité d'un départ confirmé (L556-1, décret 2003-1306 art. 2)."
+      },
+      {
+        "id": "A-12-i02",
+        "texte": "Précise la méthode d'évaluation de l'impact sur la masse salariale en distinguant économies sur postes libérés et coût des recrutements sur N+1 et N+2 ; souligne que l'impact N+2 dépend des délais de recrutement et du niveau de rémunération des nouveaux entrants."
+      },
+      {
+        "id": "A-12-i03",
+        "texte": "Qualifie la présentation d'un rapport devant le CST avant les recrutements : identifie les attributions documentées du CST (L253-5 3° : orientations stratégiques RH ; R253-7 8° : projets de LDG) ; distingue obligation de consultation d'une bonne pratique ; ne certifie pas une obligation de rapport GPEEC non établie dans le corpus."
+      },
+      {
+        "id": "A-12-i04",
+        "texte": "Propose pour les 8 postes critiques un dispositif de transmission des savoirs, avec outils et calendrier compatibles avec les dates de départ confirmées et l'emploi budgétaire disponible."
+      }
+    ],
+    "attendus_degraded": [
+      {
+        "id": "A-12-d01",
+        "texte": "Signale que les délais CNRACL et les formalités du régime général doivent être vérifiés ; ne certifie aucun délai."
+      },
+      {
+        "id": "A-12-d02",
+        "texte": "Collecte les variables absentes : répartition CNRACL/autre régime parmi les 34 agents, distinction départs souhaités/confirmés vs simple éligibilité, état du SIRH."
+      },
+      {
+        "id": "A-12-d03",
+        "texte": "Présente la consultation CST préalable aux recrutements comme une option à qualifier selon l'objet du rapport, sans la certifier obligatoire ; identifie les questions et références à vérifier selon l'objet, avec une préparation de gestion conditionnelle."
+      }
+    ],
+    "echec_si": [
+      "Confond régime CNRACL et régime général dans la description des formalités de liquidation.",
+      "Omet l'impact masse salariale N+2 (décalage entre économies immédiates et coût des nouveaux recrutements).",
+      "Affirme une obligation légale de rapport GPEEC devant le CST sans citer de texte vérifiable.",
+      "Assimile l'éligibilité à un départ à une cessation certaine et imminente."
+    ],
+    "echec_si_degraded": [
+      "Une règle juridique non vérifiée est présentée comme applicable ou certifiée ; nommer un régime, une distinction ou une référence comme hypothèse à vérifier n'est pas une certification. Les faits fournis restent acquis.",
+      "Présente la consultation CST avant recrutements comme automatiquement obligatoire.",
+      "Ne collecte pas la répartition CNRACL/autre régime ni la distinction éligibilité/départ confirmé."
+    ],
+    "source_requirements": [
+      {
+        "reference": "Décret 2003-1306, art. 59 et 27",
+        "passage_a_consulter": "Délais de demande et de transmission du dossier employeur CNRACL ; règles d'entrée en jouissance de la pension",
+        "statut_verification": "verifie"
+      },
+      {
+        "reference": "CGFP L556-1 et décret 2003-1306 art. 2",
+        "passage_a_consulter": "Limite d'âge, maintien autorisé, admission d'office ; distinction éligibilité et cessation effective",
+        "statut_verification": "verifie"
+      },
+      {
+        "reference": "CGFP L253-5 3° et R253-7 8°",
+        "passage_a_consulter": "Attributions CST : orientations stratégiques RH et projets de LDG ; portée par rapport à un rapport préalable aux recrutements",
+        "statut_verification": "verifie"
+      }
+    ],
+    "coverage": "transversal",
+    "novelty_reason": "Pilotage intégré d'une vague de départs retraite articulant liquidation multi-régimes, impact masse salariale N+1/N+2, transmission des savoirs sur postes critiques et rapport CST préalable : non traité dans les scénarios A/B existants.",
+    "modes": [
+      "integration",
+      "degraded"
+    ],
+    "preuve_requise": true,
+    "author_provenance": {
+      "family": "Claude",
+      "revision_file": "authoring-v3",
+      "old_responses_or_scores_supplied": false,
+      "final_revision_family": "Claude",
+      "final_revision_model": "claude-opus-4-8",
+      "patch_file": "A-3-20261012T104928Z.text",
+      "patch_text_sha256": "0deaeb59ae71765a52a873e96a2672143a0ce97997448f618b9f419b3edab02e"
+    },
+    "required_source_ids": [
+      "LEGIARTI000006400930",
+      "LEGIARTI000044427240",
+      "LEGIARTI000047452904",
+      "LEGIARTI000047633338",
+      "LEGIARTI000049428994",
+      "LEGIARTI000054087794"
+    ]
+  }
+]

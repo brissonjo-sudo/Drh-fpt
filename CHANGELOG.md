@@ -2,6 +2,165 @@
 
 Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
+## [Non publié] — v0.7.1
+
+### Corrections locales après clôture du jeu A — 2026-10-17
+- M6, après diagnostic L3b : propagation des réserves ligne par ligne dans
+  les livrables opérationnels, contrôles ouverts en mode dégradé et passe
+  finale de propagation ; méthode seule, sans nouvelle règle de droit.
+- Relecture L1 : communication disciplinaire du témoignage demandé, inférence
+  CRPA explicitée, champ et objets de L131-8, provenance archivée de L274,
+  confiance par proposition et contrat à durée indéterminée selon L332-10 ;
+  suppression du double saut de ligne dans les huit rubriques §11.
+- C1–C8 : cumul déclaratif et réserves, recrutement et décompte du CDI,
+  indus et recouvrement, avis distincts taux/LDG, accès aux pièces et
+  assistance disciplinaire, prise en charge/aménagements et réserves retraite.
+  Sources : pack PISTE du 16/10/2026 ; L274 collecté le 17/10/2026.
+- C9 : télétravail, circuit d’avis de la formation spécialisée selon R432-1
+  et L253-6 ; retrait du renvoi périmé au décret 2016-151.
+- Méthode M1–M5 : fidélité au texte et aux exceptions, portée des décisions,
+  confiance par proposition et réserves reportées dans chaque livrable,
+  conséquences procédurales conditionnelles, date du dossier et ordre demandé.
+- Le jeu A du runtime 8a12a74 est clos en échec sur décision de Jo ; aucune
+  qualification des corrections ni ouverture du jeu B n'est revendiquée.
+
+## [0.7.0] — 2026-09-19 — Candidate non publiée — Fiabilité mesurable et contexte progressif
+
+### Relecture de PR18 — 2026-10-12 (qualification en préparation)
+- État, contrôles et mesures : [registre daté de PR18](tests/rapports/ETAT-PR18-2026-10-12.md).
+  Détails de session et plan interne conservés hors du candidat, dans l’archive locale du chantier.
+- Consultation primaire ciblée : quatre options de L544-4, compétence CDG
+  confiée, droit de se taire et portée des décisions d'abandon de poste.
+- Renvois, retraite/fin de fonctions, grève, contrat transversal, métadonnées
+  et frontières métiers corrigés ; rappel final unique en dernier.
+- Valeurs internes : repères à vérifier, sans certification en mode dégradé.
+- Scores du 11 octobre : développement après corrections successives du même
+  corpus ; ils ne constituent pas une qualification sur cas neufs.
+- Suites nommées et gel humain préalable en préparation ; aucun nouveau
+  résultat de qualification n'est revendiqué.
+- Chargement natif explicite du noyau avant le fond ; plugin local de test,
+  sources indispensables contrôlées avant génération et continuations
+  automatiques refusées. Les diagnostics ne valent pas qualification.
+
+### Validation de PR18 — 2026-10-11
+- Résultats de développement, tests et preuves : [rapport historique daté et
+  rattaché à son commit](tests/rapports/VALIDATION-PR18-2026-10-11.md).
+  Les échecs antérieurs restent conservés.
+- Chargement sélectif : [mesure historique du même candidat](tests/rapports/CONTEXTE-PR18-2026-10-11.md),
+  compagnon et sources en supplément. Aucun changement de comportement dans
+  le commit de publication documentaire ; aucune fusion effectuée.
+
+### Reprise de PR18 — 2026-10-11
+- Maintien après PPR : durée rattachée explicitement à cette phase et
+  au renvoi à la procédure de reclassement, sans prolongation automatique.
+- LDG : distinction des orientations locales et de la promotion interne,
+  compétence des listes d’aptitude à identifier selon affiliation et
+  compétence confiée ; contrôles conditionnels conservés en dégradé.
+- Première citation des fondements vérifiés avec date officielle ; voies
+  alternatives restituées avec effet, condition et acteur, sans répétition
+  ni certification des conditions encore non vérifiées.
+- Protection fonctionnelle : instruction de la faute par l’employeur, sans
+  preuve générale d’absence exigée de l’agent ; dérogation d’intérêt général
+  sous contrôle du juge. Critère trop absolu corrigé sur décision CE2024
+  réellement consultée et relecture indépendante.
+- PSC : compléter les renvois utiles aux garanties et minima dans le
+  manifeste ; contrôler leur concordance sans réécrire le texte publié.
+- Discipline dégradée : nommer ouverture, sanction et notification dans
+  la collecte chronologique, sans présumer leur portée juridique.
+- Inaptitude : distinguer diligences de reclassement et absence de garantie
+  de résultat ; impossibilité motivée dans le régime vérifié.
+- Valeurs ciblées : date et confiance explicites avec leurs limites, même
+  dans une réponse courte destinée à un acte.
+- Références officielles : numéro d’article affiché et contrôlé contre
+  l’archive brute lorsqu’il est fourni ; compatibilité des anciens paquets.
+  Trois tests de vérification supplémentaires.
+- Portée indemnitaire : distinguer plafonds seuls et mise en place dans
+  chaque contrôle de couverture ; versements/sauvegarde exclus du premier
+  format s’ils ne changent pas la borne demandée.
+- Communication RH : distinguer explicitement message d’information et
+  acte adopté, sans assimiler toutes les notes de service à ce message.
+- Dégradé : distinguer limites du dossier et règles juridiques négatives ;
+  conditions et effets restent des contrôles à vérifier, sans affirmation
+  ferme dissimulée dans une formulation prudente.
+- Contractuels : exceptions de saisine CCP à vérifier rendues explicites,
+  distinctes de l’ordre particulier de consultation.
+- Orientation dégradée : institutions utiles nommées comme pistes à vérifier,
+  notamment tribunal administratif pour une décision administrative FPT ; aucune
+  recevabilité, compétence ou modalité certifiée sans consultation.
+- Protection fonctionnelle : assistance juridique et modalités de prise en
+  charge rendues explicites, avec vérification des limites et conventions,
+  sans remboursement illimité ni plafond universel inventé.
+- PSC : pièces locales, accord collectif et clauses d’adhésion intégrés aux
+  variables et contrôles ; distinction participation/adhésion, santé/prévoyance
+  et vérification du transitoire, sans certifier de règle en mode dégradé.
+- Garanties de décision individuelle (motivation applicable, notification et
+  recours, y compris refus) couvertes dès l'analyse, sans attendre la rédaction
+  d'un acte ; maintien du format ciblé pour une simple valeur ou un plafond.
+- Abandon de poste : examen des réponses et justificatifs, non-reprise à
+  l'échéance et rupture du lien, sans condition de silence absolu ; critères
+  12 et 17 harmonisés sur les décisions primaires. Transmission rapprochée
+  de la nature exacte de l'acte, sans assimiler avancement et recrutement
+  non titulaire. Dossier indemnitaire du contractuel complété (88-145,
+  articles 46, 48 et 49), sans modifier les jugements antérieurs.
+- Restitution adaptée à l'objet demandé ; compagnon et sources avant le
+  contrat métier, contrôle de couverture après les modules, sans duplication.
+- Transitoire disciplinaire corrigé d'après la loi 2019-828, article 94 XI
+  (date de sanction) ; recours gracieux étayé par CRPA L410-1/L411-2.
+- Priorité de restitution DRH clarifiée dans la co-activation, rappel final
+  générique après les données de sources et extraction vérifiée du contenu
+  principal des pages officielles, archives originales inchangées.
+- Consultation PISTE et CNRACL archivée, intégrité des extraits et versions
+  contrôlée, NOTA conservés, passages effectivement fournis au répondant.
+- Critères propres au mode dégradé ; corrections juridiques des délais PPR,
+  décharge de fonctions, entrée en vigueur ISFE et exceptions PSC.
+- Défense disciplinaire incluant l'avertissement et le droit de se taire ;
+  indemnité d'inaptitude conditionnée au régime d'affiliation.
+- Sessions Codex éphémères, traces JSONL, modèle juge distinct, parallélisme
+  borné et gate commun des deux campagnes sur le même commit propre.
+- Reprise refusée après changement de SHA ou de corpus ; formats du juge
+  invalides rejetés sans interrompre le bilan.
+- Chargement des modules manquants dans les dossiers mixtes ; couverture des
+  variables, garanties et formalités avant restitution, y compris dégradée.
+- Date d'effet de l'abandon de poste corrigée sur jurisprudence primaire ;
+  distinction entre recours contre un licenciement d'agent public et exception
+  contractuelle de R421-1 ; dates d'application de la réforme CAP précisées.
+- Juge respectant les alternatives, conditions et mentions facultatives ;
+  réserves cohérentes avec une consultation effective. Les critères stricts
+  obligatoires restent intégralement exigés.
+- Contrôle final de couverture visible et indisponibilité de vérification
+  explicitée en mode dégradé ; principe de retenue pour grève vérifié sur CE
+  17 juillet 2009 n°303588. Catégorie historique du CGCT2004 rectifiée :
+  sanctions soumises au conseil de discipline, et non « de toute nature ».
+
+### Renforcé
+- Chaque attendu de test possède un identifiant stable. Le validateur refuse
+  critères absents, inconnus, dupliqués, renommés, sans justification ou
+  incohérents avec le verdict global.
+- Les campagnes acceptent un diagnostic ciblé, la reprise compatible et le
+  jugement seul. Une nouvelle évaluation ne remplace jamais la précédente.
+- Les adaptateurs Anthropic et OpenAI normalisent texte, troncature, durée et
+  tokens. Un paramètre d'effort non pris en charge provoque une erreur claire.
+- Trois niveaux de preuve sont distingués : règles seules, sources figées et
+  consultations réelles. Ce dernier exige une trace structurée par cas.
+- Aucun coût n'est estimé sans grille tarifaire datée et vérifiée.
+
+### Optimisé
+- Carrière-paie est réparti en trois modules : statut/discipline,
+  rémunération/paie et temps de travail/fin de fonctions.
+- Le chargeur sélectif conserve le noyau commun, ajoute les branches déclarées
+  par le cas et charge le gabarit du livrable demandé.
+- Le bundle de compatibilité inclut désormais les modules et les gabarits de
+  livrables, auparavant annoncés mais absents du portage mono-fichier.
+- La longueur visible de la réponse est adaptée à la demande sans réduire la
+  qualification ni la vérification juridique.
+
+### Tests
+- Ajout de contrôles négatifs sur les critères du juge, le gate strict, les
+  preuves de consultation, le chargement multibranche et les adaptateurs.
+- Les 32 variantes déclarent explicitement leurs contextes et leurs critères
+  identifiés ; 30 restent actives dans chacun des modes d'intégration et
+  dégradé.
+
 ## [0.6.0] — 2026-09-11 — Fiabilisation après audit juridique
 
 ### Prépublication

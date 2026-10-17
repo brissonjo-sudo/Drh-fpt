@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "source_id": "CELEX:02016R0679-20160504",
+  "source_url": "https://eur-lex.europa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:02016R0679-20160504",
+  "official_catalog_url": "https://op.europa.eu/fr/publication-detail/-/publication/5f2552c2-cc45-11e6-ad7c-01aa75ed71a1/language-fr",
+  "language": "fr",
+  "consolidation_date": "2016-05-04",
+  "document_header": "02016R0679 — FR — 04.05.2016 — 000.002",
+  "consulted_on_reported": "2026-10-14",
+  "consulted_at_exact": null,
+  "consultation_date_basis": "Complément du rapport Claude du14/10 ; heure exacte de consultation non fournie",
+  "archived_at": "2026-10-14T20:40:13.470095+00:00",
+  "archive_date": "2026-10-14",
+  "pdf_file": "CELEX-02016R0679-20160504-FR-consulte-2026-10-14.pdf",
+  "pdf_bytes": 662538,
+  "pdf_sha256": "e5984442f70f842034f9b5cb39bf3d6137630252260830c07b0449f354faa718",
+  "pages": 78,
+  "original_file_sha256": "e5984442f70f842034f9b5cb39bf3d6137630252260830c07b0449f354faa718",
+  "original_file_last_write_utc": "2026-10-14T20:08:32.759941+00:00",
+  "original_timestamp_scope": "Horodatage du fichier retrouvé, pas preuve autonome de l’heure de consultation",
+  "local_origin_attribution": "Copie locale cohérente avec le complément (identifiant/langue/date/dispositif) ; son attribution à la consultation de Claude est une inférence de provenance",
+  "local_extracted_text_matches_normalized": true,
+  "original_extracted_text_sha256": "b8df61a583b8e72a419e87e84032c9b5ccfb1c6dd9c64ea45e1c3eab8e58a1f9",
+  "origin_signature_or_initial_download_hash_available": false,
+  "fresh_download_status": "URL EUR-Lex tentée le14/10 : challenge navigateur/HTTP202, aucun PDF récupéré ; fichier local préexistant préservé",
+  "pdf_metadata": {
+    "/ModDate": "D:20180606105603+02'00'",
+    "/Producer": "3-Heights(TM) PDF to PDF-A Converter Shell 4.7.24.2 (http://www.pdf-tools.com)",
+    "/Title": "CL2016R0679FR0000020.0001.3bi_cp 1..1",
+    "/Author": "Publications Office",
+    "/Subject": " ",
+    "/Creator": "Arbortext Advanced Print Publisher 10.0.1465/W Unicode",
+    "/CreationDate": "D:20180602151951+05'30'"
+  },
+  "excerpts_file": "articles-rgpd.json",
+  "excerpts_sha256": "e38cac70ace13cc3e2eaada83a7bc731a81615c6236710a43983ec39ab627a21",
+  "case_articles": {
+    "A-06": [
+      5,
+      6,
+      7,
+      13,
+      14,
+      21,
+      30,
+      38,
+      39
+    ],
+    "B-05": [
+      5,
+      25,
+      28,
+      30,
+      32,
+      39
+    ],
+    "B-06": [
+      6,
+      9,
+      13,
+      14,
+      21,
+      30,
+      38,
+      39
+    ],
+    "B-09": [
+      4,
+      5,
+      6,
+      9,
+      17
+    ],
+    "B-11": [
+      22,
+      35,
+      39
+    ]
+  },
+  "report_file": "verification-baremes-legifrance-2026-10-14.md",
+  "report_sha256": "4a3c8d3b3da29b17eb4ef8184f10b6b38b2da33836162f8d77e42329a9f05cc4",
+  "scope": "Archive documentaire pour relecture humaine ; aucun sceau de gel ni trace d’appel fournisseur. Ce manifeste n’est pas une trace validée par live_sources.verify_trace."
+}

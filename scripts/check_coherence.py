@@ -141,10 +141,13 @@ def check_changelog() -> None:
 # --- 4. Renvois (references/xxx.md, assets/xxx.md) ----------------------
 
 def check_references() -> None:
-    pattern = re.compile(r"`((?:references|assets)/[A-Za-z0-9_.\-]+\.md)`")
+    pattern = re.compile(r"`((?:references|assets)/[A-Za-z0-9_./\-]+\.md)`")
     missing = []
     checked = 0
-    for src in (SKILL_MD, README_MD):
+    runtime = [SKILL_MD, README_MD, ROOT/'scripts/bundle-preambule.md',
+               ROOT/'tests/prompt-claude-code.md']
+    runtime += list((ROOT/'references').rglob('*.md')) + list((ROOT/'assets').rglob('*.md'))
+    for src in runtime:
         if not src.exists():
             continue
         text = src.read_text(encoding="utf-8")
@@ -153,6 +156,10 @@ def check_references() -> None:
             checked += 1
             if not (ROOT / rel).exists():
                 missing.append(f"{src.name} référence '{rel}' introuvable sur disque.")
+        for match in re.finditer(r'(references/[A-Za-z0-9_./\-]+\.md)`?\s*[,;]?\s*§\s*(\d+\.\d+)',text):
+            target=ROOT/match.group(1)
+            if target.exists() and not re.search(r'^#+\s*'+re.escape(match.group(2))+r'\b',target.read_text(encoding='utf8'),re.M):
+                missing.append(f"{src.name} : section §{match.group(2)} absente de {match.group(1)}.")
     if missing:
         for msg in missing:
             error(msg)
@@ -174,7 +181,7 @@ def check_readme_tree() -> None:
         return
     tree_block = m.group(1)
 
-    excluded_dirs = {"dist", "resultats"}
+    excluded_dirs = {"dist", "resultats", ".superpowers"}
     tracked = []
     for f in ROOT.rglob("*"):
         if not f.is_file():
@@ -327,4 +334,7 @@ def main() -> int:
 
 
 if __name__ == "__main__":
+    # Les avertissements utilisent des caractères absents de la page cp1252.
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     raise SystemExit(main())

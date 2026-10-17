@@ -26,17 +26,25 @@
 9. **Données volatiles à vérifier** — valeurs à ne jamais donner de mémoire.
 10. **Livrables** — classés par niveau (décision / organisation / pilotage /
     communication) + éléments obligatoires (ex. voies de recours).
-11. **Niveau de confiance** — repères stable / à vérifier / débattu pour la branche.
+11. **Niveau de confiance** — repères documentaires de la branche, sans étiquette
+    « Stable » globale. Évaluer la confiance **proposition par proposition** :
+    « Stable » seulement si un article consulté porte littéralement la
+    proposition, dans sa version et son champ applicables ; sinon conserver
+    « à vérifier » ou « débattu » selon le cas. Reporter les réserves de chaque
+    prémisse dans ses conséquences et dans les livrables.
 12. **Checklist de branche** — contrôles spécifiques avant sortie.
 
 ## Règles d'écriture
+
+Appliquer M6 — propagation dans les livrables (`SKILL.md`, §4).
 
 - Imperatif, phrases courtes, une idée par point.
 - Valeurs chiffrées : appliquer le **régime du socle §6** — les **valeurs
   d'indexation** (point, cotisations, GIPA, planchers PSC) ne sont jamais
   figées ni données de mémoire ; les **plafonds et barèmes réglementaires**
-  (fixés par un décret identifié) sont citables s'ils sont **datés** et assortis
-  de « à confirmer en version consolidée ».
+  (fixés par un décret identifié) sont citables après **consultation officielle
+  de la version applicable**. Aucun chiffre en mode dégradé ; les réserves
+  portent sur les points restant à vérifier.
 - Citer les **références structurelles stables** (codes, numéros de décrets
   fondateurs) en rappelant la vérification de version.
 - Pas d'instruction de méta-conception dans le corps métier : elle reste ici.
