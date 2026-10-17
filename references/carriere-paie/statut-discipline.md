@@ -61,15 +61,20 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
 ### 5.5 Discipline (échelle à confirmer en séance — CGFP, art. L533-1 et s.)
 
 **Avant l'engagement disciplinaire — accès aux pièces** : appliquer le CRPA
-pièce par pièce. L311-2 distingue document achevé et document préparatoire à
-une décision en cours ; conserver ses exceptions sur les avis légalement
-requis rendus sur une demande de décision individuelle créatrice de droits,
+pièce par pièce. L311-2 limite le droit à communication aux documents achevés
+et exclut les documents préparatoires à une décision administrative tant
+qu'elle est en cours d'élaboration ; conserver ses exceptions sur les avis
+légalement requis rendus sur une demande de décision individuelle créatrice de droits,
 communicables à l'auteur de la demande dès leur envoi à l'autorité compétente,
 avec communication des motifs absents en cas d'avis défavorable ; les avis
 comparant les mérites de plusieurs demandes restent réservés tant que la
-décision qu'ils préparent n'est pas prise. Une enquête en cours ne suffit pas
-à refuser globalement toute pièce. L311-6 réserve à l'intéressé les documents
-qu'il vise : vie privée, secret médical et secret des affaires ; appréciations
+décision qu'ils préparent n'est pas prise. **Inférence de L311-2 et L311-7** :
+une enquête en cours ne suffit pas, à elle seule, à refuser globalement toute
+pièce ; examiner pour chacune son caractère achevé, son éventuel caractère
+préparatoire à une décision en cours d'élaboration et la possibilité de
+communiquer après occultation ou disjonction des mentions protégées.
+L311-6 réserve à l'intéressé les documents qu'il vise : vie privée, secret
+médical et secret des affaires ; appréciations
 sur une personne identifiable ; comportement dont la
 divulgation **pourrait porter préjudice** ; ne pas remplacer ce dernier
 critère par un « risque avéré ». L311-7 prévoit la communication après
@@ -77,11 +82,16 @@ occultation ou disjonction des mentions protégées lorsque cela est possible.
 
 **Procédure disciplinaire engagée** : CE, Section, 22/12/2023, n°462455,
 points 4 à 6, concerne une sanction fondée sur un rapport d'inspection et les
-témoignages recueillis. Le point 4 permet, en cas de risque avéré de préjudice
-pour le témoin apprécié concrètement, une communication du témoignage demandé
-préservant son anonymat ; ce standard n'est pas une règle générale du CRPA
-pour la phase pré-disciplinaire. Ne pas transformer l'appréciation des pièces
-de cette affaire en présomption applicable à tous les témoins.
+témoignages recueillis. Le point 4 prévoit que, lorsque résulterait de la
+communication d'un témoignage un risque avéré de préjudice pour son auteur,
+l'autorité disciplinaire **communique ce témoignage à l'intéressé, s'il en
+forme la demande**, selon des modalités préservant l'anonymat du témoin.
+Elle apprécie ce risque au regard de la situation particulière du témoin
+vis-à-vis de l'agent public mis en cause, sans préjudice de la protection
+accordée à certaines catégories de témoins par la loi. Ce standard n'est pas
+une règle générale du CRPA pour la phase pré-disciplinaire. Ne pas transformer
+l'appréciation des pièces de cette affaire en présomption applicable à tous
+les témoins.
 
 **Assistance ≠ représentation automatique** : L532-4 et les articles 4 et 6
 du décret 89-677 du 18/09/1989 consacrent l'assistance par les défenseurs ou

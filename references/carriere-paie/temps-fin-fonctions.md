@@ -374,10 +374,23 @@ quotité travaillée**, la fraction restante relevant du premier alinéa.
 La rémunération nette est réduite des rémunérations nettes perçues au titre
 du cumul d'activités. Ne pas étendre la dérogation à toute la rémunération
 pour une mission partielle, ni garantir le régime indemnitaire.
-L131-8 requiert l'examen des aménagements selon les besoins concrets, sous
-réserve de charges non disproportionnées compte tenu des aides ; aucune
-autorité de validation de compatibilité n'est ajoutée sans fondement.
-Sources : L542-15 (LEGIARTI000044425334) et L131-8, pack PISTE du 16/10/2026.
+L131-8 impose aux employeurs publics mentionnés à L2, en fonction des besoins
+dans une situation concrète, les mesures appropriées pour permettre aux
+personnes relevant des **1°, 2°, 3°, 4°, 9°, 10° et 11° de l'article L. 5212-13
+du code du travail** d'accéder à un emploi ou de conserver un emploi
+correspondant à leur qualification, de développer un parcours professionnel
+et d'accéder à des fonctions de niveau supérieur ou pour qu'une formation
+adaptée à leurs besoins leur soit dispensée tout au long de leur vie
+professionnelle. Ces mesures incluent notamment l'aménagement, l'accès et
+l'usage de tous les outils numériques concourant à l'accomplissement de la
+mission des agents, notamment les logiciels métiers et de bureautique ainsi
+que les appareils mobiles. Elles s'appliquent sous réserve que les charges
+consécutives ne soient pas disproportionnées, compte tenu notamment des aides
+pouvant compenser tout ou partie des dépenses supportées par les employeurs
+à ce titre. Aucune autorité de validation de compatibilité n'est ajoutée sans
+fondement.
+Sources : L542-15 (LEGIARTI000044425334) et L131-8 (LEGIARTI000044427678),
+pack PISTE du 16/10/2026.
 
 ### Retraite — affiliation, demande et réserves de paiement
 

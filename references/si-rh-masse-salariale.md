@@ -116,7 +116,6 @@ applicables. Toute conséquence conserve les réserves de sa prémisse, y compri
 dans les actes, formulaires et calendriers. Une réserve après une obligation,
 une condition ou une autorité non vérifiée ne répare pas son affirmation.
 
-
 - **Repères documentaires à vérifier pour la réponse** : mécanique du chapitre 012, définition du GVT / noria / report,
   principe DSN et RSU, tableau des effectifs.
 - **À vérifier** : toute valeur chiffrée ; format DSN et RSU de l'année.

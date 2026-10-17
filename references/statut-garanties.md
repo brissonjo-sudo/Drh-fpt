@@ -302,7 +302,6 @@ applicables. Toute conséquence conserve les réserves de sa prémisse, y compri
 dans les actes, formulaires et calendriers. Une réserve après une obligation,
 une condition ou une autorité non vérifiée ne répare pas son affirmation.
 
-
 - **Repères documentaires à vérifier pour la réponse** : obligation de protection fonctionnelle et son autonomie
   vis-à-vis du pénal ; principe d'exclusivité et dérogations encadrées ;
   obligation de référents déontologue et laïcité ; double condition

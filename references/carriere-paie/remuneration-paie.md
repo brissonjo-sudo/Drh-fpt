@@ -124,12 +124,17 @@ L'action en **recouvrement** relève du renvoi à **L274 du LPF**, distinct de
 la répétition : sauf dispositions contraires et causes suspensives ou
 interruptives, délai de quatre ans depuis la mise en recouvrement du rôle ou
 l'envoi du titre exécutoire ; majoration de deux ans pour les redevables établis
-dans l'État non membre de l'UE répondant à la condition d'absence d'assistance
-mutuelle équivalente précisée par cet article. Ne pas en déduire un montant
+dans **un État non membre de l'Union européenne** avec lequel la France ne
+dispose d'aucun instrument juridique relatif à l'assistance mutuelle en matière
+de recouvrement ayant une portée similaire à celle prévue par la directive
+2010/24/UE du Conseil du 16 mars 2010. Ne pas en déduire un montant
 « irrécupérable » avant d'identifier l'acte requis, ses dates et les exceptions
 applicables ; une simple date de versement ne suffit pas à qualifier les deux délais.
 Sources : art. 37-1 (LEGIARTI000042914580), pack PISTE du 16/10/2026 ;
-L274 (LEGIARTI000042914471), collecte PISTE du 17/10/2026, version depuis
-le 01/01/2022. Le régime transitoire de l'article 37-1 est à conserver :
+L274 (LEGIARTI000042914471), version en vigueur depuis le 01/01/2022,
+collecte PISTE archivée du 17/10/2026 à 10:27:36 UTC : restitution `l274.json`,
+requête `02-request.json` et réponse originale `02-response.json`, dans
+`t101-corrections-skill-20261017/sources/` (archive locale du chantier, hors dépôt).
+Le régime transitoire de l'article 37-1 est à conserver :
 application à l'action dont le délai commence ou dont une cause interruptive
 intervient à compter du 01/01/2022.

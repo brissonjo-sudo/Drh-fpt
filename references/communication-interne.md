@@ -97,7 +97,6 @@ applicables. Toute conséquence conserve les réserves de sa prémisse, y compri
 dans les actes, formulaires et calendriers. Une réserve après une obligation,
 une condition ou une autorité non vérifiée ne répare pas son affirmation.
 
-
 - **Repères documentaires à vérifier pour la réponse** : principes d'accueil, de communication interne, de marque
   employeur.
 - **À vérifier** : périmètre exact des obligations d'information (LDG, RSU) et

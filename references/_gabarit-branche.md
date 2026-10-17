@@ -26,7 +26,12 @@
 9. **Données volatiles à vérifier** — valeurs à ne jamais donner de mémoire.
 10. **Livrables** — classés par niveau (décision / organisation / pilotage /
     communication) + éléments obligatoires (ex. voies de recours).
-11. **Niveau de confiance** — repères stable / à vérifier / débattu pour la branche.
+11. **Niveau de confiance** — repères documentaires de la branche, sans étiquette
+    « Stable » globale. Évaluer la confiance **proposition par proposition** :
+    « Stable » seulement si un article consulté porte littéralement la
+    proposition, dans sa version et son champ applicables ; sinon conserver
+    « à vérifier » ou « débattu » selon le cas. Reporter les réserves de chaque
+    prémisse dans ses conséquences et dans les livrables.
 12. **Checklist de branche** — contrôles spécifiques avant sortie.
 
 ## Règles d'écriture

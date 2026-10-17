@@ -5,6 +5,10 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 ## [Non publié] — v0.7.1
 
 ### Corrections locales après clôture du jeu A — 2026-10-17
+- Relecture L1 : communication disciplinaire du témoignage demandé, inférence
+  CRPA explicitée, champ et objets de L131-8, provenance archivée de L274,
+  confiance par proposition et contrat à durée indéterminée selon L332-10 ;
+  suppression du double saut de ligne dans les huit rubriques §11.
 - C1–C8 : cumul déclaratif et réserves, recrutement et décompte du CDI,
   indus et recouvrement, avis distincts taux/LDG, accès aux pièces et
   assistance disciplinaire, prise en charge/aménagements et réserves retraite.

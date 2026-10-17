@@ -225,11 +225,13 @@ professionnelle ou non-renouvellement contesté. Renvoi →
 
 ### 5.9 Vigilance — requalification et frontières du régime
 
-- **Succession irrégulière de CDD** (fondement non actualisé, besoin en
-  réalité permanent) → risque de **requalification** en CDI de plein droit
-  (règle des 6 ans) et de contentieux indemnitaire pour précarité. Chaque
-  renouvellement doit reposer sur un fondement vérifié, pas sur la simple
-  reconduction.
+- **Succession de CDD** : selon L332-10, le contrat établi ou renouvelé pour
+  pourvoir un emploi permanent en application de L332-8 **est conclu pour une
+  durée indéterminée lorsque les conditions sont réunies** (§5.3 : services,
+  catégorie hiérarchique, employeur et décompte). Ne pas déduire une
+  requalification automatique de toute succession irrégulière de CDD. Chaque
+  renouvellement doit reposer sur un fondement vérifié ; un éventuel
+  contentieux indemnitaire pour précarité exige une analyse distincte.
 - **Contractuel de droit public ≠ droit privé** : **apprentis**, **contrats
   aidés/insertion**, et **certains personnels des OPH** relèvent du **code du
   travail**, pas du décret 88-145 — **statut à vérifier poste par poste**.
@@ -326,7 +328,6 @@ consulté porte littéralement la proposition, dans sa version et son champ
 applicables. Toute conséquence conserve les réserves de sa prémisse, y compris
 dans les actes, formulaires et calendriers. Une réserve après une obligation,
 une condition ou une autorité non vérifiée ne répare pas son affirmation.
-
 
 - **Repères documentaires à vérifier pour la réponse** : existence d'un texte d'application propre au contractuel
   (décret 88-145 pour rémunération/fin de contrat/licenciement/discipline,

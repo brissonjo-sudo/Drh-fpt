@@ -77,10 +77,20 @@ invalidité ; égalité professionnelle (plan d'action, nominations
 - **FIPHFP** : contribution si l'obligation n'est pas atteinte ; financements et
   aides. **DOETH** : déclaration annuelle.
 
-**Aménagement et suppression d'emploi** : L131-8 impose des mesures
-appropriées en fonction des besoins dans une situation concrète, y compris
-pour l'accès et l'usage des outils numériques, sous réserve de charges non
-disproportionnées compte tenu des aides possibles. Ne pas en faire une
+**Aménagement et suppression d'emploi** : L131-8 impose aux employeurs publics
+mentionnés à L2, en fonction des besoins dans une situation concrète, les
+mesures appropriées pour permettre aux personnes relevant des **1°, 2°, 3°,
+4°, 9°, 10° et 11° de l'article L. 5212-13 du code du travail** d'accéder à un
+emploi ou de conserver un emploi correspondant à leur qualification, de
+développer un parcours professionnel et d'accéder à des fonctions de niveau
+supérieur ou pour qu'une formation adaptée à leurs besoins leur soit dispensée
+tout au long de leur vie professionnelle. Ces mesures incluent notamment
+l'aménagement, l'accès et l'usage de tous les outils numériques concourant à
+l'accomplissement de la mission des agents, notamment les logiciels métiers
+et de bureautique ainsi que les appareils mobiles. Elles s'appliquent sous
+réserve que les charges consécutives ne soient pas disproportionnées, compte
+tenu notamment des aides pouvant compenser tout ou partie des dépenses
+supportées par les employeurs à ce titre. Ne pas en faire une
 garantie inconditionnelle de maintien du même poste. Ne nommer aucun
 « validateur de compatibilité » sans texte attribuant cette compétence.
 Pour la rémunération d'un fonctionnaire territorial pris en charge et les
@@ -317,7 +327,6 @@ consulté porte littéralement la proposition, dans sa version et son champ
 applicables. Toute conséquence conserve les réserves de sa prémisse, y compris
 dans les actes, formulaires et calendriers. Une réserve après une obligation,
 une condition ou une autorité non vérifiée ne répare pas son affirmation.
-
 
 - **Repères documentaires à vérifier pour la réponse** : existence des congés, du conseil médical (fusion 2022), du DUERP,
   de l'obligation d'emploi ; existence de la chaîne congés → conseil médical →

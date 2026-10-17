@@ -1595,7 +1595,6 @@ applicables. Toute conséquence conserve les réserves de sa prémisse, y compri
 dans les actes, formulaires et calendriers. Une réserve après une obligation,
 une condition ou une autorité non vérifiée ne répare pas son affirmation.
 
-
 - **Repères documentaires à vérifier pour la réponse** : architecture des catégories/grades, mécanique
   échelon/grade/promotion, échelle des sanctions (CGFP L533) ; retenue de
   traitement FPT proportionnelle à la durée réelle de l'absence (≠ trentième
@@ -1693,15 +1692,20 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
 ### 5.5 Discipline (échelle à confirmer en séance — CGFP, art. L533-1 et s.)
 
 **Avant l'engagement disciplinaire — accès aux pièces** : appliquer le CRPA
-pièce par pièce. L311-2 distingue document achevé et document préparatoire à
-une décision en cours ; conserver ses exceptions sur les avis légalement
-requis rendus sur une demande de décision individuelle créatrice de droits,
+pièce par pièce. L311-2 limite le droit à communication aux documents achevés
+et exclut les documents préparatoires à une décision administrative tant
+qu'elle est en cours d'élaboration ; conserver ses exceptions sur les avis
+légalement requis rendus sur une demande de décision individuelle créatrice de droits,
 communicables à l'auteur de la demande dès leur envoi à l'autorité compétente,
 avec communication des motifs absents en cas d'avis défavorable ; les avis
 comparant les mérites de plusieurs demandes restent réservés tant que la
-décision qu'ils préparent n'est pas prise. Une enquête en cours ne suffit pas
-à refuser globalement toute pièce. L311-6 réserve à l'intéressé les documents
-qu'il vise : vie privée, secret médical et secret des affaires ; appréciations
+décision qu'ils préparent n'est pas prise. **Inférence de L311-2 et L311-7** :
+une enquête en cours ne suffit pas, à elle seule, à refuser globalement toute
+pièce ; examiner pour chacune son caractère achevé, son éventuel caractère
+préparatoire à une décision en cours d'élaboration et la possibilité de
+communiquer après occultation ou disjonction des mentions protégées.
+L311-6 réserve à l'intéressé les documents qu'il vise : vie privée, secret
+médical et secret des affaires ; appréciations
 sur une personne identifiable ; comportement dont la
 divulgation **pourrait porter préjudice** ; ne pas remplacer ce dernier
 critère par un « risque avéré ». L311-7 prévoit la communication après
@@ -1709,11 +1713,16 @@ occultation ou disjonction des mentions protégées lorsque cela est possible.
 
 **Procédure disciplinaire engagée** : CE, Section, 22/12/2023, n°462455,
 points 4 à 6, concerne une sanction fondée sur un rapport d'inspection et les
-témoignages recueillis. Le point 4 permet, en cas de risque avéré de préjudice
-pour le témoin apprécié concrètement, une communication du témoignage demandé
-préservant son anonymat ; ce standard n'est pas une règle générale du CRPA
-pour la phase pré-disciplinaire. Ne pas transformer l'appréciation des pièces
-de cette affaire en présomption applicable à tous les témoins.
+témoignages recueillis. Le point 4 prévoit que, lorsque résulterait de la
+communication d'un témoignage un risque avéré de préjudice pour son auteur,
+l'autorité disciplinaire **communique ce témoignage à l'intéressé, s'il en
+forme la demande**, selon des modalités préservant l'anonymat du témoin.
+Elle apprécie ce risque au regard de la situation particulière du témoin
+vis-à-vis de l'agent public mis en cause, sans préjudice de la protection
+accordée à certaines catégories de témoins par la loi. Ce standard n'est pas
+une règle générale du CRPA pour la phase pré-disciplinaire. Ne pas transformer
+l'appréciation des pièces de cette affaire en présomption applicable à tous
+les témoins.
 
 **Assistance ≠ représentation automatique** : L532-4 et les articles 4 et 6
 du décret 89-677 du 18/09/1989 consacrent l'assistance par les défenseurs ou
@@ -1937,13 +1946,18 @@ L'action en **recouvrement** relève du renvoi à **L274 du LPF**, distinct de
 la répétition : sauf dispositions contraires et causes suspensives ou
 interruptives, délai de quatre ans depuis la mise en recouvrement du rôle ou
 l'envoi du titre exécutoire ; majoration de deux ans pour les redevables établis
-dans l'État non membre de l'UE répondant à la condition d'absence d'assistance
-mutuelle équivalente précisée par cet article. Ne pas en déduire un montant
+dans **un État non membre de l'Union européenne** avec lequel la France ne
+dispose d'aucun instrument juridique relatif à l'assistance mutuelle en matière
+de recouvrement ayant une portée similaire à celle prévue par la directive
+2010/24/UE du Conseil du 16 mars 2010. Ne pas en déduire un montant
 « irrécupérable » avant d'identifier l'acte requis, ses dates et les exceptions
 applicables ; une simple date de versement ne suffit pas à qualifier les deux délais.
 Sources : art. 37-1 (LEGIARTI000042914580), pack PISTE du 16/10/2026 ;
-L274 (LEGIARTI000042914471), collecte PISTE du 17/10/2026, version depuis
-le 01/01/2022. Le régime transitoire de l'article 37-1 est à conserver :
+L274 (LEGIARTI000042914471), version en vigueur depuis le 01/01/2022,
+collecte PISTE archivée du 17/10/2026 à 10:27:36 UTC : restitution `l274.json`,
+requête `02-request.json` et réponse originale `02-response.json`, dans
+`t101-corrections-skill-20261017/sources/` (archive locale du chantier, hors dépôt).
+Le régime transitoire de l'article 37-1 est à conserver :
 application à l'action dont le délai commence ou dont une cause interruptive
 intervient à compter du 01/01/2022.
 
@@ -2327,10 +2341,23 @@ quotité travaillée**, la fraction restante relevant du premier alinéa.
 La rémunération nette est réduite des rémunérations nettes perçues au titre
 du cumul d'activités. Ne pas étendre la dérogation à toute la rémunération
 pour une mission partielle, ni garantir le régime indemnitaire.
-L131-8 requiert l'examen des aménagements selon les besoins concrets, sous
-réserve de charges non disproportionnées compte tenu des aides ; aucune
-autorité de validation de compatibilité n'est ajoutée sans fondement.
-Sources : L542-15 (LEGIARTI000044425334) et L131-8, pack PISTE du 16/10/2026.
+L131-8 impose aux employeurs publics mentionnés à L2, en fonction des besoins
+dans une situation concrète, les mesures appropriées pour permettre aux
+personnes relevant des **1°, 2°, 3°, 4°, 9°, 10° et 11° de l'article L. 5212-13
+du code du travail** d'accéder à un emploi ou de conserver un emploi
+correspondant à leur qualification, de développer un parcours professionnel
+et d'accéder à des fonctions de niveau supérieur ou pour qu'une formation
+adaptée à leurs besoins leur soit dispensée tout au long de leur vie
+professionnelle. Ces mesures incluent notamment l'aménagement, l'accès et
+l'usage de tous les outils numériques concourant à l'accomplissement de la
+mission des agents, notamment les logiciels métiers et de bureautique ainsi
+que les appareils mobiles. Elles s'appliquent sous réserve que les charges
+consécutives ne soient pas disproportionnées, compte tenu notamment des aides
+pouvant compenser tout ou partie des dépenses supportées par les employeurs
+à ce titre. Aucune autorité de validation de compatibilité n'est ajoutée sans
+fondement.
+Sources : L542-15 (LEGIARTI000044425334) et L131-8 (LEGIARTI000044427678),
+pack PISTE du 16/10/2026.
 
 ### Retraite — affiliation, demande et réserves de paiement
 
@@ -2448,10 +2475,20 @@ invalidité ; égalité professionnelle (plan d'action, nominations
 - **FIPHFP** : contribution si l'obligation n'est pas atteinte ; financements et
   aides. **DOETH** : déclaration annuelle.
 
-**Aménagement et suppression d'emploi** : L131-8 impose des mesures
-appropriées en fonction des besoins dans une situation concrète, y compris
-pour l'accès et l'usage des outils numériques, sous réserve de charges non
-disproportionnées compte tenu des aides possibles. Ne pas en faire une
+**Aménagement et suppression d'emploi** : L131-8 impose aux employeurs publics
+mentionnés à L2, en fonction des besoins dans une situation concrète, les
+mesures appropriées pour permettre aux personnes relevant des **1°, 2°, 3°,
+4°, 9°, 10° et 11° de l'article L. 5212-13 du code du travail** d'accéder à un
+emploi ou de conserver un emploi correspondant à leur qualification, de
+développer un parcours professionnel et d'accéder à des fonctions de niveau
+supérieur ou pour qu'une formation adaptée à leurs besoins leur soit dispensée
+tout au long de leur vie professionnelle. Ces mesures incluent notamment
+l'aménagement, l'accès et l'usage de tous les outils numériques concourant à
+l'accomplissement de la mission des agents, notamment les logiciels métiers
+et de bureautique ainsi que les appareils mobiles. Elles s'appliquent sous
+réserve que les charges consécutives ne soient pas disproportionnées, compte
+tenu notamment des aides pouvant compenser tout ou partie des dépenses
+supportées par les employeurs à ce titre. Ne pas en faire une
 garantie inconditionnelle de maintien du même poste. Ne nommer aucun
 « validateur de compatibilité » sans texte attribuant cette compétence.
 Pour la rémunération d'un fonctionnaire territorial pris en charge et les
@@ -2688,7 +2725,6 @@ consulté porte littéralement la proposition, dans sa version et son champ
 applicables. Toute conséquence conserve les réserves de sa prémisse, y compris
 dans les actes, formulaires et calendriers. Une réserve après une obligation,
 une condition ou une autorité non vérifiée ne répare pas son affirmation.
-
 
 - **Repères documentaires à vérifier pour la réponse** : existence des congés, du conseil médical (fusion 2022), du DUERP,
   de l'obligation d'emploi ; existence de la chaîne congés → conseil médical →
@@ -2935,7 +2971,6 @@ applicables. Toute conséquence conserve les réserves de sa prémisse, y compri
 dans les actes, formulaires et calendriers. Une réserve après une obligation,
 une condition ou une autorité non vérifiée ne répare pas son affirmation.
 
-
 - **Repères documentaires à vérifier pour la réponse** : architecture des voies d'accès, principe d'égal accès, formations
   obligatoires CNFPT, entretien professionnel ; les trois critères cumulatifs
   du vacataire (jurisprudence constante) ; nature de droit privé du contrat
@@ -3085,7 +3120,6 @@ applicables. Toute conséquence conserve les réserves de sa prémisse, y compri
 dans les actes, formulaires et calendriers. Une réserve après une obligation,
 une condition ou une autorité non vérifiée ne répare pas son affirmation.
 
-
 - **Repères documentaires à vérifier pour la réponse** : fusion CT/CHSCT en CST (2022), existence CAP/CCP, obligation RSU
   et LDG, principe des élections quadriennales.
 - **À vérifier** : calendrier précis des élections ; barèmes des moyens
@@ -3221,7 +3255,6 @@ applicables. Toute conséquence conserve les réserves de sa prémisse, y compri
 dans les actes, formulaires et calendriers. Une réserve après une obligation,
 une condition ou une autorité non vérifiée ne répare pas son affirmation.
 
-
 - **Repères documentaires à vérifier pour la réponse** : mécanique du chapitre 012, définition du GVT / noria / report,
   principe DSN et RSU, tableau des effectifs.
 - **À vérifier** : toute valeur chiffrée ; format DSN et RSU de l'année.
@@ -3337,7 +3370,6 @@ consulté porte littéralement la proposition, dans sa version et son champ
 applicables. Toute conséquence conserve les réserves de sa prémisse, y compris
 dans les actes, formulaires et calendriers. Une réserve après une obligation,
 une condition ou une autorité non vérifiée ne répare pas son affirmation.
-
 
 - **Repères documentaires à vérifier pour la réponse** : principes d'accueil, de communication interne, de marque
   employeur.
@@ -3583,11 +3615,13 @@ professionnelle ou non-renouvellement contesté. Renvoi →
 
 ### 5.9 Vigilance — requalification et frontières du régime
 
-- **Succession irrégulière de CDD** (fondement non actualisé, besoin en
-  réalité permanent) → risque de **requalification** en CDI de plein droit
-  (règle des 6 ans) et de contentieux indemnitaire pour précarité. Chaque
-  renouvellement doit reposer sur un fondement vérifié, pas sur la simple
-  reconduction.
+- **Succession de CDD** : selon L332-10, le contrat établi ou renouvelé pour
+  pourvoir un emploi permanent en application de L332-8 **est conclu pour une
+  durée indéterminée lorsque les conditions sont réunies** (§5.3 : services,
+  catégorie hiérarchique, employeur et décompte). Ne pas déduire une
+  requalification automatique de toute succession irrégulière de CDD. Chaque
+  renouvellement doit reposer sur un fondement vérifié ; un éventuel
+  contentieux indemnitaire pour précarité exige une analyse distincte.
 - **Contractuel de droit public ≠ droit privé** : **apprentis**, **contrats
   aidés/insertion**, et **certains personnels des OPH** relèvent du **code du
   travail**, pas du décret 88-145 — **statut à vérifier poste par poste**.
@@ -3684,7 +3718,6 @@ consulté porte littéralement la proposition, dans sa version et son champ
 applicables. Toute conséquence conserve les réserves de sa prémisse, y compris
 dans les actes, formulaires et calendriers. Une réserve après une obligation,
 une condition ou une autorité non vérifiée ne répare pas son affirmation.
-
 
 - **Repères documentaires à vérifier pour la réponse** : existence d'un texte d'application propre au contractuel
   (décret 88-145 pour rémunération/fin de contrat/licenciement/discipline,
@@ -4029,7 +4062,6 @@ consulté porte littéralement la proposition, dans sa version et son champ
 applicables. Toute conséquence conserve les réserves de sa prémisse, y compris
 dans les actes, formulaires et calendriers. Une réserve après une obligation,
 une condition ou une autorité non vérifiée ne répare pas son affirmation.
-
 
 - **Repères documentaires à vérifier pour la réponse** : obligation de protection fonctionnelle et son autonomie
   vis-à-vis du pénal ; principe d'exclusivité et dérogations encadrées ;

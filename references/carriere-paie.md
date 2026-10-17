@@ -153,7 +153,6 @@ applicables. Toute conséquence conserve les réserves de sa prémisse, y compri
 dans les actes, formulaires et calendriers. Une réserve après une obligation,
 une condition ou une autorité non vérifiée ne répare pas son affirmation.
 
-
 - **Repères documentaires à vérifier pour la réponse** : architecture des catégories/grades, mécanique
   échelon/grade/promotion, échelle des sanctions (CGFP L533) ; retenue de
   traitement FPT proportionnelle à la durée réelle de l'absence (≠ trentième
