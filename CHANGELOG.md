@@ -5,6 +5,10 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 ## [Non publié] — v0.7.1
 
 ### Corrections locales après clôture du jeu A — 2026-10-17
+- C1–C8 : cumul déclaratif et réserves, recrutement et décompte du CDI,
+  indus et recouvrement, avis distincts taux/LDG, accès aux pièces et
+  assistance disciplinaire, prise en charge/aménagements et réserves retraite.
+  Sources : pack PISTE du 16/10/2026 ; L274 collecté le 17/10/2026.
 - C9 : télétravail, circuit d’avis de la formation spécialisée selon R432-1
   et L253-6 ; retrait du renvoi périmé au décret 2016-151.
 - Méthode M1–M5 : fidélité au texte et aux exceptions, portée des décisions,

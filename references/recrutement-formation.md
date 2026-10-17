@@ -52,7 +52,27 @@ apprentissage (financement, maître d'apprentissage, titularisation handicap).
 - **Contractuels** : cas de recours définis par le CGFP (ex-articles 3 et
   suivants de la loi 84-53), **élargis par la loi n° 2019-828**. Formes : CDD,
   CDI, **contrat de projet**. Vérifier le fondement exact selon le besoin.
-  Régime détaillé → `contractuels.md`.
+  **L332-8, 2° / L332-14** : distinguer le recrutement permanent justifié
+  par les besoins des services ou la nature des fonctions, sous réserve
+  qu'aucun fonctionnaire territorial n'ait pu être recruté, de la vacance
+  temporaire dans l'attente du recrutement d'un fonctionnaire pour assurer
+  la continuité du service. R332-9 subordonne l'examen des candidatures non
+  fonctionnaires, dans les cas qu'il vise dont L332-8, 2°, au constat du
+  caractère infructueux du recrutement d'un fonctionnaire sur cet emploi.
+  Aucun « renoncement à attendre » n'est une condition de ce texte.
+  L332-14 prévoit un contrat d'au plus un an, prolongeable dans la limite
+  totale de deux ans si la procédure de recrutement n'a pu aboutir.
+  Conserver le renvoi de L332-8 à L313-1 sans le présenter comme le texte
+  de publicité de la vacance : L313-1 vise la création de l'emploi par
+  délibération ; L332-14 renvoie à L313-4 pour les formalités de vacance.
+  **Contrôle médical à l'engagement** : R331-2, 4°, vise les conditions de
+  santé particulières exigées pour certaines fonctions, compte tenu des
+  possibilités de compensation du handicap. Ne pas généraliser ce contrôle
+  à tout recrutement. Pour la FPT, R331-4, 3°, le confie aux médecins agréés
+  mentionnés à l'article 1er du décret 87-602, avec prise en charge selon
+  l'article 41 de ce décret. Les conditions restantes sont à vérifier selon
+  les fonctions. Sources : articles cités, versions au 12/10/2026 du pack
+  PISTE du 16/10/2026. Régime détaillé → `contractuels.md`.
 - **Vacataires** : hors statut, à distinguer strictement du contractuel.
   Trois critères **cumulatifs** caractérisent le « vrai » vacataire
   (jurisprudence constante) :

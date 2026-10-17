@@ -361,3 +361,53 @@ source applicable.
   gestionnaire RH doit **évaluer le risque et le coût chômage** en
   auto-assurance et le signaler au décideur — c'est un paramètre budgétaire,
   pas seulement statutaire.
+
+### Suppression d'emploi — prise en charge et missions
+
+L542-15 prévoit l'intégralité de la rémunération indiciaire détenue dans le
+grade pendant la première année de prise en charge, puis une réduction de
+10 % par an. Le fonctionnaire peut bénéficier du régime indemnitaire du grade
+lors des missions confiées. Pendant ces missions, la dérogation au premier
+alinéa porte sur la totalité de la rémunération indiciaire ; **si les missions
+sont à temps partiel, elle ne porte que sur la fraction correspondant à la
+quotité travaillée**, la fraction restante relevant du premier alinéa.
+La rémunération nette est réduite des rémunérations nettes perçues au titre
+du cumul d'activités. Ne pas étendre la dérogation à toute la rémunération
+pour une mission partielle, ni garantir le régime indemnitaire.
+L131-8 requiert l'examen des aménagements selon les besoins concrets, sous
+réserve de charges non disproportionnées compte tenu des aides ; aucune
+autorité de validation de compatibilité n'est ajoutée sans fondement.
+Sources : L542-15 (LEGIARTI000044425334) et L131-8, pack PISTE du 16/10/2026.
+
+### Retraite — affiliation, demande et réserves de paiement
+
+Ne pas appliquer les délais de l'article 59 du décret 2003-1306 du 26/12/2003
+à tous les agents : ce texte concerne les fonctionnaires affiliés à la CNRACL.
+Vérifier l'affiliation, les demandes **déjà déposées** et les dates du dossier.
+Dans ce champ, l'article 59 prévoit la demande de pension au moins six mois
+avant la date souhaitée de départ, puis la transmission par l'employeur et
+la réception du dossier au moins trois mois avant la radiation. Ne pas
+recalculer ces étapes depuis la date d'exécution de la réponse.
+
+Conserver les réserves de l'article 2 : admission d'office à la limite d'âge
+**sous réserve de L556-5 à L556-7**, et sans préjudice du maintien temporaire
+de l'article 10 ; admission prononcée après avis de la CNRACL par l'autorité
+ayant qualité pour nommer. Ces renvois exigent un examen individualisé ;
+ne pas ajouter un avis « favorable » absent du texte.
+
+L'article 27, I, interdit une mise en paiement antérieure à la décision de
+radiation **sauf les cas exceptionnels de R.36 du code des pensions civiles
+et militaires de retraite**. Son II distingue : pension mensuelle à terme
+échu due le premier jour du mois suivant la cessation ; toutefois, limite
+d'âge ou invalidité, due dès le jour de cessation ; rémunération interrompue
+au jour de cessation ; décès en service, pension des ayants droit due le
+lendemain du décès. Le paiement intervient à la fin du premier mois suivant
+le mois de cessation ou de décès avec rappel à la date d'entrée en jouissance.
+Conserver aussi la réserve d'application des pensions prenant effet à compter
+du 01/09/2023 et les conditions du II de l'article 13 du décret 2023-435
+signalées par la notice, à consulter si elles deviennent déterminantes.
+
+Sources : décret 2003-1306 art. 2 (LEGIARTI000049428994), 27
+(LEGIARTI000047633338) et 59 (LEGIARTI000006400930), pack PISTE du 16/10/2026.
+L556-5 à L556-7 sont également présents dans le corps complet du CGFP de ce
+pack ; le renvoi R.36 n'autorise pas à inventer le contenu de ses exceptions.

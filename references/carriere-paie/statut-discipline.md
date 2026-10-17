@@ -58,7 +58,43 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
 - **Entretien professionnel annuel** : obligatoire, fonde l'appréciation de la
   valeur professionnelle.
 
-### 5.5 Discipline (échelle vérifiée — CGFP, art. L533-1 et s.)
+### 5.5 Discipline (échelle à confirmer en séance — CGFP, art. L533-1 et s.)
+
+**Avant l'engagement disciplinaire — accès aux pièces** : appliquer le CRPA
+pièce par pièce. L311-2 distingue document achevé et document préparatoire à
+une décision en cours ; conserver ses exceptions sur les avis légalement
+requis rendus sur une demande de décision individuelle créatrice de droits,
+communicables à l'auteur de la demande dès leur envoi à l'autorité compétente,
+avec communication des motifs absents en cas d'avis défavorable ; les avis
+comparant les mérites de plusieurs demandes restent réservés tant que la
+décision qu'ils préparent n'est pas prise. Une enquête en cours ne suffit pas
+à refuser globalement toute pièce. L311-6 réserve à l'intéressé les documents
+qu'il vise : vie privée, secret médical et secret des affaires ; appréciations
+sur une personne identifiable ; comportement dont la
+divulgation **pourrait porter préjudice** ; ne pas remplacer ce dernier
+critère par un « risque avéré ». L311-7 prévoit la communication après
+occultation ou disjonction des mentions protégées lorsque cela est possible.
+
+**Procédure disciplinaire engagée** : CE, Section, 22/12/2023, n°462455,
+points 4 à 6, concerne une sanction fondée sur un rapport d'inspection et les
+témoignages recueillis. Le point 4 permet, en cas de risque avéré de préjudice
+pour le témoin apprécié concrètement, une communication du témoignage demandé
+préservant son anonymat ; ce standard n'est pas une règle générale du CRPA
+pour la phase pré-disciplinaire. Ne pas transformer l'appréciation des pièces
+de cette affaire en présomption applicable à tous les témoins.
+
+**Assistance ≠ représentation automatique** : L532-4 et les articles 4 et 6
+du décret 89-677 du 18/09/1989 consacrent l'assistance par les défenseurs ou
+conseils choisis ; l'article 6 prévoit aussi les observations écrites ou orales
+et les témoins. Ne pas en déduire une autorisation générale de remplacer
+l'agent à l'entretien ou devant le conseil. Réserver un éventuel régime de
+représentation à un fondement vérifié.
+
+Sources de ces précisions : CRPA L311-2, L311-6 et L311-7 ; CGFP L532-4 ;
+décret 89-677 art. 4 et 6 ; décision CETATEXT000048701432, textes du pack
+PISTE du 16/10/2026. La table ci-dessous reste un repère documentaire à
+confronter à L533-1 et aux textes propres lors de chaque réponse.
+
 
 | Groupe | Sanctions | Conseil de discipline |
 |--------|-----------|------------------------|

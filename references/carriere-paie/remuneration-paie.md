@@ -104,3 +104,32 @@ par **équivalence** :
   **< 28 heures**.
 - **RAFP** : retraite additionnelle, assise notamment sur le régime
   indemnitaire, dans une limite réglementaire.
+
+### Indus de rémunération — répétition et recouvrement
+
+**Article 37-1 de la loi 2000-321** : les paiements indus en matière de
+rémunération peuvent être répétés dans les deux ans à compter du premier jour
+du mois suivant la mise en paiement du versement erroné, y compris si leur
+origine est une décision créatrice de droits irrégulière devenue définitive.
+Conserver les réserves :
+- alinéa 2 : ce délai ne s'applique pas aux indus issus de l'absence
+  d'information sur les modifications personnelles ou familiales ayant une
+  incidence sur la rémunération, ou d'informations inexactes sur cette situation ;
+- alinéa 3 : les deux premiers alinéas ne s'appliquent pas aux paiements
+  fondés sur une décision créatrice de droits prise en application d'une
+  disposition réglementaire annulée au contentieux, ou une décision irrégulière
+  relative à une nomination dans un grade, lorsque le recouvrement intervient
+  pour cette raison.
+L'action en **recouvrement** relève du renvoi à **L274 du LPF**, distinct de
+la répétition : sauf dispositions contraires et causes suspensives ou
+interruptives, délai de quatre ans depuis la mise en recouvrement du rôle ou
+l'envoi du titre exécutoire ; majoration de deux ans pour les redevables établis
+dans l'État non membre de l'UE répondant à la condition d'absence d'assistance
+mutuelle équivalente précisée par cet article. Ne pas en déduire un montant
+« irrécupérable » avant d'identifier l'acte requis, ses dates et les exceptions
+applicables ; une simple date de versement ne suffit pas à qualifier les deux délais.
+Sources : art. 37-1 (LEGIARTI000042914580), pack PISTE du 16/10/2026 ;
+L274 (LEGIARTI000042914471), collecte PISTE du 17/10/2026, version depuis
+le 01/01/2022. Le régime transitoire de l'article 37-1 est à conserver :
+application à l'action dont le délai commence ou dont une cause interruptive
+intervient à compter du 01/01/2022.

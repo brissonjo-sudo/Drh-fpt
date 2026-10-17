@@ -85,20 +85,28 @@ refus de l'agent peut fonder un licenciement (§5.6).
 
 ### 5.3 CDIsation et portabilité (point de vigilance majeur)
 
-**Règle des 6 ans** : un agent en CDD ayant accompli au moins **6 ans de
-services publics effectifs** sur des fonctions de **même catégorie
-hiérarchique**, chez le **même employeur**, doit se voir proposer un **CDI**
-au renouvellement. Base CGFP (codifiant l'ex-art. 21 de la loi 84-53) —
-**article exact et conditions précises (computation, régime après 55 ans,
-temps complet/incomplet) à vérifier avant toute réponse ferme**.
+**L332-10 — contrat à durée indéterminée et décompte** : tout contrat établi
+ou renouvelé pour un emploi permanent en application de L332-8 avec un agent
+justifiant d'au moins six ans de services publics sur des fonctions de même
+catégorie hiérarchique est conclu à durée indéterminée. Le décompte vise les
+services auprès de la **même collectivité ou du même établissement**, dans
+les emplois de la sous-section ou de L332-23. Il prend aussi en compte :
+1. les services de L452-44 accomplis auprès de l'employeur qui a ensuite
+   recruté l'agent par contrat ;
+2. les services à temps non complet et à temps partiel, assimilés au temps complet ;
+3. les services discontinus, si les interruptions entre contrats n'excèdent
+   pas quatre mois ; la période d'état d'urgence sanitaire désignée par le
+   texte n'entre pas dans le calcul de l'interruption.
+Ne pas ajouter une condition générale « sans interruption », d'âge ou de
+filière absente de cet article. Vérifier chaque contrat et les catégories
+effectives avant de conclure. Source : L332-10 (LEGIARTI000046119123), version
+au 12/10/2026 du pack PISTE du 16/10/2026.
 **Portabilité du CDI** : un agent déjà en CDI peut, sous conditions, se voir
 proposer un CDI par un **nouvel employeur public** (y compris autre versant),
 sans repasser par un CDD — **faculté du nouvel employeur**, pas un droit
-automatique ; conditions d'éligibilité **à vérifier**. **Pièges** : une
-**interruption de service** au-delà d'un seuil **à vérifier** peut remettre
-le compteur à zéro ; un changement de **catégorie ou de filière** peut
-rompre la continuité même à fonctions proches ; CDIsation **≠**
-titularisation, elle ne confère jamais la qualité de fonctionnaire.
+automatique ; conditions d'éligibilité **à vérifier** sur le fondement propre
+de cette mobilité. Ne pas transposer ce contrôle au décompte de L332-10.
+CDIsation **≠** titularisation ; elle ne confère pas la qualité de fonctionnaire.
 
 ### 5.4 Rémunération
 

@@ -1690,7 +1690,43 @@ personnelles — y compris pour création/reprise d'entreprise), congé parental
 - **Entretien professionnel annuel** : obligatoire, fonde l'appréciation de la
   valeur professionnelle.
 
-### 5.5 Discipline (échelle vérifiée — CGFP, art. L533-1 et s.)
+### 5.5 Discipline (échelle à confirmer en séance — CGFP, art. L533-1 et s.)
+
+**Avant l'engagement disciplinaire — accès aux pièces** : appliquer le CRPA
+pièce par pièce. L311-2 distingue document achevé et document préparatoire à
+une décision en cours ; conserver ses exceptions sur les avis légalement
+requis rendus sur une demande de décision individuelle créatrice de droits,
+communicables à l'auteur de la demande dès leur envoi à l'autorité compétente,
+avec communication des motifs absents en cas d'avis défavorable ; les avis
+comparant les mérites de plusieurs demandes restent réservés tant que la
+décision qu'ils préparent n'est pas prise. Une enquête en cours ne suffit pas
+à refuser globalement toute pièce. L311-6 réserve à l'intéressé les documents
+qu'il vise : vie privée, secret médical et secret des affaires ; appréciations
+sur une personne identifiable ; comportement dont la
+divulgation **pourrait porter préjudice** ; ne pas remplacer ce dernier
+critère par un « risque avéré ». L311-7 prévoit la communication après
+occultation ou disjonction des mentions protégées lorsque cela est possible.
+
+**Procédure disciplinaire engagée** : CE, Section, 22/12/2023, n°462455,
+points 4 à 6, concerne une sanction fondée sur un rapport d'inspection et les
+témoignages recueillis. Le point 4 permet, en cas de risque avéré de préjudice
+pour le témoin apprécié concrètement, une communication du témoignage demandé
+préservant son anonymat ; ce standard n'est pas une règle générale du CRPA
+pour la phase pré-disciplinaire. Ne pas transformer l'appréciation des pièces
+de cette affaire en présomption applicable à tous les témoins.
+
+**Assistance ≠ représentation automatique** : L532-4 et les articles 4 et 6
+du décret 89-677 du 18/09/1989 consacrent l'assistance par les défenseurs ou
+conseils choisis ; l'article 6 prévoit aussi les observations écrites ou orales
+et les témoins. Ne pas en déduire une autorisation générale de remplacer
+l'agent à l'entretien ou devant le conseil. Réserver un éventuel régime de
+représentation à un fondement vérifié.
+
+Sources de ces précisions : CRPA L311-2, L311-6 et L311-7 ; CGFP L532-4 ;
+décret 89-677 art. 4 et 6 ; décision CETATEXT000048701432, textes du pack
+PISTE du 16/10/2026. La table ci-dessous reste un repère documentaire à
+confronter à L533-1 et aux textes propres lors de chaque réponse.
+
 
 | Groupe | Sanctions | Conseil de discipline |
 |--------|-----------|------------------------|
@@ -1881,6 +1917,35 @@ par **équivalence** :
   **< 28 heures**.
 - **RAFP** : retraite additionnelle, assise notamment sur le régime
   indemnitaire, dans une limite réglementaire.
+
+### Indus de rémunération — répétition et recouvrement
+
+**Article 37-1 de la loi 2000-321** : les paiements indus en matière de
+rémunération peuvent être répétés dans les deux ans à compter du premier jour
+du mois suivant la mise en paiement du versement erroné, y compris si leur
+origine est une décision créatrice de droits irrégulière devenue définitive.
+Conserver les réserves :
+- alinéa 2 : ce délai ne s'applique pas aux indus issus de l'absence
+  d'information sur les modifications personnelles ou familiales ayant une
+  incidence sur la rémunération, ou d'informations inexactes sur cette situation ;
+- alinéa 3 : les deux premiers alinéas ne s'appliquent pas aux paiements
+  fondés sur une décision créatrice de droits prise en application d'une
+  disposition réglementaire annulée au contentieux, ou une décision irrégulière
+  relative à une nomination dans un grade, lorsque le recouvrement intervient
+  pour cette raison.
+L'action en **recouvrement** relève du renvoi à **L274 du LPF**, distinct de
+la répétition : sauf dispositions contraires et causes suspensives ou
+interruptives, délai de quatre ans depuis la mise en recouvrement du rôle ou
+l'envoi du titre exécutoire ; majoration de deux ans pour les redevables établis
+dans l'État non membre de l'UE répondant à la condition d'absence d'assistance
+mutuelle équivalente précisée par cet article. Ne pas en déduire un montant
+« irrécupérable » avant d'identifier l'acte requis, ses dates et les exceptions
+applicables ; une simple date de versement ne suffit pas à qualifier les deux délais.
+Sources : art. 37-1 (LEGIARTI000042914580), pack PISTE du 16/10/2026 ;
+L274 (LEGIARTI000042914471), collecte PISTE du 17/10/2026, version depuis
+le 01/01/2022. Le régime transitoire de l'article 37-1 est à conserver :
+application à l'action dont le délai commence ou dont une cause interruptive
+intervient à compter du 01/01/2022.
 
 ================================================================================
 ### SOURCE : MODULE — Temps de travail et fin de fonctions
@@ -2250,6 +2315,56 @@ source applicable.
   auto-assurance et le signaler au décideur — c'est un paramètre budgétaire,
   pas seulement statutaire.
 
+### Suppression d'emploi — prise en charge et missions
+
+L542-15 prévoit l'intégralité de la rémunération indiciaire détenue dans le
+grade pendant la première année de prise en charge, puis une réduction de
+10 % par an. Le fonctionnaire peut bénéficier du régime indemnitaire du grade
+lors des missions confiées. Pendant ces missions, la dérogation au premier
+alinéa porte sur la totalité de la rémunération indiciaire ; **si les missions
+sont à temps partiel, elle ne porte que sur la fraction correspondant à la
+quotité travaillée**, la fraction restante relevant du premier alinéa.
+La rémunération nette est réduite des rémunérations nettes perçues au titre
+du cumul d'activités. Ne pas étendre la dérogation à toute la rémunération
+pour une mission partielle, ni garantir le régime indemnitaire.
+L131-8 requiert l'examen des aménagements selon les besoins concrets, sous
+réserve de charges non disproportionnées compte tenu des aides ; aucune
+autorité de validation de compatibilité n'est ajoutée sans fondement.
+Sources : L542-15 (LEGIARTI000044425334) et L131-8, pack PISTE du 16/10/2026.
+
+### Retraite — affiliation, demande et réserves de paiement
+
+Ne pas appliquer les délais de l'article 59 du décret 2003-1306 du 26/12/2003
+à tous les agents : ce texte concerne les fonctionnaires affiliés à la CNRACL.
+Vérifier l'affiliation, les demandes **déjà déposées** et les dates du dossier.
+Dans ce champ, l'article 59 prévoit la demande de pension au moins six mois
+avant la date souhaitée de départ, puis la transmission par l'employeur et
+la réception du dossier au moins trois mois avant la radiation. Ne pas
+recalculer ces étapes depuis la date d'exécution de la réponse.
+
+Conserver les réserves de l'article 2 : admission d'office à la limite d'âge
+**sous réserve de L556-5 à L556-7**, et sans préjudice du maintien temporaire
+de l'article 10 ; admission prononcée après avis de la CNRACL par l'autorité
+ayant qualité pour nommer. Ces renvois exigent un examen individualisé ;
+ne pas ajouter un avis « favorable » absent du texte.
+
+L'article 27, I, interdit une mise en paiement antérieure à la décision de
+radiation **sauf les cas exceptionnels de R.36 du code des pensions civiles
+et militaires de retraite**. Son II distingue : pension mensuelle à terme
+échu due le premier jour du mois suivant la cessation ; toutefois, limite
+d'âge ou invalidité, due dès le jour de cessation ; rémunération interrompue
+au jour de cessation ; décès en service, pension des ayants droit due le
+lendemain du décès. Le paiement intervient à la fin du premier mois suivant
+le mois de cessation ou de décès avec rappel à la date d'entrée en jouissance.
+Conserver aussi la réserve d'application des pensions prenant effet à compter
+du 01/09/2023 et les conditions du II de l'article 13 du décret 2023-435
+signalées par la notice, à consulter si elles deviennent déterminantes.
+
+Sources : décret 2003-1306 art. 2 (LEGIARTI000049428994), 27
+(LEGIARTI000047633338) et 59 (LEGIARTI000006400930), pack PISTE du 16/10/2026.
+L556-5 à L556-7 sont également présents dans le corps complet du CGFP de ce
+pack ; le renvoi R.36 n'autorise pas à inventer le contenu de ses exceptions.
+
 ================================================================================
 ### SOURCE : BRANCHE — QVT & santé
 ================================================================================
@@ -2332,6 +2447,17 @@ invalidité ; égalité professionnelle (plan d'action, nominations
   au-dessus du seuil d'effectif (franchi ici).
 - **FIPHFP** : contribution si l'obligation n'est pas atteinte ; financements et
   aides. **DOETH** : déclaration annuelle.
+
+**Aménagement et suppression d'emploi** : L131-8 impose des mesures
+appropriées en fonction des besoins dans une situation concrète, y compris
+pour l'accès et l'usage des outils numériques, sous réserve de charges non
+disproportionnées compte tenu des aides possibles. Ne pas en faire une
+garantie inconditionnelle de maintien du même poste. Ne nommer aucun
+« validateur de compatibilité » sans texte attribuant cette compétence.
+Pour la rémunération d'un fonctionnaire territorial pris en charge et les
+missions à temps partiel, appliquer L542-15 avec toutes ses fractions et
+réserves : voir `carriere-paie/temps-fin-fonctions.md`, rubrique dédiée.
+Source : L131-8 (LEGIARTI000044427678), pack PISTE du 16/10/2026.
 
 ### 5.5 Télétravail et action sociale
 - **Télétravail** : les modalités de mise en œuvre sont fixées par délibération
@@ -2649,7 +2775,27 @@ apprentissage (financement, maître d'apprentissage, titularisation handicap).
 - **Contractuels** : cas de recours définis par le CGFP (ex-articles 3 et
   suivants de la loi 84-53), **élargis par la loi n° 2019-828**. Formes : CDD,
   CDI, **contrat de projet**. Vérifier le fondement exact selon le besoin.
-  Régime détaillé → `contractuels.md`.
+  **L332-8, 2° / L332-14** : distinguer le recrutement permanent justifié
+  par les besoins des services ou la nature des fonctions, sous réserve
+  qu'aucun fonctionnaire territorial n'ait pu être recruté, de la vacance
+  temporaire dans l'attente du recrutement d'un fonctionnaire pour assurer
+  la continuité du service. R332-9 subordonne l'examen des candidatures non
+  fonctionnaires, dans les cas qu'il vise dont L332-8, 2°, au constat du
+  caractère infructueux du recrutement d'un fonctionnaire sur cet emploi.
+  Aucun « renoncement à attendre » n'est une condition de ce texte.
+  L332-14 prévoit un contrat d'au plus un an, prolongeable dans la limite
+  totale de deux ans si la procédure de recrutement n'a pu aboutir.
+  Conserver le renvoi de L332-8 à L313-1 sans le présenter comme le texte
+  de publicité de la vacance : L313-1 vise la création de l'emploi par
+  délibération ; L332-14 renvoie à L313-4 pour les formalités de vacance.
+  **Contrôle médical à l'engagement** : R331-2, 4°, vise les conditions de
+  santé particulières exigées pour certaines fonctions, compte tenu des
+  possibilités de compensation du handicap. Ne pas généraliser ce contrôle
+  à tout recrutement. Pour la FPT, R331-4, 3°, le confie aux médecins agréés
+  mentionnés à l'article 1er du décret 87-602, avec prise en charge selon
+  l'article 41 de ce décret. Les conditions restantes sont à vérifier selon
+  les fonctions. Sources : articles cités, versions au 12/10/2026 du pack
+  PISTE du 16/10/2026. Régime détaillé → `contractuels.md`.
 - **Vacataires** : hors statut, à distinguer strictement du contractuel.
   Trois critères **cumulatifs** caractérisent le « vrai » vacataire
   (jurisprudence constante) :
@@ -3297,20 +3443,28 @@ refus de l'agent peut fonder un licenciement (§5.6).
 
 ### 5.3 CDIsation et portabilité (point de vigilance majeur)
 
-**Règle des 6 ans** : un agent en CDD ayant accompli au moins **6 ans de
-services publics effectifs** sur des fonctions de **même catégorie
-hiérarchique**, chez le **même employeur**, doit se voir proposer un **CDI**
-au renouvellement. Base CGFP (codifiant l'ex-art. 21 de la loi 84-53) —
-**article exact et conditions précises (computation, régime après 55 ans,
-temps complet/incomplet) à vérifier avant toute réponse ferme**.
+**L332-10 — contrat à durée indéterminée et décompte** : tout contrat établi
+ou renouvelé pour un emploi permanent en application de L332-8 avec un agent
+justifiant d'au moins six ans de services publics sur des fonctions de même
+catégorie hiérarchique est conclu à durée indéterminée. Le décompte vise les
+services auprès de la **même collectivité ou du même établissement**, dans
+les emplois de la sous-section ou de L332-23. Il prend aussi en compte :
+1. les services de L452-44 accomplis auprès de l'employeur qui a ensuite
+   recruté l'agent par contrat ;
+2. les services à temps non complet et à temps partiel, assimilés au temps complet ;
+3. les services discontinus, si les interruptions entre contrats n'excèdent
+   pas quatre mois ; la période d'état d'urgence sanitaire désignée par le
+   texte n'entre pas dans le calcul de l'interruption.
+Ne pas ajouter une condition générale « sans interruption », d'âge ou de
+filière absente de cet article. Vérifier chaque contrat et les catégories
+effectives avant de conclure. Source : L332-10 (LEGIARTI000046119123), version
+au 12/10/2026 du pack PISTE du 16/10/2026.
 **Portabilité du CDI** : un agent déjà en CDI peut, sous conditions, se voir
 proposer un CDI par un **nouvel employeur public** (y compris autre versant),
 sans repasser par un CDD — **faculté du nouvel employeur**, pas un droit
-automatique ; conditions d'éligibilité **à vérifier**. **Pièges** : une
-**interruption de service** au-delà d'un seuil **à vérifier** peut remettre
-le compteur à zéro ; un changement de **catégorie ou de filière** peut
-rompre la continuité même à fonctions proches ; CDIsation **≠**
-titularisation, elle ne confère jamais la qualité de fonctionnaire.
+automatique ; conditions d'éligibilité **à vérifier** sur le fondement propre
+de cette mobilité. Ne pas transposer ce contrôle au décompte de L332-10.
+CDIsation **≠** titularisation ; elle ne confère pas la qualité de fonctionnaire.
 
 ### 5.4 Rémunération
 
@@ -3685,6 +3839,33 @@ confirmer)
   d'entreprise**
   (régime propre, durée limitée, conditions à vérifier) ; **poursuite d'une
   activité privée** dans une société pour un agent nouvellement recruté.
+- **Emploi permanent à temps non complet ou incomplet au plus égal à 70 %** :
+  L123-5 permet l'activité privée lucrative à titre professionnel dans son
+  champ ; L123-6 soumet cette dérogation à déclaration à l'autorité hiérarchique.
+  R123-6 vise une déclaration écrite de la nature des activités **envisagées**,
+  avec, le cas échéant, forme et objet social, secteur et branche de l'entreprise.
+  Lecture opérationnelle de cette articulation : recueillir la déclaration
+  avant l'exercice de l'activité envisagée, sans inventer un délai chiffré.
+  Ne pas substituer automatiquement le régime d'autorisation de l'activité
+  accessoire à cette voie déclarative. Ne pas confondre durée de l'emploi non
+  complet et temps partiel de l'agent.
+- **Opposition au cumul ou à sa poursuite** — R123-2 prévoit trois motifs :
+  intérêt du service ; informations inexactes fondant l'autorisation ou
+  communiquées dans la déclaration ; incompatibilité avec les fonctions ou
+  l'emploi au regard des obligations déontologiques du titre ou de l'article
+  432-12 du code pénal. Ne pas réduire le contrôle au seul conflit d'intérêts.
+- **Interdictions de L123-1** — conserver la réserve générale des articles
+  L123-2 à L123-8 et les cinq objets : création/reprise des entreprises visées
+  au 1° ; direction de sociétés ou associations à but lucratif ; consultations,
+  expertises ou plaidoiries dans les litiges intéressant une personne publique,
+  **sauf prestation au profit d'une personne publique hors secteur concurrentiel** ;
+  intérêts dans une entreprise contrôlée par l'administration ou en relation
+  avec elle, **de nature à compromettre l'indépendance** ; cumul d'un emploi
+  permanent à temps complet avec d'autres emplois permanents à temps complet.
+  Relire le texte entier et son champ avant d'appliquer l'une de ces interdictions.
+  Sources de maintenance : CGFP L123-1, L123-5, L123-6, R123-2 et R123-6,
+  versions au 12/10/2026 du pack PISTE du 16/10/2026 ; consultation à renouveler
+  pour toute réponse nouvelle.
 - **Contrôles de déconflit** : **départ vers le privé** et **cumul création
   d'entreprise** → contrôle **interne** (référent déontologue) pour la
   majorité des agents ; **saisine HATVP** requise pour les **emplois les plus
@@ -3934,6 +4115,16 @@ dossier. Réunir en une fois les variables qui changent la décision, puis
 donner les scénarios utiles et les contrôles restant à faire. Ne pas s'arrêter
 à la première information manquante en omettant les garanties de la procédure
 ou l'autre branche d'une question mixte.
+
+## Taux d'avancement et lignes directrices de gestion
+
+Distinguer les deux objets soumis à avis du CST : les projets de taux
+d'avancement de grade (CGFP R253-7, 12°) et les projets de LDG relatifs à la
+stratégie RH et aux parcours professionnels (8°). Tracer l'avis correspondant
+à chaque objet, sans déduire de cet article un lien normatif de « cohérence »
+entre eux. S'ils figurent dans un même dossier, ne pas confondre leurs bases
+et leurs actes. Source : R253-7 (LEGIARTI000054087794), version au 12/10/2026
+du pack PISTE du 16/10/2026.
 
 ## Couverture du dossier
 

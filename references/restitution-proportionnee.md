@@ -50,6 +50,16 @@ donner les scénarios utiles et les contrôles restant à faire. Ne pas s'arrêt
 à la première information manquante en omettant les garanties de la procédure
 ou l'autre branche d'une question mixte.
 
+## Taux d'avancement et lignes directrices de gestion
+
+Distinguer les deux objets soumis à avis du CST : les projets de taux
+d'avancement de grade (CGFP R253-7, 12°) et les projets de LDG relatifs à la
+stratégie RH et aux parcours professionnels (8°). Tracer l'avis correspondant
+à chaque objet, sans déduire de cet article un lien normatif de « cohérence »
+entre eux. S'ils figurent dans un même dossier, ne pas confondre leurs bases
+et leurs actes. Source : R253-7 (LEGIARTI000054087794), version au 12/10/2026
+du pack PISTE du 16/10/2026.
+
 ## Couverture du dossier
 
 Pour une procédure ou un arbitrage, parcourir les contrôles de la branche

@@ -111,6 +111,33 @@ confirmer)
   d'entreprise**
   (régime propre, durée limitée, conditions à vérifier) ; **poursuite d'une
   activité privée** dans une société pour un agent nouvellement recruté.
+- **Emploi permanent à temps non complet ou incomplet au plus égal à 70 %** :
+  L123-5 permet l'activité privée lucrative à titre professionnel dans son
+  champ ; L123-6 soumet cette dérogation à déclaration à l'autorité hiérarchique.
+  R123-6 vise une déclaration écrite de la nature des activités **envisagées**,
+  avec, le cas échéant, forme et objet social, secteur et branche de l'entreprise.
+  Lecture opérationnelle de cette articulation : recueillir la déclaration
+  avant l'exercice de l'activité envisagée, sans inventer un délai chiffré.
+  Ne pas substituer automatiquement le régime d'autorisation de l'activité
+  accessoire à cette voie déclarative. Ne pas confondre durée de l'emploi non
+  complet et temps partiel de l'agent.
+- **Opposition au cumul ou à sa poursuite** — R123-2 prévoit trois motifs :
+  intérêt du service ; informations inexactes fondant l'autorisation ou
+  communiquées dans la déclaration ; incompatibilité avec les fonctions ou
+  l'emploi au regard des obligations déontologiques du titre ou de l'article
+  432-12 du code pénal. Ne pas réduire le contrôle au seul conflit d'intérêts.
+- **Interdictions de L123-1** — conserver la réserve générale des articles
+  L123-2 à L123-8 et les cinq objets : création/reprise des entreprises visées
+  au 1° ; direction de sociétés ou associations à but lucratif ; consultations,
+  expertises ou plaidoiries dans les litiges intéressant une personne publique,
+  **sauf prestation au profit d'une personne publique hors secteur concurrentiel** ;
+  intérêts dans une entreprise contrôlée par l'administration ou en relation
+  avec elle, **de nature à compromettre l'indépendance** ; cumul d'un emploi
+  permanent à temps complet avec d'autres emplois permanents à temps complet.
+  Relire le texte entier et son champ avant d'appliquer l'une de ces interdictions.
+  Sources de maintenance : CGFP L123-1, L123-5, L123-6, R123-2 et R123-6,
+  versions au 12/10/2026 du pack PISTE du 16/10/2026 ; consultation à renouveler
+  pour toute réponse nouvelle.
 - **Contrôles de déconflit** : **départ vers le privé** et **cumul création
   d'entreprise** → contrôle **interne** (référent déontologue) pour la
   majorité des agents ; **saisine HATVP** requise pour les **emplois les plus

@@ -77,6 +77,17 @@ invalidité ; égalité professionnelle (plan d'action, nominations
 - **FIPHFP** : contribution si l'obligation n'est pas atteinte ; financements et
   aides. **DOETH** : déclaration annuelle.
 
+**Aménagement et suppression d'emploi** : L131-8 impose des mesures
+appropriées en fonction des besoins dans une situation concrète, y compris
+pour l'accès et l'usage des outils numériques, sous réserve de charges non
+disproportionnées compte tenu des aides possibles. Ne pas en faire une
+garantie inconditionnelle de maintien du même poste. Ne nommer aucun
+« validateur de compatibilité » sans texte attribuant cette compétence.
+Pour la rémunération d'un fonctionnaire territorial pris en charge et les
+missions à temps partiel, appliquer L542-15 avec toutes ses fractions et
+réserves : voir `carriere-paie/temps-fin-fonctions.md`, rubrique dédiée.
+Source : L131-8 (LEGIARTI000044427678), pack PISTE du 16/10/2026.
+
 ### 5.5 Télétravail et action sociale
 - **Télétravail** : les modalités de mise en œuvre sont fixées par délibération
   de l'organe délibérant après avis de la formation spécialisée en santé,
