@@ -2,7 +2,8 @@
 
 > Structure conforme à `_gabarit-branche.md`. Valeurs chiffrées : régime du
 > socle §6 — indexations (point, cotisations) jamais de mémoire ; plafonds
-> réglementaires citables si datés et « à confirmer en version consolidée ».
+> réglementaires citables après consultation officielle de la version applicable ;
+> aucun chiffre en mode dégradé, réserves limitées aux points non vérifiés.
 
 ## 1. Périmètre
 
@@ -51,7 +52,27 @@ apprentissage (financement, maître d'apprentissage, titularisation handicap).
 - **Contractuels** : cas de recours définis par le CGFP (ex-articles 3 et
   suivants de la loi 84-53), **élargis par la loi n° 2019-828**. Formes : CDD,
   CDI, **contrat de projet**. Vérifier le fondement exact selon le besoin.
-  Régime détaillé → `contractuels.md`.
+  **L332-8, 2° / L332-14** : distinguer le recrutement permanent justifié
+  par les besoins des services ou la nature des fonctions, sous réserve
+  qu'aucun fonctionnaire territorial n'ait pu être recruté, de la vacance
+  temporaire dans l'attente du recrutement d'un fonctionnaire pour assurer
+  la continuité du service. R332-9 subordonne l'examen des candidatures non
+  fonctionnaires, dans les cas qu'il vise dont L332-8, 2°, au constat du
+  caractère infructueux du recrutement d'un fonctionnaire sur cet emploi.
+  Aucun « renoncement à attendre » n'est une condition de ce texte.
+  L332-14 prévoit un contrat d'au plus un an, prolongeable dans la limite
+  totale de deux ans si la procédure de recrutement n'a pu aboutir.
+  Conserver le renvoi de L332-8 à L313-1 sans le présenter comme le texte
+  de publicité de la vacance : L313-1 vise la création de l'emploi par
+  délibération ; L332-14 renvoie à L313-4 pour les formalités de vacance.
+  **Contrôle médical à l'engagement** : R331-2, 4°, vise les conditions de
+  santé particulières exigées pour certaines fonctions, compte tenu des
+  possibilités de compensation du handicap. Ne pas généraliser ce contrôle
+  à tout recrutement. Pour la FPT, R331-4, 3°, le confie aux médecins agréés
+  mentionnés à l'article 1er du décret 87-602, avec prise en charge selon
+  l'article 41 de ce décret. Les conditions restantes sont à vérifier selon
+  les fonctions. Sources : articles cités, versions au 12/10/2026 du pack
+  PISTE du 16/10/2026. Régime détaillé → `contractuels.md`.
 - **Vacataires** : hors statut, à distinguer strictement du contractuel.
   Trois critères **cumulatifs** caractérisent le « vrai » vacataire
   (jurisprudence constante) :
@@ -184,7 +205,14 @@ l'apprentissage ; conditions d'ouverture de la NBI au maître d'apprentissage ;
 
 ## 11. Niveau de confiance (repères de la branche)
 
-- **Stable** : architecture des voies d'accès, principe d'égal accès, formations
+Ces repères documentaires ne certifient pas la réponse. Appliquer le niveau
+de confiance proposition par proposition : **Stable** seulement si un article
+consulté porte littéralement la proposition, dans sa version et son champ
+applicables. Toute conséquence conserve les réserves de sa prémisse, y compris
+dans les actes, formulaires et calendriers. Une réserve après une obligation,
+une condition ou une autorité non vérifiée ne répare pas son affirmation.
+
+- **Repères documentaires à vérifier pour la réponse** : architecture des voies d'accès, principe d'égal accès, formations
   obligatoires CNFPT, entretien professionnel ; les trois critères cumulatifs
   du vacataire (jurisprudence constante) ; nature de droit privé du contrat
   d'apprentissage ; absence de dispense de concours à l'issue de

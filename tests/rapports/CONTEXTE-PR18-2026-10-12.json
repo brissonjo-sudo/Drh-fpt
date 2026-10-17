@@ -1,0 +1,466 @@
+{
+  "mode": "integration",
+  "cases": [
+    {
+      "id": "01",
+      "full_bytes": 228226,
+      "selective_bytes": 101347,
+      "reduction_percent": 55.6,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/carriere-paie.md",
+        "references/carriere-paie/remuneration-paie.md",
+        "references/carriere-paie/statut-discipline.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "02",
+      "full_bytes": 228226,
+      "selective_bytes": 93078,
+      "reduction_percent": 59.2,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/qvt-sante.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "03",
+      "full_bytes": 228226,
+      "selective_bytes": 105725,
+      "reduction_percent": 53.7,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/recrutement-formation.md",
+        "references/contractuels.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "04",
+      "full_bytes": 228226,
+      "selective_bytes": 83446,
+      "reduction_percent": 63.4,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/cst-dialogue-social.md",
+        "assets/procedure-modele.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "05",
+      "full_bytes": 228226,
+      "selective_bytes": 80319,
+      "reduction_percent": 64.8,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/si-rh-masse-salariale.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "06",
+      "full_bytes": 228226,
+      "selective_bytes": 85597,
+      "reduction_percent": 62.5,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/communication-interne.md",
+        "references/cst-dialogue-social.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "07",
+      "full_bytes": 228226,
+      "selective_bytes": 101347,
+      "reduction_percent": 55.6,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/carriere-paie.md",
+        "references/carriere-paie/statut-discipline.md",
+        "references/carriere-paie/remuneration-paie.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "08",
+      "full_bytes": 228226,
+      "selective_bytes": 91863,
+      "reduction_percent": 59.7,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/carriere-paie.md",
+        "references/carriere-paie/remuneration-paie.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "09",
+      "full_bytes": 228226,
+      "selective_bytes": 96878,
+      "reduction_percent": 57.6,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/carriere-paie.md",
+        "references/carriere-paie/statut-discipline.md",
+        "assets/procedure-modele.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "10",
+      "full_bytes": 228226,
+      "selective_bytes": 93078,
+      "reduction_percent": 59.2,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/qvt-sante.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "11",
+      "full_bytes": 228226,
+      "selective_bytes": 94445,
+      "reduction_percent": 58.6,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/carriere-paie.md",
+        "references/carriere-paie/statut-discipline.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "12",
+      "full_bytes": 228226,
+      "selective_bytes": 112749,
+      "reduction_percent": 50.6,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/carriere-paie.md",
+        "references/carriere-paie/temps-fin-fonctions.md",
+        "assets/procedure-modele.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "18",
+      "full_bytes": 228226,
+      "selective_bytes": 94644,
+      "reduction_percent": 58.5,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/statut-garanties.md",
+        "assets/procedure-modele.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "19",
+      "full_bytes": 228226,
+      "selective_bytes": 96801,
+      "reduction_percent": 57.6,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/contractuels.md",
+        "assets/procedure-modele.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "20",
+      "full_bytes": 228226,
+      "selective_bytes": 110316,
+      "reduction_percent": 51.7,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/carriere-paie.md",
+        "references/carriere-paie/temps-fin-fonctions.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "21",
+      "full_bytes": 228226,
+      "selective_bytes": 110316,
+      "reduction_percent": 51.7,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/carriere-paie.md",
+        "references/carriere-paie/temps-fin-fonctions.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "22",
+      "full_bytes": 228226,
+      "selective_bytes": 93078,
+      "reduction_percent": 59.2,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/qvt-sante.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "13-echec-hors-perimetre",
+      "full_bytes": 228226,
+      "selective_bytes": 77065,
+      "reduction_percent": 66.2,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "assets/procedure-modele.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "14-echec-mauvaise-fp",
+      "full_bytes": 228226,
+      "selective_bytes": 74632,
+      "reduction_percent": 67.3,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "15-echec-valeur-volatile",
+      "full_bytes": 228226,
+      "selective_bytes": 91863,
+      "reduction_percent": 59.7,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/carriere-paie.md",
+        "references/carriere-paie/remuneration-paie.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "16-echec-hors-base",
+      "full_bytes": 228226,
+      "selective_bytes": 74632,
+      "reduction_percent": 67.3,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "17-echec-droit-prive",
+      "full_bytes": 228226,
+      "selective_bytes": 110316,
+      "reduction_percent": 51.7,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/carriere-paie.md",
+        "references/carriere-paie/temps-fin-fonctions.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "23-architecture-variables-bloquantes",
+      "full_bytes": 228226,
+      "selective_bytes": 94445,
+      "reduction_percent": 58.6,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/carriere-paie.md",
+        "references/carriere-paie/statut-discipline.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "24-architecture-national-local",
+      "full_bytes": 228226,
+      "selective_bytes": 110316,
+      "reduction_percent": 51.7,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/carriere-paie.md",
+        "references/carriere-paie/temps-fin-fonctions.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "25-architecture-analyse-livrable",
+      "full_bytes": 228226,
+      "selective_bytes": 94445,
+      "reduction_percent": 58.6,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/carriere-paie.md",
+        "references/carriere-paie/statut-discipline.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "26-architecture-multibranche-contractuel",
+      "full_bytes": 228226,
+      "selective_bytes": 121083,
+      "reduction_percent": 46.9,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/carriere-paie.md",
+        "references/carriere-paie/statut-discipline.md",
+        "references/carriere-paie/remuneration-paie.md",
+        "references/contractuels.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "27-architecture-decision-action",
+      "full_bytes": 228226,
+      "selective_bytes": 100916,
+      "reduction_percent": 55.8,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/carriere-paie.md",
+        "references/carriere-paie/statut-discipline.md",
+        "assets/decision-modele.md",
+        "assets/procedure-modele.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "28-nonregression-citis-formation",
+      "full_bytes": 228226,
+      "selective_bytes": 97116,
+      "reduction_percent": 57.4,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/qvt-sante.md",
+        "assets/decision-modele.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "29-nonregression-discipline-recours",
+      "full_bytes": 228226,
+      "selective_bytes": 94445,
+      "reduction_percent": 58.6,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/carriere-paie.md",
+        "references/carriere-paie/statut-discipline.md",
+        "references/restitution-proportionnee.md"
+      ]
+    },
+    {
+      "id": "30-nonregression-controle-legalite-sanction",
+      "full_bytes": 228226,
+      "selective_bytes": 94445,
+      "reduction_percent": 58.6,
+      "files": [
+        "SKILL.md",
+        "references/contrat-execution.md",
+        "references/socle-sources-verification.md",
+        "references/parametres-collectivite.md",
+        "references/carriere-paie.md",
+        "references/carriere-paie/statut-discipline.md",
+        "references/restitution-proportionnee.md"
+      ]
+    }
+  ],
+  "full_bytes": 228226,
+  "mean_selective_bytes": 96025,
+  "median_selective_bytes": 94445,
+  "mean_reduction_percent": 57.9,
+  "_provenance": {
+    "date_utc": "2026-10-12T17:43:01.563382+00:00",
+    "source_commit": "2d4171f795961fe77777dc35a400f41bb3495a7a",
+    "command": "python -B scripts/measure_contexts.py --mode integration",
+    "bundle_sha256": "ae9fccecabd622db0a80c64f5dbd1650adb638492190dd24df3b754c89077ba7",
+    "cases_sha256": "96a340b06a2d6c3c951de1bc05bce0a6adab728e6d1d78a85b6253498aaef812",
+    "scope": "octets UTF-8 du contexte DRH; compagnon et sources en supplement; aucune campagne LLM"
+  }
+}

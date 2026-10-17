@@ -2,7 +2,8 @@
 
 > Structure conforme à `_gabarit-branche.md`. Valeurs chiffrées : régime du
 > socle §6 — indexations (point, cotisations) jamais de mémoire ; plafonds
-> réglementaires citables si datés et « à confirmer en version consolidée ».
+> réglementaires citables après consultation officielle de la version applicable ;
+> aucun chiffre en mode dégradé, réserves limitées aux points non vérifiés.
 
 ## 1. Périmètre
 
@@ -30,6 +31,11 @@ invalidité ; égalité professionnelle (plan d'action, nominations
 - **Origine de l'affection** : maladie ordinaire vs imputable au service (CITIS).
 - **Organisation locale** : médecine de prévention interne ou conventionnée ;
   délibération télétravail ; offre d'action sociale (CNAS, COS).
+- **PSC** : date de référence, couverture santé ou prévoyance, contrats ou
+  conventions de participation et leurs échéances, délibération locale,
+  existence d'un **accord collectif**, validité et clauses d'adhésion/dispense.
+  Demander l'accord ou le constat de son absence ; un contrat collectif ne
+  prouve pas à lui seul l'existence d'un accord collectif valide.
 - **Effectif** : la formation spécialisée en SSCT est obligatoire à 200 agents
   (acquise au-dessus de 350) → voir branche CST.
 
@@ -71,10 +77,38 @@ invalidité ; égalité professionnelle (plan d'action, nominations
 - **FIPHFP** : contribution si l'obligation n'est pas atteinte ; financements et
   aides. **DOETH** : déclaration annuelle.
 
+**Aménagement et suppression d'emploi** : L131-8 impose aux employeurs publics
+mentionnés à L2, en fonction des besoins dans une situation concrète, les
+mesures appropriées pour permettre aux personnes relevant des **1°, 2°, 3°,
+4°, 9°, 10° et 11° de l'article L. 5212-13 du code du travail** d'accéder à un
+emploi ou de conserver un emploi correspondant à leur qualification, de
+développer un parcours professionnel et d'accéder à des fonctions de niveau
+supérieur ou pour qu'une formation adaptée à leurs besoins leur soit dispensée
+tout au long de leur vie professionnelle. Ces mesures incluent notamment
+l'aménagement, l'accès et l'usage de tous les outils numériques concourant à
+l'accomplissement de la mission des agents, notamment les logiciels métiers
+et de bureautique ainsi que les appareils mobiles. Elles s'appliquent sous
+réserve que les charges consécutives ne soient pas disproportionnées, compte
+tenu notamment des aides pouvant compenser tout ou partie des dépenses
+supportées par les employeurs à ce titre. Ne pas en faire une
+garantie inconditionnelle de maintien du même poste. Ne nommer aucun
+« validateur de compatibilité » sans texte attribuant cette compétence.
+Pour la rémunération d'un fonctionnaire territorial pris en charge et les
+missions à temps partiel, appliquer L542-15 avec toutes ses fractions et
+réserves : voir `carriere-paie/temps-fin-fonctions.md`, rubrique dédiée.
+Source : L131-8 (LEGIARTI000044427678), pack PISTE du 16/10/2026.
+
 ### 5.5 Télétravail et action sociale
-- **Télétravail** : mis en place par délibération après avis du CST ; cadre
-  national (décret 2016-151 modifié) ; possible indemnité forfaitaire
-  (montant **à vérifier**).
+- **Télétravail** : les modalités de mise en œuvre sont fixées par délibération
+  de l'organe délibérant après avis de la formation spécialisée en santé,
+  sécurité et conditions de travail du CST compétente, dans les conditions
+  de L253-6 ; en l'absence de formation spécialisée, avis de ce comité.
+  L253-6 réserve les questions de réorganisation de services examinées
+  directement par le CST. Ne pas remplacer ce circuit par un avis générique
+  du CST sans qualifier la situation. Source : CGFP R432-1, 2°
+  (LEGIARTI000054077141) et L253-6 (LEGIARTI000044427238), versions au
+  12/10/2026 collectées par PISTE le 16/10/2026. Toute indemnité éventuelle
+  exige une vérification propre avant chiffrage.
 - **Action sociale** : prestations facultatives (titres-restaurant, CNAS, COS,
   aides diverses). L'action sociale est une **dépense obligatoire dans son
   principe**, mais son contenu relève du **choix local**.
@@ -91,6 +125,16 @@ n° 2022-581, loi n° 2025-1251 du 22 décembre 2025) :
 
 > Montants planchers et taux de participation **évoluent** → données volatiles,
 > à vérifier (§9). Débat préalable obligatoire en assemblée et association du CST.
+
+**Participation et adhésion sont distinctes.** Pour la santé, vérifier si
+un accord collectif valide prévoit la souscription obligatoire des agents
+(CGFP L827-2, [référence officielle à consulter dans sa version applicable](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424412)).
+Examiner le contrat, l'accord et ses clauses avant de qualifier l'adhésion.
+Pour la prévoyance, vérifier aussi le calendrier de la réforme et le régime
+transitoire du contrat existant ; ne pas déduire la règle de santé de celle
+de prévoyance. Distinguer minimum national et participation locale.
+En mode dégradé, ces éléments sont des pièces et contrôles à faire vérifier ;
+aucun calendrier, montant ou caractère obligatoire n'est certifié.
 
 ### 5.7 Égalité professionnelle
 
@@ -170,10 +214,14 @@ fonctions adaptées, ou constate l'inaptitude.
 - **Période de préparation au reclassement (PPR)** : droit reconnu à
   l'agent déclaré inapte à ses fonctions ; durée de principe **1 an**, avec
   **report possible du point de départ** (≤ 2 mois, sur accord des parties,
-  à compter de l'avis du conseil médical) et **prolongation possible**
-  (≤ 3 mois) ; maintien du traitement pendant la période ; formalisée par une
-  **convention** entre l'agent et l'employeur. Base : **décret n° 2019-172
-  du 5 mars 2019 modifié** (dont décret n° 2022-626 du 22 avril 2022) —
+  à compter de l'avis du conseil médical). Les congés prévus par le texte
+  reportent également la fin de la PPR. Après la PPR, l'agent ayant demandé
+  son reclassement peut être **maintenu en activité jusqu'à trois mois** :
+  ce maintien est distinct d'une prolongation de la PPR. Maintien du
+  traitement pendant la période ; formalisée par une
+  **convention** entre l'agent, l'employeur et le CNFPT ou le CDG compétent.
+  Base consolidée : **décret n° 85-1054, articles 2 à 2-2**, modifié
+  notamment par les décrets n° 2019-172 et n° 2022-626 —
   **référence et durées à confirmer en version consolidée**.
 - **Disponibilité d'office pour raison de santé** : prononcée lorsque les
   droits à congé sont épuisés et que l'agent n'est ni apte à la reprise ni
@@ -186,8 +234,10 @@ fonctions adaptées, ou constate l'inaptitude.
     service** ou non (incidence sur les droits) ;
   - **licenciement pour inaptitude** : possible seulement après recherche
     de reclassement infructueuse et absence de solution de disponibilité
-    ou de retraite pour invalidité ; ouvre droit à **indemnité de
-    licenciement** (montant à vérifier).
+    ou de retraite pour invalidité. Vérifier l'affiliation avant de conclure
+    sur l'indemnité : pour les fonctionnaires ne relevant pas de la CNRACL,
+    contrôler les articles 41 et 41-1 du décret n° 91-298. Ne pas promettre
+    automatiquement une indemnité à tout titulaire.
 
 **Fonds et prévention de l'usure professionnelle.** Le **FIPU** (fonds
 d'investissement dans la prévention de l'usure professionnelle, réforme des
@@ -271,7 +321,14 @@ périmètre de l'index égalité (loi du 19 juillet 2023).
 
 ## 11. Niveau de confiance (repères de la branche)
 
-- **Stable** : existence des congés, du conseil médical (fusion 2022), du DUERP,
+Ces repères documentaires ne certifient pas la réponse. Appliquer le niveau
+de confiance proposition par proposition : **Stable** seulement si un article
+consulté porte littéralement la proposition, dans sa version et son champ
+applicables. Toute conséquence conserve les réserves de sa prémisse, y compris
+dans les actes, formulaires et calendriers. Une réserve après une obligation,
+une condition ou une autorité non vérifiée ne répare pas son affirmation.
+
+- **Repères documentaires à vérifier pour la réponse** : existence des congés, du conseil médical (fusion 2022), du DUERP,
   de l'obligation d'emploi ; existence de la chaîne congés → conseil médical →
   reclassement/PPR → disponibilité → retraite pour invalidité ou
   licenciement ; obligation de moyens du reclassement ; existence du plan
@@ -288,9 +345,12 @@ périmètre de l'index égalité (loi du 19 juillet 2023).
 
 1. Statut de l'agent identifié (régime de congés) ?
 2. Imputabilité au service tranchée (ou avis sollicité) ?
-3. Montants (PSC, télétravail) vérifiés, jamais de mémoire ?
+3. Montants (PSC, télétravail) vérifiés, jamais de mémoire ? Pour la PSC,
+   participation et adhésion distinguées ; contrats, dates, délibération et
+   **accord collectif** (ou absence) réunis, validité/clauses contrôlées ?
 4. Décision défavorable → motivation + voies de recours ?
-5. Inaptitude : recherche de reclassement **sérieuse** documentée, PPR
-   proposée le cas échéant ?
+5. Inaptitude : recherche effective de postes compatibles documentée,
+   diligences obligatoires mais aboutissement non garanti, impossibilité
+   motivée selon le régime vérifié ; PPR proposée le cas échéant ?
 6. Plan d'action égalité et nominations équilibrées : seuils et taux
    vérifiés (jamais de mémoire) ?

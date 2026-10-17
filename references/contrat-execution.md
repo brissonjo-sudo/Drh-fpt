@@ -28,12 +28,24 @@ Avant toute conclusion :
 - activer toutes les branches concernées. En cas de dossier mixte, articuler
   leurs règles et appliquer le régime propre à chaque population.
 
+Dans la réponse, rendre explicite l'articulation des régimes qui modifie la
+décision, sans imposer les noms des fichiers ou modules. Pour rémunérer un
+contractuel, recueillir aussi le contrat et ses clauses, le fondement du
+recrutement, la délibération ou le cadre local de rémunération et les règles
+de réévaluation applicables ; un indice de référence ne confère pas un grade.
+
 Si le dossier est hors périmètre ou hors de la base documentaire effectivement
 chargée, le dire avant de poursuivre. Cette qualification est **terminale pour
 le fond** : ne pas fournir ensuite la règle détaillée, le taux, le calcul ou le
 projet d'acte que le skill vient de déclarer hors base. L'assistance peut
 uniquement expliquer la limite, identifier la branche ou la source compétente
 et proposer une méthode de vérification.
+
+Pour une petite collectivité, l'orientation peut identifier l'instance adaptée
+et le seuil qui détermine ce rattachement, si une source officielle les vérifie.
+Ce repérage ne permet pas de dérouler la procédure hors périmètre. Pour le CST,
+orienter vers le contrôle du CST placé auprès du CDG et du seuil d'un CST propre ;
+en mode dégradé, demander de vérifier ce rattachement sans certifier le seuil.
 
 ## 2. Lever les variables
 
@@ -82,6 +94,14 @@ qualifier le dossier, d'interpréter la source dans le bon régime et de contrô
 la cohérence de la conclusion : une citation traçable ne prouve pas, à elle
 seule, que le texte a été correctement appliqué.
 
+Dans la co-activation, le compagnon impose la méthode de vérification et la
+prudence des conclusions ; le présent contrat DRH définit la qualification,
+la couverture métier et la restitution. Une variable bloquante suspend la
+décision individuelle et l'acte exécutable, sans supprimer les règles générales
+effectivement vérifiées, les distinctions de régime ni les scénarios bornés.
+La demande de clarification du compagnon ne doit pas effacer ces éléments.
+Après la lecture des sources, appliquer le rappel final de restitution DRH.
+
 Si le compagnon est absent ou indisponible, déclarer le **mode dégradé** avant
 de poursuivre. Dans ce mode, la vérification requise est réputée non aboutie :
 appliquer l'abstention prévue ci-dessous et ne jamais présenter le filet de
@@ -101,11 +121,19 @@ référence. Une mention telle que **« vérifié »**, **« confirmé »** ou
 effectivement eu lieu pour la réponse en cours ; donner alors le lien ou
 l'identifiant officiel et la date ou version pertinente.
 
+Une validation outillée conserve aussi, lorsqu'elle est disponible, la trace de
+consultation : source officielle, date de consultation, version ou date d'effet,
+passage utile et conclusion soutenue. Un lien simplement généré dans la réponse
+ne constitue pas à lui seul une preuve de consultation.
+
 Si la source est inaccessible, contradictoire ou non confirmée :
 
 - ne pas présenter la règle comme acquise ;
-- ne fournir **aucune valeur exacte** destinée à la paie, à un calcul ou à un
-  acte, même suivie d'une réserve ;
+- ne fournir **aucune valeur juridique exacte** (durée, délai, seuil, quotité,
+  plafond ou montant), même présentée comme piste à confirmer ; les chiffres
+  factuels fournis restent utilisables ;
+- ne pas dérouler une procédure juridique détaillée non vérifiée ; transformer
+  ses conditions et compétences en points de contrôle, sans certifier leur ordre ;
 - placer l'abstention ou la réserve **avant** toute esquisse conditionnelle ;
 - adapter l'état de décision.
 
@@ -152,6 +180,10 @@ Produire effectivement le livrable demandé dans la même réponse après
 l'analyse : projet d'arrêté, délibération, note, procédure, courrier, tableau ou
 autre format demandé.
 
+Adapter la restitution selon `references/restitution-proportionnee.md`. Cette
+adaptation porte sur la longueur visible, jamais sur la profondeur de la
+qualification ou de la vérification requise.
+
 Une simple annonce (« je peux rédiger… »), un plan vide ou un renvoi vers un
 gabarit ne vaut pas livraison. Si une variable bloque la finalisation :
 
@@ -167,13 +199,27 @@ publicité et la transmission au contrôle de légalité. Ne jamais écrire qu'u
 acte « n'appelle pas de recours » : distinguer, après vérification, les droits
 du destinataire et ceux des tiers.
 
+Pour une transmission obligatoire, rapprocher la **nature exacte de l'acte**
+d'une catégorie de la liste actuelle et citer cette catégorie. Ne pas traiter
+la nomination d'un titulaire par avancement de grade comme le recrutement
+d'un agent non titulaire : elle n'appartient pas pour ce seul motif à la liste
+actuelle de L2131-2 du CGCT. Le délai de transmission ne s'applique qu'après
+avoir établi l'obligation. À défaut de catégorie vérifiée, conserver une clause
+conditionnelle et distinguer transmission volontaire, pratique locale et
+demande préfectorale.
+
 ## 8. Sécuriser
 
 Terminer par :
 
 - les risques juridiques et opérationnels résiduels ;
 - les contrôles avant signature, notification, paie ou mise en œuvre ;
-- les voies et délais de recours lorsqu'un acte faisant grief est produit ;
+- lorsqu'une **décision individuelle est analysée ou préparée**, les règles
+  de motivation applicables, la notification et les voies/délais de recours,
+  y compris les garanties d'un éventuel refus ; restituer brièvement ces
+  contrôles même sans rédiger l'acte. Une simple valeur ou un plafond sans
+  décision individuelle conserve sa réponse ciblée. En mode dégradé, ces
+  éléments sont des contrôles à faire vérifier, sans règle certifiée ;
 - les règles de compétence, motivation, consultation et transmission
   applicables ;
 - la protection des données personnelles et la minimisation des informations ;
@@ -181,9 +227,9 @@ Terminer par :
 
 Utiliser les niveaux suivants :
 
-- **Stable** — règle structurelle confirmée sur une source officielle
-  effectivement consultée pour la réponse, variables déterminantes levées et
-  source traçable dans la réponse.
+- **Stable** — proposition littéralement portée par un article effectivement
+  consulté, dans son champ et sa version applicables ; variables déterminantes
+  levées et source traçable dans la réponse.
 - **À vérifier** — source récente, valeur volatile, choix local ou pièce encore
   à confirmer avant usage.
 - **Jurisprudentiel / débattu** — solution dépendante d'une interprétation ou
@@ -191,8 +237,9 @@ Utiliser les niveaux suivants :
 - **Abstention** — sources insuffisantes, contradictoires ou inaccessibles ;
   aucune conclusion ferme.
 
-Le niveau de confiance porte sur la conclusion donnée, pas sur la qualité
-générale de la réponse.
+Le niveau de confiance porte sur chaque proposition, pas sur la qualité
+générale de la réponse. Une conséquence conserve les réserves de sa prémisse,
+y compris dans un acte, un formulaire ou un calendrier.
 
 ## Critères d'échec transversaux
 

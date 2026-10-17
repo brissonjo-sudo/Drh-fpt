@@ -1,0 +1,27 @@
+{
+  "reference_date": "2026-10-12",
+  "sources": [
+    {"key":"cgfp-revue","text_id":"LEGITEXT000044416551","cases":{"revue":["L544-1","L544-3","L544-4","L544-5","L544-6","L544-7","L544-10","L544-11","L544-12","L544-13","L542-5","L451-10","L413-6","R413-37","L532-4","L711-3"]}},
+    {"key":"crpa-revue","text_id":"LEGITEXT000031366350","cases":{"revue":["L221-8"]}},
+    {"key":"abandon-paris","kind":"decision","text_id":"CETATEXT000044316115","cases":["revue"]},
+    {"key":"abandon-nancy","kind":"decision","text_id":"CETATEXT000007571702","cases":["revue"]},
+    {"key":"droit-silence","kind":"decision","text_id":"CETATEXT000050803817","cases":["revue"]},
+    {"key":"greve-146119","kind":"decision","text_id":"CETATEXT000007834745","cases":["revue"]},
+    {"key":"greve-303588","kind":"decision","text_id":"CETATEXT000020871105","cases":["revue"]},
+    {"key":"abandon-365918","kind":"decision","text_id":"CETATEXT000029504219","cases":["revue"]},
+    {"key":"abandon-24VE00726","kind":"decision","text_id":"CETATEXT000053906348","cases":["revue"]},
+    {"key":"abandon-147511","kind":"decision","text_id":"CETATEXT000008004335","cases":["revue"]},
+    {"key":"protection-476196","kind":"decision","text_id":"CETATEXT000049675953","cases":["revue"]},
+    {"key":"fin-22LY01568","kind":"decision","text_id":"CETATEXT000049336214","cases":["revue"]},
+    {"key":"fin-22DA01446","kind":"decision","text_id":"CETATEXT000049101579","cases":["revue"]},
+    {"key":"reforme-2019","kind":"jorf","text_id":"JORFTEXT000038889182","cases":{"revue":["94"]}},
+    {"key":"isfe-2024","text_id":"JORFTEXT000049797662","cases":{"revue":["1","2","3","4","5","7","9"]}},
+    {"key":"contractuels-88","text_id":"JORFTEXT000000871608","cases":{"revue":["39-2","39-5","42","42-1","42-2","45"]}},
+    {"key":"reclassement-85","query":"85-1054","cases":{"revue":["1","2","2-1","2-2","3"]}},
+    {"key":"tnc-91","text_id":"JORFTEXT000000718718","cases":{"revue":["41","41-1"]}},
+    {"key":"etat-62","query":"62-765","cases":{"revue":["1"]}},
+    {"key":"suppression-2020","kind":"jorf","text_id":"JORFTEXT000042625248","cases":{"revue":["24","25","31"]}},
+    {"key":"psc-2022","query":"2022-581","cases":{"revue":["1","2","3","4","5","6","9"]}},
+    {"key":"discipline-89","text_id":"JORFTEXT000000335719","cases":{"revue":["2","3","4","6","14"]}}
+  ]
+}

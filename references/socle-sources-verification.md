@@ -75,6 +75,21 @@ quota).
 Certaines règles dépendent du **type de collectivité** ou de la
 **filière**. Confirmer que le texte cité s'applique bien au cas.
 
+### Restituer fidèlement la proposition et ses limites
+Pour chaque proposition retenue, lire le passage entier qui la porte et ses
+renvois utiles. Conserver chaque exception et restriction : « sauf », « sous
+réserve », « ne porte que sur », « toutefois ». Ne pas ajouter de qualificatif,
+de condition ou d'acteur absent du texte. Ne pas attribuer à un article une
+règle qu'il n'énonce pas. Distinguer expressément le texte, l'inférence et la
+recommandation locale ; une condition ajoutée ne devient pas une condition légale.
+
+### Lire une décision
+Séparer le principe énoncé par le juge de son appréciation des faits de l'espèce
+(notamment les passages « il ressort des pièces du dossier »). Une appréciation
+d'espèce ne crée pas une règle générale. N'inventer ni présomption ni catégorie
+absente de la décision. Borner la règle à la procédure, au statut et à la
+question effectivement jugés ; expliciter les différences avant toute transposition.
+
 ### Réformes à surveiller en priorité
 Domaines à forte évolution récente, à confirmer systématiquement avant
 usage en acte :
@@ -156,12 +171,28 @@ la valeur en vigueur à la date utile :
 
 Figer ces valeurs serait contre-productif : elles périment.
 
-### 6.2 Plafonds et barèmes réglementaires (stables) — citables sous réserve
+### 6.2 Plafonds et barèmes réglementaires — vérifier avant citation
 Fixés par un décret identifié, ils restent stables tant qu'il n'est pas modifié.
 Ils **peuvent être cités**, à trois conditions :
 1. **dater le texte source** (ex. décret n° 2024-614) ;
 2. rattacher si possible le plafond à son **article** ;
-3. signaler « **à confirmer en version consolidée** » à la date utile.
+3. consulter la **version applicable à la date utile** et conserver la trace.
+
+La mention « à confirmer en version consolidée » est une réserve pour une
+source non encore consultée, jamais un substitut à la consultation ni une
+autorisation de chiffrer un acte sans vérification. Après une consultation
+effective, dater la source et réserver seulement les points encore ouverts.
+En mode dégradé ou en cas de source inaccessible, ne pas citer de valeur
+juridique exacte non vérifiée. Les faits chiffrés fournis par l'utilisateur
+(effectif, heures, dates, montant demandé) restent utilisables comme faits,
+sans leur attribuer la valeur d'un seuil ou d'un droit confirmé.
+
+Les valeurs figurant dans les modules (ISFE, CET, IHTS, congés, garanties
+horaires, etc.) sont des repères documentaires à confronter à la source
+officielle applicable pour chaque réponse. Leur présence dans un fichier
+chargé, sa date de maintenance ou une validation passée ne vaut pas
+consultation actuelle. En dégradé, omettre ces valeurs juridiques et proposer
+les vérifications nécessaires ; ne pas les reprendre avec une réserve tardive.
 
 Exemples : plafonds **ISFE** (décret n° 2024-614 — valeurs portées par la
 branche carrière-paie §5.7, **source interne unique** pour éviter toute

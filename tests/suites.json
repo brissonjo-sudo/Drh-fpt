@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "suites": {
+    "developpement": {"path":"cas-de-test.json","expected_per_mode":30,"qualification":false},
+    "regression-ciblee-v1": {"path":"cas-de-test.json","expected_per_mode":14,"qualification":false,"prefixes":["04","07","08","09","12","17","18","19","20","21","22","23","29","30"]},
+    "qualification-a-v1": {"path":"qualification/cases-a.json","seal":"qualification/seal-a.json","expected_per_mode":12,"qualification":true,"state":"pending-human-approval"},
+    "qualification-reserve-v1": {"path":"qualification/cases-b.json","seal":"qualification/seal-b.json","expected_per_mode":12,"qualification":true,"state":"pending-human-approval","reserve_for":"qualification-a-v1"}
+  }
+}

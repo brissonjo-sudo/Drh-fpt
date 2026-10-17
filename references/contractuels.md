@@ -2,7 +2,8 @@
 
 > Structure conforme à `_gabarit-branche.md`. Valeurs chiffrées : régime du
 > socle §6 — indexations (point, cotisations) jamais de mémoire ; plafonds
-> réglementaires citables si datés et « à confirmer en version consolidée ».
+> réglementaires citables après consultation officielle de la version applicable ;
+> aucun chiffre en mode dégradé, réserves limitées aux points non vérifiés.
 
 ## 1. Périmètre
 
@@ -84,20 +85,28 @@ refus de l'agent peut fonder un licenciement (§5.6).
 
 ### 5.3 CDIsation et portabilité (point de vigilance majeur)
 
-**Règle des 6 ans** : un agent en CDD ayant accompli au moins **6 ans de
-services publics effectifs** sur des fonctions de **même catégorie
-hiérarchique**, chez le **même employeur**, doit se voir proposer un **CDI**
-au renouvellement. Base CGFP (codifiant l'ex-art. 21 de la loi 84-53) —
-**article exact et conditions précises (computation, régime après 55 ans,
-temps complet/incomplet) à vérifier avant toute réponse ferme**.
+**L332-10 — contrat à durée indéterminée et décompte** : tout contrat établi
+ou renouvelé pour un emploi permanent en application de L332-8 avec un agent
+justifiant d'au moins six ans de services publics sur des fonctions de même
+catégorie hiérarchique est conclu à durée indéterminée. Le décompte vise les
+services auprès de la **même collectivité ou du même établissement**, dans
+les emplois de la sous-section ou de L332-23. Il prend aussi en compte :
+1. les services de L452-44 accomplis auprès de l'employeur qui a ensuite
+   recruté l'agent par contrat ;
+2. les services à temps non complet et à temps partiel, assimilés au temps complet ;
+3. les services discontinus, si les interruptions entre contrats n'excèdent
+   pas quatre mois ; la période d'état d'urgence sanitaire désignée par le
+   texte n'entre pas dans le calcul de l'interruption.
+Ne pas ajouter une condition générale « sans interruption », d'âge ou de
+filière absente de cet article. Vérifier chaque contrat et les catégories
+effectives avant de conclure. Source : L332-10 (LEGIARTI000046119123), version
+au 12/10/2026 du pack PISTE du 16/10/2026.
 **Portabilité du CDI** : un agent déjà en CDI peut, sous conditions, se voir
 proposer un CDI par un **nouvel employeur public** (y compris autre versant),
 sans repasser par un CDD — **faculté du nouvel employeur**, pas un droit
-automatique ; conditions d'éligibilité **à vérifier**. **Pièges** : une
-**interruption de service** au-delà d'un seuil **à vérifier** peut remettre
-le compteur à zéro ; un changement de **catégorie ou de filière** peut
-rompre la continuité même à fonctions proches ; CDIsation **≠**
-titularisation, elle ne confère jamais la qualité de fonctionnaire.
+automatique ; conditions d'éligibilité **à vérifier** sur le fondement propre
+de cette mobilité. Ne pas transposer ce contrôle au décompte de L332-10.
+CDIsation **≠** titularisation ; elle ne confère pas la qualité de fonctionnaire.
 
 ### 5.4 Rémunération
 
@@ -113,7 +122,7 @@ titularisation, elle ne confère jamais la qualité de fonctionnaire.
   droit ; toute évolution procède d'une décision expresse (réévaluation
   triennale, revalorisation volontaire, changement de fonctions).
 - Régime indemnitaire : RIFSEEP possible par équivalence si la délibération
-  vise explicitement les contractuels (cf. `carriere-paie.md` §5.7).
+  vise explicitement les contractuels (cf. `references/carriere-paie/remuneration-paie.md` §5.7).
 
 ### 5.5 Fin de contrat (hors licenciement)
 
@@ -146,6 +155,15 @@ période d'essai, sous les exceptions prévues par le CGFP réglementaire
 **reclassement uniquement lorsque le motif et le texte l'imposent** ;
 (4) **notification motivée** + voies et délais de recours.
 
+Le licenciement d'un agent public est une décision susceptible de recours
+pour excès de pouvoir. Ne pas lui appliquer mécaniquement l'exception de
+R421-1 CJA relative aux mesures d'exécution d'un contrat : CAA Douai,
+30 janvier 2024, n° 22DA01446, §5-6, applique le délai de deux mois à un
+licenciement d'agent contractuel public. Vérifier la notification, le motif,
+le tribunal compétent et les règles applicables à l'espèce avant d'inscrire
+les voies et délais. Cette décision ne permet pas de transposer les règles
+de fond du décret FPE au licenciement territorial.
+
 Le reclassement préalable n'est **pas** une obligation générale pour tout
 licenciement non disciplinaire :
 
@@ -162,13 +180,17 @@ licenciement non disciplinaire :
 **Indemnité de licenciement** : due
 sauf faute grave/disciplinaire ou pension à taux plein ; mode de calcul
 (base, plafond, ancienneté) fixé par le décret 88-145 — **à vérifier avant
-tout montant chiffré**. **Droits au chômage** : en principe auto-assurance de
+tout montant chiffré**, notamment la réduction de moitié en cas d'insuffisance
+professionnelle prévue à l'article 46. Si une comparaison avec le titulaire
+est demandée, examiner séparément l'indemnité du décret n° 85-186 du 7 février
+1985, sous ses conditions, sans transposer le calcul du contractuel.
+**Droits au chômage** : en principe auto-assurance de
 l'employeur (sauf convention France Travail) — vérifier le régime local.
 
 ### 5.7 Discipline des contractuels — échelle propre (décret 88-145)
 
 **Distincte de celle du titulaire** (CGFP L533-1) — ne jamais appliquer
-l'échelle des 4 groupes de `carriere-paie.md` §5.5 à un contractuel.
+l'échelle des 4 groupes de `references/carriere-paie/statut-discipline.md` §5.5 à un contractuel.
 
 | Sanction | CCP disciplinaire |
 |---|---|
@@ -185,7 +207,7 @@ suffisant) : leur méconnaissance entache la sanction d'illégalité. **CCP en
 formation disciplinaire** = équivalent fonctionnel du conseil de discipline,
 mais **ce n'est pas la CAP** (composition selon CDG ou en propre).
 **Prescription** : par analogie 3 ans à compter de la connaissance effective
-des faits (cf. `carriere-paie.md` §5.5), mais **fondement textuel propre aux
+des faits (cf. `references/carriere-paie/statut-discipline.md` §5.5), mais **fondement textuel propre aux
 contractuels à vérifier séparément**.
 
 ### 5.8 Congés, protection sociale et entretien professionnel
@@ -194,7 +216,7 @@ Renvoi → `qvt-sante.md` pour le cadre général (prévention, CITIS, conseil
 médical, PSC). Spécificités : **congé de grave maladie** (contractuel)
 **≠ CLM** (titulaire) — conditions, durée et quotité de traitement
 distinctes, paliers d'ancienneté **à vérifier**, ne jamais transposer.
-Affiliation retraite : IRCANTEC (cf. `carriere-paie.md` §5.8).
+Affiliation retraite : IRCANTEC (cf. `references/carriere-paie/remuneration-paie.md` §5.8).
 
 **Entretien professionnel** obligatoire pour les CDI et les **CDD > 1 an**
 (seuil à confirmer) : utile en cas de contentieux sur insuffisance
@@ -203,11 +225,13 @@ professionnelle ou non-renouvellement contesté. Renvoi →
 
 ### 5.9 Vigilance — requalification et frontières du régime
 
-- **Succession irrégulière de CDD** (fondement non actualisé, besoin en
-  réalité permanent) → risque de **requalification** en CDI de plein droit
-  (règle des 6 ans) et de contentieux indemnitaire pour précarité. Chaque
-  renouvellement doit reposer sur un fondement vérifié, pas sur la simple
-  reconduction.
+- **Succession de CDD** : selon L332-10, le contrat établi ou renouvelé pour
+  pourvoir un emploi permanent en application de L332-8 **est conclu pour une
+  durée indéterminée lorsque les conditions sont réunies** (§5.3 : services,
+  catégorie hiérarchique, employeur et décompte). Ne pas déduire une
+  requalification automatique de toute succession irrégulière de CDD. Chaque
+  renouvellement doit reposer sur un fondement vérifié ; un éventuel
+  contentieux indemnitaire pour précarité exige une analyse distincte.
 - **Contractuel de droit public ≠ droit privé** : **apprentis**, **contrats
   aidés/insertion**, et **certains personnels des OPH** relèvent du **code du
   travail**, pas du décret 88-145 — **statut à vérifier poste par poste**.
@@ -275,7 +299,7 @@ quotités de traitement des congés propres au contractuel ; motifs exacts de
 saisine de la CCP ; conditions de computation des 6 ans (interruptions,
 seuil de neutralisation) ; conditions de la portabilité du CDI ; valeur du
 point d'indice si la rémunération est positionnée sur une grille (cf.
-`carriere-paie.md` §5.6). **Référence jurisprudentielle** : l'avis CE du
+`references/carriere-paie/remuneration-paie.md` §5.6). **Référence jurisprudentielle** : l'avis CE du
 25 septembre 2013, n° 365139, ne doit être cité que pour sa portée réelle
 (éviction d'un contractuel en CDI afin d'affecter un fonctionnaire), après
 confirmation sur la source officielle.
@@ -298,7 +322,14 @@ Gabarits → `assets/`.
 
 ## 11. Niveau de confiance (repères de la branche)
 
-- **Stable** : existence d'un texte d'application propre au contractuel
+Ces repères documentaires ne certifient pas la réponse. Appliquer le niveau
+de confiance proposition par proposition : **Stable** seulement si un article
+consulté porte littéralement la proposition, dans sa version et son champ
+applicables. Toute conséquence conserve les réserves de sa prémisse, y compris
+dans les actes, formulaires et calendriers. Une réserve après une obligation,
+une condition ou une autorité non vérifiée ne répare pas son affirmation.
+
+- **Repères documentaires à vérifier pour la réponse** : existence d'un texte d'application propre au contractuel
   (décret 88-145 pour rémunération/fin de contrat/licenciement/discipline,
   Livre III réglementaire du CGFP depuis le 1/10/2025 pour le recrutement) ;
   distinction non-renouvellement / licenciement ; échelle disciplinaire

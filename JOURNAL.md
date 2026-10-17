@@ -269,3 +269,331 @@ Une entrée par cas, au format ci-dessous.
 - Statut : corrections intégrées sur la branche de travail ; JSON, compilation
   Python, cohérence et fraîcheur du bundle validés localement sans API ;
   nouvelle campagne LLM à rejouer manuellement.
+### 2026-09-19 — Critères du juge et contexte progressif
+- Type : erreur + amélioration
+- Branche : socle + carrière-paie + tests
+- Contexte (anonymisé) : audit du protocole de validation et de la taille du
+  contexte, sans dossier individuel.
+- Constat : le validateur acceptait des critères dupliqués et sans rapport
+  avec les attendus si leur nombre et les verdicts étaient corrects. Les
+  campagnes ne pouvaient pas être reprises ou rejugées proprement, et le bundle
+  complet était chargé pour tous les cas.
+- Action proposée : identifiants stables des critères, validation bijective,
+  évaluations immuables, métriques multifournisseurs, trois niveaux de preuve
+  et chargement sélectif des branches et gabarits.
+- Statut : intégré (candidat v0.7.0), campagnes LLM à exécuter.
+
+### 2026-10-11 — Sources réelles et premières campagnes de PR18
+- Type : erreurs métier, erreurs du juge et protocole de preuve.
+- Contexte : cas fictifs publics, sans donnée d'agent ; compagnon juridique
+  v3.5.0 et consultations officielles archivées.
+- Campagnes initiales sur a83f031 : 30 cas integration et 30 degraded,
+  répondant gpt-6.1-sol et juge distinct gpt-6-sol, effort medium. Le gate
+  strict échoue dans les deux modes (9 et 10 cas entièrement satisfaits).
+- Constat : modules absents de certains contextes mixtes, omissions de
+  contrôles ; faux négatifs du juge sur alternatives et critères facultatifs ;
+  critère de date d'effet d'abandon de poste trop absolu.
+- Action : compléter les contextes et le dossier de sources, corriger la règle
+  et les critères incompatibles avec les sources, préciser l'inventaire des
+  contrôles et l'abstention en mode dégradé. Les réponses, jugements et traces
+  des premières campagnes sont conservés, sans modification ni remplacement.
+- Statut : corrections locales et 44 tests déterministes réussis ; nouvelles
+  campagnes complètes nécessaires sur le même commit propre avant publication.
+
+### 2026-10-11 — Deuxième série complète et couverture de restitution
+- Contexte : mêmes modèles distincts, effort high, commit propre 595d62e.
+- Résultat : 30 cas dans chaque mode ; 17 integration et 22 degraded
+  entièrement satisfaits. Gates stricts encore en échec.
+- Constat : distinctions utiles omises malgré leur présence dans les modules ;
+  mode dégradé sûr mais inventaire de pièces incomplet. La consultation
+  initiale sur la grève ne démontrait pas directement la proportionnalité.
+- Action : contrôle de couverture visible par famille, déclaration explicite
+  d'indisponibilité de vérification, CE17 juillet2009 n°303588 consulté et
+  archivé. Source historique CGCT2004 consultée : elle visait les sanctions
+  soumises au conseil de discipline ; formulation et critère corrigés sans
+  élargir cette catégorie à toutes les sanctions. Date propre à une source
+  historique conservée par le collecteur.
+- Statut : 45 tests déterministes réussis ; nouvelle validation complète
+  requise avant sortie de brouillon.
+
+### 2026-10-11 — Troisième série et diagnostic des consignes concurrentes
+- Résultat sur 2dc44ac : 30 cas par mode ; 20 integration et 28 degraded
+  entièrement satisfaits, gates stricts en échec. Traces conservées.
+- Constat : la couverture reste omise malgré la liste métier ; la concision
+  et la suspension de l'analyse du compagnon concurrencent la restitution
+  DRH. Un diagnostic 07/08 répétant le fichier entier en fin de contexte
+  ne suffit pas à supprimer les omissions.
+- Action : clarifier la priorité du contrat DRH, ajouter un rappel final
+  générique identique pour tous les cas, extraire le contenu principal des
+  pages avec vérification sur l'archive intacte. Compléter les sources déjà
+  consultées pour le contractuel victime d'accident, la décision indemnitaire,
+  la protection et les suites d'une décharge de fonctions.
+- Statut : corrections à valider en diagnostic puis par deux campagnes
+  complètes. Les critères de la troisième série ne sont pas modifiés.
+- Diagnostic sur 063b523 : 01, 02 et 07 entièrement satisfaits ; 08 omet
+  encore la vérification de la valeur du point malgré l'assiette citée.
+  Consigne de conversion clarifiée pour toute réponse sur un plafond
+  assis sur le traitement indiciaire, même sans montant individuel demandé.
+- Diagnostic sur 9186f7f : 18 et 22 entièrement satisfaits ; 08, 13, 21 et 29
+  comportent encore des critères partiels. Le contrôle du point apparaît
+  désormais. Une relecture indépendante identifie une contradiction entre
+  couverture systématique et réponse de seule valeur : le circuit RH imposé
+  dépasse la demande de plafonds. Couverture adaptée à l'objet demandé.
+- Les matériaux juridiques précèdent maintenant le contrat métier, sans
+  duplication, pour préserver la priorité de restitution après consultation.
+  Orientation hors périmètre distinguée d'une procédure exécutable ; contrôle
+  de structure consolidée rendu traçable. CAA Lyon 7 mars 2024 n°22LY01568
+  réellement consultée et archivée pour la nature de la fin de détachement.
+  Dossier complémentaire : 271 traces, 36 archives. Nouvelle validation requise.
+- Diagnostic sur 51d1040 : 08 et 13 entièrement satisfaits ; 29 valide la
+  confrontation de structure mais réserve le recours gracieux faute de preuve ;
+  21 conserve
+  deux omissions (règle générale du point de départ et voies de sortie).
+  La checklist de restitution est lue après les modules, une seule fois ;
+  les alternatives légales de fin de fonctions restent nécessaires même
+  lorsque la demande porte sur un départ immédiat.
+- Complément de sources : CRPA L410-1/L411-2 pour le recours gracieux et loi
+  2019-828 articles 32/94 pour le transitoire disciplinaire, extraits des
+  archives déjà réellement consultées, horodatages d'origine préservés.
+  L'article 94 XI vise la date de la sanction, antérieure à la publication
+  du 7 août 2019 ; le module et le critère 29-c02 étaient trop restrictifs.
+  Correction corroborée par relecture indépendante. L'anomalie « 2009 » de
+  l'article 31 II du décret 2020-1533 est conservée et explicitement qualifiée.
+- Quatrième série : le cas de grève écarte le trentième sans nommer son
+  régime d'origine ; le mode dégradé reprend l'acte mais omet l'employeur
+  communal connu. Restitution clarifiée pour identifier le régime voisin
+  écarté et résumer les faits établis, sans nouvelle affirmation en mode dégradé.
+  La collecte d'un texte de 1962 révèle une limite Windows des timestamps
+  négatifs : conversion arithmétique UTC avec test de régression.
+- Quatrième série terminée sur 31060ec : 27/30 integration, 29/30 degraded,
+  gates en échec. Outre les deux omissions de restitution, le projet
+  d'avancement affirme à tort une transmission obligatoire. Contrôle de la
+  nature exacte de l'acte et de sa catégorie légale renforcé avant tout délai.
+- Le critère 17-c02 et le module exigeaient le silence absolu de l'agent :
+  les décisions consultées montrent qu'une réponse refusant la reprise peut
+  rester compatible avec un abandon. Critère et règle corrigés pour contrôler
+  non-reprise, réponses et justificatifs après mise en demeure régulière ;
+  aucune radiation automatique. Périmètres FPE/FPH des décisions explicités.
+
+### 2026-10-11 — Cinquième série et harmonisation des contrôles
+- Résultat sur c3e3a22 : 26/30 integration et 30/30 degraded.
+  La paire reste invalide ; les 60 réponses et jugements sont conservés.
+- Le critère 12-c03 exigeait encore la non-réponse absolue corrigée au cas17 :
+  harmonisation sur non-reprise, réponses et justificatifs ; date d’effet
+  contrôlée, sans automaticité au premier jour d’absence. Relecture primaire
+  indépendante confirme la correction.
+- La réponse 17 omet effectivement la non-reprise à l’échéance : contrôle
+  générique de restitution précisé, sans modifier son critère ni le juge.
+- La réponse 19 réserve la réduction faute d’article46 dans les extraits :
+  ajout des articles46/48/49 de l’archive déjà consultée, horodatage préservé.
+- Nouveau dossier immuable :288 traces/39 archives ; les283 traces précédentes
+  restent identiques. Nouvelles campagnes complètes nécessaires.
+- La réponse29 exclut correctement la sanction2026 et vise la date légale,
+  mais omet les conditions et délais des recours anciens : rappel générique
+  ajouté à la restitution, sans changer le critère29-c02.
+
+### 2026-10-11 — Sixième série et garanties sans acte rédigé
+- Résultat sur ee1c59f : 28/30 integration et 30/30 degraded.
+  Anciennes réponses et évaluations conservées, sans reprise sélective.
+- La réponse de protection omet la motivation et les recours d'un refus.
+  Le contrat limitait les recours aux actes produits, concurrençant la
+  checklist métier. La règle couvre maintenant toute décision individuelle
+  analysée ou préparée, même sans rédaction, en préservant le format ciblé
+  d'une simple valeur. Relecture indépendante confirme cette vraie omission
+  et la concurrence des consignes. Sources déjà disponibles ; aucun critère
+  ni juge ni gate abaissé. Deux nouvelles campagnes complètes requises.
+- La réponse29 cite la structure et borne le régime ancien, mais omet
+  la concordance avec le texte modificatif et le contrôle des conditions
+  d’accès ; checklist de restitution précisée, critères29 inchangés.
+
+### 2026-10-11 — Septième série et collecte PSC
+- Résultat sur 2c8ceda : 28/30 integration et 29/30 degraded.
+  Traces conservées intégralement.
+- La réponse dégradée PSC omet l’accord collectif. La fiche QVT ne le
+  demandait pas dans les variables et la restitution ne couvrait pas la PSC.
+  CGFP L827-2 réellement consulté établit son rôle dans la souscription.
+- Variables, règle conditionnelle et checklist complétées : contrats, dates,
+  accord ou absence, validité/clauses, participation et adhésion distinctes.
+  Critères, juge et gates inchangés ; nouvelles campagnes complètes requises.
+
+- Le cas 29 exclut correctement la sanction de 2026 et justifie
+  l’abrogation mais omet la réserve conditions/délais du régime ancien.
+  Lorsqu’il est cité, cette réserve reste jointe à la date : celle-ci
+  ne démontre pas à elle seule l’éligibilité d’un ancien dossier.
+
+- La réponse au cas 18 couvre frais et réparation mais omet explicitement
+  l’assistance juridique. Les articles R134-1 à R134-5 déjà consultés et
+  archivés encadrent demande écrite, faits/durée, avocat/convention et
+  règlement. Couverture explicitée dans fiche et restitution finale,
+  sous vérification du régime applicable, sans plafond inventé.
+
+### 2026-10-11 — Huitième série et orientation dégradée
+- Résultat sur 29dbe0d : 29/30 integration et 29/30 degraded.
+  Réponses et jugements conservés sans modification.
+- La réponse dégradée29 demande de confirmer la juridiction mais omet
+  de nommer le tribunal administratif comme piste. La restitution conserve
+  désormais les noms des institutions à vérifier, avec toutes les réserves
+  de compétence, modalités et délais ; aucun acte exécutable.
+- Critères, juge, sources et gates inchangés. Nouvelles campagnes requises.
+
+- En intégration28, formation plénière et décision territoriale sont
+  justes mais la formation restreinte n’est pas expressément écartée.
+  La restitution explicite désormais les deux branches de cette alternative
+  lorsque la question les oppose, après vérification. Le juge a aussi écrit
+  « imutabilité » au lieu de « imputabilité » dans le libellé c01 ; le gate
+  strict rejette ce défaut de copie. Trace originale conservée, juge et
+  contrôle du libellé inchangés, aucune réparation manuelle.
+
+### 2026-10-11 — Neuvième série et réserves explicites
+- Résultat sur 1bee33a : 29/30 integration et 29/30 degraded.
+  Traces et jugements conservés sans modification.
+- Dégradé17 : phrase négative générale ambiguë sur la rupture du lien,
+  interprétable comme règle ferme. Relecture indépendante confirme cette
+  lecture défendable, sans établir d’erreur de droit. Consigne générique
+  distingue limites de la réponse et conditions/effets juridiques non vérifiés.
+- Intégration19 : régime hors essai et ordre particulier de la CCP couverts,
+  réserve sur les autres exceptions de saisine omise. La restitution ajoute
+  ce contrôle sans inventer de dispense ni de cas réglementaire précis.
+- Critères, juge, sources et gates inchangés ; nouvelle paire requise.
+
+### 2026-10-11 — Dixième série et conflit de portée
+- Résultat sur 5f8a531 : 27/30 integration et 29/30 degraded.
+  Traces conservées sans modification.
+- Intégration08 : versements/sauvegarde ajoutés à une demande de plafonds.
+  Relecture confirme un conflit : famille finale exigeait des éléments de
+  mise en place sans condition malgré le format ciblé défini en ouverture.
+  Tableau et famille sont scindés selon l’objet, sans supprimer les
+  transitions qui changent réellement une borne ni le circuit de mise en place.
+- Intégration06 : message d’accompagnement non explicitement distingué
+  de l’acte adopté. Contrôle final communication ajouté, déjà fondé dans
+  la fiche et le tableau ; aucune assimilation de toute note de service.
+- La phrase08 sur le taux individuel suit littéralement l’article3 fourni
+  du décret2024-614 ; aucune erreur de droit confirmée à son sujet.
+- Critères, juge, sources et gates inchangés ; nouvelle paire requise.
+
+- Dégradé19 : la base indemnitaire est évoquée mais les pièces de
+  rémunération ne sont pas collectées. Référence de paie/bulletins et
+  paramètres sont rendus explicites, sans montant ni formule certifiés.
+- Intégration07 : lien primaire exact fourni pour le fondement CGFP, mais
+  numéro L714-13 non rendu lisible. Relecture confirme le fondement dans
+  l’archive ; le reproche formel du juge est discutable, pas une source
+  manquante. Les métadonnées doivent conserver le numéro officiel du raw
+  sans le déduire d’un identifiant opaque ni modifier le paquet ancien.
+
+- Métadonnées enrichies dans un nouveau paquet `sources-round8` : 272
+  numéros d’articles extraits des archives officielles originales, parmi
+  les mêmes 288 traces et 39 archives brutes de `sources-round7`.
+  Dates de consultation et octets bruts sont conservés : aucune nouvelle
+  consultation n’est revendiquée. Le contexte affiche désormais ces numéros.
+- Le numéro reste facultatif pour les anciens paquets ; lorsqu’il est présent,
+  le contrôle impose son égalité avec la source brute et refuse son usage
+  pour une trace non article. Trois tests ajoutés ont échoué avant la
+  correction, puis les 56 tests déterministes ont réussi.
+  Les critères, le juge et les seuils de réussite restent inchangés ; la
+  vérification de l’intégrité des sources est renforcée.
+
+### 2026-10-11 — Onzième paire : distinctions visibles
+- Commit98b6766 : 27/30 integration, 30/30 degraded.
+  Traces et jugements originaux conservés.
+- Inaptitude22 : recherche documentée et impossibilité motivée présentes ;
+  absence de garantie de résultat seulement implicite, sans erreur juridique
+  confirmée. L’article3 du décret85-1054 archivé prévoit propositions et
+  impossibilité motivée. La distinction déjà dans la fiche est reprise
+  dans sa liste de contrôle et la famille finale, avec le régime applicable.
+- Valeur15 : date et source officielle présentes, confiance omise dans une
+  réponse courte destinée à un acte. Le rappel final reprend cette exigence
+  du contrat, avec ses limites, sans ajouter de circuit RH.
+- Aucun critère, juge, seuil ou consultation modifié. Nouvelle paire complète
+  sur le même commit propre nécessaire ; aucune fusion effectuée.
+- Contractuel26 : contrat, clauses et cadre local déjà recherchés ; le
+  juge assimile « fondement contractuel » au fondement légal du recrutement.
+  Relecture : reproche formel discutable, pas erreur de droit confirmée.
+  Qualification du recours inscrit au contrat rendue visible, déjà prévue
+  dans la fiche métier, sans procédure de recrutement supplémentaire.
+
+### 2026-10-11 — Douzième paire : renvois et chronologie
+- Commit dd4bdd6 : 29/30 integration, 29/30 degraded.
+  Traces et jugements originaux conservés.
+- PSC10 : article 2 fourni mais renvoi définissant le champ des garanties
+  absent du contexte, sans erreur confirmée du calcul de 7 euros.
+  Paquet9 : articles 1/3/4/6 extraits du même texte brut déjà consulté,
+  292 traces et 39 archives identiques ; dates originales conservées.
+  Le manifeste inclut ces articles pour les futures consultations.
+- Contrôle des garanties/renvois avant chiffrage renforcé : santé, référence
+  de 30 euros et minimum de 15 euros ; prévoyance, ancien minimum de 7 euros
+  et nouveau régime selon les dispositions transitoires de 2025.
+  Article 5 : renvoi littéral à L827-11 conservé malgré son changement
+  dans le code ; financement santé établi par L827-10 et article 6.
+- Dégradé29 : calendrier de procédure seulement générique ; événements
+  ouverture/sanction/notification nommés dans la collecte. L’ouverture ne
+  devient pas le critère du transitoire 2019, fondé sur la date de sanction.
+- Compléments relus indépendamment ; aucun critère, juge ou seuil modifié.
+  Nouvelle paire complète nécessaire ; aucune fusion effectuée.
+
+### 2026-10-11 — Treizième paire : protection fonctionnelle
+- Commit d52d70a : 29/30 integration, 30/30 degraded.
+  Traces et jugements originaux conservés.
+- Protection18 : examen par l’employeur déjà indiqué mais formulation
+  « pièces établissant l’absence de faute » ambiguë ; pas d’erreur de droit
+  certaine confirmée. Instruction et qualification par l’employeur distinguées
+  des pièces des attaques fournies par l’agent, sans preuve négative générale.
+- Critère18-c04 trop absolu : « refusée qu’en cas de faute personnelle »
+  excluait la dérogation d’intérêt général reconnue par CE, 7 juin 2024,
+  n°476196, §3. Consultation réelle archivée et relecture indépendante :
+  critère et échec associé corrigés, sans faculté discrétionnaire ni motif
+  inventé. L’appréciation de la faute reste exigée, sans l’écarter d’office.
+- CE2024 énonce le principe codifié L134-1/L134-5 dans une affaire d’agent
+  de préfecture ; seules ces règles générales sont utilisées en FPT.
+  La décision ne formule pas une règle autonome de charge de preuve.
+- Paquet10 : ancienne292 traces inchangées, plus cette consultation réelle ;
+  293 traces, 40 archives. Manifeste, fiche et restitution complétés.
+- Juge, seuils et jugements antérieurs inchangés. Nouvelle paire complète
+  nécessaire sur le même commit propre ; aucune fusion effectuée.
+
+### 2026-10-11 — Quatorzième paire : citations et voies de sortie
+- Commit e543b25 : 28/30 intégration, 30/30 dégradé. Les deux omissions
+  restantes et tous les jugements originaux sont conservés.
+- ISFE : numéro, fondement et liens identifient le régime, mais la date du
+  décret demandée par 07-c01 manque. Relecture indépendante : incomplétude
+  formelle confirmée, sans erreur juridique établie. Première citation d'un
+  fondement vérifié avec intitulé court, numéro et date officielle, sans
+  répétitions ni invention en dégradé.
+- Décharge d'emploi fonctionnel : la recherche d'un emploi du grade et les
+  options sont citées sans expliciter le retour sur emploi disponible ni
+  l'organisme de prise en charge. L544-4/L544-12 et la décision Lyon 2024
+  déjà consultés suffisent au cadrage ; modalités et compétence exacte
+  restent à vérifier. La restitution des alternatives précise effet,
+  condition d'ouverture et acteur, brièvement.
+- Sources du paquet10 conservées, critères, juge et seuils inchangés.
+  Nouvelle paire complète requise sur le prochain commit propre.
+
+### 2026-10-11 — Quinzième paire : compétence des LDG
+- Commit6505d7e : 28/30 intégration, 29/30 dégradé.
+- En dégradé, rôle du CDG selon objet/affiliation mentionné sans distinguer
+  promotion interne ni compétence d’établissement des listes d’aptitude.
+  Omission de qualification confirmée par relecture indépendante. La fiche
+  CST ne distinguait pas assez LDG locales et promotion interne.
+- Fiche et contrôle LDG précisent affiliation et compétence confiée, puis
+  auteur/circuit à vérifier. En dégradé, aucune compétence certifiée.
+  L413-6/R413-37 figurent déjà dans les consultations officielles.
+- Paquet10, critères, juge et seuils inchangés. Réponses/jugements originaux
+  conservés ; nouvelle paire complète sur commit propre nécessaire.
+- PPR : maintien après la période distingué de sa prolongation, mais
+  borne citée seulement pour la procédure de reclassement ; omission de
+  rattachement confirmée, sans contresens établi. Article2 du décret85-1054
+  déjà consulté suffisant : lien entre maintien, demande, prise d’effet et
+  limite du renvoi rendu explicite, sans nouveau délai automatique.
+- Transmission : conclusion légale correcte et distinction volontaire/
+  demande préfet présentes, mais convention/pratique locale non mentionnée.
+  Omission documentaire confirmée ; contrôle déjà présent rendu explicite
+  pour les questions ciblées de transmission, sans présomption de convention
+  ni nouvelle obligation légale. Aucune source supplémentaire requise.
+
+### 2026-10-11 — Validation complète de PR18
+- Commit testé : cc1f56f6f7a18cdfb569e757795d717d7f206b79, propre dans les deux modes.
+- Intégration 30/30 et dégradé 30/30 ; tous les critères obligatoires SATISFAIT,
+  aucune erreur juridique détectée. Gate commun des traces et provenances réussi.
+- 56 tests déterministes, bundle et cohérence réussis ; relecture indépendante
+  sans défaut bloquant. Rapport daté et archive portable dans tests/rapports/.
+- Historique des échecs conservé sans réécriture. Validation limitée aux cas,
+  modèles et corpus daté, sans garantie universelle. Aucune fusion effectuée.

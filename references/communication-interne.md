@@ -90,7 +90,14 @@ en vigueur (LDG, RSU) et les règles RGPD applicables.
 
 ## 11. Niveau de confiance (repères de la branche)
 
-- **Stable** : principes d'accueil, de communication interne, de marque
+Ces repères documentaires ne certifient pas la réponse. Appliquer le niveau
+de confiance proposition par proposition : **Stable** seulement si un article
+consulté porte littéralement la proposition, dans sa version et son champ
+applicables. Toute conséquence conserve les réserves de sa prémisse, y compris
+dans les actes, formulaires et calendriers. Une réserve après une obligation,
+une condition ou une autorité non vérifiée ne répare pas son affirmation.
+
+- **Repères documentaires à vérifier pour la réponse** : principes d'accueil, de communication interne, de marque
   employeur.
 - **À vérifier** : périmètre exact des obligations d'information (LDG, RSU) et
   les règles RGPD.
