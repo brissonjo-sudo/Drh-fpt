@@ -2334,9 +2334,16 @@ invalidité ; égalité professionnelle (plan d'action, nominations
   aides. **DOETH** : déclaration annuelle.
 
 ### 5.5 Télétravail et action sociale
-- **Télétravail** : mis en place par délibération après avis du CST ; cadre
-  national (décret 2016-151 modifié) ; possible indemnité forfaitaire
-  (montant **à vérifier**).
+- **Télétravail** : les modalités de mise en œuvre sont fixées par délibération
+  de l'organe délibérant après avis de la formation spécialisée en santé,
+  sécurité et conditions de travail du CST compétente, dans les conditions
+  de L253-6 ; en l'absence de formation spécialisée, avis de ce comité.
+  L253-6 réserve les questions de réorganisation de services examinées
+  directement par le CST. Ne pas remplacer ce circuit par un avis générique
+  du CST sans qualifier la situation. Source : CGFP R432-1, 2°
+  (LEGIARTI000054077141) et L253-6 (LEGIARTI000044427238), versions au
+  12/10/2026 collectées par PISTE le 16/10/2026. Toute indemnité éventuelle
+  exige une vérification propre avant chiffrage.
 - **Action sociale** : prestations facultatives (titres-restaurant, CNAS, COS,
   aides diverses). L'action sociale est une **dépense obligatoire dans son
   principe**, mais son contenu relève du **choix local**.
