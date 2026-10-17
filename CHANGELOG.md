@@ -5,6 +5,9 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 ## [Non publié] — v0.7.1
 
 ### Corrections locales après clôture du jeu A — 2026-10-17
+- M6, après diagnostic L3b : propagation des réserves ligne par ligne dans
+  les livrables opérationnels, contrôles ouverts en mode dégradé et passe
+  finale de propagation ; méthode seule, sans nouvelle règle de droit.
 - Relecture L1 : communication disciplinaire du témoignage demandé, inférence
   CRPA explicitée, champ et objets de L131-8, provenance archivée de L274,
   confiance par proposition et contrat à durée indéterminée selon L332-10 ;

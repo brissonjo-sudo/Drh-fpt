@@ -36,6 +36,8 @@
 
 ## Règles d'écriture
 
+Appliquer M6 — propagation dans les livrables (`SKILL.md`, §4).
+
 - Imperatif, phrases courtes, une idée par point.
 - Valeurs chiffrées : appliquer le **régime du socle §6** — les **valeurs
   d'indexation** (point, cotisations, GIPA, planchers PSC) ne sont jamais

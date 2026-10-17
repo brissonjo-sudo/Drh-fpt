@@ -30,6 +30,8 @@ transmission et recours qui s'appliquent réellement au document.
 
 ## Conséquences procédurales et réserves
 
+Appliquer M6 — propagation dans les livrables (`SKILL.md`, §4).
+
 Une conséquence procédurale sans source consultée devient un **contrôle à
 vérifier**, pas une formalité obligatoire : avenant ou nouveau contrat,
 nouvelle déclaration, délibération modificative, notamment. Ne pas transformer

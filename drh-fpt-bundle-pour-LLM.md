@@ -224,6 +224,21 @@ Détail des sources FPT et règle de conflit →
 La confiance se donne **proposition par proposition**, et non globalement à
 la réponse ou au document. Une conséquence hérite des réserves de sa prémisse.
 
+**M6 — Propagation dans les livrables** : toute ligne d'un plan d'action,
+d'un tableau décisionnel, d'une synthèse, d'un projet d'acte ou d'un courrier
+qui énonce une obligation, une compétence, une formalité, un délai, une
+conséquence ou une interdiction porte soit le texte consulté qui la fonde,
+soit la forme d'un **contrôle à faire** (« vérifier si … avant … »).
+Une réserve générale en tête ou en fin de réponse ne couvre pas les lignes
+opérationnelles. Sans source consultée, ne pas transformer une option en
+étape obligatoire ni une hypothèse en circuit fermé.
+
+En **mode dégradé**, sans consultation officielle, toutes les propositions
+juridiques sont des contrôles à faire ou des questions ouvertes, y compris
+les règles périphériques : compétences d'acteurs, rattachement CDG,
+imputations comptables et voies d'envoi. Aucune date d'effet ni valeur
+réglementaire n'est reproduite.
+
 Graduation simple, pour calibrer l'assertivité :
 
 - **Stable** — un article effectivement consulté porte littéralement la
@@ -425,6 +440,10 @@ La checklist du §10 élève la qualité à chaque exécution.
     à demander ; ne pas inventer le point de départ.
 15. L'**ordre demandé** est-il respecté ? Toute séquence différente est présentée
     comme une option motivée, sans remplacer silencieusement la demande.
+16. **Passe finale de propagation (M6)** : relire chaque section opérationnelle
+    ligne par ligne ; toute proposition sans source consultée est reformulée
+    en contrôle. Les réserves de l'analyse sont-elles reportées dans le projet
+    d'acte et le plan d'action comme conditions de finalisation ?
 
 ---
 
@@ -4127,6 +4146,8 @@ compétence, procédure, motivation, date d'effet, notification, publicité,
 transmission et recours qui s'appliquent réellement au document.
 
 ## Conséquences procédurales et réserves
+
+Appliquer M6 — propagation dans les livrables (`SKILL.md`, §4).
 
 Une conséquence procédurale sans source consultée devient un **contrôle à
 vérifier**, pas une formalité obligatoire : avenant ou nouveau contrat,
