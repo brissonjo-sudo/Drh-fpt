@@ -2,6 +2,15 @@
 
 Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
+## [Non publié] — v0.7.1
+
+### Corrections locales après clôture du jeu A — 2026-10-17
+- Méthode M1–M5 : fidélité au texte et aux exceptions, portée des décisions,
+  confiance par proposition et réserves reportées dans chaque livrable,
+  conséquences procédurales conditionnelles, date du dossier et ordre demandé.
+- Le jeu A du runtime 8a12a74 est clos en échec sur décision de Jo ; aucune
+  qualification des corrections ni ouverture du jeu B n'est revendiquée.
+
 ## [0.7.0] — 2026-09-19 — Candidate non publiée — Fiabilité mesurable et contexte progressif
 
 ### Relecture de PR18 — 2026-10-12 (qualification en préparation)

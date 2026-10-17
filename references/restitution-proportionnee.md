@@ -28,6 +28,15 @@ Produire l'analyse nécessaire puis le livrable demandé. Inclure les contrôles
 compétence, procédure, motivation, date d'effet, notification, publicité,
 transmission et recours qui s'appliquent réellement au document.
 
+## Conséquences procédurales et réserves
+
+Une conséquence procédurale sans source consultée devient un **contrôle à
+vérifier**, pas une formalité obligatoire : avenant ou nouveau contrat,
+nouvelle déclaration, délibération modificative, notamment. Ne pas transformer
+une hypothèse de recherche en étape exécutable. Reporter chaque réserve dans
+le livrable concerné : acte ou formulaire conditionnel, champ à compléter,
+calendrier suspendu à la vérification. Cette règle s'applique aussi en nominal.
+
 ## Variables manquantes
 
 Demander uniquement une information absente qui peut modifier le régime, la

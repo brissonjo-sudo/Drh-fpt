@@ -206,7 +206,13 @@ même comme « pistes à vérifier ». Les faits chiffrés fournis restent utili
    confirmée ou contradiction, ne pas trancher : ne fournir aucune valeur
    exacte destinée à un calcul, à la paie ou à un acte ; livrer seulement une
    esquisse conditionnelle bornée et signaler le point à vérifier. Une réserve
-   placée après un chiffre non vérifié ne répare pas son énoncé.
+   placée après un chiffre non vérifié ne répare pas son énoncé. La même règle
+   vaut pour une base légale, une obligation, une condition de procédure ou une
+   autorité compétente, en fonctionnement nominal comme en mode dégradé : ne
+   pas les affirmer puis les réserver tardivement. Une conséquence tirée d'une
+   prémisse « à vérifier » conserve cette réserve jusque dans l'acte, le
+   formulaire et le calendrier ; livrer un scénario conditionnel ou un champ
+   à compléter, sans passage obligé ou échéance ferme non vérifiés.
 
 Détail des sources FPT et règle de conflit →
 **`references/socle-sources-verification.md`**.
@@ -215,10 +221,14 @@ Détail des sources FPT et règle de conflit →
 
 ## 4. Niveau de confiance (à signaler en sortie)
 
+La confiance se donne **proposition par proposition**, et non globalement à
+la réponse ou au document. Une conséquence hérite des réserves de sa prémisse.
+
 Graduation simple, pour calibrer l'assertivité :
 
-- **Stable** — source officielle effectivement consultée pour la réponse,
-  version applicable confirmée et lien ou identifiant officiel donné.
+- **Stable** — un article effectivement consulté porte littéralement la
+  proposition, dans son champ et sa version applicable ; lien ou identifiant
+  officiel donné. La seule présence d'une référence ne suffit pas.
 - **À vérifier** — texte modifié récemment **ou** valeur volatile (voir §6.1
   du socle) → vérification obligatoire avant usage en acte.
 - **Jurisprudentiel / débattu** — position non figée → recherche approfondie,
@@ -410,6 +420,11 @@ La checklist du §10 élève la qualité à chaque exécution.
 13. Les acteurs, compétences, seuils et distinctions de régime utiles sont-ils
     **visibles** dans la réponse, y compris conditionnelle ? Appliquer le
     contrôle de couverture de `references/restitution-proportionnee.md`.
+14. Les échéances sont-elles calculées depuis la **date de référence du dossier**,
+    et non depuis la date d'exécution de la réponse ? Une date manquante reste
+    à demander ; ne pas inventer le point de départ.
+15. L'**ordre demandé** est-il respecté ? Toute séquence différente est présentée
+    comme une option motivée, sans remplacer silencieusement la demande.
 
 ---
 
@@ -679,9 +694,9 @@ Terminer par :
 
 Utiliser les niveaux suivants :
 
-- **Stable** — règle structurelle confirmée sur une source officielle
-  effectivement consultée pour la réponse, variables déterminantes levées et
-  source traçable dans la réponse.
+- **Stable** — proposition littéralement portée par un article effectivement
+  consulté, dans son champ et sa version applicables ; variables déterminantes
+  levées et source traçable dans la réponse.
 - **À vérifier** — source récente, valeur volatile, choix local ou pièce encore
   à confirmer avant usage.
 - **Jurisprudentiel / débattu** — solution dépendante d'une interprétation ou
@@ -689,8 +704,9 @@ Utiliser les niveaux suivants :
 - **Abstention** — sources insuffisantes, contradictoires ou inaccessibles ;
   aucune conclusion ferme.
 
-Le niveau de confiance porte sur la conclusion donnée, pas sur la qualité
-générale de la réponse.
+Le niveau de confiance porte sur chaque proposition, pas sur la qualité
+générale de la réponse. Une conséquence conserve les réserves de sa prémisse,
+y compris dans un acte, un formulaire ou un calendrier.
 
 ## Critères d'échec transversaux
 
@@ -797,6 +813,21 @@ quota).
 ### Vérifier le champ d'application
 Certaines règles dépendent du **type de collectivité** ou de la
 **filière**. Confirmer que le texte cité s'applique bien au cas.
+
+### Restituer fidèlement la proposition et ses limites
+Pour chaque proposition retenue, lire le passage entier qui la porte et ses
+renvois utiles. Conserver chaque exception et restriction : « sauf », « sous
+réserve », « ne porte que sur », « toutefois ». Ne pas ajouter de qualificatif,
+de condition ou d'acteur absent du texte. Ne pas attribuer à un article une
+règle qu'il n'énonce pas. Distinguer expressément le texte, l'inférence et la
+recommandation locale ; une condition ajoutée ne devient pas une condition légale.
+
+### Lire une décision
+Séparer le principe énoncé par le juge de son appréciation des faits de l'espèce
+(notamment les passages « il ressort des pièces du dossier »). Une appréciation
+d'espèce ne crée pas une règle générale. N'inventer ni présomption ni catégorie
+absente de la décision. Borner la règle à la procédure, au statut et à la
+question effectivement jugés ; expliciter les différences avant toute transposition.
 
 ### Réformes à surveiller en priorité
 Domaines à forte évolution récente, à confirmer systématiquement avant
@@ -1557,7 +1588,15 @@ Gabarits → `assets/`.
 
 ## 11. Niveau de confiance (repères de la branche)
 
-- **Stable** : architecture des catégories/grades, mécanique
+Ces repères documentaires ne certifient pas la réponse. Appliquer le niveau
+de confiance proposition par proposition : **Stable** seulement si un article
+consulté porte littéralement la proposition, dans sa version et son champ
+applicables. Toute conséquence conserve les réserves de sa prémisse, y compris
+dans les actes, formulaires et calendriers. Une réserve après une obligation,
+une condition ou une autorité non vérifiée ne répare pas son affirmation.
+
+
+- **Repères documentaires à vérifier pour la réponse** : architecture des catégories/grades, mécanique
   échelon/grade/promotion, échelle des sanctions (CGFP L533) ; retenue de
   traitement FPT proportionnelle à la durée réelle de l'absence (≠ trentième
   indivisible État) ; nature non disciplinaire de la décharge de fonctions ;
@@ -2510,7 +2549,15 @@ périmètre de l'index égalité (loi du 19 juillet 2023).
 
 ## 11. Niveau de confiance (repères de la branche)
 
-- **Stable** : existence des congés, du conseil médical (fusion 2022), du DUERP,
+Ces repères documentaires ne certifient pas la réponse. Appliquer le niveau
+de confiance proposition par proposition : **Stable** seulement si un article
+consulté porte littéralement la proposition, dans sa version et son champ
+applicables. Toute conséquence conserve les réserves de sa prémisse, y compris
+dans les actes, formulaires et calendriers. Une réserve après une obligation,
+une condition ou une autorité non vérifiée ne répare pas son affirmation.
+
+
+- **Repères documentaires à vérifier pour la réponse** : existence des congés, du conseil médical (fusion 2022), du DUERP,
   de l'obligation d'emploi ; existence de la chaîne congés → conseil médical →
   reclassement/PPR → disponibilité → retraite pour invalidité ou
   licenciement ; obligation de moyens du reclassement ; existence du plan
@@ -2728,7 +2775,15 @@ l'apprentissage ; conditions d'ouverture de la NBI au maître d'apprentissage ;
 
 ## 11. Niveau de confiance (repères de la branche)
 
-- **Stable** : architecture des voies d'accès, principe d'égal accès, formations
+Ces repères documentaires ne certifient pas la réponse. Appliquer le niveau
+de confiance proposition par proposition : **Stable** seulement si un article
+consulté porte littéralement la proposition, dans sa version et son champ
+applicables. Toute conséquence conserve les réserves de sa prémisse, y compris
+dans les actes, formulaires et calendriers. Une réserve après une obligation,
+une condition ou une autorité non vérifiée ne répare pas son affirmation.
+
+
+- **Repères documentaires à vérifier pour la réponse** : architecture des voies d'accès, principe d'égal accès, formations
   obligatoires CNFPT, entretien professionnel ; les trois critères cumulatifs
   du vacataire (jurisprudence constante) ; nature de droit privé du contrat
   d'apprentissage ; absence de dispense de concours à l'issue de
@@ -2870,7 +2925,15 @@ calendrier des élections professionnelles ; périmètre des accords négociable
 
 ## 11. Niveau de confiance (repères de la branche)
 
-- **Stable** : fusion CT/CHSCT en CST (2022), existence CAP/CCP, obligation RSU
+Ces repères documentaires ne certifient pas la réponse. Appliquer le niveau
+de confiance proposition par proposition : **Stable** seulement si un article
+consulté porte littéralement la proposition, dans sa version et son champ
+applicables. Toute conséquence conserve les réserves de sa prémisse, y compris
+dans les actes, formulaires et calendriers. Une réserve après une obligation,
+une condition ou une autorité non vérifiée ne répare pas son affirmation.
+
+
+- **Repères documentaires à vérifier pour la réponse** : fusion CT/CHSCT en CST (2022), existence CAP/CCP, obligation RSU
   et LDG, principe des élections quadriennales.
 - **À vérifier** : calendrier précis des élections ; barèmes des moyens
   syndicaux ; champ négociable.
@@ -2998,7 +3061,15 @@ DSN de l'année.
 
 ## 11. Niveau de confiance (repères de la branche)
 
-- **Stable** : mécanique du chapitre 012, définition du GVT / noria / report,
+Ces repères documentaires ne certifient pas la réponse. Appliquer le niveau
+de confiance proposition par proposition : **Stable** seulement si un article
+consulté porte littéralement la proposition, dans sa version et son champ
+applicables. Toute conséquence conserve les réserves de sa prémisse, y compris
+dans les actes, formulaires et calendriers. Une réserve après une obligation,
+une condition ou une autorité non vérifiée ne répare pas son affirmation.
+
+
+- **Repères documentaires à vérifier pour la réponse** : mécanique du chapitre 012, définition du GVT / noria / report,
   principe DSN et RSU, tableau des effectifs.
 - **À vérifier** : toute valeur chiffrée ; format DSN et RSU de l'année.
 - **Débattu / mouvant** : évolutions des items du RSU et des obligations
@@ -3107,7 +3178,15 @@ en vigueur (LDG, RSU) et les règles RGPD applicables.
 
 ## 11. Niveau de confiance (repères de la branche)
 
-- **Stable** : principes d'accueil, de communication interne, de marque
+Ces repères documentaires ne certifient pas la réponse. Appliquer le niveau
+de confiance proposition par proposition : **Stable** seulement si un article
+consulté porte littéralement la proposition, dans sa version et son champ
+applicables. Toute conséquence conserve les réserves de sa prémisse, y compris
+dans les actes, formulaires et calendriers. Une réserve après une obligation,
+une condition ou une autorité non vérifiée ne répare pas son affirmation.
+
+
+- **Repères documentaires à vérifier pour la réponse** : principes d'accueil, de communication interne, de marque
   employeur.
 - **À vérifier** : périmètre exact des obligations d'information (LDG, RSU) et
   les règles RGPD.
@@ -3438,7 +3517,15 @@ Gabarits → `assets/`.
 
 ## 11. Niveau de confiance (repères de la branche)
 
-- **Stable** : existence d'un texte d'application propre au contractuel
+Ces repères documentaires ne certifient pas la réponse. Appliquer le niveau
+de confiance proposition par proposition : **Stable** seulement si un article
+consulté porte littéralement la proposition, dans sa version et son champ
+applicables. Toute conséquence conserve les réserves de sa prémisse, y compris
+dans les actes, formulaires et calendriers. Une réserve après une obligation,
+une condition ou une autorité non vérifiée ne répare pas son affirmation.
+
+
+- **Repères documentaires à vérifier pour la réponse** : existence d'un texte d'application propre au contractuel
   (décret 88-145 pour rémunération/fin de contrat/licenciement/discipline,
   Livre III réglementaire du CGFP depuis le 1/10/2025 pour le recrutement) ;
   distinction non-renouvellement / licenciement ; échelle disciplinaire
@@ -3748,7 +3835,15 @@ Gabarits → `assets/`.
 
 ## 11. Niveau de confiance (repères de la branche)
 
-- **Stable** : obligation de protection fonctionnelle et son autonomie
+Ces repères documentaires ne certifient pas la réponse. Appliquer le niveau
+de confiance proposition par proposition : **Stable** seulement si un article
+consulté porte littéralement la proposition, dans sa version et son champ
+applicables. Toute conséquence conserve les réserves de sa prémisse, y compris
+dans les actes, formulaires et calendriers. Une réserve après une obligation,
+une condition ou une autorité non vérifiée ne répare pas son affirmation.
+
+
+- **Repères documentaires à vérifier pour la réponse** : obligation de protection fonctionnelle et son autonomie
   vis-à-vis du pénal ; principe d'exclusivité et dérogations encadrées ;
   obligation de référents déontologue et laïcité ; double condition
   cumulative de la désobéissance légitime ; art. 40 CPP ; interdiction des
@@ -3810,6 +3905,15 @@ le socle national du choix local.
 Produire l'analyse nécessaire puis le livrable demandé. Inclure les contrôles de
 compétence, procédure, motivation, date d'effet, notification, publicité,
 transmission et recours qui s'appliquent réellement au document.
+
+## Conséquences procédurales et réserves
+
+Une conséquence procédurale sans source consultée devient un **contrôle à
+vérifier**, pas une formalité obligatoire : avenant ou nouveau contrat,
+nouvelle déclaration, délibération modificative, notamment. Ne pas transformer
+une hypothèse de recherche en étape exécutable. Reporter chaque réserve dans
+le livrable concerné : acte ou formulaire conditionnel, champ à compléter,
+calendrier suspendu à la vérification. Cette règle s'applique aussi en nominal.
 
 ## Variables manquantes
 

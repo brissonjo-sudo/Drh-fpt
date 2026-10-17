@@ -268,7 +268,15 @@ Gabarits → `assets/`.
 
 ## 11. Niveau de confiance (repères de la branche)
 
-- **Stable** : obligation de protection fonctionnelle et son autonomie
+Ces repères documentaires ne certifient pas la réponse. Appliquer le niveau
+de confiance proposition par proposition : **Stable** seulement si un article
+consulté porte littéralement la proposition, dans sa version et son champ
+applicables. Toute conséquence conserve les réserves de sa prémisse, y compris
+dans les actes, formulaires et calendriers. Une réserve après une obligation,
+une condition ou une autorité non vérifiée ne répare pas son affirmation.
+
+
+- **Repères documentaires à vérifier pour la réponse** : obligation de protection fonctionnelle et son autonomie
   vis-à-vis du pénal ; principe d'exclusivité et dérogations encadrées ;
   obligation de référents déontologue et laïcité ; double condition
   cumulative de la désobéissance légitime ; art. 40 CPP ; interdiction des

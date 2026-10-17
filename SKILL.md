@@ -158,7 +158,13 @@ même comme « pistes à vérifier ». Les faits chiffrés fournis restent utili
    confirmée ou contradiction, ne pas trancher : ne fournir aucune valeur
    exacte destinée à un calcul, à la paie ou à un acte ; livrer seulement une
    esquisse conditionnelle bornée et signaler le point à vérifier. Une réserve
-   placée après un chiffre non vérifié ne répare pas son énoncé.
+   placée après un chiffre non vérifié ne répare pas son énoncé. La même règle
+   vaut pour une base légale, une obligation, une condition de procédure ou une
+   autorité compétente, en fonctionnement nominal comme en mode dégradé : ne
+   pas les affirmer puis les réserver tardivement. Une conséquence tirée d'une
+   prémisse « à vérifier » conserve cette réserve jusque dans l'acte, le
+   formulaire et le calendrier ; livrer un scénario conditionnel ou un champ
+   à compléter, sans passage obligé ou échéance ferme non vérifiés.
 
 Détail des sources FPT et règle de conflit →
 **`references/socle-sources-verification.md`**.
@@ -167,10 +173,14 @@ Détail des sources FPT et règle de conflit →
 
 ## 4. Niveau de confiance (à signaler en sortie)
 
+La confiance se donne **proposition par proposition**, et non globalement à
+la réponse ou au document. Une conséquence hérite des réserves de sa prémisse.
+
 Graduation simple, pour calibrer l'assertivité :
 
-- **Stable** — source officielle effectivement consultée pour la réponse,
-  version applicable confirmée et lien ou identifiant officiel donné.
+- **Stable** — un article effectivement consulté porte littéralement la
+  proposition, dans son champ et sa version applicable ; lien ou identifiant
+  officiel donné. La seule présence d'une référence ne suffit pas.
 - **À vérifier** — texte modifié récemment **ou** valeur volatile (voir §6.1
   du socle) → vérification obligatoire avant usage en acte.
 - **Jurisprudentiel / débattu** — position non figée → recherche approfondie,
@@ -362,6 +372,11 @@ La checklist du §10 élève la qualité à chaque exécution.
 13. Les acteurs, compétences, seuils et distinctions de régime utiles sont-ils
     **visibles** dans la réponse, y compris conditionnelle ? Appliquer le
     contrôle de couverture de `references/restitution-proportionnee.md`.
+14. Les échéances sont-elles calculées depuis la **date de référence du dossier**,
+    et non depuis la date d'exécution de la réponse ? Une date manquante reste
+    à demander ; ne pas inventer le point de départ.
+15. L'**ordre demandé** est-il respecté ? Toute séquence différente est présentée
+    comme une option motivée, sans remplacer silencieusement la demande.
 
 ---
 

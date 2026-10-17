@@ -109,7 +109,15 @@ DSN de l'année.
 
 ## 11. Niveau de confiance (repères de la branche)
 
-- **Stable** : mécanique du chapitre 012, définition du GVT / noria / report,
+Ces repères documentaires ne certifient pas la réponse. Appliquer le niveau
+de confiance proposition par proposition : **Stable** seulement si un article
+consulté porte littéralement la proposition, dans sa version et son champ
+applicables. Toute conséquence conserve les réserves de sa prémisse, y compris
+dans les actes, formulaires et calendriers. Une réserve après une obligation,
+une condition ou une autorité non vérifiée ne répare pas son affirmation.
+
+
+- **Repères documentaires à vérifier pour la réponse** : mécanique du chapitre 012, définition du GVT / noria / report,
   principe DSN et RSU, tableau des effectifs.
 - **À vérifier** : toute valeur chiffrée ; format DSN et RSU de l'année.
 - **Débattu / mouvant** : évolutions des items du RSU et des obligations

@@ -75,6 +75,21 @@ quota).
 Certaines règles dépendent du **type de collectivité** ou de la
 **filière**. Confirmer que le texte cité s'applique bien au cas.
 
+### Restituer fidèlement la proposition et ses limites
+Pour chaque proposition retenue, lire le passage entier qui la porte et ses
+renvois utiles. Conserver chaque exception et restriction : « sauf », « sous
+réserve », « ne porte que sur », « toutefois ». Ne pas ajouter de qualificatif,
+de condition ou d'acteur absent du texte. Ne pas attribuer à un article une
+règle qu'il n'énonce pas. Distinguer expressément le texte, l'inférence et la
+recommandation locale ; une condition ajoutée ne devient pas une condition légale.
+
+### Lire une décision
+Séparer le principe énoncé par le juge de son appréciation des faits de l'espèce
+(notamment les passages « il ressort des pièces du dossier »). Une appréciation
+d'espèce ne crée pas une règle générale. N'inventer ni présomption ni catégorie
+absente de la décision. Borner la règle à la procédure, au statut et à la
+question effectivement jugés ; expliciter les différences avant toute transposition.
+
 ### Réformes à surveiller en priorité
 Domaines à forte évolution récente, à confirmer systématiquement avant
 usage en acte :

@@ -227,9 +227,9 @@ Terminer par :
 
 Utiliser les niveaux suivants :
 
-- **Stable** — règle structurelle confirmée sur une source officielle
-  effectivement consultée pour la réponse, variables déterminantes levées et
-  source traçable dans la réponse.
+- **Stable** — proposition littéralement portée par un article effectivement
+  consulté, dans son champ et sa version applicables ; variables déterminantes
+  levées et source traçable dans la réponse.
 - **À vérifier** — source récente, valeur volatile, choix local ou pièce encore
   à confirmer avant usage.
 - **Jurisprudentiel / débattu** — solution dépendante d'une interprétation ou
@@ -237,8 +237,9 @@ Utiliser les niveaux suivants :
 - **Abstention** — sources insuffisantes, contradictoires ou inaccessibles ;
   aucune conclusion ferme.
 
-Le niveau de confiance porte sur la conclusion donnée, pas sur la qualité
-générale de la réponse.
+Le niveau de confiance porte sur chaque proposition, pas sur la qualité
+générale de la réponse. Une conséquence conserve les réserves de sa prémisse,
+y compris dans un acte, un formulaire ou un calendrier.
 
 ## Critères d'échec transversaux
 
