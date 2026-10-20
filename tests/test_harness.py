@@ -59,9 +59,9 @@ class HarnessTests(unittest.TestCase):
             criterion_ids = [item["id"] for item in criteria]
             self.assertEqual(len(criterion_ids), len(set(criterion_ids)))
 
-    def test_each_campaign_activates_30_cases(self):
+    def test_each_campaign_activates_31_cases(self):
         for mode in ("integration", "degraded"):
-            self.assertEqual(len(RUN_TESTS.active_cases(self.cases, mode, [])), 30)
+            self.assertEqual(len(RUN_TESTS.active_cases(self.cases, mode, [])), 31)
 
     def test_case_filter_is_diagnostic_and_exact(self):
         cases = RUN_TESTS.active_cases(self.cases, "integration", ["01", "02"])

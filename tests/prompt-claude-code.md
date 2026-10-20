@@ -101,7 +101,7 @@ Pour **chacun des cas** du JSON :
 
 Itère sur les cas de `tests/cas-de-test.json` actifs pour le mode choisi, dans
 l'ordre, en appliquant le protocole de l'étape 2 à chacun. Un cas sans champ
-`modes` est actif dans les deux modes. Une campagne normale comporte 30 cas :
+`modes` est actif dans les deux modes. Une campagne normale comporte 31 cas :
 ne mélange jamais les variantes `integration` et `degraded` dans le même bilan.
 
 ## Étape 4 — Juger un cas `echec_attendu` (adversarial)
@@ -173,10 +173,10 @@ Produis `tests/resultats/<campagne-id>/RAPPORT.md` contenant :
 
 La campagne ne passe que si les conditions sont toutes réunies :
 
-- exactement 30 réponses et 30 jugements exploitables ;
+- exactement 31 réponses et 31 jugements exploitables ;
 - aucune erreur d'outil/API, troncature ou sortie non parsable ;
 - tous les critères sont `SATISFAIT` ;
-- 30 verdicts globaux `REUSSITE` et 30 verdicts juridiques `REUSSITE` ;
+- 31 verdicts globaux `REUSSITE` et 31 verdicts juridiques `REUSSITE` ;
 - architecture `REUSSITE` pour chaque cas architectural et aucun verdict
   d'architecture `ECHEC` ;
 - aucune erreur juridique, référence inventée ou référence suspecte non

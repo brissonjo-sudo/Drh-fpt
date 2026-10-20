@@ -25,7 +25,7 @@ class SuiteTests(unittest.TestCase):
     def test_legacy_default_and_targeted_exact_ids(self):
         legacy = suites.load_suite('developpement')
         targeted = suites.load_suite('regression-ciblee-v1')
-        self.assertEqual(sum('integration' in x.get('modes',['integration','degraded']) for x in legacy['cases']), 30)
+        self.assertEqual(sum('integration' in x.get('modes',['integration','degraded']) for x in legacy['cases']), 31)
         self.assertEqual(len(targeted['cases']), 14)
         self.assertIn('23-architecture-variables-bloquantes', [x['id'] for x in targeted['cases']])
         self.assertFalse(targeted['qualification'])

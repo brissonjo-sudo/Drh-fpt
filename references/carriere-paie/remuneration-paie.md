@@ -56,6 +56,22 @@ par **équivalence** :
 
 → Viser le décret 91-875 et la délibération, jamais le seul décret 2014-513.
 
+**Départ à la retraite** — La [réponse ministérielle du 22/05/2025 à la
+question écrite n° 01222](https://www.senat.fr/questions/base/2024/qSEQ241001222.html)
+du ministère de l'action publique, de la fonction publique et de la
+simplification (consultée le **21/10/2026**) précise : « Aucun texte législatif
+ou réglementaire n'institue une indemnité de départ à la retraite dans la
+fonction publique. » Elle évoque la valorisation de « l'investissement
+personnel » d'un agent proche de la retraite via le CIA. **Si l'agent relève
+du RIFSEEP — à vérifier selon son statut et son cadre d'emplois —**, cette
+possibilité s'examine dans le cadre de la **délibération instituant le régime**
+et de l'appréciation de la **valeur professionnelle**, avec les contrôles du
+présent §5.7. Pour le dossier d'une prime de départ sans délibération, en
+déduire le **refus du mandatement en l'état** : cette possibilité ne permet ni
+de créer une prime **ad personam** de départ, ni de régulariser après coup un
+versement dépourvu de base. Traiter cette réponse comme une **doctrine
+administrative**, qui ne prime jamais sur la loi ou le décret.
+
 **Filières à régime propre** (à ne pas traiter comme du RIFSEEP) :
 - **Police municipale et gardes champêtres** : **hors RIFSEEP**. Régime propre
   institué par le **décret n° 2024-614 du 26 juin 2024** : **Indemnité Spéciale

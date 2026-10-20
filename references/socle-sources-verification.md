@@ -33,7 +33,9 @@
 6. **Circulaires et instructions officielles** — DGCL, DGAFP (publiées
    sur circulaires.legifrance.gouv.fr).
 7. **Doctrine institutionnelle** — guides DGCL, CNFPT, fédération des
-   centres de gestion, rapports parlementaires.
+   centres de gestion, rapports parlementaires, **réponses ministérielles**.
+   Une réponse ministérielle relève de la doctrine administrative et ne
+   prime jamais sur la loi ou le décret.
 8. **Doctrine privée et professionnelle** — La Gazette des communes,
    éditeurs spécialisés. Utile pour comprendre, **jamais** suffisante
    pour fonder seule une affirmation normative.

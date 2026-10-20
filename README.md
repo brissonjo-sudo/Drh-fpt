@@ -105,7 +105,7 @@ drh-fpt/
 │   └── courrier-modele.md                Gabarit courrier d'agent / note de service
 └── tests/
     ├── README.md                         Dispositif de tests (deux protocoles)
-    ├── cas-de-test.json                  Source unique (32 variantes, 30 actives par mode)
+    ├── cas-de-test.json                  Source unique (33 variantes, 31 actives par mode)
     ├── run_tests.py                      Point d'entrée du harnais
     ├── campaign.py                       Reprise, jugement, preuves et métriques
     ├── providers.py                      Adaptateurs Anthropic et OpenAI
