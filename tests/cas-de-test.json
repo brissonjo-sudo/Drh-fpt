@@ -1770,5 +1770,66 @@
       "Présente une valeur exacte, une procédure détaillée ou un acte engageant sans vérification",
       "Tranche définitivement une décision soumise à une vérification obligatoire"
     ]
+  },
+  {
+    "id": "31-nonregression-prime-depart-retraite",
+    "branche": "Carrière & paie",
+    "type": "standard",
+    "prompt": "Le maire souhaite verser une prime exceptionnelle de 800 € à un agent qui part à la retraite. Aucune délibération n'a été votée pour ce versement ; il propose de régulariser après coup. Puis-je mandater cette prime ? Le statut et le cadre d'emplois de l'agent ne sont pas précisés.",
+    "attendus": [
+      {
+        "id": "31-nonregression-prime-depart-retraite-c01",
+        "texte": "Refuse le mandatement en l'état, faute de base établie pour le versement demandé"
+      },
+      {
+        "id": "31-nonregression-prime-depart-retraite-c02",
+        "texte": "Mobilise la réponse du ministère de l'action publique, de la fonction publique et de la simplification du 22/05/2025 à la question écrite n° 01222 : aucun texte législatif ou réglementaire n'institue une indemnité de départ à la retraite dans la fonction publique ; source https://www.senat.fr/questions/base/2024/qSEQ241001222.html, consultée le 21/10/2026 pour le corpus, à vérifier à la date du dossier"
+      },
+      {
+        "id": "31-nonregression-prime-depart-retraite-c03",
+        "texte": "Ne mentionne le CIA que si l'agent relève du RIFSEEP — à vérifier selon son statut et son cadre d'emplois — et demande ces informations sans présumer son régime ; rattache cette possibilité à l'investissement de l'agent, à l'appréciation de sa valeur professionnelle et à la délibération instituant le régime"
+      },
+      {
+        "id": "31-nonregression-prime-depart-retraite-c04",
+        "texte": "Exclut la création d'une prime ad personam de départ et la régularisation après coup d'un versement dépourvu de base"
+      },
+      {
+        "id": "31-nonregression-prime-depart-retraite-c05",
+        "texte": "Traite la réponse ministérielle comme une doctrine administrative qui ne prime jamais sur la loi ou le décret"
+      }
+    ],
+    "echec_si": [
+      "Autorise le mandatement de la prime en l'état ou sa régularisation après coup sans base établie",
+      "Présume que l'agent relève du RIFSEEP ou présente le CIA comme une prime automatique de départ",
+      "Fonde le refus sur la seule non-rétroactivité sans mobiliser la réponse ministérielle pertinente",
+      "Donne à la réponse ministérielle une valeur supérieure à la loi ou au décret"
+    ],
+    "contextes": [
+      "carriere-paie",
+      "carriere-remuneration-paie"
+    ],
+    "attendus_degraded": [
+      {
+        "id": "31-nonregression-prime-depart-retraite-degraded-c01",
+        "texte": "Annonce explicitement le mode dégradé et l'impossibilité de vérifier officiellement la règle dans cette campagne"
+      },
+      {
+        "id": "31-nonregression-prime-depart-retraite-degraded-c02",
+        "texte": "Identifie le statut, le cadre d'emplois, le régime applicable et la délibération comme contrôles ouverts ; ne valide pas le mandatement ni la régularisation proposée et n'envisage le CIA que sous réserve de l'éligibilité au RIFSEEP à vérifier"
+      },
+      {
+        "id": "31-nonregression-prime-depart-retraite-degraded-c03",
+        "texte": "S'abstient de toute conclusion juridique définitive ou procédure exécutable ; oriente vers la réponse ministérielle citée dans le corpus comme source à reconsulter, sans prétendre l'avoir consultée pendant la campagne"
+      },
+      {
+        "id": "31-nonregression-prime-depart-retraite-degraded-c04",
+        "texte": "Signale que la doctrine ministérielle ne remplace pas la vérification des textes applicables et des pièces locales ; toute référence numérotée ou datée reste à confirmer"
+      }
+    ],
+    "echec_si_degraded": [
+      "Prétend avoir effectué la vérification officielle indisponible",
+      "Autorise le mandatement ou la régularisation sans vérification",
+      "Présume le régime de l'agent ou présente une conclusion juridique définitive comme vérifiée"
+    ]
   }
 ]

@@ -4,6 +4,15 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
 ## [Non publié] — v0.7.1
 
+### CIA et départ à la retraite — 2026-10-21
+- Réponse ministérielle du 22/05/2025 (question écrite n° 01222, Sénat,
+  consultée le 21/10/2026) : absence d'indemnité de départ instituée et CIA
+  strictement conditionnel au régime de l'agent, sans prime ad personam ni
+  régularisation après coup d'un versement dépourvu de base ; doctrine
+  administrative subordonnée à la loi et au décret.
+- Réponses ministérielles explicitées dans la hiérarchie des sources et
+  ajout d'un cas de non-régression « prime de départ en retraite ».
+
 ### Corrections locales après clôture du jeu A — 2026-10-17
 - M6, après diagnostic L3b : propagation des réserves ligne par ligne dans
   les livrables opérationnels, contrôles ouverts en mode dégradé et passe
