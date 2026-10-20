@@ -1,13 +1,13 @@
 # Validation de DRH-FPT
 
-`cas-de-test.json` contient 32 variantes : **30 cas d’intégration et 30 cas dégradés**.
+`cas-de-test.json` contient 33 variantes : **31 cas d’intégration et 31 cas dégradés**.
 Chaque réponse vient d’une session indépendante puis d’un modèle juge distinct.
 
 ## Protocole après relecture du 12 octobre 2026
 
 | Suite | Cas par mode | Usage |
 |---|---:|---|
-| `developpement` (défaut) | 30 | Corpus déjà utilisé pour corriger le skill |
+| `developpement` (défaut) | 31 | Corpus déjà utilisé pour corriger le skill |
 | `regression-ciblee-v1` | 14 | Cas touchés et critiques, sans revendication de qualification |
 | `qualification-a-v1` | 12 | Première qualification sur cas neufs |
 | `qualification-reserve-v1` | 12 | Réserve après échec A, jamais une relance de A |
@@ -183,7 +183,7 @@ resultats/<campagne-id>/
     _bilan.json
 ```
 
-Le gate commun vérifie les deux bilans stricts, les 30 réponses et jugements
+Le gate commun vérifie les deux bilans stricts, les 31 réponses et jugements
 réels par mode, les critères et empreintes, le même commit propre, bundle
 et cas. Un sous-ensemble ou un simple verdict favorable ne valide pas une version.
 Les deux campagnes définitives suivent les corrections et utilisent le même commit.
