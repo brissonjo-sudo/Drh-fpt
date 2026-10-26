@@ -19,3 +19,6 @@ tests/resultats/
 __pycache__/
 *.pyc
 tests/qualification/seal-*.json
+
+# Graphe graphify local, régénérable
+graphify-out/
