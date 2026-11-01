@@ -4,6 +4,11 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
 ## [Non publié] — v0.7.1
 
+### Licence EUPL 1.2 (2026-11-01)
+- Passage à l'EUPL 1.2 : textes officiels de la Commission européenne
+  (anglais dans `LICENSE`, français dans `LICENCE.fr.txt`) ; versions
+  antérieures inchangées ; aucun changement de comportement.
+
 ### CIA et départ à la retraite — 2026-10-21
 - Réponse ministérielle du 22/05/2025 (question écrite n° 01222, Sénat,
   consultée le 21/10/2026) : absence d'indemnité de départ instituée et CIA

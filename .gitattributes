@@ -37,3 +37,5 @@
 *.wav    binary
 *.mp3    binary
 *.mp4    binary
+# Texte officiel de l'EUPL (Commission européenne) : conservé octet pour octet.
+LICENCE.fr.txt -text -whitespace
