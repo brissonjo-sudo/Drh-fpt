@@ -65,7 +65,8 @@ drh-fpt/
 │       └── validate.yml                   CI des contrôles déterministes
 ├── SKILL.md                              Cœur : routeur, posture, méthode
 ├── README.md                             Ce fichier
-├── LICENSE                               CC BY-SA 4.0
+├── LICENSE                               EUPL 1.2 (texte anglais)
+├── LICENCE.fr.txt                        EUPL 1.2 (texte français)
 ├── JOURNAL.md                            Journal des cas (apprentissage)
 ├── CHANGELOG.md                          Historique des versions
 ├── SYNTHESE-CRITIQUES-v0.2.0.md          Trace de décision (challenge externe)
@@ -208,7 +209,12 @@ Détail : `tests/rapports/`, `JOURNAL.md`, `CHANGELOG.md`.
 
 ## Licence
 
-**CC BY-SA 4.0** — voir `LICENSE`.
+Copyright (c) 2026 Jonathan BRISSON (@brissonjo-sudo)
+Licensed under the EUPL
+
+À compter de cette version, ce dépôt est diffusé sous licence publique de l'Union européenne (EUPL) 1.2 : texte anglais dans `LICENSE`, texte français dans `LICENCE.fr.txt`. Toutes les versions linguistiques de l'EUPL approuvées par la Commission européenne ont la même valeur (article 13 de la licence).
+
+Les versions antérieures restent sous licence Creative Commons Attribution-Partage dans les mêmes conditions 4.0 (CC-BY-SA-4.0), irrévocable pour les copies déjà diffusées.
 
 ## Version
 

@@ -126,7 +126,7 @@ def do_package(version: str, bundle_text: str) -> None:
 
     # dist/drh-fpt-v{version}.skill — archive zip d'un dossier drh-fpt/
     skill_archive = DIST / f"drh-fpt-v{version}.skill"
-    top_level_files = ["SKILL.md", "README.md", "CHANGELOG.md", "JOURNAL.md", "LICENSE"]
+    top_level_files = ["SKILL.md", "README.md", "CHANGELOG.md", "JOURNAL.md", "LICENSE", "LICENCE.fr.txt"]
     dirs_to_include = ["references", "assets"]
 
     with zipfile.ZipFile(skill_archive, "w", zipfile.ZIP_DEFLATED) as zf:
