@@ -8,7 +8,8 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 - QVT/santé §5.2 et §5.8 : avis de la formation restreinte du conseil
   médical supprimé pour le renouvellement d'un CLM ou d'un CLD après
   épuisement du plein traitement (décret 87-602, art. 5, I, 2° abrogé et
-  art. 26, à compter du 01/09/2026) ; autres consultations rappelées.
+  art. 26, à compter du 01/09/2026) ; autres consultations rappelées, dont
+  l'avis maintenu pour l'ultime période de congé rétribuée (art. 32).
 - QVT/santé §5.3 : avis d'arrêt (art. 15), CLM/CLD dans la limite de six
   mois (art. 26), contrôle administratif (art. 26-1), activité rémunérée
   (art. 28, portée à confirmer), préparation de la reprise (art. 31-1, au

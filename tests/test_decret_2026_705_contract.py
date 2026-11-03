@@ -25,8 +25,25 @@ class Decret2026705ContractTests(unittest.TestCase):
                        'LEGIARTI000054641701', 'LEGIARTI000049428779']:
             self.assertIn(phrase, s52)
         s58 = section(self.qvt, '### 5.8', '## 6.')
-        self.assertIn('ne passe plus par le conseil médical', s58)
+        self.assertIn('ne passe plus systématiquement par le conseil médical', s58)
         self.assertIn('restent soumis à son avis', s58)
+
+    def test_last_paid_period_opinion_of_article_32_survives_the_abrogation(self):
+        for name, start, end in [('§5.2', '### 5.2', '### 5.3'),
+                                 ('§5.8', '### 5.8', '## 6.'),
+                                 ('§8', '## 8.', '## 9.')]:
+            part = section(self.qvt, start, end)
+            self.assertIn('ultime période de congé rétribuée', part, name)
+            self.assertIn('art. 32', part, name)
+        s52 = section(self.qvt, '### 5.2', '### 5.3')
+        for phrase in ['LEGIARTI000045350669', 'présomption d\'inaptitude',
+                       'formation plénière', 'consultation **systématique**']:
+            self.assertIn(phrase, s52)
+        bullet = section(self.qvt, 'CLM et CLD (art. 26)', 'Contrôle administratif')
+        self.assertIn('article 32', bullet)
+        self.assertNotIn('saisine du conseil médical au renouvellement supprimée', self.qvt)
+        socle = flat('references/socle-sources-verification.md')
+        self.assertIn('(art. 32)', section(socle, '**Instances médicales**', '**CAP / LDG**'))
 
     def test_sick_leave_rules_cite_each_new_article_with_its_identifier(self):
         s53 = section(self.qvt, '### 5.3', '### 5.4')

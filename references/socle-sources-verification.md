@@ -106,7 +106,8 @@ usage en acte :
   29 juillet 2026 (JORFTEXT000054570030) supprime, à compter du
   1er septembre 2026, l'avis de la formation restreinte sur le
   renouvellement d'un CLM ou d'un CLD après épuisement du plein traitement
-  (décret 87-602, art. 5, I, 2°) et modifie les congés pour raison de santé
+  (décret 87-602, art. 5, I, 2°), sans toucher à l'avis requis pour
+  l'ultime période de congé rétribuée (art. 32), et modifie les congés pour raison de santé
   (avis d'arrêt, contrôle, formation, examen à distance), avec des dates
   d'application échelonnées (1er août 2026, 1er septembre 2026,
   1er janvier 2028) : intégré le 03/11/2026 dans la branche QVT/santé

@@ -74,7 +74,17 @@ invalidité ; égalité professionnelle (plan d'action, nominations
   l'article 5 du décret 87-602 (avis sur le renouvellement d'un CLM ou
   d'un CLD après épuisement des droits à rémunération à plein traitement)
   est **abrogé à compter du 1er septembre 2026**, et l'article 26 ne prévoit
-  plus la saisine du conseil médical pour ce renouvellement. Restent
+  plus la saisine du conseil médical pour ce renouvellement. Seule cette
+  consultation **systématique** disparaît. **Exception maintenue
+  (art. 32)** : dans les situations des 3° et 4° du I de l'article 5,
+  lorsque le fonctionnaire reconnu inapte sollicite l'**ultime période de
+  congé rétribuée** à laquelle il peut prétendre, le conseil médical doit
+  donner son avis sur la prolongation du congé et sur la présomption
+  d'inaptitude à reprendre ses fonctions ; en cas de présomption
+  d'inaptitude définitive, le conseil médical en formation plénière se
+  prononce aussi sur l'application de l'article 37 du même décret (art. 32,
+  LEGIARTI000045350669, en vigueur depuis le 14/03/2022, non modifié par le
+  décret 2026-705, consulté sur Légifrance le 03/11/2026). Restent
   notamment soumis à l'avis de la formation restreinte (art. 5, I) :
   l'octroi d'une première période de CLM ou de CLD, la réintégration à
   expiration des droits à congés pour raison de santé, la réintégration
@@ -121,7 +131,9 @@ invalidité ; égalité professionnelle (plan d'action, nominations
     deuxième alinéa de l'article 15 (au lieu de périodes de trois à six
     mois). Certificat de prolongation, examen par un médecin agréé dans le
     cas de l'article 24 et examen annuel par un médecin agréé maintenus ;
-    saisine du conseil médical au renouvellement supprimée (voir §5.2).
+    saisine systématique du conseil médical au renouvellement après
+    épuisement du plein traitement supprimée, sauf avis requis pour
+    l'ultime période rémunérée dans les cas de l'article 32 (voir §5.2).
   - **Contrôle administratif (art. 26-1, créé)** : en congé de maladie, de
     longue maladie ou de longue durée, l'autorité territoriale peut faire
     contrôler la présence du fonctionnaire à son domicile ou à son lieu de
@@ -365,7 +377,11 @@ Saisine obligatoire avant toute décision d'inaptitude. Le conseil médical
 (voir §5.2) se prononce sur l'aptitude à reprendre les fonctions, à des
 fonctions adaptées, ou constate l'inaptitude. Depuis le 1er septembre 2026,
 le renouvellement d'un CLM ou d'un CLD après épuisement du plein traitement
-ne passe plus par le conseil médical (art. 5, I, 2° abrogé) ; la
+ne passe plus systématiquement par le conseil médical (art. 5, I, 2°
+abrogé), mais son avis reste requis pour l'ultime période de congé
+rétribuée dans les situations des 3° et 4° du I de l'article 5, avec, en
+cas de présomption d'inaptitude définitive, l'avis de la formation
+plénière sur l'application de l'article 37 (art. 32, LEGIARTI000045350669) ; la
 réintégration à expiration des droits, la disponibilité d'office pour
 raison de santé et le reclassement restent soumis à son avis (art. 5, I,
 3°, 5° et 6°, LEGIARTI000054641701, consulté le 03/11/2026).
@@ -478,9 +494,12 @@ manquantes, valeurs volatiles à vérifier).
    fonctions**.
 10. Présenter le plan d'action égalité comme **facultatif** (obligation
    assortie de pénalité au-dessus du seuil).
-11. Saisir le conseil médical pour le **renouvellement d'un CLM ou d'un CLD
-   après épuisement du plein traitement** : cette consultation est
-   supprimée depuis le 1er septembre 2026 (décret n° 2026-705).
+11. Saisir **systématiquement** le conseil médical pour le **renouvellement
+   d'un CLM ou d'un CLD après épuisement du plein traitement** : cette
+   consultation générale est supprimée depuis le 1er septembre 2026
+   (décret n° 2026-705). À l'inverse, ne pas omettre l'avis encore requis
+   pour l'**ultime période de congé rétribuée** dans les situations des 3°
+   et 4° du I de l'article 5 (décret 87-602, art. 32).
 12. Appliquer aux fonctionnaires territoriaux la règle de rémunération en
    CLM du IV de l'article 11 du décret n° 2026-705 : elle vise le décret
    n° 2010-997, propre aux agents publics de l'État.
