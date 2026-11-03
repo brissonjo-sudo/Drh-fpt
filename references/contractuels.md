@@ -218,8 +218,9 @@ médical, PSC). Spécificités : **congé de grave maladie** (contractuel)
 distinctes, paliers d'ancienneté **à vérifier**, ne jamais transposer.
 Certificat, contrôle du médecin agréé et renvois au décret 87-602 issus du
 décret n° 2026-705 (décret 88-145, art. 7, 8, 9-2 et 12) : voir
-`qvt-sante.md` §5.3, y compris le point de contrôle sur le champ de
-l'article 9-2.
+`qvt-sante.md` §5.3 (arbitrage du 03/11/2026 : renvoi de l'article 9-2
+probablement erroné et non opposable en l'état ; avis du conseil médical
+à l'octroi du congé de grave maladie).
 Affiliation retraite : IRCANTEC (cf. `references/carriere-paie/remuneration-paie.md` §5.8).
 
 **Entretien professionnel** obligatoire pour les CDI et les **CDD > 1 an**

@@ -4,6 +4,22 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
 ## [Non publié] — v0.7.1
 
+### Arbitrage des 4 points ouverts du décret n° 2026-705 — 2026-11-03 (non qualifié)
+- Méthode : quatre répondants (Claude Opus et Sonnet, Codex gpt-6.1-sol et
+  gpt-6.1-terra, effort high), juges croisés (Codex gpt-6-sol sur Claude,
+  Claude Opus sur Codex), dossier de sources commun pour ménager PISTE.
+- Durées d'arrêt (art. 15) : plafonds de 31 et 62 jours (CSS R. 162-1-7-1)
+  pour les prescriptions établies depuis le 01/09/2026, hors Mayotte
+  (décret 2026-498, art. 2) ; dérogation motivée, prescripteurs de la
+  prolongation ; « durée probable » maintenue dans l'avis (R. 321-2).
+- Art. 28 : extension au congé de maladie ordinaire retenue comme
+  interprétation, sans sanction fondée sur ce seul texte.
+- Contractuels : renvoi de l'art. 9-2 du décret 88-145 probablement erroné,
+  non opposable en l'état ; grave maladie (art. 8) détaillée, avis du
+  conseil médical à l'octroi, abstention sur l'articulation avec la durée
+  de l'avis d'arrêt ; effet du plafond sur le traitement du contractuel
+  laissé en interprétation.
+
 ### Congés pour raison de santé — décret n° 2026-705 — 2026-11-03 (non qualifié)
 - QVT/santé §5.2 et §5.8 : avis de la formation restreinte du conseil
   médical supprimé pour le renouvellement d'un CLM ou d'un CLD après

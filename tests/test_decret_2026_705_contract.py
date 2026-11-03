@@ -1,5 +1,4 @@
 """Invariants documentaires du décret n° 2026-705 (congés pour raison de santé)."""
-import re
 import unittest
 from pathlib import Path
 
@@ -63,28 +62,44 @@ class Decret2026705ContractTests(unittest.TestCase):
         self.assertIn("retenir la règle de l'article 11", s53)
         self.assertIn('lendemain de la publication', s53)
 
-    def test_unverified_social_security_durations_stay_control_points(self):
-        s53 = section(self.qvt, '### 5.3', '### 5.4')
-        self.assertIn('R. 162-1-7-1', s53)
-        self.assertIn('points de contrôle', s53)
-        # Aucune durée maximale d'arrêt chiffrée n'est tirée du code non relu.
-        bullet = section(s53, "Avis d'arrêt (art. 15)", 'CLM et CLD (art. 26)')
-        self.assertIsNone(re.search(r'\b\d+\s*(jours|mois)\b', bullet))
+    def test_sick_note_ceilings_are_sourced_dated_and_bounded(self):
+        bullet = section(self.qvt, "Avis d'arrêt (art. 15)", 'CLM et CLD (art. 26)')
+        for phrase in ['**trente et un jours**', '**soixante-deux jours**',
+                       'établies à compter du 1er septembre 2026', 'Mayotte',
+                       'LEGIARTI000054252051', 'LEGIARTI000054250013',
+                       'LEGIARTI000053284700', 'justifie, sur la prescription',
+                       'médecin traitant', 'figure toujours dans l\'avis établi selon R. 321-2']:
+            self.assertIn(phrase, bullet)
+        self.assertNotIn('La mention de la « durée probable de l\'incapacité » disparaît', self.qvt)
+        self.assertNotIn('sans valeur chiffrée', bullet)
 
-    def test_contract_agents_keep_their_own_regime_and_flag_article_9_2(self):
+    def test_contract_agents_article_9_2_is_not_applied_and_article_8_is_split(self):
         s53 = section(self.qvt, '### 5.3', '### 5.4')
-        for phrase in ['décret 88-145', 'LEGIARTI000054641818', 'articles 12, 13 et 14',
-                       'point de contrôle', 'grave maladie', 'articulation à contrôler']:
-            self.assertIn(phrase, s53)
+        contract = section(s53, '**Contractuels (décret 88-145', '**Hors champ FPT**')
+        for phrase in ['LEGIARTI000054641818', 'articles 12, 13 et 14', 'décret 86-83',
+                       'erreur de renvoi est **probable**', '**ne pas opposer**',
+                       'rectificatif', '1er janvier 2028']:
+            self.assertIn(phrase, contract)
+        grave = section(contract, '**Grave maladie (art. 8)**', '**Contrôle (art. 12)**')
+        for phrase in ['À l\'**octroi**', 'avis du conseil médical',
+                       'ne pas affirmer de dispense générale', '**abstention**',
+                       'minimum de trois mois relève de l\'interprétation']:
+            self.assertIn(phrase, grave)
+        certificate = section(contract, '**Certificat (art. 7)**', '**Grave maladie (art. 8)**')
+        self.assertIn('**interprétation**', certificate)
+        self.assertIn('à due concurrence', certificate)
         self.assertIn('décret n° 2026-705', flat('references/contractuels.md'))
 
     def test_state_only_remuneration_rule_is_excluded(self):
         self.assertIn('n° 2010-997', self.qvt)
         self.assertIn('ne pas le transposer', self.qvt)
 
-    def test_doubtful_wording_of_article_28_is_not_asserted(self):
-        s53 = section(self.qvt, '### 5.3', '### 5.4')
-        self.assertIn('Faire confirmer sa portée', s53)
+    def test_article_28_extension_to_ordinary_sick_leave_is_an_interpretation(self):
+        bullet = section(self.qvt, '**Activité rémunérée (art. 28)**', '**Formation pendant le congé')
+        for phrase in ['interprétation retenue, non lettre certaine', 'sans virgule',
+                       'titre VI', 'art. 3, 8°', 'art. 37-9-1',
+                       'sans validation juridique préalable']:
+            self.assertIn(phrase, bullet)
 
     def test_socle_announces_integration_instead_of_pending_work(self):
         socle = flat('references/socle-sources-verification.md')
