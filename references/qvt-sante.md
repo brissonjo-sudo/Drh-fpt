@@ -70,6 +70,26 @@ invalidité ; égalité professionnelle (plan d'action, nominations
   (ancienne compétence de la commission de réforme), jamais en formation
   restreinte. L'autorité territoriale reste compétente pour décider de
   l'imputabilité ; la saisine du conseil n'est pas systématique.
+- **Formation restreinte depuis le décret n° 2026-705** : le 2° du I de
+  l'article 5 du décret 87-602 (avis sur le renouvellement d'un CLM ou
+  d'un CLD après épuisement des droits à rémunération à plein traitement)
+  est **abrogé à compter du 1er septembre 2026**, et l'article 26 ne prévoit
+  plus la saisine du conseil médical pour ce renouvellement. Restent
+  notamment soumis à l'avis de la formation restreinte (art. 5, I) :
+  l'octroi d'une première période de CLM ou de CLD, la réintégration à
+  expiration des droits à congés pour raison de santé, la réintégration
+  après CLM ou CLD dans les cas du 4°, la disponibilité d'office pour raison
+  de santé, son renouvellement et la réintégration qui la suit, et le
+  reclassement. La contestation de l'avis d'un médecin agréé sur l'octroi,
+  le renouvellement d'un congé pour raison de santé ou la réintégration
+  reste portée devant la formation restreinte (art. 5, II, 2°). Pour un
+  renouvellement décidé avant le 1er septembre 2026, appliquer la version
+  alors applicable. Sources : art. 5 du décret 87-602 (LEGIARTI000054641701,
+  en vigueur depuis le 01/09/2026 ; version antérieure LEGIARTI000049428779)
+  et art. 26 (LEGIARTI000054641714 ; version antérieure
+  LEGIARTI000045350652), consultés sur Légifrance le 03/11/2026 ;
+  articles 3 et 11 du décret 2026-705 lus au JORF (JORFTEXT000054570030)
+  le même jour.
 
 ### 5.3 Congés liés à la santé
 - **CMO** (maladie ordinaire), **CLM** (longue maladie), **CLD** (longue durée) ;
@@ -81,6 +101,110 @@ invalidité ; égalité professionnelle (plan d'action, nominations
   et **décret n° 2019-301 du 10 avril 2019** (CITIS dans la FPT) — *ne pas
   viser le décret n° 2019-122 du 21 février 2019, propre à la fonction publique
   d'État*.
+- **Arrêts de travail et contrôle (décret n° 2026-705, fonctionnaires)** :
+  le décret aligne les arrêts des agents publics sur ceux des salariés.
+  Dans le décret 87-602 :
+  - **Avis d'arrêt (art. 15)** : toujours adressé dans les quarante-huit
+    heures suivant son établissement ; il est désormais établi selon les
+    articles L. 162-4-1, R. 321-2 et R. 323-11-1 du code de la sécurité
+    sociale, pour une période n'excédant pas la durée fixée par
+    l'article R. 162-1-7-1 de ce code (sous réserve du second alinéa du 1°
+    de L. 162-4-1). En cas de prolongation, la rémunération n'est maintenue
+    que si la prolongation est prescrite dans le respect de L. 162-4-4.
+    L'avis peut être dématérialisé. La mention de la « durée probable de
+    l'incapacité » disparaît. Les articles du code de la sécurité sociale
+    cités n'ont pas été relus : la durée maximale d'un arrêt et les
+    conditions de prolongation restent des **points de contrôle**, sans
+    valeur chiffrée.
+  - **CLM et CLD (art. 26)** : accordés ou renouvelés « dans la limite de
+    six mois », sur présentation d'un avis médical établi selon le
+    deuxième alinéa de l'article 15 (au lieu de périodes de trois à six
+    mois). Certificat de prolongation, examen par un médecin agréé dans le
+    cas de l'article 24 et examen annuel par un médecin agréé maintenus ;
+    saisine du conseil médical au renouvellement supprimée (voir §5.2).
+  - **Contrôle administratif (art. 26-1, créé)** : en congé de maladie, de
+    longue maladie ou de longue durée, l'autorité territoriale peut faire
+    contrôler la présence du fonctionnaire à son domicile ou à son lieu de
+    repos, par toute personne dûment habilitée, lorsque les sorties ne sont
+    pas autorisées ou pendant les heures de présence obligatoire (R. 323-11-1
+    du code de la sécurité sociale). Absence injustifiée ou refus du
+    contrôle : interruption de la rémunération jusqu'à la fin de l'arrêt,
+    ce temps comptant dans le congé en cours.
+  - **Activité rémunérée (art. 28)** : l'obligation de cesser toute activité
+    rémunérée, hors réadaptation et activités de L. 123-2 du CGFP, est
+    étendue par l'insertion des mots « de maladie » ; la rédaction
+    consolidée se lit « congé de maladie de longue maladie ou de longue
+    durée ». Faire confirmer sa portée avant de l'opposer à un agent en
+    congé de maladie ordinaire.
+  - **Formation pendant le congé (art. 31-2, créé)** : avec l'avis favorable
+    du médecin agréé, le fonctionnaire en congé de maladie, de longue
+    maladie ou de longue durée peut demander une action de formation ou un
+    bilan de compétences pour sa réadaptation ou sa reconversion ;
+    l'autorité territoriale se prononce dans un délai de trente jours.
+  - **Préparation de la reprise (art. 31-1, créé)** : au cours d'une
+    interruption pour raison de santé de plus de trente jours, le médecin
+    agréé, en lien avec le médecin traitant, **peut** solliciter le médecin
+    du travail pour préparer les conditions de la reprise ou envisager des
+    actions de formation ; le fonctionnaire est assisté par une personne de
+    son choix. **Applicable aux congés débutant ou prolongés à compter du
+    1er janvier 2028** (art. 11, III, du décret 2026-705).
+  - **Examen à distance (art. 34-1, créé)** : l'examen médical du
+    fonctionnaire en congé de maladie, de longue maladie ou de longue durée
+    peut être réalisé à distance, dans les conditions des articles R. 6316-2
+    à R. 6316-5 du code de la santé publique ; en vigueur le lendemain de la
+    publication du décret (art. 11, V).
+  - **CITIS (art. 37-2, 37-9-1 ; art. 37-15 abrogé)** : lorsque l'accident
+    ou la maladie entraîne une incapacité temporaire de travail, le
+    certificat médical de la déclaration est accompagné de l'avis d'arrêt
+    de travail établi selon R. 321-2 du code de la sécurité sociale. Les
+    articles 26-1, 28, 31-2 et 34-1 s'appliquent au fonctionnaire en CITIS ;
+    l'article 37-15 (cessation d'activité rémunérée en CITIS) est abrogé à
+    compter du 1er septembre 2026.
+  - **Titre VI** : son intitulé couvre désormais les congés de maladie.
+
+  **Transition** (art. 11 du décret 2026-705) : les articles 15, 26, 26-1,
+  28, 31-2, 37-2 et 37-9-1 et l'intitulé du titre VI, dans leur rédaction
+  nouvelle, s'appliquent aux **congés pour raisons de santé débutant ou
+  prolongés à compter du 1er septembre 2026** (II), alors que Légifrance
+  date ces versions du 1er août 2026 : retenir la règle de l'article 11.
+  Pour un congé en cours non prolongé depuis, consulter la version
+  antérieure. Sources (décret 87-602, versions en vigueur consultées sur
+  Légifrance le 03/11/2026) : art. 15 (LEGIARTI000054641709 ; antérieure
+  LEGIARTI000045350622), 26 (LEGIARTI000054641714), 26-1
+  (LEGIARTI000054641691), 28 (LEGIARTI000054641717 ; antérieure
+  LEGIARTI000049428875), 31-1 (LEGIARTI000054641693), 31-2
+  (LEGIARTI000054641695), 34-1 (LEGIARTI000054641697), 37-2
+  (LEGIARTI000054641722 ; antérieure LEGIARTI000038369024), 37-9-1
+  (LEGIARTI000054641699), 37-15 abrogé (dernière version
+  LEGIARTI000049428839) ; articles 3 et 11 du décret 2026-705 lus au JORF
+  (JORFTEXT000054570030) le même jour.
+- **Contractuels (décret 88-145, modifié par l'article 6 du décret
+  2026-705)** : le certificat du congé de maladie est établi et transmis
+  selon le deuxième alinéa de l'article 15 du décret 87-602 (art. 7) ; le
+  congé de grave maladie peut être accordé ou renouvelé selon le premier
+  alinéa de l'article 26 du même décret (art. 8), l'article 8 conservant
+  l'avis du conseil médical pour l'octroi et la mention de périodes de
+  trois à six mois : articulation à contrôler avant tout acte. Un contrôle
+  du médecin agréé peut être effectué à tout moment en congé de maladie,
+  de grave maladie, d'accident du travail ou de maladie professionnelle,
+  sous peine d'interruption de la rémunération (art. 12). L'article 9-2
+  (créé) rend applicables les articles 26-1, 31-1, 31-2 et 34-1 du décret
+  87-602 à l'agent « bénéficiant de l'un des congés prévus aux articles 12,
+  13 et 14 » du décret 88-145 ; dans la version consultée, ces articles
+  portent sur le montant du traitement, le réemploi et l'inaptitude, et le
+  congé parental, non sur les congés de maladie (art. 7 à 9) : **point de
+  contrôle**, ne pas opposer ces mesures à un contractuel sans confirmation
+  de leur champ. Transition : articles 7, 8, 9-2 et 12 applicables aux
+  congés débutant ou prolongés à compter du 1er septembre 2026 (art. 11,
+  II). Sources : décret 88-145, art. 7 (LEGIARTI000054641799), 8
+  (LEGIARTI000054641802), 9-2 (LEGIARTI000054641818), 12
+  (LEGIARTI000054641813), 13 (LEGIARTI000054175609) et 14
+  (LEGIARTI000054175604), versions en vigueur consultées sur Légifrance le
+  03/11/2026.
+- **Hors champ FPT** : le IV de l'article 11 du décret 2026-705
+  (rémunération en congé de longue maladie à compter du 1er septembre 2026)
+  vise le décret n° 2010-997 relatif aux agents publics de l'État ; ne pas
+  le transposer au régime indemnitaire territorial.
 - **Temps partiel thérapeutique** (décret 87-602, titre II bis, modifié par
   le décret n° 2026-705 du 29 juillet 2026) : distinguer demande, décision,
   reprise après congé, renouvellement et interruption. La demande est
@@ -239,7 +363,12 @@ dans l'ordre.
 **Étape 2 — avis du conseil médical.**
 Saisine obligatoire avant toute décision d'inaptitude. Le conseil médical
 (voir §5.2) se prononce sur l'aptitude à reprendre les fonctions, à des
-fonctions adaptées, ou constate l'inaptitude.
+fonctions adaptées, ou constate l'inaptitude. Depuis le 1er septembre 2026,
+le renouvellement d'un CLM ou d'un CLD après épuisement du plein traitement
+ne passe plus par le conseil médical (art. 5, I, 2° abrogé) ; la
+réintégration à expiration des droits, la disponibilité d'office pour
+raison de santé et le reclassement restent soumis à son avis (art. 5, I,
+3°, 5° et 6°, LEGIARTI000054641701, consulté le 03/11/2026).
 
 **Étape 3 — options après avis d'inaptitude.**
 - **Reprise aménagée** : aménagement de poste, temps partiel thérapeutique
@@ -315,6 +444,11 @@ manquantes, valeurs volatiles à vérifier).
 ## 7. Déclencheurs de vérification
 
 - Durées et conditions de **congés** (titulaire vs contractuel).
+- **Décret n° 2026-705** : date de début ou de prolongation du congé
+  (avant ou après le 1er septembre 2026 ; 1er janvier 2028 pour
+  l'article 31-1) avant d'appliquer la nouvelle rédaction du décret 87-602 ;
+  durée maximale d'un arrêt et conditions de prolongation à relire dans le
+  code de la sécurité sociale.
 - **Imputabilité au service** (CITIS) : qualification → vérification + avis du
   conseil médical en **formation plénière** le cas échéant ; décision de
   l'autorité territoriale.
@@ -344,13 +478,21 @@ manquantes, valeurs volatiles à vérifier).
    fonctions**.
 10. Présenter le plan d'action égalité comme **facultatif** (obligation
    assortie de pénalité au-dessus du seuil).
+11. Saisir le conseil médical pour le **renouvellement d'un CLM ou d'un CLD
+   après épuisement du plein traitement** : cette consultation est
+   supprimée depuis le 1er septembre 2026 (décret n° 2026-705).
+12. Appliquer aux fonctionnaires territoriaux la règle de rémunération en
+   CLM du IV de l'article 11 du décret n° 2026-705 : elle vise le décret
+   n° 2010-997, propre aux agents publics de l'État.
 
 ## 9. Données volatiles à vérifier
 
 Montants planchers PSC (prévoyance, santé) et taux de participation ; indemnité
 forfaitaire de télétravail ; taux légal d'obligation d'emploi handicap ;
 plafonds des prestations d'action sociale ; modalités plein/demi-traitement
-par phase de congé (CMO/CLM/CLD) ; durée et renouvellement de la
+par phase de congé (CMO/CLM/CLD) ; durée maximale d'un arrêt de travail
+fixée par le code de la sécurité sociale (renvoi de l'article 15 du décret
+87-602) ; durée et renouvellement de la
 disponibilité d'office ; existence et périmètre du Fonds national de
 prévention (FNP) CNRACL en préfiguration ; seuil d'effectif et taux de
 pénalité du plan d'action égalité ; taux de nominations équilibrées et
