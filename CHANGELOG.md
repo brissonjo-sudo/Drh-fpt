@@ -4,6 +4,58 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
 ## [Non publié] — v0.7.1
 
+### Corrigé (veille juridique ciblée, 2026-11-03, non qualifié)
+Points en attente du skill et balayage du JORF du 04/09 au 03/11/2026.
+Articles relus sur Légifrance, version en vigueur au 03/11/2026.
+- **Rupture conventionnelle** (`temps-fin-fonctions.md` §5.9, socle) : la
+  règle de CGFP L552-4 est une **obligation de rembourser l'indemnité** en
+  cas de recrutement dans le même versant dans les 6 ans, et non une
+  interdiction de retour. Procédure, exclusions et barème issus des décrets
+  n° 2026-745 et 2026-746 (en vigueur le 08/08/2026) ; plancher et plafond
+  abaissés (plafond de 1/12 à 1/24 par année d'ancienneté).
+- **CET** (`temps-fin-fonctions.md`) : les jours épargnés au-delà de 60 au
+  titre de la dérogation 2024 **peuvent être maintenus** (arrêté du
+  9 janvier 2024, art. 2, en vigueur) ; la mention « caduque » est retirée.
+  Plafond de 60 jours rattaché à l'arrêté (art. 1).
+- **Nominations équilibrées** (`qvt-sante.md` §5.7) : la trajectoire de
+  +3 points **ne vise pas la FPT** ; le taux de 50 % s'applique aux emplois
+  territoriaux au prochain renouvellement général des assemblées ; seuil de
+  la trajectoire à 40 % (et non 37 %) ; dispense de contribution supprimée
+  au 01/01/2027 ; seuil de 3 emplois fonctionnels.
+- **PSC prévoyance** (`qvt-sante.md` §5.6, socle) : adhésion obligatoire aux
+  garanties minimales (loi n° 2025-1251, CGFP L827-6 et L827-11) ; décrets
+  n° 2026-986 et 2026-987 du 23/10/2026, application au 01/01/2029 ou au
+  terme de la convention en cours.
+- **Cumul d'activités** (`statut-garanties.md` §5.2) : liste de R123-8
+  rectifiée (« vendanges » retiré, absent du texte) et complétée des 12° et
+  13° (décrets n° 2026-409 et 2026-1011).
+- **Fonds de prévention** (`qvt-sante.md` §5.8) : le FNP AT/MP de la CNRACL
+  existe (L814-1) ; seul un fonds FPT d'usure professionnelle reste en
+  préfiguration.
+- **Livre V du CGFP** (socle, `contractuels.md`) : non publié au 03/11/2026 ;
+  le titre X du décret 88-145 reste en vigueur.
+- Points « à vérifier » désormais sourcés : rémunération CMO/CLM/CLD
+  (L822-3, L822-8, L822-15), disponibilité d'office (décret 86-68, art. 19),
+  traitement en PPR (décret 85-1054, art. 2-1), indemnité de fin de contrat
+  (L554-3, décret 88-145, art. 39-1-1), plafonds ISFE, CST (R211-40,
+  R211-62, R211-64), état du PJL apprentis n° 438 (non promulgué),
+  renvoi de l'art. 9-2 du décret 88-145 (toujours non corrigé).
+
+### Ajouté (veille juridique ciblée, 2026-11-03, non qualifié)
+- ASA liées à la parentalité (décret n° 2026-604, applicable au 01/01/2027).
+- Emplois fonctionnels de direction : décret n° 2026-484 et plafonds
+  RIFSEEP (décret 91-875, art. 1-1).
+- Cumul emploi-retraite CNRACL (décrets n° 2026-1016 et 2026-1017), date
+  d'effet à confirmer.
+- Jurisprudence du CE : n° 498763 (exécution d'une annulation de prime),
+  n° 510479 (lanceur d'alerte), n° 514106 (mandat d'administrateur et
+  activité lucrative), n° 495977 (interdictions de L123-1 sans activité
+  réelle), n° 495978 (date de consolidation non motivée).
+- Socle : PLFSS et PLF 2027 dans les réformes à surveiller.
+- Registre des plafonds : RIFSEEP des attachés renseigné (arrêté du 3 juin
+  2015, art. 2 et 5), colonne Île-de-France ou hors Île-de-France à
+  trancher.
+
 ### Arbitrage des 4 points ouverts du décret n° 2026-705 — 2026-11-03 (non qualifié)
 - Méthode : quatre répondants (Claude Opus et Sonnet, Codex gpt-6.1-sol et
   gpt-6.1-terra, effort high), juges croisés (Codex gpt-6-sol sur Claude,

@@ -56,6 +56,16 @@ par **équivalence** :
 
 → Viser le décret 91-875 et la délibération, jamais le seul décret 2014-513.
 
+**Exécuter l'annulation d'une décision de prime** — CE, 12/10/2026,
+n° 498763, B (consulté sur Légifrance le 03/11/2026) : quand une décision
+individuelle de prime est annulée parce que la délibération indemnitaire est
+illégale (exception d'illégalité), l'exécution impose un **réexamen de la
+situation de l'agent** ; elle n'implique pas nécessairement une nouvelle
+délibération rétroactive, et le juge ne l'enjoint pas. Un nouveau refus
+fondé sur une délibération entachée du **même vice** méconnaît la chose
+jugée. Dans l'espèce, la délibération RIFSEEP ne prévoyait pas de CIA pour
+tout un cadre d'emplois.
+
 **Départ à la retraite** — La [réponse ministérielle du 22/05/2025 à la
 question écrite n° 01222](https://www.senat.fr/questions/base/2024/qSEQ241001222.html)
 du ministère de l'action publique, de la fonction publique et de la
@@ -89,8 +99,9 @@ administrative**, qui ne prime jamais sur la loi ou le décret.
   Décret **applicable le lendemain de sa publication (2024)** ; seuls les anciens régimes
   propres (décrets n° 97-702, 2000-45 et 2006-1397) sont **abrogés au 1er janvier
   2025** — ne pas dater l'entrée en vigueur de l'ISFE au 1/1/2025.
-  **Plafonds réglementaires** (décret 2024-614, à confirmer en version
-  consolidée avant citation) — *valeurs documentaires à contrôler sur la source officielle* :
+  **Plafonds réglementaires** (décret 2024-614, art. 3 et 5, versions en
+  vigueur depuis le 29/06/2024, consultées sur Légifrance le 03/11/2026 ;
+  relire la version applicable à la date de l'acte) :
   - part fixe (taux du traitement) : **33 %** directeurs, **32 %** chefs de
     service, **30 %** agents et gardes champêtres ;
   - part variable (plafond annuel) : **9 500 €** directeurs, **7 000 €** chefs

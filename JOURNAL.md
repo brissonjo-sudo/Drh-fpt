@@ -22,6 +22,24 @@ Une entrée par cas, au format ci-dessous.
 
 ## Entrées
 
+### 2026-11-03 — Veille juridique ciblée (points en attente et JORF)
+- Type : erreur + lacune
+- Branche : socle + carrière-paie + qvt-sante + statut-garanties +
+  contractuels + recrutement-formation + cst-dialogue-social
+- Contexte (anonymisé) : revue de maintenance, sans cas d'agent, des points
+  « à confirmer » du skill et des textes parus au JORF depuis l'audit du
+  04/09/2026, articles relus sur Légifrance.
+- Constat : plusieurs règles étaient fausses alors qu'elles semblaient
+  vérifiées (rupture conventionnelle présentée comme interdiction de retour,
+  dérogation CET dite caduque, trajectoire des nominations équilibrées
+  appliquée à la FPT, « vendanges » dans la liste des activités
+  accessoires). Les textes récents (prévoyance, ASA parentalité, emplois
+  fonctionnels) manquaient.
+- Action proposée : corrections et ajouts dans les branches concernées ;
+  refaire ce balayage avant chaque publication, la seule date de
+  vérification ne garantissant pas l'exactitude d'une paraphrase.
+- Statut : intégré (v0.7.1, non qualifié).
+
 ### 2026-07-26 — Co-activation obligatoire et campagnes reproductibles
 - Type : erreur + amélioration
 - Branche : socle + carrière-paie + tests

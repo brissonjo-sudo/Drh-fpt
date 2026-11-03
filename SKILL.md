@@ -20,7 +20,7 @@ metadata:
   statut: candidate ; huit branches dont carrière-paie divisée en trois modules
   date_derniere_revue_methodologique: 2026-11-03
   date_derniere_verification_sources: 2026-11-03
-  portee_verification_sources: ciblée (PR18, puis portage du 03/11/2026) ; ne certifie pas toutes les références ni une réponse future
+  portee_verification_sources: ciblée (PR18, portage du 03/11/2026, puis veille du 03/11/2026 sur les points en attente et le JORF du 04/09 au 03/11/2026) ; ne certifie pas toutes les références ni une réponse future
   perimetre: collectivités territoriales de plus de 350 agents
   dependances:
     - recherche-juridique >= 2.2.0 (obligatoire pour le fonctionnement nominal)

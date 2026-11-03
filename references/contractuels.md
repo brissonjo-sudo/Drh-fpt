@@ -57,9 +57,12 @@ d'essai) est passé au **Livre III réglementaire du CGFP** (décret
 n° 2025-695 du 24 juillet 2025, en vigueur depuis le 1er octobre 2025) —
 voir §5.2. **Rémunération, réévaluation, fin de contrat, licenciement et
 discipline** (§5.3 à 5.7) demeurent, à ce jour, dans le décret 88-145
-stricto sensu, mais un **Livre V** du CGFP réglementaire est annoncé et
-pourrait les déplacer à son tour — **vérifier à chaque usage** si la
-disposition concernée a été recodifiée. Il détaille forme du
+stricto sensu : au 03/11/2026, aucune recodification réglementaire de ces
+dispositions n'est publiée (aucun article R./D. 5xx du CGFP sur Légifrance)
+et le titre X du décret 88-145 reste en vigueur, ses art. 49 bis,
+49 quinquies et 49 decies ayant été modifiés le 08/08/2026 par le décret
+n° 2026-745 — **vérifier à chaque usage** si la disposition concernée a été
+recodifiée depuis. Il détaille forme du
 contrat, période d'essai, rémunération et réévaluation, discipline, fin de
 contrat, indemnité de licenciement — s'y reporter systématiquement, comme au
 décret statutaire d'un cadre d'emplois pour un titulaire.
@@ -134,12 +137,25 @@ l'ancienneté de services continus, ordres de grandeur usuels **à vérifier
 avant toute réponse ferme** : de l'ordre de **8 jours** pour les services
 courts, puis paliers croissants de l'ordre de **1 mois / 2 mois / 3 mois**.
 Ne jamais notifier sans confirmer le palier en version consolidée.
-**Indemnité de fin de contrat** (« prime de précarité ») : vise certains
-**CDD ≤ 1 an**, exclusions (poursuite en CDI, refus de CDI équivalent,
-saisonniers… — **liste à vérifier**), **taux plafonné** de la rémunération
-brute globale (ordre de 10 %, versement soumis à un **plafond de
-rémunération** de l'ordre de 2 fois le SMIC — **taux et plafond à vérifier
-en version consolidée**) avant tout calcul. **Démission** : préavis modulé selon l'ancienneté (**durées à
+**Indemnité de fin de contrat** (« prime de précarité » ; CGFP L554-3,
+version du 01/03/2022 ; décret 88-145, art. 39-1-1, version du 15/08/2022 ;
+consultés sur Légifrance le 03/11/2026) :
+- **Champ** : contrats sur emploi permanent ou pour **accroissement
+  temporaire** d'activité, d'une durée de **1 an au plus**, renouvellements
+  compris. Le texte ne vise pas l'accroissement saisonnier.
+- **Montant** : **10 %** de la rémunération brute globale perçue au titre du
+  contrat et de ses renouvellements ; versée au plus tard **1 mois** après
+  le terme.
+- **Non due** : si la rémunération brute globale dépasse **2 fois le SMIC
+  brut** applicable sur le territoire d'affectation ; si l'agent est nommé
+  stagiaire ou élève après concours ; s'il obtient un renouvellement ou un
+  nouveau contrat (CDD ou CDI) dans la même fonction publique ; si le
+  contrat n'est pas exécuté jusqu'à son terme ; s'il refuse un CDI pour le
+  même emploi ou un emploi similaire, chez le même employeur, à
+  rémunération au moins équivalente.
+- Le montant du SMIC est **volatil** : jamais de mémoire.
+
+**Démission** : préavis modulé selon l'ancienneté (**durées à
 vérifier**) ; l'employeur en prend acte, sans pouvoir discrétionnaire
 d'acceptation (à la différence du titulaire).
 

@@ -63,16 +63,20 @@
     conditions d'ancienneté), sur les jours de congés annuels et de RTT non
     pris, au-delà d'un seuil minimal de jours de congés annuels posés dans
     l'année — seuil **à vérifier**.
-  - **Alimentation** : **plafond global de 60 jours** ; **droit d'option/
-    monétisation au-delà de 15 jours épargnés** (décret n° 2004-878 du 26 août
-    2004, à confirmer en version consolidée). La dérogation ponctuelle ayant
-    porté ce plafond à 70 jours au titre de l'année 2024 (arrêté du 9 janvier
-    2024, liée aux JO de Paris) est **caduque depuis le 1er janvier 2025** —
-    ne plus la présenter comme une incertitude actuelle. Depuis, le décret
-    n° 2025-1135 du 26 novembre 2025 ouvre aux employeurs territoriaux, après
-    avis du CST, la faculté de fixer un **plafond annuel du nombre de jours
-    indemnisables**, distinct du plafond global de 60 jours — **à vérifier**
-    si la collectivité en a fait usage.
+  - **Alimentation** : **plafond global de 60 jours** (décret n° 2004-878 du
+    26 août 2004, art. 7-1 ; arrêté du 9 janvier 2024, art. 1) ; **droit
+    d'option au-delà de 15 jours épargnés**, à exercer au plus tard le
+    31 janvier (décret n° 2004-878, art. 5 ; versions consultées sur
+    Légifrance le 03/11/2026). Le plafond dérogatoire de 70 jours (ou jours
+    épargnés + 10) ne valait qu'**au terme de l'année 2024** ; mais les
+    jours ainsi épargnés au-delà de 60 **peuvent être maintenus** sur le CET
+    les années suivantes ou consommés (arrêté du 9 janvier 2024, art. 2,
+    toujours en vigueur). Ne pas présenter ces jours comme perdus. Le décret
+    n° 2025-1135 du 26 novembre 2025 (décret 2004-878, art. 10, en vigueur
+    depuis le 29/11/2025) permet à l'organe délibérant, après consultation du
+    CST, de fixer un **plafond annuel du nombre de jours indemnisables**,
+    applicable à tous les agents titulaires d'un CET, distinct du plafond
+    global de 60 jours — **à vérifier si la collectivité en a fait usage**.
   - **Utilisation** : prise de **congés** (règle de principe) ; **monétisation**
     possible **au-delà du seuil de 15 jours épargnés**, selon les conditions
     fixées par **délibération** locale ; les **montants forfaitaires** de
@@ -104,6 +108,17 @@
     prise effective des congés acquis (jurisprudence UE/CE) — **contours
     exacts de l'exception à vérifier** avant toute réponse chiffrée ou toute
     promesse d'indemnisation à un agent titulaire.
+- **Autorisations spéciales d'absence (ASA) liées à la parentalité et à
+  certains événements familiaux** : décret n° 2026-604 du 6 juillet 2026,
+  **applicable au 1er janvier 2027** à tous les agents publics relevant du
+  CGFP (art. 1, version future consultée sur Légifrance le 03/11/2026).
+  Exemple : ASA pour soigner ou garder un enfant de moins de 16 ans,
+  6 jours par an pour un agent à temps plein et complet, au prorata
+  sinon, sans limite d'âge pour un enfant handicapé, doublés pour l'agent
+  qui assume seul la charge, sous réserve des nécessités de service
+  (art. 13). Avant le 1er janvier 2027, le régime antérieur (délibération
+  locale, textes en vigueur) reste à vérifier ; ne pas appliquer le décret
+  par anticipation.
 
 **Fin de fonctions** : retraite (CNRACL/IRCANTEC ; âge et conditions selon la
 réforme des retraites en vigueur, à vérifier) ; **retraite progressive**
@@ -121,11 +136,38 @@ du régime général) ; démission (acceptée par l'autorité) ; licenciement
 de la loi n° 2026-103 du 19 février 2026 (loi de finances pour 2026),
 codifiée au CGFP **art. L.552-1 à L.552-5** (dont L.552-5 pour les
 **contractuels en CDI**, déjà pérenne), en vigueur depuis le 21 février 2026.
-Indemnité (ISRC), procédure (entretiens, convention) et interdiction de
-retour rémunéré dans les 6 ans : régime confirmé dans son principe par les
-décrets d'application du 6 août 2026 (n° 2026-745, procédure ;
-n° 2026-746, indemnité) — **modalités chiffrées à confirmer en version
-consolidée** avant tout acte.
+Régime issu des décrets d'application du 6 août 2026 (n° 2026-745,
+procédure ; n° 2026-746, indemnité), en vigueur le 8 août 2026 (versions
+consultées sur Légifrance le 03/11/2026) :
+- **Exclusions** (L552-2) : stagiaire ; fonctionnaire ayant atteint l'âge
+  légal et remplissant les conditions du taux plein ; fonctionnaire détaché
+  comme contractuel. Pour les contractuels en CDI (décret n° 88-145,
+  art. 49 ter) : période d'essai, licenciement ou démission engagés, taux
+  plein, fonctionnaire détaché comme contractuel.
+- **Procédure** (décret n° 2019-1593, art. 2 à 8 ; décret n° 88-145,
+  art. 49 bis à 49 decies pour les CDI) : demande par LRAR ou remise en main
+  propre ; premier entretien au moins **10 jours francs** et au plus
+  **1 mois** après réception ; entretiens portant sur les motifs, la date
+  de cessation, le montant envisagé et les conséquences (chômage,
+  remboursement, obligations déontologiques) ; assistance possible d'un
+  conseiller syndical (L552-3) ; signature au moins **15 jours francs**
+  après le dernier entretien, sur le modèle fixé par arrêté ; **rétractation**
+  dans un délai de **15 jours francs** ; cessation au plus tôt le lendemain
+  de la fin du délai de rétractation.
+- **Indemnité** (décret n° 2019-1596, art. 2 à 4) : plancher par année
+  d'ancienneté de 1/6 de mois de rémunération brute jusqu'à 10 ans, 1/5 de
+  10 à 15 ans, 1/4 de 15 à 20 ans, 1/3 de 20 à 24 ans ; plafond de 1/24 de
+  la rémunération brute annuelle par année d'ancienneté, dans la limite de
+  24 ans (contre 1/12 avant le 08/08/2026) — **plancher et plafond
+  abaissés** au 08/08/2026 : ne pas reprendre l'ancien barème ; référence : rémunération brute de l'année civile précédant la
+  date d'effet, hors éléments exclus par l'art. 4.
+- **Pas d'interdiction de retour** : la personne recrutée comme agent
+  territorial dans les **6 ans** qui suivent la rupture doit **rembourser
+  l'indemnité** à l'employeur signataire dans les **2 ans** suivant le
+  recrutement (CGFP L552-4 ; décret n° 88-145, art. 49 decies pour les
+  contractuels) ; attestation sur l'honneur préalable au recrutement
+  (décret n° 2019-1593, art. 8).
+Relire la version applicable à la date de la convention avant tout acte.
 
 ### 5.10 Abandon de poste (radiation des cadres)
 - **Nature** : ce n'est **pas une sanction disciplinaire** → **ni conseil de
@@ -192,13 +234,24 @@ consolidée** avant tout acte.
 - **Seuils démographiques d'accès** : la création de chaque emploi fonctionnel
   et l'accès à certains grades de détachement dépendent de seuils de
   population de la collectivité ou de l'établissement (décret statutaire de
-  l'emploi concerné). **Seuils exacts à vérifier** cadre d'emplois par cadre
-  d'emplois avant toute réponse chiffrée — ne jamais les citer de mémoire.
+  l'emploi concerné). Pour les emplois fonctionnels administratifs de
+  direction, le texte de référence est le **décret n° 2026-484 du 10 juin
+  2026** (en vigueur depuis le 1er juillet 2026). **Seuils exacts à
+  vérifier** emploi par emploi avant toute réponse chiffrée — ne jamais les
+  citer de mémoire.
 - **Primes et avantages spécifiques** : régime indemnitaire propre à l'emploi
-  fonctionnel (part fonctionnelle souvent majorée), logement de fonction pour
-  nécessité absolue de service le cas échéant. Renvoyer aux textes propres à
-  chaque emploi (décret statutaire de l'emploi + délibération) — **ne pas
-  transposer un régime d'un emploi fonctionnel à un autre**.
+  fonctionnel, logement de fonction pour nécessité absolue de service le cas
+  échéant. Pour les emplois supérieurs du chapitre III du décret
+  n° 2026-484, l'organe délibérant fixe les plafonds des deux parts du
+  RIFSEEP dans la limite du plafond global des emplois supérieurs de l'État
+  équivalents (décret n° 91-875, art. 1-1 et annexe 3, version du
+  01/07/2026, consultée le 03/11/2026) ; lors de la première application,
+  un agent du 4e niveau peut conserver le montant antérieurement versé au
+  titre de son grade, augmenté de la prime de responsabilité et de la NBI
+  liée à l'emploi fonctionnel, s'il dépasse le nouveau plafond.
+  Renvoyer aux textes propres à chaque emploi (décret statutaire de
+  l'emploi + délibération) — **ne pas transposer un régime d'un emploi
+  fonctionnel à un autre**.
 
 #### Fin de détachement dans l'intérêt du service (« décharge de fonctions »)
 
@@ -424,3 +477,13 @@ Sources : décret 2003-1306 art. 2 (LEGIARTI000049428994), 27
 (LEGIARTI000047633338) et 59 (LEGIARTI000006400930), pack PISTE du 16/10/2026.
 L556-5 à L556-7 sont également présents dans le corps complet du CGFP de ce
 pack ; le renvoi R.36 n'autorise pas à inventer le contenu de ses exceptions.
+
+**Cumul emploi-retraite (veille du 03/11/2026)** : les décrets n° 2026-1016
+et n° 2026-1017 du 2 novembre 2026 (JO du 3 novembre 2026), pris pour
+l'art. 102 de la LFSS pour 2026 (loi n° 2025-1403), modifient notamment
+l'art. 58 du décret 2003-1306 (suppression de la déclaration annuelle, par
+l'employeur, des revenus d'activité des pensionnés CNRACL). La notice vise
+les pensions prenant effet à compter du 1er janvier 2027. **Date d'effet
+exacte non confirmée** (renvoi au XI de l'art. 102 de la LFSS pour 2026) et
+version consolidée pas encore disponible au 03/11/2026 : relire les textes
+avant toute réponse sur un cumul.
