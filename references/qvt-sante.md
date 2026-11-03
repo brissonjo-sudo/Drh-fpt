@@ -103,8 +103,25 @@ invalidité ; égalité professionnelle (plan d'action, nominations
 
 ### 5.3 Congés liés à la santé
 - **CMO** (maladie ordinaire), **CLM** (longue maladie), **CLD** (longue durée) ;
-  pour les contractuels, congé de grave maladie. Durées, plein/demi-traitement
-  et conditions : **à vérifier** (régime distinct titulaires / contractuels).
+  pour les contractuels, congé de grave maladie. Régime distinct titulaires
+  / contractuels. Fonctionnaires (CGFP, versions consultées sur Légifrance
+  le 03/11/2026) :
+  - **CMO** : 1 an au plus sur 12 mois consécutifs ; **3 mois à 90 %** du
+    traitement puis **9 mois à demi-traitement** (L822-2 ; L822-3, version du
+    16/02/2025 issue de la loi n° 2025-127) ;
+  - **CLM** : 3 ans au plus ; **1 an à plein traitement puis 2 ans à
+    demi-traitement** (L822-8). La part de demi-traitement peut être portée
+    à 60 % par décret en Conseil d'État si un accord L221-2 le prévoit :
+    **aucun décret territorial de mise en œuvre identifié** au 03/11/2026 ;
+  - **CLD** : **3 ans à plein traitement puis 2 ans à demi-traitement**
+    (L822-15) ; la période de CLM à plein traitement pour la même affection
+    compte comme CLD (L822-14) ;
+  - dans les trois cas, SFT et indemnité de résidence conservés en totalité.
+  Contractuels (décret 88-145, art. 7 et 8, versions du 01/08/2026) :
+  durées à plein et demi-traitement croissantes avec l'ancienneté de
+  services ; grave maladie après 3 ans de services, 12 mois à plein
+  traitement puis 24 mois à demi-traitement. Relire les articles avant tout
+  calcul.
 - **CITIS** (congé pour invalidité temporaire imputable au service) :
   accident de service, de trajet, maladie professionnelle. Présomption
   d'imputabilité dans certains cas. Base FPT : **CGFP, art. L. 822-18 et s.**
@@ -248,8 +265,9 @@ invalidité ; égalité professionnelle (plan d'action, nominations
     numéros désignent les congés de maladie. Mais elle n'est pas corrigée :
     **ne pas opposer** à un contractuel en congé des articles 7 à 9 le
     contrôle administratif, la préparation de la reprise, la formation ou
-    l'examen à distance sur le fondement de l'article 9-2. Vérifier la
-    publication d'un rectificatif. L'article 31-1 ne vise de toute façon
+    l'examen à distance sur le fondement de l'article 9-2. Au 03/11/2026,
+    aucun rectificatif ni modification n'est identifié (une seule version,
+    LEGIARTI000054641818) : recontrôler avant usage. L'article 31-1 ne vise de toute façon
     que les congés débutant ou prolongés à compter du 1er janvier 2028
     (art. 11, III).
   Transition : articles 7, 8, 9-2 et 12 applicables aux
@@ -340,9 +358,26 @@ n° 2022-581, loi n° 2025-1251 du 22 décembre 2025) :
 - **Prévoyance** (incapacité, invalidité, décès) : obligatoire **depuis le
   1er janvier 2025**.
 - **Santé** (mutuelle) : obligatoire **depuis le 1er janvier 2026**.
-- La **loi du 22 décembre 2025** généralise les **contrats collectifs de
-  prévoyance à adhésion obligatoire** (échéance **1er janvier 2029**) et relève
-  la participation employeur en prévoyance.
+- La **loi n° 2025-1251 du 22 décembre 2025** (CGFP L827-6 et L827-11,
+  versions en vigueur depuis le 24/12/2025, consultées sur Légifrance le
+  03/11/2026) rend **obligatoire la souscription des garanties minimales de
+  prévoyance** du contrat collectif issu d'une convention de participation
+  (incapacité, invalidité, inaptitude, décès) ; un accord collectif valide
+  peut étendre l'obligation à l'ensemble des garanties. La participation
+  employeur en prévoyance est d'**au moins la moitié** de la cotisation
+  correspondant aux garanties minimales (L827-11), garanties fixées par le
+  décret n° 2026-987 et donc applicables à la même date que lui (voir
+  ci-dessous). L827-6 présente toujours
+  la conclusion de la convention comme une faculté.
+- **Décrets d'application du 23 octobre 2026** (JO du 24/10/2026) :
+  n° 2026-986 (contrats collectifs, adhésion obligatoire, dispenses,
+  comité de pilotage paritaire, marché de 6 ans) et n° 2026-987 (garanties
+  minimales : indemnités complémentaires portant à 90 % de la rémunération
+  nette à compter du passage à demi-traitement ; rente d'invalidité).
+  **Application au 1er janvier 2029**, ou au terme de la convention de
+  participation en cours si celui-ci est postérieur. Jusque-là, le chapitre
+  Ier du décret n° 2022-581 reste applicable. Contenu détaillé des décrets
+  lu en partie seulement : relire le JORF avant toute citation littérale.
 
 > Montants planchers et taux de participation **évoluent** → données volatiles,
 > à vérifier (§9). Débat préalable obligatoire en assemblée et association du CST.
@@ -380,16 +415,31 @@ aucun calendrier, montant ou caractère obligatoire n'est certifié.
   version consolidée avant toute réponse chiffrée dans un acte.
 - **Nominations équilibrées aux emplois de direction** : proportion
   minimale par sexe des primo-nominations, avec pénalité en cas de
-  non-respect. **Renforcé par la loi n° 2023-623 du 19 juillet 2023** :
-  taux cible porté de 40 % à **50 %** ; pour les employeurs sous les 37 %
-  (moyenne 2020-2022), trajectoire de +3 points dès le 20 juillet 2023
-  jusqu'au 1er janvier 2027 puis tous les 3 ans jusqu'à 40 % ; suppression
-  de la dispense de pénalité à compter du 1er janvier 2027 ; contribution
-  forfaitaire par unité manquante (90 000 € au-delà de 80 000 habitants,
-  50 000 € entre 40 000 et 80 000 habitants) — **taux, montants, jalons de
-  trajectoire et périmètre exact (FPT distinctement de la FPE/FPH) à
-  recouper sur CGFP art. L.132-5 avant citation dans un acte**, la
-  prochaine échéance (1er janvier 2027) restant à venir.
+  non-respect. **Renforcé par la loi n° 2023-623 du 19 juillet 2023**
+  (versions consultées sur Légifrance le 03/11/2026) :
+  - taux porté à **50 %** de chaque sexe (CGFP L132-5, version du
+    01/01/2026). Pour les emplois de direction territoriaux (4° : régions,
+    départements, communes et EPCI de plus de 40 000 habitants, CNFPT), le
+    50 % s'applique **à compter du prochain renouvellement général des
+    assemblées délibérantes** suivant la loi du 19 juillet 2023 (art. 2,
+    III), et non au 1er janvier 2026 ; selon la catégorie, ce
+    renouvellement peut déjà être intervenu : vérifier sa date effective.
+    Avant lui, le taux applicable reste d'au moins 40 % (L132-5, version du
+    21/07/2023 au 01/01/2026) ;
+  - la **trajectoire de +3 points** (employeurs sous 40 % en moyenne
+    2020-2022) vise les 1°, 2°, 3°, 5° et 6° de L132-5 : **elle ne
+    s'applique pas à la FPT** (art. 2, II) ;
+  - collectivités ayant moins de 3 emplois fonctionnels de direction créés
+    par l'organe délibérant : non assujetties ; règle d'appréciation sur
+    un cycle de nominations prévue par L132-7 (à relire) ;
+  - contribution par unité manquante : **90 000 €**, **50 000 €** pour les
+    communes et EPCI de plus de 40 000 et de moins de 80 000 habitants
+    (R132-15) ; déclaration
+    annuelle avant le 30 avril (R132-16) ;
+  - **dispense de contribution** lorsque les emplois sont occupés à au
+    moins 40 % par chaque sexe (L132-9) : **supprimée au 1er janvier 2027**.
+  Date du renouvellement général : à vérifier pour chaque catégorie de
+  collectivité.
 - **Index de l'égalité professionnelle dans la fonction publique** :
   introduit par cette même loi, décrets d'application **n° 2024-801 et
   n° 2024-802 du 13 juillet 2024** (en vigueur depuis le 15 juillet 2024) :
@@ -415,9 +465,10 @@ dans l'ordre.
 - Bornes de durée : **CMO 12 mois**, **CLM 3 ans**, **CLD 5 ans** (sur
   périodes de référence propres à chaque congé) — **stable** dans leur
   principe.
-- Modalités plein traitement / demi-traitement à chaque phase : **à
-  vérifier** (renvoi aux textes statutaires, régime distinct
-  titulaires/contractuels, voir §5.3).
+- Rémunération par phase (fonctionnaires) : CMO 3 mois à 90 % puis 9 mois
+  à demi-traitement ; CLM 1 an plein puis 2 ans demi ; CLD 3 ans plein puis
+  2 ans demi (CGFP L822-3, L822-8, L822-15 ; détail et contractuels au
+  §5.3).
 
 **Étape 2 — avis du conseil médical.**
 Saisine obligatoire avant toute décision d'inaptitude. Le conseil médical
@@ -453,19 +504,26 @@ raison de santé et le reclassement restent soumis à son avis (art. 5, I,
   la PPR débute à la reprise ; ces congés survenus pendant la PPR reportent
   sa fin d'autant. Après la PPR, l'agent ayant demandé
   son reclassement peut être **maintenu en activité jusqu'à trois mois** :
-  ce maintien est distinct d'une prolongation de la PPR. Maintien du
-  traitement pendant la période ; formalisée par une
+  ce maintien est distinct d'une prolongation de la PPR. Pendant la PPR,
+  l'agent reste **en activité** dans son cadre d'emplois et perçoit le
+  traitement, l'indemnité de résidence, le SFT et le complément de
+  traitement indiciaire (décret n° 2020-1152) ; le texte ne vise pas le
+  régime indemnitaire. Formalisée par une
   **convention** entre l'agent, l'employeur et le CNFPT ou le CDG compétent.
   Base consolidée : **décret n° 85-1054, articles 2 à 2-2**, modifié
   notamment par les décrets n° 2019-172 et n° 2022-626. Articles 2
-  (LEGIARTI000045649957) et 2-2 (LEGIARTI000045649966), en vigueur depuis le
-  01/05/2022, consultés sur Légifrance le 03/11/2026 ; l'article 2-1
-  (traitement) reste **à confirmer en version consolidée**.
-- **Disponibilité d'office pour raison de santé** : prononcée lorsque les
-  droits à congé sont épuisés et que l'agent n'est ni apte à la reprise ni
-  reclassé à ce stade. Durée et renouvellements, articulation
-  demi-traitement / indemnités journalières de sécurité sociale : **à
-  vérifier**.
+  (LEGIARTI000045649957), 2-1 (LEGIARTI000045649961) et 2-2
+  (LEGIARTI000045649966), en vigueur depuis le 01/05/2022, consultés sur
+  Légifrance le 03/11/2026.
+- **Disponibilité d'office pour raison de santé** (décret n° 86-68, art. 19,
+  version du 07/12/2025, consultée le 03/11/2026) : prononcée à
+  l'expiration des droits à CMO, CLM ou CLD lorsque le reclassement est
+  impossible dans l'immédiat. Durée : **1 an au plus, renouvelable 2 fois** ;
+  un 3e renouvellement est possible si le conseil médical estime que
+  l'agent devrait pouvoir reprendre ou être reclassé dans l'année. À
+  l'issue : réintégration si l'agent est apte, sinon retraite ou, sans
+  droit à pension, licenciement. Articulation demi-traitement / indemnités
+  journalières : **à vérifier**.
 - **En dernier recours** :
   - **retraite pour invalidité** (régime CNRACL) : avis du conseil
     médical requis ; distinguer selon que l'invalidité est **imputable au
@@ -480,11 +538,14 @@ raison de santé et le reclassement restent soumis à son avis (art. 5, I,
 **Fonds et prévention de l'usure professionnelle.** Le **FIPU** (fonds
 d'investissement dans la prévention de l'usure professionnelle, réforme des
 retraites 2023) vise le **secteur privé et le secteur hospitalier/
-médico-social** — **aucun fonds FPT dédié distinct n'est créé à ce jour**. La
-prévention de l'usure professionnelle en FPT est portée par le **Fonds
-national de prévention (FNP) de la CNRACL**, dont une préfiguration est en
-cours. **Vérifier sur Légifrance avant d'affirmer l'existence d'un dispositif
-FPT opérationnel** de financement de la reconversion des métiers exposés.
+médico-social**. La prévention des risques professionnels en FPT s'appuie
+notamment sur le **Fonds national de prévention des AT/MP (FNP) de la
+CNRACL**, qui **existe** (CGFP L814-1 et L814-2, consultés le 03/11/2026) :
+statistiques, recommandations, programme d'actions, financement de mesures
+de prévention. Un **fonds FPT dédié à l'usure professionnelle** a fait
+l'objet d'une préfiguration ; **aucun texte de création n'est identifié au
+03/11/2026**. Vérifier sur Légifrance avant d'affirmer l'existence d'un
+dispositif FPT de financement de la reconversion des métiers exposés.
 
 **Pièges.**
 1. Licencier pour inaptitude **sans recherche sérieuse de reclassement**
@@ -495,8 +556,8 @@ FPT opérationnel** de financement de la reconversion des métiers exposés.
    **inaptitude à toutes fonctions** (justifie la retraite pour invalidité
    ou le licenciement).
 4. Affirmer l'existence d'un **fonds FPT dédié** à l'usure professionnelle :
-   le FIPU vise le privé/hospitalier, seul le FNP CNRACL (en préfiguration)
-   concerne la FPT.
+   le FIPU vise le privé/hospitalier ; pour la FPT, le FNP CNRACL (AT/MP)
+   existe, mais le fonds usure FPT n'est qu'en préfiguration.
 
 ## 6. Calculs
 
@@ -517,7 +578,10 @@ manquantes, valeurs volatiles à vérifier).
   du décret 88-145 tant que son renvoi n'est pas corrigé.
 - **Imputabilité au service** (CITIS) : qualification → vérification + avis du
   conseil médical en **formation plénière** le cas échéant ; décision de
-  l'autorité territoriale.
+  l'autorité territoriale. La décision fixant la **date de guérison ou de
+  consolidation** ne met pas en elle-même fin à la prise en charge et n'a
+  pas à être motivée au titre du 6° de CRPA L211-2 (CE, 29/09/2026,
+  n° 495978, B, consulté sur Légifrance le 03/11/2026).
 - **Montants** PSC, indemnité télétravail, taux d'obligation d'emploi.
 - Décision d'**inaptitude** ou de **reclassement** → acte faisant grief.
 - **Recherche de reclassement** : caractère sérieux et réel de la
@@ -558,15 +622,16 @@ manquantes, valeurs volatiles à vérifier).
 
 Montants planchers PSC (prévoyance, santé) et taux de participation ; indemnité
 forfaitaire de télétravail ; taux légal d'obligation d'emploi handicap ;
-plafonds des prestations d'action sociale ; modalités plein/demi-traitement
-par phase de congé (CMO/CLM/CLD) ; plafonds de durée des arrêts de travail
+plafonds des prestations d'action sociale ; mise en œuvre éventuelle du
+CLM à 60 % en FPT ; plafonds de durée des arrêts de travail
 (R. 162-1-7-1 du code de la sécurité sociale, 31 et 62 jours au
 03/11/2026) ; correction éventuelle du renvoi de l'article 9-2 du décret
-88-145 ; durée et renouvellement de la
-disponibilité d'office ; existence et périmètre du Fonds national de
-prévention (FNP) CNRACL en préfiguration ; seuil d'effectif et taux de
-pénalité du plan d'action égalité ; taux de nominations équilibrées et
-périmètre de l'index égalité (loi du 19 juillet 2023).
+88-145 ; articulation demi-traitement / indemnités journalières en
+disponibilité d'office ; création éventuelle d'un fonds FPT dédié à
+l'usure professionnelle ; calendrier prévoyance 2029 et contenu des
+décrets n° 2026-986 et 2026-987 ; seuil d'effectif et taux de pénalité du
+plan d'action égalité ; date du prochain renouvellement général pour les
+nominations équilibrées ; périmètre de l'index égalité.
 
 ## 10. Livrables (classés par niveau)
 
@@ -591,13 +656,13 @@ une condition ou une autorité non vérifiée ne répare pas son affirmation.
   reclassement/PPR → disponibilité → retraite pour invalidité ou
   licenciement ; obligation de moyens du reclassement ; existence du plan
   d'action égalité et des nominations équilibrées.
-- **À vérifier** : durées et taux de congés ; montants PSC ; indemnité
-  télétravail ; durées et régime de traitement par phase ; modalités de la
-  PPR (décret 2019-172 modifié) ; existence opérationnelle d'un dispositif
-  FPT de prévention de l'usure professionnelle (FNP CNRACL en
-  préfiguration) ; seuils et taux du plan d'action égalité ; taux issus de
-  la loi du 19 juillet 2023.
-- **Débattu / mouvant** : déploiement de la généralisation prévoyance 2029.
+- **À vérifier** : version applicable des durées et taux de congés à la
+  date du congé ; montants PSC ; indemnité télétravail ; modalités de la
+  PPR (décret 85-1054 modifié) ; existence d'un fonds FPT dédié à l'usure
+  professionnelle ; seuils et taux du plan d'action égalité ; date
+  d'application du taux de 50 % aux emplois territoriaux.
+- **Débattu / mouvant** : mise en œuvre de la prévoyance obligatoire
+  (décrets du 23/10/2026, application au plus tôt le 1er janvier 2029).
 
 ## 12. Checklist de branche
 
@@ -606,7 +671,9 @@ une condition ou une autorité non vérifiée ne répare pas son affirmation.
 3. Montants (PSC, télétravail) vérifiés, jamais de mémoire ? Pour la PSC,
    participation et adhésion distinguées ; contrats, dates, délibération et
    **accord collectif** (ou absence) réunis, validité/clauses contrôlées ?
-4. Décision défavorable → motivation + voies de recours ?
+4. Décision défavorable → motivation (si elle entre dans CRPA L211-2 ;
+   la fixation d'une date de consolidation n'entre pas dans son 6°) +
+   voies de recours ?
 5. Inaptitude : recherche effective de postes compatibles documentée,
    diligences obligatoires mais aboutissement non garanti, impossibilité
    motivée selon le régime vérifié ; PPR proposée le cas échéant ?

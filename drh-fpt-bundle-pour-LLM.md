@@ -68,7 +68,7 @@ metadata:
   statut: candidate ; huit branches dont carrière-paie divisée en trois modules
   date_derniere_revue_methodologique: 2026-11-03
   date_derniere_verification_sources: 2026-11-03
-  portee_verification_sources: ciblée (PR18, puis portage du 03/11/2026) ; ne certifie pas toutes les références ni une réponse future
+  portee_verification_sources: ciblée (PR18, portage du 03/11/2026, puis veille du 03/11/2026 sur les points en attente et le JORF du 04/09 au 03/11/2026) ; ne certifie pas toutes les références ni une réponse future
   perimetre: collectivités territoriales de plus de 350 agents
   dependances:
     - recherche-juridique >= 2.2.0 (obligatoire pour le fonctionnement nominal)
@@ -780,7 +780,9 @@ La réponse est insuffisante si elle :
    réglementaire du CGFP absorbe progressivement ces décrets par vagues
    (Livres I-II en vigueur depuis le 1er février 2025, Livre III —
    recrutement — depuis le 1er octobre 2025, Livre IV — formation,
-   télétravail, réorganisation — depuis le 1er août 2026 ; Livre V annoncé).
+   télétravail, réorganisation — depuis le 1er août 2026, décret n° 2026-366
+   du 7 mai 2026 ; au 03/11/2026, aucune partie réglementaire au-delà du
+   Livre IV n'est publiée : aucun article R./D. 5xx sur Légifrance).
    Un décret cité comme « transversal » peut donc avoir été abrogé et
    recodifié en articles R./D. du CGFP : vérifier avant de citer un numéro
    de décret isolé.
@@ -855,7 +857,14 @@ Domaines à forte évolution récente, à confirmer systématiquement avant
 usage en acte :
 
 - **Protection sociale complémentaire (PSC)** — participation employeur
-  prévoyance puis santé, calendrier progressif.
+  prévoyance puis santé, calendrier progressif. Prévoyance : adhésion
+  obligatoire aux garanties minimales du contrat collectif (loi
+  n° 2025-1251 du 22 décembre 2025, CGFP L827-6 et L827-11, en vigueur
+  depuis le 24/12/2025) ; décrets d'application n° 2026-986 et 2026-987 du
+  23 octobre 2026 (JO du 24/10/2026), applicables au 1er janvier 2029 ou
+  au terme de la convention de participation en cours. Jusque-là, le
+  chapitre Ier du décret n° 2022-581 reste applicable. Décrets lus en
+  partie seulement : relire le JORF avant toute citation.
 - **RIFSEEP** — montants, groupes de fonctions, cadres d'emplois éligibles.
 - **Contractuels** — cas de recours élargis depuis la loi de
   transformation de la fonction publique (2019).
@@ -878,8 +887,26 @@ usage en acte :
   loi n° 2026-103 du 19 février 2026 (loi de finances pour 2026), codifiée
   au CGFP **art. L.552-1 à L.552-5** (L.552-5 pour les agents contractuels
   en CDI), en vigueur depuis le 21 février 2026. Décrets d'application du
-  6 août 2026 (n° 2026-745, procédure ; n° 2026-746, indemnité spécifique)
-  à confirmer en version consolidée avant tout acte.
+  6 août 2026 (n° 2026-745, procédure ; n° 2026-746, indemnité spécifique),
+  en vigueur le 8 août 2026 : ils modifient les décrets n° 2019-1593 et
+  n° 2019-1596 et les art. 49 bis à 49 decies du décret n° 88-145. Plancher
+  **et plafond** de l'indemnité abaissés (plafond porté de 1/12 à 1/24 de
+  la rémunération brute annuelle par année d'ancienneté) : voir
+  carrière-paie, temps et fin de fonctions §5.9.
+- **Projets de lois financières 2027** (état relevé au 03/11/2026 sur les
+  dossiers législatifs de l'Assemblée nationale et du Sénat, à revérifier ;
+  rien à appliquer avant publication) :
+  - PLFSS 2027 (AN n° 3211) : rejeté en première lecture à l'Assemblée
+    le 23/10/2026, transmis au Sénat le 02/11/2026. Articles à suivre :
+    majorations pour enfants servies par la CNRACL, revalorisation 2027
+    des pensions.
+  - PLF 2027 (AN n° 3210), en première lecture : le texte déposé ne
+    contient aucun article sur le jour de carence, l'indemnisation du CMO
+    ou la GIPA (surveiller les amendements) ; un article créerait une
+    protection fonctionnelle des agents poursuivis devant le juge
+    financier (futur CGFP L134-4-1).
+  - Taux de cotisation employeur CNRACL : relire le décret en vigueur
+    avant tout chiffrage, jamais de valeur de mémoire.
 
 ---
 
@@ -1583,15 +1610,17 @@ Appliquer le noyau de vérification (matrice §2.2 du SKILL.md) dès que :
 - **Réglementaires, citables après consultation officielle de la version applicable** :
   plafonds ISFE (33/32/30 % ; 9 500/7 000/5 000 €), plafonds RIFSEEP par groupe
   de fonctions, contingent IHTS (25 h), garanties minimales de temps de travail
-  (décret 2000-815 : 10 h/jour, 48 h/semaine), plafond CET (60 jours) et seuil
-  de monétisation (15 jours épargnés, décret 2004-878), durée de la protection
+  (décret 2000-815 : 10 h/jour, 48 h/semaine), plafond CET (60 jours, arrêté
+  du 9 janvier 2024, art. 1) et seuil d'option (15 jours épargnés, décret
+  2004-878, art. 5), barème plancher/plafond de l'indemnité de rupture
+  conventionnelle (décret 2019-1596, version du 08/08/2026), durée de la protection
   des 6 mois des emplois fonctionnels et effet différé de la décharge (art.
   L. 544-1 CGFP), exclusion ARE de l'abandon de poste (décret 2020-741).
   Rappel : un taux plafond est stable, le montant en euros qui en découle
   dépend du point (volatile).
 - **Registre de vérification interne (maintenance)** :
   `references/cache-plafonds-regime-indemnitaire.md` consigne les plafonds
-  réglementaires déjà vérifiés (ISFE) et les gaps à combler (RIFSEEP attachés).
+  réglementaires déjà vérifiés (ISFE, RIFSEEP attachés) et leurs réserves.
   C'est un **aide-mémoire de maintenance, jamais une source** : toujours
   reconfirmer la valeur en vigueur avant usage en acte, et **ne pas le citer**
   comme référence dans un livrable formel.
@@ -1626,7 +1655,8 @@ une condition ou une autorité non vérifiée ne répare pas son affirmation.
   indivisible État) ; nature non disciplinaire de la décharge de fonctions ;
   auto-assurance chômage obligatoire pour titulaires/stagiaires.
 - **À vérifier** : toute valeur chiffrée ; plafonds RIFSEEP/ISFE ; règles de
-  retraite (dont retraite progressive) ; rupture conventionnelle ; liste
+  retraite (dont retraite progressive et cumul emploi-retraite) ; version
+  applicable à la date de la convention de rupture conventionnelle ; liste
   exacte des positions ; durée exacte de la protection des 6 mois et de
   l'effet différé des emplois fonctionnels ; périmètre du service minimum
   (art. 56 loi 2019-828) ; conditions du droit à l'ARE en cas d'abandon de
@@ -1903,6 +1933,16 @@ par **équivalence** :
 
 → Viser le décret 91-875 et la délibération, jamais le seul décret 2014-513.
 
+**Exécuter l'annulation d'une décision de prime** — CE, 12/10/2026,
+n° 498763, B (consulté sur Légifrance le 03/11/2026) : quand une décision
+individuelle de prime est annulée parce que la délibération indemnitaire est
+illégale (exception d'illégalité), l'exécution impose un **réexamen de la
+situation de l'agent** ; elle n'implique pas nécessairement une nouvelle
+délibération rétroactive, et le juge ne l'enjoint pas. Un nouveau refus
+fondé sur une délibération entachée du **même vice** méconnaît la chose
+jugée. Dans l'espèce, la délibération RIFSEEP ne prévoyait pas de CIA pour
+tout un cadre d'emplois.
+
 **Départ à la retraite** — La [réponse ministérielle du 22/05/2025 à la
 question écrite n° 01222](https://www.senat.fr/questions/base/2024/qSEQ241001222.html)
 du ministère de l'action publique, de la fonction publique et de la
@@ -1936,8 +1976,9 @@ administrative**, qui ne prime jamais sur la loi ou le décret.
   Décret **applicable le lendemain de sa publication (2024)** ; seuls les anciens régimes
   propres (décrets n° 97-702, 2000-45 et 2006-1397) sont **abrogés au 1er janvier
   2025** — ne pas dater l'entrée en vigueur de l'ISFE au 1/1/2025.
-  **Plafonds réglementaires** (décret 2024-614, à confirmer en version
-  consolidée avant citation) — *valeurs documentaires à contrôler sur la source officielle* :
+  **Plafonds réglementaires** (décret 2024-614, art. 3 et 5, versions en
+  vigueur depuis le 29/06/2024, consultées sur Légifrance le 03/11/2026 ;
+  relire la version applicable à la date de l'acte) :
   - part fixe (taux du traitement) : **33 %** directeurs, **32 %** chefs de
     service, **30 %** agents et gardes champêtres ;
   - part variable (plafond annuel) : **9 500 €** directeurs, **7 000 €** chefs
@@ -2078,16 +2119,20 @@ intervient à compter du 01/01/2022.
     conditions d'ancienneté), sur les jours de congés annuels et de RTT non
     pris, au-delà d'un seuil minimal de jours de congés annuels posés dans
     l'année — seuil **à vérifier**.
-  - **Alimentation** : **plafond global de 60 jours** ; **droit d'option/
-    monétisation au-delà de 15 jours épargnés** (décret n° 2004-878 du 26 août
-    2004, à confirmer en version consolidée). La dérogation ponctuelle ayant
-    porté ce plafond à 70 jours au titre de l'année 2024 (arrêté du 9 janvier
-    2024, liée aux JO de Paris) est **caduque depuis le 1er janvier 2025** —
-    ne plus la présenter comme une incertitude actuelle. Depuis, le décret
-    n° 2025-1135 du 26 novembre 2025 ouvre aux employeurs territoriaux, après
-    avis du CST, la faculté de fixer un **plafond annuel du nombre de jours
-    indemnisables**, distinct du plafond global de 60 jours — **à vérifier**
-    si la collectivité en a fait usage.
+  - **Alimentation** : **plafond global de 60 jours** (décret n° 2004-878 du
+    26 août 2004, art. 7-1 ; arrêté du 9 janvier 2024, art. 1) ; **droit
+    d'option au-delà de 15 jours épargnés**, à exercer au plus tard le
+    31 janvier (décret n° 2004-878, art. 5 ; versions consultées sur
+    Légifrance le 03/11/2026). Le plafond dérogatoire de 70 jours (ou jours
+    épargnés + 10) ne valait qu'**au terme de l'année 2024** ; mais les
+    jours ainsi épargnés au-delà de 60 **peuvent être maintenus** sur le CET
+    les années suivantes ou consommés (arrêté du 9 janvier 2024, art. 2,
+    toujours en vigueur). Ne pas présenter ces jours comme perdus. Le décret
+    n° 2025-1135 du 26 novembre 2025 (décret 2004-878, art. 10, en vigueur
+    depuis le 29/11/2025) permet à l'organe délibérant, après consultation du
+    CST, de fixer un **plafond annuel du nombre de jours indemnisables**,
+    applicable à tous les agents titulaires d'un CET, distinct du plafond
+    global de 60 jours — **à vérifier si la collectivité en a fait usage**.
   - **Utilisation** : prise de **congés** (règle de principe) ; **monétisation**
     possible **au-delà du seuil de 15 jours épargnés**, selon les conditions
     fixées par **délibération** locale ; les **montants forfaitaires** de
@@ -2119,6 +2164,17 @@ intervient à compter du 01/01/2022.
     prise effective des congés acquis (jurisprudence UE/CE) — **contours
     exacts de l'exception à vérifier** avant toute réponse chiffrée ou toute
     promesse d'indemnisation à un agent titulaire.
+- **Autorisations spéciales d'absence (ASA) liées à la parentalité et à
+  certains événements familiaux** : décret n° 2026-604 du 6 juillet 2026,
+  **applicable au 1er janvier 2027** à tous les agents publics relevant du
+  CGFP (art. 1, version future consultée sur Légifrance le 03/11/2026).
+  Exemple : ASA pour soigner ou garder un enfant de moins de 16 ans,
+  6 jours par an pour un agent à temps plein et complet, au prorata
+  sinon, sans limite d'âge pour un enfant handicapé, doublés pour l'agent
+  qui assume seul la charge, sous réserve des nécessités de service
+  (art. 13). Avant le 1er janvier 2027, le régime antérieur (délibération
+  locale, textes en vigueur) reste à vérifier ; ne pas appliquer le décret
+  par anticipation.
 
 **Fin de fonctions** : retraite (CNRACL/IRCANTEC ; âge et conditions selon la
 réforme des retraites en vigueur, à vérifier) ; **retraite progressive**
@@ -2136,11 +2192,38 @@ du régime général) ; démission (acceptée par l'autorité) ; licenciement
 de la loi n° 2026-103 du 19 février 2026 (loi de finances pour 2026),
 codifiée au CGFP **art. L.552-1 à L.552-5** (dont L.552-5 pour les
 **contractuels en CDI**, déjà pérenne), en vigueur depuis le 21 février 2026.
-Indemnité (ISRC), procédure (entretiens, convention) et interdiction de
-retour rémunéré dans les 6 ans : régime confirmé dans son principe par les
-décrets d'application du 6 août 2026 (n° 2026-745, procédure ;
-n° 2026-746, indemnité) — **modalités chiffrées à confirmer en version
-consolidée** avant tout acte.
+Régime issu des décrets d'application du 6 août 2026 (n° 2026-745,
+procédure ; n° 2026-746, indemnité), en vigueur le 8 août 2026 (versions
+consultées sur Légifrance le 03/11/2026) :
+- **Exclusions** (L552-2) : stagiaire ; fonctionnaire ayant atteint l'âge
+  légal et remplissant les conditions du taux plein ; fonctionnaire détaché
+  comme contractuel. Pour les contractuels en CDI (décret n° 88-145,
+  art. 49 ter) : période d'essai, licenciement ou démission engagés, taux
+  plein, fonctionnaire détaché comme contractuel.
+- **Procédure** (décret n° 2019-1593, art. 2 à 8 ; décret n° 88-145,
+  art. 49 bis à 49 decies pour les CDI) : demande par LRAR ou remise en main
+  propre ; premier entretien au moins **10 jours francs** et au plus
+  **1 mois** après réception ; entretiens portant sur les motifs, la date
+  de cessation, le montant envisagé et les conséquences (chômage,
+  remboursement, obligations déontologiques) ; assistance possible d'un
+  conseiller syndical (L552-3) ; signature au moins **15 jours francs**
+  après le dernier entretien, sur le modèle fixé par arrêté ; **rétractation**
+  dans un délai de **15 jours francs** ; cessation au plus tôt le lendemain
+  de la fin du délai de rétractation.
+- **Indemnité** (décret n° 2019-1596, art. 2 à 4) : plancher par année
+  d'ancienneté de 1/6 de mois de rémunération brute jusqu'à 10 ans, 1/5 de
+  10 à 15 ans, 1/4 de 15 à 20 ans, 1/3 de 20 à 24 ans ; plafond de 1/24 de
+  la rémunération brute annuelle par année d'ancienneté, dans la limite de
+  24 ans (contre 1/12 avant le 08/08/2026) — **plancher et plafond
+  abaissés** au 08/08/2026 : ne pas reprendre l'ancien barème ; référence : rémunération brute de l'année civile précédant la
+  date d'effet, hors éléments exclus par l'art. 4.
+- **Pas d'interdiction de retour** : la personne recrutée comme agent
+  territorial dans les **6 ans** qui suivent la rupture doit **rembourser
+  l'indemnité** à l'employeur signataire dans les **2 ans** suivant le
+  recrutement (CGFP L552-4 ; décret n° 88-145, art. 49 decies pour les
+  contractuels) ; attestation sur l'honneur préalable au recrutement
+  (décret n° 2019-1593, art. 8).
+Relire la version applicable à la date de la convention avant tout acte.
 
 ### 5.10 Abandon de poste (radiation des cadres)
 - **Nature** : ce n'est **pas une sanction disciplinaire** → **ni conseil de
@@ -2207,13 +2290,24 @@ consolidée** avant tout acte.
 - **Seuils démographiques d'accès** : la création de chaque emploi fonctionnel
   et l'accès à certains grades de détachement dépendent de seuils de
   population de la collectivité ou de l'établissement (décret statutaire de
-  l'emploi concerné). **Seuils exacts à vérifier** cadre d'emplois par cadre
-  d'emplois avant toute réponse chiffrée — ne jamais les citer de mémoire.
+  l'emploi concerné). Pour les emplois fonctionnels administratifs de
+  direction, le texte de référence est le **décret n° 2026-484 du 10 juin
+  2026** (en vigueur depuis le 1er juillet 2026). **Seuils exacts à
+  vérifier** emploi par emploi avant toute réponse chiffrée — ne jamais les
+  citer de mémoire.
 - **Primes et avantages spécifiques** : régime indemnitaire propre à l'emploi
-  fonctionnel (part fonctionnelle souvent majorée), logement de fonction pour
-  nécessité absolue de service le cas échéant. Renvoyer aux textes propres à
-  chaque emploi (décret statutaire de l'emploi + délibération) — **ne pas
-  transposer un régime d'un emploi fonctionnel à un autre**.
+  fonctionnel, logement de fonction pour nécessité absolue de service le cas
+  échéant. Pour les emplois supérieurs du chapitre III du décret
+  n° 2026-484, l'organe délibérant fixe les plafonds des deux parts du
+  RIFSEEP dans la limite du plafond global des emplois supérieurs de l'État
+  équivalents (décret n° 91-875, art. 1-1 et annexe 3, version du
+  01/07/2026, consultée le 03/11/2026) ; lors de la première application,
+  un agent du 4e niveau peut conserver le montant antérieurement versé au
+  titre de son grade, augmenté de la prime de responsabilité et de la NBI
+  liée à l'emploi fonctionnel, s'il dépasse le nouveau plafond.
+  Renvoyer aux textes propres à chaque emploi (décret statutaire de
+  l'emploi + délibération) — **ne pas transposer un régime d'un emploi
+  fonctionnel à un autre**.
 
 #### Fin de détachement dans l'intérêt du service (« décharge de fonctions »)
 
@@ -2440,6 +2534,16 @@ Sources : décret 2003-1306 art. 2 (LEGIARTI000049428994), 27
 L556-5 à L556-7 sont également présents dans le corps complet du CGFP de ce
 pack ; le renvoi R.36 n'autorise pas à inventer le contenu de ses exceptions.
 
+**Cumul emploi-retraite (veille du 03/11/2026)** : les décrets n° 2026-1016
+et n° 2026-1017 du 2 novembre 2026 (JO du 3 novembre 2026), pris pour
+l'art. 102 de la LFSS pour 2026 (loi n° 2025-1403), modifient notamment
+l'art. 58 du décret 2003-1306 (suppression de la déclaration annuelle, par
+l'employeur, des revenus d'activité des pensionnés CNRACL). La notice vise
+les pensions prenant effet à compter du 1er janvier 2027. **Date d'effet
+exacte non confirmée** (renvoi au XI de l'art. 102 de la LFSS pour 2026) et
+version consolidée pas encore disponible au 03/11/2026 : relire les textes
+avant toute réponse sur un cumul.
+
 ================================================================================
 ### SOURCE : BRANCHE — QVT & santé
 ================================================================================
@@ -2549,8 +2653,25 @@ invalidité ; égalité professionnelle (plan d'action, nominations
 
 ### 5.3 Congés liés à la santé
 - **CMO** (maladie ordinaire), **CLM** (longue maladie), **CLD** (longue durée) ;
-  pour les contractuels, congé de grave maladie. Durées, plein/demi-traitement
-  et conditions : **à vérifier** (régime distinct titulaires / contractuels).
+  pour les contractuels, congé de grave maladie. Régime distinct titulaires
+  / contractuels. Fonctionnaires (CGFP, versions consultées sur Légifrance
+  le 03/11/2026) :
+  - **CMO** : 1 an au plus sur 12 mois consécutifs ; **3 mois à 90 %** du
+    traitement puis **9 mois à demi-traitement** (L822-2 ; L822-3, version du
+    16/02/2025 issue de la loi n° 2025-127) ;
+  - **CLM** : 3 ans au plus ; **1 an à plein traitement puis 2 ans à
+    demi-traitement** (L822-8). La part de demi-traitement peut être portée
+    à 60 % par décret en Conseil d'État si un accord L221-2 le prévoit :
+    **aucun décret territorial de mise en œuvre identifié** au 03/11/2026 ;
+  - **CLD** : **3 ans à plein traitement puis 2 ans à demi-traitement**
+    (L822-15) ; la période de CLM à plein traitement pour la même affection
+    compte comme CLD (L822-14) ;
+  - dans les trois cas, SFT et indemnité de résidence conservés en totalité.
+  Contractuels (décret 88-145, art. 7 et 8, versions du 01/08/2026) :
+  durées à plein et demi-traitement croissantes avec l'ancienneté de
+  services ; grave maladie après 3 ans de services, 12 mois à plein
+  traitement puis 24 mois à demi-traitement. Relire les articles avant tout
+  calcul.
 - **CITIS** (congé pour invalidité temporaire imputable au service) :
   accident de service, de trajet, maladie professionnelle. Présomption
   d'imputabilité dans certains cas. Base FPT : **CGFP, art. L. 822-18 et s.**
@@ -2694,8 +2815,9 @@ invalidité ; égalité professionnelle (plan d'action, nominations
     numéros désignent les congés de maladie. Mais elle n'est pas corrigée :
     **ne pas opposer** à un contractuel en congé des articles 7 à 9 le
     contrôle administratif, la préparation de la reprise, la formation ou
-    l'examen à distance sur le fondement de l'article 9-2. Vérifier la
-    publication d'un rectificatif. L'article 31-1 ne vise de toute façon
+    l'examen à distance sur le fondement de l'article 9-2. Au 03/11/2026,
+    aucun rectificatif ni modification n'est identifié (une seule version,
+    LEGIARTI000054641818) : recontrôler avant usage. L'article 31-1 ne vise de toute façon
     que les congés débutant ou prolongés à compter du 1er janvier 2028
     (art. 11, III).
   Transition : articles 7, 8, 9-2 et 12 applicables aux
@@ -2786,9 +2908,26 @@ n° 2022-581, loi n° 2025-1251 du 22 décembre 2025) :
 - **Prévoyance** (incapacité, invalidité, décès) : obligatoire **depuis le
   1er janvier 2025**.
 - **Santé** (mutuelle) : obligatoire **depuis le 1er janvier 2026**.
-- La **loi du 22 décembre 2025** généralise les **contrats collectifs de
-  prévoyance à adhésion obligatoire** (échéance **1er janvier 2029**) et relève
-  la participation employeur en prévoyance.
+- La **loi n° 2025-1251 du 22 décembre 2025** (CGFP L827-6 et L827-11,
+  versions en vigueur depuis le 24/12/2025, consultées sur Légifrance le
+  03/11/2026) rend **obligatoire la souscription des garanties minimales de
+  prévoyance** du contrat collectif issu d'une convention de participation
+  (incapacité, invalidité, inaptitude, décès) ; un accord collectif valide
+  peut étendre l'obligation à l'ensemble des garanties. La participation
+  employeur en prévoyance est d'**au moins la moitié** de la cotisation
+  correspondant aux garanties minimales (L827-11), garanties fixées par le
+  décret n° 2026-987 et donc applicables à la même date que lui (voir
+  ci-dessous). L827-6 présente toujours
+  la conclusion de la convention comme une faculté.
+- **Décrets d'application du 23 octobre 2026** (JO du 24/10/2026) :
+  n° 2026-986 (contrats collectifs, adhésion obligatoire, dispenses,
+  comité de pilotage paritaire, marché de 6 ans) et n° 2026-987 (garanties
+  minimales : indemnités complémentaires portant à 90 % de la rémunération
+  nette à compter du passage à demi-traitement ; rente d'invalidité).
+  **Application au 1er janvier 2029**, ou au terme de la convention de
+  participation en cours si celui-ci est postérieur. Jusque-là, le chapitre
+  Ier du décret n° 2022-581 reste applicable. Contenu détaillé des décrets
+  lu en partie seulement : relire le JORF avant toute citation littérale.
 
 > Montants planchers et taux de participation **évoluent** → données volatiles,
 > à vérifier (§9). Débat préalable obligatoire en assemblée et association du CST.
@@ -2826,16 +2965,31 @@ aucun calendrier, montant ou caractère obligatoire n'est certifié.
   version consolidée avant toute réponse chiffrée dans un acte.
 - **Nominations équilibrées aux emplois de direction** : proportion
   minimale par sexe des primo-nominations, avec pénalité en cas de
-  non-respect. **Renforcé par la loi n° 2023-623 du 19 juillet 2023** :
-  taux cible porté de 40 % à **50 %** ; pour les employeurs sous les 37 %
-  (moyenne 2020-2022), trajectoire de +3 points dès le 20 juillet 2023
-  jusqu'au 1er janvier 2027 puis tous les 3 ans jusqu'à 40 % ; suppression
-  de la dispense de pénalité à compter du 1er janvier 2027 ; contribution
-  forfaitaire par unité manquante (90 000 € au-delà de 80 000 habitants,
-  50 000 € entre 40 000 et 80 000 habitants) — **taux, montants, jalons de
-  trajectoire et périmètre exact (FPT distinctement de la FPE/FPH) à
-  recouper sur CGFP art. L.132-5 avant citation dans un acte**, la
-  prochaine échéance (1er janvier 2027) restant à venir.
+  non-respect. **Renforcé par la loi n° 2023-623 du 19 juillet 2023**
+  (versions consultées sur Légifrance le 03/11/2026) :
+  - taux porté à **50 %** de chaque sexe (CGFP L132-5, version du
+    01/01/2026). Pour les emplois de direction territoriaux (4° : régions,
+    départements, communes et EPCI de plus de 40 000 habitants, CNFPT), le
+    50 % s'applique **à compter du prochain renouvellement général des
+    assemblées délibérantes** suivant la loi du 19 juillet 2023 (art. 2,
+    III), et non au 1er janvier 2026 ; selon la catégorie, ce
+    renouvellement peut déjà être intervenu : vérifier sa date effective.
+    Avant lui, le taux applicable reste d'au moins 40 % (L132-5, version du
+    21/07/2023 au 01/01/2026) ;
+  - la **trajectoire de +3 points** (employeurs sous 40 % en moyenne
+    2020-2022) vise les 1°, 2°, 3°, 5° et 6° de L132-5 : **elle ne
+    s'applique pas à la FPT** (art. 2, II) ;
+  - collectivités ayant moins de 3 emplois fonctionnels de direction créés
+    par l'organe délibérant : non assujetties ; règle d'appréciation sur
+    un cycle de nominations prévue par L132-7 (à relire) ;
+  - contribution par unité manquante : **90 000 €**, **50 000 €** pour les
+    communes et EPCI de plus de 40 000 et de moins de 80 000 habitants
+    (R132-15) ; déclaration
+    annuelle avant le 30 avril (R132-16) ;
+  - **dispense de contribution** lorsque les emplois sont occupés à au
+    moins 40 % par chaque sexe (L132-9) : **supprimée au 1er janvier 2027**.
+  Date du renouvellement général : à vérifier pour chaque catégorie de
+  collectivité.
 - **Index de l'égalité professionnelle dans la fonction publique** :
   introduit par cette même loi, décrets d'application **n° 2024-801 et
   n° 2024-802 du 13 juillet 2024** (en vigueur depuis le 15 juillet 2024) :
@@ -2861,9 +3015,10 @@ dans l'ordre.
 - Bornes de durée : **CMO 12 mois**, **CLM 3 ans**, **CLD 5 ans** (sur
   périodes de référence propres à chaque congé) — **stable** dans leur
   principe.
-- Modalités plein traitement / demi-traitement à chaque phase : **à
-  vérifier** (renvoi aux textes statutaires, régime distinct
-  titulaires/contractuels, voir §5.3).
+- Rémunération par phase (fonctionnaires) : CMO 3 mois à 90 % puis 9 mois
+  à demi-traitement ; CLM 1 an plein puis 2 ans demi ; CLD 3 ans plein puis
+  2 ans demi (CGFP L822-3, L822-8, L822-15 ; détail et contractuels au
+  §5.3).
 
 **Étape 2 — avis du conseil médical.**
 Saisine obligatoire avant toute décision d'inaptitude. Le conseil médical
@@ -2899,19 +3054,26 @@ raison de santé et le reclassement restent soumis à son avis (art. 5, I,
   la PPR débute à la reprise ; ces congés survenus pendant la PPR reportent
   sa fin d'autant. Après la PPR, l'agent ayant demandé
   son reclassement peut être **maintenu en activité jusqu'à trois mois** :
-  ce maintien est distinct d'une prolongation de la PPR. Maintien du
-  traitement pendant la période ; formalisée par une
+  ce maintien est distinct d'une prolongation de la PPR. Pendant la PPR,
+  l'agent reste **en activité** dans son cadre d'emplois et perçoit le
+  traitement, l'indemnité de résidence, le SFT et le complément de
+  traitement indiciaire (décret n° 2020-1152) ; le texte ne vise pas le
+  régime indemnitaire. Formalisée par une
   **convention** entre l'agent, l'employeur et le CNFPT ou le CDG compétent.
   Base consolidée : **décret n° 85-1054, articles 2 à 2-2**, modifié
   notamment par les décrets n° 2019-172 et n° 2022-626. Articles 2
-  (LEGIARTI000045649957) et 2-2 (LEGIARTI000045649966), en vigueur depuis le
-  01/05/2022, consultés sur Légifrance le 03/11/2026 ; l'article 2-1
-  (traitement) reste **à confirmer en version consolidée**.
-- **Disponibilité d'office pour raison de santé** : prononcée lorsque les
-  droits à congé sont épuisés et que l'agent n'est ni apte à la reprise ni
-  reclassé à ce stade. Durée et renouvellements, articulation
-  demi-traitement / indemnités journalières de sécurité sociale : **à
-  vérifier**.
+  (LEGIARTI000045649957), 2-1 (LEGIARTI000045649961) et 2-2
+  (LEGIARTI000045649966), en vigueur depuis le 01/05/2022, consultés sur
+  Légifrance le 03/11/2026.
+- **Disponibilité d'office pour raison de santé** (décret n° 86-68, art. 19,
+  version du 07/12/2025, consultée le 03/11/2026) : prononcée à
+  l'expiration des droits à CMO, CLM ou CLD lorsque le reclassement est
+  impossible dans l'immédiat. Durée : **1 an au plus, renouvelable 2 fois** ;
+  un 3e renouvellement est possible si le conseil médical estime que
+  l'agent devrait pouvoir reprendre ou être reclassé dans l'année. À
+  l'issue : réintégration si l'agent est apte, sinon retraite ou, sans
+  droit à pension, licenciement. Articulation demi-traitement / indemnités
+  journalières : **à vérifier**.
 - **En dernier recours** :
   - **retraite pour invalidité** (régime CNRACL) : avis du conseil
     médical requis ; distinguer selon que l'invalidité est **imputable au
@@ -2926,11 +3088,14 @@ raison de santé et le reclassement restent soumis à son avis (art. 5, I,
 **Fonds et prévention de l'usure professionnelle.** Le **FIPU** (fonds
 d'investissement dans la prévention de l'usure professionnelle, réforme des
 retraites 2023) vise le **secteur privé et le secteur hospitalier/
-médico-social** — **aucun fonds FPT dédié distinct n'est créé à ce jour**. La
-prévention de l'usure professionnelle en FPT est portée par le **Fonds
-national de prévention (FNP) de la CNRACL**, dont une préfiguration est en
-cours. **Vérifier sur Légifrance avant d'affirmer l'existence d'un dispositif
-FPT opérationnel** de financement de la reconversion des métiers exposés.
+médico-social**. La prévention des risques professionnels en FPT s'appuie
+notamment sur le **Fonds national de prévention des AT/MP (FNP) de la
+CNRACL**, qui **existe** (CGFP L814-1 et L814-2, consultés le 03/11/2026) :
+statistiques, recommandations, programme d'actions, financement de mesures
+de prévention. Un **fonds FPT dédié à l'usure professionnelle** a fait
+l'objet d'une préfiguration ; **aucun texte de création n'est identifié au
+03/11/2026**. Vérifier sur Légifrance avant d'affirmer l'existence d'un
+dispositif FPT de financement de la reconversion des métiers exposés.
 
 **Pièges.**
 1. Licencier pour inaptitude **sans recherche sérieuse de reclassement**
@@ -2941,8 +3106,8 @@ FPT opérationnel** de financement de la reconversion des métiers exposés.
    **inaptitude à toutes fonctions** (justifie la retraite pour invalidité
    ou le licenciement).
 4. Affirmer l'existence d'un **fonds FPT dédié** à l'usure professionnelle :
-   le FIPU vise le privé/hospitalier, seul le FNP CNRACL (en préfiguration)
-   concerne la FPT.
+   le FIPU vise le privé/hospitalier ; pour la FPT, le FNP CNRACL (AT/MP)
+   existe, mais le fonds usure FPT n'est qu'en préfiguration.
 
 ## 6. Calculs
 
@@ -2963,7 +3128,10 @@ manquantes, valeurs volatiles à vérifier).
   du décret 88-145 tant que son renvoi n'est pas corrigé.
 - **Imputabilité au service** (CITIS) : qualification → vérification + avis du
   conseil médical en **formation plénière** le cas échéant ; décision de
-  l'autorité territoriale.
+  l'autorité territoriale. La décision fixant la **date de guérison ou de
+  consolidation** ne met pas en elle-même fin à la prise en charge et n'a
+  pas à être motivée au titre du 6° de CRPA L211-2 (CE, 29/09/2026,
+  n° 495978, B, consulté sur Légifrance le 03/11/2026).
 - **Montants** PSC, indemnité télétravail, taux d'obligation d'emploi.
 - Décision d'**inaptitude** ou de **reclassement** → acte faisant grief.
 - **Recherche de reclassement** : caractère sérieux et réel de la
@@ -3004,15 +3172,16 @@ manquantes, valeurs volatiles à vérifier).
 
 Montants planchers PSC (prévoyance, santé) et taux de participation ; indemnité
 forfaitaire de télétravail ; taux légal d'obligation d'emploi handicap ;
-plafonds des prestations d'action sociale ; modalités plein/demi-traitement
-par phase de congé (CMO/CLM/CLD) ; plafonds de durée des arrêts de travail
+plafonds des prestations d'action sociale ; mise en œuvre éventuelle du
+CLM à 60 % en FPT ; plafonds de durée des arrêts de travail
 (R. 162-1-7-1 du code de la sécurité sociale, 31 et 62 jours au
 03/11/2026) ; correction éventuelle du renvoi de l'article 9-2 du décret
-88-145 ; durée et renouvellement de la
-disponibilité d'office ; existence et périmètre du Fonds national de
-prévention (FNP) CNRACL en préfiguration ; seuil d'effectif et taux de
-pénalité du plan d'action égalité ; taux de nominations équilibrées et
-périmètre de l'index égalité (loi du 19 juillet 2023).
+88-145 ; articulation demi-traitement / indemnités journalières en
+disponibilité d'office ; création éventuelle d'un fonds FPT dédié à
+l'usure professionnelle ; calendrier prévoyance 2029 et contenu des
+décrets n° 2026-986 et 2026-987 ; seuil d'effectif et taux de pénalité du
+plan d'action égalité ; date du prochain renouvellement général pour les
+nominations équilibrées ; périmètre de l'index égalité.
 
 ## 10. Livrables (classés par niveau)
 
@@ -3037,13 +3206,13 @@ une condition ou une autorité non vérifiée ne répare pas son affirmation.
   reclassement/PPR → disponibilité → retraite pour invalidité ou
   licenciement ; obligation de moyens du reclassement ; existence du plan
   d'action égalité et des nominations équilibrées.
-- **À vérifier** : durées et taux de congés ; montants PSC ; indemnité
-  télétravail ; durées et régime de traitement par phase ; modalités de la
-  PPR (décret 2019-172 modifié) ; existence opérationnelle d'un dispositif
-  FPT de prévention de l'usure professionnelle (FNP CNRACL en
-  préfiguration) ; seuils et taux du plan d'action égalité ; taux issus de
-  la loi du 19 juillet 2023.
-- **Débattu / mouvant** : déploiement de la généralisation prévoyance 2029.
+- **À vérifier** : version applicable des durées et taux de congés à la
+  date du congé ; montants PSC ; indemnité télétravail ; modalités de la
+  PPR (décret 85-1054 modifié) ; existence d'un fonds FPT dédié à l'usure
+  professionnelle ; seuils et taux du plan d'action égalité ; date
+  d'application du taux de 50 % aux emplois territoriaux.
+- **Débattu / mouvant** : mise en œuvre de la prévoyance obligatoire
+  (décrets du 23/10/2026, application au plus tôt le 1er janvier 2029).
 
 ## 12. Checklist de branche
 
@@ -3052,7 +3221,9 @@ une condition ou une autorité non vérifiée ne répare pas son affirmation.
 3. Montants (PSC, télétravail) vérifiés, jamais de mémoire ? Pour la PSC,
    participation et adhésion distinguées ; contrats, dates, délibération et
    **accord collectif** (ou absence) réunis, validité/clauses contrôlées ?
-4. Décision défavorable → motivation + voies de recours ?
+4. Décision défavorable → motivation (si elle entre dans CRPA L211-2 ;
+   la fixation d'une date de consolidation n'entre pas dans son 6°) +
+   voies de recours ?
 5. Inaptitude : recherche effective de postes compatibles documentée,
    diligences obligatoires mais aboutissement non garanti, impossibilité
    motivée selon le régime vérifié ; PPR proposée le cas échéant ?
@@ -3175,11 +3346,14 @@ apprentissage (financement, maître d'apprentissage, titularisation handicap).
     apprentis reconnus travailleurs handicapés à l'issue de leur contrat.
     ⚠️ **L'expérimentation (art. 91 loi n° 2019-828, décret n° 2020-530)
     est arrivée à échéance le 6 août 2025** et le dispositif reste, à ce
-    jour, **sans base légale**. Sa pérennisation (délai porté à 2 ans après
-    la fin du contrat) est portée par l'**art. 3 du PJL n° 438 (2025-2026)**,
+    jour, **sans base légale**. Sa pérennisation est portée par l'**art. 3
+    du PJL n° 438 (2025-2026)**, qui créerait un art. L352-4-1 du CGFP,
     déposé au Sénat le 25 février 2026 en procédure accélérée, avis
     favorable du Conseil commun de la fonction publique du 13 janvier
-    2026 — **non promulgué à ce stade**. **Vérifier impérativement l'état
+    2026 — **non promulgué au 03/11/2026** (L352-4-1 absent de Légifrance ;
+    dossier du Sénat sans adoption à sa mise à jour du 01/09/2026). Les
+    conditions annoncées (délai après la fin du contrat) ne sont pas
+    confirmées par la lettre du texte. **Vérifier impérativement l'état
     du dossier législatif (senat.fr) et la vigueur du dispositif avant
     d'orienter un apprenti vers cette voie** — ne pas la présenter comme
     ouverte sans confirmation sur Légifrance.
@@ -3255,7 +3429,7 @@ bourse de l'emploi ; règles de prise en charge CPF ; durées des formations
 obligatoires ; taux de contribution du CNFPT au financement de
 l'apprentissage ; conditions d'ouverture de la NBI au maître d'apprentissage ;
 état du dispositif de titularisation des apprentis en situation de handicap
-(échéance du 6 août 2025, pérennisation à confirmer).
+(échéance du 6 août 2025, pérennisation non adoptée au 03/11/2026).
 
 ## 10. Livrables (classés par niveau)
 
@@ -3386,9 +3560,18 @@ collective.
   **décembre 2022** ; prochain scrutin fixé au **10 décembre 2026** (arrêté
   ministériel du 2 juillet 2025), calendrier opérationnel et règles
   procédurales harmonisées précisés par le décret n° 2025-1430 du
-  30 décembre 2025 (délais de procédure portés de 3-5 à 8 jours notamment —
-  détail à confirmer en version consolidée). Déterminent la composition des
-  instances et la représentativité syndicale.
+  30 décembre 2025. Points vérifiés en version consolidée (CGFP, versions
+  du 01/01/2026, consultées sur Légifrance le 03/11/2026) : inéligibilité
+  d'un candidat constatée dans les **8 jours francs** suivant la date limite
+  de dépôt des listes, puis rectification par le délégué de liste sous
+  **3 jours francs** (R211-62 ; R211-64 pour le point de départ en cas de
+  contestation et le remplacement d'un candidat devenu inéligible) ;
+  inéligibilité au CST des titulaires d'un emploi fonctionnel de direction
+  dans leur collectivité (R211-40, 4°). Autres modifications du décret : à
+  relire avant usage. Le vote électronique peut s'appuyer sur l'ENSAP
+  (décret n° 2026-1000 du 26/10/2026, connu par résumé seulement : à
+  confirmer). Déterminent la composition des instances et la
+  représentativité syndicale. Après le scrutin, mettre à jour cette section.
 
 ### 5.3 Droit syndical
 - **ASA** (autorisations spéciales d'absence), **décharges d'activité de
@@ -3780,9 +3963,12 @@ d'essai) est passé au **Livre III réglementaire du CGFP** (décret
 n° 2025-695 du 24 juillet 2025, en vigueur depuis le 1er octobre 2025) —
 voir §5.2. **Rémunération, réévaluation, fin de contrat, licenciement et
 discipline** (§5.3 à 5.7) demeurent, à ce jour, dans le décret 88-145
-stricto sensu, mais un **Livre V** du CGFP réglementaire est annoncé et
-pourrait les déplacer à son tour — **vérifier à chaque usage** si la
-disposition concernée a été recodifiée. Il détaille forme du
+stricto sensu : au 03/11/2026, aucune recodification réglementaire de ces
+dispositions n'est publiée (aucun article R./D. 5xx du CGFP sur Légifrance)
+et le titre X du décret 88-145 reste en vigueur, ses art. 49 bis,
+49 quinquies et 49 decies ayant été modifiés le 08/08/2026 par le décret
+n° 2026-745 — **vérifier à chaque usage** si la disposition concernée a été
+recodifiée depuis. Il détaille forme du
 contrat, période d'essai, rémunération et réévaluation, discipline, fin de
 contrat, indemnité de licenciement — s'y reporter systématiquement, comme au
 décret statutaire d'un cadre d'emplois pour un titulaire.
@@ -3857,12 +4043,25 @@ l'ancienneté de services continus, ordres de grandeur usuels **à vérifier
 avant toute réponse ferme** : de l'ordre de **8 jours** pour les services
 courts, puis paliers croissants de l'ordre de **1 mois / 2 mois / 3 mois**.
 Ne jamais notifier sans confirmer le palier en version consolidée.
-**Indemnité de fin de contrat** (« prime de précarité ») : vise certains
-**CDD ≤ 1 an**, exclusions (poursuite en CDI, refus de CDI équivalent,
-saisonniers… — **liste à vérifier**), **taux plafonné** de la rémunération
-brute globale (ordre de 10 %, versement soumis à un **plafond de
-rémunération** de l'ordre de 2 fois le SMIC — **taux et plafond à vérifier
-en version consolidée**) avant tout calcul. **Démission** : préavis modulé selon l'ancienneté (**durées à
+**Indemnité de fin de contrat** (« prime de précarité » ; CGFP L554-3,
+version du 01/03/2022 ; décret 88-145, art. 39-1-1, version du 15/08/2022 ;
+consultés sur Légifrance le 03/11/2026) :
+- **Champ** : contrats sur emploi permanent ou pour **accroissement
+  temporaire** d'activité, d'une durée de **1 an au plus**, renouvellements
+  compris. Le texte ne vise pas l'accroissement saisonnier.
+- **Montant** : **10 %** de la rémunération brute globale perçue au titre du
+  contrat et de ses renouvellements ; versée au plus tard **1 mois** après
+  le terme.
+- **Non due** : si la rémunération brute globale dépasse **2 fois le SMIC
+  brut** applicable sur le territoire d'affectation ; si l'agent est nommé
+  stagiaire ou élève après concours ; s'il obtient un renouvellement ou un
+  nouveau contrat (CDD ou CDI) dans la même fonction publique ; si le
+  contrat n'est pas exécuté jusqu'à son terme ; s'il refuse un CDI pour le
+  même emploi ou un emploi similaire, chez le même employeur, à
+  rémunération au moins équivalente.
+- Le montant du SMIC est **volatil** : jamais de mémoire.
+
+**Démission** : préavis modulé selon l'ancienneté (**durées à
 vérifier**) ; l'employeur en prend acte, sans pouvoir discrétionnaire
 d'acceptation (à la différence du titulaire).
 
@@ -4202,11 +4401,21 @@ confirmer)
 - **Principe d'exclusivité** : cumul en principe **interdit**, sauf
   dérogations légales limitatives.
 - **Dérogations** : **activité accessoire sur autorisation préalable**, liste
-  réglementaire fermée (enseignement, activité agricole non commerciale,
-  travaux chez particuliers, secteur associatif, vendanges, missions
-  d'intérêt public — **CGFP art. R123-7 à R123-13** [ex-décret n° 2020-69,
-  abrogé et recodifié depuis le 1er février 2025, décret n° 2024-1038],
-  liste à vérifier avant instruction) ; **temps partiel pour création/reprise
+  réglementaire fermée de **CGFP art. R123-8** (13 activités dans la version
+  du 31/10/2026, consultée sur Légifrance le 03/11/2026) : expertise et
+  consultation ; enseignement et formation ; activité sportive ou
+  culturelle ; activité agricole au sens de L311-1 du code rural ; conjoint
+  collaborateur ; aide à domicile d'un proche ; travaux de faible importance
+  chez des particuliers ; activité d'intérêt général auprès d'une personne
+  publique ou privée à but non lucratif ; mission d'intérêt public de
+  coopération internationale ; services à la personne ; vente de biens
+  produits personnellement ; conduite d'un véhicule de transport scolaire
+  (12°, décret n° 2026-409, depuis le 29/05/2026) ; assistant familial
+  n'accueillant qu'un seul mineur ou jeune majeur (13°, décret n° 2026-1011,
+  depuis le 31/10/2026). Procédure : R123-7 à R123-13 [ex-décret n° 2020-69,
+  recodifié depuis le 1er février 2025, décret n° 2024-1038]. Ne pas ajouter
+  d'activité absente de la liste ; relire la version applicable à la date
+  de la demande ; **temps partiel pour création/reprise
   d'entreprise**
   (régime propre, durée limitée, conditions à vérifier) ; **poursuite d'une
   activité privée** dans une société pour un agent nouvellement recruté.
@@ -4234,15 +4443,29 @@ confirmer)
   avec elle, **de nature à compromettre l'indépendance** ; cumul d'un emploi
   permanent à temps complet avec d'autres emplois permanents à temps complet.
   Relire le texte entier et son champ avant d'appliquer l'une de ces interdictions.
+  CE, 29/09/2026, n° 495977, B (consulté sur Légifrance le 03/11/2026) :
+  l'interdiction de créer ou reprendre une entreprise (sauf objet exclusif
+  de toute activité professionnelle) ou d'appartenir aux organes de
+  direction d'une société s'applique même si l'entreprise n'a pas
+  d'activité réelle ou si l'agent n'y participe pas effectivement, sous
+  réserve des dérogations de L123-2 à L123-8.
   Sources de maintenance : CGFP L123-1, L123-5, L123-6, R123-2 et R123-6,
-  versions au 12/10/2026 du pack PISTE du 16/10/2026 ; consultation à renouveler
-  pour toute réponse nouvelle.
+  versions au 12/10/2026 du pack PISTE du 16/10/2026 ; R123-8 modifié au
+  31/10/2026 (décret n° 2026-1011) ; consultation à renouveler pour toute
+  réponse nouvelle.
 - **Contrôles de déconflit** : **départ vers le privé** et **cumul création
   d'entreprise** → contrôle **interne** (référent déontologue) pour la
   majorité des agents ; **saisine HATVP** requise pour les **emplois les plus
   exposés** (direction, encadrement supérieur, enjeux financiers ou de
   police) — **périmètre et seuils à vérifier**. Piège : le niveau de
-  contrôle dépend de l'emploi, pas du seul grade.
+  contrôle dépend de l'emploi, pas du seul grade. CE, Ass., 29/10/2026,
+  n° 514106, A (consulté sur Légifrance le 03/11/2026), à propos du
+  contrôle d'un agent **cessant ses fonctions** (L124-4) : un mandat
+  d'administrateur, même **bénévole**, dans une
+  société anonyme à but lucratif est une activité lucrative dans une
+  entreprise privée au sens de L124-4 ; pour le risque pénal de l'art.
+  432-13 du code pénal, l'autorité de contrôle apprécie un **risque**, au
+  regard des fonctions **effectivement exercées** en tant qu'agent public.
 - **Référent déontologue** : désignation **obligatoire** (possible
   mutualisation CDG), saisine ouverte à **tout agent**, rôle de conseil (la
   décision reste à l'autorité territoriale).
@@ -4284,9 +4507,17 @@ confirmer)
 - ⚠️ **Piège** : l'**inaction de l'employeur** (ou une réponse
   manifestement insuffisante) engage la **responsabilité de la
   collectivité**, indépendamment de la responsabilité de l'auteur des faits.
-- **Représailles** : toute mesure défavorable prise en raison d'un
-  signalement de bonne foi est susceptible d'être requalifiée en sanction
-  déguisée et annulée pour détournement de pouvoir.
+- **Représailles** : aucune mesure (recrutement, rémunération, discipline,
+  affectation, etc.) ne peut être prise contre un agent pour avoir effectué
+  un signalement ou une divulgation publique dans les conditions de la loi
+  n° 2016-1691 (CGFP L135-4). CE, 16/10/2026, n° 510479, A (consulté sur
+  Légifrance le 03/11/2026) : l'agent ne
+  peut pas davantage être sanctionné pour avoir rendu publique une sanction
+  prise contre lui en raison d'une alerte antérieure ; le droit d'alerte se
+  concilie avec l'obligation de réserve, et le juge apprécie l'objet de
+  l'alerte, ses suites et les conditions de la divulgation ; l'aménagement
+  de la charge de la preuve ne s'applique pas quand la mesure est
+  **expressément fondée** sur le signalement.
 
 ### 5.4 Données RH et RGPD
 

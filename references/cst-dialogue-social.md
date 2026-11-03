@@ -81,9 +81,18 @@ collective.
   **décembre 2022** ; prochain scrutin fixé au **10 décembre 2026** (arrêté
   ministériel du 2 juillet 2025), calendrier opérationnel et règles
   procédurales harmonisées précisés par le décret n° 2025-1430 du
-  30 décembre 2025 (délais de procédure portés de 3-5 à 8 jours notamment —
-  détail à confirmer en version consolidée). Déterminent la composition des
-  instances et la représentativité syndicale.
+  30 décembre 2025. Points vérifiés en version consolidée (CGFP, versions
+  du 01/01/2026, consultées sur Légifrance le 03/11/2026) : inéligibilité
+  d'un candidat constatée dans les **8 jours francs** suivant la date limite
+  de dépôt des listes, puis rectification par le délégué de liste sous
+  **3 jours francs** (R211-62 ; R211-64 pour le point de départ en cas de
+  contestation et le remplacement d'un candidat devenu inéligible) ;
+  inéligibilité au CST des titulaires d'un emploi fonctionnel de direction
+  dans leur collectivité (R211-40, 4°). Autres modifications du décret : à
+  relire avant usage. Le vote électronique peut s'appuyer sur l'ENSAP
+  (décret n° 2026-1000 du 26/10/2026, connu par résumé seulement : à
+  confirmer). Déterminent la composition des instances et la
+  représentativité syndicale. Après le scrutin, mettre à jour cette section.
 
 ### 5.3 Droit syndical
 - **ASA** (autorisations spéciales d'absence), **décharges d'activité de

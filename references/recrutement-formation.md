@@ -110,11 +110,14 @@ apprentissage (financement, maître d'apprentissage, titularisation handicap).
     apprentis reconnus travailleurs handicapés à l'issue de leur contrat.
     ⚠️ **L'expérimentation (art. 91 loi n° 2019-828, décret n° 2020-530)
     est arrivée à échéance le 6 août 2025** et le dispositif reste, à ce
-    jour, **sans base légale**. Sa pérennisation (délai porté à 2 ans après
-    la fin du contrat) est portée par l'**art. 3 du PJL n° 438 (2025-2026)**,
+    jour, **sans base légale**. Sa pérennisation est portée par l'**art. 3
+    du PJL n° 438 (2025-2026)**, qui créerait un art. L352-4-1 du CGFP,
     déposé au Sénat le 25 février 2026 en procédure accélérée, avis
     favorable du Conseil commun de la fonction publique du 13 janvier
-    2026 — **non promulgué à ce stade**. **Vérifier impérativement l'état
+    2026 — **non promulgué au 03/11/2026** (L352-4-1 absent de Légifrance ;
+    dossier du Sénat sans adoption à sa mise à jour du 01/09/2026). Les
+    conditions annoncées (délai après la fin du contrat) ne sont pas
+    confirmées par la lettre du texte. **Vérifier impérativement l'état
     du dossier législatif (senat.fr) et la vigueur du dispositif avant
     d'orienter un apprenti vers cette voie** — ne pas la présenter comme
     ouverte sans confirmation sur Légifrance.
@@ -190,7 +193,7 @@ bourse de l'emploi ; règles de prise en charge CPF ; durées des formations
 obligatoires ; taux de contribution du CNFPT au financement de
 l'apprentissage ; conditions d'ouverture de la NBI au maître d'apprentissage ;
 état du dispositif de titularisation des apprentis en situation de handicap
-(échéance du 6 août 2025, pérennisation à confirmer).
+(échéance du 6 août 2025, pérennisation non adoptée au 03/11/2026).
 
 ## 10. Livrables (classés par niveau)
 

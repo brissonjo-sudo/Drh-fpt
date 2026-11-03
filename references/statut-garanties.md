@@ -103,11 +103,21 @@ confirmer)
 - **Principe d'exclusivité** : cumul en principe **interdit**, sauf
   dérogations légales limitatives.
 - **Dérogations** : **activité accessoire sur autorisation préalable**, liste
-  réglementaire fermée (enseignement, activité agricole non commerciale,
-  travaux chez particuliers, secteur associatif, vendanges, missions
-  d'intérêt public — **CGFP art. R123-7 à R123-13** [ex-décret n° 2020-69,
-  abrogé et recodifié depuis le 1er février 2025, décret n° 2024-1038],
-  liste à vérifier avant instruction) ; **temps partiel pour création/reprise
+  réglementaire fermée de **CGFP art. R123-8** (13 activités dans la version
+  du 31/10/2026, consultée sur Légifrance le 03/11/2026) : expertise et
+  consultation ; enseignement et formation ; activité sportive ou
+  culturelle ; activité agricole au sens de L311-1 du code rural ; conjoint
+  collaborateur ; aide à domicile d'un proche ; travaux de faible importance
+  chez des particuliers ; activité d'intérêt général auprès d'une personne
+  publique ou privée à but non lucratif ; mission d'intérêt public de
+  coopération internationale ; services à la personne ; vente de biens
+  produits personnellement ; conduite d'un véhicule de transport scolaire
+  (12°, décret n° 2026-409, depuis le 29/05/2026) ; assistant familial
+  n'accueillant qu'un seul mineur ou jeune majeur (13°, décret n° 2026-1011,
+  depuis le 31/10/2026). Procédure : R123-7 à R123-13 [ex-décret n° 2020-69,
+  recodifié depuis le 1er février 2025, décret n° 2024-1038]. Ne pas ajouter
+  d'activité absente de la liste ; relire la version applicable à la date
+  de la demande ; **temps partiel pour création/reprise
   d'entreprise**
   (régime propre, durée limitée, conditions à vérifier) ; **poursuite d'une
   activité privée** dans une société pour un agent nouvellement recruté.
@@ -135,15 +145,29 @@ confirmer)
   avec elle, **de nature à compromettre l'indépendance** ; cumul d'un emploi
   permanent à temps complet avec d'autres emplois permanents à temps complet.
   Relire le texte entier et son champ avant d'appliquer l'une de ces interdictions.
+  CE, 29/09/2026, n° 495977, B (consulté sur Légifrance le 03/11/2026) :
+  l'interdiction de créer ou reprendre une entreprise (sauf objet exclusif
+  de toute activité professionnelle) ou d'appartenir aux organes de
+  direction d'une société s'applique même si l'entreprise n'a pas
+  d'activité réelle ou si l'agent n'y participe pas effectivement, sous
+  réserve des dérogations de L123-2 à L123-8.
   Sources de maintenance : CGFP L123-1, L123-5, L123-6, R123-2 et R123-6,
-  versions au 12/10/2026 du pack PISTE du 16/10/2026 ; consultation à renouveler
-  pour toute réponse nouvelle.
+  versions au 12/10/2026 du pack PISTE du 16/10/2026 ; R123-8 modifié au
+  31/10/2026 (décret n° 2026-1011) ; consultation à renouveler pour toute
+  réponse nouvelle.
 - **Contrôles de déconflit** : **départ vers le privé** et **cumul création
   d'entreprise** → contrôle **interne** (référent déontologue) pour la
   majorité des agents ; **saisine HATVP** requise pour les **emplois les plus
   exposés** (direction, encadrement supérieur, enjeux financiers ou de
   police) — **périmètre et seuils à vérifier**. Piège : le niveau de
-  contrôle dépend de l'emploi, pas du seul grade.
+  contrôle dépend de l'emploi, pas du seul grade. CE, Ass., 29/10/2026,
+  n° 514106, A (consulté sur Légifrance le 03/11/2026), à propos du
+  contrôle d'un agent **cessant ses fonctions** (L124-4) : un mandat
+  d'administrateur, même **bénévole**, dans une
+  société anonyme à but lucratif est une activité lucrative dans une
+  entreprise privée au sens de L124-4 ; pour le risque pénal de l'art.
+  432-13 du code pénal, l'autorité de contrôle apprécie un **risque**, au
+  regard des fonctions **effectivement exercées** en tant qu'agent public.
 - **Référent déontologue** : désignation **obligatoire** (possible
   mutualisation CDG), saisine ouverte à **tout agent**, rôle de conseil (la
   décision reste à l'autorité territoriale).
@@ -185,9 +209,17 @@ confirmer)
 - ⚠️ **Piège** : l'**inaction de l'employeur** (ou une réponse
   manifestement insuffisante) engage la **responsabilité de la
   collectivité**, indépendamment de la responsabilité de l'auteur des faits.
-- **Représailles** : toute mesure défavorable prise en raison d'un
-  signalement de bonne foi est susceptible d'être requalifiée en sanction
-  déguisée et annulée pour détournement de pouvoir.
+- **Représailles** : aucune mesure (recrutement, rémunération, discipline,
+  affectation, etc.) ne peut être prise contre un agent pour avoir effectué
+  un signalement ou une divulgation publique dans les conditions de la loi
+  n° 2016-1691 (CGFP L135-4). CE, 16/10/2026, n° 510479, A (consulté sur
+  Légifrance le 03/11/2026) : l'agent ne
+  peut pas davantage être sanctionné pour avoir rendu publique une sanction
+  prise contre lui en raison d'une alerte antérieure ; le droit d'alerte se
+  concilie avec l'obligation de réserve, et le juge apprécie l'objet de
+  l'alerte, ses suites et les conditions de la divulgation ; l'aménagement
+  de la charge de la preuve ne s'applique pas quand la mesure est
+  **expressément fondée** sur le signalement.
 
 ### 5.4 Données RH et RGPD
 

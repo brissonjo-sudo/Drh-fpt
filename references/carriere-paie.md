@@ -116,15 +116,17 @@ Appliquer le noyau de vérification (matrice §2.2 du SKILL.md) dès que :
 - **Réglementaires, citables après consultation officielle de la version applicable** :
   plafonds ISFE (33/32/30 % ; 9 500/7 000/5 000 €), plafonds RIFSEEP par groupe
   de fonctions, contingent IHTS (25 h), garanties minimales de temps de travail
-  (décret 2000-815 : 10 h/jour, 48 h/semaine), plafond CET (60 jours) et seuil
-  de monétisation (15 jours épargnés, décret 2004-878), durée de la protection
+  (décret 2000-815 : 10 h/jour, 48 h/semaine), plafond CET (60 jours, arrêté
+  du 9 janvier 2024, art. 1) et seuil d'option (15 jours épargnés, décret
+  2004-878, art. 5), barème plancher/plafond de l'indemnité de rupture
+  conventionnelle (décret 2019-1596, version du 08/08/2026), durée de la protection
   des 6 mois des emplois fonctionnels et effet différé de la décharge (art.
   L. 544-1 CGFP), exclusion ARE de l'abandon de poste (décret 2020-741).
   Rappel : un taux plafond est stable, le montant en euros qui en découle
   dépend du point (volatile).
 - **Registre de vérification interne (maintenance)** :
   `references/cache-plafonds-regime-indemnitaire.md` consigne les plafonds
-  réglementaires déjà vérifiés (ISFE) et les gaps à combler (RIFSEEP attachés).
+  réglementaires déjà vérifiés (ISFE, RIFSEEP attachés) et leurs réserves.
   C'est un **aide-mémoire de maintenance, jamais une source** : toujours
   reconfirmer la valeur en vigueur avant usage en acte, et **ne pas le citer**
   comme référence dans un livrable formel.
@@ -159,7 +161,8 @@ une condition ou une autorité non vérifiée ne répare pas son affirmation.
   indivisible État) ; nature non disciplinaire de la décharge de fonctions ;
   auto-assurance chômage obligatoire pour titulaires/stagiaires.
 - **À vérifier** : toute valeur chiffrée ; plafonds RIFSEEP/ISFE ; règles de
-  retraite (dont retraite progressive) ; rupture conventionnelle ; liste
+  retraite (dont retraite progressive et cumul emploi-retraite) ; version
+  applicable à la date de la convention de rupture conventionnelle ; liste
   exacte des positions ; durée exacte de la protection des 6 mois et de
   l'effet différé des emplois fonctionnels ; périmètre du service minimum
   (art. 56 loi 2019-828) ; conditions du droit à l'ARE en cas d'abandon de
