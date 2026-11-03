@@ -24,10 +24,13 @@ class NativeFlowTests(unittest.TestCase):
             self.assertTrue((folder/'runtime/14-echec-mauvaise-fp/_runtime.json').exists())
 
     def test_pending_game_stops_before_any_provider_call(self):
-        with patch.object(campaign,'complete') as call:
+        with patch.object(campaign.suites,'load_suite',side_effect=ValueError('Barèmes non approuvés')),\
+             patch.object(campaign,'complete') as call,\
+             patch('claude_cli.complete_cli') as claude_call:
             with self.assertRaisesRegex(SystemExit,'approuv'):
                 campaign.main(['--suite','qualification-a-v1','--provider','codex','--mode','degraded'])
             call.assert_not_called()
+            claude_call.assert_not_called()
 
     def test_failed_claude_call_is_reported_and_original_trace_preserved(self):
         with tempfile.TemporaryDirectory() as tmp:

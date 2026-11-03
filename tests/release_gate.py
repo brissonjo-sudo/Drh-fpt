@@ -49,7 +49,7 @@ def compare_provenances(integration, degraded, expected_commit):
             problems.append(field+' différent ou absent entre campagnes')
     for field in ['suite','suite_registry_sha256','suite_seal_sha256','execution_profile',
                   'provider_repondant','modele_repondant','effort_repondant',
-                  'provider_juge','modele_juge','effort_juge','context_mode']:
+                  'provider_juge','modele_juge','effort_juge','context_mode','quota_policy']:
         if integration.get(field)!=degraded.get(field):problems.append(field+' différent entre modes')
     left=integration.get('drh_fpt') or {};right=degraded.get('drh_fpt') or {}
     if not left.get('sha256_bundle') or left.get('sha256_bundle')!=right.get('sha256_bundle'):

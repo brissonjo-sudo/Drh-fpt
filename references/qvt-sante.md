@@ -31,6 +31,18 @@ invalidité ; égalité professionnelle (plan d'action, nominations
 - **Origine de l'affection** : maladie ordinaire vs imputable au service (CITIS).
 - **Organisation locale** : médecine de prévention interne ou conventionnée ;
   délibération télétravail ; offre d'action sociale (CNAS, COS).
+- **Reprise après congé et temps partiel thérapeutique** : recueillir la
+  demande et le certificat médical mentionnant quotité, durée et modalités
+  prescrites, la date de reprise, les droits à congé restants et, le cas
+  échéant, l'examen ou les conclusions du médecin agréé. Identifier les
+  fonctions qui exigent des conditions de santé particulières et une
+  éventuelle procédure engagée au titre de l'article 24 du décret 87-602 :
+  ces données peuvent modifier le contrôle de la saisine du conseil médical
+  pour la réintégration après un congé de longue maladie ou de longue durée.
+  Vérifier aussi l'information du médecin de prévention, les aménagements
+  du poste et chaque composante de rémunération, y compris les primes.
+  En dégradé, conserver ces éléments comme questions documentaires, sans
+  certifier une saisine, une compétence, un délai ou un droit au maintien.
 - **PSC** : date de référence, couverture santé ou prévoyance, contrats ou
   conventions de participation et leurs échéances, délibération locale,
   existence d'un **accord collectif**, validité et clauses d'adhésion/dispense.
@@ -69,7 +81,33 @@ invalidité ; égalité professionnelle (plan d'action, nominations
   et **décret n° 2019-301 du 10 avril 2019** (CITIS dans la FPT) — *ne pas
   viser le décret n° 2019-122 du 21 février 2019, propre à la fonction publique
   d'État*.
-- **Temps partiel thérapeutique** : reprise progressive, sur avis médical.
+- **Temps partiel thérapeutique** (décret 87-602, titre II bis, modifié par
+  le décret n° 2026-705 du 29 juillet 2026) : distinguer demande, décision,
+  reprise après congé, renouvellement et interruption. La demande est
+  accompagnée d'un certificat médical mentionnant quotité, durée et modalités
+  prescrites (art. 13-1). Après un CLM, un CLD, un CITIS ou une disponibilité
+  pour raison de santé, et en cas de renouvellement, la décision intervient
+  au plus tard au jour de la reprise ; dans les autres cas, au plus tard
+  trente jours après réception de la demande. L'autorité territoriale **peut**
+  faire examiner l'agent par un médecin agréé ; l'autorisation est accordée
+  dans la limite d'une année. Refus et interruption à l'initiative de
+  l'employeur sont motivés ; fondés sur la continuité du service, ils sont
+  précédés d'un entretien (assistance possible) ; fondés sur un motif
+  médical, ils exigent l'avis préalable du médecin agréé (art. 13-2). Les
+  conclusions du médecin agréé peuvent être contestées devant le conseil
+  médical en formation restreinte, l'autorisation en cours étant prolongée
+  jusqu'à son avis (art. 13-5). Le médecin de prévention est informé des
+  demandes et autorisations (art. 13-8). Saisine du conseil médical pour la
+  réintégration après CLM/CLD lorsque les fonctions exigent des conditions de
+  santé particulières ou après la procédure de l'article 24 (art. 5, I, 4°).
+  **Transition** : l'article 11 du décret 2026-705 vise les autorisations
+  accordées ou prolongées à compter du 1er août 2026 ; pour une autorisation
+  antérieure, consulter la version alors applicable des articles 13-2 à 13-6.
+  Sources : art. 13-1 (LEGIARTI000044311735), 13-2 (LEGIARTI000054641703),
+  13-5 (LEGIARTI000054641706), 13-8 (LEGIARTI000044311749), 5
+  (LEGIARTI000054641701) et 24 (LEGIARTI000049428885), versions en vigueur
+  consultées sur Légifrance le 03/11/2026 ; article 11 du décret 2026-705 lu
+  au JORF (JORFTEXT000054570030) le même jour.
 
 ### 5.4 Handicap
 - **Obligation d'emploi** de travailleurs handicapés : taux légal, applicable
@@ -212,17 +250,25 @@ fonctions adaptées, ou constate l'inaptitude.
   grade). Absence de recherche sérieuse = illégalité de la décision qui
   suivrait.
 - **Période de préparation au reclassement (PPR)** : droit reconnu à
-  l'agent déclaré inapte à ses fonctions ; durée de principe **1 an**, avec
-  **report possible du point de départ** (≤ 2 mois, sur accord des parties,
-  à compter de l'avis du conseil médical). Les congés prévus par le texte
-  reportent également la fin de la PPR. Après la PPR, l'agent ayant demandé
+  l'agent déclaré inapte à ses fonctions ; durée de principe **1 an** au
+  plus, la PPR prenant fin au reclassement. Elle débute à la réception de
+  l'avis du conseil médical par l'autorité (ou, sur demande de l'agent, à la
+  date de la saisine). **Report initial par accord** entre le fonctionnaire et
+  l'autorité territoriale (ou le président du CNFPT ou du CDG), **≤ 2 mois**,
+  l'agent restant en activité. Distinct de ce report : si l'agent est en
+  congé pour raison de santé, CITIS, maternité ou congé lié aux charges
+  parentales (CGFP L631-6 à L631-9) à la saisine ou à la réception de l'avis,
+  la PPR débute à la reprise ; ces congés survenus pendant la PPR reportent
+  sa fin d'autant. Après la PPR, l'agent ayant demandé
   son reclassement peut être **maintenu en activité jusqu'à trois mois** :
   ce maintien est distinct d'une prolongation de la PPR. Maintien du
   traitement pendant la période ; formalisée par une
   **convention** entre l'agent, l'employeur et le CNFPT ou le CDG compétent.
   Base consolidée : **décret n° 85-1054, articles 2 à 2-2**, modifié
-  notamment par les décrets n° 2019-172 et n° 2022-626 —
-  **référence et durées à confirmer en version consolidée**.
+  notamment par les décrets n° 2019-172 et n° 2022-626. Articles 2
+  (LEGIARTI000045649957) et 2-2 (LEGIARTI000045649966), en vigueur depuis le
+  01/05/2022, consultés sur Légifrance le 03/11/2026 ; l'article 2-1
+  (traitement) reste **à confirmer en version consolidée**.
 - **Disponibilité d'office pour raison de santé** : prononcée lorsque les
   droits à congé sont épuisés et que l'agent n'est ni apte à la reprise ni
   reclassé à ce stade. Durée et renouvellements, articulation

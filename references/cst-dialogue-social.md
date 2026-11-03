@@ -29,6 +29,15 @@ collective.
   200 agents** (acquise ici).
 - **Objet de la consultation** : détermine quelle instance saisir et si l'avis
   est préalable obligatoire.
+- **Séance, avis et réexamen** : reprendre les faits déjà fournis, notamment
+  un vote unanime défavorable des représentants du personnel et le besoin
+  d'une délibération pour mettre en œuvre la question. Réunir le
+  procès-verbal, la composition et le quorum de la première séance, ainsi
+  que la délibération locale prévoyant éventuellement le recueil de l'avis
+  des représentants de la collectivité (collège employeur). Distinguer ces
+  contrôles de ceux d'un réexamen : objet, convocation, calendrier,
+  composition et suites du nouvel avis. En dégradé, proposer seulement un
+  plan conditionnel avec ces points à vérifier.
 
 ## 5. Règles métier
 
@@ -48,6 +57,24 @@ collective.
   discipline (voir branche carrière-paie).
 - **CCP** (commission consultative paritaire) : équivalent pour les
   **contractuels**.
+- **Avis du CST et réexamen** : l'avis est émis à la majorité des
+  représentants du personnel ayant voix délibérative présents (partage égal :
+  avis réputé donné). Les représentants de la collectivité ne votent que si
+  une délibération a prévu le recueil de leur avis sur le point concerné
+  (R252-37) ; chaque collège émet alors son avis à la majorité de ses membres
+  présents (R254-65, R254-66). Lorsqu'une question soumise au titre de
+  R253-7, dont la mise en œuvre nécessite une délibération, recueille un
+  **vote unanime défavorable** des représentants du personnel, elle est
+  réexaminée : nouvelle délibération dans un délai de **8 à 30 jours**,
+  nouvelle convocation adressée dans le délai de huit jours au moins à
+  compter de la première séance ; le comité siège alors valablement quel
+  que soit le nombre de représentants du personnel présents, et cette
+  procédure ne peut être répétée (R254-68). Sources : CGFP R252-37
+  (LEGIARTI000050549571), R254-65 (LEGIARTI000050550145), R254-66
+  (LEGIARTI000050550147) et R254-68 (LEGIARTI000050550151), en vigueur depuis
+  le 01/02/2025, consultés sur Légifrance le 03/11/2026. Les anciens articles
+  du titre IV du décret n° 2021-571 sont signalés abrogés sur Légifrance :
+  ne plus les viser.
 
 ### 5.2 Élections et représentativité
 - **Élections professionnelles** : tous les **4 ans**. Dernier renouvellement

@@ -6,6 +6,33 @@ import providers
 
 
 class CodexProviderTests(unittest.TestCase):
+    def test_all_cli_failure_paths_retain_the_original_stdout(self):
+        fixtures = [(1, [{'type': 'error', 'message': 'fixture'}]),
+                    (0, [{'type': 'turn.failed'}]),
+                    (0, [{'type': 'error'}]),
+                    (0, [{'type': 'item.completed', 'item': {'type': 'command_execution'}}]),
+                    (0, [{'type': 'item.completed', 'item': {'type': 'agent_message', 'text': 'partial'}}]),
+                    (0, [['not-an-event']]), (0, [{'type': []}]),
+                    (0, [{'type': {}}]), (0, [{'type': None}]),
+                    (0, [{'type': 'item.completed', 'item': 'not-an-item'}]),
+                    (0, [{'type': 'item.completed', 'item': {'type': 'agent_message', 'text': 3}}]),
+                    (0, [{'type': 'turn.completed', 'usage': []}])]
+        for code, events in fixtures:
+            raw = '\n'.join(json.dumps(e) for e in events)
+            with self.subTest(code=code, events=events), patch('providers.subprocess.run',
+                    return_value=subprocess.CompletedProcess([], code, raw, 'private stderr')):
+                with self.assertRaises(providers.ApiCallError) as caught:
+                    providers.complete('codex', '', 'model', 'S', 'Q', 100)
+                self.assertEqual(caught.exception.provider_trace, providers.annotate_codex_trace(raw, 'model'))
+                self.assertNotIn('private stderr', str(caught.exception))
+
+    def test_non_json_line_is_rejected_with_its_trace(self):
+        raw = 'not json\n' + json.dumps({'type': 'turn.completed', 'usage': {}})
+        with patch('providers.subprocess.run', return_value=subprocess.CompletedProcess([], 0, raw, '')):
+            with self.assertRaisesRegex(providers.ApiCallError, 'mal formée') as caught:
+                providers.complete('codex', '', 'model', 'S', 'Q', 100)
+        self.assertTrue(caught.exception.provider_trace.endswith(raw))
+
     def test_timeout_retains_partial_provider_trace(self):
         partial=b'{"type":"thread.started","thread_id":"incomplete"}\n'
         with patch('providers.subprocess.run',side_effect=subprocess.TimeoutExpired(['codex'],300,output=partial)):

@@ -4,6 +4,27 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
 ## [Non publié] — v0.7.1
 
+### Portage des correctifs locaux du 13/10/2026 — 2026-11-03 (non qualifié)
+- Règles revérifiées sur Légifrance (versions en vigueur au 03/11/2026) :
+  ISFE, exceptions de l'article 6 du décret 2024-614 sans la NBI et
+  distinction avec le RIFSEEP ; emploi fonctionnel, quatre options de L544-4
+  et gestionnaire de la prise en charge (L542-6/L542-7) ; PPR, report initial
+  par accord et reports liés aux congés (décret 85-1054, art. 2) ; CST, avis
+  du collège employeur et réexamen après vote unanime défavorable (R252-37,
+  R254-65, R254-66, R254-68).
+- Temps partiel thérapeutique mis à jour selon le décret n° 2026-705
+  (art. 13-1, 13-2, 13-5 et 13-8 du décret 87-602, transition au 01/08/2026).
+- Couverture finale : recherche effective avant licenciement, issues selon
+  l'affiliation, répartition de la preuve en dégradé, version applicable à
+  la date de référence et maquette conditionnelle non exécutable.
+- Harnais : admission selon le quota Claude (`tests/quota_guard.py`),
+  précontrôles de lancement, refus des sources en qualification dégradée,
+  traces Codex mal formées rejetées avec leur trace annotée ; juge recentré
+  sur les doutes de conformité aux critères. Barème de développement 07-c06 :
+  sigle historique ISMF admis.
+- Non repris : rapport de qualification du 13/10 et ses archives, devenus
+  caducs depuis la clôture du jeu A.
+
 ### Portage Microsoft 365 Copilot — 2026-11-03 (non testé dans Copilot)
 - Agent Builder : [guide de création](copilot/README.md), instructions
   condensées sous la limite de 8 000 caractères et 16 fiches .docx générées

@@ -34,6 +34,30 @@ intégration/dégradé (juge Codex), puis développement ciblé avec
 `gpt-6.1-sol` / `gpt-6-sol`, efforts `high`. Le cycle A compte au maximum
 76 réponses et 76 jugements, hors rédaction, revue des cas et arbitrages.
 
+### Admission selon le quota Claude
+
+La qualification vérifie la consommation du jeu avant tout diagnostic, puis
+le quota avant chaque appel Claude. Les diagnostics `OK` utilisent le modèle
+et l'effort du rôle, sans scénario ni outils ; leurs traces sont séparées dans
+`resultats/_claude_quota/probes`. Ils s'ajoutent aux diagnostics du budget.
+Les fenêtres cinq heures et sept jours sont lues dans les événements du CLI.
+À partir de 50 % ou 85 % respectivement, le processus attend la réinitialisation
+annoncée, puis contrôle à nouveau. Les appels Claude sont sérialisés entre
+processus par un verrou de l'OS, libéré si un processus se termine.
+
+L'attente précède l'ouverture de la réponse : aucun cas n'est régénéré,
+aucun jugement n'est rejoué et aucune session fournisseur n'est reprise.
+Les versions, le candidat, le compagnon et les preuves sont recontrôlés après
+l'attente. Une connexion à renouveler attend le flux normal ; aucune mutation
+du magasin permanent. Un échec du véritable appel reste un échec du jeu.
+Le quota est partagé avec les autres usages du compte : cette marge réduit
+le risque sans garantir la disponibilité. Une campagne peut nécessiter
+plusieurs fenêtres et son processus doit rester actif. Les consultations doivent
+être réellement fraîches au démarrage de chaque profil ; après réservation,
+le corpus est immuable et son intégrité est recontrôlée avec cette date de début.
+Pour le profil suivant, renouveler les consultations expirées dans un dossier
+distinct. Aucun horodatage d'une campagne active n'est remplacé.
+
 ### Profil Claude natif
 
 `--provider claude-cli --execution-profile claude-native` prépare un projet

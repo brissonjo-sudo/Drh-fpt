@@ -22,6 +22,31 @@ def profiles():
 
 
 class SuiteTests(unittest.TestCase):
+    def test_active_run_validation_refuses_closure_or_substitution(self):
+        with tempfile.TemporaryDirectory() as folder:
+            state = Path(folder)/'launches.json'
+            suite = {'name': 'qualification-a-v1', 'seal_sha256': 'c'*64}
+            game = {'seal_sha256': 'c'*64, 'runtime_commit': 'a'*40,
+                    'runs': {'codex:integration': 'run'}}
+            state.write_text(json.dumps({suite['name']: game}), encoding='utf8')
+            suites.validate_active_launch(suite, state, 'codex:integration', 'run', 'a'*40)
+            for change in [{'outcome': 'failed'}, {'outcome': 'passed'},
+                           {'runtime_commit': 'b'*40}, {'runs': {'codex:integration': 'other'}}]:
+                state.write_text(json.dumps({suite['name']: {**game, **change}}), encoding='utf8')
+                with self.assertRaises(ValueError):
+                    suites.validate_active_launch(suite, state, 'codex:integration', 'run', 'a'*40)
+
+    def test_closed_game_refused_by_read_only_preflight(self):
+        with tempfile.TemporaryDirectory() as folder:
+            state = Path(folder)/'launches.json'
+            state.write_text(json.dumps({'qualification-a-v1': {
+                'outcome': 'failed', 'seal_sha256': 'c'*64, 'runtime_commit': 'a'*40,
+                'runs': {'codex:integration': 'old'}}}), encoding='utf8')
+            suite = {'name': 'qualification-a-v1', 'qualification': True,
+                     'seal_sha256': 'c'*64, 'runtime_commit': 'a'*40}
+            with self.assertRaisesRegex(ValueError, 'clos'):
+                suites.preflight_launch(suite, state, 'codex:degraded', 'a'*40)
+
     def test_legacy_default_and_targeted_exact_ids(self):
         legacy = suites.load_suite('developpement')
         targeted = suites.load_suite('regression-ciblee-v1')
@@ -31,9 +56,16 @@ class SuiteTests(unittest.TestCase):
         self.assertFalse(targeted['qualification'])
 
     def test_pending_qualification_refused(self):
-        for name in ['qualification-a-v1','qualification-reserve-v1']:
-            with self.assertRaisesRegex(ValueError, 'approuv'):
-                suites.load_suite(name)
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            registry = root/'suites.json'
+            names = ['qualification-a-v1', 'qualification-reserve-v1']
+            registry.write_text(json.dumps({'schema_version': 1, 'suites': {
+                name: {'qualification': True, 'state': 'pending-human-approval',
+                       'path': 'cases.json', 'seal': name + '.json'} for name in names}}), encoding='utf8')
+            for name in names:
+                with self.assertRaisesRegex(ValueError, 'approuv'):
+                    suites.load_suite(name, registry=registry)
 
     def test_unknown_suite_refused(self):
         with self.assertRaises(ValueError):

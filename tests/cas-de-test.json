@@ -374,7 +374,7 @@
       },
       {
         "id": "07-c06",
-        "texte": "Régimes indemnitaires antérieurs propres à la police municipale correctement nommés : décrets n° 97-702, 2000-45 et 2006-1397 (ne pas dire « ISMF » ni inventer un autre sigle)"
+        "texte": "Régimes indemnitaires antérieurs propres à la police municipale correctement nommés : décrets n° 97-702, 2000-45 et 2006-1397 ; ne pas inventer un régime ou un sigle. Un sigle historique attesté comme ISMF (indemnité spéciale mensuelle de fonctions, décret n° 97-702) est admissible lorsqu'il désigne l'ancien régime, distinct de l'ISFE actuelle."
       },
       {
         "id": "07-c07",
@@ -383,7 +383,7 @@
     ],
     "echec_si": [
       "Applique le RIFSEEP à la police municipale",
-      "Invente un texte ou un sigle (ex. « ISMF ») pour les régimes indemnitaires antérieurs",
+      "Invente un texte, un régime ou un sigle non attesté pour les régimes indemnitaires antérieurs, ou confond l'ancien régime avec l'ISFE actuelle",
       "Date l'entrée en vigueur de l'ISFE au 1er janvier 2025 au lieu de 2024",
       "Omet l'avis préalable du CST avant la délibération"
     ],

@@ -137,6 +137,40 @@ def validate_profile(suite: dict, slot: str, actual: dict) -> None:
         raise ValueError('Profil différent des modèles/efforts/CLI approuvés')
 
 
+def preflight_launch(suite: dict, state: Path, slot: str, commit: str) -> None:
+    """Lecture seule avant tout diagnostic, puis recontrôle atomique au claim."""
+    if not suite.get('qualification'):
+        return
+    if not suite.get('reserve_for') and commit != suite.get('runtime_commit'):
+        raise ValueError('Runtime différent du commit gelé')
+    if slot not in SLOTS:
+        raise ValueError('Configuration de qualification inconnue')
+    data = json.loads(state.read_text(encoding='utf8')) if state.exists() else {}
+    game = data.get(suite['name'])
+    if game:
+        if game.get('outcome'):
+            raise ValueError('Jeu clos et consommé : tout nouveau créneau est interdit')
+        if game.get('runtime_commit') != commit:
+            raise ValueError('Runtime différent du commit de ce jeu consommé')
+        if game.get('seal_sha256') != suite['seal_sha256']:
+            raise ValueError('Jeu consommé avec un autre gel')
+        if slot in game.get('runs', {}):
+            raise ValueError('Créneau déjà consommé ; aucune relance de score')
+    if suite.get('reserve_for') and data.get(suite['reserve_for'], {}).get('outcome') != 'failed':
+        raise ValueError('Réserve disponible uniquement après échec du jeu A')
+
+
+def validate_active_launch(suite: dict, state: Path, slot: str, run_id: str, commit: str) -> None:
+    data = json.loads(state.read_text(encoding='utf8'))
+    game = data.get(suite['name']) or {}
+    if game.get('outcome'):
+        raise ValueError('Jeu clos : tout nouvel appel est interdit')
+    if (game.get('seal_sha256') != suite['seal_sha256']
+        or game.get('runtime_commit') != commit
+        or game.get('runs', {}).get(slot) != run_id):
+        raise ValueError('Lancement actif absent ou substitué')
+
+
 def claim_launch(suite: dict, state: Path, slot: str, run_id: str, commit: str) -> None:
     """Réserver avant appel : une réponse ouverte ne peut pas devenir un nouveau jeu."""
     if not suite.get('qualification'):return
@@ -147,6 +181,7 @@ def claim_launch(suite: dict, state: Path, slot: str, run_id: str, commit: str) 
     descriptor=os.open(lock,os.O_CREAT|os.O_EXCL|os.O_WRONLY)
     try:
         os.close(descriptor)
+        preflight_launch(suite, state, slot, commit)
         data=json.loads(state.read_text(encoding='utf8')) if state.exists() else {}
         game=data.setdefault(suite['name'],{'seal_sha256':suite['seal_sha256'],'runtime_commit':commit,'runs':{}})
         if game.get('outcome'):raise ValueError('Jeu clos et consommé : tout nouveau créneau est interdit')

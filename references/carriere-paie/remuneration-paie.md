@@ -77,8 +77,15 @@ administrative**, qui ne prime jamais sur la loi ou le décret.
   institué par le **décret n° 2024-614 du 26 juin 2024** : **Indemnité Spéciale
   de Fonction et d'Engagement (ISFE)**, en deux parts (part fixe + part
   variable liée à l'engagement), fondée sur l'article **L. 714-13 du CGFP**.
-  Exclusive d'autres primes **sauf** IHTS, travail de nuit/dimanche/jours
-  fériés, astreintes et NBI. **Clause de sauvegarde** du montant antérieur.
+  Exclusive des autres primes et indemnités liées aux fonctions et à la
+  manière de servir, sauf les exceptions énumérées par l'**article 6** :
+  IHTS (décret du 14 janvier 2002) et primes compensant le travail de nuit,
+  le dimanche ou les jours fériés, les astreintes et le dépassement régulier
+  du cycle de travail (décret du 12 juillet 2001). La **NBI** reste soumise à
+  ses conditions propres : ne pas la présenter comme une exception énumérée
+  par cet article. Source : art. 6 (LEGIARTI000049799576), en vigueur depuis
+  le 29/06/2024, consulté sur Légifrance le 03/11/2026.
+  **Clause de sauvegarde** du montant antérieur.
   Décret **applicable le lendemain de sa publication (2024)** ; seuls les anciens régimes
   propres (décrets n° 97-702, 2000-45 et 2006-1397) sont **abrogés au 1er janvier
   2025** — ne pas dater l'entrée en vigueur de l'ISFE au 1/1/2025.

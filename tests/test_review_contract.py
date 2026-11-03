@@ -11,6 +11,31 @@ import context_loader
 
 
 class ReviewContractTests(unittest.TestCase):
+    def test_final_coverage_keeps_reclassification_connection_and_initial_ppr_deferral(self):
+        text = ' '.join(self.read('references/restitution-proportionnee.md').split())
+        for phrase in ['reclassement puis prise en charge éventuelle',
+                       'gestionnaire de la prise en charge', 'report initial par accord']:
+            self.assertTrue(phrase in text, 'Couverture finale absente : ' + phrase)
+
+    def test_degraded_act_request_still_produces_a_non_executable_template(self):
+        final = ' '.join(self.read('references/restitution-proportionnee.md').split())
+        self.assertIn('maquette conditionnelle', final)
+        self.assertIn('[DISPOSITIF À VALIDER]', final)
+        self.assertIn('non exécutable', final)
+
+    def test_therapeutic_return_identifies_medical_and_job_specific_controls(self):
+        text = ' '.join(self.read('references/qvt-sante.md').split())
+        for phrase in ['quotité, durée et modalités', 'conditions de santé particulières',
+                       'article 24', 'conclusions du médecin agréé',
+                       'information du médecin de prévention', 'décret n° 2026-705']:
+            self.assertIn(phrase, text)
+
+    def test_cst_reexamination_checks_first_meeting_and_employer_college(self):
+        text = ' '.join(self.read('references/cst-dialogue-social.md').split())
+        for phrase in ['première séance', 'collège employeur', 'quorum',
+                       'vote unanime défavorable', 'R254-68']:
+            self.assertIn(phrase, text)
+
     def test_native_reference_base_and_companion_activation_precede_analysis(self):
         opening=self.read('SKILL.md').split('## 1. Déclenchement')[0]
         self.assertTrue('répertoire contenant `SKILL.md`' in opening,'base de résolution native absente')

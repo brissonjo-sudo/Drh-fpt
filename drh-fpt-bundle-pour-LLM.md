@@ -66,9 +66,9 @@ description: >-
 metadata:
   version: 0.7.0
   statut: candidate ; huit branches dont carrière-paie divisée en trois modules
-  date_derniere_revue_methodologique: 2026-10-12
-  date_derniere_verification_sources: 2026-10-12
-  portee_verification_sources: ciblée PR18 ; ne certifie pas toutes les références ni une réponse future
+  date_derniere_revue_methodologique: 2026-11-03
+  date_derniere_verification_sources: 2026-11-03
+  portee_verification_sources: ciblée (PR18, puis portage du 03/11/2026) ; ne certifie pas toutes les références ni une réponse future
   perimetre: collectivités territoriales de plus de 350 agents
   dependances:
     - recherche-juridique >= 2.2.0 (obligatoire pour le fonctionnement nominal)
@@ -1920,8 +1920,15 @@ administrative**, qui ne prime jamais sur la loi ou le décret.
   institué par le **décret n° 2024-614 du 26 juin 2024** : **Indemnité Spéciale
   de Fonction et d'Engagement (ISFE)**, en deux parts (part fixe + part
   variable liée à l'engagement), fondée sur l'article **L. 714-13 du CGFP**.
-  Exclusive d'autres primes **sauf** IHTS, travail de nuit/dimanche/jours
-  fériés, astreintes et NBI. **Clause de sauvegarde** du montant antérieur.
+  Exclusive des autres primes et indemnités liées aux fonctions et à la
+  manière de servir, sauf les exceptions énumérées par l'**article 6** :
+  IHTS (décret du 14 janvier 2002) et primes compensant le travail de nuit,
+  le dimanche ou les jours fériés, les astreintes et le dépassement régulier
+  du cycle de travail (décret du 12 juillet 2001). La **NBI** reste soumise à
+  ses conditions propres : ne pas la présenter comme une exception énumérée
+  par cet article. Source : art. 6 (LEGIARTI000049799576), en vigueur depuis
+  le 29/06/2024, consulté sur Légifrance le 03/11/2026.
+  **Clause de sauvegarde** du montant antérieur.
   Décret **applicable le lendemain de sa publication (2024)** ; seuls les anciens régimes
   propres (décrets n° 97-702, 2000-45 et 2006-1397) sont **abrogés au 1er janvier
   2025** — ne pas dater l'entrée en vigueur de l'ISFE au 1/1/2025.
@@ -2466,6 +2473,18 @@ invalidité ; égalité professionnelle (plan d'action, nominations
 - **Origine de l'affection** : maladie ordinaire vs imputable au service (CITIS).
 - **Organisation locale** : médecine de prévention interne ou conventionnée ;
   délibération télétravail ; offre d'action sociale (CNAS, COS).
+- **Reprise après congé et temps partiel thérapeutique** : recueillir la
+  demande et le certificat médical mentionnant quotité, durée et modalités
+  prescrites, la date de reprise, les droits à congé restants et, le cas
+  échéant, l'examen ou les conclusions du médecin agréé. Identifier les
+  fonctions qui exigent des conditions de santé particulières et une
+  éventuelle procédure engagée au titre de l'article 24 du décret 87-602 :
+  ces données peuvent modifier le contrôle de la saisine du conseil médical
+  pour la réintégration après un congé de longue maladie ou de longue durée.
+  Vérifier aussi l'information du médecin de prévention, les aménagements
+  du poste et chaque composante de rémunération, y compris les primes.
+  En dégradé, conserver ces éléments comme questions documentaires, sans
+  certifier une saisine, une compétence, un délai ou un droit au maintien.
 - **PSC** : date de référence, couverture santé ou prévoyance, contrats ou
   conventions de participation et leurs échéances, délibération locale,
   existence d'un **accord collectif**, validité et clauses d'adhésion/dispense.
@@ -2504,7 +2523,33 @@ invalidité ; égalité professionnelle (plan d'action, nominations
   et **décret n° 2019-301 du 10 avril 2019** (CITIS dans la FPT) — *ne pas
   viser le décret n° 2019-122 du 21 février 2019, propre à la fonction publique
   d'État*.
-- **Temps partiel thérapeutique** : reprise progressive, sur avis médical.
+- **Temps partiel thérapeutique** (décret 87-602, titre II bis, modifié par
+  le décret n° 2026-705 du 29 juillet 2026) : distinguer demande, décision,
+  reprise après congé, renouvellement et interruption. La demande est
+  accompagnée d'un certificat médical mentionnant quotité, durée et modalités
+  prescrites (art. 13-1). Après un CLM, un CLD, un CITIS ou une disponibilité
+  pour raison de santé, et en cas de renouvellement, la décision intervient
+  au plus tard au jour de la reprise ; dans les autres cas, au plus tard
+  trente jours après réception de la demande. L'autorité territoriale **peut**
+  faire examiner l'agent par un médecin agréé ; l'autorisation est accordée
+  dans la limite d'une année. Refus et interruption à l'initiative de
+  l'employeur sont motivés ; fondés sur la continuité du service, ils sont
+  précédés d'un entretien (assistance possible) ; fondés sur un motif
+  médical, ils exigent l'avis préalable du médecin agréé (art. 13-2). Les
+  conclusions du médecin agréé peuvent être contestées devant le conseil
+  médical en formation restreinte, l'autorisation en cours étant prolongée
+  jusqu'à son avis (art. 13-5). Le médecin de prévention est informé des
+  demandes et autorisations (art. 13-8). Saisine du conseil médical pour la
+  réintégration après CLM/CLD lorsque les fonctions exigent des conditions de
+  santé particulières ou après la procédure de l'article 24 (art. 5, I, 4°).
+  **Transition** : l'article 11 du décret 2026-705 vise les autorisations
+  accordées ou prolongées à compter du 1er août 2026 ; pour une autorisation
+  antérieure, consulter la version alors applicable des articles 13-2 à 13-6.
+  Sources : art. 13-1 (LEGIARTI000044311735), 13-2 (LEGIARTI000054641703),
+  13-5 (LEGIARTI000054641706), 13-8 (LEGIARTI000044311749), 5
+  (LEGIARTI000054641701) et 24 (LEGIARTI000049428885), versions en vigueur
+  consultées sur Légifrance le 03/11/2026 ; article 11 du décret 2026-705 lu
+  au JORF (JORFTEXT000054570030) le même jour.
 
 ### 5.4 Handicap
 - **Obligation d'emploi** de travailleurs handicapés : taux légal, applicable
@@ -2647,17 +2692,25 @@ fonctions adaptées, ou constate l'inaptitude.
   grade). Absence de recherche sérieuse = illégalité de la décision qui
   suivrait.
 - **Période de préparation au reclassement (PPR)** : droit reconnu à
-  l'agent déclaré inapte à ses fonctions ; durée de principe **1 an**, avec
-  **report possible du point de départ** (≤ 2 mois, sur accord des parties,
-  à compter de l'avis du conseil médical). Les congés prévus par le texte
-  reportent également la fin de la PPR. Après la PPR, l'agent ayant demandé
+  l'agent déclaré inapte à ses fonctions ; durée de principe **1 an** au
+  plus, la PPR prenant fin au reclassement. Elle débute à la réception de
+  l'avis du conseil médical par l'autorité (ou, sur demande de l'agent, à la
+  date de la saisine). **Report initial par accord** entre le fonctionnaire et
+  l'autorité territoriale (ou le président du CNFPT ou du CDG), **≤ 2 mois**,
+  l'agent restant en activité. Distinct de ce report : si l'agent est en
+  congé pour raison de santé, CITIS, maternité ou congé lié aux charges
+  parentales (CGFP L631-6 à L631-9) à la saisine ou à la réception de l'avis,
+  la PPR débute à la reprise ; ces congés survenus pendant la PPR reportent
+  sa fin d'autant. Après la PPR, l'agent ayant demandé
   son reclassement peut être **maintenu en activité jusqu'à trois mois** :
   ce maintien est distinct d'une prolongation de la PPR. Maintien du
   traitement pendant la période ; formalisée par une
   **convention** entre l'agent, l'employeur et le CNFPT ou le CDG compétent.
   Base consolidée : **décret n° 85-1054, articles 2 à 2-2**, modifié
-  notamment par les décrets n° 2019-172 et n° 2022-626 —
-  **référence et durées à confirmer en version consolidée**.
+  notamment par les décrets n° 2019-172 et n° 2022-626. Articles 2
+  (LEGIARTI000045649957) et 2-2 (LEGIARTI000045649966), en vigueur depuis le
+  01/05/2022, consultés sur Légifrance le 03/11/2026 ; l'article 2-1
+  (traitement) reste **à confirmer en version consolidée**.
 - **Disponibilité d'office pour raison de santé** : prononcée lorsque les
   droits à congé sont épuisés et que l'agent n'est ni apte à la reprise ni
   reclassé à ce stade. Durée et renouvellements, articulation
@@ -3065,6 +3118,15 @@ collective.
   200 agents** (acquise ici).
 - **Objet de la consultation** : détermine quelle instance saisir et si l'avis
   est préalable obligatoire.
+- **Séance, avis et réexamen** : reprendre les faits déjà fournis, notamment
+  un vote unanime défavorable des représentants du personnel et le besoin
+  d'une délibération pour mettre en œuvre la question. Réunir le
+  procès-verbal, la composition et le quorum de la première séance, ainsi
+  que la délibération locale prévoyant éventuellement le recueil de l'avis
+  des représentants de la collectivité (collège employeur). Distinguer ces
+  contrôles de ceux d'un réexamen : objet, convocation, calendrier,
+  composition et suites du nouvel avis. En dégradé, proposer seulement un
+  plan conditionnel avec ces points à vérifier.
 
 ## 5. Règles métier
 
@@ -3084,6 +3146,24 @@ collective.
   discipline (voir branche carrière-paie).
 - **CCP** (commission consultative paritaire) : équivalent pour les
   **contractuels**.
+- **Avis du CST et réexamen** : l'avis est émis à la majorité des
+  représentants du personnel ayant voix délibérative présents (partage égal :
+  avis réputé donné). Les représentants de la collectivité ne votent que si
+  une délibération a prévu le recueil de leur avis sur le point concerné
+  (R252-37) ; chaque collège émet alors son avis à la majorité de ses membres
+  présents (R254-65, R254-66). Lorsqu'une question soumise au titre de
+  R253-7, dont la mise en œuvre nécessite une délibération, recueille un
+  **vote unanime défavorable** des représentants du personnel, elle est
+  réexaminée : nouvelle délibération dans un délai de **8 à 30 jours**,
+  nouvelle convocation adressée dans le délai de huit jours au moins à
+  compter de la première séance ; le comité siège alors valablement quel
+  que soit le nombre de représentants du personnel présents, et cette
+  procédure ne peut être répétée (R254-68). Sources : CGFP R252-37
+  (LEGIARTI000050549571), R254-65 (LEGIARTI000050550145), R254-66
+  (LEGIARTI000050550147) et R254-68 (LEGIARTI000050550151), en vigueur depuis
+  le 01/02/2025, consultés sur Légifrance le 03/11/2026. Les anciens articles
+  du titre IV du décret n° 2021-571 sont signalés abrogés sur Légifrance :
+  ne plus les viser.
 
 ### 5.2 Élections et représentativité
 - **Élections professionnelles** : tous les **4 ans**. Dernier renouvellement
@@ -4261,6 +4341,16 @@ compétence territoriale, les modalités et délais applicables. Cette piste
 ne certifie ni recevabilité, ni compétence, ni délai et ne permet pas de
 produire une notification prête à envoyer.
 
+Si un acte ou une décision est demandé, joindre une **maquette conditionnelle**
+explicitement **non exécutable**, avec champs à compléter :
+`[SIGNATAIRE À VÉRIFIER]`, `[FONDEMENTS À CONSULTER]`,
+`[FAITS ET PIÈCES À COMPLÉTER]`, `[DISPOSITIF À VALIDER]`,
+`[DATE D'EFFET À VÉRIFIER]`, `[FORMALITÉS ET RECOURS À VÉRIFIER]`.
+Laisser le dispositif juridique en attente ; n'y introduire ni règle non
+vérifiée ni conclusion sur la licéité. Associer chaque champ au contrôle
+restant à mener (M6). Une explication narrative de la suspension de décision
+ne remplace pas cette maquette lorsque le livrable est demandé.
+
 ## Développements supplémentaires
 
 Supprimer les précisions juridiques extérieures aux contrôles de couverture et
@@ -4305,7 +4395,12 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   couvrir aussi fondement et décret propre, exclusions, sauvegarde/transitions,
   instances et actes successifs ; si des textes sont remplacés, identifier
   les textes remplacés ou abrogés, puis distinguer entrée en vigueur et
-  abrogation. Tout plafond en pourcentage appelle
+  abrogation. Nommer le régime commun écarté et sa différence avec le régime
+  spécifique : pour les cadres d'emplois de police municipale, rendre
+  explicite la distinction avec le **RIFSEEP**, sans l'appliquer à ces cadres
+  d'emplois. Vérifier le champ et les exclusions avant de les certifier ; en
+  dégradé, formuler cette distinction comme un contrôle du régime applicable.
+  Tout plafond en pourcentage appelle
   l'assiette et les paramètres de conversion en euros, notamment le point.
   Si l'assiette est le traitement indiciaire, nommer l'indice et la valeur
   du point à vérifier à la date utile, même sans conversion demandée.
@@ -4348,8 +4443,11 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   sont réunies et décision d'octroi ; lien au service, faute détachable,
   indépendance du jugement pénal. L'agent documente les attaques et leur lien
   au service ; l'employeur apprécie une éventuelle faute personnelle imputable
-  à l'agent, sans exiger de lui une preuve générale d'absence. Ne pas présenter
-  cette faute comme le seul motif légal possible de refus : une dérogation
+  à l'agent, sans exiger de lui une preuve générale d'absence.
+  En mode dégradé, transformer cette répartition des pièces et de la preuve
+  en question à faire vérifier ; ne pas interdire juridiquement une demande
+  de justificatif sur la seule base du module, même pour protéger l'agent.
+  Ne pas présenter cette faute comme le seul motif légal possible de refus : une dérogation
   d'intérêt général doit être légalement admissible, établie et contrôlable
   par le juge ; ne pas inventer ce motif dans le dossier.
   Rendre explicites **assistance juridique**,
@@ -4391,10 +4489,23 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   de l'avis. Présenter une recherche réelle et documentée de postes
   compatibles : les diligences sont obligatoires dans le régime applicable,
   sans garantie d'aboutissement ; l'impossibilité de proposer doit être
-  motivée selon le texte vérifié. Présenter aussi la PPR avec
+  motivée selon le texte vérifié. Situer explicitement cette **recherche
+  effective avant toute décision de licenciement**, selon les conditions du
+  régime vérifié ; documenter le dossier ne remplace pas les démarches réelles.
+  En dégradé, en faire une question préalable à instruire, sans certifier
+  une obligation non consultée. Présenter aussi la PPR avec
   convention/traitement/durées/reports vérifiés, la disponibilité envisageable
   et les issues ultimes selon l'affiliation ; ne pas promettre une indemnité
-  générale. Distinguer maintien après PPR et prolongation de la PPR : relier
+  générale. Relier ces issues à l'affiliation : **CNRACL** et retraite pour
+  invalidité à contrôler ; régime général/**IRCANTEC** et licenciement des
+  fonctionnaires non affiliés à la CNRACL (décret n° 91-298, chapitre propre)
+  à contrôler. Ne pas déduire l'affiliation du seul emploi à temps non
+  complet. En dégradé, garder ces articulations comme **questions** à
+  instruire, sans certifier une issue. Distinguer explicitement le **report
+  initial par accord** du début de la PPR (parties, borne et maintien en
+  activité : décret n° 85-1054, art. 2) des reports liés aux congés, au début
+  comme en cours de période ; ne pas les réduire à la mention générale
+  « reports prévus ». Distinguer maintien après PPR et prolongation de la PPR : relier
   explicitement le maintien à la demande de reclassement, à sa prise d'effet
   et à la limite vérifiée prévue par le renvoi à la procédure de reclassement.
   Ne pas confondre cette limite avec une nouvelle prolongation de la PPR.
@@ -4402,9 +4513,16 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   disciplinaire, dates déterminant la protection, entretien, informations,
   effet différé et accord de l'agent qui ne dispense pas du délai. Donner les
   voies de sortie selon la situation et les règles vérifiées : retour ou
-  réintégration sur un emploi disponible du grade ; en son absence, options
-  de congé spécial ou de prise en charge par le centre de gestion (CDG) ou
-  le CNFPT, selon la compétence à vérifier. Réserver les conditions encore
+  réintégration sur un emploi disponible du grade ; en son absence, L544-4
+  ouvre, sur demande du fonctionnaire et sans cascade, quatre options :
+  **reclassement puis prise en charge éventuelle**, prise en charge directe,
+  congé spécial de droit et indemnité de licenciement, sous leurs conditions.
+  Identifier séparément le **gestionnaire de la prise en charge** : CNFPT ou
+  centre de gestion (CDG) selon L542-6 ; sa détermination selon le cadre
+  d'emplois (L542-7, L451-9) reste à vérifier pour cette situation. Il ne se
+  déduit pas de la seule information prévue par L544-1. En dégradé, garder
+  ces articulations comme questions à instruire, sans certifier un droit.
+  Réserver les conditions encore
   non vérifiées sans omettre la nature de l'option ni son acteur identifié.
   Même pour une demande de départ
   immédiat, ces alternatives bornent la suite légale possible. Comparer les
@@ -4467,7 +4585,9 @@ sont restituées brièvement ; une simple valeur sans décision individuelle
 conserve le format ciblé.
 Ne pas s'arrêter à la conclusion principale en omettant ces contrôles.
 En mode dégradé, identifier les familles de sources officielles à consulter
-et les pièces nécessaires ; aucun résultat juridique n'est certifié.
+et les pièces nécessaires ; demander explicitement la **version applicable**
+des textes et actes à la **date de référence** utile. Aucun résultat juridique
+n'est certifié.
 
 En mode dégradé, les durées, délais, seuils, quotités, plafonds et montants
 juridiques tirés des modules sont exclus de la réponse, **même présentés comme des pistes**
