@@ -71,8 +71,13 @@ drh-fpt/
 ├── CHANGELOG.md                          Historique des versions
 ├── SYNTHESE-CRITIQUES-v0.2.0.md          Trace de décision (challenge externe)
 ├── drh-fpt-bundle-pour-LLM.md            Bundle mono-fichier (portage autres LLM)
+├── copilot/
+│   ├── README.md                         Guide de création de l'agent Microsoft 365 Copilot
+│   ├── instructions.md                   Instructions de l'agent (≤ 8 000 caractères)
+│   └── connaissances/                    Fiches .docx générées (non versionnées)
 ├── scripts/
 │   ├── build_bundle.py                   Régénère le bundle depuis les sources (+ --check, --package)
+│   ├── build_copilot.py                  Génère les fiches .docx de l'agent Copilot (+ --check)
 │   ├── bundle-preambule.md               Gabarit du préambule du bundle (placeholder {{VERSION}})
 │   ├── context_loader.py                 Charge le noyau, les branches et gabarits nécessaires
 │   ├── measure_contexts.py               Compare la taille des contextes complet et ciblé
