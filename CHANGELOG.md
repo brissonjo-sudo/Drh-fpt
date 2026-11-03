@@ -24,6 +24,8 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
   sigle historique ISMF admis.
 - Non repris : rapport de qualification du 13/10 et ses archives, devenus
   caducs depuis la clôture du jeu A.
+- Provenance de L274 : nom du dossier d'archive locale retiré du module,
+  signalé comme résidu par `scripts/build_copilot.py --check`.
 
 ### Portage Microsoft 365 Copilot — 2026-11-03 (non testé dans Copilot)
 - Agent Builder : [guide de création](copilot/README.md), instructions

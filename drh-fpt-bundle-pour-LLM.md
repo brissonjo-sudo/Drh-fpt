@@ -1999,8 +1999,8 @@ applicables ; une simple date de versement ne suffit pas à qualifier les deux d
 Sources : art. 37-1 (LEGIARTI000042914580), pack PISTE du 16/10/2026 ;
 L274 (LEGIARTI000042914471), version en vigueur depuis le 01/01/2022,
 collecte PISTE archivée du 17/10/2026 à 10:27:36 UTC : restitution `l274.json`,
-requête `02-request.json` et réponse originale `02-response.json`, dans
-`t101-corrections-skill-20261017/sources/` (archive locale du chantier, hors dépôt).
+requête `02-request.json` et réponse originale `02-response.json`, conservées
+dans l'archive locale du chantier du 17/10/2026, hors dépôt.
 Le régime transitoire de l'article 37-1 est à conserver :
 application à l'action dont le délai commence ou dont une cause interruptive
 intervient à compter du 01/01/2022.
