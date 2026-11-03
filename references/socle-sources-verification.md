@@ -102,13 +102,17 @@ usage en acte :
 - **Contractuels** — cas de recours élargis depuis la loi de
   transformation de la fonction publique (2019).
 - **Instances médicales** — conseil médical (fusion comité médical /
-  commission de réforme, décret n° 2022-350). Un décret n° 2026-705 du
-  29 juillet 2026 (transposition au secteur public des règles d'arrêt de
-  travail du privé) modifie, depuis le 1er septembre 2026, les modalités
-  de saisine du conseil médical en formation restreinte pour le
-  renouvellement des congés de maladie après épuisement des droits à
-  rémunération : à intégrer dans la branche QVT/santé avant toute réponse
-  sur ce point.
+  commission de réforme, décret n° 2022-350). Le décret n° 2026-705 du
+  29 juillet 2026 (JORFTEXT000054570030) supprime, à compter du
+  1er septembre 2026, l'avis de la formation restreinte sur le
+  renouvellement d'un CLM ou d'un CLD après épuisement du plein traitement
+  (décret 87-602, art. 5, I, 2°), sans toucher à l'avis requis pour
+  l'ultime période de congé rétribuée (art. 32), et modifie les congés pour raison de santé
+  (avis d'arrêt, contrôle, formation, examen à distance), avec des dates
+  d'application échelonnées (1er août 2026, 1er septembre 2026,
+  1er janvier 2028) : intégré le 03/11/2026 dans la branche QVT/santé
+  (§5.2, §5.3, §5.8). Revérifier la version applicable à la date de début
+  ou de prolongation du congé.
 - **CAP / LDG** — compétences des CAP recentrées, montée des lignes
   directrices de gestion.
 - **Rupture conventionnelle** — pour les fonctionnaires, l'expérimentation

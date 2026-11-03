@@ -4,6 +4,26 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
 ## [Non publié] — v0.7.1
 
+### Congés pour raison de santé — décret n° 2026-705 — 2026-11-03 (non qualifié)
+- QVT/santé §5.2 et §5.8 : avis de la formation restreinte du conseil
+  médical supprimé pour le renouvellement d'un CLM ou d'un CLD après
+  épuisement du plein traitement (décret 87-602, art. 5, I, 2° abrogé et
+  art. 26, à compter du 01/09/2026) ; autres consultations rappelées, dont
+  l'avis maintenu pour l'ultime période de congé rétribuée (art. 32).
+- QVT/santé §5.3 : avis d'arrêt (art. 15), CLM/CLD dans la limite de six
+  mois (art. 26), contrôle administratif (art. 26-1), activité rémunérée
+  (art. 28, portée à confirmer), préparation de la reprise (art. 31-1, au
+  01/01/2028), formation pendant le congé (art. 31-2), examen à distance
+  (art. 34-1), CITIS (art. 37-2, 37-9-1, 37-15 abrogé) ; transitions de
+  l'article 11 ; LEGIARTI et date de consultation pour chaque article.
+- Contractuels (décret 88-145, art. 7, 8, 9-2, 12) : renvois au décret
+  87-602 ; champ de l'article 9-2 laissé en point de contrôle.
+- Écarté : rémunération en CLM du IV de l'article 11 (décret 2010-997,
+  agents de l'État). Durées d'arrêt du code de la sécurité sociale non
+  relues, laissées en points de contrôle.
+- Socle : puce « Instances médicales » mise à jour ; tests de contrat
+  `tests/test_decret_2026_705_contract.py`.
+
 ### Portage des correctifs locaux du 13/10/2026 — 2026-11-03 (non qualifié)
 - Règles revérifiées sur Légifrance (versions en vigueur au 03/11/2026) :
   ISFE, exceptions de l'article 6 du décret 2024-614 sans la NBI et
