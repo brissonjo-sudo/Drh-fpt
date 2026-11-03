@@ -2567,11 +2567,26 @@ invalidité ; égalité professionnelle (plan d'action, nominations
     l'article R. 162-1-7-1 de ce code (sous réserve du second alinéa du 1°
     de L. 162-4-1). En cas de prolongation, la rémunération n'est maintenue
     que si la prolongation est prescrite dans le respect de L. 162-4-4.
-    L'avis peut être dématérialisé. La mention de la « durée probable de
-    l'incapacité » disparaît. Les articles du code de la sécurité sociale
-    cités n'ont pas été relus : la durée maximale d'un arrêt et les
-    conditions de prolongation restent des **points de contrôle**, sans
-    valeur chiffrée.
+    L'avis peut être dématérialisé. La phrase de l'article 15 sur la
+    « durée probable de l'incapacité » est supprimée, mais cette mention
+    figure toujours dans l'avis établi selon R. 321-2.
+    **Plafonds (arbitrage du 03/11/2026)** : **trente et un jours** pour une
+    première prescription et **soixante-deux jours** pour une prolongation
+    (R. 162-1-7-1), pour les prescriptions et prolongations **établies à
+    compter du 1er septembre 2026** ; plafonds non applicables à Mayotte
+    (décret n° 2026-498, art. 2). Le prescripteur peut dépasser le plafond
+    s'il justifie, sur la prescription, la nécessité d'une durée plus longue
+    (L. 162-4-1, 1°, et L. 162-4-4). La prolongation doit être prescrite par
+    le prescripteur de l'arrêt initial, le médecin traitant, la sage-femme ou
+    le chirurgien-dentiste, sauf impossibilité dûment justifiée et cas
+    définis par décret ; par télémédecine, seulement dans les conditions du
+    troisième alinéa de L. 6316-1 du code de la santé publique (L. 162-4-4).
+    Pour le fonctionnaire, une prolongation prescrite hors de ces conditions
+    ne maintient pas la rémunération (art. 15). Sources : CSS L. 162-4-1
+    (LEGIARTI000053283630), L. 162-4-4 (LEGIARTI000053284700), R. 162-1-7-1
+    (LEGIARTI000054252051), R. 321-2 (LEGIARTI000051819783) ; décret
+    n° 2026-498, art. 2 (LEGIARTI000054250013), consultés sur Légifrance le
+    03/11/2026.
   - **CLM et CLD (art. 26)** : accordés ou renouvelés « dans la limite de
     six mois », sur présentation d'un avis médical établi selon le
     deuxième alinéa de l'article 15 (au lieu de périodes de trois à six
@@ -2588,12 +2603,21 @@ invalidité ; égalité professionnelle (plan d'action, nominations
     du code de la sécurité sociale). Absence injustifiée ou refus du
     contrôle : interruption de la rémunération jusqu'à la fin de l'arrêt,
     ce temps comptant dans le congé en cours.
-  - **Activité rémunérée (art. 28)** : l'obligation de cesser toute activité
-    rémunérée, hors réadaptation et activités de L. 123-2 du CGFP, est
-    étendue par l'insertion des mots « de maladie » ; la rédaction
-    consolidée se lit « congé de maladie de longue maladie ou de longue
-    durée ». Faire confirmer sa portée avant de l'opposer à un agent en
-    congé de maladie ordinaire.
+  - **Activité rémunérée (art. 28)** : le bénéficiaire d'un CLM ou d'un CLD
+    doit cesser toute activité rémunérée, hors activités de réadaptation
+    ordonnées et contrôlées par le médecin du travail et activités de
+    L. 123-2 du CGFP ; à défaut, interruption de la rémunération et
+    reversement. L'article s'applique aussi au CITIS (art. 37-9-1).
+    **Congé de maladie ordinaire : interprétation retenue, non lettre
+    certaine** (arbitrage du 03/11/2026). La rédaction consolidée se lit
+    « congé de maladie de longue maladie ou de longue durée », sans virgule.
+    Quatre éléments soutiennent l'inclusion du CMO : l'insertion des mots
+    « de maladie » (décret 2026-705, art. 3, 8°) ; la place de l'article 28
+    dans le titre VI, dont l'intitulé vise désormais les congés de maladie ;
+    la même énumération aux articles 26-1, 31-2 et 34-1 ; et la notice du
+    décret. Pour un agent en CMO, rappeler l'obligation, mais ne pas fonder
+    une interruption de rémunération ou un reversement sur ce seul texte
+    sans validation juridique préalable.
   - **Formation pendant le congé (art. 31-2, créé)** : avec l'avis favorable
     du médecin agréé, le fonctionnaire en congé de maladie, de longue
     maladie ou de longue durée peut demander une action de formation ou un
@@ -2637,28 +2661,51 @@ invalidité ; égalité professionnelle (plan d'action, nominations
   LEGIARTI000049428839) ; articles 3 et 11 du décret 2026-705 lus au JORF
   (JORFTEXT000054570030) le même jour.
 - **Contractuels (décret 88-145, modifié par l'article 6 du décret
-  2026-705)** : le certificat du congé de maladie est établi et transmis
-  selon le deuxième alinéa de l'article 15 du décret 87-602 (art. 7) ; le
-  congé de grave maladie peut être accordé ou renouvelé selon le premier
-  alinéa de l'article 26 du même décret (art. 8), l'article 8 conservant
-  l'avis du conseil médical pour l'octroi et la mention de périodes de
-  trois à six mois : articulation à contrôler avant tout acte. Un contrôle
-  du médecin agréé peut être effectué à tout moment en congé de maladie,
-  de grave maladie, d'accident du travail ou de maladie professionnelle,
-  sous peine d'interruption de la rémunération (art. 12). L'article 9-2
-  (créé) rend applicables les articles 26-1, 31-1, 31-2 et 34-1 du décret
-  87-602 à l'agent « bénéficiant de l'un des congés prévus aux articles 12,
-  13 et 14 » du décret 88-145 ; dans la version consultée, ces articles
-  portent sur le montant du traitement, le réemploi et l'inaptitude, et le
-  congé parental, non sur les congés de maladie (art. 7 à 9) : **point de
-  contrôle**, ne pas opposer ces mesures à un contractuel sans confirmation
-  de leur champ. Transition : articles 7, 8, 9-2 et 12 applicables aux
+  2026-705)** — arbitrage du 03/11/2026 :
+  - **Certificat (art. 7)** : établi et transmis selon le deuxième alinéa
+    de l'article 15 du décret 87-602, donc dans les plafonds de durée
+    ci-dessus. Que le maintien du traitement en prolongation dépende aussi
+    de L. 162-4-4 reste une **interprétation** : ne pas l'affirmer. Le
+    traitement est réduit à due concurrence quand les prestations en
+    espèces sont diminuées en application de R. 321-2 (art. 12).
+  - **Grave maladie (art. 8)** : accordée ou renouvelée selon le premier
+    alinéa de l'article 26 du décret 87-602, c'est-à-dire dans la limite de
+    six mois, sur avis médical établi selon l'article 15, deuxième alinéa.
+    L'article conserve la phrase « peut être accordé par période de trois à
+    six mois » ; le caractère impératif d'un minimum de trois mois relève
+    de l'interprétation. À l'**octroi** : examen par un spécialiste agréé et
+    avis du conseil médical. Au **renouvellement**, aucun texte n'exige
+    expressément l'avis du conseil, et aucun ne l'exclut : ne pas affirmer
+    de dispense générale. L'articulation entre une période de congé
+    (jusqu'à six mois) et la durée plafonnée de l'avis d'arrêt n'est pas
+    réglée par les textes : **abstention**, à sécuriser avant tout acte.
+  - **Contrôle (art. 12)** : un contrôle du médecin agréé peut être
+    effectué à tout moment en congé de maladie, de grave maladie,
+    d'accident du travail ou de maladie professionnelle, sous peine
+    d'interruption de la rémunération.
+  - **Renvoi de l'article 9-2 (créé)** : il rend applicables les articles
+    26-1, 31-1, 31-2 et 34-1 du décret 87-602 à l'agent « bénéficiant de
+    l'un des congés prévus aux articles 12, 13 et 14 » du décret 88-145.
+    Ces articles portent sur le montant du traitement, le réemploi et
+    l'inaptitude, et le congé parental, non sur les congés de maladie
+    (art. 7 à 9). L'erreur de renvoi est **probable** : l'article 5 du
+    décret 2026-705 crée pour les contractuels de l'État une disposition
+    parallèle visant les « articles 12, 13 et 14 » du décret 86-83, où ces
+    numéros désignent les congés de maladie. Mais elle n'est pas corrigée :
+    **ne pas opposer** à un contractuel en congé des articles 7 à 9 le
+    contrôle administratif, la préparation de la reprise, la formation ou
+    l'examen à distance sur le fondement de l'article 9-2. Vérifier la
+    publication d'un rectificatif. L'article 31-1 ne vise de toute façon
+    que les congés débutant ou prolongés à compter du 1er janvier 2028
+    (art. 11, III).
+  Transition : articles 7, 8, 9-2 et 12 applicables aux
   congés débutant ou prolongés à compter du 1er septembre 2026 (art. 11,
   II). Sources : décret 88-145, art. 7 (LEGIARTI000054641799), 8
   (LEGIARTI000054641802), 9-2 (LEGIARTI000054641818), 12
   (LEGIARTI000054641813), 13 (LEGIARTI000054175609) et 14
   (LEGIARTI000054175604), versions en vigueur consultées sur Légifrance le
-  03/11/2026.
+  03/11/2026 ; articles 5, 6 et 11 du décret 2026-705 lus au JORF
+  (JORFTEXT000054570030) le même jour.
 - **Hors champ FPT** : le IV de l'article 11 du décret 2026-705
   (rémunération en congé de longue maladie à compter du 1er septembre 2026)
   vise le décret n° 2010-997 relatif aux agents publics de l'État ; ne pas
@@ -2909,8 +2956,11 @@ manquantes, valeurs volatiles à vérifier).
 - **Décret n° 2026-705** : date de début ou de prolongation du congé
   (avant ou après le 1er septembre 2026 ; 1er janvier 2028 pour
   l'article 31-1) avant d'appliquer la nouvelle rédaction du décret 87-602 ;
-  durée maximale d'un arrêt et conditions de prolongation à relire dans le
-  code de la sécurité sociale.
+  date d'établissement de la prescription pour les plafonds de 31 et
+  62 jours, qui sont susceptibles d'évoluer : relire R. 162-1-7-1 avant de
+  les citer dans un acte. Contractuels : ne pas fonder un contrôle
+  administratif, une formation ou un examen à distance sur l'article 9-2
+  du décret 88-145 tant que son renvoi n'est pas corrigé.
 - **Imputabilité au service** (CITIS) : qualification → vérification + avis du
   conseil médical en **formation plénière** le cas échéant ; décision de
   l'autorité territoriale.
@@ -2955,9 +3005,10 @@ manquantes, valeurs volatiles à vérifier).
 Montants planchers PSC (prévoyance, santé) et taux de participation ; indemnité
 forfaitaire de télétravail ; taux légal d'obligation d'emploi handicap ;
 plafonds des prestations d'action sociale ; modalités plein/demi-traitement
-par phase de congé (CMO/CLM/CLD) ; durée maximale d'un arrêt de travail
-fixée par le code de la sécurité sociale (renvoi de l'article 15 du décret
-87-602) ; durée et renouvellement de la
+par phase de congé (CMO/CLM/CLD) ; plafonds de durée des arrêts de travail
+(R. 162-1-7-1 du code de la sécurité sociale, 31 et 62 jours au
+03/11/2026) ; correction éventuelle du renvoi de l'article 9-2 du décret
+88-145 ; durée et renouvellement de la
 disponibilité d'office ; existence et périmètre du Fonds national de
 prévention (FNP) CNRACL en préfiguration ; seuil d'effectif et taux de
 pénalité du plan d'action égalité ; taux de nominations équilibrées et
@@ -3890,8 +3941,9 @@ médical, PSC). Spécificités : **congé de grave maladie** (contractuel)
 distinctes, paliers d'ancienneté **à vérifier**, ne jamais transposer.
 Certificat, contrôle du médecin agréé et renvois au décret 87-602 issus du
 décret n° 2026-705 (décret 88-145, art. 7, 8, 9-2 et 12) : voir
-`qvt-sante.md` §5.3, y compris le point de contrôle sur le champ de
-l'article 9-2.
+`qvt-sante.md` §5.3 (arbitrage du 03/11/2026 : renvoi de l'article 9-2
+probablement erroné et non opposable en l'état ; avis du conseil médical
+à l'octroi du congé de grave maladie).
 Affiliation retraite : IRCANTEC (cf. `references/carriere-paie/remuneration-paie.md` §5.8).
 
 **Entretien professionnel** obligatoire pour les CDI et les **CDD > 1 an**
