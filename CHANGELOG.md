@@ -4,6 +4,15 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
 ## [Non publié] — v0.7.1
 
+### Portage Microsoft 365 Copilot — 2026-11-03 (non testé dans Copilot)
+- Agent Builder : [guide de création](copilot/README.md), instructions
+  condensées sous la limite de 8 000 caractères et 16 fiches .docx générées
+  par `scripts/build_copilot.py` depuis les références, sans changement du skill.
+- Vérification par recherche web limitée à 4 sites officiels, en remplacement
+  du compagnon `recherche-juridique` ; recette de 8 cas reprise des tests.
+- Variantes locales possibles dans `copilot/<collectivité>/`, non versionnées ;
+  le contrôle de taille des instructions les couvre.
+
 ### Licence EUPL 1.2 (2026-11-01)
 - Passage à l'EUPL 1.2 : textes officiels de la Commission européenne
   (anglais dans `LICENSE`, français dans `LICENCE.fr.txt`) ; versions
