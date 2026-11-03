@@ -24,6 +24,36 @@ sys.path.insert(0, str(HERE))
 import context_loader  # noqa: E402
 import live_sources  # noqa: E402
 from providers import ApiCallError, Completion, complete, key_for_provider  # noqa: E402
+import quota_guard  # noqa: E402
+
+
+def call_with_admission(controller, provider, model, effort, target):
+    if controller is not None and provider == 'claude-cli':
+        return controller.call(model, effort, target)
+    if controller is not None:
+        controller.validate()
+    return target()
+
+
+def clean_git_snapshot(path, expected=None):
+    current = git_provenance(path)
+    if not current.get('commit') or current.get('dirty') is not False:
+        raise ValueError('Dépôt candidat ou compagnon non propre, ou commit absent')
+    if expected is not None and current.get('commit') != expected.get('commit'):
+        raise ValueError('Commit candidat ou compagnon modifié pendant l’attente')
+    return current
+
+
+def degraded_source_problems(provenance):
+    fields = ['evidence_file', 'evidence_sha256', 'sha256_compagnon', 'sha256_source_pack']
+    populated = [key for key in fields if provenance.get(key) is not None]
+    if provenance.get('evidence_mode') != 'rules':
+        populated.append('evidence_mode')
+    if provenance.get('recherche_juridique'):
+        populated.append('recherche_juridique')
+    if provenance.get('source_pack') not in (None, {}, {'chemin': None, 'fichiers': []}):
+        populated.append('source_pack')
+    return ['qualification dégradée : sources ou compagnon présents (' + ', '.join(populated) + ')'] if populated else []
 
 
 DEFAULT_MODEL = "claude-opus-5-5"
@@ -212,8 +242,14 @@ Une source officielle vérifiée et citée n'a pas à être annoncée comme non
 consultée ; sa présence dans le dossier fourni n'est pas exigée. Les réserves
 portent sur les points non vérifiés.
 Recopie les libellés des critères à l'identique, même s'ils sont longs.
-Consigne toute question juridique non tranchée dans incertitudes (liste de
-phrases non vides, vide seulement si aucun doute résiduel). Une incertitude
+Consigne les doutes juridiques non tranchés sur la conformité de la réponse aux critères
+dans incertitudes (liste de phrases non vides, vide seulement si aucun doute
+résiduel sur cette conformité). Une réserve conforme aux critères, notamment
+l'abstention requise en mode dégradé ou une variable individuelle à vérifier,
+ne constitue pas à elle seule un doute sur l'évaluation. Si une réserve masque
+un critère manquant, une erreur possible ou une affirmation non vérifiée,
+consigne ce doute et identifie le point concerné. Toute affirmation juridique
+suspecte reste à signaler, même hors des critères énumérés. Une incertitude
 non arbitrée bloque la qualification. Les scores de style sont indicatifs.
 Ne transforme pas un soupçon juridique en erreur confirmée sans contrôler le
 champ de la source et les décisions du dossier. En mode dégradé, les sources
@@ -492,6 +528,8 @@ def validate_strict_campaign(provenance: dict, cases: list[dict], results: list[
             if len(cases) != expected:
                 problems.append(f"{len(cases)} cas actifs au lieu de {expected}")
             if suite['qualification']:
+                if provenance.get('mode') == 'degraded':
+                    problems.extend(degraded_source_problems(provenance))
                 families={'codex':'openai','openai':'openai','anthropic':'anthropic','claude-cli':'anthropic'}
                 if families.get(provenance.get('provider_repondant')) == families.get(provenance.get('provider_juge')):
                     problems.append('qualification : familles répondant et juge identiques')
@@ -584,6 +622,9 @@ def main(argv: list[str] | None = None) -> int:
         raise SystemExit('Qualification : sélection et relance interdites')
     if suite['qualification'] and args.mode=='integration' and args.evidence_mode!='live':
         raise SystemExit('Qualification intégration : evidence_mode=live requis avant réservation et génération')
+    if suite['qualification'] and args.mode == 'degraded' and (
+        args.evidence_mode != 'rules' or args.source_pack or args.evidence_file or args.legal_skill):
+        raise SystemExit('Qualification dégradée : aucune source ni compagnon ; evidence_mode=rules requis')
     if suite['qualification']:
         state=git_provenance(ROOT)
         if state.get('dirty') is not False or (not suite.get('reserve_for') and state.get('commit')!=suite['runtime_commit']):
@@ -603,6 +644,12 @@ def main(argv: list[str] | None = None) -> int:
             raise SystemExit("--legal-skill est obligatoire en mode integration")
         if args.legal_skill:
             legal_bundle, legal_path, legal_sources = load_legal_skill(args.legal_skill)
+    legal_state = None
+    if suite['qualification'] and legal_path:
+        try:
+            legal_state = clean_git_snapshot(legal_path)
+        except ValueError as exc:
+            raise SystemExit(str(exc)) from exc
     source_pack, source_pack_path, source_pack_files = load_source_pack(args.source_pack)
     evidence, evidence_sha = load_evidence(args.evidence_file)
     evidence_problems = validate_evidence(evidence, active_cases(all_cases, args.mode, []), args.mode,
@@ -622,6 +669,44 @@ def main(argv: list[str] | None = None) -> int:
             raise SystemExit('Qualification Claude : profil natif requis')
         if args.provider not in {'codex','claude-cli'} or judge_provider not in {'codex','claude-cli'}:
             raise SystemExit('Qualification : CLI Codex et Claude exacts requis')
+    admission = None
+    registration = {}
+    freshness_anchor = None
+    if suite['qualification']:
+        profile = {'provider_repondant': args.provider, 'modele_repondant': args.model,
+            'effort_repondant': args.reasoning_effort, 'provider_juge': judge_provider,
+            'modele_juge': args.judge_model, 'effort_juge': args.judge_reasoning_effort,
+            'execution_profile': args.execution_profile, 'context_mode': args.context_mode,
+            'cli_versions': suites.cli_versions()}
+        slot = ('claude-native' if args.execution_profile == 'claude-native' else args.provider) + ':' + args.mode
+        suites.validate_profile(suite, slot, profile)
+        suites.preflight_launch(suite, RESULTS/'qualification-launches.json', slot, state['commit'])
+        def validate_after_wait():
+            current = git_provenance(ROOT)
+            if current.get('dirty') is not False or current.get('commit') != state.get('commit'):
+                raise ValueError('Candidat modifié pendant l’attente de quota')
+            if suites.cli_versions() != profile['cli_versions']:
+                raise ValueError('Versions CLI modifiées pendant l’attente de quota')
+            if registration:
+                suites.validate_active_launch(suite, RESULTS/'qualification-launches.json',
+                    slot, registration['run_id'], state['commit'])
+            else:
+                suites.preflight_launch(suite, RESULTS/'qualification-launches.json', slot, state['commit'])
+            if args.evidence_file:
+                _, current_sha = load_evidence(args.evidence_file)
+                if current_sha != evidence_sha:
+                    raise ValueError('Preuves de source modifiées pendant la campagne')
+                problems = validate_evidence(evidence, cases, args.mode, args.evidence_mode,
+                    Path(args.evidence_file).resolve().parent, as_of=freshness_anchor)
+                if problems:
+                    raise ValueError('Preuves périmées ou invalides après attente : ' + '; '.join(problems))
+            if legal_path and load_legal_skill(str(legal_path))[0] != legal_bundle:
+                raise ValueError('Compagnon modifié pendant l’attente de quota')
+            if legal_path:
+                clean_git_snapshot(legal_path, legal_state)
+        admission = quota_guard.Controller(RESULTS / '_claude_quota', validate=validate_after_wait)
+        admission.wait(args.model if args.provider == 'claude-cli' else args.judge_model,
+                       args.reasoning_effort if args.provider == 'claude-cli' else args.judge_reasoning_effort)
     now = datetime.now(timezone.utc)
     contexts = {}
     native_signatures={}
@@ -645,6 +730,7 @@ def main(argv: list[str] | None = None) -> int:
         'suite_registry_sha256': suite['registry_sha256'],
         'suite_seal_sha256': suite['seal_sha256'],
         'execution_profile': args.execution_profile,
+        'quota_policy': dict(quota_guard.POLICY) if admission else None,
         'native_runtime_sha256_by_case': native_signatures,
         "mode": args.mode,
         "provider_repondant": args.provider,
@@ -675,6 +761,14 @@ def main(argv: list[str] | None = None) -> int:
         suites.validate_profile(suite,slot,base_provenance)
     if args.execution_profile=='claude-native':
         base_provenance['context_sha256_by_case']={c['id']:sha256_text(native_runtime.prompt(c,args.mode)+native_signatures[c['id']]) for c in cases}
+
+    if admission:
+        # Dernier contrôle à l'heure réelle avant réservation. Le corpus reste
+        # ensuite immuable ; la fraîcheur est ancrée au démarrage du profil,
+        # comme dans le contrôle commun, même si une attente de quota suit.
+        validate_after_wait()
+        freshness_anchor = datetime.now(timezone.utc)
+        now = freshness_anchor
 
     resumed_from = args.resume or args.judge_only
     if resumed_from:
@@ -715,6 +809,7 @@ def main(argv: list[str] | None = None) -> int:
         suites.claim_launch(suite,RESULTS/'qualification-launches.json',
             ('claude-native' if args.execution_profile=='claude-native' else args.provider)+':'+args.mode,
             provenance['campagne_id'],provenance['drh_fpt']['commit'])
+        registration['run_id'] = provenance['campagne_id']
 
     respondent_key = None if args.judge_only else key_for_provider(args.provider)
     judge_key = key_for_provider(judge_provider) if args.judge else None
@@ -751,16 +846,17 @@ def main(argv: list[str] | None = None) -> int:
                         if archive_directory.exists():
                             archive_directory=campaign/'runtime'/(case_id+'-attempts')/uuid.uuid4().hex
                         native_runtime.archive(runtime,archive_directory)
-                        completion=claude_cli.complete_cli(args.model,'',native_runtime.prompt(case,args.mode),
-                            MAX_TOKENS_REPONDANT,args.reasoning_effort,runtime=runtime)
+                        completion=call_with_admission(admission,args.provider,args.model,args.reasoning_effort,
+                            lambda: claude_cli.complete_cli(args.model,'',native_runtime.prompt(case,args.mode),
+                                MAX_TOKENS_REPONDANT,args.reasoning_effort,runtime=runtime))
                         native_meta={'native_runtime_sha256':native_signatures[case_id],
                                      'native_runtime_directory':archive_directory.relative_to(campaign).as_posix(),
                                      'execution_profile':'claude-native'}
                 else:
-                    completion = complete(
+                    completion = call_with_admission(admission,args.provider,args.model,args.reasoning_effort,lambda: complete(
                         args.provider, respondent_key or "", args.model, system, case["prompt"],
                         MAX_TOKENS_REPONDANT, args.reasoning_effort,
-                    )
+                    ))
             except (ApiCallError,ValueError,OSError) as exc:
                 entry.update({"statut": "erreur", "erreur": str(exc)})
                 if getattr(exc,'provider_trace',None):
@@ -783,16 +879,16 @@ def main(argv: list[str] | None = None) -> int:
         if args.judge and evaluation_dir is not None:
             case_evidence = [item for item in evidence if item.get("case_id") == case_id]
             try:
-                completion = complete(
+                completion = call_with_admission(admission,judge_provider,args.judge_model,args.judge_reasoning_effort,lambda: complete(
                     judge_provider, judge_key or "", args.judge_model,
                     JUDGE_SYSTEM + "\n\nCORPUS DE CAMPAGNE :\n" + system,
                     judge_prompt(case, answer, case_evidence), MAX_TOKENS_JUGE,
                     args.judge_reasoning_effort,
-                )
+                ))
                 evaluation = parse_judge_completion(completion)
-            except ApiCallError as exc:
+            except (ApiCallError,ValueError,OSError) as exc:
                 entry.update({"statut": "erreur", "erreur": str(exc)})
-                if exc.provider_trace:
+                if getattr(exc,'provider_trace',None):
                     (evaluation_dir/f'{case_id}-juge-failed.jsonl').write_bytes(exc.provider_trace.encode('utf8'))
                     entry['failed_judge_trace_sha256']=sha256_text(exc.provider_trace)
                 return entry

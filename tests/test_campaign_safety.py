@@ -8,6 +8,43 @@ from providers import Completion
 
 
 class CampaignSafetyTests(unittest.TestCase):
+    def test_qualification_degraded_refuses_all_source_inputs_before_preflight(self):
+        for extra in [['--evidence-mode', 'snapshot', '--source-pack', 'source.md'],
+                      ['--evidence-file', 'evidence.json'], ['--legal-skill', 'companion'],
+                      ['--source-pack', 'source.md']]:
+            with self.subTest(extra=extra), patch('campaign.suites.load_suite',return_value={'qualification': True}),\
+                 patch('campaign.git_provenance',side_effect=AssertionError('too late')),\
+                 patch('claude_cli.complete_cli') as probe, patch('campaign.suites.claim_launch') as claim:
+                with self.assertRaisesRegex(SystemExit, 'dégradée'):
+                    campaign.main(['--suite', 'qualification-a-v1', '--mode', 'degraded', *extra])
+                probe.assert_not_called()
+                claim.assert_not_called()
+
+    def test_qualification_degraded_final_gate_rejects_source_metadata(self):
+        base = {'suite': 'qualification-a-v1', 'mode': 'degraded', 'evidence_mode': 'rules',
+                'provider_repondant': 'codex', 'provider_juge': 'claude-cli', 'suite_seal_sha256': 'seal',
+                'drh_fpt': {'commit': 'commit', 'dirty': False}}
+        cases = [{'id': 'x'}]
+        entries = [{'id': 'x', 'statut': 'ok'}]
+        spec = {'qualification': True, 'expected_per_mode': 1, 'seal_sha256': 'seal'}
+        changes = [{'evidence_mode': 'snapshot'}, {'evidence_file': 'source.json'},
+                   {'evidence_sha256': 'sha'}, {'sha256_source_pack': 'sha'},
+                   {'sha256_compagnon': 'sha'}, {'recherche_juridique': {'commit': 'commit'}},
+                   {'source_pack': {'chemin': 'source.md', 'fichiers': ['source.md']}}]
+        with patch('campaign.suites.load_suite',return_value=spec):
+            self.assertEqual(campaign.validate_strict_campaign(base, cases, entries, semantic=False), [])
+            for change in changes:
+                with self.subTest(change=change):
+                    self.assertTrue(campaign.validate_strict_campaign({**base, **change}, cases, entries, semantic=False))
+
+    def test_companion_git_preflight_refuses_dirty_missing_or_changed_commit(self):
+        for current, previous in [({'commit': 'a', 'dirty': True}, None),
+                                  ({'commit': None, 'dirty': False}, None),
+                                  ({'commit': 'b', 'dirty': False}, {'commit': 'a', 'dirty': False})]:
+            with self.subTest(current=current), patch('campaign.git_provenance',return_value=current):
+                with self.assertRaises(ValueError):
+                    campaign.clean_git_snapshot(Path('companion'), previous)
+
     def test_qualification_integration_requires_live_before_claim_or_calls(self):
         with patch('campaign.suites.load_suite',return_value={'qualification':True}),\
              patch('campaign.git_provenance',side_effect=AssertionError('précontrôle trop tardif')),\

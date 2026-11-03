@@ -126,6 +126,16 @@ compétence territoriale, les modalités et délais applicables. Cette piste
 ne certifie ni recevabilité, ni compétence, ni délai et ne permet pas de
 produire une notification prête à envoyer.
 
+Si un acte ou une décision est demandé, joindre une **maquette conditionnelle**
+explicitement **non exécutable**, avec champs à compléter :
+`[SIGNATAIRE À VÉRIFIER]`, `[FONDEMENTS À CONSULTER]`,
+`[FAITS ET PIÈCES À COMPLÉTER]`, `[DISPOSITIF À VALIDER]`,
+`[DATE D'EFFET À VÉRIFIER]`, `[FORMALITÉS ET RECOURS À VÉRIFIER]`.
+Laisser le dispositif juridique en attente ; n'y introduire ni règle non
+vérifiée ni conclusion sur la licéité. Associer chaque champ au contrôle
+restant à mener (M6). Une explication narrative de la suspension de décision
+ne remplace pas cette maquette lorsque le livrable est demandé.
+
 ## Développements supplémentaires
 
 Supprimer les précisions juridiques extérieures aux contrôles de couverture et
@@ -170,7 +180,12 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   couvrir aussi fondement et décret propre, exclusions, sauvegarde/transitions,
   instances et actes successifs ; si des textes sont remplacés, identifier
   les textes remplacés ou abrogés, puis distinguer entrée en vigueur et
-  abrogation. Tout plafond en pourcentage appelle
+  abrogation. Nommer le régime commun écarté et sa différence avec le régime
+  spécifique : pour les cadres d'emplois de police municipale, rendre
+  explicite la distinction avec le **RIFSEEP**, sans l'appliquer à ces cadres
+  d'emplois. Vérifier le champ et les exclusions avant de les certifier ; en
+  dégradé, formuler cette distinction comme un contrôle du régime applicable.
+  Tout plafond en pourcentage appelle
   l'assiette et les paramètres de conversion en euros, notamment le point.
   Si l'assiette est le traitement indiciaire, nommer l'indice et la valeur
   du point à vérifier à la date utile, même sans conversion demandée.
@@ -213,8 +228,11 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   sont réunies et décision d'octroi ; lien au service, faute détachable,
   indépendance du jugement pénal. L'agent documente les attaques et leur lien
   au service ; l'employeur apprécie une éventuelle faute personnelle imputable
-  à l'agent, sans exiger de lui une preuve générale d'absence. Ne pas présenter
-  cette faute comme le seul motif légal possible de refus : une dérogation
+  à l'agent, sans exiger de lui une preuve générale d'absence.
+  En mode dégradé, transformer cette répartition des pièces et de la preuve
+  en question à faire vérifier ; ne pas interdire juridiquement une demande
+  de justificatif sur la seule base du module, même pour protéger l'agent.
+  Ne pas présenter cette faute comme le seul motif légal possible de refus : une dérogation
   d'intérêt général doit être légalement admissible, établie et contrôlable
   par le juge ; ne pas inventer ce motif dans le dossier.
   Rendre explicites **assistance juridique**,
@@ -256,10 +274,23 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   de l'avis. Présenter une recherche réelle et documentée de postes
   compatibles : les diligences sont obligatoires dans le régime applicable,
   sans garantie d'aboutissement ; l'impossibilité de proposer doit être
-  motivée selon le texte vérifié. Présenter aussi la PPR avec
+  motivée selon le texte vérifié. Situer explicitement cette **recherche
+  effective avant toute décision de licenciement**, selon les conditions du
+  régime vérifié ; documenter le dossier ne remplace pas les démarches réelles.
+  En dégradé, en faire une question préalable à instruire, sans certifier
+  une obligation non consultée. Présenter aussi la PPR avec
   convention/traitement/durées/reports vérifiés, la disponibilité envisageable
   et les issues ultimes selon l'affiliation ; ne pas promettre une indemnité
-  générale. Distinguer maintien après PPR et prolongation de la PPR : relier
+  générale. Relier ces issues à l'affiliation : **CNRACL** et retraite pour
+  invalidité à contrôler ; régime général/**IRCANTEC** et licenciement des
+  fonctionnaires non affiliés à la CNRACL (décret n° 91-298, chapitre propre)
+  à contrôler. Ne pas déduire l'affiliation du seul emploi à temps non
+  complet. En dégradé, garder ces articulations comme **questions** à
+  instruire, sans certifier une issue. Distinguer explicitement le **report
+  initial par accord** du début de la PPR (parties, borne et maintien en
+  activité : décret n° 85-1054, art. 2) des reports liés aux congés, au début
+  comme en cours de période ; ne pas les réduire à la mention générale
+  « reports prévus ». Distinguer maintien après PPR et prolongation de la PPR : relier
   explicitement le maintien à la demande de reclassement, à sa prise d'effet
   et à la limite vérifiée prévue par le renvoi à la procédure de reclassement.
   Ne pas confondre cette limite avec une nouvelle prolongation de la PPR.
@@ -267,9 +298,16 @@ nécessaires à l'objet demandé (valeur, régime, procédure ou acte) :
   disciplinaire, dates déterminant la protection, entretien, informations,
   effet différé et accord de l'agent qui ne dispense pas du délai. Donner les
   voies de sortie selon la situation et les règles vérifiées : retour ou
-  réintégration sur un emploi disponible du grade ; en son absence, options
-  de congé spécial ou de prise en charge par le centre de gestion (CDG) ou
-  le CNFPT, selon la compétence à vérifier. Réserver les conditions encore
+  réintégration sur un emploi disponible du grade ; en son absence, L544-4
+  ouvre, sur demande du fonctionnaire et sans cascade, quatre options :
+  **reclassement puis prise en charge éventuelle**, prise en charge directe,
+  congé spécial de droit et indemnité de licenciement, sous leurs conditions.
+  Identifier séparément le **gestionnaire de la prise en charge** : CNFPT ou
+  centre de gestion (CDG) selon L542-6 ; sa détermination selon le cadre
+  d'emplois (L542-7, L451-9) reste à vérifier pour cette situation. Il ne se
+  déduit pas de la seule information prévue par L544-1. En dégradé, garder
+  ces articulations comme questions à instruire, sans certifier un droit.
+  Réserver les conditions encore
   non vérifiées sans omettre la nature de l'option ni son acteur identifié.
   Même pour une demande de départ
   immédiat, ces alternatives bornent la suite légale possible. Comparer les
@@ -332,7 +370,9 @@ sont restituées brièvement ; une simple valeur sans décision individuelle
 conserve le format ciblé.
 Ne pas s'arrêter à la conclusion principale en omettant ces contrôles.
 En mode dégradé, identifier les familles de sources officielles à consulter
-et les pièces nécessaires ; aucun résultat juridique n'est certifié.
+et les pièces nécessaires ; demander explicitement la **version applicable**
+des textes et actes à la **date de référence** utile. Aucun résultat juridique
+n'est certifié.
 
 En mode dégradé, les durées, délais, seuils, quotités, plafonds et montants
 juridiques tirés des modules sont exclus de la réponse, **même présentés comme des pistes**

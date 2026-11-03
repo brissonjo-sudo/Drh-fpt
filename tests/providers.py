@@ -191,10 +191,16 @@ def _codex(model: str, system: str, user: str, max_tokens: int,
             provider_trace=annotate_codex_trace(result.stdout, model))
     events = []
     for line in result.stdout.splitlines():
-        try:
-            events.append(json.loads(line))
-        except json.JSONDecodeError:
+        if not line.strip():
             continue
+        try:
+            event = json.loads(line)
+            if not isinstance(event, dict) or not isinstance(event.get("type"), str) or not event["type"].strip():
+                raise ValueError("événement ou type mal formé")
+            events.append(event)
+        except (json.JSONDecodeError, ValueError) as exc:
+            raise ApiCallError("Trace Codex mal formée",
+                provider_trace=annotate_codex_trace(result.stdout, model)) from exc
     messages, usage, response_id, finished = [], {}, None, False
     for event in events:
         if event.get("type") == "thread.started":
@@ -204,13 +210,23 @@ def _codex(model: str, system: str, user: str, max_tokens: int,
                 provider_trace=annotate_codex_trace(result.stdout, model))
         if event.get("type") == "item.completed":
             item = event.get("item", {})
+            if not isinstance(item, dict):
+                raise ApiCallError("Événement Codex mal formé",
+                    provider_trace=annotate_codex_trace(result.stdout, model))
             if item.get("type") == "agent_message":
-                messages.append(item.get("text", ""))
+                text = item.get("text", "")
+                if not isinstance(text, str):
+                    raise ApiCallError("Message Codex mal formé",
+                        provider_trace=annotate_codex_trace(result.stdout, model))
+                messages.append(text)
             elif item.get("type") != "reasoning":
                 raise ApiCallError("Outil inattendu : l'isolation de l'évaluation n'est pas respectée",
                 provider_trace=annotate_codex_trace(result.stdout, model))
         if event.get("type") == "turn.completed":
             finished, usage = True, event.get("usage", {})
+            if not isinstance(usage, dict):
+                raise ApiCallError("Usage Codex mal formé",
+                    provider_trace=annotate_codex_trace(result.stdout, model))
     if not finished or not messages or not messages[-1].strip():
         raise ApiCallError("Session Codex sans réponse finale complète",
                 provider_trace=annotate_codex_trace(result.stdout, model))
