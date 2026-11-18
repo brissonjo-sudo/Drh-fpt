@@ -4,6 +4,27 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
 ## [Non publié] — v0.7.1
 
+### Ajouté (cas du 18/11/2026, examen médical manqué, non qualifié)
+Articles relus sur Légifrance les 17 et 18/11/2026, versions en vigueur.
+- **Variable bloquante** (`qvt-sante.md` §4) : cadre d'un examen par un
+  médecin agréé (contre-visite, CLM/CLD, TPT, aptitude, CITIS) à qualifier
+  avant toute mention de sanction.
+- **Frais et absence** (`qvt-sante.md` §5.2) : frais d'examen à la charge
+  de la collectivité (décret 87-602, art. 41), aucune base identifiée pour
+  les imputer à l'agent ; conséquences de l'absence selon le cadre
+  (art. 15, 34 et 13-2, II).
+- **TPT** (`qvt-sante.md` §5.3) : absence injustifiée à l'examen = désistement
+  de la demande ; application au renouvellement à faire valider ;
+  télétravail prescrit au-delà de trois jours : dérogation santé de R431-6,
+  1°, après avis de la médecine préventive ou du médecin du travail ; seul
+  reste non tranché le refus pour incompatibilité (R432-6) après cet avis.
+- **Télétravail** (`qvt-sante.md` §5.5) : régime d'autorisation (CGFP
+  R432-2, R432-4 à R432-12) ; plafond de trois jours par semaine et deux
+  jours de présence (R431-5) ; dérogations, dont santé ou handicap après
+  avis de la médecine préventive ou du médecin du travail, six mois au plus,
+  renouvelable (R431-6).
+- Déclencheurs (§7), pièges 13 à 15 (§8).
+
 ### Corrigé (veille juridique ciblée, 2026-11-03, non qualifié)
 Points en attente du skill et balayage du JORF du 04/09 au 03/11/2026.
 Articles relus sur Légifrance, version en vigueur au 03/11/2026.

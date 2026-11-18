@@ -50,6 +50,14 @@ invalidité ; égalité professionnelle (plan d'action, nominations
   prouve pas à lui seul l'existence d'un accord collectif valide.
 - **Effectif** : la formation spécialisée en SSCT est obligatoire à 200 agents
   (acquise au-dessus de 350) → voir branche CST.
+- **Cadre d'un examen par un médecin agréé** (variable **bloquante**) :
+  contre-visite en congé de maladie (décret 87-602, art. 15), contrôle en
+  CLM ou CLD (art. 34), demande ou renouvellement de temps partiel
+  thérapeutique (art. 13-2), aptitude, CITIS ou autre. Recueillir aussi la
+  position de l'agent (en congé ou en fonctions) et l'objet de la
+  convocation. Les conséquences d'une absence diffèrent selon le cadre :
+  ne pas répondre sur la sanction d'un rendez-vous manqué avant de l'avoir
+  qualifié (voir §5.2).
 
 ## 5. Règles métier
 
@@ -100,6 +108,38 @@ invalidité ; égalité professionnelle (plan d'action, nominations
   LEGIARTI000045350652), consultés sur Légifrance le 03/11/2026 ;
   articles 3 et 11 du décret 2026-705 lus au JORF (JORFTEXT000054570030)
   le même jour.
+- **Examens par le médecin agréé : frais et absence de l'agent.**
+  - **Frais** : les honoraires et autres frais médicaux résultant des
+    examens prévus au décret 87-602, et éventuellement les frais de
+    transport du malade examiné, sont à la charge du budget de la
+    collectivité ou de l'établissement ; le centre de gestion peut en
+    assurer le paiement, avec remboursement défini par convention ; les
+    tarifs relèvent d'un arrêté interministériel (art. 41, I). Le II met
+    certains frais à la charge de la Caisse des dépôts (ATI) ou de la
+    CNRACL. **Aucun texte identifié ne permet d'imputer à l'agent les
+    frais d'un examen qu'il n'a pas honoré** : ne pas l'écrire dans une
+    convocation ni émettre de titre de recette sur ce fondement.
+  - **Absence selon le cadre** :
+    - contre-visite en congé de maladie : l'agent est prévenu de façon
+      certaine, par lettre recommandée avec avis de réception ; à défaut
+      de s'y soumettre, interruption de la rémunération jusqu'à ce que la
+      visite soit effectuée ; contre-visite au moins une fois au-delà de
+      six mois consécutifs de congé de maladie (art. 15) ;
+    - CLM ou CLD : interruption de la rémunération (le temps
+      d'interruption compte dans le congé) ; refus répété et sans motif
+      valable : perte possible du bénéfice du congé, après mise en demeure
+      (art. 34) ;
+    - temps partiel thérapeutique : l'absence injustifiée à l'examen
+      ordonné dès réception de la demande vaut **désistement de la
+      demande** (art. 13-2, II) ; pas d'interruption de rémunération
+      prévue par ce texte (voir §5.3).
+  - Les sanctions des art. 15 et 34 visent des agents **en congé** ; ne
+    pas les opposer à un agent en fonctions, y compris en TPT.
+  Sources : art. 15 (LEGIARTI000054641709, version du 01/08/2026), 34
+  (LEGIARTI000045350676) et 41 (LEGIARTI000045350717), décret 87-602,
+  versions en vigueur consultées sur Légifrance le 17/11/2026. Recherche
+  du 17/11/2026 sans décision du juge administratif imputant ces frais à
+  l'agent (fonds CETAT, résultat négatif, non exhaustif).
 
 ### 5.3 Congés liés à la santé
 - **CMO** (maladie ordinaire), **CLM** (longue maladie), **CLD** (longue durée) ;
@@ -289,8 +329,15 @@ invalidité ; égalité professionnelle (plan d'action, nominations
   prescrites (art. 13-1). Après un CLM, un CLD, un CITIS ou une disponibilité
   pour raison de santé, et en cas de renouvellement, la décision intervient
   au plus tard au jour de la reprise ; dans les autres cas, au plus tard
-  trente jours après réception de la demande. L'autorité territoriale **peut**
-  faire examiner l'agent par un médecin agréé ; l'autorisation est accordée
+  trente jours après réception de la demande. L'autorité territoriale **peut**,
+  dès réception de la demande, faire examiner l'agent par un médecin agréé ;
+  **l'absence injustifiée à cet examen vaut désistement de la demande**
+  (art. 13-2, II). Le II vise « la demande d'autorisation » ; le I traite le
+  renouvellement comme une demande, ce qui soutient son application au
+  renouvellement sans que le texte le dise : point à faire valider avant de
+  l'écrire dans une convocation. Les textes lus ne règlent pas la situation
+  de l'agent dont l'autorisation expire faute de renouvellement : ne pas
+  annoncer de conséquence non vérifiée. L'autorisation est accordée
   dans la limite d'une année. Refus et interruption à l'initiative de
   l'employeur sont motivés ; fondés sur la continuité du service, ils sont
   précédés d'un entretien (assistance possible) ; fondés sur un motif
@@ -309,6 +356,21 @@ invalidité ; égalité professionnelle (plan d'action, nominations
   (LEGIARTI000054641701) et 24 (LEGIARTI000049428885), versions en vigueur
   consultées sur Légifrance le 03/11/2026 ; article 11 du décret 2026-705 lu
   au JORF (JORFTEXT000054570030) le même jour.
+  **TPT prescrit en télétravail** : les modalités d'exercice figurent dans le
+  certificat médical (art. 13-1) ; l'autorisation de télétravail reste un
+  acte distinct, soumis à son propre régime (voir §5.5). Un télétravail
+  au-delà de trois jours par semaine, ou avec moins de deux jours de
+  présence, sort du plafond de R431-5 : il suppose la dérogation pour
+  raison de santé de R431-6, 1°, après avis du service de médecine
+  préventive ou du médecin du travail, pour six mois au plus. Les textes
+  lus ne font pas du certificat de TPT un substitut à cet avis : ne pas
+  accorder ni refuser un télétravail dérogatoire sur la seule prescription
+  du médecin traitant (lecture des textes, à faire valider). Reste **non
+  tranché** : le cas où, même après cet avis, l'autorité estime le
+  télétravail incompatible avec les activités ou l'intérêt du service
+  (R432-6) ; à faire valider avant toute décision.
+  Ajout du 17/11/2026 : art. 13-2 relu sur Légifrance ce jour ; R431-5 et
+  R431-6 lus le 18/11/2026.
 
 ### 5.4 Handicap
 - **Obligation d'emploi** de travailleurs handicapés : taux légal, applicable
@@ -348,6 +410,46 @@ Source : L131-8 (LEGIARTI000044427678), pack PISTE du 16/10/2026.
   (LEGIARTI000054077141) et L253-6 (LEGIARTI000044427238), versions au
   12/10/2026 collectées par PISTE le 16/10/2026. Toute indemnité éventuelle
   exige une vérification propre avant chiffrage.
+- **Régime d'autorisation du télétravail** (CGFP, partie réglementaire,
+  articles en vigueur depuis le 01/08/2026) :
+  - la délibération fixe notamment les activités éligibles, les règles de
+    temps de travail, de sécurité et de protection de la santé, et les
+    conditions de l'attestation de conformité des installations (R432-2) ;
+  - demande écrite précisant les modalités souhaitées, avec l'attestation
+    de conformité pour un lieu privé (R432-4) ; nouvelle demande en cas de
+    changement de fonctions (R432-5) ;
+  - l'autorité territoriale apprécie la compatibilité de la demande avec la
+    nature des activités et l'intérêt du service (R432-6) et répond par
+    écrit dans le délai maximal d'un mois (R432-7) ;
+  - période d'adaptation de trois mois au plus (R432-8) ; contenu de
+    l'autorisation (R432-9) et documents remis à la notification (R432-10) ;
+  - fin à tout moment, par écrit, avec un délai de prévenance de deux mois
+    (un mois en période d'adaptation), réductible en cas de nécessité de
+    service (R432-11) ;
+  - refus et interruption à l'initiative de l'administration : **motivés
+    et précédés d'un entretien** (R432-12).
+- **Quotité et dérogations** (CGFP, chapitre Ier « Définition », en
+  vigueur depuis le 01/08/2026) :
+  - au plus **trois jours de télétravail par semaine** et au moins **deux
+    jours de présence** sur le lieu d'affectation ; ces seuils peuvent
+    s'apprécier sur une base mensuelle (R431-5) ;
+  - dérogation possible, notamment **à la demande d'un agent dont l'état
+    de santé ou le handicap le justifie, après avis du service de médecine
+    préventive ou du médecin du travail**, pour **six mois au plus**,
+    renouvelable après un nouvel avis (R431-6, 1°) ; autres cas : grossesse
+    (2°), agent éligible au congé de proche aidant, trois mois
+    renouvelables (3°), situation exceptionnelle perturbant l'accès au
+    service ou le travail sur site (4°).
+  L'avis exigé pour la dérogation santé est celui de la médecine préventive
+  ou du médecin du travail, ni celui du médecin traitant ni celui du
+  médecin agréé.
+  Sources : R431-5 (LEGIARTI000054077135) et R431-6 (LEGIARTI000054077137),
+  R432-2 (LEGIARTI000054077143), R432-4 (LEGIARTI000054077147),
+  R432-5 (LEGIARTI000054077149), R432-6 (LEGIARTI000054077151), R432-7
+  (LEGIARTI000054077153), R432-8 (LEGIARTI000054077155), R432-9
+  (LEGIARTI000054077157), R432-10 (LEGIARTI000054077159), R432-11
+  (LEGIARTI000054077161), R432-12 (LEGIARTI000054077163), consultés sur
+  Légifrance le 18/11/2026.
 - **Action sociale** : prestations facultatives (titres-restaurant, CNAS, COS,
   aides diverses). L'action sociale est une **dépense obligatoire dans son
   principe**, mais son contenu relève du **choix local**.
@@ -590,6 +692,13 @@ manquantes, valeurs volatiles à vérifier).
   contentieux.
 - **Seuils et taux du plan d'action égalité** (seuil d'effectif,
   pénalité, taux de nominations équilibrées) : jamais de mémoire.
+- **Convocation chez un médecin agréé** : cadre de l'examen qualifié avant
+  toute mention de sanction ; frais à la charge de la collectivité
+  (art. 41) ; application du désistement de l'art. 13-2, II à un
+  renouvellement de TPT à faire valider.
+- **Télétravail au-delà de trois jours par semaine** : dérogation de
+  R431-6 à qualifier (santé : avis de la médecine préventive ou du médecin
+  du travail, six mois au plus) avant toute réponse.
 
 ## 8. Pièges & confusions fréquentes
 
@@ -617,6 +726,16 @@ manquantes, valeurs volatiles à vérifier).
 12. Appliquer aux fonctionnaires territoriaux la règle de rémunération en
    CLM du IV de l'article 11 du décret n° 2026-705 : elle vise le décret
    n° 2010-997, propre aux agents publics de l'État.
+13. Annoncer à un agent que les frais d'un examen médical non honoré
+   resteront à sa charge : l'art. 41 du décret 87-602 les met à la charge
+   de la collectivité, sans exception identifiée.
+14. Opposer à un agent en fonctions (y compris en TPT) les sanctions des
+   art. 15 ou 34, qui visent les agents en congé ; pour le TPT, la
+   conséquence prévue est le désistement de la demande (art. 13-2, II).
+15. Traiter un télétravail à 100 % prescrit dans un certificat de TPT
+   comme acquis, ou le refuser sans examen : au-delà de trois jours par
+   semaine, il relève de la dérogation de R431-6, 1°, après avis du service
+   de médecine préventive ou du médecin du travail, pour six mois au plus.
 
 ## 9. Données volatiles à vérifier
 
