@@ -22,6 +22,25 @@ Une entrée par cas, au format ci-dessous.
 
 ## Entrées
 
+### 2026-11-18 — Examen médical manqué, TPT et télétravail
+- Type : erreur + lacune
+- Branche : qvt-sante
+- Contexte (anonymisé) : fonctionnaire titulaire en temps partiel
+  thérapeutique à 50 %, prescription de prolongation avec télétravail à
+  100 % ; deux examens chez le médecin agréé non honorés ; la collectivité
+  souhaitait annoncer que les frais d'un nouvel examen manqué resteraient à
+  la charge de l'agente.
+- Constat : première réponse fondée sur les art. 15 et 34 du décret 87-602
+  (agents en congé) avant d'avoir qualifié le cadre de l'examen, puis deux
+  corrections successives. La branche ne traitait ni les frais d'examen
+  (art. 41), ni le désistement du 13-2, II, ni le régime d'autorisation du
+  télétravail (R432-4 à R432-12), ni l'articulation TPT/télétravail.
+- Action proposée : variable bloquante « cadre de l'examen » (§4) ; frais
+  et conséquences de l'absence selon le cadre (§5.2) ; désistement et
+  renouvellement en TPT (§5.3) ; régime d'autorisation du télétravail
+  (§5.5) ; déclencheur (§7), pièges 13 et 14 (§8), donnée à localiser (§9).
+- Statut : intégré (v0.7.1, non qualifié).
+
 ### 2026-11-03 — Veille juridique ciblée (points en attente et JORF)
 - Type : erreur + lacune
 - Branche : socle + carrière-paie + qvt-sante + statut-garanties +
