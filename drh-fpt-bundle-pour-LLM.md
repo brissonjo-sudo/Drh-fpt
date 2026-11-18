@@ -2908,11 +2908,19 @@ invalidité ; égalité professionnelle (plan d'action, nominations
   au JORF (JORFTEXT000054570030) le même jour.
   **TPT prescrit en télétravail** : les modalités d'exercice figurent dans le
   certificat médical (art. 13-1) ; l'autorisation de télétravail reste un
-  acte distinct, soumis à son propre régime (voir §5.5). Les textes lus ne
-  disent pas lequel prévaut lorsque la prescription demande un télétravail
-  que l'autorité estime incompatible avec les activités ou l'intérêt du
-  service (R432-6) : **non tranché**, à faire valider avant toute décision.
-  Ajout du 17/11/2026 : art. 13-2 relu sur Légifrance ce jour.
+  acte distinct, soumis à son propre régime (voir §5.5). Un télétravail
+  au-delà de trois jours par semaine, ou avec moins de deux jours de
+  présence, sort du plafond de R431-5 : il suppose la dérogation pour
+  raison de santé de R431-6, 1°, après avis du service de médecine
+  préventive ou du médecin du travail, pour six mois au plus. Les textes
+  lus ne font pas du certificat de TPT un substitut à cet avis : ne pas
+  accorder ni refuser un télétravail dérogatoire sur la seule prescription
+  du médecin traitant (lecture des textes, à faire valider). Reste **non
+  tranché** : le cas où, même après cet avis, l'autorité estime le
+  télétravail incompatible avec les activités ou l'intérêt du service
+  (R432-6) ; à faire valider avant toute décision.
+  Ajout du 17/11/2026 : art. 13-2 relu sur Légifrance ce jour ; R431-5 et
+  R431-6 lus le 18/11/2026.
 
 ### 5.4 Handicap
 - **Obligation d'emploi** de travailleurs handicapés : taux légal, applicable
@@ -2970,13 +2978,23 @@ Source : L131-8 (LEGIARTI000044427678), pack PISTE du 16/10/2026.
     service (R432-11) ;
   - refus et interruption à l'initiative de l'administration : **motivés
     et précédés d'un entretien** (R432-12).
-  **Non localisé** : le plafond de jours de télétravail par semaine et sa
-  dérogation pour raison de santé ne figurent pas dans R432-1 à R432-12
-  (R432-13 n'existe pas au 18/11/2026). Une source secondaire
-  (service-public.gouv.fr) les mentionne, avec un avis du médecin du
-  travail, et non d'un médecin agréé : retrouver l'article en vigueur
-  avant de les citer.
-  Sources : R432-2 (LEGIARTI000054077143), R432-4 (LEGIARTI000054077147),
+- **Quotité et dérogations** (CGFP, chapitre Ier « Définition », en
+  vigueur depuis le 01/08/2026) :
+  - au plus **trois jours de télétravail par semaine** et au moins **deux
+    jours de présence** sur le lieu d'affectation ; ces seuils peuvent
+    s'apprécier sur une base mensuelle (R431-5) ;
+  - dérogation possible, notamment **à la demande d'un agent dont l'état
+    de santé ou le handicap le justifie, après avis du service de médecine
+    préventive ou du médecin du travail**, pour **six mois au plus**,
+    renouvelable après un nouvel avis (R431-6, 1°) ; autres cas : grossesse
+    (2°), agent éligible au congé de proche aidant, trois mois
+    renouvelables (3°), situation exceptionnelle perturbant l'accès au
+    service ou le travail sur site (4°).
+  L'avis exigé pour la dérogation santé est celui de la médecine préventive
+  ou du médecin du travail, ni celui du médecin traitant ni celui du
+  médecin agréé.
+  Sources : R431-5 (LEGIARTI000054077135) et R431-6 (LEGIARTI000054077137),
+  R432-2 (LEGIARTI000054077143), R432-4 (LEGIARTI000054077147),
   R432-5 (LEGIARTI000054077149), R432-6 (LEGIARTI000054077151), R432-7
   (LEGIARTI000054077153), R432-8 (LEGIARTI000054077155), R432-9
   (LEGIARTI000054077157), R432-10 (LEGIARTI000054077159), R432-11
@@ -3228,6 +3246,9 @@ manquantes, valeurs volatiles à vérifier).
   toute mention de sanction ; frais à la charge de la collectivité
   (art. 41) ; application du désistement de l'art. 13-2, II à un
   renouvellement de TPT à faire valider.
+- **Télétravail au-delà de trois jours par semaine** : dérogation de
+  R431-6 à qualifier (santé : avis de la médecine préventive ou du médecin
+  du travail, six mois au plus) avant toute réponse.
 
 ## 8. Pièges & confusions fréquentes
 
@@ -3261,6 +3282,10 @@ manquantes, valeurs volatiles à vérifier).
 14. Opposer à un agent en fonctions (y compris en TPT) les sanctions des
    art. 15 ou 34, qui visent les agents en congé ; pour le TPT, la
    conséquence prévue est le désistement de la demande (art. 13-2, II).
+15. Traiter un télétravail à 100 % prescrit dans un certificat de TPT
+   comme acquis, ou le refuser sans examen : au-delà de trois jours par
+   semaine, il relève de la dérogation de R431-6, 1°, après avis du service
+   de médecine préventive ou du médecin du travail, pour six mois au plus.
 
 ## 9. Données volatiles à vérifier
 
@@ -3275,9 +3300,7 @@ disponibilité d'office ; création éventuelle d'un fonds FPT dédié à
 l'usure professionnelle ; calendrier prévoyance 2029 et contenu des
 décrets n° 2026-986 et 2026-987 ; seuil d'effectif et taux de pénalité du
 plan d'action égalité ; date du prochain renouvellement général pour les
-nominations équilibrées ; périmètre de l'index égalité ; article en vigueur
-portant le plafond hebdomadaire de télétravail et sa dérogation pour raison
-de santé (non localisé dans R432-1 à R432-12 au 18/11/2026).
+nominations équilibrées ; périmètre de l'index égalité.
 
 ## 10. Livrables (classés par niveau)
 

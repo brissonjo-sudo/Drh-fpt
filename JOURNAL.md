@@ -34,11 +34,14 @@ Une entrée par cas, au format ci-dessous.
   (agents en congé) avant d'avoir qualifié le cadre de l'examen, puis deux
   corrections successives. La branche ne traitait ni les frais d'examen
   (art. 41), ni le désistement du 13-2, II, ni le régime d'autorisation du
-  télétravail (R432-4 à R432-12), ni l'articulation TPT/télétravail.
+  télétravail (R432-4 à R432-12), ni l'articulation TPT/télétravail. Le
+  plafond hebdomadaire et la dérogation santé, d'abord cherchés en vain
+  dans R432-1 à R432-12, figurent au chapitre Ier (R431-5 et R431-6).
 - Action proposée : variable bloquante « cadre de l'examen » (§4) ; frais
   et conséquences de l'absence selon le cadre (§5.2) ; désistement et
-  renouvellement en TPT (§5.3) ; régime d'autorisation du télétravail
-  (§5.5) ; déclencheur (§7), pièges 13 et 14 (§8), donnée à localiser (§9).
+  renouvellement en TPT, télétravail prescrit et dérogation de R431-6
+  (§5.3) ; régime d'autorisation, quotité et dérogations du télétravail
+  (§5.5) ; déclencheurs (§7), pièges 13 à 15 (§8).
 - Statut : intégré (v0.7.1, non qualifié).
 
 ### 2026-11-03 — Veille juridique ciblée (points en attente et JORF)

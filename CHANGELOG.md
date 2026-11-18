@@ -15,11 +15,15 @@ Articles relus sur Légifrance les 17 et 18/11/2026, versions en vigueur.
   (art. 15, 34 et 13-2, II).
 - **TPT** (`qvt-sante.md` §5.3) : absence injustifiée à l'examen = désistement
   de la demande ; application au renouvellement à faire valider ;
-  articulation avec un télétravail prescrit non tranchée.
+  télétravail prescrit au-delà de trois jours : dérogation santé de R431-6,
+  1°, après avis de la médecine préventive ou du médecin du travail ; seul
+  reste non tranché le refus pour incompatibilité (R432-6) après cet avis.
 - **Télétravail** (`qvt-sante.md` §5.5) : régime d'autorisation (CGFP
-  R432-2, R432-4 à R432-12) ; plafond hebdomadaire et dérogation santé non
-  localisés depuis la recodification du 01/08/2026.
-- Déclencheur (§7), pièges 13 et 14 (§8), donnée à localiser (§9).
+  R432-2, R432-4 à R432-12) ; plafond de trois jours par semaine et deux
+  jours de présence (R431-5) ; dérogations, dont santé ou handicap après
+  avis de la médecine préventive ou du médecin du travail, six mois au plus,
+  renouvelable (R431-6).
+- Déclencheurs (§7), pièges 13 à 15 (§8).
 
 ### Corrigé (veille juridique ciblée, 2026-11-03, non qualifié)
 Points en attente du skill et balayage du JORF du 04/09 au 03/11/2026.
