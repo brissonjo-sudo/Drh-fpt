@@ -38,7 +38,7 @@ Avant tout sous-agent, crée un identifiant de campagne puis écris
 
 Le dépôt `drh-fpt` doit être propre. En mode intégration, le dépôt compagnon
 doit l'être aussi. Si un état est sale, un SHA est absent ou le candidat ne se
-déclare pas `v0.7.0`, arrête la campagne : sa provenance ne permettrait pas une
+déclare pas `v0.8.0`, arrête la campagne : sa provenance ne permettrait pas une
 validation de release.
 
 Lis ensuite `SKILL.md`, tous les fichiers Markdown de `references/`
@@ -187,6 +187,6 @@ rapport dans `tests/rapports/`. Liste les correctifs nécessaires ; après toute
 correction, le mode concerné doit être rejoué intégralement sur le nouveau SHA.
 
 Si toutes les conditions passent, copie le rapport sans réécriture vers
-`tests/rapports/RAPPORT-v0.7.0-<date>-<mode>.md`. Lance tous les cas actifs du
+`tests/rapports/RAPPORT-v0.8.0-<date>-<mode>.md`. Lance tous les cas actifs du
 mode choisi, puis remets-moi le rapport et les réponses brutes sans les
 réécrire.

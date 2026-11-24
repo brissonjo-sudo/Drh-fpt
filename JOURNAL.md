@@ -42,7 +42,7 @@ Une entrée par cas, au format ci-dessous.
   renouvellement en TPT, télétravail prescrit et dérogation de R431-6
   (§5.3) ; régime d'autorisation, quotité et dérogations du télétravail
   (§5.5) ; déclencheurs (§7), pièges 13 à 15 (§8).
-- Statut : intégré (v0.7.1, non qualifié).
+- Statut : intégré (0.8.0, non qualifié).
 
 ### 2026-11-03 — Veille juridique ciblée (points en attente et JORF)
 - Type : erreur + lacune
@@ -60,7 +60,7 @@ Une entrée par cas, au format ci-dessous.
 - Action proposée : corrections et ajouts dans les branches concernées ;
   refaire ce balayage avant chaque publication, la seule date de
   vérification ne garantissant pas l'exactitude d'une paraphrase.
-- Statut : intégré (v0.7.1, non qualifié).
+- Statut : intégré (0.8.0, non qualifié).
 
 ### 2026-07-26 — Co-activation obligatoire et campagnes reproductibles
 - Type : erreur + amélioration

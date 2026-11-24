@@ -101,6 +101,18 @@ def check_version_unique() -> None:
             f"vs YAML SKILL.md={v_yaml}."
         )
 
+    # Fichiers de campagne qui déclarent la version attendue du candidat.
+    for rel, pattern in (('tests/native_runtime.py', r"'version':'([\d.]+)'"),
+                         ('tests/prompt-claude-code.md', r"déclare pas `v([\d.]+)`"),
+                         ('tests/prompt-claude-code.md', r"RAPPORT-v([\d.]+)-")):
+        path = ROOT / rel
+        found = re.findall(pattern, path.read_text(encoding='utf-8')) if path.exists() else []
+        if not found:
+            error(f"{rel} : version attendue introuvable ({pattern}).")
+        for v in found:
+            if v != v_yaml:
+                error(f"Version incohérente : {rel}={v} vs YAML SKILL.md={v_yaml}.")
+
     if not errors:
         print(f"[OK] Version unique et cohérente partout : v{v_yaml}")
 

@@ -73,7 +73,7 @@ def stage(root: Path,drh: Path,mode: str,case_id: str,evidence: list,
     # de skills. Un plugin local explicitement fourni est une voie native
     # documentée, sans ajouter de répertoire extérieur ni activer de réglages.
     (root/'.claude-plugin').mkdir()
-    manifest={'name':'drh-eval','version':'0.7.0','skills':['./.claude/skills/']}
+    manifest={'name':'drh-eval','version':'0.8.0','skills':['./.claude/skills/']}
     (root/'.claude-plugin/plugin.json').write_text(json.dumps(manifest,indent=2),encoding='utf8')
     namespaced={f'drh-eval:{name}':rel for name,rel in skills.items()}
     skills.update(namespaced)

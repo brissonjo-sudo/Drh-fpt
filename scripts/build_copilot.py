@@ -50,8 +50,10 @@ FICHES = [
     ("15", "Statut : garanties, déontologie et signalements", ["references/statut-garanties.md"], "statut-garanties"),
     ("16", "Restitution proportionnée", ["references/restitution-proportionnee.md"], "restitution-proportionnee"),
 ]
-# Exclus, comme dans le bundle : méta-gabarit _gabarit-branche.md, registre de
+# Exclus, comme du bundle : méta-gabarit _gabarit-branche.md, registre de
 # maintenance cache-plafonds-regime-indemnitaire.md, assets/README.md.
+# Exclu de Copilot seulement : registre d'identifiants references-verifiees.md,
+# inclus dans le bundle.
 
 PATH_TO_FICHE = {src: f"{num} ({title})" for num, title, srcs, _ in FICHES for src in srcs}
 
