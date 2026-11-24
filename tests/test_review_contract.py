@@ -74,6 +74,19 @@ class ReviewContractTests(unittest.TestCase):
         self.assertIn('quatre options', text)
         self.assertNotIn('si aucune de ces solutions', text)
 
+    def test_user_premise_and_supplied_document_rules_stand_alone(self):
+        contract = ' '.join(self.read('references/contrat-execution.md').split('## 2.')[0].split())
+        for phrase in ['Par exception au classement « Connues » du §2',
+                       'variable bloquante', 'Contredite par le texte lu',
+                       'sans la redemander']:
+            self.assertIn(phrase, contract)
+        socle = ' '.join(self.read('references/socle-sources-verification.md').split())
+        for phrase in ['**Site officiel** : piste de localisation',
+                       '**Site privé** : fait déclaré', '« non vérifié »',
+                       "**Pièce du dossier**", "fait de l'espèce",
+                       'régularité se contrôle au regard des textes']:
+            self.assertIn(phrase, socle)
+
     def test_mobility_module_follows_branch_template(self):
         import re
         text = self.read('references/carriere-paie/mobilite.md')

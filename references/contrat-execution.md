@@ -27,8 +27,10 @@ Avant toute conclusion :
 - identifier la date de référence et la date d'effet recherchée ;
 - contrôler, avant la recherche, toute prémisse statutaire avancée par
   l'utilisateur : échelle de rémunération, grade équivalent, catégorie, cadre
-  d'emplois. Une prémisse non confirmée par le texte lu en session est une
-  variable à lever (§2), jamais une donnée connue ;
+  d'emplois. Par exception au classement « Connues » du §2, elle est vérifiée
+  par lecture du texte en session. Non confirmée par le texte lu : variable
+  bloquante (§2), jamais une donnée connue. Contredite par le texte lu : la
+  corriger en citant ce texte, sans la redemander ;
 - activer toutes les branches concernées. En cas de dossier mixte, articuler
   leurs règles et appliquer le régime propre à chaque population.
 

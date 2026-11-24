@@ -516,8 +516,10 @@ Avant toute conclusion :
 - identifier la date de référence et la date d'effet recherchée ;
 - contrôler, avant la recherche, toute prémisse statutaire avancée par
   l'utilisateur : échelle de rémunération, grade équivalent, catégorie, cadre
-  d'emplois. Une prémisse non confirmée par le texte lu en session est une
-  variable à lever (§2), jamais une donnée connue ;
+  d'emplois. Par exception au classement « Connues » du §2, elle est vérifiée
+  par lecture du texte en session. Non confirmée par le texte lu : variable
+  bloquante (§2), jamais une donnée connue. Contredite par le texte lu : la
+  corriger en citant ce texte, sans la redemander ;
 - activer toutes les branches concernées. En cas de dossier mixte, articuler
   leurs règles et appliquer le régime propre à chaque population.
 
@@ -808,10 +810,17 @@ La réponse est insuffisante si elle :
    pour fonder seule une affirmation normative.
 
 **Document fourni par l'utilisateur** (capture d'écran, PDF, extrait de
-site, grille indiciaire) : appliquer la rubrique du même nom des sources
-autorisées de `recherche-juridique`. Site officiel : piste de localisation,
-le texte est relu par outil. Site privé : fait déclaré, signalé comme tel,
-jamais fondement d'une règle ou d'une grille.
+site, grille indiciaire, pièce du dossier) : trois catégories.
+- **Site officiel** : piste de localisation ; le texte est relu par outil
+  avant de fonder une règle.
+- **Site privé** : fait déclaré, signalé comme tel ; un montant ou une grille
+  n'est repris qu'avec la mention « non vérifié », jamais comme fondement
+  d'une règle.
+- **Pièce du dossier** (arrêté individuel, bulletin de paie) : fait de
+  l'espèce, dont la régularité se contrôle au regard des textes.
+
+En complément, appliquer la rubrique du même nom des sources autorisées de
+`recherche-juridique`.
 
 ---
 
@@ -2594,6 +2603,9 @@ ancienneté), y compris vers un cadre d'emplois à agrément (police municipale)
 
 1. **Qualifier** : l'opération change-t-elle de cadre d'emplois ? Oui →
    détachement ou intégration directe. Non → mutation ou mise à disposition.
+   Détachement hors cadre d'emplois (organisme, entreprise, mandat : autres
+   cas de l'art. 2 du décret 86-68) → l'art. 11-1, qui vise le détachement
+   « dans un cadre d'emplois », ne s'applique pas : lire les règles du cas.
 2. **Lire** les deux statuts particuliers et les deux décrets d'échelonnement
    en vigueur. Ne jamais déduire l'échelle d'un grade de sa catégorie.
 3. **Recevabilité** : même catégorie et niveau comparable ; conditions propres
@@ -2642,10 +2654,12 @@ d'origine et date souhaitée ; durée envisagée.
 - Le détachement est prononcé **sur demande du fonctionnaire** (L513-1 ;
   décret 86-68, art. 3). Entre collectivités : cas du 2° de l'art. 2 du
   décret 86-68.
-- Employeur d'origine (L511-3) : il ne peut s'opposer qu'en raison des
-  nécessités du service ou d'un avis de la HATVP ; il peut exiger un préavis
-  de trois mois au plus ; son silence de deux mois vaut acceptation. Un
-  statut particulier peut allonger ce préavis dans la limite fixée par L511-3.
+- Employeur d'origine (L511-3) : hormis les cas où le détachement est de
+  droit, il ne peut s'opposer à la demande, présentée avec l'accord de
+  l'accueil, qu'en raison des nécessités du service ou d'un avis de la HATVP ;
+  il peut exiger un préavis de trois mois au plus ; son silence de deux mois
+  vaut acceptation. Un statut particulier peut allonger ce préavis dans la
+  limite fixée par L511-3 et imposer une durée minimale de services effectifs.
 - Intégration directe : prononcée par l'employeur d'accueil avec l'accord de
   l'agent et de l'employeur d'origine, dans les conditions de classement du
   détachement (L511-7 ; décret 86-68, art. 26-1 et 26-2). Services antérieurs
@@ -2678,7 +2692,9 @@ compte l'indice terminal, mais aussi notamment la **place des grades** dans
 les deux corps et leur **échelonnement indiciaire**. Un indice terminal
 inférieur ou une structure de grades différente ne fait pas obstacle, à lui
 seul, à l'équivalence. Transposition à l'art. 11-1 du décret 86-68 :
-**inférence** fondée sur l'identité de rédaction, sans décision FPT lue.
+**inférence** fondée sur l'identité de rédaction, sans décision FPT reprenant
+la méthode (la CAA de Marseille ci-dessous applique l'art. 11-1 sans exposer
+de critères).
 
 - L'art. 11-1 ne règle pas le cas d'un indice d'origine supérieur au sommital
   du grade équivalent : ne pas inventer de maintien d'indice (§11).
@@ -2716,14 +2732,22 @@ seul, à l'équivalence. Transposition à l'art. 11-1 du décret 86-68 :
   l'agent. Demande de l'accueil ou de l'origine : hors faute grave commise
   dans l'exercice des fonctions, adressée trois mois au moins avant la remise
   à disposition. Si l'origine ne peut réintégrer aussitôt l'agent qui a
-  demandé la fin : disponibilité sans rémunération jusqu'à la réintégration.
+  demandé la fin : disponibilité sans rémunération jusqu'à la réintégration ;
+  si celle-ci n'est pas intervenue au terme initialement prévu, réintégration
+  dans les conditions de l'art. 67 de la loi du 26 janvier 1984 (renvoi non
+  actualisé).
+- Remise à disposition avant le terme normal, pour une cause autre qu'une
+  faute commise dans l'exercice des fonctions, sans emploi vacant dans le
+  cadre d'emplois d'origine : l'organisme de détachement continue de
+  rémunérer l'agent jusqu'à sa réintégration (L513-21).
 - Au terme (CGFP) : courte durée, réintégration et réaffectation obligatoires
   dans l'emploi antérieur (L513-23) ; longue durée, sauf intégration,
   réintégration à la première vacance dans un emploi du grade, disponibilité
   d'office en cas de refus (L513-24) ; sans emploi vacant, surnombre un an
   puis prise en charge par le CDG ou le CNFPT (L513-26).
 - Les art. 9 et 10 du décret 86-68 renvoient aux lois de 1983 et 1984 :
-  rapprocher de L513-12 et L513-24 à L513-26 sans affirmer de concordance.
+  rapprocher l'art. 9 de L513-12, et l'art. 10 de L513-21 et L513-23 à
+  L513-26, sans affirmer de concordance.
 
 ### 5.18 Mutation et mise à disposition
 
@@ -2733,7 +2757,8 @@ seul, à l'équivalence. Transposition à l'art. 11-1 du décret 86-68 :
   préavis de L511-3 sauf accord des deux autorités (L512-24). Mutation dans
   les trois ans suivant la titularisation : indemnité due à l'origine
   (formation obligatoire, formations complémentaires) ; à défaut d'accord sur
-  son montant, remboursement de la totalité des dépenses (L512-25). Mouvements internes : autorité territoriale (L512-23).
+  son montant, remboursement de la totalité des dépenses (L512-25).
+  Mouvements internes : autorité territoriale (L512-23).
 - **Mise à disposition** : l'agent demeure dans son cadre d'emplois, est
   réputé occuper son emploi et garde sa rémunération, mais exerce hors de son
   administration (L512-6) ; accord de l'agent et convention (L512-7).
@@ -2746,6 +2771,9 @@ seul, à l'équivalence. Transposition à l'art. 11-1 du décret 86-68 :
 - Décret 2006-1391, art. 1 : cadre d'emplois de catégorie C, grades de
   **gardien-brigadier** (échelle **C2**) et de **brigadier-chef principal**
   (échelonnement fixé par décret : décret 94-733, art. 1).
+- Grade transitoire de **chef de police municipale** (art. 27 : huit
+  échelons ; échelonnement : décret 94-733, art. 2). Accès par détachement à
+  un grade transitoire : à vérifier.
 - Détachement et intégration directe dans le cadre d'emplois selon CGFP
   L511-5 à L511-8 et L513-7 à L513-13 (art. 13).
 - Les grades sont aussi régis par le décret 2016-596 (art. 1 du décret
@@ -2763,7 +2791,8 @@ seul, à l'équivalence. Transposition à l'art. 11-1 du décret 86-68 :
 - **Avancement au BCP** (art. 10) : tableau au choix ; gardien-brigadier au
   6e échelon au moins, avec quatre ans de services effectifs dans ce grade,
   dans un grade de même échelle d'un autre cadre d'emplois de catégorie C, ou
-  dans un **grade équivalent** si l'échelle d'origine est différente.
+  dans un **grade équivalent** si le cadre d'origine est situé dans une
+  échelle différente ou n'est pas classé en catégorie C.
   Inscription subordonnée à une attestation du CNFPT de la formation de CSI
   L511-6 (art. 11). Classement : indice égal ou immédiatement supérieur,
   ancienneté conservée dans les limites de l'art. 12.
@@ -2774,14 +2803,28 @@ seul, à l'équivalence. Transposition à l'art. 11-1 du décret 86-68 :
 
 ## 6. Calculs
 
-Méthode : annoncer les hypothèses ; demander grade, échelon, indice et
-ancienneté ; lire les deux grilles en vigueur ; classer selon §5.15 ; tester
-L513-10. Indices majorés et montants en euros : jamais sans lecture (§9).
+Méthode :
+1. annoncer les **hypothèses** ;
+2. séparer les données **connues** (fournies ou lues) et **estimées** ;
+   demander les données manquantes (grade, échelon, indice, ancienneté) ;
+3. **recevabilité** : même catégorie et niveau comparable (L513-8) ;
+   conditions propres à l'accueil (police municipale : nationalité, art. 1-1) ;
+4. lire les deux grilles en vigueur ;
+5. classer selon §5.15, puis tester L513-10.
+
+Indices majorés et montants en euros : jamais sans lecture (§9).
 
 **Cas d'école fictif** : agent de maîtrise au 10e échelon, détaché dans le
-cadre d'emplois des agents de police municipale. Grilles lues le 2026-11-24 :
-décret 88-548, art. 1 (version du 01/01/2022) ; décret 2016-604, art. 1
-(version du 01/01/2022) ; décret 94-733, art. 1 (version du 01/12/2023).
+cadre d'emplois des agents de police municipale.
+- **Connues** : grade et échelon d'origine (donnée du cas) ; grilles lues le
+  2026-11-24 : décret 88-548, art. 1 (version du 01/01/2022) ; décret
+  2016-604, art. 1 (version du 01/01/2022) ; décret 94-733, art. 1 et 2
+  (version du 01/12/2023).
+- **À demander** : ancienneté dans l'échelon, tableau d'avancement, nationalité,
+  agrément. **Estimées** : aucune.
+- **Recevabilité** : deux cadres d'emplois de catégorie C (décret 88-547,
+  art. 1 ; décret 2006-1391, art. 1). Niveau comparable : à apprécier
+  (L513-8), contrôle à faire.
 
 | Grade | Rang dans le cadre | Échelons | IB 1er | IB sommital |
 |---|---|---|---|---|
@@ -2789,27 +2832,49 @@ décret 88-548, art. 1 (version du 01/01/2022) ; décret 2016-604, art. 1
 | Agent de maîtrise principal | avancement (art. 13) | 10 | 390 | 597 |
 | Gardien-brigadier (C2) | grade initial | 12 | 368 | 486 |
 | Brigadier-chef principal | avancement (art. 10) | 10 | 390 | 597 |
+| Chef de police municipale | transitoire (art. 27) | 8 | 394 | 597 |
 
 Agent de maîtrise, 10e échelon : IB 479.
 
-1. **Lecture retenue (plausible)** : le gardien-brigadier est le grade
-   équivalent (même rang, début de grille voisin, méthode CE 410972). Classement au
-   12e échelon C2 (IB 486 ; le 11e, IB 473, est inférieur). Pas de BCP direct.
-2. **Lecture alternative** : aucun grade équivalent. Le sommital le plus proche
-   de 562 est celui du BCP (597, écart 35, contre 486, écart 76) : BCP,
-   6e échelon (IB 487). Elle suppose d'écarter l'équivalence ; la méthode du
-   CE la rend fragile.
-3. **Voie A (accueil)** : détachement comme gardien-brigadier, puis tableau
-   au BCP (art. 10 et 11). Le 6e échelon est dépassé. Les services d'agent de
-   maîtrise ne comptent comme « grade équivalent » que sous la même inférence.
-   Classement au BCP (art. 12) : 6e échelon (IB 487).
-4. **Voie B (origine)** : inscription au tableau d'agent de maîtrise principal
-   (décret 88-547, art. 13 : un an au 4e échelon et quatre ans de services
-   effectifs). Promu, l'agent va au 6e échelon (IB 492), deux tiers de
-   l'ancienneté conservés (art. 15). Détachement au grade équivalent, BCP
-   (inférence plausible : même rang, même grille de 10 échelons), 7e échelon
-   (IB 501), via L513-10 si seule l'inscription est acquise.
-5. Dans tous les cas : exercice des fonctions après formation et agrément.
+Les deux lectures sont **débattues** : aucun article ne dit quel grade de
+police municipale équivaut à celui d'agent de maîtrise.
+
+1. **Gardien-brigadier équivalent** (art. 11-1, al. 1) : 12e échelon C2
+   (IB 486 ; le 11e, IB 473, est inférieur). Pas de BCP direct.
+   - Pour : même rang (grade initial d'un cadre à deux grades, dont le grade
+     d'avancement s'obtient au choix) ; début de grille voisin (372 / 368) ;
+     un indice terminal inférieur n'empêche pas, à lui seul, l'équivalence
+     (CE 410972).
+   - Contre : l'échelonnement, critère du même arrêt, diverge au-delà de 486.
+     Les 11e à 13e échelons d'agent de maîtrise (IB 499, 525, 562) n'ont aucun
+     échelon d'accueil. Écart de sommital de 76 ; 13 échelons contre 12.
+2. **Aucun grade équivalent** (al. 2) : sommital le plus proche de 562, celui
+   du BCP (597, écart 35) : BCP, 6e échelon (IB 487).
+   - Pour : la grille d'agent de maîtrise dépasse C2 ; à défaut d'équivalence,
+     le texte impose le sommital.
+   - Contre : le BCP est un grade d'avancement, au choix et après formation
+     (art. 10 et 11) ; l'agent de maîtrise principal a les mêmes bornes et le
+     même nombre d'échelons que le BCP ; pas de promotion concomitante au
+     classement (CAA Marseille, illustratif).
+- Agent de maîtrise au **11e échelon ou au-delà** : il sort de la lecture 1
+  (aucun échelon C2 d'indice égal ou supérieur). Classement à vérifier.
+- **Sécuriser sans trancher** : solliciter un avis (CDG ou DGCL), ou préparer
+  un projet d'arrêté dont le grade de classement reste un champ à valider,
+  motivé par les critères ci-dessus.
+
+Voies vers le BCP :
+- **Voie A (accueil)**, dans la lecture 1 : détachement comme
+  gardien-brigadier, puis tableau au BCP (art. 10 et 11). Le 6e échelon est
+  dépassé. Les services d'agent de maîtrise ne comptent comme « grade
+  équivalent » que sous la même lecture. Classement au BCP (art. 12) :
+  6e échelon (IB 487).
+- **Voie B (origine)** : inscription au tableau d'agent de maîtrise principal
+  (décret 88-547, art. 13 : un an au 4e échelon et quatre ans de services
+  effectifs). Promu, l'agent va au 6e échelon (IB 492), deux tiers de
+  l'ancienneté conservés (art. 15). Détachement au grade équivalent, BCP
+  (inférence à vérifier : même rang, mêmes bornes, même nombre d'échelons),
+  7e échelon (IB 501), via L513-10 si seule l'inscription est acquise.
+- Dans tous les cas : exercice des fonctions après formation et agrément.
 
 ## 7. Déclencheurs de vérification
 
@@ -2837,6 +2902,8 @@ Agent de maîtrise, 10e échelon : IB 479.
 6. Confondre détachement, mutation et mise à disposition.
 7. Classer à un indice inférieur à l'indice d'origine sans base lue.
 8. Oublier la **proposition d'intégration** au-delà de cinq ans (L513-12).
+9. Tenir pour acquise une équivalence de grade non tranchée par un texte :
+   la présenter comme débattue, avec ses critères (§6).
 
 ## 9. Données volatiles à vérifier
 
@@ -2852,7 +2919,9 @@ Agent de maîtrise, 10e échelon : IB 479.
    d'intégration, de renouvellement ou de fin de détachement : visas lus
    (CGFP, décret 86-68, statuts et échelonnements des deux cadres), grade,
    échelon, indice brut, ancienneté conservée, durée, date d'effet. Si
-   l'agrément n'est pas obtenu : condition d'exercice des fonctions.
+   l'agrément n'est pas obtenu : condition d'exercice des fonctions. Acte
+   faisant grief (refus, fin anticipée, classement contesté) : motivation et
+   **mention des voies et délais de recours** (délais à vérifier).
 2. **Organisation** — fiche de procédure : demande, accord de l'origine,
    préavis, convention de mise à disposition.
 3. **Pilotage** — note comparant les voies et leur coût de carrière (§6).
@@ -2866,16 +2935,21 @@ Appliquer la confiance proposition par proposition.
 
 - **Stable** (article lu le 2026-11-24 portant la proposition) : CGFP L511-3,
   L511-5 à L511-7, L512-6, L512-7, L512-23 à L512-25, L513-1, L513-7 à
-  L513-12, L513-23 à L513-26 ; décret 86-68, art. 2, 3, 7 à 10, 11-1 à 11-4,
-  26-1 à 26-3 ; décret 88-547, art. 1, 13, 15 ; décret 88-548, art. 1 ; décret
-  2016-604, art. 1 ; décret 94-733, art. 1 ; décret 2006-1391, art. 1, 1-1, 5,
-  10 à 13 ; décret 2016-596, art. 13.
-- **Jurisprudentiel / plausible** : équivalence agent de maîtrise /
-  gardien-brigadier et agent de maîtrise principal / BCP (méthode CE 410972,
-  rendue pour l'État).
+  L513-12, L513-21, L513-23 à L513-26 ; décret 86-68, art. 2, 3, 7 à 10,
+  11-1 à 11-4, 26-1 à 26-3 ; décret 88-547, art. 1, 13, 15 ; décret 88-548,
+  art. 1 ; décret 2016-604, art. 1 ; décret 94-733, art. 1 et 2 ; décret
+  2006-1391, art. 1, 1-1, 5, 10 à 13, 27 ; décret 2016-596, art. 13.
+- **Débattu** : grade de classement d'un agent de maîtrise détaché en police
+  municipale, gardien-brigadier par équivalence ou BCP par le sommital
+  (méthode CE 410972, rendue pour l'État ; critères au §6).
+- **À vérifier** : équivalence agent de maîtrise principal / BCP (inférence,
+  critères concordants, aucun texte ne la tranche).
 
 **À vérifier (aucune source lue en session)** :
-- sort d'un indice d'origine supérieur au sommital du grade équivalent ;
+- classement d'un agent de maîtrise au 11e échelon ou au-delà, et plus
+  largement d'un indice d'origine supérieur au sommital du grade équivalent ;
+- accès par détachement au grade transitoire de chef de police municipale ;
+- articulation de L513-21 avec la fin demandée par l'agent (art. 10) ;
 - concordance des renvois des art. 9 et 10 du décret 86-68 avec le CGFP ;
 - CSI L511-6, assermentation, retrait de l'agrément d'un agent détaché ;
 - durée de validité d'un tableau d'avancement acquis dans l'origine ;
@@ -2884,9 +2958,10 @@ Appliquer la confiance proposition par proposition.
 Sources (Légifrance, lues le 2026-11-24) : décret 86-68, art. 11-1
 (LEGIARTI000024033472) ; décret 88-548, art. 1 (LEGIARTI000044811879) ;
 décret 2016-604, art. 1 (LEGIARTI000044811902) ; décret 94-733, art. 1
-(LEGIARTI000048451161) ; décret 2006-1391, art. 1 (LEGIARTI000047172171) et
-13 (LEGIARTI000047172151) ; décret 2016-596, art. 13 (LEGIARTI000048173371) ;
-CGFP L513-10 (LEGIARTI000044425692) ;
+(LEGIARTI000048451161) et 2 (LEGIARTI000048451159) ; décret 2006-1391,
+art. 1 (LEGIARTI000047172171), 13 (LEGIARTI000047172151) et 27
+(LEGIARTI000048451638) ; décret 2016-596, art. 13 (LEGIARTI000048173371) ;
+CGFP L513-10 (LEGIARTI000044425692) et L513-21 (LEGIARTI000044425662) ;
 CE 410972 (CETATEXT000036945758) ; CAA Marseille 17MA01391
 (CETATEXT000038121679).
 
@@ -2895,7 +2970,8 @@ CE 410972 (CETATEXT000036945758) ; CAA Marseille 17MA01391
 1. Opération qualifiée : changement de cadre d'emplois ou non ?
 2. Deux statuts particuliers et deux échelonnements lus, version applicable ?
 3. Échelle réelle de chaque grade identifiée (C1, C2, C3 ou grille propre) ?
-4. Grade équivalent recherché **avant** la règle du sommital ?
+4. Grade équivalent recherché **avant** la règle du sommital ? Lecture
+   débattue signalée, avec sécurisation proposée (avis, projet à valider) ?
 5. Échelon et ancienneté calculés depuis la situation réelle d'origine ?
 6. Tableau, concours ou examen de l'origine pris en compte (L513-10) ?
 7. Agrément et formation : exercice des fonctions conditionné ; BASCULE vers
@@ -5147,8 +5223,9 @@ une condition ou une autorité non vérifiée ne répare pas son affirmation.
 > **Piste de localisation, jamais preuve de lecture en session.** Ce registre
 > aide à retrouver un texte. Il ne dispense pas de lire ce texte par outil, à
 > la version applicable à la date du dossier, avant de fonder une règle. Une
-> référence absente d'ici se réserve ou se retire : un identifiant ne se
-> reconstitue jamais de mémoire.
+> référence absente d'ici et non lue par outil en session se réserve ou se
+> retire : un identifiant ne se reconstitue jamais de mémoire. Le registre ne
+> couvre que la mobilité.
 >
 > **Veille du 2026-11-24** (version 1, limitée au module
 > `references/carriere-paie/mobilite.md`). Identifiants renvoyés en session
@@ -5156,6 +5233,8 @@ une condition ou une autorité non vérifiée ne répare pas son affirmation.
 > `fetch`) ; LEGITEXT des décrets localisés par l'API PISTE (fonds LODA,
 > champ NUM), puis texte lu par `get_text`. Statut d'un texte : fondé sur la
 > lecture `get_article` des articles listés, pas sur l'état global du texte.
+> Décret 2016-596 : `get_text` en échec, texte lu par `/consult/legiPart`
+> direct ; son art. 13 relu par `get_article`.
 >
 > **Aucune valeur chiffrée ici** (indice, durée, délai) : elles sont dans les
 > modules, avec leur date de lecture.
@@ -5186,8 +5265,10 @@ une condition ou une autorité non vérifiée ne répare pas son affirmation.
 | Attestation du CNFPT avant inscription au tableau | Décret 2006-1391, art. 11 | LEGIARTI000028542141 | 2014-02-01 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
 | Classement des promus brigadiers-chefs principaux | Décret 2006-1391, art. 12 | LEGIARTI000006402631 | 2006-11-18 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
 | Détachement et intégration directe ; formation et agrément avant exercice | Décret 2006-1391, art. 13 | LEGIARTI000047172151 | 2023-02-17 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
+| Grade transitoire de chef de police municipale | Décret 2006-1391, art. 27 | LEGIARTI000048451638 | 2023-12-01 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
 | Échelonnement des brigadiers-chefs principaux et chefs de police | Décret n° 94-733 du 24 août 1994 | LEGITEXT000005616483 (JORFTEXT000000732014) | version du 2023-12-01 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
 | Grille du brigadier-chef principal | Décret 94-733, art. 1 | LEGIARTI000048451161 | 2023-12-01 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
+| Grille du chef de police municipale (grade transitoire) | Décret 94-733, art. 2 | LEGIARTI000048451159 | 2023-12-01 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
 | Formation exigée pour l'inscription au tableau de BCP | Code de la sécurité intérieure, art. L511-6 | | | non vérifié | carriere-paie/mobilite |
 
 ## 3. Catégorie C : échelles de rémunération
@@ -5196,7 +5277,7 @@ une condition ou une autorité non vérifiée ne répare pas son affirmation.
 |---|---|---|---|---|---|
 | Échelles C1, C2 et C3 de la FPT | Décret n° 2016-604 du 12 mai 2016 | LEGITEXT000032545071 (JORFTEXT000032527130) | version du 2022-01-01 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
 | Grilles des échelles C1, C2 et C3 | Décret 2016-604, art. 1 | LEGIARTI000044811902 | 2022-01-01 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
-| Organisation des carrières de catégorie C (régit les grades de police municipale) | Décret n° 2016-596 du 12 mai 2016 | LEGITEXT000032540869 (JORFTEXT000032526775) | | vérifié (lu le 2026-11-24 par `/consult/legiPart` direct ; `get_text` en échec) | carriere-paie/mobilite |
+| Organisation des carrières de catégorie C (régit les grades de police municipale) | Décret n° 2016-596 du 12 mai 2016 | LEGITEXT000032540869 (JORFTEXT000032526775) | | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
 | Détachement et intégration directe en catégorie C : renvoi aux titres Ier, III bis et IV du décret 86-68 | Décret 2016-596, art. 13 | LEGIARTI000048173371 | 2023-10-09 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
 
 ## 4. Détachement et intégration : décret n° 86-68
@@ -5238,8 +5319,9 @@ une condition ou une autorité non vérifiée ne répare pas son affirmation.
 | Droits et obligations du détaché | CGFP, art. L513-9 | LEGIARTI000044425694 | 2022-03-01 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
 | Prise en compte d'un concours, examen ou tableau obtenu dans l'origine | CGFP, art. L513-10 | LEGIARTI000044425692 | 2022-03-01 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
 | Réintégration : grade et échelon du détachement | CGFP, art. L513-11 | LEGIARTI000044425690 | 2022-03-01 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
-| Intégration proposée au-delà de cinq ans | CGFP, art. L513-12 | LEGIARTI000044425688 | 2022-03-01 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
+| Intégration proposée au-delà d'une durée de détachement | CGFP, art. L513-12 | LEGIARTI000044425688 | 2022-03-01 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
 | Détachement : corps exclus | CGFP, art. L513-13 | LEGIARTI000044425686 | 2022-03-01 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
+| Remise à disposition anticipée sans faute ni emploi vacant : rémunération par l'organisme de détachement | CGFP, art. L513-21 | LEGIARTI000044425662 | 2022-03-01 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
 | Fin du détachement de courte durée | CGFP, art. L513-23 | LEGIARTI000044425658 | 2022-03-01 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
 | Fin du détachement de longue durée | CGFP, art. L513-24 | LEGIARTI000044425656 | 2022-03-01 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
 | Intégration dans le cadre de détachement | CGFP, art. L513-25 | LEGIARTI000044425654 | 2022-03-01 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
@@ -5251,7 +5333,12 @@ une condition ou une autorité non vérifiée ne répare pas son affirmation.
 |---|---|---|---|---|---|
 | Méthode d'appréciation de l'équivalence de grade (rendue sur le décret 85-986, État) | CE, 25 mai 2018, n° 410972 | CETATEXT000036945758 | décision du 2018-05-25 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
 | Pas de promotion concomitante au classement d'un détaché (inédit) | CAA Marseille, 5 février 2019, n° 17MA01391 | CETATEXT000038121679 | décision du 2019-02-05 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
-| Classement en détachement dans un corps de l'État | Décret n° 85-986 du 16 septembre 1985, art. 26-1 | | | non vérifié (cité par CE 410972, non lu) | carriere-paie/mobilite |
+
+## 7. Fonction publique de l'État (pour mémoire)
+
+| Objet | Référence | Identifiant | En vigueur depuis | Statut | Branche |
+|---|---|---|---|---|---|
+| Classement en détachement dans un corps de l'État (cité par CE 410972) | Décret n° 85-986 du 16 septembre 1985, art. 26-1 | | | non vérifié | carriere-paie/mobilite |
 
 ================================================================================
 ### SOURCE : RESTITUTION PROPORTIONNÉE
