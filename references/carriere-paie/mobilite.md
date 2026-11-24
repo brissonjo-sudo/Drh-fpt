@@ -275,7 +275,8 @@ police municipale équivaut à celui d'agent de maîtrise.
      Les 11e à 13e échelons d'agent de maîtrise (IB 499, 525, 562) n'ont aucun
      échelon d'accueil. Écart de sommital de 76 ; 13 échelons contre 12.
 2. **Aucun grade équivalent** (al. 2) : sommital le plus proche de 562, celui
-   du BCP (597, écart 35) : BCP, 6e échelon (IB 487).
+   du BCP (597, écart 35) : BCP, 6e échelon (IB 487). Égalité de sommital
+   avec le grade transitoire de chef de police (597) : accès à vérifier (§5.19).
    - Pour : la grille d'agent de maîtrise dépasse C2 ; à défaut d'équivalence,
      le texte impose le sommital.
    - Contre : le BCP est un grade d'avancement, au choix et après formation
