@@ -60,6 +60,7 @@ SECTIONS = [
     ("BRANCHE — Communication interne", ROOT / "references/communication-interne.md"),
     ("BRANCHE — Agents contractuels", ROOT / "references/contractuels.md"),
     ("BRANCHE — Statut : garanties, déontologie & signalements", ROOT / "references/statut-garanties.md"),
+    ("REGISTRE — Références vérifiées (localisation, jamais preuve)", ROOT / "references/references-verifiees.md"),
     ("RESTITUTION PROPORTIONNÉE", ROOT / "references/restitution-proportionnee.md"),
 ]
 

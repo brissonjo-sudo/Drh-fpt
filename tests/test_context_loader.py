@@ -59,6 +59,13 @@ class ContextLoaderTests(unittest.TestCase):
             {'id': 'mob', 'contextes': ['carriere-paie', 'carriere-mobilite']})
         self.assertIn('references/carriere-paie/mobilite.md', files)
 
+    def test_registry_context_loads_registry_with_its_warning(self):
+        files = context_loader.files_for_case(
+            {'id': 'reg', 'contextes': ['carriere-paie', 'references-verifiees']})
+        self.assertIn('references/references-verifiees.md', files)
+        text = (ROOT / 'references/references-verifiees.md').read_text(encoding='utf-8')
+        self.assertIn('jamais preuve de lecture en session', text)
+
     def test_unknown_context_is_rejected(self):
         with self.assertRaises(ValueError):
             context_loader.files_for_case({"id": "x", "contextes": ["inconnu"]})

@@ -168,6 +168,7 @@ même comme « pistes à vérifier ». Les faits chiffrés fournis restent utili
 
 Détail des sources FPT et règle de conflit →
 **`references/socle-sources-verification.md`**.
+Pour localiser un texte, consulter `references/references-verifiees.md`, puis lire ce texte par outil : le registre ne prouve rien.
 
 ---
 

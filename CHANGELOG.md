@@ -4,6 +4,20 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
 ## [Non publié] — v0.7.1
 
+### Ajouté (registre d'identifiants, 24/11/2026, non qualifié)
+- **Registre** `references/references-verifiees.md`, version 1 limitée au
+  module mobilité : statuts et échelonnements des agents de maîtrise
+  (88-547, 88-548) et de la police municipale (2006-1391, 94-733), échelles
+  de catégorie C (2016-604), décret 86-68, articles du CGFP et deux
+  décisions. Identifiants renvoyés en session par l'API Légifrance ou PISTE ;
+  lignes sans lecture marquées « non vérifié » (2016-596, CSI L511-6,
+  décret 85-986 art. 26-1).
+- Avertissement en tête : piste de localisation, jamais preuve de lecture en
+  session. `SKILL.md` §3 : consulter le registre pour localiser, puis lire le
+  texte par outil.
+- Enregistrement : chargeur de contexte (`references-verifiees`), bundle
+  (avant la restitution), préambule du bundle, README, test.
+
 ### Ajouté (module mobilité, 24/11/2026, non qualifié)
 Articles lus sur Légifrance le 24/11/2026 (API officielle), versions en vigueur.
 - **Module** `references/carriere-paie/mobilite.md`, au gabarit des branches :

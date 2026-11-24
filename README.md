@@ -101,6 +101,7 @@ drh-fpt/
 │   ├── communication-interne.md          Branche communication interne
 │   ├── contractuels.md                   Branche agents contractuels
 │   ├── statut-garanties.md               Branche statut : garanties, déontologie & signalements
+│   ├── references-verifiees.md       Registre d'identifiants officiels (localisation, jamais preuve)
 │   └── cache-plafonds-regime-indemnitaire.md  Registre de vérification des plafonds (maintenance, hors bundle)
 ├── assets/
 │   ├── README.md                         Logique et index des gabarits

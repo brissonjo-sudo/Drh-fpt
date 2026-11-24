@@ -32,6 +32,7 @@ CONTEXT_FILES = {
     "communication-interne": ("references/communication-interne.md",),
     "contractuels": ("references/contractuels.md",),
     "statut-garanties": ("references/statut-garanties.md",),
+    "references-verifiees": ("references/references-verifiees.md",),
 }
 
 DELIVERABLE_ASSETS = {
