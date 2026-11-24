@@ -235,8 +235,9 @@ Agent de maîtrise, 10e échelon : IB 479.
 4. **Voie B (origine)** : inscription au tableau d'agent de maîtrise principal
    (décret 88-547, art. 13 : un an au 4e échelon et quatre ans de services
    effectifs). Promu, l'agent va au 6e échelon (IB 492), deux tiers de
-   l'ancienneté conservés (art. 15). Détachement au grade équivalent : BCP,
-   7e échelon (IB 501), via L513-10 si seule l'inscription est acquise.
+   l'ancienneté conservés (art. 15). Détachement au grade équivalent, BCP
+   (inférence plausible : même rang, même grille de 10 échelons), 7e échelon
+   (IB 501), via L513-10 si seule l'inscription est acquise.
 5. Dans tous les cas : exercice des fonctions après formation et agrément.
 
 ## 7. Déclencheurs de vérification

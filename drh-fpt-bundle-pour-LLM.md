@@ -2800,8 +2800,9 @@ Agent de maîtrise, 10e échelon : IB 479.
 4. **Voie B (origine)** : inscription au tableau d'agent de maîtrise principal
    (décret 88-547, art. 13 : un an au 4e échelon et quatre ans de services
    effectifs). Promu, l'agent va au 6e échelon (IB 492), deux tiers de
-   l'ancienneté conservés (art. 15). Détachement au grade équivalent : BCP,
-   7e échelon (IB 501), via L513-10 si seule l'inscription est acquise.
+   l'ancienneté conservés (art. 15). Détachement au grade équivalent, BCP
+   (inférence plausible : même rang, même grille de 10 échelons), 7e échelon
+   (IB 501), via L513-10 si seule l'inscription est acquise.
 5. Dans tous les cas : exercice des fonctions après formation et agrément.
 
 ## 7. Déclencheurs de vérification
@@ -5189,7 +5190,7 @@ une condition ou une autorité non vérifiée ne répare pas son affirmation.
 |---|---|---|---|---|---|
 | Échelles C1, C2 et C3 de la FPT | Décret n° 2016-604 du 12 mai 2016 | LEGITEXT000032545071 (JORFTEXT000032527130) | version du 2022-01-01 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
 | Grilles des échelles C1, C2 et C3 | Décret 2016-604, art. 1 | LEGIARTI000044811902 | 2022-01-01 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
-| Organisation des carrières de catégorie C | Décret n° 2016-596 du 12 mai 2016 | LEGITEXT000032540869 (JORFTEXT000032526775) | | non vérifié (localisé par PISTE ; `get_text` en erreur, texte non lu) | carriere-paie/mobilite |
+| Organisation des carrières de catégorie C | Décret n° 2016-596 du 12 mai 2016 | | | non vérifié (texte non lu : lecture en échec le 2026-11-24) | carriere-paie/mobilite |
 
 ## 4. Détachement et intégration : décret n° 86-68
 

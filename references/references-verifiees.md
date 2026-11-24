@@ -52,7 +52,7 @@
 |---|---|---|---|---|---|
 | Échelles C1, C2 et C3 de la FPT | Décret n° 2016-604 du 12 mai 2016 | LEGITEXT000032545071 (JORFTEXT000032527130) | version du 2022-01-01 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
 | Grilles des échelles C1, C2 et C3 | Décret 2016-604, art. 1 | LEGIARTI000044811902 | 2022-01-01 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
-| Organisation des carrières de catégorie C | Décret n° 2016-596 du 12 mai 2016 | LEGITEXT000032540869 (JORFTEXT000032526775) | | non vérifié (localisé par PISTE ; `get_text` en erreur, texte non lu) | carriere-paie/mobilite |
+| Organisation des carrières de catégorie C | Décret n° 2016-596 du 12 mai 2016 | | | non vérifié (texte non lu : lecture en échec le 2026-11-24) | carriere-paie/mobilite |
 
 ## 4. Détachement et intégration : décret n° 86-68
 
