@@ -2,7 +2,21 @@
 
 Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
-## [Non publié] — v0.7.1
+## [0.8.0] — 2026-11-24 — Candidate non publiée — Mobilité, registre d'identifiants, prémisses
+
+Mineure : un module et une référence s'ajoutent. Reprend les entrées
+« Non publié — v0.7.1 » des 03/11 et 18/11/2026. Aucune campagne
+comportementale : non qualifiée.
+
+### Ajouté (contrôle des prémisses et documents fournis, 24/11/2026, non qualifié)
+- `contrat-execution.md` §1 : toute prémisse statutaire de l'utilisateur
+  (échelle, grade équivalent, catégorie, cadre d'emplois) est contrôlée avant
+  la recherche ; non confirmée par le texte lu, elle devient une variable à
+  lever.
+- `socle-sources-verification.md` §1 : un document fourni (capture, PDF,
+  extrait, grille) suit la rubrique « Document fourni par l'utilisateur »
+  de `recherche-juridique` : piste si le site est officiel, fait déclaré
+  s'il est privé.
 
 ### Ajouté (registre d'identifiants, 24/11/2026, non qualifié)
 - **Registre** `references/references-verifiees.md`, version 1 limitée au
@@ -10,8 +24,9 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
   (88-547, 88-548) et de la police municipale (2006-1391, 94-733), échelles
   de catégorie C (2016-604), décret 86-68, articles du CGFP et deux
   décisions. Identifiants renvoyés en session par l'API Légifrance ou PISTE ;
-  lignes sans lecture marquées « non vérifié » (2016-596, CSI L511-6,
-  décret 85-986 art. 26-1).
+  lignes sans lecture marquées « non vérifié » (CSI L511-6, décret 85-986
+  art. 26-1). Décret 2016-596 lu par `/consult/legiPart` direct (`get_text`
+  en échec) : son art. 13 renvoie au décret 86-68.
 - Avertissement en tête : piste de localisation, jamais preuve de lecture en
   session. `SKILL.md` §3 : consulter le registre pour localiser, puis lire le
   texte par outil.

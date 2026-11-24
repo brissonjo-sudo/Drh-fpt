@@ -16,7 +16,7 @@ description: >-
   FPT, les fonctions publiques d'État ou hospitalière, ni pour les
   collectivités de moins de 350 agents.
 metadata:
-  version: 0.7.0
+  version: 0.8.0
   statut: candidate ; huit branches dont carrière-paie divisée en quatre modules
   date_derniere_revue_methodologique: 2026-11-03
   date_derniere_verification_sources: 2026-11-03
@@ -31,7 +31,7 @@ metadata:
   langue: français
 ---
 
-# Skill : drh-fpt (v0.7.0)
+# Skill : drh-fpt (v0.8.0)
 
 > **Objet** : expertise d'une Direction des Ressources Humaines territoriale,
 > à la fois **opérationnelle** (rapide, orientée décision et livrable) et
