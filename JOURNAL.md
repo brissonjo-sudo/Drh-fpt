@@ -22,6 +22,24 @@ Une entrée par cas, au format ci-dessous.
 
 ## Entrées
 
+### 2026-11-24 — Détachement d'un agent de maîtrise en police municipale
+- Type : lacune + erreur
+- Branche : carrière-paie
+- Contexte (anonymisé) : agent de maîtrise territorial au 10e échelon à
+  détacher dans le cadre d'emplois des agents de police municipale ; la
+  collectivité demandait s'il pouvait l'être directement au grade de
+  brigadier-chef principal.
+- Constat : aucun module de mobilité (détachement, équivalence de grade,
+  classement) ; la prémisse « agent de maîtrise = échelle C2 » a d'abord été
+  admise sans contrôle, alors que le grade a sa propre grille (décret
+  88-548) ; le décret d'échelonnement du BCP n'avait pu être retrouvé par
+  outil ; aucune règle sur une capture d'un site privé fournie.
+- Action proposée : module `carriere-paie/mobilite.md` (art. 11-1 du décret
+  86-68, L513-10, police municipale, cas d'école aux deux lectures
+  débattues) ; registre `references-verifiees.md` ; contrôle des prémisses
+  (`contrat-execution.md` §1) ; documents fournis (socle §1).
+- Statut : intégré (0.8.0, non qualifié).
+
 ### 2026-11-18 — Examen médical manqué, TPT et télétravail
 - Type : erreur + lacune
 - Branche : qvt-sante
