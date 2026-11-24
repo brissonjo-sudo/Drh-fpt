@@ -92,7 +92,8 @@ drh-fpt/
 │   ├── carriere-paie/
 │   │   ├── statut-discipline.md          Statut, carrière, instances et discipline
 │   │   ├── remuneration-paie.md          Traitement, indemnités, cotisations et retraite
-│   │   └── temps-fin-fonctions.md        Temps, abandon, grève et fins de fonctions
+│   │   ├── temps-fin-fonctions.md        Temps, abandon, grève et fins de fonctions
+│   │   └── mobilite.md                   Détachement, intégration, mutation, mise à disposition
 │   ├── qvt-sante.md                      Branche QVT & santé
 │   ├── recrutement-formation.md          Branche recrutement & formation
 │   ├── cst-dialogue-social.md            Branche CST & dialogue social

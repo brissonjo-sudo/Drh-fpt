@@ -37,7 +37,7 @@ régénérables et ne sont pas versionnés. Relancer le script après chaque
 | 03 | Paramètres de la collectivité et fiche profil |
 | 04 | Gabarits : décision, délibération, courrier, note, procédure |
 | 05 | Carrière et paie : règles communes |
-| 06 | Statut, carrière et discipline |
+| 06 | Statut, carrière, discipline et mobilité |
 | 07 | Rémunération, régime indemnitaire et paie |
 | 08 | Temps de travail et fin de fonctions |
 | 09 | QVT et santé |

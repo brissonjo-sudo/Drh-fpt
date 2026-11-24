@@ -54,6 +54,11 @@ class ContextLoaderTests(unittest.TestCase):
         _, files = context_loader.build_case_context(case)
         self.assertIn("assets/decision-modele.md", files)
 
+    def test_mobility_context_loads_its_module(self):
+        files = context_loader.files_for_case(
+            {'id': 'mob', 'contextes': ['carriere-paie', 'carriere-mobilite']})
+        self.assertIn('references/carriere-paie/mobilite.md', files)
+
     def test_unknown_context_is_rejected(self):
         with self.assertRaises(ValueError):
             context_loader.files_for_case({"id": "x", "contextes": ["inconnu"]})

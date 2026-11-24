@@ -4,6 +4,23 @@ Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
 ## [Non publié] — v0.7.1
 
+### Ajouté (module mobilité, 24/11/2026, non qualifié)
+Articles lus sur Légifrance le 24/11/2026 (API officielle), versions en vigueur.
+- **Module** `references/carriere-paie/mobilite.md`, au gabarit des branches :
+  détachement et intégration directe (CGFP L511-5 à L511-7, L513-7 à
+  L513-12), classement à équivalence de grade, règle subsidiaire de l'indice
+  sommital et ancienneté (décret 86-68, art. 11-1 à 11-4), situation acquise
+  dans l'origine (L513-10), durée, renouvellement et fin du détachement
+  (art. 7 à 10, L513-23 à L513-26), mutation et mise à disposition (L512-6,
+  L512-7, L512-23 à L512-25), police municipale (décret 2006-1391 : formation,
+  agrément, avancement au BCP), BASCULE vers dpm-fpt pour l'opérationnel.
+- **Cas d'école** (§6) : agent de maîtrise au 10e échelon détaché en police
+  municipale. Grilles lues (décrets 88-548, 2016-604, 94-733). Le grade
+  équivalent retenu est gardien-brigadier (méthode CE, 25/05/2018,
+  n° 410972, rendue pour l'État : plausible) ; deux voies vers le BCP.
+- Enregistrement : routeur `SKILL.md` §7, `carriere-paie.md`, chargeur de
+  contexte (`carriere-mobilite`), bundle, fiche Copilot 06, README, tests.
+
 ### Ajouté (cas du 18/11/2026, examen médical manqué, non qualifié)
 Articles relus sur Légifrance les 17 et 18/11/2026, versions en vigueur.
 - **Variable bloquante** (`qvt-sante.md` §4) : cadre d'un examen par un
