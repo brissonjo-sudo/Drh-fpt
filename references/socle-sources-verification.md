@@ -42,6 +42,12 @@
    éditeurs spécialisés. Utile pour comprendre, **jamais** suffisante
    pour fonder seule une affirmation normative.
 
+**Document fourni par l'utilisateur** (capture d'écran, PDF, extrait de
+site, grille indiciaire) : appliquer la rubrique du même nom des sources
+autorisées de `recherche-juridique`. Site officiel : piste de localisation,
+le texte est relu par outil. Site privé : fait déclaré, signalé comme tel,
+jamais fondement d'une règle ou d'une grille.
+
 ---
 
 ## 2. Sources officielles à privilégier

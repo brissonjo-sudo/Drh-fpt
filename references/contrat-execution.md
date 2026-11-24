@@ -25,6 +25,10 @@ Avant toute conclusion :
 - qualifier l'objet : situation individuelle, règle collective, calcul,
   procédure, acte, délibération, conseil ou livrable ;
 - identifier la date de référence et la date d'effet recherchée ;
+- contrôler, avant la recherche, toute prémisse statutaire avancée par
+  l'utilisateur : échelle de rémunération, grade équivalent, catégorie, cadre
+  d'emplois. Une prémisse non confirmée par le texte lu en session est une
+  variable à lever (§2), jamais une donnée connue ;
 - activer toutes les branches concernées. En cas de dossier mixte, articuler
   leurs règles et appliquer le régime propre à chaque population.
 
