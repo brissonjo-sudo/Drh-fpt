@@ -183,6 +183,12 @@ seul, à l'équivalence. Transposition à l'art. 11-1 du décret 86-68 :
   (échelonnement fixé par décret : décret 94-733, art. 1).
 - Détachement et intégration directe dans le cadre d'emplois selon CGFP
   L511-5 à L511-8 et L513-7 à L513-13 (art. 13).
+- Les grades sont aussi régis par le décret 2016-596 (art. 1 du décret
+  2006-1391). Son art. 13 soumet le détaché et l'intégré directement aux
+  titres Ier (détachement, dont l'art. 11-1), III bis (intégration directe)
+  et IV du décret 86-68 : aucune règle de classement propre. Intégration
+  possible à tout moment sur demande, proposée au-delà de cinq ans ; services
+  d'origine assimilés.
 - **Exercice des fonctions** : seulement après la formation de six mois de
   l'art. 5 et l'**agrément du procureur de la République et du préfet**
   (art. 13). Durée réduite pour la police nationale (services actifs) et la
@@ -298,7 +304,7 @@ Appliquer la confiance proposition par proposition.
   L513-12, L513-23 à L513-26 ; décret 86-68, art. 2, 3, 7 à 10, 11-1 à 11-4,
   26-1 à 26-3 ; décret 88-547, art. 1, 13, 15 ; décret 88-548, art. 1 ; décret
   2016-604, art. 1 ; décret 94-733, art. 1 ; décret 2006-1391, art. 1, 1-1, 5,
-  10 à 13.
+  10 à 13 ; décret 2016-596, art. 13.
 - **Jurisprudentiel / plausible** : équivalence agent de maîtrise /
   gardien-brigadier et agent de maîtrise principal / BCP (méthode CE 410972,
   rendue pour l'État).
@@ -306,7 +312,6 @@ Appliquer la confiance proposition par proposition.
 **À vérifier (aucune source lue en session)** :
 - sort d'un indice d'origine supérieur au sommital du grade équivalent ;
 - concordance des renvois des art. 9 et 10 du décret 86-68 avec le CGFP ;
-- décret 2016-596 (carrières de catégorie C), non lu ;
 - CSI L511-6, assermentation, retrait de l'agrément d'un agent détaché ;
 - durée de validité d'un tableau d'avancement acquis dans l'origine ;
 - portée exacte de la condition de nationalité pour un fonctionnaire détaché.
@@ -315,7 +320,8 @@ Sources (Légifrance, lues le 2026-11-24) : décret 86-68, art. 11-1
 (LEGIARTI000024033472) ; décret 88-548, art. 1 (LEGIARTI000044811879) ;
 décret 2016-604, art. 1 (LEGIARTI000044811902) ; décret 94-733, art. 1
 (LEGIARTI000048451161) ; décret 2006-1391, art. 1 (LEGIARTI000047172171) et
-13 (LEGIARTI000047172151) ; CGFP L513-10 (LEGIARTI000044425692) ;
+13 (LEGIARTI000047172151) ; décret 2016-596, art. 13 (LEGIARTI000048173371) ;
+CGFP L513-10 (LEGIARTI000044425692) ;
 CE 410972 (CETATEXT000036945758) ; CAA Marseille 17MA01391
 (CETATEXT000038121679).
 

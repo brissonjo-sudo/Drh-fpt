@@ -52,7 +52,8 @@
 |---|---|---|---|---|---|
 | Échelles C1, C2 et C3 de la FPT | Décret n° 2016-604 du 12 mai 2016 | LEGITEXT000032545071 (JORFTEXT000032527130) | version du 2022-01-01 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
 | Grilles des échelles C1, C2 et C3 | Décret 2016-604, art. 1 | LEGIARTI000044811902 | 2022-01-01 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
-| Organisation des carrières de catégorie C | Décret n° 2016-596 du 12 mai 2016 | | | non vérifié (texte non lu : lecture en échec le 2026-11-24) | carriere-paie/mobilite |
+| Organisation des carrières de catégorie C (régit les grades de police municipale) | Décret n° 2016-596 du 12 mai 2016 | LEGITEXT000032540869 (JORFTEXT000032526775) | | vérifié (lu le 2026-11-24 par `/consult/legiPart` direct ; `get_text` en échec) | carriere-paie/mobilite |
+| Détachement et intégration directe en catégorie C : renvoi aux titres Ier, III bis et IV du décret 86-68 | Décret 2016-596, art. 13 | LEGIARTI000048173371 | 2023-10-09 | vérifié (lu le 2026-11-24) | carriere-paie/mobilite |
 
 ## 4. Détachement et intégration : décret n° 86-68
 
