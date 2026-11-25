@@ -92,7 +92,8 @@ drh-fpt/
 │   ├── carriere-paie/
 │   │   ├── statut-discipline.md          Statut, carrière, instances et discipline
 │   │   ├── remuneration-paie.md          Traitement, indemnités, cotisations et retraite
-│   │   └── temps-fin-fonctions.md        Temps, abandon, grève et fins de fonctions
+│   │   ├── temps-fin-fonctions.md        Temps, abandon, grève et fins de fonctions
+│   │   └── mobilite.md                   Détachement, intégration, mutation, mise à disposition
 │   ├── qvt-sante.md                      Branche QVT & santé
 │   ├── recrutement-formation.md          Branche recrutement & formation
 │   ├── cst-dialogue-social.md            Branche CST & dialogue social
@@ -100,6 +101,7 @@ drh-fpt/
 │   ├── communication-interne.md          Branche communication interne
 │   ├── contractuels.md                   Branche agents contractuels
 │   ├── statut-garanties.md               Branche statut : garanties, déontologie & signalements
+│   ├── references-verifiees.md       Registre d'identifiants officiels (localisation, jamais preuve)
 │   └── cache-plafonds-regime-indemnitaire.md  Registre de vérification des plafonds (maintenance, hors bundle)
 ├── assets/
 │   ├── README.md                         Logique et index des gabarits

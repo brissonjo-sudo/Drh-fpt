@@ -1,6 +1,6 @@
 # Agent Microsoft 365 Copilot — DRH-FPT
 
-Adaptation du skill `drh-fpt` (v0.7.0) en agent **Microsoft 365 Copilot**,
+Adaptation du skill `drh-fpt` (v0.8.0) en agent **Microsoft 365 Copilot**,
 créé avec **Agent Builder** (« Créer un agent » dans Copilot), sans code.
 
 | Élément | Fichier | Limite Agent Builder |
@@ -37,7 +37,7 @@ régénérables et ne sont pas versionnés. Relancer le script après chaque
 | 03 | Paramètres de la collectivité et fiche profil |
 | 04 | Gabarits : décision, délibération, courrier, note, procédure |
 | 05 | Carrière et paie : règles communes |
-| 06 | Statut, carrière et discipline |
+| 06 | Statut, carrière, discipline et mobilité |
 | 07 | Rémunération, régime indemnitaire et paie |
 | 08 | Temps de travail et fin de fonctions |
 | 09 | QVT et santé |

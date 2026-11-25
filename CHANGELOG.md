@@ -2,7 +2,66 @@
 
 Format : versionnage sémantique MAJEUR.MINEUR.PATCH.
 
-## [Non publié] — v0.7.1
+## [0.8.0] — 2026-11-24 — Candidate non publiée — Mobilité, registre d'identifiants, prémisses
+
+Mineure : un module et une référence s'ajoutent. Reprend les entrées
+« Non publié — v0.7.1 » du 17/10 au 18/11/2026. Aucune campagne
+comportementale : non qualifiée.
+
+### Ajouté (contrôle des prémisses et documents fournis, 24/11/2026, non qualifié)
+- `contrat-execution.md` §1 : toute prémisse statutaire de l'utilisateur
+  (échelle, grade équivalent, catégorie, cadre d'emplois) est vérifiée par
+  lecture du texte, par exception au classement « Connues » du §2. Non
+  confirmée : variable bloquante. Contredite : corrigée en citant le texte,
+  sans la redemander.
+- `socle-sources-verification.md` §1 : un document fourni relève de trois
+  catégories, autonomes du compagnon : site officiel (piste), site privé
+  (fait déclaré ; montant ou grille repris seulement avec « non vérifié »),
+  pièce du dossier (fait de l'espèce, régularité contrôlée au regard des
+  textes). Renvoi à `recherche-juridique` conservé en complément.
+
+### Ajouté (registre d'identifiants, 24/11/2026, non qualifié)
+- **Registre** `references/references-verifiees.md`, version 1 limitée au
+  module mobilité : statuts et échelonnements des agents de maîtrise
+  (88-547, 88-548) et de la police municipale (2006-1391, 94-733), échelles
+  de catégorie C (2016-604), décret 86-68, articles du CGFP et deux
+  décisions. Identifiants renvoyés en session par l'API Légifrance ou PISTE ;
+  lignes sans lecture marquées « non vérifié » (CSI L511-6, décret 85-986
+  art. 26-1). Couvre la mobilité seulement ; une référence absente et non
+  lue par outil en session se réserve ou se retire. Décret 2016-596 lu par `/consult/legiPart` direct (`get_text`
+  en échec) : son art. 13 renvoie au décret 86-68.
+- Avertissement en tête : piste de localisation, jamais preuve de lecture en
+  session. `SKILL.md` §3 : consulter le registre pour localiser, puis lire le
+  texte par outil.
+- Enregistrement : chargeur de contexte (`references-verifiees`), bundle
+  (avant la restitution), préambule du bundle, README, test.
+
+### Ajouté (module mobilité, 24/11/2026, non qualifié)
+Articles lus sur Légifrance le 24/11/2026 (API officielle), versions en vigueur.
+- **Module** `references/carriere-paie/mobilite.md`, au gabarit des branches :
+  détachement et intégration directe (CGFP L511-5 à L511-7, L513-7 à
+  L513-12), classement à équivalence de grade, règle subsidiaire de l'indice
+  sommital et ancienneté (décret 86-68, art. 11-1 à 11-4), situation acquise
+  dans l'origine (L513-10), durée, renouvellement et fin du détachement
+  (art. 7 à 10, L513-23 à L513-26), mutation et mise à disposition (L512-6,
+  L512-7, L512-23 à L512-25), police municipale (décret 2006-1391 : formation,
+  agrément, avancement au BCP), BASCULE vers dpm-fpt pour l'opérationnel.
+- **Cas d'école** (§6) : agent de maîtrise au 10e échelon détaché en police
+  municipale. Grilles lues (décrets 88-548, 2016-604, 94-733). Deux lectures
+  **débattues**, avec critères pour et contre (méthode CE, 25/05/2018,
+  n° 410972, rendue pour l'État) : gardien-brigadier par équivalence
+  (12e échelon C2) ou BCP par l'indice sommital (6e échelon). Un agent au
+  11e échelon ou au-delà sort de la première. Sécurisation recommandée
+  (avis du CDG ou de la DGCL, projet d'arrêté à valider), sans trancher ;
+  deux voies vers le BCP.
+- **Revue indépendante** (24/11/2026) : remise à disposition anticipée
+  (CGFP L513-21) et réintégration au terme initial (décret 86-68, art. 10) ;
+  grade transitoire de chef de police (décret 2006-1391, art. 27 ; décret
+  94-733, art. 2) ; détachement hors cadre d'emplois exclu de l'art. 11-1 ;
+  L511-3 et art. 10 complétés ; recevabilité et données connues ou estimées
+  au §6 ; voies et délais de recours au §10.
+- Enregistrement : routeur `SKILL.md` §7, `carriere-paie.md`, chargeur de
+  contexte (`carriere-mobilite`), bundle, fiche Copilot 06, README, tests.
 
 ### Ajouté (cas du 18/11/2026, examen médical manqué, non qualifié)
 Articles relus sur Légifrance les 17 et 18/11/2026, versions en vigueur.

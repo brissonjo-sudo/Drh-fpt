@@ -34,8 +34,9 @@ FICHES = [
      ["assets/decision-modele.md", "assets/deliberation-modele.md", "assets/courrier-modele.md",
       "assets/note-modele.md", "assets/procedure-modele.md"], "gabarits-livrables"),
     ("05", "Carrière et paie : règles communes", ["references/carriere-paie.md"], "carriere-paie-regles-communes"),
-    ("06", "Carrière : statut, carrière et discipline",
-     ["references/carriere-paie/statut-discipline.md"], "carriere-statut-discipline"),
+    ("06", "Carrière : statut, carrière, discipline et mobilité",
+     ["references/carriere-paie/statut-discipline.md", "references/carriere-paie/mobilite.md"],
+     "carriere-statut-discipline"),
     ("07", "Carrière : rémunération, régime indemnitaire et paie",
      ["references/carriere-paie/remuneration-paie.md"], "carriere-remuneration-paie"),
     ("08", "Carrière : temps de travail et fin de fonctions",
@@ -49,8 +50,10 @@ FICHES = [
     ("15", "Statut : garanties, déontologie et signalements", ["references/statut-garanties.md"], "statut-garanties"),
     ("16", "Restitution proportionnée", ["references/restitution-proportionnee.md"], "restitution-proportionnee"),
 ]
-# Exclus, comme dans le bundle : méta-gabarit _gabarit-branche.md, registre de
+# Exclus, comme du bundle : méta-gabarit _gabarit-branche.md, registre de
 # maintenance cache-plafonds-regime-indemnitaire.md, assets/README.md.
+# Exclu de Copilot seulement : registre d'identifiants references-verifiees.md,
+# inclus dans le bundle.
 
 PATH_TO_FICHE = {src: f"{num} ({title})" for num, title, srcs, _ in FICHES for src in srcs}
 

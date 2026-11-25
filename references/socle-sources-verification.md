@@ -42,6 +42,19 @@
    éditeurs spécialisés. Utile pour comprendre, **jamais** suffisante
    pour fonder seule une affirmation normative.
 
+**Document fourni par l'utilisateur** (capture d'écran, PDF, extrait de
+site, grille indiciaire, pièce du dossier) : trois catégories.
+- **Site officiel** : piste de localisation ; le texte est relu par outil
+  avant de fonder une règle.
+- **Site privé** : fait déclaré, signalé comme tel ; un montant ou une grille
+  n'est repris qu'avec la mention « non vérifié », jamais comme fondement
+  d'une règle.
+- **Pièce du dossier** (arrêté individuel, bulletin de paie) : fait de
+  l'espèce, dont la régularité se contrôle au regard des textes.
+
+En complément, appliquer la rubrique du même nom des sources autorisées de
+`recherche-juridique`.
+
 ---
 
 ## 2. Sources officielles à privilégier

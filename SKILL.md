@@ -16,8 +16,8 @@ description: >-
   FPT, les fonctions publiques d'État ou hospitalière, ni pour les
   collectivités de moins de 350 agents.
 metadata:
-  version: 0.7.0
-  statut: candidate ; huit branches dont carrière-paie divisée en trois modules
+  version: 0.8.0
+  statut: candidate ; huit branches dont carrière-paie divisée en quatre modules
   date_derniere_revue_methodologique: 2026-11-03
   date_derniere_verification_sources: 2026-11-03
   portee_verification_sources: ciblée (PR18, portage du 03/11/2026, puis veille du 03/11/2026 sur les points en attente et le JORF du 04/09 au 03/11/2026) ; ne certifie pas toutes les références ni une réponse future
@@ -31,7 +31,7 @@ metadata:
   langue: français
 ---
 
-# Skill : drh-fpt (v0.7.0)
+# Skill : drh-fpt (v0.8.0)
 
 > **Objet** : expertise d'une Direction des Ressources Humaines territoriale,
 > à la fois **opérationnelle** (rapide, orientée décision et livrable) et
@@ -168,6 +168,7 @@ même comme « pistes à vérifier ». Les faits chiffrés fournis restent utili
 
 Détail des sources FPT et règle de conflit →
 **`references/socle-sources-verification.md`**.
+Pour localiser un texte, consulter `references/references-verifiees.md`, puis lire ce texte par outil : le registre ne prouve rien.
 
 ---
 
@@ -290,7 +291,8 @@ modules nécessaires :
   `references/carriere-paie/remuneration-paie.md` ;
 - temps de travail, retraite progressive, départ à la retraite, rupture
   conventionnelle, chômage, insuffisance professionnelle, abandon de poste,
-  emplois fonctionnels et grève → `references/carriere-paie/temps-fin-fonctions.md`.
+  emplois fonctionnels et grève → `references/carriere-paie/temps-fin-fonctions.md` ;
+- détachement, intégration, mutation et mise à disposition → `references/carriere-paie/mobilite.md`.
 
 Lire plusieurs modules lorsque la question les croise. En environnement ne
 permettant pas un chargement ciblé fiable, utiliser le bundle complet.

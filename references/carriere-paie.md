@@ -20,7 +20,8 @@ NBI, SFT, cotisations et affiliation retraite, temps de travail (durée
 annuelle, cycles, astreintes, CET, congés), fin de fonctions (dont retraite
 progressive), **emplois fonctionnels et fin de détachement dans l'intérêt du
 service**, **grève et retenue sur traitement**, **chômage des agents publics
-(auto-assurance)**.
+(auto-assurance)**, **mobilité** (détachement, intégration directe, mutation,
+mise à disposition).
 
 ## 3. Arbre de traitement
 
@@ -44,6 +45,7 @@ sont pas levées.
 - Statut, carrière, instances et discipline : `references/carriere-paie/statut-discipline.md`.
 - Traitement, régime indemnitaire, cotisations et affiliation retraite : `references/carriere-paie/remuneration-paie.md`.
 - Temps de travail, retraite progressive, départ à la retraite, rupture conventionnelle, chômage, insuffisance professionnelle, abandon de poste, emplois fonctionnels et grève : `references/carriere-paie/temps-fin-fonctions.md`.
+- Détachement, intégration directe, classement à équivalence de grade, fin de détachement, mutation et mise à disposition : `references/carriere-paie/mobilite.md`.
 
 Lire plusieurs modules si le dossier les croise. Le fichier présent conserve les calculs, déclencheurs de vérification, pièges, livrables et contrôles communs.
 
@@ -96,7 +98,7 @@ Appliquer le noyau de vérification (matrice §2.2 du SKILL.md) dès que :
    délibération).
 10. Basculer à tort un agent à **temps partiel** vers l'IRCANTEC (il reste
    CNRACL).
-11. Confondre **détachement** et **mise à disposition**.
+11. Confondre **détachement** et **mise à disposition** (→ `references/carriere-paie/mobilite.md`).
 12. Appliquer la règle du **trentième indivisible** (propre à l'**État**) à
      une retenue pour grève dans la **FPT** — la retenue FPT est
      **proportionnelle à la durée réelle** de l'absence de service fait.
@@ -142,7 +144,7 @@ Appliquer le noyau de vérification (matrice §2.2 du SKILL.md) dès que :
 3. **Pilotage** — note au DGS/Maire sur une situation de carrière ;
    délibération RIFSEEP/ISFE ou ratios promus-promouvables.
 4. **Communication** — courrier de réponse à une demande d'agent (disponibilité,
-   temps partiel, mobilité).
+   temps partiel, mobilité ; pour la mobilité, voir `references/carriere-paie/mobilite.md` §10).
 
 Gabarits → `assets/`.
 

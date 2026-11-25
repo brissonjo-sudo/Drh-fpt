@@ -24,6 +24,7 @@ CONTEXT_FILES = {
     "carriere-statut-discipline": ("references/carriere-paie/statut-discipline.md",),
     "carriere-remuneration-paie": ("references/carriere-paie/remuneration-paie.md",),
     "carriere-temps-fin-fonctions": ("references/carriere-paie/temps-fin-fonctions.md",),
+    "carriere-mobilite": ("references/carriere-paie/mobilite.md",),
     "qvt-sante": ("references/qvt-sante.md",),
     "recrutement-formation": ("references/recrutement-formation.md",),
     "cst-dialogue-social": ("references/cst-dialogue-social.md",),
@@ -31,6 +32,7 @@ CONTEXT_FILES = {
     "communication-interne": ("references/communication-interne.md",),
     "contractuels": ("references/contractuels.md",),
     "statut-garanties": ("references/statut-garanties.md",),
+    "references-verifiees": ("references/references-verifiees.md",),
 }
 
 DELIVERABLE_ASSETS = {

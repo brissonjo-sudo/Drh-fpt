@@ -52,6 +52,7 @@ SECTIONS = [
     ("MODULE — Carrière, statut et discipline", ROOT / "references/carriere-paie/statut-discipline.md"),
     ("MODULE — Rémunération et paie", ROOT / "references/carriere-paie/remuneration-paie.md"),
     ("MODULE — Temps de travail et fin de fonctions", ROOT / "references/carriere-paie/temps-fin-fonctions.md"),
+    ("MODULE — Mobilité : détachement, intégration, mutation", ROOT / "references/carriere-paie/mobilite.md"),
     ("BRANCHE — QVT & santé", ROOT / "references/qvt-sante.md"),
     ("BRANCHE — Recrutement & formation", ROOT / "references/recrutement-formation.md"),
     ("BRANCHE — CST & dialogue social", ROOT / "references/cst-dialogue-social.md"),
@@ -59,6 +60,7 @@ SECTIONS = [
     ("BRANCHE — Communication interne", ROOT / "references/communication-interne.md"),
     ("BRANCHE — Agents contractuels", ROOT / "references/contractuels.md"),
     ("BRANCHE — Statut : garanties, déontologie & signalements", ROOT / "references/statut-garanties.md"),
+    ("REGISTRE — Références vérifiées (localisation, jamais preuve)", ROOT / "references/references-verifiees.md"),
     ("RESTITUTION PROPORTIONNÉE", ROOT / "references/restitution-proportionnee.md"),
 ]
 
